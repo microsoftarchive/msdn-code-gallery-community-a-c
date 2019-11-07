@@ -1,0 +1,76 @@
+﻿<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">ASP.NET Web API</a>
+            </p>
+        </div>
+    </div>
+</header>
+<div id="body">
+
+    <h2>Multipart/form-data</h2>
+
+    <section class="main-content clear-fix">
+
+        <form name="form1" method="post" enctype="multipart/form-data" action="api/upload">
+            <fieldset>
+                <legend>File Upload Example</legend>
+            <div>
+                <label for="caption">Image Caption</label>
+                <input name="caption" type="text" />
+            </div>
+            <div>
+                <label for="image1">Image File</label>
+                <input name="image1" type="file" />
+            </div>
+            <div>
+                <input type="submit" value="Submit" />
+            </div>
+                </fieldset>
+        </form>
+
+        <form name="trip_search" method="post" enctype="multipart/form-data" action="api/upload">
+            <fieldset>
+                <legend>Form Controls Example</legend>
+            </fieldset>
+
+            <label for="trip">Trip</label>
+            <div>
+                <input type="radio" name="trip" value="round-trip" checked="checked"/>
+                Round-Trip
+            </div>
+            <div>
+                <input type="radio" name="trip" value="one-way"/>
+                One-Way
+            </div>
+
+            <label for="options">Preferences</label>
+            <div>
+                <input type="checkbox" name="options" value="nonstop" />
+                Only show non-stop flights
+            </div>
+            <div>
+                <input type="checkbox" name="options" value="airports" />
+                Compare nearby airports
+            </div>
+            <div>
+                <input type="checkbox" name="options" value="dates" />
+                My travel dates are flexible
+            </div>
+
+            <div>
+                <label for="seat">Seating Preference</label>
+                <select name="seat">
+                    <option value="aisle">Aisle</option>
+                    <option value="window">Window</option>
+                    <option value="center">Center</option>
+                    <option value="none">No Preference</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </section>
+</div>

@@ -1,0 +1,75 @@
+﻿@model PDM.Model.ProductModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="container-fluid">
+        <div class="row top-buffer">
+            @Html.Partial("Search")
+            <div class="col-sm-1" style="margin-top:6px">
+                <a><span class="glyphicon glyphicon-refresh" id="btnRefreshProductModel" title="Refresh"></span></a>
+            </div>
+            <div class="col-sm-1" style="margin-top:6px">
+                <a><span class="glyphicon glyphicon-plus" id="btnAddProductModel" title="Add Category"></span></a>
+            </div>
+        </div>
+
+        @Html.Partial("Create", Model)
+
+        <div class="row top-buffer">
+            <div class="bg-primary form-control-static textalign-center">List of Models </div>
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>Product Model Name</th>
+                        <th>Details</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    @Html.Partial("List", Model.ProductModelCollection)
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@*Edit modal dialog start here*@
+<div class="modal fade" id="editProductModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="edit-model-container">
+        </div>
+    </div>
+</div>
+@*Edit modal dialog ends here*@
+
+
+@*detais modal dialog start here*@
+<div class="modal fade" id="detailsProductModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="details-model-container">
+        </div>
+    </div>
+</div>
+@*detais modal dialog ends here*@
+
+@*detais modal dialog start here*@
+<div class="modal fade" id="deleteProductModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="delete-model-container">
+        </div>
+    </div>
+</div>
+@*detais modal dialog ends here*@
+
+
+@section scripts
+    {
+    <script src="~/Scripts/productModel.js"></script>
+}
+
+
+
+

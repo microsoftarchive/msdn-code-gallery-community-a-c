@@ -1,0 +1,69 @@
+@model IEnumerable<MovieModel>
+
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<h2>Movies</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                Movie Logo
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                Release Date
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Director)
+            </th>
+            <th>
+                Running Time
+            </th>
+            <th>Airing</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Program.data.Movies) {
+        var sessions = Program.data.getSessionsbyMovie(item.MovieId);
+        <tr>
+            <td>
+                @Html.ActionLink(item.Title, "Details", new { id = item.MovieId })
+            </td>
+            <td>
+                <img class="poster" src="@item.MovieLogo" alt="Image" />
+            </td>
+            <td width="40%">
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Director)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RunningTime)
+            </td>
+            <td>
+                @if(sessions != null) {
+                    @foreach (var session in sessions) {
+                        var cinema = Program.data.getCinema(session.CineplexID);
+                        @Html.ActionLink(cinema.Location, "Details", "Sessions", new { id = session.SessionID })
+                        <br />
+                    }
+                } else {
+                    <span>None</span>
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

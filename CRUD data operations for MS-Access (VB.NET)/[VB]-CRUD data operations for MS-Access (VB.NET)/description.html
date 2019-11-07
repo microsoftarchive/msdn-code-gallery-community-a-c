@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.3.7.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=885BBA985A6DAC76CCC8D57656A8996B" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=567C7B86D7B7DE8A0A4B2A14F36695DC" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>CRUD data operations for MS-Access (VB.NET)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>CRUD data operations for MS-Access (VB.NET)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Data Access, Exception handling, VB.Net, CRUD, MS Access, Class Inheritance
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Data Binding, Data Access, Exception handling, Databases, data and storage
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/7/2018</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/CRUD-data-operations-for-4783d8dd">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="font-size:small">This code sample intent is to show how to do simple add/edit/remove/show and find operations in a MS-Access database table using several classes to assist in building a repeatable pattern to perform these operations. Many of
+ the things shown here can be adapted to SQL-Server with a little bit of changes. Originally this solution was non-oop done many years ago in one project with zero classes and with about two hours of updating now is a three project solution that is very tight
+ and easily repeatable in other solutions. Much of what is shown is based off work I&rsquo;ve done in prior code samples done in C# and applied to VB.NET. So since much came from C# it of course will work in C# as in my
+<a href="https://code.msdn.microsoft.com/CRUD-data-operations-for-4783d8dd/https://code.msdn.microsoft.com/Inserting-a-batch-of-51a5b511?redir=0">code sample</a> done in C# where I not only use BaseExceptionsProperties but also hook in another class too.</span></p>
+<h1>Description</h1>
+<p><span style="font-size:small">The solution is broken down into three projects, one for forms, one for data operations and the last one containing a single class which the data operation class inherits for exception handling.</span></p>
+<p><span style="font-size:small">The class BaseExceptionProperties is used in the data operation class as follows.</span></p>
+<p><span style="font-size:small">Implementing</span></p>
+<p>&nbsp;</p>
+<div class="scriptcode" style="font-size:small">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">Public Class DatabaseOperations
+    Inherits BaseExceptionProperties</pre>
+<div class="preview">
+<pre class="vb"><span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;DatabaseOperations&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Inherits</span>&nbsp;BaseExceptionProperties</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode" style="font-size:small">BaseExceptionsProperties class</div>
+<div class="endscriptcode" style="font-size:small">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">Public Class BaseExceptionProperties
+
+    Protected mHasException As Boolean
+    ''' &lt;summary&gt;
+    ''' Indicate the last operation thrown an exception or not
+    ''' &lt;/summary&gt;
+    ''' &lt;returns&gt;&lt;/returns&gt;
+    Public ReadOnly Property HasException() As Boolean
+        Get
+            Return mHasException
+        End Get
+    End Property
+    Protected mLastException As Exception
+    ''' &lt;summary&gt;
+    ''' Provides access to the last exception thrown
+    ''' &lt;/summary&gt;
+    ''' &lt;returns&gt;&lt;/returns&gt;
+    Public ReadOnly Property LastException() As Exception
+        Get
+            Return mLastException
+        End Get
+    End Property
+    ''' &lt;summary&gt;
+    ''' If you don't need the entire exception as in LastException this 
+    ''' provides just the text of the exception
+    ''' &lt;/summary&gt;
+    ''' &lt;returns&gt;&lt;/returns&gt;
+    Public ReadOnly Property LastExceptionMessage As String
+        Get
+            Return mLastException.Message
+        End Get
+    End Property
+    ''' &lt;summary&gt;
+    ''' Indicate for return of a function if there was an exception thrown or not.
+    ''' &lt;/summary&gt;
+    ''' &lt;returns&gt;&lt;/returns&gt;
+    Public ReadOnly Property IsSuccessFul As Boolean
+        Get
+            Return Not mHasException
+        End Get
+    End Property
+End Class
+</pre>
+<div class="preview">
+<pre class="vb"><span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;BaseExceptionProperties&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Protected</span>&nbsp;mHasException&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Boolean</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;Indicate&nbsp;the&nbsp;last&nbsp;operation&nbsp;thrown&nbsp;an&nbsp;exception&nbsp;or&nbsp;not</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;returns&gt;&lt;/returns&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">ReadOnly</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;HasException()&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Boolean</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;mHasException&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Protected</span>&nbsp;mLastException&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;Provides&nbsp;access&nbsp;to&nbsp;the&nbsp;last&nbsp;exception&nbsp;thrown</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;returns&gt;&lt;/returns&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">ReadOnly</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;LastException()&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;mLastException&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;If&nbsp;you&nbsp;don't&nbsp;need&nbsp;the&nbsp;entire&nbsp;exception&nbsp;as&nbsp;in&nbsp;LastException&nbsp;this&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;provides&nbsp;just&nbsp;the&nbsp;text&nbsp;of&nbsp;the&nbsp;exception</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;returns&gt;&lt;/returns&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">ReadOnly</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;LastExceptionMessage&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;mLastException.Message&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;Indicate&nbsp;for&nbsp;return&nbsp;of&nbsp;a&nbsp;function&nbsp;if&nbsp;there&nbsp;was&nbsp;an&nbsp;exception&nbsp;thrown&nbsp;or&nbsp;not.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'''&nbsp;&lt;returns&gt;&lt;/returns&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">ReadOnly</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;IsSuccessFul&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Boolean</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;<span class="visualBasic__keyword">Not</span>&nbsp;mHasException&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;
+<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Example usage for deleting a customer</div>
+<div class="endscriptcode"><img id="185184" src="description/1.jpg" alt="" width="506" height="520">&nbsp;</div>
+</div>
+<div class="endscriptcode" style="font-size:small">In the caller</div>
+<div class="endscriptcode" style="font-size:small"><img id="185185" src="description/1aaa.jpg" alt="" width="617" height="214"></div>
+<div class="endscriptcode" style="font-size:small"></div>
+<div class="endscriptcode" style="font-size:small"><strong>Important things to know</strong>:&nbsp;</div>
+<div class="endscriptcode">
+<ul>
+<li><span style="font-size:small">Each operations to change data e.g. add, edit, delete are done in such a way that there is zero reason to reload the data from the backend database table as many developer think needs to be done. On a side note the same applies
+ when working with TableAdapters, when done right there is no reason to do a reloading of data.<br>
+</span></li><li><span style="font-size:small">For each operations e.g. read, add, edit and delete are done in a single method for each operation where each method has a local connection and command sharing a single connection string.</span>
+</li><li><span style="font-size:small">The Connection string defaults to one setup in the data class but can be overriden in the classes new constructor.</span>
+</li><li><span style="font-size:small">For each data method they are wrapped in try-catch statements so nothing will crash the app but instead can be handled via the properties from BaseExceptionProperties</span>
+</li><li><span style="font-size:small">For the add new record, upon success provides the new primary key which means if the add was in error you can immediately remove it as we have it's primary key. Many developers will simply add a row and not get the primary
+ key which means they most likely will not care about removing a record or will need to reload data and as mentioned above there is zero reason to reload data when done right as done here.</span>
+</li><li><span style="font-size:small">All SQL statements needing a WHERE condition use parameters.</span>
+</li><li><span style="font-size:small">Update and add operations use parameters.</span>
+</li><li><span style="font-size:small">The Add record for parameters uses Parameters.AddWithValue&nbsp;</span>
+</li><li><span style="font-size:small">The Update record uses Parameters.Add which is more work and AddWithValue still works but wanted to show this is an option.</span>
+</li><li><span style="font-size:small">Zero string concatenation used for SQL statements, instead they are created in xml literals. The idea is you can write the SQL in MS-Access, copy to your code, modify to work e.g. remove un-needed () and aliasing of fields
+ for a single table etc. and then with .Value get the SQL statemnet without the &lt;SQL&gt;&lt;/SQL&gt; tags.</span>
+</li><li><span style="font-size:small">For methods with parameters, each parameter is pre-fixed with 'p' so you know exactly where the variable came from, a parameter not a local or class level variable.</span>
+</li><li><span style="font-size:small">A special code module handles asking the user questions in MyDialogs.vb</span>
+</li><li><span style="font-size:small">There are several language extension methods which where designed to keep code clean and not having a need to cast objects over and over again.</span>
+</li></ul>
+</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span style="font-size:x-small"><strong>Screen shots</strong>:</span></div>
+<div class="endscriptcode"><span style="font-size:x-small"><img id="185186" src="description/S1.jpg" alt="" width="541" height="349"><br>
+</span></div>
+<div class="endscriptcode"><span style="font-size:x-small"><br>
+</span></div>
+<div class="endscriptcode"><span style="font-size:small">Prompting to remove a record</span></div>
+<div class="endscriptcode"><span style="font-size:small"><img id="185187" src="description/S2.jpg" alt="" width="541" height="349"></span></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span style="font-size:small">Edit the current record</span></div>
+<div class="endscriptcode"><span style="font-size:small"><img id="185188" src="description/S3.jpg" alt="" width="541" height="349"></span></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span style="font-size:small">Add a new record</span></div>
+<div class="endscriptcode"><span style="font-size:small"><img id="185189" src="description/S4.jpg" alt="" width="541" height="349"></span></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span style="font-size:small"><strong>Special note</strong>:</span></div>
+<div class="endscriptcode"><span style="font-size:small">I do not validation, that should be easy for you to do such as is company name or contact name empty or perhaps a duplicate etc.</span></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span style="font-size:small">Classes</span><img id="185190" src="description/All.jpg" alt="" width="379" height="710" style="font-size:small"></div>
+<div class="endscriptcode"><span style="font-size:small"><br>
+</span></div>
+<div class="endscriptcode"><span style="font-size:small"><img id="185191" src="description/S5.jpg" alt="" width="413" height="952"><br>
+</span></div>
+<p>&nbsp;</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

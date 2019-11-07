@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head> 
+<title></title>
+    <link rel="stylesheet" href="jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxdata.js"></script> 
+    <script type="text/javascript" src="jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.selection.js"></script> 
+    <script type="text/javascript" src="jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="scripts/demos.js"></script>  
+    <script src="generatedata.js" type="text/javascript"></script>
+
+    <script src="jqwidgets/jqxgrid.pager.js" type="text/javascript"></script>   
+    <script src="jqwidgets/jqxgrid.edit.js" type="text/javascript"></script>
+    <script src="jqwidgets/jqxgrid.columnsresize.js" type="text/javascript"></script>
+    <script src="jqwidgets/jqxgrid.columnsreorder.js" type="text/javascript"></script>
+    <script src="jqwidgets/jqxgrid.export.js" type="text/javascript"></script>
+    <script src="jqwidgets/jqxdata.export.js" type="text/javascript"></script>
+    <link href="styles/jquery.sharer.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery.sharer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // prepare the data
+            var source =
+            {
+                datatype: "xml",
+                datafields: [
+                     { name: 'SupplierName', type: 'string' },
+                     { name: 'Quantity', type: 'number' },
+                     { name: 'OrderDate', type: 'date' },
+                     { name: 'OrderAddress', type: 'string' },
+                     { name: 'Freight', type: 'number' },
+                     { name: 'Price', type: 'number' },
+                     { name: 'City', type: 'string' },
+                     { name: 'ProductName', type: 'string' },
+                     { name: 'Address', type: 'string' }
+                ],
+                url: 'orderdetailsextended.xml',
+                root: 'DATA',
+                record: 'ROW'
+            };
+            var dataAdapter = new $.jqx.dataAdapter(source, {
+                loadComplete: function () {
+                }
+            });
+            // create jqxgrid.
+            $("#jqxgrid").jqxGrid(
+            {
+                width: 900,
+                source: dataAdapter,
+                filterable: true,
+                sortable: true,
+                pageable: true,
+                autorowheight: true,
+                altrows: true,
+                columnsresize: true,
+                showtoolbar: true,
+                rendertoolbar: function (toolbar) {
+                    var me = this;
+                    var container = $("<div ></div>");
+                    var input = $('<div id="div1" style="background-color: #555555;float: left; font-weight: bold;line-height: 28px; min-width: 80px;padding: 3px 5px 3px 10px;color: #fff; ">Your First Div</div><div style="background-color: #555555;float: left; font-weight: bold;line-height: 28px; min-width: 80px;padding: 3px 5px 3px 10px;color: #fff; margin-left: 3px;" id="Div2" >Your Second Div</div></div>');
+                    toolbar.append(container);
+                    container.append(input);
+                },
+                columns: [
+                  { text: 'Supplier Name', cellsalign: 'center', align: 'center', datafield: 'SupplierName', width: 110 },
+                  { text: 'Name', columngroup: 'ProductDetails', cellsalign: 'center', align: 'center', datafield: 'ProductName', width: 120 },
+                  { text: 'Quantity', columngroup: 'ProductDetails', datafield: 'Quantity', cellsformat: 'd', cellsalign: 'center', align: 'center', width: 80 },
+                  { text: 'Freight', columngroup: 'OrderDetails', datafield: 'Freight', cellsformat: 'd', cellsalign: 'center', align: 'center', width: 100 },
+                  { text: 'Order Date', columngroup: 'OrderDetails', cellsalign: 'center', align: 'center', cellsformat: 'd', datafield: 'OrderDate', width: 100 },
+                  { text: 'Order Address', columngroup: 'OrderDetails', cellsalign: 'center', align: 'center', datafield: 'OrderAddress', width: 100 },
+                  { text: 'Price', columngroup: 'ProductDetails', datafield: 'Price', cellsformat: 'c2', align: 'center', cellsalign: 'center', width: 70 },
+                  { text: 'Address', columngroup: 'Location', cellsalign: 'center', align: 'center', datafield: 'Address', width: 120 },
+                  { text: 'City', columngroup: 'Location', cellsalign: 'center', align: 'center', datafield: 'City', width: 80 }
+                ],
+                columngroups:
+                [
+                  { text: 'Product Details', align: 'center', name: 'ProductDetails' },
+                  { text: 'Order Details', parentgroup: 'ProductDetails', align: 'center', name: 'OrderDetails' },
+                  { text: 'Location', align: 'center', name: 'Location' }
+                ]
+            });
+
+            $("#excelExport").jqxButton({ theme: theme });
+            $("#xmlExport").jqxButton({ theme: theme });
+            $("#csvExport").jqxButton({ theme: theme });
+            $("#tsvExport").jqxButton({ theme: theme });
+            $("#htmlExport").jqxButton({ theme: theme });
+            $("#jsonExport").jqxButton({ theme: theme });
+            $("#excelExport").click(function () {
+                $("#jqxgrid").jqxGrid('exportdata', 'xls', 'jqxGrid');
+            });
+            $("#xmlExport").click(function () {
+                $("#jqxgrid").jqxGrid('exportdata', 'xml', 'jqxGrid');
+            });
+            $("#csvExport").click(function () {
+                $("#jqxgrid").jqxGrid('exportdata', 'csv', 'jqxGrid');
+            });
+            $("#tsvExport").click(function () {
+                $("#jqxgrid").jqxGrid('exportdata', 'tsv', 'jqxGrid');
+            });
+            $("#htmlExport").click(function () {
+                $("#jqxgrid").jqxGrid('exportdata', 'html', 'jqxGrid');
+            });
+            $("#jsonExport").click(function () {
+                $("#jqxgrid").jqxGrid('exportdata', 'json', 'jqxGrid');
+            });
+            $("#print").jqxButton();
+            $(".social-buttons").sharer();
+            $("#print").click(function () {
+                var gridContent = $("#jqxgrid").jqxGrid('exportdata', 'html');
+                var newWindow = window.open('', '', 'width=800, height=500'),
+                document = newWindow.document.open(),
+                pageContent =
+                    '<!DOCTYPE html>\n' +
+                    '<html>\n' +
+                    '<head>\n' +
+                    '<meta charset="utf-8" />\n' +
+                    '<title>jQWidgets Grid</title>\n' +
+                    '</head>\n' +
+                    '<body>\n' + gridContent + '\n</body>\n</html>';
+                document.write(pageContent);
+                document.close();
+                newWindow.print();
+            });
+
+        });
+    </script>
+    
+    <!--<script>
+$(".social-buttons").sharer({
+"networks": ["facebook", "<a href="http://www.jqueryscript.net/tags.php?/twitter/">twitter</a>", "linkedin", "tumblr", "googleplus", "reddit", "pinterest", "stumbleupon", "taringa"],
+"template": $('<a class="sharer-icon" />'),
+"class": "sharer-icon-%network.id%",
+"label": "Share on %network.name%",
+"title": null, // custom the title of you page.
+"description": null, // custom the description of you page.
+"url": null // custom the URL of you page.
+});
+    </script>-->
+</head>
+<body class='default'>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+        <div id="jqxgrid"></div>
+        <div class="social-buttons" style="position: relative;z-index: 1000;"></div>
+        <div style='margin-top: 20px;'>
+            <div style=' bottom: 18px;position: relative;left: 5px;'>
+                <input type="button" value="Export to Excel" id='excelExport' />                
+                <input type="button" value="Export to XML" id='xmlExport' />
+                <input type="button" value="Export to CSV" id='csvExport' />                
+                <input type="button" value="Export to TSV" id='tsvExport' />
+                <input type="button" value="Export to HTML" id='htmlExport' />               
+                <input type="button" value="Export to JSON" id='jsonExport' />
+                <input type="button" value="Print" id='print' />
+            </div>           
+            
+        </div>
+    </div>
+</body>
+</html>

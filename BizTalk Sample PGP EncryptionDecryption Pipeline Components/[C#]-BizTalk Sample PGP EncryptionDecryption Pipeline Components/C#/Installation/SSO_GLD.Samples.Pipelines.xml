@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sso>
+  <application name="GLD.Samples.Pipelines">
+    <description />
+    <appUserAccount>BizTalk Application Users</appUserAccount>
+    <appAdminAccount>BizTalk Server Administrators</appAdminAccount>
+    <contactInfo>BizTalkAdmin@Stockland.com</contactInfo>
+    <field ordinal="0" label="Decrypt_PrivateKeyFile" masked="false" value="C:\Solutions\GLD\Samples\GLD.Samples.PGPPipelineComponents\Tests\PgpKeys\PartyA\PartyA_pvt" />
+    <field ordinal="1" label="Decrypt_Passphrase" masked="false" value="Passphrase A" />
+    <field ordinal="2" label="Decrypt_TempDirectory" masked="false" value="C:\Solutions\GLD\Samples\GLD.Samples.PGPPipelineComponents\Tests\Temp" />
+    <field ordinal="3" label="Encrypt_PublicKeyFile" masked="false" value="C:\Solutions\GLD\Samples\GLD.Samples.PGPPipelineComponents\Tests\PgpKeys\PartyA\PartyA_public" />
+    <field ordinal="4" label="Encrypt_Extension" masked="false" value="pgp" />
+    <field ordinal="5" label="Encrypt_TempDirectory" masked="false" value="C:\Solutions\GLD\Samples\GLD.Samples.PGPPipelineComponents\Tests\Temp" />
+    <field ordinal="6" label="Encrypt_ASCIIArmorFlag" masked="false" value="true" />
+    <field ordinal="7" label="Encrypt_IntegrityCheckFlag" masked="false" value="true" />
+    <flags configStoreApp="yes" allowLocalAccounts="yes" enableApp="yes" />
+  </application>
+</sso>

@@ -1,0 +1,34 @@
+﻿@model WebApplication.Models.AddPhoneNumberViewModel
+@{
+    ViewBag.Title = "Profile";
+    ViewBag.SubTitle = "Phone number";
+}
+<div class="row">
+    <div class="col-md-4">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Add a phone number</h3>
+            </div>
+            @using (Html.BeginForm("AddPhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="box-body">
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Number, new { @class = "col-md-2 control-label" })
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(m => m.Number, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-info pull-right">Submit</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/AdminLTE/plugins/jquery-validate/js")
+}

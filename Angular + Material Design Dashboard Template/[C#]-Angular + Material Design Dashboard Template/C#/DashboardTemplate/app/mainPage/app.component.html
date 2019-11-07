@@ -1,0 +1,30 @@
+﻿<mat-toolbar fxLayout="row">
+    <button mat-icon-button (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <div>Dashboard Template</div>
+</mat-toolbar>
+
+<div fxFlexFill style="background-color:#f0f0f0;">
+
+    <mat-sidenav-container fxFlexFill>
+
+        <mat-sidenav mode="side" #sidenav opened="true">
+            <mat-nav-list fxLayout="column">
+                <h3 matSubheader id="navHeader">Regions</h3>
+                <a mat-list-item *ngFor="let region of regions" [ngClass]="{ 'activeItem': selectedRegion == region.id }" (click)="loadRegionStats(region.id, region.name)">{{region.name}}</a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Overview">
+                <stats-root></stats-root>
+            </mat-tab>
+            <mat-tab label="Configuration">
+                <config-root></config-root>
+            </mat-tab>
+        </mat-tab-group>
+
+    </mat-sidenav-container>
+
+</div>

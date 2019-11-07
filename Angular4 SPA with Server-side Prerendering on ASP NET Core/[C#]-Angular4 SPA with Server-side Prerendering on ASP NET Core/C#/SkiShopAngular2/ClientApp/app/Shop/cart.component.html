@@ -1,0 +1,81 @@
+﻿<div class="row">
+    <div class="col-3">
+        <img src="/image/left_cart.jpg" style="width: 100%; height: 100%" />
+    </div>
+    <div class="col-9">
+        <h2>
+            Your cart:
+        </h2>
+        <div>
+            <div class="alert alert-warning" *ngIf="cart.itemCount == 0">
+                There are no products in your shopping cart.
+                <a routerLink="/home" class="alert-link">
+                    Click here to go back to the Home page
+                </a>
+            </div>
+
+            <div *ngIf="cart.itemCount > 0">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Skis</th>
+                        <th class="text-center">Size</th>
+                        <th class="text-right">Price</th>
+                        <th class="text-center">Quantity</th>
+                        <th class="text-right">Subtotal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let item of cart.lines">
+                        <td class="text-left">{{item.skis}}</td>
+                        <td class="text-center">{{item.size}}</td>
+                        <td class="text-right">
+                            {{item.price | currency:"USD":true:"2.2-2"}}
+                        </td>
+                        <td >
+                            <input type="number" min="1" max="99"
+                                   class="form-control"
+                                   style="width:5rem"
+                                   [value]="item.quantity"
+                                   (change)="cart.updateQuantity(item.skuNo, 
+                                            $event.target.value)"/>
+                        </td>
+                        <td class="text-right">{{item.subTotal | currency:"USD":true:"2.2-2"}}</td>
+                        <td class="text-center">
+                            <button (click)="cart.removeLine(item.skuNo)" 
+                                    class="btn btn-outline-primary btn-sm">
+                                Remove
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-right">Total:</td>
+                        <td class="text-right">
+                            {{cart.cartPrice | currency:"USD":true:"2.2-2"}}
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+                
+                <p *ngFor="let ski of names" class="text-danger">
+                    {{ski}}: more than stock level 
+                </p>
+
+                <div class="text-center">
+                    <button routerLink="/home" class="btn btn-primary">
+                        Continue shopping
+                    </button>
+                    <button (click)="checkout()" class="btn btn-primary">
+                        Checkout
+                    </button>
+                    <button class="pull-right btn btn-outline-primary" (click)="cart.clearCart()">
+                        Clear Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

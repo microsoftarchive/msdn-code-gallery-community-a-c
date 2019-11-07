@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AngularJS 控制器演示</title>
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="/Scripts/angular-route.js"></script>
+    <script src="/Scripts/App/controllers/homeController.js"></script>
+    <script src="/Scripts/App/services/services.js"></script>
+    <script src="/Scripts/App/directives/directives.js"></script>
+    <script src="/Scripts/App/filters/filter.js"></script>
+</head>
+<body>
+    <h2>AngularJS 控制器演示</h2>
+    <div ng-controller="cntoController">
+        <div><textarea ng-model="val"></textarea></div>
+        <div>{{val}}</div>
+        <div><button ng-click="click()">重置</button></div>
+    </div>
+    <script src="/Scripts/App/appmain.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{6e785dd3-9c4c-4a4f-a296-df97a8221a0a}"
+       Name="EndTime"
+       DisplayName="End Time"
+       StaticName="EndTime"
+       Description="When will you be back in the office?"
+       Type="DateTime"
+       Required="TRUE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp">
+  </Field>
+</Elements>

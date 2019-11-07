@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin configuration -->
+<skin>
+	<add key="Style" value="default"/>
+	<add key="Style" value="ToolsBarToFooter.child"/>
+	<add key="Style" value="fx.child"/>
+	<add key="Style" value="fonts.child"/>
+	<add key="Setup" value="Dark+mods"/>
+</skin>

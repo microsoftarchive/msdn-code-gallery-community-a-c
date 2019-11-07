@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome to asp.net webapi demo using FluentNHIbernate and Repository pattern</title>
+</head>
+<body>
+
+    <h2>Welcome to asp.net webapi demo using FluentNHIbernate and Repository pattern</h2>
+    <p>
+        This is a reference page of uri. This app is created in asp.net web api using fluentnhibernate and repository pattern.<br />
+        For detailed info refer: <a href="http://gaurav-arora.com/crud-operations-with-asp-net-web-api-using-fluentnhibernate-repository-pattern/" target="_blank">CRUD Operations with ASP.Net Web API using FluentNHibernate, Repository pattern</a>. <br />
+        Download complete source code: <a href="https://github.com/garora/somestuff/tree/master/CRUDWithWebAPI" target="_blank">GitHub</a>
+    </p>
+    <br />
+    <style>
+        table, td, th {
+            border: 1px solid green;
+        }
+
+        th {
+            background-color: green;
+            color: white;
+        }
+    </style>
+    <h2>Following table contains all URIs</h2>
+    <table>
+        <tr>
+            <th>Action</th>
+            <th>HTTP method</th>
+            <th>Relative URI (@Request.Url.AbsoluteUri)</th>
+        </tr>
+        <tr>
+            <td>Get a list of serverdata</td>
+            <td>GET</td>
+            <td>/api/serverdata</td>
+        </tr>
+        <tr>
+            <td>Get a serverdata by ID</td>
+            <td>GET</td>
+            <td>/api/serverdata/<em>id</em></td>
+        </tr>
+        <tr>
+            <td>Get serverdata by datatype</td>
+            <td>GET</td>
+            <td>/api/serverdata/type/<em>datatype</em></td>
+        </tr>
+        <tr>
+            <td>Get serverdata by machine IP</td>
+            <td>GET</td>
+            <td>/api/serverdata/ip/<em>ip</em></td>
+        </tr>
+        <tr>
+            <td>Create a fresh serverdata</td>
+            <td>POST</td>
+            <td>/api/serverdata</td>
+        </tr>
+        <tr>
+            <td>Update an existing serverdata</td>
+            <td>PUT</td>
+            <td>/api/serverdata/<em>id</em></td>
+        </tr>
+        <tr>
+            <td>Delete an existing serverdata</td>
+            <td>DELETE</td>
+            <td>/api/serverdata/<em>id</em></td>
+        </tr>
+    </table>
+</body>
+</html>

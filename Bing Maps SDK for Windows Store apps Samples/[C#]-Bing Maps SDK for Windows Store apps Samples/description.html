@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Bing Maps SDK for Windows Store apps Samples</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Bing Maps SDK for Windows Store apps Samples</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Bing Maps, Windows 8, Windows Store app
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Bing Maps
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">10/15/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Bing-Maps-SDK-for-Metro-31b378eb">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><span style="font-size:small"><strong>Bing Maps SDK for Windows Store apps Samples</strong> demonstrates the power of Windows 8 and Bing Maps to provide an enhanced mapping experience for modern-style apps. These samples show how to create Windows Store
+ apps that showcase the Bing Maps SDK features for both C# and JavaScript.</span></p>
+<p><br>
+<span style="font-size:small">You must install the <a href="http://visualstudiogallery.msdn.microsoft.com/bb764f67-6b2c-4e14-b2d3-17477ae1eaca?SRC=Featured" >
+Bing Maps SDK for Windows Store apps</a> and get a <a href="http://msdn.microsoft.com/en-us/library/ff428642.aspx">
+Bing Maps Key</a> for Windows Store apps to run these samples.&nbsp; This SDK combines the power of Windows 8 and
+<a href="http://bing.com/maps" >Bing&trade; Maps</a> to provide an enhanced mapping experience for&nbsp;modern-style apps. Developers can use this Bing Maps control to incorporate the latest road maps, aerial views, and low-angle high-resolution
+ images into a modern-style app.</span></p>
+<p><span style="font-size:small"><em>JavaScript Developers</em>: See <a href="http://go.microsoft.com/fwlink/?LinkID=244450" >
+Developing a Windows Store app </a>to learn how to use the Bing Maps AJAX Control 7.0 to add Bing Maps to your Window Store app.</span></p>
+<p><span style="font-size:small"><em>Visual Basic, C# and C&#43;&#43; Developers</em>: See
+<a href="http://go.microsoft.com/fwlink/?LinkId=245664">Getting Started with&nbsp;Windows Store&nbsp;apps</a>.</span></p>
+<p><span style="font-size:small"><em><span style="text-decoration:underline">Important note for Visual Basic, C# and C&#43;&#43; Developers</span></em>: For your&nbsp;Windows Store&nbsp;app project to work correctly, make sure you complete the steps in
+<a href="http://go.microsoft.com/fwlink/?LinkId=245670">Add Bing Maps to a Windows Store app</a> after you install the SDK.</span></p>
+<p><span style="font-size:small">For more information, please refer to the <a href="http://go.microsoft.com/fwlink/?LinkID=242866&amp;clcid=0x409">
+documentation</a> on MSDN.</span></p>
+<p><span style="font-size:small">Questions? Need help? Post your questions on the
+<a href="http://social.msdn.microsoft.com/Forums/en-US/bingmapswindows8/threads">
+Bing Maps forum</a> for help from the product team and other community members.</span></p>
+<p><span style="font-size:small"><strong>System Requirements</strong></span></p>
+<ul>
+<li><span style="font-size:small">Bing Maps SDK for Windows Store apps</span> </li><li><span style="font-size:small">Windows 8 RTM</span> </li><li><span style="font-size:small">Visual Studio 2012 RTM</span> </li></ul>
+
+</div>
+
+
+            <hr />
+            <div id="sampleIndex">
+                <h2>Sample index</h2>
+                <div id="SampleIndexList">
+                        <!--ps15895-->
+                        <div id="item">
+                                <div><a href="Bing Maps C# Pushpin Sample/description.html">Bing Maps C# Pushpin Sample</a></div>
+                            <div>The Pushpin Sample shows how to place pushpins (interactive icons) on a map using C#, XAML, and the Bing Maps SDK for Windows Store apps.</div>
+                        </div>
+                        <!--pe15895-->
+                        <!--ps15898-->
+                        <div id="item">
+                                <div><a href="Bing Maps C# LocationTracking Sample/description.html">Bing Maps C# LocationTracking Sample</a></div>
+                            <div>The Location Tracking sample shows how to acquire and display of your current position on a map by using C#, XAML, and the Bing Maps SDK for Windows Store apps.</div>
+                        </div>
+                        <!--pe15898-->
+                        <!--ps15897-->
+                        <div id="item">
+                                <div><a href="Bing Maps C# Map Style Sample/description.html">Bing Maps C# Map Style Sample</a></div>
+                            <div>The Map Styles sample shows how to create maps in your application with aerial imagery and road imagery by using C#, XAML, and the Bing Maps SDK for Windows Store apps.</div>
+                        </div>
+                        <!--pe15897-->
+                        <!--ps15894-->
+                        <div id="item">
+                                <div><a href="Bing Maps C# Rotate Map Sample/description.html">Bing Maps C# Rotate Map Sample</a></div>
+                            <div>The Rotate Map Sample shows how to create and rotate a bird&#39;s eye map (map with high resolution aerial imagery) by using C#, XAML, and the Bing Maps SDK for Windows Store apps.</div>
+                        </div>
+                        <!--pe15894-->
+                        <!--ps15893-->
+                        <div id="item">
+                                <div><a href="Bing Maps C# Traffic Sample/description.html">Bing Maps C# Traffic Sample</a></div>
+                            <div>The Traffic sample demonstrates how easy it is to superimpose a traffic layer on your map control, created using C#, XAML and the Bing Maps SDK for Metro style apps (Release Preview).</div>
+                        </div>
+                        <!--pe15893-->
+                        <!--pe15892-->
+                        <!--ps18963-->
+                        <div id="item">
+                                <div><a href="Bing Maps C# GPX Route Viewer Sample/description.html">Bing Maps C# GPX Route Viewer Sample</a></div>
+                            <div>The Bing Maps C# GPX Route Viewer Sample shows how to read in a GPX file and display its contents on the map as a route.</div>
+                        </div>
+                        <!--pe18963-->
+                        <!--ps18961-->
+                        <div id="item">
+                                <div><a href="Bing Maps C# Map Shapes Sample/description.html">Bing Maps C# Map Shapes Sample</a></div>
+                            <div>The Bing Maps C# Maps Sample shows how to add shapes to the map including polygons and polylines. It also indicates the difference between valid and invalid polygons.</div>
+                        </div>
+                        <!--pe18961-->
+                        <!--ps18975-->
+                        <div id="item">
+                                <div><a href="Bing Maps C# Landmark Events Sample/description.html">Bing Maps C# Landmark Events Sample</a></div>
+                            <div>The Bing Maps C# Landmark Events Sample shows how to handle the LandmarkTapped event.</div>
+                        </div>
+                        <!--pe18975-->
+                        <!--ps18962-->
+                        <div id="item">
+                                <div><a href="Bing Maps C# Pixel to Location Sample/description.html">Bing Maps C# Pixel to Location Sample</a></div>
+                            <div>The Bing Maps C# Pixel To Location Sample shows how to convert a pixel position to a Location (latitude/longitude).</div>
+                        </div>
+                        <!--pe18962-->
+                </div>
+            </div>
+    </div>
+</body>
+</html>

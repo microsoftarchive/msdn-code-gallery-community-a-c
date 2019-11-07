@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:Banner,2:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Shared/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;hashKey=43176693215A318AD0042E0718980CBA" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/a7d1e078-8570-47da-a87b-ff462dfc958dCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>C# y procedimientos almacenados de SQL Server</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>C# y procedimientos almacenados de SQL Server</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Tecnolog&#237;as">Tecnolog&#237;as</label>
+                        <div id="Tecnolog&#237;as">
+                            Windows Forms
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Temas">Temas</label>
+                        <div id="Temas">
+                            Data Access
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">es-ES</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">&#218;ltima actualizaci&#243;n</label>
+                    <div id="LastUpdated">02/06/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">Licencia</label>
+                    <div id="License">
+                        <a href="license.rtf">Licencia de Apache, versi&#243;n 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/C-y-procedimientos-81c99f09">Vea este ejemplo en l&#237;nea</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copiar c&#243;digo';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introducci&oacute;n</h1>
+<p>En este ejemplo, voy a trabajar con Windows Forms y con Procedimientos almacenados de SQL Server. El trabajo fue realizado por uno de mis alumnos (Miguel Caviedes) y funciona en SQL Server 2005 y 2008 (deber&iacute;a funcionar en 2000 o superior).</p>
+<p><em><br>
+</em></p>
+<h1><span>Requerimientos</span></h1>
+<p><em></p>
+<div>En este ejemplo, voy a trabajar con Windows Forms y con Procedimientos almacenados de SQL Server. El trabajo fue realizado por uno de mis alumnos (Miguel Caviedes) y funciona en SQL Server 2005 y 2008 (deber&iacute;a funcionar en 2000 o superior).</div>
+<div>Este ejemplo puede ser usado tambi&eacute;n con WPF.</div>
+<br>
+</em>
+<p></p>
+<p><span style="font-size:20px; font-weight:bold">Descripci&oacute;n</span></p>
+<p><em></p>
+<div>En este ejemplo, voy a trabajar con Windows Forms y con Procedimientos almacenados de SQL Server. El trabajo fue realizado por uno de mis alumnos (Miguel Caviedes) y funciona en SQL Server 2005 y 2008 (deber&iacute;a funcionar en 2000 o superior).</div>
+<div>Este ejemplo puede ser usado tambi&eacute;n con WPF.</div>
+<div>Lo que hace este ejemplo es insertar nombres, apellidos, emails y direcciones al presionar el bot&oacute;n&nbsp;<strong>Nuevo Registro.</strong></div>
+<div><strong><br>
+</strong></div>
+<div class="separator"><a href="http://1.bp.blogspot.com/-wzoyScrX8lg/TVsG0Es-P7I/AAAAAAAAApU/9eT0h34e2b0/s1600/insertardatos+procedimientos+almacenados.jpg"></a></div>
+<div><strong><br>
+</strong></div>
+<div><strong><br>
+</strong></div>
+<div><strong>Figura 1. Formulario</strong></div>
+<div>Primeramente, voy a crearme una tabla de SQL Server de clientes:</div>
+<div>SET&nbsp;ANSI_NULLS&nbsp;ON</div>
+<div>GO</div>
+<div>SET&nbsp;QUOTED_IDENTIFIER&nbsp;ON</div>
+<div>GO</div>
+<div>CREATE&nbsp;TABLE&nbsp;[dbo].[cliente](</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[idCliente] [bigint]&nbsp;IDENTITY(1,1)&nbsp;NOT&nbsp;NULL,</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[nombres] [nchar](50)&nbsp;COLLATEModern_Spanish_CI_AS&nbsp;NULL,</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[apellidos] [nchar](50)&nbsp;COLLATEModern_Spanish_CI_AS&nbsp;NULL,</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[direccion] [nchar](50)&nbsp;COLLATEModern_Spanish_CI_AS&nbsp;NULL,</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[email] [nchar](100)&nbsp;COLLATEModern_Spanish_CI_AS&nbsp;NULL,</div>
+<div>&nbsp;CONSTRAINT&nbsp;[PK_cliente]&nbsp;PRIMARY&nbsp;KEY&nbsp;CLUSTERED</div>
+<div>(</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[idCliente]&nbsp;ASC</div>
+<div>)WITH&nbsp;(PAD_INDEX&nbsp;&nbsp;=&nbsp;OFF,&nbsp;IGNORE_DUP_KEY&nbsp;=&nbsp;OFF)&nbsp;ON[PRIMARY]</div>
+<div>)&nbsp;ON&nbsp;[PRIMARY]</div>
+<div></div>
+<div>Luego, creamos algunos datos en la tabla (ese trabajito les dejo como tarea).</div>
+<div>Ahora, voy a crear un procedimiento almacenado que inserta datos en mi tabla de clientes:</div>
+<div></div>
+<div>set&nbsp;ANSI_NULLS&nbsp;ON</div>
+<div>set&nbsp;QUOTED_IDENTIFIER&nbsp;ON</div>
+<div>GO</div>
+<div>CREATE&nbsp;PROCEDURE&nbsp;[dbo].[InsertarCliente]</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@nombres&nbsp;nchar(50),</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@apellidos&nbsp;nchar(50),</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@direccion&nbsp;nchar(50),</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@email&nbsp;nchar(100)</div>
+<div>AS</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert&nbsp;into&nbsp;cliente&nbsp;values</div>
+<div>(@nombres,</div>
+<div>@apellidos,</div>
+<div>@direccion,</div>
+<div>@email)</div>
+&nbsp;&nbsp;</em>
+<p></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar script</span>|<span class="pluginRemoveHolderLink">{#scriptcode_dlg.remove_script}</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public partial class WFClientes : Form
+    {
+        private BindingSource bindingSource1 = new BindingSource();
+        private SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        public WFClientes()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                    this.textBox1.Text = &quot;&quot;;
+                    this.textBox2.Text = &quot;&quot;;
+                    this.textBox3.Text = &quot;&quot;;
+                    this.textBox4.Text = &quot;&quot;;
+                    this.textBox5.Text = &quot;&quot;;
+                    this.button4.Visible = true;
+                    this.button1.Visible = false;
+            }
+            catch (<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.InvalidOperationException.aspx"  title="Auto generated link to System.InvalidOperationException">System.InvalidOperationException</a> ex)
+            {
+                MessageBox.Show(&quot;Please open a new connection&quot; &#43; &quot;\n&quot;
+                            &#43; &quot;TargetSite: &quot; &#43; ex.TargetSite &#43; &quot;\n&quot; &#43;
+                            &quot;Source: &quot; &#43; ex.Source &#43; &quot;\n&quot;
+
+                            );
+                this.CargarLog(ex.ToString());
+            }
+            //error de sentencia sql que no sea la correta
+            catch (SqlException ex)
+            {
+                MessageBox.Show(&quot;Please open a new connection&quot; &#43; &quot;\n&quot;
+                            &#43; &quot;TargetSite: &quot; &#43; ex.TargetSite &#43; &quot;\n&quot; &#43;
+                            &quot;Source: &quot; &#43; ex.Source &#43; &quot;\n&quot; &#43;
+                            &quot;ErrorCode: &quot; &#43; ex.ErrorCode &#43; &quot;\n&quot; &#43;
+                            &quot;Server: &quot; &#43; ex.Server &#43; &quot;\n&quot; &#43;
+                            &quot;State: &quot; &#43; ex.State &#43; &quot;\n&quot; &#43;
+                            &quot;Number: &quot; &#43; ex.Number &#43; &quot;\n&quot; &#43;
+                            &quot;Message: &quot; &#43; ex.Message);
+                this.CargarLog(ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                this.CargarLog(ex.ToString());
+            }
+        }
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;WFClientes&nbsp;:&nbsp;Form&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;BindingSource&nbsp;bindingSource1&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;BindingSource();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;SqlDataAdapter&nbsp;dataAdapter&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SqlDataAdapter();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;WFClientes()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitializeComponent();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;button1_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.textBox1.Text&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.textBox2.Text&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.textBox3.Text&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.textBox4.Text&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.textBox5.Text&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.button4.Visible&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.button1.Visible&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(System.InvalidOperationException&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Please&nbsp;open&nbsp;a&nbsp;new&nbsp;connection&quot;</span>&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#43;&nbsp;<span class="cs__string">&quot;TargetSite:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;ex.TargetSite&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;&#43;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;Source:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;ex.Source&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.CargarLog(ex.ToString());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//error&nbsp;de&nbsp;sentencia&nbsp;sql&nbsp;que&nbsp;no&nbsp;sea&nbsp;la&nbsp;correta</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(SqlException&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Please&nbsp;open&nbsp;a&nbsp;new&nbsp;connection&quot;</span>&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#43;&nbsp;<span class="cs__string">&quot;TargetSite:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;ex.TargetSite&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;&#43;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;Source:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;ex.Source&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;&#43;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;ErrorCode:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;ex.ErrorCode&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;&#43;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;Server:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;ex.Server&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;&#43;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;State:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;ex.State&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;&#43;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;Number:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;ex.Number&nbsp;&#43;&nbsp;<span class="cs__string">&quot;\n&quot;</span>&nbsp;&#43;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;Message:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;ex.Message);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.CargarLog(ex.ToString());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(ex.ToString());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.CargarLog(ex.ToString());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</pre>
+</div>
+</div>
+</div>
+<h1>Mayor informaci&oacute;n</h1>
+<p><a href="http://elpaladintecnologico.blogspot.com/2011/02/c-y-procedimientos-almacenados-de-sql.html">http://elpaladintecnologico.blogspot.com/2011/02/c-y-procedimientos-almacenados-de-sql.html</a></p>
+<p><em>For more information on X, see ...?</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

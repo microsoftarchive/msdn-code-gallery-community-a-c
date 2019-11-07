@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=1B9152C29A0457AFEC33526CDFADF105" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=D636919224FCD4EE55642CE3BF1E3856" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Building an Office add-in with Angular 2</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Building an Office add-in with Angular 2</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Office 365, TypeScript, Office Add-in, Angular 2, Office UI Fabric
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Microsoft Office Add-ins, Office 365, apps for Office
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/19/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h2>Introduction</h2>
+<p>This is a sample project showing how to get started building Office <a href="http://dev.office.com/getting-started/addins" >
+add-ins</a> with Angular 2 and Office UI Fabric.The sample add-in is a task pane add-in for Excel.</p>
+<p><img id="159916" src="https://i1.code.msdn.s-msft.com/building-an-office-add-in-a9d506cd/image/file/159916/1/officeaddin1.png" alt=""></p>
+<h3>Latest</h3>
+<p>This sample has been updated to Angular2 release. If you need earlier versions you can find them
+<a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://github.com/Useful-Software-Solutions-Ltd/office-addin-with-angular2/tree/18e48af2fc59de50aae94aeb4c029d7ccbae28a8" >
+here</a>.</p>
+<h2>Requirements</h2>
+<h3>Tools:</h3>
+<ul>
+<li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://nodejs.org/en/" >Node.js</a> </li><li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs" >Visual Studio 2015 Community update 3</a>
+</li><li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://www.visualstudio.com/en-us/features/office-tools-vs.aspx" >Office Developer Tools</a>
+</li><li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://www.microsoft.com/en-us/download/details.aspx?id=48593" >TypeScript for Visual Studio 2015 latest version</a>
+</li></ul>
+<h3>NPM Packages:</h3>
+<ul>
+<li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://www.typescriptlang.org/#download-links" >TypeScript</a>
+</li><li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://github.com/typings/typings" >Typings</a> </li></ul>
+<div>These need to be installed globally. The setup script will do this (see the installation section).</div>
+<h3>Also recommended are:</h3>
+<ul>
+<li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://www.visualstudio.com/en-us/features/node-js-vs.aspx" >Node.js Tools for Visual Studio 2015</a>
+</li><li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941" >NPM Task Runner</a>
+</li><li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://visualstudiogallery.msdn.microsoft.com/4e84e2cf-2d6b-472a-b1e2-b84932511379" >Open Command Line</a>
+</li></ul>
+<p>Visual Studio is required to be able to debug the add-in any of the Office desktop applications.
+<br>
+That said you can run this sample using the <strong>lite-server</strong> and use you preferred IDE to work with it.<br>
+You can then still use Office Online for in browser debugging (see below).</p>
+<h2>Installation</h2>
+<p>Download or clone the repo to its own folder. Open a command prompt under the <strong>
+./OfficeAddInWithAngular2Web</strong>&nbsp;directory and run the command:</p>
+<div></div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Bash/shell</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">bash</span>
+<pre class="hidden">npm run setup</pre>
+<div class="preview">
+<pre class="bash">npm&nbsp;run&nbsp;setup</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">This will install all the required NPM package and typings. If you are using Visual Studio now open the solution and build it.</div>
+</div>
+<div class="endscriptcode"></div>
+<h3 class="endscriptcode">SSL issues</h3>
+<p>Office add-ins require HTTPS and browser errors when the localhost certificate is not trusted. Make sure that the certificate being used by
+<strong>IIS Express</strong>&nbsp;or <strong>lite-server </strong>is trusted. See
+<a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://blogs.msdn.microsoft.com/robert_mcmurray/2013/11/15/how-to-trust-the-iis-express-self-signed-certificate/" >
+this post</a> for more information.</p>
+<h2>Running the add-in</h2>
+<h3>In Excel Online</h3>
+<div>Either run start the <strong>OfficeAddInWithAngular2Web</strong> project&nbsp;in VS or from the
+<strong>OfficeAddInWithAngular2Web</strong> directory&nbsp;run</div>
+<div></div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Bash/shell</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">bash</span>
+<pre class="hidden">npm start</pre>
+<div class="preview">
+<pre class="bash">npm&nbsp;start<br></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Open up a new workbook in Excel Online. Click on the <strong>INSERT</strong> tab and then
+<strong>Office Add-ins</strong>. On the Office Add-ins dialog click <strong>Upload my Add-In</strong> and select
+<strong>OfficeAddInWithAngular2.xml</strong> which can be found under <br>
+<strong>./OfficeAddInWithAngular2/OfficeAddInWithAngular2Manifest</strong>. The add-in will now be available on the
+<strong>HOME</strong> tab and you can&nbsp;<strong>F12</strong> to debug the addin in browser.</p>
+<h3>In Excel desktop</h3>
+<div></div>
+<div>In Visual Studio 2015 build the project and run it Visual Studio will load the add-in in Excel and allow you to debug in the IDE.</div>
+<div>
+<h2>Resources</h2>
+<div></div>
+<div></div>
+<div>This sample is more of a reference project for people who are already familiar with Office add-ins, Angular 2 and TypeScript than a tutorial so if you need to get up to speed with anything here are some good resources.</div>
+</div>
+<div></div>
+<ul>
+<li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://angular.io/docs/ts/latest/quickstart.html" >Angular 2</a>
+</li><li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://www.typescriptlang.org/docs/tutorial.html" >TypeScript</a>
+</li><li><a href="http://dev.office.com/fabric/get-started" >Office UI Fabric</a>
+</li><li><a href="https://code.msdn.microsoft.com/Building-an-Office-add-in-a9d506cd/https://dev.office.com/getting-started/addins" >Office Add-ins</a><strong>&nbsp;</strong><em>&nbsp;</em><strong>&nbsp;</strong><em>&nbsp;</em>
+</li></ul>
+<div></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="endscriptcode"></div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+th, .Button, input[type='submit'], input[type='reset'], input[type='button']
+{
+	background-image:url('resources/images/backgrounds/button-red.png');
+	background-size:100% 100%;
+	background-attachment:scroll;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.4.0.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=D230DC278C5D2008759BCAAF1ABCBAC6" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=BB208CA7577BB26F9BF04A6EC76C08A9" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>CRUD Operations in Asp.Net Core 2 Razor Page with Dapper and Repository Pattern</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>CRUD Operations in Asp.Net Core 2 Razor Page with Dapper and Repository Pattern</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Repository Pattern, Dapper, ASP.NET Core 2.0, Razor Pages
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Performance, Web Development, ASP.NET Security
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Cloud, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/28/2018</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/CRUD-Operations-in-AspNet-d958ab27">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This article will demonstrate you about how to perform CRUD operations in&nbsp;<em>Razor Page</em>&nbsp;which introduced Asp.Net Core 2 using Dapper and Repository Pattern.</p>
+<p>To complete this demonstration in a simple manner, we will follow some steps as below.</p>
+<p>Step 1: Create Razor Page in Asp.Net Core 2</p>
+<p>Step 2: Create Database and Table</p>
+<p>Step 3: Install Dapper</p>
+<p>Step 4: Create Repository Class and Interface with Required Entity</p>
+<p>Step 5: Create Connection String and get it on Repository Class</p>
+<p>Step 6: Create Razor Page for CRUD Operations</p>
+<p>Step 7: Implement Code in Razor Pages for performing CRUD Operations</p>
+<p>Now we have defined six steps to complete this practical demonstration. So, let&rsquo;s move to step by step and complete the task.</p>
+<h1><span>Building the Sample</span>&nbsp;</h1>
+<p><span>STEP 1: Create Razor Page in Asp.Net Core 2</span></p>
+<p>To create&nbsp;<em>Asp.Net Core 2 Razor Page</em>&nbsp;project, open Visual Studio 2017 version 15.3 and above and make sure you have installed .Net Core SDK 2.0 with your system. If you don&rsquo;t have this configuration with your system, please update
+ your Visual Studio and system with these configurations.</p>
+<p>I hope, you have installed the lasted version of Visual Studio with&nbsp;<em>.</em><em>Net Core SDK 2.0</em>, so open Visual Studio and Go to File&nbsp;<span>Menu</span>&nbsp;&gt; choose&nbsp;<span>New</span>&nbsp;&gt; select&nbsp;<span>Project</span>. It
+ will open &ldquo;New Project&rdquo; windows. From the New Project windows, you have to choose&nbsp;<span>.Net Core</span>&nbsp;from the left panel and then from the center panel choose &ldquo;Asp.Net Core Web Application&rdquo; and provide the suitable name
+ like &ldquo;RazorPagesExample&rdquo; and click to OK.</p>
+<p><img src="description/280120180859RazorPages.png" alt="Razor Page"></p>
+<p>After clicking OK button, it will pop up with a new window from where we can choose the template for Razor Page.</p>
+<p><img src="description/280120180900RazorPages.png" alt="Razor Page Web Application"></p>
+<p>From here, you have to choose &ldquo;Web Application&rdquo; to create Razor Page application and click to OK. It will take minutes or seconds to configure your project and finally, we have the project ready for demonstration.</p>
+<p><span>STEP 2: Create Database and Table</span></p>
+<p>Open SSMS [SQL Server Management Studio] and create new database name called it &ldquo;TestDB&rdquo; and inside that, you have to create one table that is called &ldquo;Product&rdquo; using following SQL scripts. Now we have a database and its corresponding
+ table is ready.</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>SQL</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">mysql</span>
+<pre class="hidden">--Create Database
+CREATE DATABASE TestDB
+GO
+
+--Use Created Database
+USE TestDB
+GO
+
+--Create Table &quot;Product&quot;
+CREATE TABLE Product(Id INT PRIMARY KEY IDENTITY(1,1), Name VARCHAR(25), Model VARCHAR(50), Price INT)
+
+--Insert dummy reocrd in table
+INSERT INTO Product(Name, Model, Price) VALUES('Nokia 1', 'Nokia', 25000)
+
+SELECT * FROM Product</pre>
+<div class="preview">
+<pre class="js">--Create&nbsp;Database&nbsp;
+CREATE&nbsp;DATABASE&nbsp;TestDB&nbsp;
+GO&nbsp;
+&nbsp;
+--Use&nbsp;Created&nbsp;Database&nbsp;
+USE&nbsp;TestDB&nbsp;
+GO&nbsp;
+&nbsp;
+--Create&nbsp;Table&nbsp;<span class="js__string">&quot;Product&quot;</span>&nbsp;
+CREATE&nbsp;TABLE&nbsp;Product(Id&nbsp;INT&nbsp;PRIMARY&nbsp;KEY&nbsp;IDENTITY(<span class="js__num">1</span>,<span class="js__num">1</span>),&nbsp;Name&nbsp;VARCHAR(<span class="js__num">25</span>),&nbsp;Model&nbsp;VARCHAR(<span class="js__num">50</span>),&nbsp;Price&nbsp;INT)&nbsp;
+&nbsp;
+--Insert&nbsp;dummy&nbsp;reocrd&nbsp;<span class="js__operator">in</span>&nbsp;table&nbsp;
+INSERT&nbsp;INTO&nbsp;Product(Name,&nbsp;Model,&nbsp;Price)&nbsp;VALUES(<span class="js__string">'Nokia&nbsp;1'</span>,&nbsp;<span class="js__string">'Nokia'</span>,&nbsp;<span class="js__num">25000</span>)&nbsp;
+&nbsp;
+SELECT&nbsp;*&nbsp;FROM&nbsp;Product</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span>STEP 3: Install Dapper</span></p>
+<p>In one line, Dapper is micro ORM with high performance for SQL, MySQL etc.</p>
+<p>It is a simple step to install Dapper. Right click on the project and choose &ldquo;<span>Manage NuGet Packages</span>&rdquo;. It will open&nbsp;<span>NuGet Package Manager</span>&nbsp;from there you can search packages which need to be installed. So, now
+ we will search &ldquo;Dapper&rdquo; and installed it. After installation, it will be shown in the&nbsp;<span>NuGet</span>&nbsp;section which lies inside the &ldquo;<span>Dependencies</span>&rdquo; as follows in the project.</p>
+<p>&nbsp;</p>
+<ul>
+</ul>
+<h1>More Information</h1>
+<p><em>For more information on X, see ...</em></p>
+<p><em><a href="http://www.mukeshkumar.net/articles/dotnetcore/crud-operations-in-asp-net-core-2-razor-page-with-dapper-and-repository-pattern" >http://www.mukeshkumar.net/articles/dotnetcore/crud-operations-in-asp-net-core-2-razor-page-with-dapper-and-repository-pattern</a><br>
+</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

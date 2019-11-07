@@ -1,0 +1,26 @@
+﻿You can insert page breaks before and after HTML elements in the generated PDF document by setting the <b><i>PageBreakBeforeHtmlElementsSelectors</i></b> and <b><i>PageBreakAfterHtmlElementsSelectors</i></b> API properties. 
+    If a HTML element is selected by <b><i>PageBreakBeforeHtmlElementsSelectors</i></b> selector a page break will be forced right before the position in PDF page where the element would be normally rendered.
+    If a HTML element is selected by <b><i>PageBreakAfterHtmlElementsSelectors</i></b> selector a page break will be forced right after the position in PDF page where the element would be normally rendered.<br />
+<br />
+At the top of the demo you can choose the HTML document to convert which can be:
+    <br />
+<ul>
+    <li>
+        <b>HTML Page With Page-Break-Before and Page-Break-After Styles</b>. The URL must be accessible from the computer where the converter runs. If the page requires authentication or if you are using a proxy server to access Internet
+            then you have to set the converter properties accordingly as described in documentation
+    </li>
+    <li>
+        <b>HTML String With Page-Break-Before and Page-Break-After Styles</b>. When you convert a HTML string you also have the option to specify a base URL that will be used
+            by converter to resolve the relative URLs found in the HTML string to fully qualified URLs. If your HTML string uses only fully qualified URLs then this parameter is not necessary
+    </li>
+</ul>
+The options you can set in this demo are:<br />
+<ul>
+    <li>
+        <b>CSS Selector of the HTML Elements Before Which to Insert Page Breaks</b>. If a HTML element is selected by this selector a page break will be forced right before the position in PDF page where the element would be normally rendered
+    </li>
+    <li>
+        <b>CSS Selector of the HTML Elements After Which to Insert Page Breaks</b>. If a HTML element is selected by this selector a page break will be forced right after the position in PDF page where the element would be normally rendered
+    </li>
+</ul>
+

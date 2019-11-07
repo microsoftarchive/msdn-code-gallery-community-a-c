@@ -1,0 +1,74 @@
+﻿<html>
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta http-equiv="refresh" content="1;url=http://localhost:7777" />
+<title>LOADING...</title>
+<style type="text/css">
+body{text-align:center;background-size: cover; background-image:linear-gradient(to bottom right, #FFFFFF 0%, #D0EF9B 100%);font-family:Verdana;font-size:120%;color:#00544A}
+.barlittle {
+    position:relative;
+	background-color:#00544A;  
+	background-image: -moz-linear-gradient(45deg, #00544A 25%, #30847A); 
+	background-image: -webkit-linear-gradient(45deg, #00544A 25%, #30847A);
+	border:none; 
+    margin:5px;
+	padding-left:12px;
+    height:5px;
+    opacity:0.1;
+	transform:scale(0.7);
+	-moz-transform:scale(0.7);
+	-webkit-transform:scale(0.7);
+	animation:move 1s infinite linear;
+	-moz-animation:move 1s infinite linear;
+	-webkit-animation:move 1s infinite linear;
+}
+#block_1{
+ 	animation-delay: .4s;
+ 	-moz-animation-delay: .4s;
+	-webkit-animation-delay: .4s;
+ }
+#block_2{
+ 	animation-delay: .3s;
+ 	-moz-animation-delay: .3s;
+	-webkit-animation-delay: .3s;
+}
+#block_3{
+  	animation-delay: .2s;
+	-moz-animation-delay: .2s;
+	-webkit-animation-delay: .2s;
+}
+#block_4{
+  	animation-delay: .3s;
+	-moz-animation-delay: .3s;
+	-webkit-animation-delay: .3s;
+}
+#block_5{
+ 	-moz-animation-delay: .4s;
+	-webkit-animation-delay: .4s;
+}
+@keyframes move{
+	0%{transform: scale(1.2);opacity:1;}
+	100%{transform: scale(0.7);opacity:0.1;}
+}
+@-moz-keyframes move{
+	0%{-moz-transform: scale(1.2);opacity:1;}
+	100%{-moz-transform: scale(0.7);opacity:0.1;}
+}
+@-webkit-keyframes move{
+	0%{-webkit-transform: scale(1.2);opacity:1;}
+	100%{-webkit-transform: scale(0.7);opacity:0.1;}
+}
+</style>
+</head>
+<body>
+<cnter>
+<span style="font-size: 800%;">&#009786;</span><span style="font-size: 400%;">LOADING</span>
+<span id="block_5" class="barlittle"></span>
+<span id="block_4" class="barlittle"></span>
+<span id="block_3" class="barlittle"></span>
+<span id="block_2" class="barlittle"></span>
+<span id="block_1" class="barlittle"></span>
+</cnter>
+</body>
+</html>

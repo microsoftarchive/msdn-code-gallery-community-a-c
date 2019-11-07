@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html ng-app="mainApp" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AngularJs路由演示</title>
+    <script src="http://sandbox.runjs.cn/uploads/rs/376/pbcx3e1z/angular.min.js"></script>
+    <script src="http://sandbox.runjs.cn/uploads/rs/376/pbcx3e1z/angular-route.min.js"></script>
+    <script>
+        (function() {
+            // 设置当前模块依赖，“ngRoute”，用.NET的解就是给这个类库添加“ngRoute”引用
+            var mainApp = angular.module("mainApp", ['ngRoute']);
+            mainApp.config(['$routeProvider', function($routeProvider) {
+                // 路由配置
+                var route = $routeProvider;
+                // 指定URL为“/” 控制器：“listController”，模板：“route-list.html”
+                route.when('/list', { controller: 'listController', templateUrl: 'route-list.html' });
+                // 注意“/view/:id” 中的 “：id” 用于捕获参数ID
+                route.when('/view/:id', { controller: 'viewController', templateUrl: 'route-view.html' });
+                // 跳转
+                route.when("/", { redirectTo: '/list' });
+                route.otherwise({ redirectTo: '/list' });
+            }]);
+
+            //创建一个提供数据的服务器
+            mainApp.factory("service", function() {
+                var list = [
+                    { id: 1, title: "博客园", url: "http://www.cnblogs.com" },
+                    { id: 2, title: "知乎", url: "http://www.zhihu.com" },
+                    { id: 3, title: "codeproject", url: "http://www.codeproject.com/" },
+                    { id: 4, title: "stackoverflow", url: "http://www.stackoverflow.com/" }
+                ];
+                return function(id) {
+                    //假如ID为无效值返回所有
+                    if (!id) return list;
+                    var t = 0;
+                    //匹配返回的项目
+                    angular.forEach(list, function(v, i) {
+                        if (v.id == id) t = i;
+                    });
+                    return list[t];
+                }
+            });
+
+            // 创建控制器 listController,注入提供数据服务
+            mainApp.controller("listController", ["$scope", "service", function($scope, service) {
+                //获取所有数据
+                $scope.list = service();
+            }]);
+
+            // 创建查看控制器 viewController, 注意应为需要获取URL ID参数 我们多设置了一个 依赖注入参数 “$routeParams” 通过它获取传入的 ID参数
+            mainApp.controller("viewController", ["$scope", "service", '$routeParams', function($scope, service, $routeParams) {
+                $scope.model = service($routeParams.id || 0) || {};
+            }]);
+        })()
+    </script>
+</head>
+<body>
+    <div><a href="#/list">列表</a></div>
+    <br />
+    <div ng-view>
+    </div>
+
+</body>
+</html>

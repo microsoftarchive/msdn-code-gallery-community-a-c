@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/themes/base/jquery.ui.all.css")" rel="stylesheet" type="text/css" />
+        <script src="@Url.Content("~/Scripts/jquery-1.6.3.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery-ui-1.8.11.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/AjaxLogin.js")" type="text/javascript"></script>
+        <meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+    <div class="page">
+            @Html.Partial("_ViewSwitcher")
+        <div id="header">
+
+            <div id="logindisplay"></div>
+            <div id="title">
+                <h1> MVC4 Conference </h1>
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Browse by date", "AllDates", "Home")</li>
+                    <li>@Html.ActionLink("Browse by speaker", "AllSpeakers", "Home")</li>
+                    <li>@Html.ActionLink("Browse by tag", "AllTags", "Home")</li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>

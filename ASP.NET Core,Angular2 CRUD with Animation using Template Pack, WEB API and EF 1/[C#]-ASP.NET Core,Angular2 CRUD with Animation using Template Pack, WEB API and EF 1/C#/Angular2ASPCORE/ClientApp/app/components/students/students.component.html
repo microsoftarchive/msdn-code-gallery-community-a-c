@@ -1,0 +1,173 @@
+﻿ <h1 [@fadeIn]='animStatus'>ASP.NET Core,Angular2 CRUD with Animation using Template Pack, WEB API and EF 1.0.1  </h1> 
+ <div class="column">
+     <h2>Created by : </h2>
+    <div style="background-color:#ff6a00;color:#FFFFFF;font-size:xx-large;width:260px;height:50px;text-shadow:  -2px -1px 0px #000,
+         0px -1px 0px #000,
+         1px -1px 0px #000,
+        -2px  0px 0px #000,
+         1px  0px 0px #000,
+        -2px  1px 0px #000,
+         0px  1px 0px #000,
+         1px  1px 0px #000;text-align:center;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;"   [@movelLeft]='animStatus'>         
+            {{myName}}      
+    </div>
+</div>
+<hr style="height: 1px;color: #123455;background-color: #d55500;border: none;color: #d55500;" />
+<p *ngIf="!student"><em>Loading Student Details please Wait ! ...</em></p>
+<table id="tblContainer" style='width: 99%;table-layout:fixed;'>
+    <tr>
+        <td>
+            <table style="background-color:#FFFFFF; border: dashed 3px #FFFFFF; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2"
+                   cellspacing="2">
+                <tr style="height: 30px;  color:#123455 ;border: solid 1px #659EC7;">
+                    <td width="40px">&nbsp;</td>
+                    <td width="50%">
+                        <h1> Add New Students Information <strong style="color:#0094ff"> </strong></h1>
+                       
+                    </td>
+                    <td align="right">
+                        <button (click)=AddStudent() style="background-color:#f83500;color:#FFFFFF;font-size:large;width:260px;height:50px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;" [@moveRight]='animStatus'  [@buttonReSize]='animStatus'>
+                            Add New Studetnt Information
+                        </button>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <hr style="height: 1px;color: #123455;background-color: #d55500;border: none;color: #d55500;" />
+        </td>
+    </tr>
+    <tr *ngIf="AddstudetnsTable">
+        <td  [@fadeIn]='animStatus'>
+            <table>
+                <tr>
+                    <td>
+                        <table style="background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding :5px;width :99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                            <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                <td width="40">
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <h2>Insert/Edit Student Details : </h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100">
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <table style="color:#9F000F;font-size:large; padding :5px;" cellpadding="12" cellspacing="16">
+                                        <tr>
+                                            <td><b>Students ID: </b> </td>
+                                            <td>
+                                                <input type="text" #StdID (ngModel)="StdIDs" value="{{StdIDs}}" style="background-color:tan" readonly>
+                                            </td>
+                                            <td width="20">&nbsp;</td>
+                                            <td><b>Students Name: </b> </td>
+                                            <td>
+                                                <input type="text" #StdName (ngModel)="StdNames" value="{{StdNames}}">
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Email: </b> </td>
+                                            <td>
+                                                <input type="text" #Email (ngModel)="Emails" value="{{Emails}}">
+                                            </td>
+                                            <td width="20">&nbsp;</td>
+                                            <td><b>Phone: </b> </td>
+                                            <td>
+                                                <input type="text" #Phone (ngModel)="Phones" value="{{Phones}}">
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Address: </b> </td>
+                                            <td  >
+                                                <input type="text" #Address (ngModel)="Addresss" value="{{Addresss}}">
+
+                                            </td>
+                                            <td width="20">&nbsp;</td>
+                                            <td align="right" colspan="2">
+                                                <button (click)=addStudentsDetails(StdID.value,StdName.value,Email.value,Phone.value,Address.value) style="background-color:#428d28;color:#FFFFFF;font-size:large;width:220px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;"  [@moveBottom]='animStatus' >
+                                                    Save
+                                                </button>  
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <button (click)=closeEdits() style="background-color:#334668;color:#FFFFFF;font-size:large;width:180px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;"  [@moveTop]='animStatus' >
+                                                    Close
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr style="height: 1px;color: #123455;background-color: #d55500;border: none;color: #d55500;" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+                </tr>
+                <tr>
+                    <td  [@moveBottom]='animStatus' >
+
+                        <table class='table' style="background-color:#FFFFFF; border:2px #6D7B8D; padding:5px;width:99%;table-layout:fixed;" cellpadding="2" cellspacing="2" *ngIf="student">
+                            <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                <td width="70" align="center">Edit</td>
+                                <td width="70" align="center">Delete</td>
+                                <td width="100" align="center">Student ID</td>
+                                <td width="160" align="center">Student Name</td>
+                                <td width="160" align="center">Email</td>
+                                <td width="120" align="center">Phone</td>
+                                <td width="180" align="center">Address</td>
+                            </tr>
+                            <tbody *ngFor="let StudentMasters  of student"  [@moveTop]='animStatus'>
+                                <tr>
+                                    <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            <img src="{{imgEdit}}"  style="height:32px;width:32px" (click)=editStudentsDetails(StudentMasters.stdID,StudentMasters.stdName,StudentMasters.email,StudentMasters.phone,StudentMasters.address)>
+                                        </span>
+                                    </td>
+                                    <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            <img src="{{imgDelete}}" style="height:32px;width:32px" (click)=deleteStudentsDetails(StudentMasters.stdID)>
+                                        </span>
+                                    </td>
+                                    <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">{{StudentMasters.stdID}}</span>
+                                    </td>
+                                    <td align="left" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">{{StudentMasters.stdName}}</span>
+                                    </td>
+
+                                    <td align="left" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">{{StudentMasters.email}}</span>
+                                    </td>
+
+                                    <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">{{StudentMasters.phone}}</span>
+                                    </td>
+
+                                    <td align="left" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">{{StudentMasters.address}}</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table> 

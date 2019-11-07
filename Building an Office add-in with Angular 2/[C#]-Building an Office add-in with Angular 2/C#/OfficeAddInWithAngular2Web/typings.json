@@ -1,0 +1,10 @@
+{
+  "name": "office-addin-with-angular2",
+  "globalDependencies": {
+    "core-js": "registry:dt/core-js#0.0.0+20160725163759",
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008",
+    "node": "registry:dt/node#6.0.0+20160807145350",
+    "office-js": "registry:dt/office-js#0.0.0+20160627000258"
+  },
+  "dependencies": {}
+}

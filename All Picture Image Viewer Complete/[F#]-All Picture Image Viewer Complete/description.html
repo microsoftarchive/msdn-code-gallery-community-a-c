@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/Header.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/sprite.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/UhfHeader.css" data-do-not-move="true" />
+<link rel="stylesheet" href="https://statics-uhf-eas.akamaized.net/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/ec-f8ec33/b7-01890e/67-f66a05/bb-33df2f/d6-3f8236/1c-14fb9c/8e-0f0147/17-1042c1?ver=2.0" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:sprite,0:Footer,1:ImageSprite,2:SelectLocaleFromPopUp;/Areas/Epx/Themes/Windows/Content:0,/Areas/Epx/Themes/WindowsApps/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;v=AE7376403751B6DAA8B4EFF9E1CAE467" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Areas/Epx/Themes/Windows/Content/UhfFooter.css?v=636674569112704322" data-do-not-move="true" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>All Picture Image Viewer Complete...</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/e2b088d8-b87f-4687-a3be-eb991ae668b3Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/windowsapps/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/windowsapps/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>All Picture Image Viewer Complete...</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, WPF, F#, PNG, JPEG
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            File System, WPF, Drag and Drop, PNG, Load Image, JPEG
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Phone, Data, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/4/2018</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="background-color:transparent; color:#000000; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:10px; font-style:normal; font-variant:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-decoration:none; text-indent:0px; text-transform:none; white-space:normal; word-spacing:0px; margin:0px">Install
+ dot.Net 4.7.2 &nbsp;<a href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://www.microsoft.com/net/download/thank-you/net472-developer-pack">https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://www.microsoft.com/net/download/thank-you/net472-developer-pack&nbsp;</a><strong>&nbsp;</strong><em>&nbsp;</em></span></p>
+<p><span style="color:#ff0000"><strong>Built base on new F# NuGet approaches.</strong></span></p>
+<p><span style="color:#ff0000"><strong>When a new version of the F# language ships, the major and minor versions will be updated appropriately.</strong></span></p>
+<p>&nbsp;</p>
+<pre><em>This sample show how to open any &nbsp;image file (any format).</em></pre>
+<pre><em>JUst drop file on window.</em></pre>
+<h1><span>Building the Sample</span></h1>
+<p><span><em>The goal of this project to understand where/how/why need to use F# ... &nbsp;compare same logic with C# ...</em><br>
+</span></p>
+<p><em>Bring application build and run. &nbsp;Choose image file and drop it to the window.</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em><img id="168063" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/168063/1/DropFile.PNG" alt="" width="250" height="250">&nbsp;<img id="168064" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/168064/1/Girl.PNG" alt="" width="250" height="250"></em></p>
+<p>&nbsp;</p>
+<p><em><img id="168065" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/168065/1/Long.PNG" alt="" width="200" height="500"></em></p>
+<p>&nbsp;</p>
+<p><em>The application was tested with image JPEG, PNG, GIF, ICO, ...</em></p>
+<p><a title="JPEG" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/JPEG">JPEG</a> (Joint Photographic Experts Group) is a
+<a title="Lossy compression" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/Lossy_compression">
+lossy</a> compression method; JPEG-compressed images are usually stored in the <strong>
+<a class="mw-redirect" title="JFIF" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/JFIF">JFIF</a></strong> (JPEG File Interchange Format) file format. The JPEG/JFIF
+<a title="Filename extension" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/Filename_extension">
+filename extension</a> is <strong>JPG</strong> or <strong>JPEG</strong>. Nearly every digital camera can save images in the JPEG/JFIF format, which supports eight-bit grayscale images and 24-bit color images (eight bits each for red, green, and blue).&nbsp;</p>
+<p>The <strong>PNG</strong> (<a title="Portable Network Graphics" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/Portable_Network_Graphics">Portable Network Graphics</a>) file format was created as a free, open-source alternative to GIF. The PNG file format supports eight-bit
+ paletted images (with optional transparency for all palette colors) and 24-bit truecolor (16 million colors) or 48-bit truecolor with and without alpha channel - while GIF supports only 256 colors and a single transparent color.</p>
+<p><strong>GIF</strong> (<a class="mw-redirect" title="Graphics Interchange Format" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/Graphics_Interchange_Format">Graphics Interchange Format</a>) is in normal use limited to an 8-bit palette, or 256 colors (while 24-bit
+ color depth is technically possible).<sup id="cite_ref-aminet_1-0" class="reference"><a href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/Image_file_formats#cite_note-aminet-1">[1]</a></sup><sup id="cite_ref-philhoward_2-0" class="reference"><a href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/Image_file_formats#cite_note-philhoward-2">[2]</a></sup>
+ GIF is most suitable for storing graphics with few colors, such as simple diagrams, shapes, logos, and cartoon style images, as it uses
+<a title="Lempel–Ziv–Welch" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch">
+LZW</a> lossless compression, which is more effective when large areas have a single color, and less effective for photographic or
+<a title="Dither" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://en.wikipedia.org/wiki/Dither">dithered</a> images. Due to GIF's simplicity and age, it achieved almost universal software support. Due to its animation capabilities, it is still widely used to provide image animation effects,
+ despite its low compression ratio compared to modern video formats.</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder">
+<div class="title"><span>C#</span><span>F#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">fsharp</span>
+<pre class="hidden">using <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.aspx"  title="Auto generated link to System.Windows">System.Windows</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.Controls.aspx"  title="Auto generated link to System.Windows.Controls">System.Windows.Controls</a>;
+
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.Media.aspx"  title="Auto generated link to System.Windows.Media">System.Windows.Media</a>;
+
+
+namespace MyUserControl
+{
+    /// &lt;summary&gt;
+    /// Interaction logic for ShowImage.xaml
+    /// &lt;/summary&gt;
+    public partial class ShowImage : UserControl
+    {
+        public ShowImage()
+        {
+            InitializeComponent();
+            
+        }
+
+        private ImgWrapper image = new ImgWrapper();
+        private Img img = new Img();         
+        private void canvasMain_Drop(object sender, DragEventArgs e)
+        {
+            var data = e.Data;
+            string[] files = (string[])data.GetData(DataFormats.FileDrop);
+
+            if (files.GetLength(0) == 1)
+            {
+                lblDrop.Content = &quot;&quot;;
+                try
+                {
+                    image = img.Load(files[0]);
+                    ImageBrush br = new ImageBrush(image.BitmapImage);
+                    if (chkUniformToFill != null)
+                    {
+                        if (chkUniformToFill.IsChecked == true)
+                        {
+                            br.Stretch = Stretch.UniformToFill;
+                        }
+                        else
+                        {
+                            br.Stretch = Stretch.Fill;
+                        }
+
+                        canvasMain.Background = (Brush)br;
+                    }
+
+                }
+                catch
+                {
+                    lblDrop.Content = &quot;IT IS NOT AN IMAGE&quot;;
+                }
+            } else
+            {
+                lblDrop.Content = &quot;PLESE DROP ONLY ONE FILE&quot;;
+            }
+
+        }
+
+        private void chkUniformToFill_Click(object sender, RoutedEventArgs e)
+        {
+            if (image.BitmapImage == null)
+            { }
+            else
+            {
+                ImageBrush br = new ImageBrush(image.BitmapImage);
+                if (chkUniformToFill.IsChecked == true)
+                {
+                    br.Stretch = Stretch.UniformToFill;
+                }
+                else
+                {
+                    br.Stretch = Stretch.Fill;
+                }
+                canvasMain.Background = (Brush)br;
+            }
+        }
+    }
+}
+</pre>
+<pre class="hidden">namespace MyUserControl
+
+open System
+open <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.aspx"  title="Auto generated link to System.Windows">System.Windows</a>
+open <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.Controls.aspx"  title="Auto generated link to System.Windows.Controls">System.Windows.Controls</a>
+open <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.IO.aspx"  title="Auto generated link to System.IO">System.IO</a>
+open <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>
+open <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.Markup.aspx"  title="Auto generated link to System.Windows.Markup">System.Windows.Markup</a>
+open <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Reflection.aspx"  title="Auto generated link to System.Reflection">System.Reflection</a>
+open <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.Media.aspx"  title="Auto generated link to System.Windows.Media">System.Windows.Media</a>
+open <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.Media.Imaging.aspx"  title="Auto generated link to System.Windows.Media.Imaging">System.Windows.Media.Imaging</a>
+
+open ImageNameSpace
+open Utilities 
+
+
+type ShowImage() as this  = 
+    inherit UserControl() 
+    let mySr = new StreamReader(Assembly.Load(&quot;MyUserControl&quot;).GetManifestResourceStream(&quot;ShowImage.xaml&quot;))   // XAML - MUST be Embedded Resource  
+    do this.Content &lt;- XamlReader.Load(mySr.BaseStream):?&gt; UserControl  // Load XAML
+    
+    // FIND ALL OBJECTS IN THIS.CONTENT 
+
+    let mutable canvasMain : Canvas = (this.Content)?canvasMain  
+    let mutable lblDrop : Label = (this.Content)?lblDrop   
+    let mutable chkUniformToFill: CheckBox = (this.Content)?chkUniformToFill
+    let mutable image : ImgWrapper = {Bitmap = null ; BitmapImage = null }
+    let img = new Img()   // ImageNameSpace
+
+    let openFiles(e : DragEventArgs) = let data = e.Data
+                                       let files  = data.GetData(DataFormats.FileDrop) :?&gt; string[] 
+                                       match files.GetLength(0) with
+                                       | 1 -&gt; lblDrop.Content &lt;- &quot;&quot;
+
+                                              try do image &lt;- img.Load(files.[0])
+                                                  let mutable br = new ImageBrush(image.BitmapImage) 
+                                                 
+                                                  let testNull (x : _ Nullable) = if x.HasValue then x.Value else false
+                                                 
+                                                  match testNull(chkUniformToFill.IsChecked) with
+                                                  | true  -&gt; br.Stretch &lt;- Stretch.UniformToFill
+                                                  | false -&gt; br.Stretch &lt;- Stretch.Fill
+                                                  
+                                                  canvasMain.Background &lt;- br :&gt; Brush
+ 
+                                              with | _ -&gt; lblDrop.Content &lt;- &quot;IT IS NOT AN IMAGE&quot;
+
+                                       | _ -&gt; lblDrop.Content &lt;- &quot;PLESE DROP ONLY ONE FILE&quot; 
+
+    
+    let reLoadImage () = if (isNull image.BitmapImage) 
+                         then ignore()
+                         else
+                             let mutable br = new ImageBrush(image.BitmapImage)                                           
+                             let testNull (x : _ Nullable) = if x.HasValue then x.Value else false                                                
+                             match testNull(chkUniformToFill.IsChecked) with
+                             | true  -&gt; br.Stretch &lt;- Stretch.UniformToFill
+                             | false -&gt; br.Stretch &lt;- Stretch.Fill                                                  
+                             canvasMain.Background &lt;- br :&gt; Brush
+
+                                                                  
+
+    do chkUniformToFill.Click.Add(fun e -&gt;reLoadImage ())
+    do canvasMain.Drop.Add(fun e -&gt; openFiles(e))  
+ </pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.aspx"  title="Auto generated link to System.Windows">System.Windows</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.Controls.aspx"  title="Auto generated link to System.Windows.Controls">System.Windows.Controls</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://code.msdn.microsoft.com/windowsapps/All-Picture-Image-Viewer-dcb010b7/https://msdn.microsoft.com/en-US/library/System.Windows.Media.aspx"  title="Auto generated link to System.Windows.Media">System.Windows.Media</a>;&nbsp;
+&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;MyUserControl&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;Interaction&nbsp;logic&nbsp;for&nbsp;ShowImage.xaml</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;ShowImage&nbsp;:&nbsp;UserControl&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;ShowImage()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitializeComponent();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;ImgWrapper&nbsp;image&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;ImgWrapper();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;Img&nbsp;img&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Img();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;canvasMain_Drop(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;DragEventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;data&nbsp;=&nbsp;e.Data;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>[]&nbsp;files&nbsp;=&nbsp;(<span class="cs__keyword">string</span>[])data.GetData(DataFormats.FileDrop);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(files.GetLength(<span class="cs__number">0</span>)&nbsp;==&nbsp;<span class="cs__number">1</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lblDrop.Content&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image&nbsp;=&nbsp;img.Load(files[<span class="cs__number">0</span>]);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ImageBrush&nbsp;br&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;ImageBrush(image.BitmapImage);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(chkUniformToFill&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(chkUniformToFill.IsChecked&nbsp;==&nbsp;<span class="cs__keyword">true</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;br.Stretch&nbsp;=&nbsp;Stretch.UniformToFill;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;br.Stretch&nbsp;=&nbsp;Stretch.Fill;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canvasMain.Background&nbsp;=&nbsp;(Brush)br;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lblDrop.Content&nbsp;=&nbsp;<span class="cs__string">&quot;IT&nbsp;IS&nbsp;NOT&nbsp;AN&nbsp;IMAGE&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lblDrop.Content&nbsp;=&nbsp;<span class="cs__string">&quot;PLESE&nbsp;DROP&nbsp;ONLY&nbsp;ONE&nbsp;FILE&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;chkUniformToFill_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;RoutedEventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(image.BitmapImage&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ImageBrush&nbsp;br&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;ImageBrush(image.BitmapImage);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(chkUniformToFill.IsChecked&nbsp;==&nbsp;<span class="cs__keyword">true</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;br.Stretch&nbsp;=&nbsp;Stretch.UniformToFill;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;br.Stretch&nbsp;=&nbsp;Stretch.Fill;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canvasMain.Background&nbsp;=&nbsp;(Brush)br;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<ul>
+</ul>
+<h1>More Information</h1>
+<p><em>https://code.msdn.microsoft.com/windowsapps/2-Two-Dimensional-FFT-WPF-b9cdad74</em></p>
+<p><em>https://code.msdn.microsoft.com/windowsapps/F-performance-base-on-6ce43db6<br>
+</em></p>
+<p><em><br>
+</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

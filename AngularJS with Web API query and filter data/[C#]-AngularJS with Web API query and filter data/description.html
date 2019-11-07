@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=0A7A0A35C1A20354519C7DE2A057703B" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=89AC486AED5E9B626BFA851155E552EE" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>AngularJS with Web API: query and filter data</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>AngularJS with Web API: query and filter data</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, ASP.NET, Javascript, Entity Framework, HTML5, AngularJS, ASP.NET Web API 2
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            ASP.NET, Javascript, HTML5, AngularJS, ASP.NET Web API 2
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/17/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/AngularJS-with-Web-API-3cc87725">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This sample shows how to provide full query functionality (search, sort and filter) in an AngularJS and Web API application. The query state is maintained in the URL which allows for linking to and bookmarking specific searches. The query options are dynamic
+ and provided by the web API.&nbsp;</p>
+<p><img id="138323" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-3cc87725/image/file/138323/1/overview.png" alt="" width="630" height="425">&nbsp;</p>
+<p><span>Please note that all code snippets in this description are partial and only contain the relevant lines of code. To view the full code, which is annotated, please download the sample.
+</span></p>
+<p><span>The approach taken in this sample has been to make the code as clear as possible to highlight the overall concept. In a real world scenario another design may preferable.</span></p>
+<h1><span>Building the Sample</span></h1>
+<p>The solution level NuGet packages removed to make it smaller for downloading.&nbsp;After extracting the sample&nbsp;run NuGet and it should prompt you to restore the missing packages.</p>
+<h1><span style="font-size:20px; font-weight:bold">Description</span></h1>
+<p>The sample is a Visual Studio Web API project with no authentication. A couple of configuration changes have been made to the default settings. In
+<strong>BundleConfig</strong> the line <strong>BundleTable.EnableOptimizations = true;</strong> has been commented out. This will stop the SPA scripts (bundled as app) from being concatenated and minified, making it easier to step through the client code when
+ it is running in browser. Also in <strong>WebApiConfig</strong> the JSON formatting has been set to camelcase.</p>
+<p>The main elements of the solution are as follows.</p>
+<h2>The model</h2>
+<p>The sample has a simple Entity Framework model (see&nbsp;<strong>models\</strong><strong>SampleContext</strong>) consisting of 4 entities:<strong>&nbsp;</strong>Book, Author, Publisher and Classification.&nbsp;When running the project a new database will
+ be&nbsp;initialized and seeded with demo data&nbsp;if an existing database is not found (see
+<strong>models\SampleInitializer</strong>).</p>
+<h2>Web API</h2>
+<p>The <strong>BooksController</strong>&nbsp;provides two POST actions <strong>QueryOptions</strong> and
+<strong>Search</strong>. The first accepts a list of properties to filter by (filters) and returns all the query options available as well as a blank query (see the JSON below).</p>
+<p><img id="138332" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-3cc87725/image/file/138332/1/queryoptionsresultjson.jpg" alt="" width="312" height="624"></p>
+<p>&nbsp;</p>
+<p>The second <strong>search</strong> action accepts a 'filled' json query in the same format as the one provided in the queryOptions response.</p>
+<p><img id="138333" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-3cc87725/image/file/138333/1/searchquery.jpg" alt="" width="218" height="156"></p>
+<p>The query options are then used to build a query, execute it and return the results.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">[HttpPost] 
+public async Task&lt;IHttpActionResult&gt; Search(QueryBindingModel queryOptions)
+{
+    if (queryOptions == null)
+    {
+        return BadRequest(&quot;no query options provided&quot;);
+    }
+
+    var query = context.Books
+                        .Include(b =&gt; b.Author)
+                        .Include(b =&gt; b.Publisher)
+                        .Include(b =&gt; b.Classification);
+
+
+    if (!string.IsNullOrEmpty(queryOptions.SearchText))
+    {
+        query = query.Where(b =&gt; b.Title.Contains(queryOptions.SearchText) || b.Author.Name.Contains(queryOptions.SearchText));
+    }
+                        
+    if (queryOptions.Classifications != null &amp;&amp; queryOptions.Classifications.Count() &gt; 0)
+    {
+        query = query.Where(b =&gt; queryOptions.Classifications.Contains(b.Classification.Id));
+    }
+
+    if (queryOptions.Publishers != null &amp;&amp; queryOptions.Publishers.Count() &gt; 0)
+    {
+        query = query.Where(b =&gt; queryOptions.Publishers.Contains(b.Publisher.Id));
+    }
+
+    if (queryOptions.Authors != null &amp;&amp; queryOptions.Authors.Count() &gt; 0)
+    {
+        query = query.Where(b =&gt; queryOptions.Authors.Contains(b.Author.Id));
+    }
+
+    query = CreateOrderByExpression(query, queryOptions.OrderBy);
+
+    var results = await query.ToListAsync();
+      
+    return Ok(new { 
+        Books = results
+    });
+}</pre>
+<div class="preview">
+<pre class="csharp">[HttpPost]&nbsp;&nbsp;
+<span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;IHttpActionResult&gt;&nbsp;Search(QueryBindingModel&nbsp;queryOptions)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(queryOptions&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;BadRequest(<span class="cs__string">&quot;no&nbsp;query&nbsp;options&nbsp;provided&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;query&nbsp;=&nbsp;context.Books&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Include(b&nbsp;=&gt;&nbsp;b.Author)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Include(b&nbsp;=&gt;&nbsp;b.Publisher)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Include(b&nbsp;=&gt;&nbsp;b.Classification);&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(!<span class="cs__keyword">string</span>.IsNullOrEmpty(queryOptions.SearchText))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;query&nbsp;=&nbsp;query.Where(b&nbsp;=&gt;&nbsp;b.Title.Contains(queryOptions.SearchText)&nbsp;||&nbsp;b.Author.Name.Contains(queryOptions.SearchText));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(queryOptions.Classifications&nbsp;!=&nbsp;<span class="cs__keyword">null</span>&nbsp;&amp;&amp;&nbsp;queryOptions.Classifications.Count()&nbsp;&gt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;query&nbsp;=&nbsp;query.Where(b&nbsp;=&gt;&nbsp;queryOptions.Classifications.Contains(b.Classification.Id));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(queryOptions.Publishers&nbsp;!=&nbsp;<span class="cs__keyword">null</span>&nbsp;&amp;&amp;&nbsp;queryOptions.Publishers.Count()&nbsp;&gt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;query&nbsp;=&nbsp;query.Where(b&nbsp;=&gt;&nbsp;queryOptions.Publishers.Contains(b.Publisher.Id));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(queryOptions.Authors&nbsp;!=&nbsp;<span class="cs__keyword">null</span>&nbsp;&amp;&amp;&nbsp;queryOptions.Authors.Count()&nbsp;&gt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;query&nbsp;=&nbsp;query.Where(b&nbsp;=&gt;&nbsp;queryOptions.Authors.Contains(b.Author.Id));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;query&nbsp;=&nbsp;CreateOrderByExpression(query,&nbsp;queryOptions.OrderBy);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;results&nbsp;=&nbsp;await&nbsp;query.ToListAsync();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;Ok(<span class="cs__keyword">new</span>&nbsp;{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Books&nbsp;=&nbsp;results&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<h2>AngularJS</h2>
+<p><span>The client application is a simple, single module SPA under the&nbsp;</span><strong>app</strong><span>&nbsp;folder under the project root.</span></p>
+<p><img id="138338" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-3cc87725/image/file/138338/1/spatree.jpg" alt="" width="261" height="348"></p>
+<p>For the most part the code to be concerned with is under the books folder. One important exception is configuring the route to the books view in
+<strong>app.js</strong>. When adding the route it is important to set&nbsp;<strong>reloadOnSearch</strong>&nbsp;to false in order to stop the
+<strong>BooksController </strong>reloading every time the URL is updated.&nbsp;</p>
+<p>Communication with the API is taken care of by a resource service, <strong>bookResource
+</strong>which&nbsp;is wrapped by the <strong>bookService</strong>.&nbsp;This service&nbsp;also provides the
+<strong>queryFromParams</strong>&nbsp;function which translates the route parameters from the url into the query format.</p>
+<p>The <strong>BookController</strong> holds everything together. It consumes the
+<strong>bookService</strong>&nbsp;and&nbsp;has the following responsibilities: loading the initial query data, synchronizing the route parameters, and updating search results. Where possible code has been refactored out into the directives:&nbsp;<strong>bookFilter</strong>,
+<strong>bookSearch</strong>, <strong>bookSearchStatus</strong>, and <strong>bookSort</strong>.&nbsp;</p>
+<h1>Summary</h1>
+<p>If you have any questions or suggestions for improvement regarding this sample please feel free to leave them in the Q and A section.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

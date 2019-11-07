@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=E5461DECB694D58FE12EE7565ABE5E23" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=53FD1B3E962B22590351439ADB5FE070" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ASP.NET MVC Application with a Custom Layout</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>ASP.NET MVC Application with a Custom Layout</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, CSS, HTML5/JavaScrip<wbr />t, ASP.NET MVC 5
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Bootstrap, ASP.NET Code Sample Downloads, ASP.NET MVC Custom Layout
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">2/9/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>A Visual Studio 2015 project which shows how use create an Asp.Net MVC Application with a custom layout. The AdminLTE layout (MIT License) from
+<a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://almsaeedstudio.com/preview">https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://almsaeedstudio.com/preview</a> has been selected for the customization.</p>
+<p>The project illustrates the following topics:</p>
+<ul>
+<li>Adding an existing layout to an Asp.Net MVC application. </li><li>Adding 3<sup>rd</sup> party JavaScript plugins </li></ul>
+<h1>Building the Sample</h1>
+<ol>
+<li>Extract the package WebApplication.zip </li><li>Double-click on the WebApplication.sln </li><li>Click F5 to start debugging </li></ol>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p>Web Application requires user authorization, click &quot;Register as a new user&quot; link and create an account.</p>
+<p>&nbsp;</p>
+<p><img id="148039" src="description/login.png" alt="" width="440" height="455"></p>
+<p>After registration main page which will appear.</p>
+<p><img id="148040" src="description/main1.png" alt="" width="440" height="265"></p>
+<p>&nbsp;</p>
+<p><img id="148041" src="description/main2.png" alt="" width="440" height="266"></p>
+<p><strong><span style="font-size:20px; font-weight:bold">Source Code Files<br>
+</span></strong></p>
+<ul>
+</ul>
+<ul>
+<li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://almsaeedstudio.com/preview">AdminLTE</a> distribution </li><li>3<sup>rd</sup> party plugins
+<ul>
+<li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/seiyria/bootstrap-slider">bootstrap-slider</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/Edicy/wysihtml5">wysihtml5</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/nnnick/Chart.js">Chart.js</a> </li><li><a href="http://ckeditor.com/about/license">ckeditor</a> </li><li><a href="http://mjolnic.github.io/bootstrap-colorpicker/">bootstrap-colorpicker</a>
+</li><li><a href="http://www.datatables.net/">DataTables</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/eternicode/bootstrap-datepicker/">bootstrap-datepicker</a>
+</li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/dangrossman/bootstrap-daterangepicker">bootstrap-daterangepicker</a>
+</li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/ftlabs/fastclick">fastclick</a> </li><li><a href="http://www.flotcharts.org/">flotcharts</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://fortawesome.github.io/Font-Awesome/">Font-Awesome</a> </li><li><a href="http://fullcalendar.io/">fullcalendar</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/fronteed/iCheck/">iCheck</a> </li><li><a href="http://github.com/RobinHerbots/jquery.inputmask">jquery.inputmask</a>
+</li><li><a href="http://ionicons.com/">ionicons</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/IonDen/ion.rangeSlider">ion.rangeSlider</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://jquery.com/">jQuery v2.1.4</a> </li><li><a href="http://jqueryui.com/">jqueryui</a> </li><li><a href="http://jqueryvalidation.org/">jqueryvalidation</a> </li><li><a href="http://jvectormap.com/">jvectormap</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/aterrien/jQuery-Knob">jQuery-Knob</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/moment/moment">moment</a> </li><li><a href="http://morrisjs.github.io/morris.js/">morris.js</a> </li><li><a href="http://github.hubspot.com/pace/">pace</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/DmitryBaranovskiy/raphael">raphael</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/select2/select2">select2</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/rochal/jQuery-slimScroll">jQuery-slimScroll</a> </li><li><a href="http://omnipotent.net/jquery.sparkline/">jquery.sparkline</a> </li><li><a href="https://code.msdn.microsoft.com/ASPNET-MVC-Application-b4b0dc3f/https://github.com/jdewit/bootstrap-timepicker">bootstrap-timepicker</a>
+</li></ul>
+</li><li>Controllers - controller classes </li><li>Extensions &ndash; claims class helpers </li><li>Scripts - script files for View classes </li><li>Styles - css files for View classes </li><li>View - views for Controllers </li></ul>
+<ul>
+</ul>
+
+</div>
+
+
+    </div>
+</body>
+</html>

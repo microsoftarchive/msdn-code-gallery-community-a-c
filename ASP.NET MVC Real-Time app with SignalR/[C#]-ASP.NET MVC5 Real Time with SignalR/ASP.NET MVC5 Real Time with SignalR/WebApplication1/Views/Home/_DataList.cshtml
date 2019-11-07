@@ -1,0 +1,27 @@
+﻿<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email ID</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.CustName</td>
+                    <td>@item.CustEmail</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "Home", new { id = @item.Id }, null)</td>
+                    <td>@Html.ActionLink("Update", "Update", "Home", new { id = @item.Id }, null)</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,159 @@
+﻿<pre style='font-size:11px; color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#808030; '>.</span>Collections<span style='color:#808030; '>.</span>Generic<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#808030; '>.</span>Web<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#808030; '>.</span>Web<span style='color:#808030; '>.</span>UI<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#808030; '>.</span>Web<span style='color:#808030; '>.</span>UI<span style='color:#808030; '>.</span>WebControls<span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// Use EVO PDF Namespace</span>
+<span style='color:#800000; font-weight:bold; '>using</span> EvoPdf<span style='color:#808030; '>.</span>HtmlToPdfClient<span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>namespace</span> EvoHtmlToPdfDemo<span style='color:#808030; '>.</span>HTML_to_Image
+<span style='color:#800080; '>{</span>
+    <span style='color:#800000; font-weight:bold; '>public</span> partial <span style='color:#800000; font-weight:bold; '>class</span> HTML_to_Image <span style='color:#808030; '>:</span> System<span style='color:#808030; '>.</span>Web<span style='color:#808030; '>.</span>UI<span style='color:#808030; '>.</span>Page
+    <span style='color:#800080; '>{</span>
+        <span style='color:#800000; font-weight:bold; '>protected</span> <span style='color:#800000; font-weight:bold; '>void</span> convertToImageButton_Click<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>object</span> sender<span style='color:#808030; '>,</span> EventArgs e<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#696969; '>// Get the server IP and port</span>
+            String serverIP <span style='color:#808030; '>=</span> textBoxServerIP<span style='color:#808030; '>.</span>Text<span style='color:#800080; '>;</span>
+            <span style='color:#800000; font-weight:bold; '>uint</span> serverPort <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>uint</span><span style='color:#808030; '>.</span>Parse<span style='color:#808030; '>(</span>textBoxServerPort<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Create a HTML to Image converter object with default settings</span>
+            HtmlToImageConverter htmlToImageConverter <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> HtmlToImageConverter<span style='color:#808030; '>(</span>serverIP<span style='color:#808030; '>,</span> serverPort<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set optional service password</span>
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>textBoxServicePassword<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>.</span>Length <span style='color:#808030; '>></span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span>
+                htmlToImageConverter<span style='color:#808030; '>.</span>ServicePassword <span style='color:#808030; '>=</span> textBoxServicePassword<span style='color:#808030; '>.</span>Text<span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set license key received after purchase to use the converter in licensed mode</span>
+            <span style='color:#696969; '>// Leave it not set to use the converter in demo mode</span>
+            htmlToImageConverter<span style='color:#808030; '>.</span>LicenseKey <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>4W9+bn19bn5ue2B+bn1/YH98YHd3d3c=</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set HTML Viewer width in pixels which is the equivalent in converter of the browser window width</span>
+            htmlToImageConverter<span style='color:#808030; '>.</span>HtmlViewerWidth <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>int</span><span style='color:#808030; '>.</span>Parse<span style='color:#808030; '>(</span>htmlViewerWidthTextBox<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set HTML viewer height in pixels to convert the top part of a HTML page </span>
+            <span style='color:#696969; '>// Leave it not set to convert the entire HTML</span>
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>htmlViewerHeightTextBox<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>.</span>Length <span style='color:#808030; '>></span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span>
+                htmlToImageConverter<span style='color:#808030; '>.</span>HtmlViewerHeight <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>int</span><span style='color:#808030; '>.</span>Parse<span style='color:#808030; '>(</span>htmlViewerHeightTextBox<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set if the created image has a transparent background</span>
+            htmlToImageConverter<span style='color:#808030; '>.</span>TransparentBackground <span style='color:#808030; '>=</span> SelectedImageFormat<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>=</span> ImageType<span style='color:#808030; '>.</span>Png ? transparentBackgroundCheckBox<span style='color:#808030; '>.</span>Checked <span style='color:#808030; '>:</span> <span style='color:#800000; font-weight:bold; '>false</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set the maximum time in seconds to wait for HTML page to be loaded </span>
+            <span style='color:#696969; '>// Leave it not set for a default 60 seconds maximum wait time</span>
+            htmlToImageConverter<span style='color:#808030; '>.</span>NavigationTimeout <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>int</span><span style='color:#808030; '>.</span>Parse<span style='color:#808030; '>(</span>navigationTimeoutTextBox<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set an adddional delay in seconds to wait for JavaScript or AJAX calls after page load completed</span>
+            <span style='color:#696969; '>// Set this property to 0 if you don't need to wait for such asynchcronous operations to finish</span>
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>conversionDelayTextBox<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>.</span>Length <span style='color:#808030; '>></span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span>
+                htmlToImageConverter<span style='color:#808030; '>.</span>ConversionDelay <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>int</span><span style='color:#808030; '>.</span>Parse<span style='color:#808030; '>(</span>conversionDelayTextBox<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#800000; font-weight:bold; '>byte</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> imageTiles <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>null</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>convertUrlRadioButton<span style='color:#808030; '>.</span>Checked<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                <span style='color:#800000; font-weight:bold; '>string</span> url <span style='color:#808030; '>=</span> urlTextBox<span style='color:#808030; '>.</span>Text<span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Convert the HTML page given by an URL to a set of Image objects</span>
+                imageTiles <span style='color:#808030; '>=</span> htmlToImageConverter<span style='color:#808030; '>.</span>ConvertUrlToImageTiles<span style='color:#808030; '>(</span>url<span style='color:#808030; '>,</span> SelectedImageFormat<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+            <span style='color:#800000; font-weight:bold; '>else</span>
+            <span style='color:#800080; '>{</span>
+                <span style='color:#800000; font-weight:bold; '>string</span> htmlString <span style='color:#808030; '>=</span> htmlStringTextBox<span style='color:#808030; '>.</span>Text<span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>string</span> baseUrl <span style='color:#808030; '>=</span> baseUrlTextBox<span style='color:#808030; '>.</span>Text<span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Convert a HTML string with a base URL to a set of Image objects</span>
+                imageTiles <span style='color:#808030; '>=</span> htmlToImageConverter<span style='color:#808030; '>.</span>ConvertHtmlToImageTiles<span style='color:#808030; '>(</span>htmlString<span style='color:#808030; '>,</span> baseUrl<span style='color:#808030; '>,</span> SelectedImageFormat<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+
+            <span style='color:#696969; '>// Save the first image tile to a memory buffer</span>
+
+            <span style='color:#800000; font-weight:bold; '>byte</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> outImageBuffer <span style='color:#808030; '>=</span> imageTiles<span style='color:#808030; '>[</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Send the image as response to browser</span>
+
+            <span style='color:#800000; font-weight:bold; '>string</span> imageFormatName <span style='color:#808030; '>=</span> imageFormatComboBox<span style='color:#808030; '>.</span>SelectedValue<span style='color:#808030; '>.</span>ToLower<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set response content type</span>
+            Response<span style='color:#808030; '>.</span>AddHeader<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Content-Type</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>image/</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>+</span> <span style='color:#808030; '>(</span>imageFormatName <span style='color:#808030; '>=</span><span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>jpg</span><span style='color:#800000; '>"</span> ? <span style='color:#800000; '>"</span><span style='color:#0000e6; '>jpeg</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>:</span> imageFormatName<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Instruct the browser to open the image file as an attachment or inline</span>
+            Response<span style='color:#808030; '>.</span>AddHeader<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Content-Disposition</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> String<span style='color:#808030; '>.</span>Format<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>attachment; filename={0}; size={1}</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>HTML_to_Image.</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>+</span> imageFormatName<span style='color:#808030; '>,</span> outImageBuffer<span style='color:#808030; '>.</span>Length<span style='color:#808030; '>.</span>ToString<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Write the image buffer to HTTP response</span>
+            Response<span style='color:#808030; '>.</span>BinaryWrite<span style='color:#808030; '>(</span>outImageBuffer<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// End the HTTP response and stop the current page processing</span>
+            Response<span style='color:#808030; '>.</span>End<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#800000; font-weight:bold; '>private</span> ImageType SelectedImageFormat<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>switch</span> <span style='color:#808030; '>(</span>imageFormatComboBox<span style='color:#808030; '>.</span>SelectedValue<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Png</span><span style='color:#800000; '>"</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>return</span> ImageType<span style='color:#808030; '>.</span>Png<span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Jpg</span><span style='color:#800000; '>"</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>return</span> ImageType<span style='color:#808030; '>.</span>Jpeg<span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Bmp</span><span style='color:#800000; '>"</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>return</span> ImageType<span style='color:#808030; '>.</span>Bmp<span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>default</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>return</span> ImageType<span style='color:#808030; '>.</span>Png<span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#800000; font-weight:bold; '>protected</span> <span style='color:#800000; font-weight:bold; '>void</span> Page_Load<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>object</span> sender<span style='color:#808030; '>,</span> EventArgs e<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>!</span>IsPostBack<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                imageFormatComboBox<span style='color:#808030; '>.</span>SelectedValue <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Png</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+
+                urlPanel<span style='color:#808030; '>.</span>Visible <span style='color:#808030; '>=</span> convertUrlRadioButton<span style='color:#808030; '>.</span>Checked<span style='color:#800080; '>;</span>
+                htmlStringPanel<span style='color:#808030; '>.</span>Visible <span style='color:#808030; '>=</span> <span style='color:#808030; '>!</span>convertUrlRadioButton<span style='color:#808030; '>.</span>Checked<span style='color:#800080; '>;</span>
+
+                sampleCodeLiteral<span style='color:#808030; '>.</span>Text <span style='color:#808030; '>=</span> System<span style='color:#808030; '>.</span>IO<span style='color:#808030; '>.</span>File<span style='color:#808030; '>.</span>ReadAllText<span style='color:#808030; '>(</span>Server<span style='color:#808030; '>.</span>MapPath<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>~/DemoAppFiles/Input/Code_Samples/CSharp/AspNet/HTML_to_Image/HTML_to_Image.html</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                descriptionLiteral<span style='color:#808030; '>.</span>Text <span style='color:#808030; '>=</span> System<span style='color:#808030; '>.</span>IO<span style='color:#808030; '>.</span>File<span style='color:#808030; '>.</span>ReadAllText<span style='color:#808030; '>(</span>Server<span style='color:#808030; '>.</span>MapPath<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>~/DemoAppFiles/Input/Descriptions/AspNet/HTML_to_Image/HTML_to_Image.html</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+                Master<span style='color:#808030; '>.</span>CollapseAll<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                Master<span style='color:#808030; '>.</span>ExpandNode<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>HTML_to_Image</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                Master<span style='color:#808030; '>.</span>SelectNode<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Convert_HTML_to_Image</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#800000; font-weight:bold; '>protected</span> <span style='color:#800000; font-weight:bold; '>void</span> convertUrlRadioButton_CheckedChanged<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>object</span> sender<span style='color:#808030; '>,</span> EventArgs e<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            urlPanel<span style='color:#808030; '>.</span>Visible <span style='color:#808030; '>=</span> convertUrlRadioButton<span style='color:#808030; '>.</span>Checked<span style='color:#800080; '>;</span>
+            htmlStringPanel<span style='color:#808030; '>.</span>Visible <span style='color:#808030; '>=</span> <span style='color:#808030; '>!</span>convertUrlRadioButton<span style='color:#808030; '>.</span>Checked<span style='color:#800080; '>;</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#800000; font-weight:bold; '>protected</span> <span style='color:#800000; font-weight:bold; '>void</span> convertHtmlRadioButton_CheckedChanged<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>object</span> sender<span style='color:#808030; '>,</span> EventArgs e<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            urlPanel<span style='color:#808030; '>.</span>Visible <span style='color:#808030; '>=</span> convertUrlRadioButton<span style='color:#808030; '>.</span>Checked<span style='color:#800080; '>;</span>
+            htmlStringPanel<span style='color:#808030; '>.</span>Visible <span style='color:#808030; '>=</span> <span style='color:#808030; '>!</span>convertUrlRadioButton<span style='color:#808030; '>.</span>Checked<span style='color:#800080; '>;</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#800000; font-weight:bold; '>protected</span> <span style='color:#800000; font-weight:bold; '>void</span> imageFormatComboBox_SelectedIndexChanged<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>object</span> sender<span style='color:#808030; '>,</span> EventArgs e<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            transparentBackgroundCheckBox<span style='color:#808030; '>.</span>Visible <span style='color:#808030; '>=</span> SelectedImageFormat<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>=</span> ImageType<span style='color:#808030; '>.</span>Png<span style='color:#800080; '>;</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#800000; font-weight:bold; '>protected</span> <span style='color:#800000; font-weight:bold; '>void</span> demoMenu_MenuItemClick<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>object</span> sender<span style='color:#808030; '>,</span> MenuEventArgs e<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>switch</span> <span style='color:#808030; '>(</span>e<span style='color:#808030; '>.</span>Item<span style='color:#808030; '>.</span>Value<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Live_Demo</span><span style='color:#800000; '>"</span><span style='color:#808030; '>:</span>
+                    demoMultiView<span style='color:#808030; '>.</span>SetActiveView<span style='color:#808030; '>(</span>liveDemoView<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                    <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Description</span><span style='color:#800000; '>"</span><span style='color:#808030; '>:</span>
+                    demoMultiView<span style='color:#808030; '>.</span>SetActiveView<span style='color:#808030; '>(</span>descriptionView<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                    <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Sample_Code</span><span style='color:#800000; '>"</span><span style='color:#808030; '>:</span>
+                    demoMultiView<span style='color:#808030; '>.</span>SetActiveView<span style='color:#808030; '>(</span>sampleCodeView<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                    <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>default</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span>
+    <span style='color:#800080; '>}</span>
+<span style='color:#800080; '>}</span>
+</pre>

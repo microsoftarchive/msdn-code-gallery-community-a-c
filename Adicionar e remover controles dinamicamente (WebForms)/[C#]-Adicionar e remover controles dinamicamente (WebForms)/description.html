@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/04f9c26e-88fd-4dfd-b715-9733d17420b6Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Adicionar e remover controles dinamicamente (WebForms)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Adicionar e remover controles dinamicamente (WebForms)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Tecnologias">Tecnologias</label>
+                        <div id="Tecnologias">
+                            C#, ASP.NET, Visual Studio 2010, .NET Framework
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="T&#243;picos">T&#243;picos</label>
+                        <div id="T&#243;picos">
+                            Controls, ASP.NET, User Interface, Repeater
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        Visual Studio 2010 SP1 SDK
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">pt-BR</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">&#218;ltima Atualiza&#231;&#227;o</label>
+                    <div id="LastUpdated">23/07/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">Licen&#231;a</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Adicionar-e-remover-855f7f22">Exiba este exemplo online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copiar c&#243;digo';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introdu&ccedil;&atilde;o</h1>
+<p><em>Este exemplo mostra como adicionar e remover controles de formul&aacute;rio dinamicamente em uma p&aacute;gina Asp.Net WebForms, preservando o estado destes controles e segundo a vontade e necessidade do usu&aacute;rio final.</em></p>
+<p>O c&oacute;digo aborda os seguintes t&oacute;picos:</p>
+<ul>
+<li>Utiliza&ccedil;&atilde;o do controle Repeater </li><li>Utiliza&ccedil;&atilde;o do evento ItemCommand </li><li>Gera&ccedil;&atilde;o de controles de quantidade vari&aacute;vel </li><li>Demonstra&ccedil;&atilde;o do comportamento e ciclo de vida de p&aacute;ginas Asp.Net WebForms (Page_Load, PostBack, dentre outros)&nbsp;
+</li><li>Resgate de valor de controles existentes dentro de um controle Repeater </li></ul>
+<h1><span>Exemplo</span></h1>
+<p><em>Para confec&ccedil;&atilde;o deste exemplo foram utilizados os itens abaixo e os seguintes passos:&nbsp;</em></p>
+<ul>
+<li><em>Cria&ccedil;&atilde;o de um formul&aacute;rio chamado Default.aspx</em> </li><li><em>Utiliza&ccedil;&atilde;o de um controle Repeater na p&aacute;gina, cujo Template possue um campo texto e um bot&atilde;o de remo&ccedil;&atilde;o de itens, juntamente com a legenda do campo &agrave; esquerda.</em>
+</li><li><em>Configura&ccedil;&atilde;o do evento ItemCommand associado ao Repeater</em>
+</li><li><em>Cria&ccedil;&atilde;o de um bot&atilde;o para adicionar novas descri&ccedil;&otilde;es</em>
+</li><li><em>Cria&ccedil;&atilde;o do m&eacute;todo OnClick do bot&atilde;o para adicionar novos itens.</em>
+</li></ul>
+<p><span style="font-size:20px; font-weight:bold">Descri&ccedil;&atilde;o</span></p>
+<p><em>Para testar o exemplo, ap&oacute;s baixar os arquivos do projeto e execut&aacute;-lo, na &uacute;nica p&aacute;gina constante no projeto, adicione novos campos no formul&aacute;rio com o bot&atilde;o verde e remova itens com o bot&atilde;o vermelho.</em></p>
+<p><img id="92725" src="description/print.jpg" alt="" width="840" height="232"></p>
+<p><em>Acredito eu que essa seja uma das formas existentes para permitir ao usu&aacute;rio adicionar e remover valores em m&uacute;ltiplos controles, sem uma quantidade pr&eacute;-definida.</em></p>
+<h1><span>Arquivos</span></h1>
+<ul>
+<li><em>Default.aspx - formul&aacute;rio com o c&oacute;digo html, css e os controles de servidor.</em>
+</li><li><em><em>Default.cs - arquivo C# que cont&eacute;m a classe associada &agrave; p&aacute;gina, com suas propriedades e eventos.</em></em>
+</li><li><em><em>Pasta images - cont&eacute;m as imagens do projeto</em></em> </li><li><em><em>Web.config - cont&eacute;m as configura&ccedil;&otilde;es do projeto</em></em>
+</li></ul>
+<h1>Mais informa&ccedil;&otilde;es</h1>
+<p><em>Bom pessoal, este &eacute; um exemplo simples, mas espero que ajude mais gente que j&aacute; precisou fazer algo semelhante, principalmente a aqueles que est&atilde;o iniciando sua jornada no desenvolvimento Web.</em></p>
+<p>&nbsp;</p>
+<p><em>Abra&ccedil;o a todos.</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

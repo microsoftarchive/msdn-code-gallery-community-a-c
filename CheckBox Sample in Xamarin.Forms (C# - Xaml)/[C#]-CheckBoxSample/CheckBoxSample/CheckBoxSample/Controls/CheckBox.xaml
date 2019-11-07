@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CheckBoxSample.Controls.CheckBox">
+	<ContentView.Content>
+        <StackLayout Orientation="Horizontal"
+                     x:Name="mainContainer"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     Padding="0"
+                     Spacing="5">
+            <AbsoluteLayout HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            x:Name="imageContainer">
+                <Image Source="{Binding CheckedBackgroundImageSource}"
+                       x:Name="checkedBackground"
+                       Aspect="AspectFit"
+                       AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1"
+                       AbsoluteLayout.LayoutFlags="All"
+                       Opacity="0"
+                       InputTransparent="True"/>
+                <Image Source="{Binding BorderImageSource}"
+                       x:Name="borderImage"
+                       Aspect="AspectFit"
+                       AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1"
+                       AbsoluteLayout.LayoutFlags="All"
+                       InputTransparent="True"/>
+                <Image Source="{Binding CheckmarkImageSource}"
+                       x:Name="checkedImage"
+                       Aspect="AspectFit"
+                       AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1"
+                       AbsoluteLayout.LayoutFlags="All"
+                       Opacity="0"
+                       InputTransparent="True"/>
+            </AbsoluteLayout>
+            <Label x:Name="controlLabel"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   Text="{Binding Title}"
+                   Style="{Binding LabelStyle}"
+                   InputTransparent="True"/>
+        </StackLayout>
+	</ContentView.Content>
+</ContentView>

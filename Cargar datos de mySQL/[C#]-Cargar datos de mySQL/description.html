@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:Banner,2:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Shared/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;hashKey=43176693215A318AD0042E0718980CBA" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Cargar datos de mySQL</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Cargar datos de mySQL</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Tecnolog&#237;as">Tecnolog&#237;as</label>
+                        <div id="Tecnolog&#237;as">
+                            Windows Forms
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Temas">Temas</label>
+                        <div id="Temas">
+                            Data Access
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">es-ES</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">&#218;ltima actualizaci&#243;n</label>
+                    <div id="LastUpdated">28/05/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">Licencia</label>
+                    <div id="License">
+                        <a href="license.rtf">Licencia de Apache, versi&#243;n 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Cargar-datos-de-mySQL-92af0353">Vea este ejemplo en l&#237;nea</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copiar c&#243;digo';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introducci&oacute;n</h1>
+<p><em>En este simple ejemplo voy a cargar en una aplicaci&oacute;n de Windows Forms en un combobox los datos de una base de datos en mySQL.</em></p>
+<h1>Requisitos para cargar el ejemplo</h1>
+<p><em><span>Si deseamos crear una aplicaci&oacute;n en C# que se conecte a mySQL, es necesario bajarse los conectores de mySQL.</span><br>
+<span><br>
+</span><br>
+<span>Pueden googlear y buscar mySQL C# connector y bajarse los conectores. En mi caso lo baj&eacute; de este link (el sitio web de mySQL tiene un delf&iacute;n rid&iacute;culo con cara del retrasado de Flipper):</span><br>
+<span><a href="http://dev.mysql.com/downloads/connector/net/6.2.html">http://dev.mysql.com/downloads/connector/net/6.2.html</a></span><br>
+<br>
+<span>En mi caso, mi base de datos se llama:</span><br>
+<span>DB1, el usuario se llama root y el pwd root.</span><br>
+<span><br>
+</span><br>
+<span>En mi base de datos DB1, tengo una tabla llamada empleados con la columna nombre.</span><br>
+<span><br>
+</span><br>
+<span>Para crear una base de datos llamada DB1 en mysql:</span><br>
+<strong><em>Create database db1;&nbsp;</em></strong><br>
+<strong><em><br>
+</em></strong><br>
+<span>Para crear una tabla en mySQL el c&oacute;digo que use fue el siguiente:</span><br>
+<span><strong><em>Create table empleados(nombre char(20);</em></strong></span><br>
+<span><strong><em><br>
+</em></strong></span><br>
+<span>Para insertar datos;</span><br>
+<span><strong><em>Insert into empleados values(&quot;Juan&quot;);</em></strong></span><br>
+<span><strong><em>Insert into empleados values(&quot;Jose&quot;);</em></strong></span></em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em><span>Los valores Juan y Jose ser&aacute;n cargados y mi formulario de C#.</span><br>
+<span>Estoy usando un archivo de Configuraci&oacute;n AppConfig con los siguientes datos de conexi&oacute;n a mySQL:</span><br>
+<br>
+<br>
+&quot;SERVER=localhost ;DATABASE=db1;UID=root; PASSWORD=root&quot;;<br>
+<br>
+<br>
+<span>El resto es agregar la referencia mySQL a mi aplicaci&oacute;n y agregar luego el uso de MySQL:</span><br>
+<span><br>
+</span><br>
+</p>
+<div class="separator"><a href="http://2.bp.blogspot.com/_F7cZ5fhxFC8/TTsEgHJYyRI/AAAAAAAAAo8/0k6KmWhzQn4/s1600/Agregar+referencia+mysql.JPG"><img src="description/Agregar referencia mysql.JPG" border="0" alt="" width="258" height="320"></a></div>
+<br>
+</em>
+<p></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar script</span>|<span class="pluginRemoveHolderLink">{#scriptcode_dlg.remove_script}</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.ComponentModel.aspx"  title="Auto generated link to System.ComponentModel">System.ComponentModel</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>;
+using MySql.Data.MySqlClient;
+using <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Configuration.aspx"  title="Auto generated link to System.Configuration">System.Configuration</a>;
+
+
+namespace WindowsFormsApplication2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string MyConString = ConfigurationManager.ConnectionStrings[&quot;connectionStringName&quot;].ToString(); 
+            MySqlConnection connection = new MySqlConnection(MyConString); 
+            MySqlCommand command = connection.CreateCommand(); 
+            MySqlDataReader Reader; command.CommandText = &quot;select nombre from empleados&quot;; 
+            connection.Open(); 
+            Reader = command.ExecuteReader();
+            while (Reader.Read())
+            {
+                   comboBox1.Items.Add(Reader[&quot;nombre&quot;].ToString());
+            }
+        }
+    }
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.ComponentModel.aspx"  title="Auto generated link to System.ComponentModel">System.ComponentModel</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;MySql.Data.MySqlClient;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Configuration.aspx"  title="Auto generated link to System.Configuration">System.Configuration</a>;&nbsp;
+&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;WindowsFormsApplication2&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;Form1&nbsp;:&nbsp;Form&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Form1()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitializeComponent();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Form1_Load(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;button1_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>&nbsp;MyConString&nbsp;=&nbsp;ConfigurationManager.ConnectionStrings[<span class="cs__string">&quot;connectionStringName&quot;</span>].ToString();&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MySqlConnection&nbsp;connection&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;MySqlConnection(MyConString);&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MySqlCommand&nbsp;command&nbsp;=&nbsp;connection.CreateCommand();&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MySqlDataReader&nbsp;Reader;&nbsp;command.CommandText&nbsp;=&nbsp;<span class="cs__string">&quot;select&nbsp;nombre&nbsp;from&nbsp;empleados&quot;</span>;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connection.Open();&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reader&nbsp;=&nbsp;command.ExecuteReader();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">while</span>&nbsp;(Reader.Read())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comboBox1.Items.Add(Reader[<span class="cs__string">&quot;nombre&quot;</span>].ToString());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em>El archivo adjundo</em> </li></ul>
+<h1>More Information</h1>
+<p><em>Para m&aacute;s informaci&oacute;n ver mi blog:</em></p>
+<p><em><a href="http://elpaladintecnologico.blogspot.com/2011/01/c-y-la-base-de-datos-mysql.html">http://elpaladintecnologico.blogspot.com/2011/01/c-y-la-base-de-datos-mysql.html</a><br>
+</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

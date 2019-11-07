@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>BizTalk: Accessing and change message values inside orchestration</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>BizTalk: Accessing and change message values inside orchestration</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            BizTalk Server 2010
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            BizTalk
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/27/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/BizTalk-Accessing-and-0cd434f7">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="font-family:Tahoma; font-size:small">There are 3 ways that we can read and set values of the message inside orchestration:
+</span></p>
+<ul>
+<li><span style="font-family:Tahoma; font-size:small">Using Property promotion</span>
+</li><li><span style="font-family:Tahoma; font-size:small">Using XPath expressions</span>
+</li><li><span style="font-family:Tahoma; font-size:small">Using C#/VB.NET object (serialization)</span>
+</li></ul>
+<p><span style="font-family:Tahoma; font-size:small">The last one is the most uncommon but it can be done, serializing the message into object.
+</span></p>
+<h1>Using Property promotion</h1>
+<p><span style="font-family:Tahoma; font-size:small">Property promotion is about getting easy and fast access to data.
+</span></p>
+<ul>
+<li><span style="font-family:Tahoma"><span style="font-size:small"><strong>Easy</strong>: Because you typically do not have to know anything about your data to get access to it. Rather than some long XPath query with possible errors.</span></span>
+</li><li><span style="font-family:Tahoma"><span style="font-size:small"><strong>Fast</strong>: Because you do not have to load the whole message into memory to get access to the data. It is placed inside the message context (a collection of key-value pairs that
+ are associated with a message).</span></span> </li></ul>
+<p><span style="font-family:Tahoma; font-size:small">BizTalk provides two different types of promoted properties based on what you want to do with the data. The two types are:
+</span></p>
+<ul>
+<li><span style="font-family:Tahoma; font-size:small">Promoted Properties: are system wide.
+</span></li><li><span style="font-family:Tahoma; font-size:small">Distinguished Fields: are light weight and only accessible inside an Orchestration.</span>
+</li></ul>
+<p><span style="font-family:Tahoma; font-size:small">They are read/write so it provides an easy way to change values inside your message without using a map &ndash; such as updating a status field.
+</span></p>
+<p><span style="font-family:Tahoma; font-size:small">Learn more: </span><a href="http://sandroaspbiztalkblog.wordpress.com/2009/03/28/distinguished-fields-vs-promoted-properties/"><span style="font-family:Tahoma; font-size:small">Distinguished Fields vs. Promoted
+ Properties</span></a><span style="font-family:Tahoma; font-size:small">, </span>
+<a href="http://geekswithblogs.net/sthomas/archive/2005/06/27/44906.aspx"><span style="font-family:Tahoma; font-size:small">Basics of Promoted Properties</span></a></p>
+<p><span style="font-family:Tahoma; font-size:small"><img src="description/property-promotion.jpg" alt="" width="300" height="205" style="display:block; margin-left:auto; margin-right:auto"></span></p>
+<p><strong><span style="font-family:Tahoma; font-size:small">Using Promoted Properties:</span></strong></p>
+<p><em>//Read</em><br>
+<em><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Diagnostics.EventLog.WriteEntry.aspx"  title="Auto generated link to System.Diagnostics.EventLog.WriteEntry">System.Diagnostics.EventLog.WriteEntry</a>(&ldquo;Orchestration&rdquo;, <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Convert.ToString.aspx"  title="Auto generated link to System.Convert.ToString">System.Convert.ToString</a>(</em><br>
+<em>msgOutput1(AccessingAndChangeMessageValuesInOrchestration.PropertySchema.FirstName)), System.Diagnostics.EventLogEntryType.Error);</em><br>
+<br>
+<em>//SET (Write)</em><br>
+<em>msgOutput1(AccessingAndChangeMessageValuesInOrchestration.PropertySchema.FirstName) = &ldquo;Sandro&rdquo;;</em></p>
+<p><strong><span style="font-family:Tahoma; font-size:small">Using Distinguished Field:
+</span></strong></p>
+<p><em>//Read</em><br>
+<em><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Diagnostics.EventLog.WriteEntry.aspx"  title="Auto generated link to System.Diagnostics.EventLog.WriteEntry">System.Diagnostics.EventLog.WriteEntry</a>(</em><br>
+<em>&nbsp;&nbsp;&nbsp; &ldquo;Orchestration&rdquo;,</em><br>
+<em>&nbsp;&nbsp;&nbsp; <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Convert.ToString.aspx"  title="Auto generated link to System.Convert.ToString">System.Convert.ToString</a>(msgOutput2.LastName), System.Diagnostics.EventLogEntryType.Error);</em><br>
+<br>
+<em>//SET (Write)</em><br>
+<em>msgOutput2.LastName = &ldquo;Pereira&rdquo;;</em></p>
+<p>&nbsp;</p>
+<p><span style="font-size:20px; font-weight:bold">Using XPath expressions</span></p>
+<p><span style="font-family:Tahoma; font-size:small">Working with XPath inside Orchestrations is a powerful and simple feature of BizTalk. XPath can be used to both read values and set values inside your Message. To set values in your message, you need to be
+ inside a Message Construct shape. </span></p>
+<p><span style="font-family:Tahoma; font-size:small">XPath queries can only be done against a Message &ndash; can also be executed against untyped messages (that is, a Message that is of type <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Xml.XmlDocument.aspx"  title="Auto generated link to System.Xml.XmlDocument">System.Xml.XmlDocument</a>) &ndash; and the results can be set to a Message,
+ XML Document or other orchestration variables. </span></p>
+<p><span style="font-family:Tahoma; font-size:small">Learn more: </span><a href="http://sandroaspbiztalkblog.wordpress.com/2009/08/29/biztalk-working-with-xpath-%E2%80%93-xpath-1-0-function-library-quick-reference/"><span style="font-family:Tahoma; font-size:small">XPath
+ 1.0 Function Library Quick Reference</span></a><span style="font-family:Tahoma; font-size:small">,
+</span><a href="http://sandroaspbiztalkblog.wordpress.com/2009/08/29/biztalk-working-with-xpath-%E2%80%93-xpath-1-0-operators-and-special-characters-quick-reference/"><span style="font-family:Tahoma; font-size:small">Operators and Special Characters Quick Reference</span></a><span style="font-family:Tahoma; font-size:small">
+</span></p>
+<p><span style="font-family:Tahoma; font-size:small">To see what is the XPath expression of the field:
+</span></p>
+<ul>
+<li><span style="font-family:Tahoma; font-size:small">Go to schema and select the field that you want
+</span></li><li><span style="font-family:Tahoma; font-size:small">Right-click and select &ldquo;Properties&rdquo;</span>
+</li><li><span style="font-family:Tahoma; font-size:small">Select the value of the property &ldquo;Instance XPath&rdquo;</span>
+</li></ul>
+<p><img src="description/instance-xpath.jpg" alt="" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><strong>Using XPath Expression in Message Assign:</strong></p>
+<p><em>//Read</em><br>
+<em><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Diagnostics.EventLog.WriteEntry.aspx"  title="Auto generated link to System.Diagnostics.EventLog.WriteEntry">System.Diagnostics.EventLog.WriteEntry</a>(&ldquo;Orchestration&rdquo;, <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Convert.ToString.aspx"  title="Auto generated link to System.Convert.ToString">System.Convert.ToString</a>(xpath(msgOutput3,&rdquo;string(/*[local-name()='Person' and namespace-uri()='http://AccessingAndChangeMessageValuesInOrchestration.Schema1']/*[local-name()='Age'
+ and namespace-uri()=''])&rdquo;)), System.Diagnostics.EventLogEntryType.Error);</em><br>
+<br>
+<em>//SET (Write)</em><br>
+<em>xpath(msgOutput3,&rdquo;/*[local-name()='Person' and namespace-uri()='http://AccessingAndChangeMessageValuesInOrchestration.Schema1']/*[local-name()='Age' and namespace-uri()='']&ldquo;) = &ldquo;00&Prime;;</em></p>
+<h1>Using C#/VB.NET object (serialization)</h1>
+<ul>
+</ul>
+<p><span style="font-family:Tahoma; font-size:small">BizTalk is able to automatically convert message in C# object and C# object into BizTalk message.
+</span></p>
+<p><span style="font-family:Tahoma; font-size:small">To accomplish this we have to generate C#/VB.NET classes based on Schemas using XSD.EXE, or those of you not familiar with XSD.EXE it&rsquo;s a command line tool shipped with Visual Studio .NET that allows
+ you to generate Classes or Typed DataSets based on XML Schemas, normally you might try to write code to create a XML Document (based on a schema), you end up writing pages and pages of painful code to construct a XML document by using the DOM (XmlDocument).
+</span></p>
+<p><span style="font-family:Tahoma; font-size:small">How to create class from schema:
+</span></p>
+<ul>
+<li><span style="font-family:Tahoma; font-size:small">Start Menu -&gt; All Programs -&gt; Microsoft Visual Studio &hellip; -&gt; Visual Studio Tools -&gt; Visual Studio &hellip; Command Prompt</span>
+</li><li><span style="font-family:Tahoma; font-size:small">Go to the Schema folder and type &ldquo;xsd /classes /language:CS Schema1.xsd&rdquo;</span>
+</li></ul>
+<p><span style="font-family:Tahoma; font-size:small">Create Orchestration variable
+</span></p>
+<ul>
+<li><span style="font-family:Tahoma; font-size:small">First you have to create an orchestration variable from the class that you create previous</span>
+</li><li><span style="font-family:Tahoma; font-size:small">On property Type select &lt;.NET Class&hellip;&gt; and select Person class that you create previous</span>
+</li></ul>
+<p><img src="description/variable-person.jpg" alt="" style="display:block; margin-left:auto; margin-right:auto"><strong>Using C# object inside Message Assign:</strong></p>
+<p><em>//CONVERT MESSAGE INTO C# OBJECT</em><br>
+<em>varPersonMsg = msgInput;</em><br>
+<br>
+<em>//Read</em><br>
+<em><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Diagnostics.EventLog.WriteEntry.aspx"  title="Auto generated link to System.Diagnostics.EventLog.WriteEntry">System.Diagnostics.EventLog.WriteEntry</a>(&ldquo;Orchestration&rdquo;, varPersonMsg.FirstName &#43; &rdquo; &rdquo; &#43; varPersonMsg.LastName, System.Diagnostics.EventLogEntryType.Error);</em><br>
+<br>
+<em>//SET (Write)</em><br>
+<em>varPersonMsg.FirstName = &ldquo;Sandro&rdquo;;</em><br>
+<em>varPersonMsg.LastName = &ldquo;Pereira&rdquo;;</em><br>
+<em>varPersonMsg.Age = &ldquo;00&Prime;;</em><br>
+<br>
+<em>//CONVERT C# OBJECT INTO BIZTALK MESSAGE</em><br>
+<em>msgOutput4 = varPersonMsg;</em></p>
+<ul>
+</ul>
+<h1>About Me</h1>
+<p><strong>Sandro Pereira</strong><br>
+DevScope | MVP &amp; MCTS BizTalk Server 2010<br>
+<a href="http://sandroaspbiztalkblog.wordpress.com/" >http://sandroaspbiztalkblog.wordpress.com/</a> |
+<a href="http://twitter.com/sandro_asp" >@sandro_asp</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿h1 {
+    display: block;
+    background: url('/Content/Images/TicTacToeLogo.png') no-repeat;
+    height: 82px;
+    width: 507px;
+}
+    h1 span {
+        display: none;
+    }
+input.findGame {
+    clear: both;
+}
+.clear {
+    clear: both;
+}
+span.box {
+    display: block;
+    border: 2px solid gray;
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin: 5px;
+}
+div.information {
+    clear: both;
+}
+div#serverInformation {
+    clear: both;
+    margin-top: 30px;
+    font-size: 80%;
+    font-style: italic;
+}
+span#gameInformation {
+    font-weight: bold;
+    font-size: 120%;
+}
+span.mark1 {
+    background: url('/Content/Images/TicTacToeX.png') center center no-repeat;
+}
+
+span.mark2 {
+    background: url('/Content/Images/TicTacToeO.png') center center no-repeat;
+}
+div#game {
+    width: 320px;
+}
+fieldset {
+    margin-top: 100px;
+    display: none;
+}
+.input { 
+   border:none; 
+   -webkit-border-radius:5px; 
+   -moz-border-radius:5px; 
+   border-radius:5px; 
+   -webkit-box-shadow:0 0 5px #666 inset; 
+   -moz-box-shadow:0 0 5px #666 inset; 
+   box-shadow:0 0 5px #666 inset; 
+   height:25px; 
+   line-height:25px; 
+   width:150px; 
+   text-indent:5px; 
+} 
+.input:focus { outline:none; }
+.button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #003399;
+	padding: 10px 20px;
+	border-radius: 0px;
+	border: 1px solid #003399;
+}

@@ -1,0 +1,8 @@
+.m1, .m2, .Title, .Button, input[type='submit'], input[type='reset'], input[type='button'] 
+{
+    font-weight:normal !important;
+}
+.WebSiteTitle
+{
+	font-weight:100;
+}

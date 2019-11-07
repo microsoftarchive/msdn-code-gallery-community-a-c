@@ -1,0 +1,778 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=1305A6FDA762B39EF3890756F790CC42" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=7D55C467F3C93EE89524C04B6E9D8586" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Columna para fechas en DataGridView</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Columna para fechas en DataGridView</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Controls, Windows Forms, DataGridView
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Controls, Windows Forms, DataGridView
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">es-ES</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">4/20/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Columna-para-fechas-en-811761d9">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1><em>Introducci&oacute;n</em></h1>
+<div>El DataGridView es un control con funcionalidad b&aacute;sica que permite una gran extensibilidad. En este art&iacute;culo mostrar&eacute; como crear una columna para datos de tipo fecha que utilice un DateTimePicker como editor.</div>
+<div><br>
+Para crear cualquier columna personalizada en un DataGridView b&aacute;sicamente deberemos trabajar con 3 clases.</div>
+<div>Una clase que implemente la interfaz IDataGridViewEditingControl que define el control que utilizaremos para editar los datos.</div>
+<div>Una clase que herede de DataGridViewCell que define la plantilla de las celdas de la columna y que se encargar&aacute; de inicializar el control de edici&oacute;n y de obtener, devolver y formatear los valores.</div>
+<div>Una clase que herede de DataGridViewColumn que representar&aacute; la columna y utilizar&aacute; la clase de celda como plantilla.</div>
+<div>&nbsp;</div>
+<h1>Creando el editor de fechas</h1>
+<div><br>
+Para generar el control de edici&oacute;n he creado una clase DateTimeEditingControl que hereda de la clase DateTimePicker (control que utilizar&eacute; para editar los valores de las celdas) y que implementa la interfaz IDataGridViewEditingControl.</div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">    class DateTimeEditingControl : DateTimePicker, IDataGridViewEditingControl
+    {
+
+        private DataGridView grid;
+        private bool valueChanged;
+
+        public DateTimeEditingControl()
+        {
+            this.Format = DateTimePickerFormat.Custom;
+        }
+
+        protected override void OnValueChanged(EventArgs eventargs)
+        {
+            base.OnValueChanged(eventargs);
+            SendToGridValueChanged();
+        }
+
+        private void SendToGridValueChanged()
+        {
+            valueChanged = true;
+            if (grid != null)
+                grid.NotifyCurrentCellDirty(true);
+        }
+
+        #region Miembros de IDataGridViewEditingControl
+
+        public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle)
+        {
+            this.Font = dataGridViewCellStyle.Font;
+            this.CalendarForeColor = dataGridViewCellStyle.ForeColor;
+            this.CalendarMonthBackground = dataGridViewCellStyle.BackColor;
+        }
+
+        public DataGridView EditingControlDataGridView
+        {
+            get { return grid; }
+            set { grid = value; }
+        }
+
+        public object EditingControlFormattedValue
+        {
+            get
+            {
+                return this.Value.ToString(this.CustomFormat);
+            }
+            set
+            {
+                try { this.Value = DateTime.Parse((string)value); }
+                catch { this.Value = DateTime.Now; }
+                SendToGridValueChanged();
+            }
+        }
+
+        public int EditingControlRowIndex { get; set; }
+
+        public bool EditingControlValueChanged
+        {
+            get { return valueChanged; }
+            set { valueChanged = value; }
+        }
+
+        public bool EditingControlWantsInputKey(Keys keyData, bool dataGridViewWantsInputKey)
+        {
+            switch (keyData &amp; Keys.KeyCode)
+            {
+                case Keys.Left:
+                case Keys.Up:
+                case Keys.Down:
+                case Keys.Right:
+                case Keys.Home:
+                case Keys.End:
+                case Keys.PageDown:
+                case Keys.PageUp:
+                    return true;
+                default:
+                    return !dataGridViewWantsInputKey;
+            }
+        }
+
+        public Cursor EditingPanelCursor
+        {
+            get { return base.Cursor; }
+        }
+
+        public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
+        {
+            return EditingControlFormattedValue;
+        }
+
+        public void PrepareEditingControlForEdit(bool selectAll)
+        {
+        }
+
+        public bool RepositionEditingControlOnValueChange
+        {
+            get { return false; }
+        }
+
+        #endregion
+
+    }
+</pre>
+<pre class="hidden">Class DateTimeEditingControl
+    Inherits DateTimePicker
+    Implements IDataGridViewEditingControl
+
+    Private grid As DataGridView
+    Private valChanged As Boolean
+
+    Public Sub New()
+        Me.Format = DateTimePickerFormat.Custom
+    End Sub
+
+    Protected Overrides Sub OnValueChanged(eventargs As EventArgs)
+        MyBase.OnValueChanged(eventargs)
+        SendToGridValueChanged()
+    End Sub
+
+    Private Sub SendToGridValueChanged()
+        valChanged = True
+        If grid IsNot Nothing Then
+            grid.NotifyCurrentCellDirty(True)
+        End If
+    End Sub
+
+#Region &quot;Miembros de IDataGridViewEditingControl&quot;
+
+    Public Sub ApplyCellStyleToEditingControl(dataGridViewCellStyle As DataGridViewCellStyle) _
+        Implements IDataGridViewEditingControl.ApplyCellStyleToEditingControl
+        Me.Font = dataGridViewCellStyle.Font
+        Me.CalendarForeColor = dataGridViewCellStyle.ForeColor
+        Me.CalendarMonthBackground = dataGridViewCellStyle.BackColor
+    End Sub
+
+    Public Property EditingControlDataGridView As DataGridView _
+        Implements IDataGridViewEditingControl.EditingControlDataGridView
+        Get
+            Return grid
+        End Get
+        Set(value As DataGridView)
+            grid = value
+        End Set
+    End Property
+
+    Public Property EditingControlFormattedValue As Object _
+        Implements IDataGridViewEditingControl.EditingControlFormattedValue
+        Get
+            Return Me.Value.ToString(Me.CustomFormat)
+        End Get
+        Set(value As Object)
+            Try
+                Me.Value = DateTime.Parse(CType(value, String))
+            Catch ex As Exception
+                Me.Value = DateTime.Now
+            End Try
+            SendToGridValueChanged()
+        End Set
+    End Property
+
+    Public Property EditingControlRowIndex As Integer _
+        Implements IDataGridViewEditingControl.EditingControlRowIndex
+
+    Public Property EditingControlValueChanged As Boolean _
+        Implements IDataGridViewEditingControl.EditingControlValueChanged
+        Get
+            Return valChanged
+        End Get
+        Set(value As Boolean)
+            valChanged = value
+        End Set
+    End Property
+
+    Public Function EditingControlWantsInputKey(keyData As Keys, dataGridViewWantsInputKey As Boolean) As Boolean _
+        Implements IDataGridViewEditingControl.EditingControlWantsInputKey
+        Select Case keyData And Keys.KeyCode
+            Case Keys.Left, Keys.Up, Keys.Down, Keys.Right, _
+                Keys.Home, Keys.End, Keys.PageDown, Keys.PageUp
+                Return True
+            Case Else
+                Return Not dataGridViewWantsInputKey
+        End Select
+    End Function
+
+    Public ReadOnly Property EditingPanelCursor As Cursor _
+        Implements IDataGridViewEditingControl.EditingPanelCursor
+        Get
+            Return MyBase.Cursor
+        End Get
+    End Property
+
+    Public Function GetEditingControlFormattedValue(context As DataGridViewDataErrorContexts) As Object _
+        Implements IDataGridViewEditingControl.GetEditingControlFormattedValue
+        Return EditingControlFormattedValue
+    End Function
+
+    Public Sub PrepareEditingControlForEdit(selectAll As Boolean) _
+        Implements IDataGridViewEditingControl.PrepareEditingControlForEdit
+
+    End Sub
+
+    Public ReadOnly Property RepositionEditingControlOnValueChange As Boolean _
+        Implements IDataGridViewEditingControl.RepositionEditingControlOnValueChange
+        Get
+            Return False
+        End Get
+    End Property
+
+#End Region
+
+End Class</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">class</span>&nbsp;DateTimeEditingControl&nbsp;:&nbsp;DateTimePicker,&nbsp;IDataGridViewEditingControl&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;DataGridView&nbsp;grid;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span><span class="cs__keyword">bool</span>&nbsp;valueChanged;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;DateTimeEditingControl()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.Format&nbsp;=&nbsp;DateTimePickerFormat.Custom;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">protected</span><span class="cs__keyword">override</span><span class="cs__keyword">void</span>&nbsp;OnValueChanged(EventArgs&nbsp;eventargs)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">base</span>.OnValueChanged(eventargs);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SendToGridValueChanged();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;SendToGridValueChanged()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueChanged&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(grid&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid.NotifyCurrentCellDirty(<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<span class="cs__preproc">&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#region&nbsp;Miembros&nbsp;de&nbsp;IDataGridViewEditingControl</span><span class="cs__keyword">public</span><span class="cs__keyword">void</span>&nbsp;ApplyCellStyleToEditingControl(DataGridViewCellStyle&nbsp;dataGridViewCellStyle)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.Font&nbsp;=&nbsp;dataGridViewCellStyle.Font;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.CalendarForeColor&nbsp;=&nbsp;dataGridViewCellStyle.ForeColor;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.CalendarMonthBackground&nbsp;=&nbsp;dataGridViewCellStyle.BackColor;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;DataGridView&nbsp;EditingControlDataGridView&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;{&nbsp;<span class="cs__keyword">return</span>&nbsp;grid;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">set</span>&nbsp;{&nbsp;grid&nbsp;=&nbsp;<span class="cs__keyword">value</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">object</span>&nbsp;EditingControlFormattedValue&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">this</span>.Value.ToString(<span class="cs__keyword">this</span>.CustomFormat);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">set</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;{&nbsp;<span class="cs__keyword">this</span>.Value&nbsp;=&nbsp;DateTime.Parse((<span class="cs__keyword">string</span>)<span class="cs__keyword">value</span>);&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;{&nbsp;<span class="cs__keyword">this</span>.Value&nbsp;=&nbsp;DateTime.Now;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SendToGridValueChanged();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">int</span>&nbsp;EditingControlRowIndex&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">bool</span>&nbsp;EditingControlValueChanged&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;{&nbsp;<span class="cs__keyword">return</span>&nbsp;valueChanged;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">set</span>&nbsp;{&nbsp;valueChanged&nbsp;=&nbsp;<span class="cs__keyword">value</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">bool</span>&nbsp;EditingControlWantsInputKey(Keys&nbsp;keyData,&nbsp;<span class="cs__keyword">bool</span>&nbsp;dataGridViewWantsInputKey)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">switch</span>&nbsp;(keyData&nbsp;&amp;&nbsp;Keys.KeyCode)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;Keys.Left:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;Keys.Up:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;Keys.Down:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;Keys.Right:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;Keys.Home:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;Keys.End:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;Keys.PageDown:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;Keys.PageUp:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">default</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;!dataGridViewWantsInputKey;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Cursor&nbsp;EditingPanelCursor&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;{&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">base</span>.Cursor;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">object</span>&nbsp;GetEditingControlFormattedValue(DataGridViewDataErrorContexts&nbsp;context)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;EditingControlFormattedValue;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">void</span>&nbsp;PrepareEditingControlForEdit(<span class="cs__keyword">bool</span>&nbsp;selectAll)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">bool</span>&nbsp;RepositionEditingControlOnValueChange&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;{&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">false</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<span class="cs__preproc">&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#endregion</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div>Esta clase contiene la mayor parte del c&oacute;digo del ejemplo ya que implementa la l&oacute;gica de edici&oacute;n. As&iacute; que, como dir&iacute;a Jack el Destripador: vamos por partes.</div>
+<div>En el constructor establecemos la propiedad Format del DateTimePicker a DateTimePickerFormat.Custom ya que estableceremos el formato de la fecha a partir del formato definido en la columna.</div>
+<div>Sobrescribimos el m&eacute;todo OnValueChanged para notificar al DataGridView que se ha modificado el contenido de la celda a trav&eacute;s del m&eacute;todo NotifyCurrentCellDirty.</div>
+<div>&nbsp;A continuaci&oacute;n implementamos la interfaz IDataGridViewEditingControl.</div>
+<div>En el m&eacute;todo ApplyCellStyleToEditingControl trasladamos el estilo definido para la celda a las propiedades del DateTimePicker.</div>
+<div>En la propiedad EditingControlFormattedValue se realiza la conversi&oacute;n entre el valor tipo DateTime de la celda y el string a visualizar.</div>
+<div>En el m&eacute;todo EditingControlWantsInputKey se establecen las teclas que necesita gestionar el control DateTimePicker durante la edici&oacute;n del valor.</div>
+<h1>Definiendo el tipo de celda</h1>
+<div><br>
+A continuaci&oacute;n he definido la clase DateTimeCell que hereda de DataGridViewTextBoxCell para utilizar como plantilla de celda en la columna:</div>
+<div>&nbsp;</div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">    public class DateTimeCell: DataGridViewTextBoxCell
+    {
+
+        public DateTimeCell() : base() { }
+
+        public override Type EditType {
+            get { return typeof(DateTimeEditingControl); } 
+        }
+
+        public override Type ValueType
+        {
+            get { return typeof(DateTime); }
+        }
+
+        public override object DefaultNewRowValue
+        {
+            get
+            {
+                object defaultValue = base.DefaultNewRowValue;
+                if (defaultValue is DateTime)
+                    return defaultValue;
+                else
+                    return DateTime.Now;
+            }
+        }
+
+        public override void InitializeEditingControl(int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
+        {
+            base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
+            DateTimeEditingControl ctl = DataGridView.EditingControl as DateTimeEditingControl;
+            try
+            {
+                if (this.Value == null)
+                    ctl.Value = (DateTime)this.DefaultNewRowValue;
+                else
+                    ctl.Value = (DateTime)this.Value;
+
+            }
+            catch (Exception)
+            {
+                ctl.Value = (DateTime)this.DefaultNewRowValue;
+            }
+
+            if (dataGridViewCellStyle.Format.Length == 1)
+            {
+                string[] patterns = DateTimeFormatInfo.CurrentInfo.GetAllDateTimePatterns(dataGridViewCellStyle.Format.ToCharArray()[0]);
+                if (patterns.Length &gt; 0)
+                    ctl.CustomFormat = patterns[0].ToString();
+                else
+                    ctl.CustomFormat = dataGridViewCellStyle.Format;
+            }
+            else
+                ctl.CustomFormat = dataGridViewCellStyle.Format;
+        }
+    }</pre>
+<pre class="hidden">Public Class DateTimeCell
+    Inherits DataGridViewTextBoxCell
+
+    Public Sub New()
+        MyBase.New()
+    End Sub
+
+    Public Overrides ReadOnly Property EditType As Type
+        Get
+            Return GetType(DateTimeEditingControl)
+        End Get
+    End Property
+
+    Public Overrides ReadOnly Property ValueType As Type
+        Get
+            Return GetType(DateTime)
+        End Get
+    End Property
+
+    Public Overrides ReadOnly Property DefaultNewRowValue As Object
+        Get
+            Dim defaultValue As Object = MyBase.DefaultNewRowValue
+            If TypeOf defaultValue Is DateTime Then
+                Return defaultValue
+            Else
+                Return DateTime.Now
+            End If
+        End Get
+    End Property
+
+    Public Overrides Sub InitializeEditingControl(rowIndex As Integer, initialFormattedValue As Object, _
+                                                  dataGridViewCellStyle As DataGridViewCellStyle)
+        MyBase.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle)
+        Dim ctl As DateTimeEditingControl = CType(DataGridView.EditingControl, DateTimeEditingControl)
+        Try
+            If Me.Value = Nothing Then
+                ctl.Value = CType(Me.DefaultNewRowValue, DateTime)
+            Else
+                ctl.Value = CType(Me.Value, DateTime)
+            End If
+        Catch ex As Exception
+            ctl.Value = CType(Me.DefaultNewRowValue, DateTime)
+        End Try
+
+        If dataGridViewCellStyle.Format.Length = 1 Then
+            Dim patterns As String() = DateTimeFormatInfo.CurrentInfo.GetAllDateTimePatterns( _
+                dataGridViewCellStyle.Format.ToCharArray()(0))
+            If patterns.Length &gt; 0 Then
+                ctl.CustomFormat = patterns(0).ToString()
+            Else
+                ctl.CustomFormat = dataGridViewCellStyle.Format
+            End If
+        Else
+            ctl.CustomFormat = dataGridViewCellStyle.Format
+        End If
+    End Sub
+
+End Class</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span><span class="cs__keyword">class</span>&nbsp;DateTimeCell:&nbsp;DataGridViewTextBoxCell&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;DateTimeCell()&nbsp;:&nbsp;<span class="cs__keyword">base</span>()&nbsp;{&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">override</span>&nbsp;Type&nbsp;EditType&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;{&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">typeof</span>(DateTimeEditingControl);&nbsp;}&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">override</span>&nbsp;Type&nbsp;ValueType&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;{&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">typeof</span>(DateTime);&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">override</span><span class="cs__keyword">object</span>&nbsp;DefaultNewRowValue&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">object</span>&nbsp;defaultValue&nbsp;=&nbsp;<span class="cs__keyword">base</span>.DefaultNewRowValue;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(defaultValue&nbsp;<span class="cs__keyword">is</span>&nbsp;DateTime)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;defaultValue;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span><span class="cs__keyword">return</span>&nbsp;DateTime.Now;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">override</span><span class="cs__keyword">void</span>&nbsp;InitializeEditingControl(<span class="cs__keyword">int</span>&nbsp;rowIndex,&nbsp;<span class="cs__keyword">object</span>&nbsp;initialFormattedValue,&nbsp;DataGridViewCellStyle&nbsp;dataGridViewCellStyle)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">base</span>.InitializeEditingControl(rowIndex,&nbsp;initialFormattedValue,&nbsp;dataGridViewCellStyle);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DateTimeEditingControl&nbsp;ctl&nbsp;=&nbsp;DataGridView.EditingControl&nbsp;<span class="cs__keyword">as</span>&nbsp;DateTimeEditingControl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">this</span>.Value&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctl.Value&nbsp;=&nbsp;(DateTime)<span class="cs__keyword">this</span>.DefaultNewRowValue;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctl.Value&nbsp;=&nbsp;(DateTime)<span class="cs__keyword">this</span>.Value;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctl.Value&nbsp;=&nbsp;(DateTime)<span class="cs__keyword">this</span>.DefaultNewRowValue;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(dataGridViewCellStyle.Format.Length&nbsp;==&nbsp;<span class="cs__number">1</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>[]&nbsp;patterns&nbsp;=&nbsp;DateTimeFormatInfo.CurrentInfo.GetAllDateTimePatterns(dataGridViewCellStyle.Format.ToCharArray()[<span class="cs__number">0</span>]);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(patterns.Length&nbsp;&gt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctl.CustomFormat&nbsp;=&nbsp;patterns[<span class="cs__number">0</span>].ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctl.CustomFormat&nbsp;=&nbsp;dataGridViewCellStyle.Format;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctl.CustomFormat&nbsp;=&nbsp;dataGridViewCellStyle.Format;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+</div>
+<div>Las propiedades EditType y ValueType definen el tipo del control a utilizar para la edici&oacute;n de la celda y el tipo del valor de la celda respectivamente.</div>
+<div>He sobrescrito el m&eacute;todo InitializeEditingControl para establecer el valor y el formato del control DateTimePicker.</div>
+<h1>Definiendo el tipo de columna</h1>
+<div><br>
+Finalmente defino la clase DateTimeGridColumn que hereda de DataGridViewColumn y que define el tipo de columna que asignaremos a las columnas de tipo fecha del DataGridView.</div>
+<div>&nbsp;</div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">    public class DateTimeGridColumn: DataGridViewColumn
+    {
+
+        public DateTimeGridColumn() : base(new DateTimeCell()) { }
+
+        public override DataGridViewCell CellTemplate
+        {
+            get
+            {
+                return base.CellTemplate;
+            }
+            set
+            {
+                if (value != null &amp;&amp;
+                        !value.GetType().IsAssignableFrom(typeof(DateTimeCell)))
+                    throw new InvalidCastException(&quot;Debe especificar una instancia de DateTimeCell&quot;);
+                base.CellTemplate = value;
+            }
+        }
+    }</pre>
+<pre class="hidden">Public Class DateTimeGridColumn
+    Inherits DataGridViewColumn
+
+    Public Sub New()
+        MyBase.New(New DateTimeCell())
+    End Sub
+
+    Public Overrides Property CellTemplate As DataGridViewCell
+        Get
+            Return MyBase.CellTemplate
+        End Get
+        Set(value As DataGridViewCell)
+            If value IsNot Nothing AndAlso _
+                Not value.GetType().IsAssignableFrom(GetType(DateTimeCell)) Then
+                Throw New InvalidCastException(&quot;Debe especificar una instancia de DateTimeCell&quot;)
+            End If
+            MyBase.CellTemplate = value
+        End Set
+    End Property
+End Class</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;DateTimeGridColumn:&nbsp;DataGridViewColumn&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;DateTimeGridColumn()&nbsp;:&nbsp;<span class="cs__keyword">base</span>(<span class="cs__keyword">new</span>&nbsp;DateTimeCell())&nbsp;{&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">override</span>&nbsp;DataGridViewCell&nbsp;CellTemplate&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">base</span>.CellTemplate;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">set</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">value</span>&nbsp;!=&nbsp;<span class="cs__keyword">null</span>&nbsp;&amp;&amp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!<span class="cs__keyword">value</span>.GetType().IsAssignableFrom(<span class="cs__keyword">typeof</span>(DateTimeCell)))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;InvalidCastException(<span class="cs__string">&quot;Debe&nbsp;especificar&nbsp;una&nbsp;instancia&nbsp;de&nbsp;DateTimeCell&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">base</span>.CellTemplate&nbsp;=&nbsp;<span class="cs__keyword">value</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;
+<h1>M&aacute;s Informaci&oacute;n</h1>
+<p>Se puede encontrar informaci&oacute;n m&aacute;s detallada del ejemplo en los siguientes art&iacute;culos:</p>
+<p><a href="http://pildorasdotnet.blogspot.com/2015/04/windows-forms-datagridview-columna-con.html">Windows Forms. DataGridView. Columna con editor de fechas.</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

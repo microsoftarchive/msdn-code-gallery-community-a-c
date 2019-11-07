@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="AnimatedMaps.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AnimatedMaps"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:m="using:Bing.Maps"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <m:Map Name="MyMap" Credentials="YOUR_BING_MAPS_KEY"/>
+
+        <Grid Width="270" Height="610" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10">
+            <Border Background="Black" Opacity="0.8" CornerRadius="10"/>
+
+            <StackPanel Margin="10">
+                <Button Content="Clear Map" Tapped="ClearMapBtn_Tapped" Height="45" Width="120"/>
+
+                <TextBlock Text="Pushpin Animations" FontSize="16" FontWeight="Bold" Margin="0,10,0,0"/>
+                <Button Content="Scaling Pin" Tapped="ScalingPinBtn_Tapped" Height="45" Width="120"/>
+
+                <TextBlock Text="Pushpin Animations" FontSize="16" FontWeight="Bold" Margin="0,10,0,0"/>
+                <Button Content="Drop Pin" Tapped="DropPinBtn_Tapped" Height="45" Width="120"/>
+                <Button Content="Bounce Pin" Tapped="BouncePinBtn_Tapped" Height="45" Width="120"/>
+                <Button Content="Bounce 4 Pins After Each Other" Tapped="Bounce4PinsBtn_Tapped" Height="45" Width="250"/>
+
+                <TextBlock Text="Path Animations" FontSize="16" FontWeight="Bold" Margin="0,10,0,0"/>
+                <Button Content="Move Pin Along Path" Tapped="MovePinOnPathBtn_Tapped" Height="45" Width="250"/>
+                <Button Content="Move Pin Along Geodesic Path" Tapped="MovePinOnGeodesicPathBtn_Tapped" Height="45" Width="250"/>
+                <Button Content="Move Map Along Path" Tapped="MoveMapOnPathBtn_Tapped" Height="45" Width="250"/>
+                <Button Content="Move Map Along Geodesic Path" Tapped="MoveMapOnGeodesicPathBtn_Tapped" Height="45" Width="250"/>
+                <Button Content="Draw Path" Tapped="DrawPathBtn_Tapped" Height="45" Width="250"/>
+                <Button Content="Draw Geodesic Path" Tapped="DrawGeodesicPathBtn_Tapped" Height="45" Width="250"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

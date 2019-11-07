@@ -1,0 +1,28 @@
+.Button, input[type='submit'], input[type='reset'], input[type='button']
+{
+	border-radius:48px;
+	-moz-border-radius:48px;
+	-webkit-border-radius:48px;
+	width:96px;
+	height:96px;
+	text-align:center;
+	padding:0;
+	white-space:normal;
+
+	background-image:url('resources/images/backgrounds/round2.png');
+	background-size:100% 100%;
+	border-style:none;
+
+	/* I bottoni rotondi non devono andare a capo sui palmari e cellulari */
+	float:left !important;
+}
+
+.Button:hover, input[type='submit']:hover, input[type='reset']:hover, input[type='button']:hover
+{	
+	border-style:none;
+}
+
+.Button > *
+{
+		margin-top:9px;
+}

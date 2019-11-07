@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Page Breaks Before and After HTML Elements Using API</title>
+</head>
+<body style="width: 1010px; font-family: 'Times New Roman'; font-size: 20px; margin: 5px">
+    <div style="width: 100%; height: 500px; background-color: aliceblue; border: 2px solid gray; text-align: center">
+        <div style="width: 100%; height: 200px"></div>
+        A block <b>without any page break</b> style<br />
+        <br />
+        [ Follows a block with page break before and page break after forced from API using <i>PageBreakBeforeHtmlElementsSelectors</i> and <i>PageBreakAfterHtmlElementsSelectors</i> properties ]
+    </div>
+    <div id="page_break_before_and_after_div" style="width: 100%; height: 500px; background-color: gainsboro; border: 2px solid gray; text-align: center">
+        <div style="width: 100%; height: 200px"></div>
+        A block with page break before and page break after forced from API using <i>PageBreakBeforeHtmlElementsSelectors</i> and <i>PageBreakAfterHtmlElementsSelectors</i> properties<br />
+        <br />
+        <b>This block will be always rendered alone in a PDF page</b><br />
+        <br />
+        [ Follows a block with page break after forced from API using <i>PageBreakAfterHtmlElementsSelectors</i> property ]
+    </div>
+    <div id="page_break_after_div" style="width: 100%; height: 500px; background-color: beige; border: 2px solid gray; text-align: center">
+        <div style="width: 100%; height: 200px"></div>
+        A block with page break after forced from API using <i>PageBreakAfterHtmlElementsSelectors</i> property<br />
+        <br />
+        <b>Nothing will be rendered after this block in PDF page</b>
+        <br />
+        <br />
+        [ Follows a block <i>without any page break</i> style ]
+    </div>
+    <div style="width: 100%; height: 500px; background-color: aliceblue; border: 2px solid gray; text-align: center">
+        <div style="width: 100%; height: 200px"></div>
+        A block <b>without any page break</b> style<br />
+        <br />
+        [ Follows a block with page break before forced from API using <i>PageBreakBeforeHtmlElementsSelectors</i> property ]
+    </div>
+    <div id="page_break_before_div" style="width: 100%; height: 500px; background-color: lightgray; border: 2px solid gray; text-align: center">
+        <div style="width: 100%; height: 200px"></div>
+        A block with page break before forced from API using <i>PageBreakBeforeHtmlElementsSelectors</i> property<br />
+        <br />
+        <b>This block will always be rendered at the top of a PDF page</b>
+    </div>
+</body>
+</html>

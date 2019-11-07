@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HotelDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HotelMaster">
+          <Key>
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoomNo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="RoomType" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Prize" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoomBooking">
+          <Key>
+            <PropertyRef Name="BookingID" />
+          </Key>
+          <Property Name="BookingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoomID" Type="int" />
+          <Property Name="BookedDateFR" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="BookedDateTO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="BookingStatus" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PaymentStatus" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AdvancePayed" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TotalAmountPayed" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Function Name="USP_Hotel_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RoomNo" Type="varchar" Mode="In" />
+          <Parameter Name="RoomType" Type="varchar" Mode="In" />
+          <Parameter Name="Prize" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_HotelMaster_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RoomNo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_HotelStatus_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RoomNo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_RoomBooking_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BookingID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_RoomBooking_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BookingID" Type="varchar" Mode="In" />
+          <Parameter Name="RoomID" Type="varchar" Mode="In" />
+          <Parameter Name="BookedDateFR" Type="varchar" Mode="In" />
+          <Parameter Name="BookedDateTO" Type="varchar" Mode="In" />
+          <Parameter Name="BookingStatus" Type="varchar" Mode="In" />
+          <Parameter Name="PaymentStatus" Type="varchar" Mode="In" />
+          <Parameter Name="AdvancePayed" Type="varchar" Mode="In" />
+          <Parameter Name="TotalAmountPayed" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_RoomBooking_SelectALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RoomID" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="HotelDBModelStoreContainer">
+          <EntitySet Name="HotelMaster" EntityType="Self.HotelMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoomBooking" EntityType="Self.RoomBooking" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HotelDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HotelMaster">
+          <Key>
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoomNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RoomType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Prize" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoomBooking">
+          <Key>
+            <PropertyRef Name="BookingID" />
+          </Key>
+          <Property Name="BookingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoomID" Type="Int32" />
+          <Property Name="BookedDateFR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BookedDateTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BookingStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PaymentStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AdvancePayed" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TotalAmountPayed" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HotelDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HotelMasters" EntityType="Self.HotelMaster" />
+          <EntitySet Name="RoomBookings" EntityType="Self.RoomBooking" />
+          <FunctionImport Name="USP_Hotel_Insert" ReturnType="Collection(String)">
+            <Parameter Name="RoomNo" Mode="In" Type="String" />
+            <Parameter Name="RoomType" Mode="In" Type="String" />
+            <Parameter Name="Prize" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_HotelMaster_Select" ReturnType="Collection(HotelDBModel.USP_HotelMaster_Select_Result)">
+          <Parameter Name="RoomNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_HotelStatus_Select" ReturnType="Collection(HotelDBModel.USP_HotelStatus_Select_Result)">
+          <Parameter Name="RoomNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_RoomBooking_Delete" ReturnType="Collection(String)">
+          <Parameter Name="BookingID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_RoomBooking_Insert" ReturnType="Collection(String)">
+            <Parameter Name="BookingID" Mode="In" Type="String" />
+            <Parameter Name="RoomID" Mode="In" Type="String" />
+            <Parameter Name="BookedDateFR" Mode="In" Type="String" />
+            <Parameter Name="BookedDateTO" Mode="In" Type="String" />
+            <Parameter Name="BookingStatus" Mode="In" Type="String" />
+            <Parameter Name="PaymentStatus" Mode="In" Type="String" />
+            <Parameter Name="AdvancePayed" Mode="In" Type="String" />
+            <Parameter Name="TotalAmountPayed" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_RoomBooking_SelectALL" ReturnType="Collection(HotelDBModel.USP_RoomBooking_SelectALL_Result)">
+          <Parameter Name="RoomID" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="USP_HotelMaster_Select_Result">
+          <Property Type="Int32" Name="RoomID" Nullable="false" />
+          <Property Type="String" Name="RoomNo" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="RoomType" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Prize" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="USP_HotelStatus_Select_Result">
+          <Property Type="String" Name="RoomNo" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="BookedDateFR" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="BookedDateTO" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="BookingStatus" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="PaymentStatus" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="AdvancePayed" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="TotalAmountPayed" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="USP_RoomBooking_SelectALL_Result">
+          <Property Type="Int32" Name="BookingID" Nullable="false" />
+          <Property Type="Int32" Name="RoomID" Nullable="true" />
+          <Property Type="String" Name="BookedDateFR" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="BookedDateTO" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="BookingStatus" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="PaymentStatus" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="AdvancePayed" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="TotalAmountPayed" Nullable="false" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HotelDBModelStoreContainer" CdmEntityContainer="HotelDBEntities">
+          <EntitySetMapping Name="HotelMasters">
+            <EntityTypeMapping TypeName="HotelDBModel.HotelMaster">
+              <MappingFragment StoreEntitySet="HotelMaster">
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+                <ScalarProperty Name="RoomType" ColumnName="RoomType" />
+                <ScalarProperty Name="Prize" ColumnName="Prize" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoomBookings">
+            <EntityTypeMapping TypeName="HotelDBModel.RoomBooking">
+              <MappingFragment StoreEntitySet="RoomBooking">
+                <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="BookedDateFR" ColumnName="BookedDateFR" />
+                <ScalarProperty Name="BookedDateTO" ColumnName="BookedDateTO" />
+                <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+                <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+                <ScalarProperty Name="AdvancePayed" ColumnName="AdvancePayed" />
+                <ScalarProperty Name="TotalAmountPayed" ColumnName="TotalAmountPayed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="USP_Hotel_Insert" FunctionName="HotelDBModel.Store.USP_Hotel_Insert" />
+          <FunctionImportMapping FunctionImportName="USP_HotelMaster_Select" FunctionName="HotelDBModel.Store.USP_HotelMaster_Select">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HotelDBModel.USP_HotelMaster_Select_Result">
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+                <ScalarProperty Name="RoomType" ColumnName="RoomType" />
+                <ScalarProperty Name="Prize" ColumnName="Prize" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_HotelStatus_Select" FunctionName="HotelDBModel.Store.USP_HotelStatus_Select">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HotelDBModel.USP_HotelStatus_Select_Result">
+                <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+                <ScalarProperty Name="BookedDateFR" ColumnName="BookedDateFR" />
+                <ScalarProperty Name="BookedDateTO" ColumnName="BookedDateTO" />
+                <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+                <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+                <ScalarProperty Name="AdvancePayed" ColumnName="AdvancePayed" />
+                <ScalarProperty Name="TotalAmountPayed" ColumnName="TotalAmountPayed" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_RoomBooking_Delete" FunctionName="HotelDBModel.Store.USP_RoomBooking_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_RoomBooking_Insert" FunctionName="HotelDBModel.Store.USP_RoomBooking_Insert" />
+          <FunctionImportMapping FunctionImportName="USP_RoomBooking_SelectALL" FunctionName="HotelDBModel.Store.USP_RoomBooking_SelectALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HotelDBModel.USP_RoomBooking_SelectALL_Result">
+                <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="BookedDateFR" ColumnName="BookedDateFR" />
+                <ScalarProperty Name="BookedDateTO" ColumnName="BookedDateTO" />
+                <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+                <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+                <ScalarProperty Name="AdvancePayed" ColumnName="AdvancePayed" />
+                <ScalarProperty Name="TotalAmountPayed" ColumnName="TotalAmountPayed" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,9 @@
+#leftcontainerBox {
+	float: left; z-index: 1000;
+}
+#leftcontainerBox .buttons {
+	margin: 4px; width: 60px; height: 60px; padding-bottom: 2px; padding-left: 3px; clear: both; float: left;
+}
+.bottomcontainerBox {
+	width: 100%; height: 30px; float: left;
+}

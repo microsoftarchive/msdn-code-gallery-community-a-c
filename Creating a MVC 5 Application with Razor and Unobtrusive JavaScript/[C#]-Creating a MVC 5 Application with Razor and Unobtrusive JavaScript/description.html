@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=62DBC035A4A8AD76676CA11B61CB6C59" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/a15d6b87-5aa9-44fe-b76d-a1c4700fd3d5Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=46CB1877D3C0B7D6D06D21CECE7C9CAB" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Creating a MVC 5 Application with Razor and Unobtrusive JavaScript</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Creating a MVC 5 Application with Razor and Unobtrusive JavaScript</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Visual Studio 2013
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Windows Forms
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/12/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Creating-a-MVC-4-99b9f7da">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>Based on <a href="http://www.asp.net/mvc/tutorials/older-versions/javascript/creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript">
+Creating a MVC 3 Application with Razor and Unobtrusive JavaScript</a>. Upgraded to .Net Framework 4.5.1 in Visual Studio 2013.</em></p>
+<h1><span>Building the Sampled&nbsp;</span></h1>
+<p><em><em>Visual Studio 2013</em></em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>A sample application only for code refactoring.</em></p>
+<p>I am using Visual Studio 2013 and hate the losing of references when I compiles an older project. I need to manually add back newer version of the references and&nbsp;change the web.config. I don't want to lose previous work even when I need to refer to
+ it again. So, I upgraded it and put it back.</p>
+<p>Here is the original description:</p>
+<p><em>The User List sample web application demonstrates how simple it is to create ASP.NET MVC &nbsp;3 &nbsp;applications using the Razor view engine. The sample application shows how to use the new Razor view engine with ASP.NET MVC version 3 and Visual Studio
+ 2010 to create a fictional &nbsp;User List website that includes functionality such as creating, displaying, editing, and deleting users.<br>
+This tutorial describes the steps that were taken in order to build the User List sample ASP.NET MVC 3 application. &nbsp;A Visual Studio project with C# and VB source code is available to accompany this topic: Download. If you have questions about this tutorial,
+ please post them to the MVC forum.</em></p>
+<p><em><em>The User List sample web application demonstrates how simple it is to create ASP.NET MVC &nbsp;3 &nbsp;applications using the Razor view engine. The sample application shows how to use the new Razor view engine with ASP.NET MVC version 3 and Visual
+ Studio 2010 to create a fictional &nbsp;User List website that includes functionality such as creating, displaying, editing, and deleting users.<br>
+This tutorial describes the steps that were taken in order to build the User List sample ASP.NET MVC 3 application. &nbsp;A Visual Studio project with C# and VB source code is available to accompany this topic: Download. If you have questions about this tutorial,
+ please post them to the MVC forum.</em></em></p>
+<p><em><em><em>The User List sample web application demonstrates how simple it is to create ASP.NET MVC &nbsp;3 &nbsp;applications using the Razor view engine. The sample application shows how to use the new Razor view engine with ASP.NET MVC version 3 and
+ Visual Studio 2010 to create a fictional &nbsp;User List website that includes functionality such as creating, displaying, editing, and deleting users.<br>
+This tutorial describes the steps that were taken in order to build the User List sample ASP.NET MVC 3 application. &nbsp;A Visual Studio project with C# and VB source code is available to accompany this topic: Download. If you have questions about this tutorial,
+ please post them to the MVC forum.</em></em></em></p>
+<p><em><em><em><em>The User List sample web application demonstrates how simple it is to create ASP.NET MVC &nbsp;3 &nbsp;applications using the Razor view engine. The sample application shows how to use the new Razor view engine with ASP.NET MVC version 3
+ and Visual Studio 2010 to create a fictional &nbsp;User List website that includes functionality such as creating, displaying, editing, and deleting users.<br>
+This tutorial describes the steps that were taken in order to build the User List sample ASP.NET MVC 3 application. &nbsp;A Visual Studio project with C# and VB source code is available to accompany this topic: Download. If you have questions about this tutorial,
+ please post them to the MVC forum.</em></em></em></em></p>
+<p><span style="font-size:2em">Source Code Files</span></p>
+<ul>
+<li><em>See the zip file.</em> </li></ul>
+<h1>More Information</h1>
+
+</div>
+
+
+    </div>
+</body>
+</html>

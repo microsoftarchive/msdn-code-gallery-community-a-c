@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{7a529359-587d-404c-ba27-2a70399a51c9}"
+       Name="Destination"
+       DisplayName="Destination"
+       StaticName="Destination"
+       Type="Text"
+       Description="Where are you going?"
+       Required="FALSE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp">
+  </Field>
+</Elements>

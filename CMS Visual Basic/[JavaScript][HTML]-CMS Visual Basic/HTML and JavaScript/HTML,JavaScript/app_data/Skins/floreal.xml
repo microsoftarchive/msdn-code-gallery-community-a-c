@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin configuration -->
+<skin>
+	<add key="Style" value="default"/>
+	<add key="Style" value="row with background.child"/>
+	<add key="Style" value="fonts.child"/>
+	<add key="Style" value="round buttons.child"/>
+	<add key="Style" value="menu semitrasparent.child"/>
+	<add key="Style" value="zoom buttons shadow.child"/>
+	<add key="Style" value="zoom menu shadow.child"/>
+	<add key="Setup" value="floreal"/>
+</skin>

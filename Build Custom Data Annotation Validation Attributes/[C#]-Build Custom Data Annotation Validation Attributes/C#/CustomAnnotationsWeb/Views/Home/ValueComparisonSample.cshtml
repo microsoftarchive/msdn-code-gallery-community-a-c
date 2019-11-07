@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "ValueComparisonSample";
+}
+
+@model CustomAnnotationsWeb.Models.ValueComparisonModel
+
+<h2>ValueComparison validation sample</h2>
+
+<p>Min must be less than max and max must be greater than min. Default must be non-equal to max.</p>
+
+@using (Html.BeginForm("ValueComparisonSample", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+    <table>
+        <tr>
+            <td>Min:</td>
+            <td>@Html.DropDownListFor(x => x.Min, new SelectList(Enumerable.Range(0, 100)))</td>
+        </tr>
+        <tr>
+            <td>Max:</td>
+            <td>@Html.DropDownListFor(x => x.Max, new SelectList(Enumerable.Range(0, 100)))</td>
+        </tr>
+        <tr>
+            <td>Default:</td>
+            <td>@Html.DropDownListFor(x => x.Default, new SelectList(Enumerable.Range(0, 100)))</td>
+        </tr>
+    </table> 
+    
+    <input type="submit" value="Submit" />
+}

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="94393347-9052-4b06-94aa-98742d92ea81" 
+        solutionId="94393347-9052-4b06-94aa-98742d92ea81" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="MSDNLeaveRequestSampv1"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="fdeea7d4-122e-44dc-92b7-1e786cdba9ec" />
+  </features>
+</package>

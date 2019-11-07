@@ -1,0 +1,27 @@
+@media not all  and (min-device-width: 0in) and (max-device-width: 7in)
+{
+    .Button, input[type='submit'], input[type='reset'], input[type='button']
+    {
+        transition: transform 1s;
+        -ms-transition: -ms-transform 1s;
+        -moz-transition: -moz-transform 1s; /* Firefox 4 */
+        -webkit-transition: -webkit-transform 1s; /* Safari and Chrome */
+        -o-transition: -o-transform 1s; /* Opera */
+        box-shadow: 5px 5px 15px #000000;
+        -moz-box-shadow: 5px 5px 15px #000000;
+        -webkit-box-shadow: 5px 5px 15px #000000;
+    }
+
+    .Button:hover, input[type='submit']:hover, input[type='reset']:hover, input[type='button']:hover
+    {
+        transform: rotate(360deg) scale(1.5,1.5);
+        -ms-transform: rotate(360deg) scale(1.5,1.5); /* IE 9 */
+        -moz-transform: rotate(360deg) scale(1.5,1.5); /* Firefox */
+        -webkit-transform: rotate(360deg) scale(1.5,1.5); /* Safari and Chrome */
+        -o-transform: rotate(360deg) scale(1.5,1.5); /* Opera */
+        z-index: 10;
+        box-shadow: 5px 5px 15px #000000;
+        -moz-box-shadow: 5px 5px 15px #000000;
+        -webkit-box-shadow: 5px 5px 15px #000000;
+    }
+}

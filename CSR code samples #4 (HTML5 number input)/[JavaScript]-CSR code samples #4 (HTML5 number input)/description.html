@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:header.1,0:ImageSprite,1:LinkList;/Areas/Epx/Themes/Office/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=7DE58E23211F78686380867BE246D92C" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:footer.1,0:ImageSprite,1:LinkList;/Areas/Epx/Themes/Office/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=5E507516824D51E99245CD4BC378FC1B" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>CSR code samples #4 (HTML5 number input)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/c08ae5d7-99c4-4427-83c4-2e0b6ecfecbaBrand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/office/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/office/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>CSR code samples #4 (HTML5 number input)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            SharePoint, Sharepoint Online, SharePoint Server 2013, SharePoint Foundation 2013
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            SharePoint, SharePoint List
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">3/19/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/office/Client-side-rendering-code-94145281">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This JSLink sample will demonstrate&nbsp;how to use HTML5 input control Instead of the old HTML in SharePoint New and Edit forms.</p>
+<p><strong>Note:</strong>&nbsp;This sample is part from&nbsp;<a href="http://code.msdn.microsoft.com/office/Client-side-rendering-JS-2ed3538a">series of samples to learn you how to work with CSR templates</a>.</p>
+<p>&nbsp;</p>
+<h2>How to deploy the JSLink templates</h2>
+<p>You can deploy those JSLink files in many ways, you can use OOTB, LIST schema PowerShell or code.&nbsp;&nbsp;<br>
+I describe in the samples&nbsp;below how to deploy JSLink files using OOTB techniques, but if you want to know more about JSLink deployment methods, I recommend this&nbsp;<a class="title" title="SharePoint 2013 Client Side Rendering: List Views" href="http://www.codeproject.com/Articles/620110/SharePoint-Client-Side-Rendering-List-Views" >article&nbsp;</a>by
+ Andrei Markeev.&nbsp;<br>
+<br>
+Before proceeding&nbsp;with the samples,&nbsp;<strong>You have to upload the JavaScript code files on your SharePoint 2013 site</strong>. You can upload to any SharePoint storage document library, _layouts folder or IIS virtual folder, But in the below deployment
+ steps<strong>&nbsp;I&rsquo;m supposing you will upload the JSLink-Samples folder to the site collection Style Library</strong>.</p>
+<p>&nbsp;</p>
+<h2>Screenshot</h2>
+<h1><img id="109739" src="description/JSField.JSLink List New and Edit Forms.png" alt="JSField.JSLink List New and Edit Forms" width="563" height="239" style="border:1px solid black"></h1>
+<p>&nbsp;</p>
+<h2>Deployment steps:</h2>
+<div></div>
+<ol>
+<li>Create a&nbsp;<strong>Custom&nbsp;</strong>List </li><li>Add a new column to the list:&nbsp;
+<ul>
+<li>Name: Age </li><li>Type: Number </li></ul>
+</li><li>Edit the&nbsp;<strong>Default New Form</strong> </li><li>Go to List New Form&nbsp;<strong>web-part properties&nbsp;</strong>and add the JSLink file (~sitecollection/Style Library/JSLink-Samples/HTML5NumberInput.js) to&nbsp;<strong>JS link property</strong>&nbsp;under the&nbsp;<strong>Miscellaneous&nbsp;</strong>Tab&nbsp;<br>
+<br>
+<img id="109740" src="/office/site/view/file/109740/1/List%20New%20and%20Edit%20Form%20(JS%20Link).png" alt="List New and Edit Form (JS Link)" width="643" height="299" style="border:1px solid black">
+</li><li>Click&nbsp;<strong>Apply&nbsp;</strong>button then&nbsp;<strong>Stop&nbsp;</strong>page editing
+</li><li>Apply the previous steps on the&nbsp;<strong>Default Edit Form</strong> </li></ol>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">// List New and Edit Forms &ndash; HTML5 Number Input Sample
+// Muawiyah Shannak , @MuShannak
+
+(function () {
+
+    // Create object that have the context information about the field that we want to change it's output render 
+    var ageFiledContext = {};
+    ageFiledContext.Templates = {};
+    ageFiledContext.Templates.Fields = {
+        // Apply the new rendering for Age field on New and Edit forms
+        &quot;Age&quot;: {
+            &quot;NewForm&quot;: ageFiledTemplate,
+            &quot;EditForm&quot;: ageFiledTemplate
+        }
+    };
+
+    SPClientTemplates.TemplateManager.RegisterTemplateOverrides(ageFiledContext);
+
+})();
+
+
+// This function provides the rendering logic
+function ageFiledTemplate(ctx) {
+
+    var formCtx = SPClientTemplates.Utility.GetFormContextForCurrentField(ctx);
+
+    // Register a callback just before submit.
+    formCtx.registerGetValueCallback(formCtx.fieldName, function () {
+        return document.getElementById('inpAge').value;
+    });
+
+    // Render Html5 input (number)
+    return &quot;&lt;input type='number' id='inpAge' min='18' max='110' value='&quot; &#43; formCtx.fieldValue &#43; &quot;'/&gt;&quot;;
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//&nbsp;List&nbsp;New&nbsp;and&nbsp;Edit&nbsp;Forms&nbsp;&ndash;&nbsp;HTML5&nbsp;Number&nbsp;Input&nbsp;Sample</span>&nbsp;
+<span class="cs__com">//&nbsp;Muawiyah&nbsp;Shannak&nbsp;,&nbsp;@MuShannak</span>&nbsp;
+&nbsp;
+(function&nbsp;()&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Create&nbsp;object&nbsp;that&nbsp;have&nbsp;the&nbsp;context&nbsp;information&nbsp;about&nbsp;the&nbsp;field&nbsp;that&nbsp;we&nbsp;want&nbsp;to&nbsp;change&nbsp;it's&nbsp;output&nbsp;render&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;ageFiledContext&nbsp;=&nbsp;{};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ageFiledContext.Templates&nbsp;=&nbsp;{};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ageFiledContext.Templates.Fields&nbsp;=&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Apply&nbsp;the&nbsp;new&nbsp;rendering&nbsp;for&nbsp;Age&nbsp;field&nbsp;on&nbsp;New&nbsp;and&nbsp;Edit&nbsp;forms</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;Age&quot;</span>:&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;NewForm&quot;</span>:&nbsp;ageFiledTemplate,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;EditForm&quot;</span>:&nbsp;ageFiledTemplate&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;SPClientTemplates.TemplateManager.RegisterTemplateOverrides(ageFiledContext);&nbsp;
+&nbsp;
+})();&nbsp;
+&nbsp;
+&nbsp;
+<span class="cs__com">//&nbsp;This&nbsp;function&nbsp;provides&nbsp;the&nbsp;rendering&nbsp;logic</span>&nbsp;
+function&nbsp;ageFiledTemplate(ctx)&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;formCtx&nbsp;=&nbsp;SPClientTemplates.Utility.GetFormContextForCurrentField(ctx);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Register&nbsp;a&nbsp;callback&nbsp;just&nbsp;before&nbsp;submit.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;formCtx.registerGetValueCallback(formCtx.fieldName,&nbsp;function&nbsp;()&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;document.getElementById(<span class="cs__string">'inpAge'</span>).<span class="cs__keyword">value</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Render&nbsp;Html5&nbsp;input&nbsp;(number)</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__string">&quot;&lt;input&nbsp;type='number'&nbsp;id='inpAge'&nbsp;min='18'&nbsp;max='110'&nbsp;value='&quot;</span>&nbsp;&#43;&nbsp;formCtx.fieldValue&nbsp;&#43;&nbsp;<span class="cs__string">&quot;'/&gt;&quot;</span>;&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p><strong>What you should learn if you browse this code sample (HTML5NumberInput.js)?</strong></p>
+<p>In this code sample you will learn how to use<strong>&nbsp;JSLink templates with New and Edit forms</strong>.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

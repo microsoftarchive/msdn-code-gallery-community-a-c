@@ -1,0 +1,42 @@
+﻿@page
+@model SelectPdf.Samples.Pages.ConvertAndEmailModel
+@{
+    Layout = "~/Pages/_Layout.cshtml";
+    ViewData["Title"] = "SelectPdf Free Html To Pdf Converter for .NET Core - Html to Pdf Converter - Convert and Email as Attachment - C# / ASP.NET Core MVC6";
+    ViewData["Description"] = "SelectPdf Html to Pdf Converter. Convert and Email as Attachment Sample for C# ASP.NET MVC. Pdf Library for .NET with full sample code in C# and VB.NET.";
+    ViewData["Keywords"] = "html to pdf converter, convert and email, email as attachment, pdf library, sample code, html to pdf, pdf converter";
+}
+
+<form method="post">
+    <article class="post type-post status-publish format-standard hentry">
+        <header class="entry-header">
+            <h1 class="entry-title">SelectPdf Free Html To Pdf Converter for .NET Core - Html to Pdf Converter - Convert and Email as Attachment - C# / ASP.NET Core MVC6 Sample</h1>
+        </header>
+        <!-- .entry-header -->
+
+        <div class="entry-content">
+            <p>
+                This sample shows the simplest code that can be used to convert an url to pdf using SelectPdf Pdf Library for .NET and then email the generated PDF document as an attachment.
+                <br />
+                <br />
+                IMPORTANT: Remember to set the SMTP server details in web.config.
+            </p>
+            <p>
+                Url:<br />
+                <input type="text" value="https://selectpdf.com" asp-for="TxtUrl" style="width:90%" />
+                <br />
+                <br />
+                Email:<br />
+                <input type="text" value="your_email@your.domain.com" asp-for="TxtEmail" style="width:50%" />
+                <br />
+                <br />
+                <br />
+                <input type="submit" name="BtnConvert" value="Create PDF and Email" class="mybutton" />
+                &nbsp;&nbsp;
+                <span style="color: red">@ViewData["Message"]</span>
+            </p>
+        </div>
+        <!-- .entry-content -->
+    </article>
+    <!-- #post -->
+</form>

@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=7E8AE736B3916315969078A030E59D3C" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=687A75FEEFACF9BEAB81BAEA56BF2A0D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Consuming ASP.NET 5 Web API with Windows 10 Windows Runtime application</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Consuming ASP.NET 5 Web API with Windows 10 Windows Runtime application</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            ASP.NET, Windows Runtime, Windows Store app, ASP.NET MVC 5, ASP.NET Web API 2, Windows 10
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            ASP.NET Web API, Windows Store app
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud, Data, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/14/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>This sample project explains how to create an ASP.NET 5 Web API and to consume it in Windows 10 native application using Windows Runtime APIs.&nbsp;</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>This project was built and tested in Visual Studio 2015 Community (or any edition that you can use). The project works as expected and establishes a connection between the Web API and the client application.&nbsp;</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>ASP.NET 5 is the new version of ASP.NET and maintaining the Web API is a lot easier in ASP.NET 5. I have provided a sample for you to learn how easy and simple it is to create a Web API and use it in ASP.NET 5. On a side note, Windows 10 has released
+ and many would be looking forward for articles and sources for Windows 10 samples. In my sample I have used
+<strong>Windows.Web.Http</strong> namespace's <strong>HttpClient</strong> (to provide full Windows Runtime feel).&nbsp;</em></p>
+<p><em>The Web API's code is a simple single controller for the API. We use the routes to work with the code at
+<strong>/api/controller</strong> and let the users get responses.Below is the code for that controller.&nbsp;</em></p>
+<p><em></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;
+using Microsoft.AspNet.Mvc;
+using APIWin10CRUDExample.Models;
+using Newtonsoft.Json;
+
+namespace APIWin10CRUDExample.Controllers
+{
+    [Route(&quot;api/[controller]&quot;)]
+    public class UserController : Controller
+    {
+        // GET: api/user
+        [HttpGet]
+        public IEnumerable&lt;User&gt; Get()
+        {
+            return Model.GetAll();
+        }
+
+        // GET api/user/5
+        [HttpGet(&quot;{id}&quot;)]
+        public User Get(int id)
+        {
+            return Model.GetUser(id);
+        }
+
+        // POST api/user
+        [HttpPost]
+        public void Post([FromForm]string value)
+        {
+            var user = JsonConvert.DeserializeObject&lt;User&gt;(value); // Convert JSON to Users
+            Model.CreateUser(user); // Create a new User
+        }
+
+        // PUT api/user/5
+        [HttpPut(&quot;{id}&quot;)]
+        public void Put([FromForm]int id, [FromForm]string value)
+        {
+            var user = JsonConvert.DeserializeObject&lt;User&gt;(value);
+            Model.UpdateUser(id, user);
+        }
+
+        // DELETE api/user/5
+        [HttpDelete(&quot;{id}&quot;)]
+        public void Delete(int id)
+        {
+            Model.DeleteUser(id);
+        }
+    }
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://code.msdn.microsoft.com/Consuming-ASPNET-5-Web-API-1a37ceea/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Microsoft.AspNet.Mvc;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;APIWin10CRUDExample.Models;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Newtonsoft.Json;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;APIWin10CRUDExample.Controllers&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[Route(<span class="cs__string">&quot;api/[controller]&quot;</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;UserController&nbsp;:&nbsp;Controller&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;GET:&nbsp;api/user</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HttpGet]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;IEnumerable&lt;User&gt;&nbsp;Get()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;Model.GetAll();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;GET&nbsp;api/user/5</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HttpGet(<span class="cs__string">&quot;{id}&quot;</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;User&nbsp;Get(<span class="cs__keyword">int</span>&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;Model.GetUser(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;POST&nbsp;api/user</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HttpPost]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Post([FromForm]<span class="cs__keyword">string</span>&nbsp;<span class="cs__keyword">value</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;user&nbsp;=&nbsp;JsonConvert.DeserializeObject&lt;User&gt;(<span class="cs__keyword">value</span>);&nbsp;<span class="cs__com">//&nbsp;Convert&nbsp;JSON&nbsp;to&nbsp;Users</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model.CreateUser(user);&nbsp;<span class="cs__com">//&nbsp;Create&nbsp;a&nbsp;new&nbsp;User</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;PUT&nbsp;api/user/5</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HttpPut(<span class="cs__string">&quot;{id}&quot;</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Put([FromForm]<span class="cs__keyword">int</span>&nbsp;id,&nbsp;[FromForm]<span class="cs__keyword">string</span>&nbsp;<span class="cs__keyword">value</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;user&nbsp;=&nbsp;JsonConvert.DeserializeObject&lt;User&gt;(<span class="cs__keyword">value</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model.UpdateUser(id,&nbsp;user);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;DELETE&nbsp;api/user/5</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HttpDelete(<span class="cs__string">&quot;{id}&quot;</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Delete(<span class="cs__keyword">int</span>&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model.DeleteUser(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;You should consider downloading the package for more details and to test the application by building it! :-)</div>
+<br>
+</em>
+<p></p>
+<p><em>The code for the client is as simple as,&nbsp;</em></p>
+<p><em></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">// Other namespaces for the project
+using Windows.Web.Http;
+
+// In the source code
+using (var client = new HttpClient()) {
+   /*
+    * Send the requests here
+    * client.GetAsync(); // GET HTTP
+    **/
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//&nbsp;Other&nbsp;namespaces&nbsp;for&nbsp;the&nbsp;project</span>&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.Web.Http;&nbsp;
+&nbsp;
+<span class="cs__com">//&nbsp;In&nbsp;the&nbsp;source&nbsp;code</span>&nbsp;
+<span class="cs__keyword">using</span>&nbsp;(var&nbsp;client&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;HttpClient())&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cs__mlcom">/*&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Send&nbsp;the&nbsp;requests&nbsp;here&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;client.GetAsync();&nbsp;//&nbsp;GET&nbsp;HTTP&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;**/</span>&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+This way you can send other types of requests also. They would require different parameters based on how your API requests them.&nbsp;</em>
+<p></p>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em>Client is the package that contains the libraries and other tools required to run the client application. It is a Windows 10 Windows Runtime application.&nbsp;</em>
+</li><li><em><em>Inside the package is the Web API. The package name is <strong>APICRUDSample</strong>. Unzip it and run it before running the client.</em></em>
+</li></ul>
+<h1>More Information</h1>
+<p><em>This package and a full explanation is already hosted on many websites. You should consider reading them. I have also provided an article on
+<a href="http://www.c-sharpcorner.com/UploadFile/201fc1/consuming-Asp-Net-5-web-api-with-crud-functions-in-windows-1/">
+C# Corner</a>, consider reading it to learn more.</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

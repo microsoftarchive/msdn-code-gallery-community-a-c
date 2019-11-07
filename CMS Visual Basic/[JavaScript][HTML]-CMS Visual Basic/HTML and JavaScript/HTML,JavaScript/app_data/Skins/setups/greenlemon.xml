@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin setup -->
+<variables>
+	<!-- Inside variables to define elements to load -->
+	<add key="ImageTopLeft" value="resources/images/logos/logo.gif"/>
+	<add key="Logo" value="resources/images/logos/greenlemon2.png"/>
+	<add key="BannerAccommodations" value="resources/images/banners/accommodations_it.gif"/>
+	<add key="BannerServices" value=""/>
+	<add key="Favicon" value="resources/images/favicons/greenlemon.ico"/>
+	<add key="bgsound" value=""/>
+  	<add key="SoundOnlyAtStartSession" value="true"/>
+  	<add key="FolderIcons" value="48"/>
+  	<add key="ButtonsWithIcons" value="false"/>
+	<!-- Optional variables for replace in CSS file -->
+	<add key="BackgroundColorPage" value="#ffffff"/>
+	<add key="BackgroundImage" value=""/>
+	<add key="FontColor" value="#000000"/>
+	<add key="FontFamily" value="verdana"/>
+	<add key="FontSize" value="0.8em"/>
+
+	
+	<add key="BackgroundImageBox" value=""/>
+  	<add key="BackgroundColorBox" value="#ffffff"/>
+  	<add key="BorderColorBox" value="#5abd00"/>
+  	<add key="BackgroundColorButton" value="#daf804"/>
+	
+	<add key="PointListMenu" value="resources/images/ListStyleImage/greenlemon.png"/>
+	
+	<add key="ColorLink" value="#4b9e00"/>
+	<add key="ColorVisitedLink" value="#309e00"/>
+
+	<add key="ColorDark" value="#46af00"/>
+	<add key="ColorBright" value="#c7fd00"/>
+
+	<add key="Pattern1" value="resources/images/backgrounds/greenlemon.gif"/>
+
+	<add key="ParRowColor" value="#f5fea7"/><!-- Back Ground color for par box and box menu-->
+	<add key="OddRowColor" value="#dbfca4"/><!-- Back Ground color for unpair box -->
+	<add key="QuoteColor" value="#eafca7"/><!-- Back Ground color for quote -->
+
+	<!-- Border of screen -->
+	<add key="BodyMargin" value="10px"/>
+	<add key="BodyBorderWidth" value="15px"/>
+	<add key="BodyMarginInside" value="10px"/>
+ 
+  <!-- Rounded element -->
+  <add key="RoundedButton" value="8px"/>
+  <add key="RoundedMenu" value="16px"/>
+  
+  <!-- shadow -->
+  <add key="shadow" value="5px 5px 15px #000000"/>
+  
+  	<!-- Menu -->
+	<add key="BorderMenu" value="2px outset"/>
+
+
+
+</variables>

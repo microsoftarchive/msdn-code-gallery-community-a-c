@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin setup -->
+<variables>
+	<!-- Inside variables to define elements to load -->
+	<add key="ImageTopLeft" value="resources/images/logos/wc.png"/>
+	<add key="Logo" value=""/>
+	<add key="BannerServices" value=""/>
+	<add key="Favicon" value="resources/images/favicons/favicon.ico"/>
+	<add key="bgsound" value=""/>
+  <add key="SoundOnlyAtStartSession" value="true"/>
+  <add key="FolderIcons" value="48"/>
+  <add key="ButtonsWithIcons" value="true"/>
+	<!-- Optional variables for replace in CSS file -->
+	<add key="BackgroundColorPage" value="#ffffff"/>
+	<add key="BackgroundImage" value="resources/images/backgrounds/spiral3Dsquared.gif"/>
+  <add key="BackgroundRepeat" value="repeat"/>
+  <add key="FontColor" value="#000000"/>
+  <add key="FontFamily" value="&quot;Lucida Calligraphy&quot;, &quot;Lucida Handwriting&quot;, &quot;Segoe Script&quot;, &quot;Segoe Print&quot;, &quot;Monotype Corsiva&quot;, &quot;Apple Chancery&quot;, &quot;URW Chancery L&quot;, &quot;Brush Script BT&quot;, &quot;Brush Script MT&quot;, &quot;Comic Sans MS&quot;, &quot;Verdana&quot;"/>
+  <add key="FontSize" value="0.95em"/>
+
+  <add key="BackgroundImageBox" value="resources/images/backgrounds/post it.png"/>
+  <add key="BackgroundColorBox" value="#EEEEFF"/>
+  <add key="BorderColorBox" value="#000044"/>
+  <add key="BackgroundColorButton" value="trasparent"/>
+
+  <add key="PointListMenu" value="resources/images/ListStyleImage/3.png"/>
+
+  <add key="ColorLink" value="#000099"/>
+  <add key="ColorVisitedLink" value="#000077"/>
+
+  <add key="ColorDark" value="#919ea5"/>
+  <add key="ColorBright" value="#d1dee5"/>
+
+  <add key="Pattern1" value=""/>
+
+  <add key="ParRowColor" value="#f1faff"/>
+  <!-- Back Ground color for par box and box menu-->
+  <add key="OddRowColor" value="#eaf6fd"/>
+  <!-- Back Ground color for unpair box -->
+  <add key="QuoteColor" value="#ffffff"/>
+  <!-- Back Ground color for quote -->
+
+  <!-- Border of screen -->
+  <add key="BodyMargin" value="10px"/>
+  <add key="BodyBorderWidth" value="0px"/>
+  <add key="BodyMarginInside" value="0px"/>
+
+  <!-- Rounded element -->
+  <add key="RoundedButton" value="8px"/>
+  <add key="RoundedMenu" value="16px"/>
+
+  <!-- shadow -->
+  <!-- <add key="shadow" value="5px 5px 15px #000000"/> -->
+  <add key="shadow" value="0 0 0"/>
+
+  <!-- Menu -->
+  <add key="BorderMenu" value="5px outset"/>
+
+
+
+</variables>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="wopi-discovery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="net-zone">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="app">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="action">
+                      <xs:complexType>
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="ext" type="xs:string" use="optional" />
+                        <xs:attribute name="default" type="xs:boolean" use="optional" />
+                        <xs:attribute name="urlsrc" type="xs:string" use="required" />
+                        <xs:attribute name="requires" type="xs:string" use="optional" />
+                        <xs:attribute name="progid" type="xs:string" use="optional" />
+                        <xs:attribute name="useParent" type="xs:boolean" use="optional" />
+                        <xs:attribute name="newprogid" type="xs:string" use="optional" />
+                        <xs:attribute name="newext" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="favIconUrl" type="xs:string" use="required" />
+                  <xs:attribute name="checkLicense" type="xs:boolean" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="proof-key">
+          <xs:complexType>
+            <xs:attribute name="oldvalue" type="xs:string" use="required" />
+            <xs:attribute name="value" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

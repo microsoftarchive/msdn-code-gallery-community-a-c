@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=A6AA17D0353A61CAAA95ADD5561E120A" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=4CF1B132D11479A210C89A75D257BCD6" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Convert XML to JSON In Angular JS</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Convert XML to JSON In Angular JS</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            JSON, XML, HTML5, AngularJS
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            XML, Visual Studio, HTML5, XML to JSON, AngularJS
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">7/5/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Convert-XML-to-JSON-In-d8102421">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><span style="font-size:small">In this post we will see how we can convert an XML file to&nbsp;<a href="http://sibeeshpassion.com/category/json/" >JSON&nbsp;</a>in Angular JS. As you all know Angular JS is a JavaScript framework for developing
+ applications. So basically Angular JS expects the response in the form of JSON. Hence it is recommended to return the data in JSON format before you start to work on the data. Here in this post we will load a local XML file using Angular JS $http service,
+ and we will convert the same XML file to JSON. If you are new to Angular JS, please read here:&nbsp;<a href="http://sibeeshpassion.com/category/angularjs/" >Angular JS</a>. I hope you will like this article.</span></p>
+<p><strong><span style="font-size:small">Background</span></strong></p>
+<p><span style="font-size:small">I have already posted an article related to $http service in Angular JS, you can see here:&nbsp;<a href="http://sibeeshpassion.com/learning-angularjs-http/" >$http Service In Angular JS<br>
+</a></span></p>
+<p><strong><span style="font-size:small">Using the code</span></strong></p>
+<p><span style="font-size:small">Create an html page first.</span></p>
+<div>
+<div class="syntaxhighlighter xml" id="highlighter_323252">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>HTML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">html</span>
+<pre class="hidden">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Convert XML to JSON In Angular JS - SibeeshPassion &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;!DOCTYPE&nbsp;html&gt;&nbsp;
+&lt;html&gt;&nbsp;
+&lt;head&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Convert&nbsp;XML&nbsp;to&nbsp;JSON&nbsp;In&nbsp;Angular&nbsp;JS&nbsp;-&nbsp;SibeeshPassion&nbsp;&lt;/title&gt;&nbsp;
+&lt;/head&gt;&nbsp;
+&lt;body&gt;&nbsp;
+&lt;/body&gt;&nbsp;
+&lt;/html&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">Now add the needed reference as follows.</span></p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_576129">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>HTML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">html</span>
+<pre class="hidden">&lt;script src=&quot;jquery-2.1.3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;xml2json.js&quot;&gt;&lt;/script&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;script&nbsp;src=<span class="js__string">&quot;jquery-2.1.3.min.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;angular.min.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;xml2json.js&quot;</span>&gt;&lt;/script&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<blockquote>
+<p><span style="font-size:small">Have you noticed that I have added xml2json.js file? This is the file which is doing the conversion part. You can always download the file from&nbsp;<a href="https://code.msdn.microsoft.com/Convert-XML-to-JSON-In-d8102421/https://code.google.com/p/x2js/" >https://code.msdn.microsoft.com/Convert-XML-to-JSON-In-d8102421/https://code.google.com/p/x2js/</a></span></p>
+</blockquote>
+<p><span style="font-size:small">Now create a controller and app directive as follows.</span></p>
+<div>
+<div class="syntaxhighlighter xml" id="highlighter_354779">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>HTML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">html</span>
+<pre class="hidden">&lt;div ng-app=&quot;httpApp&quot; ng-controller=&quot;httpController&quot;&gt;
+  &lt;/div&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;div&nbsp;ng-app=<span class="js__string">&quot;httpApp&quot;</span>&nbsp;ng-controller=<span class="js__string">&quot;httpController&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&lt;/div&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">Next thing we need to do is adding the service. You can add the $http service as follows.</span></p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_281349">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">&lt;script&gt;
+        var app = angular.module('httpApp', []);
+        app.controller('httpController', function ($scope, $http) {
+            $http.get(&quot;Sitemap.xml&quot;,
+                    {
+                        transformResponse: function (cnv) {
+                            var x2js = new X2JS();
+                            var aftCnv = x2js.xml_str2json(cnv);
+                            return aftCnv;
+                        }
+                    })
+            .success(function (response) {
+                console.log(response);
+            });
+        });
+    &lt;/script&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;app&nbsp;=&nbsp;angular.module(<span class="js__string">'httpApp'</span>,&nbsp;[]);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.controller(<span class="js__string">'httpController'</span>,&nbsp;<span class="js__operator">function</span>&nbsp;($scope,&nbsp;$http)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$http.get(<span class="js__string">&quot;Sitemap.xml&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transformResponse:&nbsp;<span class="js__operator">function</span>&nbsp;(cnv)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;x2js&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;X2JS();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;aftCnv&nbsp;=&nbsp;x2js.xml_str2json(cnv);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;aftCnv;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.success(<span class="js__operator">function</span>&nbsp;(response)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(response);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">Here httpApp is our app and httpController is our controller. And we are transforming our response using the function transformResponse.</span></p>
+<p><span style="font-size:small">Transforming Request and Response</span></p>
+<p><span style="font-size:small">In Angular JS, requests can be transformed using a function called transformRequest and if it is a response we can transform by function transformResponse. These functions returns the transformed values.</span></p>
+<p><span style="font-size:small">Here in our example we are using the transformResponse function as follows.</span></p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_128603">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">transformResponse: function (cnv) {
+                            var x2js = new X2JS();
+                            var aftCnv = x2js.xml_str2json(cnv);
+                            return aftCnv;
+                        }</pre>
+<div class="preview">
+<pre class="js">transformResponse:&nbsp;<span class="js__operator">function</span>&nbsp;(cnv)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;x2js&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;X2JS();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;aftCnv&nbsp;=&nbsp;x2js.xml_str2json(cnv);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;aftCnv;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">The x2js.xml_str2json(cnv) will return the json object and we return aftCnv from the function transformResponse. Sounds good? Once we are done everything, we are just write the JSON object in the browser console, so that we
+ can see the object.</span></p>
+<p><strong><span style="font-size:small">Output</span></strong></p>
+<div class="wp-caption x_alignnone" id="attachment_10904"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Convert-XML-to-JSON-In-d8102421/description/Convert_XML_to_JSON_In_Angular_JS-e1446550586662.png"><img class="size-full x_wp-image-10904" src="https://code.msdn.microsoft.com/Convert-XML-to-JSON-In-d8102421/description/Convert_XML_to_JSON_In_Angular_JS-e1446550586662.png" alt="Convert XML To JSON In Angular JS" width="650" height="379"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">Convert XML To JSON In Angular JS</span></p>
+</div>
+<p><span style="font-size:small">That&rsquo;s all we have done everything. Happy coding!.</span></p>
+<h1></h1>
+
+</div>
+
+
+    </div>
+</body>
+</html>

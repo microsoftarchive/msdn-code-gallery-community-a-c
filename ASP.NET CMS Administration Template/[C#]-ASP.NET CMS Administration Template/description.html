@@ -1,0 +1,1147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/04f9c26e-88fd-4dfd-b715-9733d17420b6Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ASP.NET CMS: Administration Template</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>ASP.NET CMS: Administration Template</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, AJAX, SQL Server, ASP.NET, XML, Microsoft Azure, Visual Studio 2010, ASP.NET MVC, SQL Azure, jQuery, .NET Framework, Javascript, Visual Basic .NET, ASP.NET Web Forms, C# Language, HTML5, Windows Azure Storage, ASP.NET Web API, Visual Studio 2012, Windows Store app
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Interop, Controls, C#, AJAX, Asynchronous Programming, SQL, Security, Authentication, ASP.NET, User Interface, Architecture and Design, Navigation, Microsoft Azure, Data Access, jQuery, customization, XAML and HTML conversions, custom controls, UI Layout, UAC, GridView, COM Interop, HTML, Open XML, HTML5, XML Documentation, UI Design, Networking, Storage, HTTP, C# Language Features, Language Samples, ASP.NET Code Sample Downloads, ASP.NET Web API, Web API, enterprise content management (ECM), User Control, User Experience, Binding, XAML Styles
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Cloud, Phone, Data, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">12/6/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Advanced-ASPNET-Administrat-f980b166">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>For many creating advanced ASP.NET website or application administration templates is difficult; we are software developers not designers. This sample and tutorial shows you how to leverage freely available pre-designed templates and how to use them
+ in your existing ASP.NET application or website.<br>
+</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>This code has been tested on Windows Server 2008 RC2 &amp; Windows Server 2012, and developed using Microsoft Visual Studio 2010 &amp; VS2012. It should work perfectly well on any computer running Windows 7 and higher (possibly Vista).<br>
+</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>If you are anything like me your web site design skills are simply not good enough for professional purposes. Yet, there are so many great and free designs available on the internet for us to use; if we could only incorporate them into our ASP.NET applications
+ quickly and successfully.</em></p>
+<p><em>Within this tutorial I will show you how to use a pre-designed and free administration design and incorporate that into your ASP.NET application and use the built in Roles and Memberships to manage the system. In future tutorials I will show you have
+ to implement various features of your new ASP.NET administration page.</em></p>
+<p><em>Please remember to Vote,<br>
+</em></p>
+<p><span style="font-size:20px; font-weight:bold">The Design</span></p>
+<p><em><img id="60399" src="description/640x440x1_admin-area-template0_2.jpg" alt="" width="398" height="273" style="float:left">There are many designs you can choose, look on Bing for ASP.NET Administration Designs, or Dashboards and you will
+ discover a great wealth to choose from. In this tutorial we will use a free design
+<a title="Nova HTML5" href="http://medialoot.com/item/html5-admin-template/" >
+Nova HTML5</a></em> <em>which is an htnl5 template and css combination.&nbsp; But you can use any template you like.&nbsp;</em></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size:20px; font-weight:bold">The Proceedure.</span></p>
+<h3><span style="font-size:20px; font-weight:bold">Step 1: </span></h3>
+<ol>
+<li>Download the template&nbsp; <a title="Nova HTML5" href="http://medialoot.com/item/html5-admin-template/" >
+Nova HTML5</a> and extract the contents to a suitable folder. </li><li>Open Visual Studio and create a new asp.net Web Forms application. </li><li>Add an Admin Folder to the root of the solution. </li><li>Create an HTML folder within the Admin Folder. We will use this to store our html template for later use.
+</li><li>Copy the contents of the Nova Template folder you created earlier to the Admin/Html folder in your solution.
+</li><li>Copy the Images, Css, Js folders from Admin/Html to Admin. </li><li>In the Admin folder add new item &quot;master page&quot; and save it as admin.master </li><li>In the Admin folder add new item &quot;web form with master page&quot; select the admin master page and save as default
+</li></ol>
+<p>We have now set up the basis for our new administration system. The next stage is where we do a little copy and paste to convert the html into asp.net. You will be surprised how easy this is.</p>
+<h3><span style="font-size:20px; font-weight:bold">Step 2: </span></h3>
+<ol>
+<li>Open the html template's index page - by clicking on it in visual studio. </li><li>Copy everything between the &lt;head&gt; &lt;/head&gt; tags a copy to the admin.master file. In the Admin.master file insert the html between the &lt;head&gt;&lt;/head&gt; tags.
+</li><li>Copy everything between the &lt;body&gt; &lt;/body&gt; tags in the html index page and place in the default.aspc file in the admin folder inside the &lt;asp:Content ID=&quot;Content2&quot; ContentPlaceHolderID=&quot;ContentPlaceHolder1&quot; runat=&quot;server&quot;&gt;&lt;/asp:Content&gt;
+ tags </li></ol>
+<p>Your admin.master file should now look like this:</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;%@ Master Language=&quot;C#&quot; AutoEventWireup=&quot;true&quot; CodeBehind=&quot;admin.master.cs&quot; Inherits=&quot;WebApplication1.Admin.admin&quot; %&gt;
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head runat=&quot;server&quot;&gt;
+    &lt;title&gt;Dashboard I Admin Panel&lt;/title&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/layout.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+    &lt;!--[if lt IE 9]&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;css/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+	&lt;script src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+	&lt;![endif]--&gt;
+    &lt;script src=&quot;js/jquery-1.5.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/hideshow.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/jquery.tablesorter.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.equalHeight.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        $(document).ready(function ()
+        {
+            $(&quot;.tablesorter&quot;).tablesorter();
+        }
+        );
+        $(document).ready(function ()
+        {
+
+            //When page loads...
+            $(&quot;.tab_content&quot;).hide(); //Hide all content
+            $(&quot;ul.tabs li:first&quot;).addClass(&quot;active&quot;).show(); //Activate first tab
+            $(&quot;.tab_content:first&quot;).show(); //Show first tab content
+
+            //On Click Event
+            $(&quot;ul.tabs li&quot;).click(function ()
+            {
+
+                $(&quot;ul.tabs li&quot;).removeClass(&quot;active&quot;); //Remove any &quot;active&quot; class
+                $(this).addClass(&quot;active&quot;); //Add &quot;active&quot; class to selected tab
+                $(&quot;.tab_content&quot;).hide(); //Hide all tab content
+
+                var activeTab = $(this).find(&quot;a&quot;).attr(&quot;href&quot;); //Find the href attribute value to identify the active tab &#43; content
+                $(activeTab).fadeIn(); //Fade in the active ID content
+                return false;
+            });
+
+        });
+    &lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        $(function ()
+        {
+            $('.column').equalHeight();
+        });
+&lt;/script&gt;
+    &lt;asp:ContentPlaceHolder ID=&quot;head&quot; runat=&quot;server&quot;&gt;
+    &lt;/asp:ContentPlaceHolder&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;
+    &lt;div&gt;
+        &lt;asp:ContentPlaceHolder ID=&quot;ContentPlaceHolder1&quot; runat=&quot;server&quot;&gt;
+        
+        &lt;/asp:ContentPlaceHolder&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;%@&nbsp;Master</span>&nbsp;<span class="xaml__attr_name">Language</span>=<span class="xaml__attr_value">&quot;C#&quot;</span>&nbsp;<span class="xaml__attr_name">AutoEventWireup</span>=<span class="xaml__attr_value">&quot;true&quot;</span>&nbsp;<span class="xaml__attr_name">CodeBehind</span>=<span class="xaml__attr_value">&quot;admin.master.cs&quot;</span>&nbsp;<span class="xaml__attr_name">Inherits</span>=<span class="xaml__attr_value">&quot;WebApplication1.Admin.admin&quot;</span>&nbsp;<span class="xaml__tag_start">%&gt;</span>&nbsp;
+&nbsp;
+<span class="xaml__doctype">&lt;!DOCTYPE&nbsp;html&gt;</span>&nbsp;
+&nbsp;
+<span class="xaml__tag_start">&lt;html</span>&nbsp;<span class="xaml__attr_name">xmlns</span>=<span class="xaml__attr_value">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span><span class="xaml__tag_start">&lt;head</span>&nbsp;<span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;title</span><span class="xaml__tag_start">&gt;</span>Dashboard&nbsp;I&nbsp;Admin&nbsp;Panel<span class="xaml__tag_end">&lt;/title&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;link</span>&nbsp;<span class="xaml__attr_name">rel</span>=<span class="xaml__attr_value">&quot;stylesheet&quot;</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;css/layout.css&quot;</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text/css&quot;</span>&nbsp;<span class="xaml__attr_name">media</span>=<span class="xaml__attr_value">&quot;screen&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__ie_style">&lt;!--[if&nbsp;lt&nbsp;IE&nbsp;9]&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;rel=&quot;stylesheet&quot;&nbsp;href=&quot;css/ie.css&quot;&nbsp;type=&quot;text/css&quot;&nbsp;media=&quot;screen&quot;&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__ie_style">&lt;![endif]--&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;script</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;js/jquery-1.5.2.min.js&quot;</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text/javascript&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/script&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;script</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;js/hideshow.js&quot;</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text/javascript&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/script&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;script</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;js/jquery.tablesorter.min.js&quot;</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text/javascript&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/script&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;script</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text/javascript&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;js/jquery.equalHeight.js&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/script&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;script</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text/javascript&quot;</span><span class="xaml__tag_start">&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(document).ready(<span class="js__operator">function</span>&nbsp;()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;.tablesorter&quot;</span>).tablesorter();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(document).ready(<span class="js__operator">function</span>&nbsp;()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//When&nbsp;page&nbsp;loads...</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;.tab_content&quot;</span>).hide();&nbsp;<span class="js__sl_comment">//Hide&nbsp;all&nbsp;content</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;ul.tabs&nbsp;li:first&quot;</span>).addClass(<span class="js__string">&quot;active&quot;</span>).show();&nbsp;<span class="js__sl_comment">//Activate&nbsp;first&nbsp;tab</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;.tab_content:first&quot;</span>).show();&nbsp;<span class="js__sl_comment">//Show&nbsp;first&nbsp;tab&nbsp;content</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//On&nbsp;Click&nbsp;Event</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;ul.tabs&nbsp;li&quot;</span>).click(<span class="js__operator">function</span>&nbsp;()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;ul.tabs&nbsp;li&quot;</span>).removeClass(<span class="js__string">&quot;active&quot;</span>);&nbsp;<span class="js__sl_comment">//Remove&nbsp;any&nbsp;&quot;active&quot;&nbsp;class</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__operator">this</span>).addClass(<span class="js__string">&quot;active&quot;</span>);&nbsp;<span class="js__sl_comment">//Add&nbsp;&quot;active&quot;&nbsp;class&nbsp;to&nbsp;selected&nbsp;tab</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;.tab_content&quot;</span>).hide();&nbsp;<span class="js__sl_comment">//Hide&nbsp;all&nbsp;tab&nbsp;content</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;activeTab&nbsp;=&nbsp;$(<span class="js__operator">this</span>).find(<span class="js__string">&quot;a&quot;</span>).attr(<span class="js__string">&quot;href&quot;</span>);&nbsp;<span class="js__sl_comment">//Find&nbsp;the&nbsp;href&nbsp;attribute&nbsp;value&nbsp;to&nbsp;identify&nbsp;the&nbsp;active&nbsp;tab&nbsp;&#43;&nbsp;content</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(activeTab).fadeIn();&nbsp;<span class="js__sl_comment">//Fade&nbsp;in&nbsp;the&nbsp;active&nbsp;ID&nbsp;content</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;false;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/script&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;script</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text/javascript&quot;</span><span class="xaml__tag_start">&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__operator">function</span>&nbsp;()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">'.column'</span>).equalHeight();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+<span class="xaml__tag_end">&lt;/script&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;asp</span>:ContentPlaceHolder&nbsp;<span class="xaml__attr_name">ID</span>=<span class="xaml__attr_value">&quot;head&quot;</span>&nbsp;<span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/asp:ContentPlaceHolder&gt;</span>&nbsp;
+<span class="xaml__tag_end">&lt;/head&gt;</span>&nbsp;
+<span class="xaml__tag_start">&lt;body</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;form</span>&nbsp;<span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;form1&quot;</span>&nbsp;<span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;asp</span>:ContentPlaceHolder&nbsp;<span class="xaml__attr_name">ID</span>=<span class="xaml__attr_value">&quot;ContentPlaceHolder1&quot;</span>&nbsp;<span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/asp:ContentPlaceHolder&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/form&gt;</span>&nbsp;
+<span class="xaml__tag_end">&lt;/body&gt;</span>&nbsp;
+<span class="xaml__tag_end">&lt;/html&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Your Default.aspx file should now look like this:</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;%@ Page Title=&quot;&quot; Language=&quot;C#&quot; MasterPageFile=&quot;~/Admin/admin.Master&quot; AutoEventWireup=&quot;true&quot; CodeBehind=&quot;default.aspx.cs&quot; Inherits=&quot;WebApplication1.Admin._default&quot; %&gt;
+&lt;asp:Content ID=&quot;Content1&quot; ContentPlaceHolderID=&quot;head&quot; runat=&quot;server&quot;&gt;
+&lt;/asp:Content&gt;
+&lt;asp:Content ID=&quot;Content2&quot; ContentPlaceHolderID=&quot;ContentPlaceHolder1&quot; runat=&quot;server&quot;&gt;
+    &lt;header id=&quot;header&quot;&gt;
+        &lt;hgroup&gt;
+            &lt;h1 class=&quot;site_title&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Website Admin&lt;/a&gt;&lt;/h1&gt;
+            &lt;h2 class=&quot;section_title&quot;&gt;Dashboard&lt;/h2&gt;
+            &lt;div class=&quot;btn_view_site&quot;&gt;&lt;a href=&quot;http://www.medialoot.com&quot;&gt;View Site&lt;/a&gt;&lt;/div&gt;
+        &lt;/hgroup&gt;
+    &lt;/header&gt;
+    &lt;!-- end of header bar --&gt;
+
+    &lt;section id=&quot;secondary_bar&quot;&gt;
+        &lt;div class=&quot;user&quot;&gt;
+            &lt;p&gt;John Doe (&lt;a href=&quot;#&quot;&gt;3 Messages&lt;/a&gt;)&lt;/p&gt;
+            &lt;!-- &lt;a class=&quot;logout_user&quot; href=&quot;#&quot; title=&quot;Logout&quot;&gt;Logout&lt;/a&gt; --&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;breadcrumbs_container&quot;&gt;
+            &lt;article class=&quot;breadcrumbs&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Website Admin&lt;/a&gt;
+                &lt;div class=&quot;breadcrumb_divider&quot;&gt;&lt;/div&gt;
+                &lt;a class=&quot;current&quot;&gt;Dashboard&lt;/a&gt;&lt;/article&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- end of secondary bar --&gt;
+
+    &lt;aside id=&quot;sidebar&quot; class=&quot;column&quot;&gt;
+        &lt;form class=&quot;quick_search&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;Quick Search&quot; onfocus=&quot;if(!this._haschanged){this.value=''};this._haschanged=true;&quot;&gt;
+        &lt;/form&gt;
+        &lt;hr /&gt;
+        &lt;h3&gt;Content&lt;/h3&gt;
+        &lt;ul class=&quot;toggle&quot;&gt;
+            &lt;li class=&quot;icn_new_article&quot;&gt;&lt;a href=&quot;#&quot;&gt;New Article&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_edit_article&quot;&gt;&lt;a href=&quot;#&quot;&gt;Edit Articles&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_categories&quot;&gt;&lt;a href=&quot;#&quot;&gt;Categories&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_tags&quot;&gt;&lt;a href=&quot;#&quot;&gt;Tags&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h3&gt;Users&lt;/h3&gt;
+        &lt;ul class=&quot;toggle&quot;&gt;
+            &lt;li class=&quot;icn_add_user&quot;&gt;&lt;a href=&quot;#&quot;&gt;Add New User&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_view_users&quot;&gt;&lt;a href=&quot;#&quot;&gt;View Users&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_profile&quot;&gt;&lt;a href=&quot;#&quot;&gt;Your Profile&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h3&gt;Media&lt;/h3&gt;
+        &lt;ul class=&quot;toggle&quot;&gt;
+            &lt;li class=&quot;icn_folder&quot;&gt;&lt;a href=&quot;#&quot;&gt;File Manager&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_photo&quot;&gt;&lt;a href=&quot;#&quot;&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_audio&quot;&gt;&lt;a href=&quot;#&quot;&gt;Audio&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_video&quot;&gt;&lt;a href=&quot;#&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h3&gt;Admin&lt;/h3&gt;
+        &lt;ul class=&quot;toggle&quot;&gt;
+            &lt;li class=&quot;icn_settings&quot;&gt;&lt;a href=&quot;#&quot;&gt;Options&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_security&quot;&gt;&lt;a href=&quot;#&quot;&gt;Security&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;icn_jump_back&quot;&gt;&lt;a href=&quot;#&quot;&gt;Logout&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;footer&gt;
+            &lt;hr /&gt;
+            &lt;p&gt;&lt;strong&gt;Copyright &amp;copy; 2011 Website Admin&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Theme by &lt;a href=&quot;http://www.medialoot.com&quot;&gt;MediaLoot&lt;/a&gt;&lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/aside&gt;
+    &lt;!-- end of sidebar --&gt;
+
+    &lt;section id=&quot;main&quot; class=&quot;column&quot;&gt;
+
+        &lt;h4 class=&quot;alert_info&quot;&gt;Welcome to the free MediaLoot admin panel template, this could be an informative message.&lt;/h4&gt;
+
+        &lt;article class=&quot;module width_full&quot;&gt;
+            &lt;header&gt;
+                &lt;h3&gt;Stats&lt;/h3&gt;
+            &lt;/header&gt;
+            &lt;div class=&quot;module_content&quot;&gt;
+                &lt;article class=&quot;stats_graph&quot;&gt;
+                    &lt;img src=&quot;http://chart.apis.google.com/chart?chxr=0,0,3000&amp;chxt=y&amp;chs=520x140&amp;cht=lc&amp;chco=76A4FB,80C65A&amp;chd=s:Tdjpsvyvttmiihgmnrst,OTbdcfhhggcTUTTUadfk&amp;chls=2|2&amp;chma=40,20,20,30&quot; width=&quot;520&quot; height=&quot;140&quot; alt=&quot;&quot; /&gt;
+                &lt;/article&gt;
+
+                &lt;article class=&quot;stats_overview&quot;&gt;
+                    &lt;div class=&quot;overview_today&quot;&gt;
+                        &lt;p class=&quot;overview_day&quot;&gt;Today&lt;/p&gt;
+                        &lt;p class=&quot;overview_count&quot;&gt;1,876&lt;/p&gt;
+                        &lt;p class=&quot;overview_type&quot;&gt;Hits&lt;/p&gt;
+                        &lt;p class=&quot;overview_count&quot;&gt;2,103&lt;/p&gt;
+                        &lt;p class=&quot;overview_type&quot;&gt;Views&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;overview_previous&quot;&gt;
+                        &lt;p class=&quot;overview_day&quot;&gt;Yesterday&lt;/p&gt;
+                        &lt;p class=&quot;overview_count&quot;&gt;1,646&lt;/p&gt;
+                        &lt;p class=&quot;overview_type&quot;&gt;Hits&lt;/p&gt;
+                        &lt;p class=&quot;overview_count&quot;&gt;2,054&lt;/p&gt;
+                        &lt;p class=&quot;overview_type&quot;&gt;Views&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+                &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;!-- end of stats article --&gt;
+
+        &lt;article class=&quot;module width_3_quarter&quot;&gt;
+            &lt;header&gt;
+                &lt;h3 class=&quot;tabs_involved&quot;&gt;Content Manager&lt;/h3&gt;
+                &lt;ul class=&quot;tabs&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#tab1&quot;&gt;Posts&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#tab2&quot;&gt;Comments&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/header&gt;
+
+            &lt;div class=&quot;tab_container&quot;&gt;
+                &lt;div id=&quot;tab1&quot; class=&quot;tab_content&quot;&gt;
+                    &lt;table class=&quot;tablesorter&quot; cellspacing=&quot;0&quot;&gt;
+                        &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;&lt;/th&gt;
+                                &lt;th&gt;Entry Name&lt;/th&gt;
+                                &lt;th&gt;Category&lt;/th&gt;
+                                &lt;th&gt;Created On&lt;/th&gt;
+                                &lt;th&gt;Actions&lt;/th&gt;
+                            &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Lorem Ipsum Dolor Sit Amet&lt;/td&gt;
+                                &lt;td&gt;Articles&lt;/td&gt;
+                                &lt;td&gt;5th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Ipsum Lorem Dolor Sit Amet&lt;/td&gt;
+                                &lt;td&gt;Freebies&lt;/td&gt;
+                                &lt;td&gt;6th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Sit Amet Dolor Ipsum&lt;/td&gt;
+                                &lt;td&gt;Tutorials&lt;/td&gt;
+                                &lt;td&gt;10th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Dolor Lorem Amet&lt;/td&gt;
+                                &lt;td&gt;Articles&lt;/td&gt;
+                                &lt;td&gt;16th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Dolor Lorem Amet&lt;/td&gt;
+                                &lt;td&gt;Articles&lt;/td&gt;
+                                &lt;td&gt;16th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+                &lt;!-- end of #tab1 --&gt;
+
+                &lt;div id=&quot;tab2&quot; class=&quot;tab_content&quot;&gt;
+                    &lt;table class=&quot;tablesorter&quot; cellspacing=&quot;0&quot;&gt;
+                        &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;&lt;/th&gt;
+                                &lt;th&gt;Comment&lt;/th&gt;
+                                &lt;th&gt;Posted by&lt;/th&gt;
+                                &lt;th&gt;Posted On&lt;/th&gt;
+                                &lt;th&gt;Actions&lt;/th&gt;
+                            &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Lorem Ipsum Dolor Sit Amet&lt;/td&gt;
+                                &lt;td&gt;Mark Corrigan&lt;/td&gt;
+                                &lt;td&gt;5th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Ipsum Lorem Dolor Sit Amet&lt;/td&gt;
+                                &lt;td&gt;Jeremy Usbourne&lt;/td&gt;
+                                &lt;td&gt;6th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Sit Amet Dolor Ipsum&lt;/td&gt;
+                                &lt;td&gt;Super Hans&lt;/td&gt;
+                                &lt;td&gt;10th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Dolor Lorem Amet&lt;/td&gt;
+                                &lt;td&gt;Alan Johnson&lt;/td&gt;
+                                &lt;td&gt;16th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Dolor Lorem Amet&lt;/td&gt;
+                                &lt;td&gt;Dobby&lt;/td&gt;
+                                &lt;td&gt;16th April 2011&lt;/td&gt;
+                                &lt;td&gt;
+                                    &lt;input type=&quot;image&quot; src=&quot;images/icn_edit.png&quot; title=&quot;Edit&quot;&gt;&lt;input type=&quot;image&quot; src=&quot;images/icn_trash.png&quot; title=&quot;Trash&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+
+                &lt;/div&gt;
+                &lt;!-- end of #tab2 --&gt;
+
+            &lt;/div&gt;
+            &lt;!-- end of .tab_container --&gt;
+
+        &lt;/article&gt;
+        &lt;!-- end of content manager article --&gt;
+
+        &lt;article class=&quot;module width_quarter&quot;&gt;
+            &lt;header&gt;
+                &lt;h3&gt;Messages&lt;/h3&gt;
+            &lt;/header&gt;
+            &lt;div class=&quot;message_list&quot;&gt;
+                &lt;div class=&quot;module_content&quot;&gt;
+                    &lt;div class=&quot;message&quot;&gt;
+                        &lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor.&lt;/p&gt;
+                        &lt;p&gt;&lt;strong&gt;John Doe&lt;/strong&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;message&quot;&gt;
+                        &lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor.&lt;/p&gt;
+                        &lt;p&gt;&lt;strong&gt;John Doe&lt;/strong&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;message&quot;&gt;
+                        &lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor.&lt;/p&gt;
+                        &lt;p&gt;&lt;strong&gt;John Doe&lt;/strong&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;message&quot;&gt;
+                        &lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor.&lt;/p&gt;
+                        &lt;p&gt;&lt;strong&gt;John Doe&lt;/strong&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;message&quot;&gt;
+                        &lt;p&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor.&lt;/p&gt;
+                        &lt;p&gt;&lt;strong&gt;John Doe&lt;/strong&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;footer&gt;
+                &lt;form class=&quot;post_message&quot;&gt;
+                &lt;input type=&quot;text&quot; value=&quot;Message&quot; onfocus=&quot;if(!this._haschanged){this.value=''};this._haschanged=true;&quot;&gt;
+                &lt;input type=&quot;submit&quot; class=&quot;btn_post_message&quot; value=&quot;&quot; /&gt;
+                &lt;/form&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+        &lt;!-- end of messages article --&gt;
+
+        &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+        &lt;article class=&quot;module width_full&quot;&gt;
+            &lt;header&gt;
+                &lt;h3&gt;Post New Article&lt;/h3&gt;
+            &lt;/header&gt;
+            &lt;div class=&quot;module_content&quot;&gt;
+                &lt;fieldset&gt;
+                    &lt;label&gt;Post Title&lt;/label&gt;
+                    &lt;input type=&quot;text&quot;&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset&gt;
+                    &lt;label&gt;Content&lt;/label&gt;
+                    &lt;textarea rows=&quot;12&quot;&gt;&lt;/textarea&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset style=&quot;width: 48%; float: left; margin-right: 3%;&quot;&gt;
+                    &lt;!-- to make two field float next to one another, adjust values accordingly --&gt;
+                    &lt;label&gt;Category&lt;/label&gt;
+                    &lt;select style=&quot;width: 92%;&quot;&gt;
+                        &lt;option&gt;Articles&lt;/option&gt;
+                        &lt;option&gt;Tutorials&lt;/option&gt;
+                        &lt;option&gt;Freebies&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset style=&quot;width: 48%; float: left;&quot;&gt;
+                    &lt;!-- to make two field float next to one another, adjust values accordingly --&gt;
+                    &lt;label&gt;Tags&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; style=&quot;width: 92%;&quot;&gt;
+                &lt;/fieldset&gt;
+                &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;footer&gt;
+                &lt;div class=&quot;submit_link&quot;&gt;
+                    &lt;select&gt;
+                        &lt;option&gt;Draft&lt;/option&gt;
+                        &lt;option&gt;Published&lt;/option&gt;
+                    &lt;/select&gt;
+                    &lt;input type=&quot;submit&quot; value=&quot;Publish&quot; class=&quot;alt_btn&quot;&gt;
+                    &lt;input type=&quot;submit&quot; value=&quot;Reset&quot;&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+        &lt;!-- end of post new article --&gt;
+
+        &lt;h4 class=&quot;alert_warning&quot;&gt;A Warning Alert&lt;/h4&gt;
+
+        &lt;h4 class=&quot;alert_error&quot;&gt;An Error Message&lt;/h4&gt;
+
+        &lt;h4 class=&quot;alert_success&quot;&gt;A Success Message&lt;/h4&gt;
+
+        &lt;article class=&quot;module width_full&quot;&gt;
+            &lt;header&gt;
+                &lt;h3&gt;Basic Styles&lt;/h3&gt;
+            &lt;/header&gt;
+            &lt;div class=&quot;module_content&quot;&gt;
+                &lt;h1&gt;Header 1&lt;/h1&gt;
+                &lt;h2&gt;Header 2&lt;/h2&gt;
+                &lt;h3&gt;Header 3&lt;/h3&gt;
+                &lt;h4&gt;Header 4&lt;/h4&gt;
+                &lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&lt;/p&gt;
+
+                &lt;p&gt;Donec id elit non mi porta &lt;a href=&quot;#&quot;&gt;link text&lt;/a&gt; gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p&gt;
+
+                &lt;ul&gt;
+                    &lt;li&gt;Donec ullamcorper nulla non metus auctor fringilla. &lt;/li&gt;
+                    &lt;li&gt;Cras mattis consectetur purus sit amet fermentum.&lt;/li&gt;
+                    &lt;li&gt;Donec ullamcorper nulla non metus auctor fringilla. &lt;/li&gt;
+                    &lt;li&gt;Cras mattis consectetur purus sit amet fermentum.&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;!-- end of styles article --&gt;
+        &lt;div class=&quot;spacer&quot;&gt;&lt;/div&gt;
+    &lt;/section&gt;
+&lt;/asp:Content&gt;
+</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;%@&nbsp;Page</span>&nbsp;<span class="xaml__attr_name">Title</span>=<span class="xaml__attr_value">&quot;&quot;</span>&nbsp;<span class="xaml__attr_name">Language</span>=<span class="xaml__attr_value">&quot;C#&quot;</span>&nbsp;<span class="xaml__attr_name">MasterPageFile</span>=<span class="xaml__attr_value">&quot;~/Admin/admin.Master&quot;</span>&nbsp;<span class="xaml__attr_name">AutoEventWireup</span>=<span class="xaml__attr_value">&quot;true&quot;</span>&nbsp;<span class="xaml__attr_name">CodeBehind</span>=<span class="xaml__attr_value">&quot;default.aspx.cs&quot;</span>&nbsp;<span class="xaml__attr_name">Inherits</span>=<span class="xaml__attr_value">&quot;WebApplication1.Admin._default&quot;</span>&nbsp;<span class="xaml__tag_start">%&gt;</span>&nbsp;
+<span class="xaml__tag_start">&lt;asp</span>:Content&nbsp;<span class="xaml__attr_name">ID</span>=<span class="xaml__attr_value">&quot;Content1&quot;</span>&nbsp;<span class="xaml__attr_name">ContentPlaceHolderID</span>=<span class="xaml__attr_value">&quot;head&quot;</span>&nbsp;<span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span><span class="xaml__tag_end">&lt;/asp:Content&gt;</span>&nbsp;
+<span class="xaml__tag_start">&lt;asp</span>:Content&nbsp;<span class="xaml__attr_name">ID</span>=<span class="xaml__attr_value">&quot;Content2&quot;</span>&nbsp;<span class="xaml__attr_name">ContentPlaceHolderID</span>=<span class="xaml__attr_value">&quot;ContentPlaceHolder1&quot;</span>&nbsp;<span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;header</span>&nbsp;<span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;header&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;hgroup</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h1</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;site_title&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;index.html&quot;</span><span class="xaml__tag_start">&gt;</span>Website&nbsp;Admin<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/h1&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h2</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;section_title&quot;</span><span class="xaml__tag_start">&gt;</span>Dashboard<span class="xaml__tag_end">&lt;/h2&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;btn_view_site&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;http://www.medialoot.com&quot;</span><span class="xaml__tag_start">&gt;</span>View&nbsp;Site<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/hgroup&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/header&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;header&nbsp;bar&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;section</span>&nbsp;<span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;secondary_bar&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;user&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span>John&nbsp;Doe&nbsp;(<span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>3&nbsp;Messages<span class="xaml__tag_end">&lt;/a&gt;</span>)<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;&lt;a&nbsp;class=&quot;logout_user&quot;&nbsp;href=&quot;#&quot;&nbsp;title=&quot;Logout&quot;&gt;Logout&lt;/a&gt;&nbsp;--&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;breadcrumbs_container&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;article</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;breadcrumbs&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;index.html&quot;</span><span class="xaml__tag_start">&gt;</span>Website&nbsp;Admin<span class="xaml__tag_end">&lt;/a&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;breadcrumb_divider&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;current&quot;</span><span class="xaml__tag_start">&gt;</span>Dashboard<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/article&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/section&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;secondary&nbsp;bar&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;aside</span>&nbsp;<span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;sidebar&quot;</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;column&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;form</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;quick_search&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text&quot;</span>&nbsp;<span class="xaml__attr_name">value</span>=<span class="xaml__attr_value">&quot;Quick&nbsp;Search&quot;</span>&nbsp;<span class="xaml__attr_name">onfocus</span>=<span class="xaml__attr_value">&quot;if(!this._haschanged){this.value=''};this._haschanged=true;&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/form&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;hr</span>&nbsp;<span class="xaml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span><span class="xaml__tag_start">&gt;</span>Content<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;ul</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;toggle&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_new_article&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>New&nbsp;Article<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_edit_article&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Edit&nbsp;Articles<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_categories&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Categories<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_tags&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Tags<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/ul&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span><span class="xaml__tag_start">&gt;</span>Users<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;ul</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;toggle&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_add_user&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Add&nbsp;New&nbsp;User<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_view_users&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>View&nbsp;Users<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_profile&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Your&nbsp;Profile<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/ul&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span><span class="xaml__tag_start">&gt;</span>Media<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;ul</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;toggle&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_folder&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>File&nbsp;Manager<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_photo&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Gallery<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_audio&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Audio<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_video&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Video<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/ul&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span><span class="xaml__tag_start">&gt;</span>Admin<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;ul</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;toggle&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_settings&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Options<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_security&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Security<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;icn_jump_back&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>Logout<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/ul&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;footer</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;hr</span>&nbsp;<span class="xaml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;strong</span><span class="xaml__tag_start">&gt;</span>Copyright&nbsp;<span class="xaml__entity">&amp;copy;</span>&nbsp;2011&nbsp;Website&nbsp;Admin<span class="xaml__tag_end">&lt;/strong&gt;</span><span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span>Theme&nbsp;by&nbsp;<span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;http://www.medialoot.com&quot;</span><span class="xaml__tag_start">&gt;</span>MediaLoot<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/footer&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/aside&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;sidebar&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;section</span>&nbsp;<span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;main&quot;</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;column&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h4</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;alert_info&quot;</span><span class="xaml__tag_start">&gt;</span>Welcome&nbsp;to&nbsp;the&nbsp;free&nbsp;MediaLoot&nbsp;admin&nbsp;panel&nbsp;template,&nbsp;this&nbsp;could&nbsp;be&nbsp;an&nbsp;informative&nbsp;message.<span class="xaml__tag_end">&lt;/h4&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;article</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;module&nbsp;width_full&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;header</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span><span class="xaml__tag_start">&gt;</span>Stats<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/header&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;module_content&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;article</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;stats_graph&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;img</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;http://chart.apis.google.com/chart?chxr=0,0,3000&amp;chxt=y&amp;chs=520x140&amp;cht=lc&amp;chco=76A4FB,80C65A&amp;chd=s:Tdjpsvyvttmiihgmnrst,OTbdcfhhggcTUTTUadfk&amp;chls=2|2&amp;chma=40,20,20,30&quot;</span>&nbsp;<span class="xaml__attr_name">width</span>=<span class="xaml__attr_value">&quot;520&quot;</span>&nbsp;<span class="xaml__attr_name">height</span>=<span class="xaml__attr_value">&quot;140&quot;</span>&nbsp;<span class="xaml__attr_name">alt</span>=<span class="xaml__attr_value">&quot;&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/article&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;article</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;stats_overview&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_today&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_day&quot;</span><span class="xaml__tag_start">&gt;</span>Today<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_count&quot;</span><span class="xaml__tag_start">&gt;</span>1,876<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_type&quot;</span><span class="xaml__tag_start">&gt;</span>Hits<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_count&quot;</span><span class="xaml__tag_start">&gt;</span>2,103<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_type&quot;</span><span class="xaml__tag_start">&gt;</span>Views<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_previous&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_day&quot;</span><span class="xaml__tag_start">&gt;</span>Yesterday<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_count&quot;</span><span class="xaml__tag_start">&gt;</span>1,646<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_type&quot;</span><span class="xaml__tag_start">&gt;</span>Hits<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_count&quot;</span><span class="xaml__tag_start">&gt;</span>2,054<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;overview_type&quot;</span><span class="xaml__tag_start">&gt;</span>Views<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/article&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;clear&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/article&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;stats&nbsp;article&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;article</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;module&nbsp;width_3_quarter&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;header</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;tabs_involved&quot;</span><span class="xaml__tag_start">&gt;</span>Content&nbsp;Manager<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;ul</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;tabs&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#tab1&quot;</span><span class="xaml__tag_start">&gt;</span>Posts<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#tab2&quot;</span><span class="xaml__tag_start">&gt;</span>Comments<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/ul&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/header&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;tab_container&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;tab1&quot;</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;tab_content&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;table</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;tablesorter&quot;</span>&nbsp;<span class="xaml__attr_name">cellspacing</span>=<span class="xaml__attr_value">&quot;0&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;thead</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span>Entry&nbsp;Name<span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span>Category<span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span>Created&nbsp;On<span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span>Actions<span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/thead&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tbody</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Lorem&nbsp;Ipsum&nbsp;Dolor&nbsp;Sit&nbsp;Amet<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Articles<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>5th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Ipsum&nbsp;Lorem&nbsp;Dolor&nbsp;Sit&nbsp;Amet<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Freebies<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>6th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Sit&nbsp;Amet&nbsp;Dolor&nbsp;Ipsum<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Tutorials<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>10th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Dolor&nbsp;Lorem&nbsp;Amet<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Articles<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>16th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Dolor&nbsp;Lorem&nbsp;Amet<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Articles<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>16th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tbody&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/table&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;#tab1&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;tab2&quot;</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;tab_content&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;table</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;tablesorter&quot;</span>&nbsp;<span class="xaml__attr_name">cellspacing</span>=<span class="xaml__attr_value">&quot;0&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;thead</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span>Comment<span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span>Posted&nbsp;by<span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span>Posted&nbsp;On<span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;th</span><span class="xaml__tag_start">&gt;</span>Actions<span class="xaml__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/thead&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tbody</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Lorem&nbsp;Ipsum&nbsp;Dolor&nbsp;Sit&nbsp;Amet<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Mark&nbsp;Corrigan<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>5th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Ipsum&nbsp;Lorem&nbsp;Dolor&nbsp;Sit&nbsp;Amet<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Jeremy&nbsp;Usbourne<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>6th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Sit&nbsp;Amet&nbsp;Dolor&nbsp;Ipsum<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Super&nbsp;Hans<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>10th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Dolor&nbsp;Lorem&nbsp;Amet<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Alan&nbsp;Johnson<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>16th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;tr</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;checkbox&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Dolor&nbsp;Lorem&nbsp;Amet<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>Dobby<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;</span>16th&nbsp;April&nbsp;2011<span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;td</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_edit.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Edit&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;image&quot;</span>&nbsp;<span class="xaml__attr_name">src</span>=<span class="xaml__attr_value">&quot;images/icn_trash.png&quot;</span>&nbsp;<span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Trash&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/tbody&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/table&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;#tab2&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;.tab_container&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/article&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;content&nbsp;manager&nbsp;article&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;article</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;module&nbsp;width_quarter&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;header</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span><span class="xaml__tag_start">&gt;</span>Messages<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/header&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;message_list&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;module_content&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;message&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span>Vivamus&nbsp;sagittis&nbsp;lacus&nbsp;vel&nbsp;augue&nbsp;laoreet&nbsp;rutrum&nbsp;faucibus&nbsp;dolor.<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;strong</span><span class="xaml__tag_start">&gt;</span>John&nbsp;Doe<span class="xaml__tag_end">&lt;/strong&gt;</span><span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;message&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span>Vivamus&nbsp;sagittis&nbsp;lacus&nbsp;vel&nbsp;augue&nbsp;laoreet&nbsp;rutrum&nbsp;faucibus&nbsp;dolor.<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;strong</span><span class="xaml__tag_start">&gt;</span>John&nbsp;Doe<span class="xaml__tag_end">&lt;/strong&gt;</span><span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;message&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span>Vivamus&nbsp;sagittis&nbsp;lacus&nbsp;vel&nbsp;augue&nbsp;laoreet&nbsp;rutrum&nbsp;faucibus&nbsp;dolor.<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;strong</span><span class="xaml__tag_start">&gt;</span>John&nbsp;Doe<span class="xaml__tag_end">&lt;/strong&gt;</span><span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;message&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span>Vivamus&nbsp;sagittis&nbsp;lacus&nbsp;vel&nbsp;augue&nbsp;laoreet&nbsp;rutrum&nbsp;faucibus&nbsp;dolor.<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;strong</span><span class="xaml__tag_start">&gt;</span>John&nbsp;Doe<span class="xaml__tag_end">&lt;/strong&gt;</span><span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;message&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span>Vivamus&nbsp;sagittis&nbsp;lacus&nbsp;vel&nbsp;augue&nbsp;laoreet&nbsp;rutrum&nbsp;faucibus&nbsp;dolor.<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;strong</span><span class="xaml__tag_start">&gt;</span>John&nbsp;Doe<span class="xaml__tag_end">&lt;/strong&gt;</span><span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;footer</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;form</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;post_message&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text&quot;</span>&nbsp;<span class="xaml__attr_name">value</span>=<span class="xaml__attr_value">&quot;Message&quot;</span>&nbsp;<span class="xaml__attr_name">onfocus</span>=<span class="xaml__attr_value">&quot;if(!this._haschanged){this.value=''};this._haschanged=true;&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;submit&quot;</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;btn_post_message&quot;</span>&nbsp;<span class="xaml__attr_name">value</span>=<span class="xaml__attr_value">&quot;&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/form&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/footer&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/article&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;messages&nbsp;article&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;clear&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;article</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;module&nbsp;width_full&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;header</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span><span class="xaml__tag_start">&gt;</span>Post&nbsp;New&nbsp;Article<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/header&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;module_content&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;fieldset</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;label</span><span class="xaml__tag_start">&gt;</span>Post&nbsp;Title<span class="xaml__tag_end">&lt;/label&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/fieldset&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;fieldset</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;label</span><span class="xaml__tag_start">&gt;</span>Content<span class="xaml__tag_end">&lt;/label&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;textarea</span>&nbsp;<span class="xaml__attr_name">rows</span>=<span class="xaml__attr_value">&quot;12&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/textarea&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/fieldset&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;fieldset</span>&nbsp;<span class="xaml__attr_name">style</span>=<span class="xaml__attr_value">&quot;width:&nbsp;48%;&nbsp;float:&nbsp;left;&nbsp;margin-right:&nbsp;3%;&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;to&nbsp;make&nbsp;two&nbsp;field&nbsp;float&nbsp;next&nbsp;to&nbsp;one&nbsp;another,&nbsp;adjust&nbsp;values&nbsp;accordingly&nbsp;--&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;label</span><span class="xaml__tag_start">&gt;</span>Category<span class="xaml__tag_end">&lt;/label&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;select</span>&nbsp;<span class="xaml__attr_name">style</span>=<span class="xaml__attr_value">&quot;width:&nbsp;92%;&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;option</span><span class="xaml__tag_start">&gt;</span>Articles<span class="xaml__tag_end">&lt;/option&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;option</span><span class="xaml__tag_start">&gt;</span>Tutorials<span class="xaml__tag_end">&lt;/option&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;option</span><span class="xaml__tag_start">&gt;</span>Freebies<span class="xaml__tag_end">&lt;/option&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/select&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/fieldset&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;fieldset</span>&nbsp;<span class="xaml__attr_name">style</span>=<span class="xaml__attr_value">&quot;width:&nbsp;48%;&nbsp;float:&nbsp;left;&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;to&nbsp;make&nbsp;two&nbsp;field&nbsp;float&nbsp;next&nbsp;to&nbsp;one&nbsp;another,&nbsp;adjust&nbsp;values&nbsp;accordingly&nbsp;--&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;label</span><span class="xaml__tag_start">&gt;</span>Tags<span class="xaml__tag_end">&lt;/label&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;text&quot;</span>&nbsp;<span class="xaml__attr_name">style</span>=<span class="xaml__attr_value">&quot;width:&nbsp;92%;&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/fieldset&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;clear&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;footer</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;submit_link&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;select</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;option</span><span class="xaml__tag_start">&gt;</span>Draft<span class="xaml__tag_end">&lt;/option&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;option</span><span class="xaml__tag_start">&gt;</span>Published<span class="xaml__tag_end">&lt;/option&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/select&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;submit&quot;</span>&nbsp;<span class="xaml__attr_name">value</span>=<span class="xaml__attr_value">&quot;Publish&quot;</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;alt_btn&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;input</span>&nbsp;<span class="xaml__attr_name">type</span>=<span class="xaml__attr_value">&quot;submit&quot;</span>&nbsp;<span class="xaml__attr_name">value</span>=<span class="xaml__attr_value">&quot;Reset&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/footer&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/article&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;post&nbsp;new&nbsp;article&nbsp;--&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h4</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;alert_warning&quot;</span><span class="xaml__tag_start">&gt;</span>A&nbsp;Warning&nbsp;Alert<span class="xaml__tag_end">&lt;/h4&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h4</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;alert_error&quot;</span><span class="xaml__tag_start">&gt;</span>An&nbsp;Error&nbsp;Message<span class="xaml__tag_end">&lt;/h4&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h4</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;alert_success&quot;</span><span class="xaml__tag_start">&gt;</span>A&nbsp;Success&nbsp;Message<span class="xaml__tag_end">&lt;/h4&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;article</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;module&nbsp;width_full&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;header</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span><span class="xaml__tag_start">&gt;</span>Basic&nbsp;Styles<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/header&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;module_content&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h1</span><span class="xaml__tag_start">&gt;</span>Header&nbsp;1<span class="xaml__tag_end">&lt;/h1&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h2</span><span class="xaml__tag_start">&gt;</span>Header&nbsp;2<span class="xaml__tag_end">&lt;/h2&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h3</span><span class="xaml__tag_start">&gt;</span>Header&nbsp;3<span class="xaml__tag_end">&lt;/h3&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;h4</span><span class="xaml__tag_start">&gt;</span>Header&nbsp;4<span class="xaml__tag_end">&lt;/h4&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span>Cum&nbsp;sociis&nbsp;natoque&nbsp;penatibus&nbsp;et&nbsp;magnis&nbsp;dis&nbsp;parturient&nbsp;montes,&nbsp;nascetur&nbsp;ridiculus&nbsp;mus.&nbsp;Cras&nbsp;mattis&nbsp;consectetur&nbsp;purus&nbsp;sit&nbsp;amet&nbsp;fermentum.&nbsp;Maecenas&nbsp;faucibus&nbsp;mollis&nbsp;interdum.&nbsp;Maecenas&nbsp;faucibus&nbsp;mollis&nbsp;interdum.&nbsp;Cras&nbsp;justo&nbsp;odio,&nbsp;dapibus&nbsp;ac&nbsp;facilisis&nbsp;in,&nbsp;egestas&nbsp;eget&nbsp;quam.<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;</span>Donec&nbsp;id&nbsp;elit&nbsp;non&nbsp;mi&nbsp;porta&nbsp;<span class="xaml__tag_start">&lt;a</span>&nbsp;<span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;#&quot;</span><span class="xaml__tag_start">&gt;</span>link&nbsp;text<span class="xaml__tag_end">&lt;/a&gt;</span>&nbsp;gravida&nbsp;at&nbsp;eget&nbsp;metus.&nbsp;Donec&nbsp;ullamcorper&nbsp;nulla&nbsp;non&nbsp;metus&nbsp;auctor&nbsp;fringilla.&nbsp;Cras&nbsp;mattis&nbsp;consectetur&nbsp;purus&nbsp;sit&nbsp;amet&nbsp;fermentum.&nbsp;Aenean&nbsp;eu&nbsp;leo&nbsp;quam.&nbsp;Pellentesque&nbsp;ornare&nbsp;sem&nbsp;lacinia&nbsp;quam&nbsp;venenatis&nbsp;vestibulum.<span class="xaml__tag_end">&lt;/p&gt;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;ul</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span><span class="xaml__tag_start">&gt;</span>Donec&nbsp;ullamcorper&nbsp;nulla&nbsp;non&nbsp;metus&nbsp;auctor&nbsp;fringilla.&nbsp;<span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span><span class="xaml__tag_start">&gt;</span>Cras&nbsp;mattis&nbsp;consectetur&nbsp;purus&nbsp;sit&nbsp;amet&nbsp;fermentum.<span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span><span class="xaml__tag_start">&gt;</span>Donec&nbsp;ullamcorper&nbsp;nulla&nbsp;non&nbsp;metus&nbsp;auctor&nbsp;fringilla.&nbsp;<span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;li</span><span class="xaml__tag_start">&gt;</span>Cras&nbsp;mattis&nbsp;consectetur&nbsp;purus&nbsp;sit&nbsp;amet&nbsp;fermentum.<span class="xaml__tag_end">&lt;/li&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/ul&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/article&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__comment">&lt;!--&nbsp;end&nbsp;of&nbsp;styles&nbsp;article&nbsp;--&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;div</span>&nbsp;<span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;spacer&quot;</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_end">&lt;/div&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/section&gt;</span>&nbsp;
+<span class="xaml__tag_end">&lt;/asp:Content&gt;</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;If you run the program now - and navigate to the admin folder you will see the template sitting there in all its glory ready for customisation. Before we go on to the basic customisation we will wire the template up to the
+ front end to make things a little more convienient for us.</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">
+<ol>
+<li>In the Site.master template which you will find in the root of your solution explorer. Search for the Anonymous template for logging in and add the following link: &lt;li&gt;&lt;a id=&quot;DashboardLink&quot; runat=&quot;server&quot; href=&quot;~/Admin/default.aspx&quot;&gt;Log in&lt;/a&gt;&lt;/li&gt;.
+</li></ol>
+<p>Your login section should now look like this:</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden"> &lt;section id=&quot;login&quot;&gt;
+                    &lt;asp:LoginView runat=&quot;server&quot; ViewStateMode=&quot;Disabled&quot;&gt;
+                        &lt;AnonymousTemplate&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a id=&quot;registerLink&quot; runat=&quot;server&quot; href=&quot;~/Account/Register.aspx&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a id=&quot;loginLink&quot; runat=&quot;server&quot; href=&quot;~/Account/Login.aspx&quot;&gt;Log in&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a id=&quot;DashboardLink&quot; runat=&quot;server&quot; href=&quot;~/Admin/default.aspx&quot;&gt;Log in&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/AnonymousTemplate&gt;
+                        &lt;LoggedInTemplate&gt;
+                            &lt;p&gt;
+                                Hello, &lt;a runat=&quot;server&quot; class=&quot;username&quot; href=&quot;~/Account/ChangePassword.aspx&quot; title=&quot;Change password&quot;&gt;
+                                    &lt;asp:LoginName runat=&quot;server&quot; CssClass=&quot;username&quot; /&gt;
+                                &lt;/a&gt;!
+                                &lt;asp:LoginStatus runat=&quot;server&quot; LogoutAction=&quot;Redirect&quot; LogoutText=&quot;Log off&quot; LogoutPageUrl=&quot;~/&quot; /&gt;
+                            &lt;/p&gt;
+                        &lt;/LoggedInTemplate&gt;
+                    &lt;/asp:LoginView&gt;
+                &lt;/section&gt;</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;section</span><span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;login&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span><span class="xaml__tag_start">&lt;asp</span>:LoginView&nbsp;<span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__attr_name">ViewStateMode</span>=<span class="xaml__attr_value">&quot;Disabled&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span><span class="xaml__tag_start">&lt;AnonymousTemplate</span><span class="xaml__tag_start">&gt;&nbsp;
+</span><span class="xaml__tag_start">&lt;ul</span><span class="xaml__tag_start">&gt;&nbsp;
+</span><span class="xaml__tag_start">&lt;li</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span><span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;registerLink&quot;</span><span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;~/Account/Register.aspx&quot;</span><span class="xaml__tag_start">&gt;</span>Register<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span><span class="xaml__tag_start">&lt;li</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span><span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;loginLink&quot;</span><span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;~/Account/Login.aspx&quot;</span><span class="xaml__tag_start">&gt;</span>Log&nbsp;in<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span><span class="xaml__tag_start">&lt;li</span><span class="xaml__tag_start">&gt;</span><span class="xaml__tag_start">&lt;a</span><span class="xaml__attr_name">id</span>=<span class="xaml__attr_value">&quot;DashboardLink&quot;</span><span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;~/Admin/default.aspx&quot;</span><span class="xaml__tag_start">&gt;</span>Log&nbsp;in<span class="xaml__tag_end">&lt;/a&gt;</span><span class="xaml__tag_end">&lt;/li&gt;</span><span class="xaml__tag_end">&lt;/ul&gt;</span><span class="xaml__tag_end">&lt;/AnonymousTemplate&gt;</span><span class="xaml__tag_start">&lt;LoggedInTemplate</span><span class="xaml__tag_start">&gt;&nbsp;
+</span><span class="xaml__tag_start">&lt;p</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello,&nbsp;<span class="xaml__tag_start">&lt;a</span><span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__attr_name">class</span>=<span class="xaml__attr_value">&quot;username&quot;</span><span class="xaml__attr_name">href</span>=<span class="xaml__attr_value">&quot;~/Account/ChangePassword.aspx&quot;</span><span class="xaml__attr_name">title</span>=<span class="xaml__attr_value">&quot;Change&nbsp;password&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span><span class="xaml__tag_start">&lt;asp</span>:LoginName&nbsp;<span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__attr_name">CssClass</span>=<span class="xaml__attr_value">&quot;username&quot;</span><span class="xaml__tag_start">/&gt;</span><span class="xaml__tag_end">&lt;/a&gt;</span>!&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;asp</span>:LoginStatus&nbsp;<span class="xaml__attr_name">runat</span>=<span class="xaml__attr_value">&quot;server&quot;</span><span class="xaml__attr_name">LogoutAction</span>=<span class="xaml__attr_value">&quot;Redirect&quot;</span><span class="xaml__attr_name">LogoutText</span>=<span class="xaml__attr_value">&quot;Log&nbsp;off&quot;</span><span class="xaml__attr_name">LogoutPageUrl</span>=<span class="xaml__attr_value">&quot;~/&quot;</span><span class="xaml__tag_start">/&gt;</span><span class="xaml__tag_end">&lt;/p&gt;</span><span class="xaml__tag_end">&lt;/LoggedInTemplate&gt;</span><span class="xaml__tag_end">&lt;/asp:LoginView&gt;</span><span class="xaml__tag_end">&lt;/section&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;Clearly we will change this before we make this a production release but for now it is suitable to speed up our testing and development work. This link will take us straight to the admin template so that we can see how our
+ changes are working.</div>
+</div>
+<p>If you like my samples then please nominate me for an MVP. <a href="http://mvp.microsoft.com/en-us/nominate-an-mvp.aspx">
+http://mvp.microsoft.com/en-us/nominate-an-mvp.aspx</a>. Leave me a message if you nominated me!</p>
+<h1>More Information</h1>
+<p><em>I will add additional tutorials on this subject adding more advanced features to the original template until we end up with a full CMS written with your needs in mind. When part two is ready I will edit this page to include a link to it. Future Tutorials
+ will contain:</em></p>
+<ul>
+<li><a href="http://code.msdn.microsoft.com/Advanced-ASPNET-Administrat-f980b166" >Introduction</a>
+</li><li><a href="http://code.msdn.microsoft.com/ASPNET-CMS-Administration-482dcaf9" >Customization I: The basics</a><em><br>
+</em></li><li><a href="http://code.msdn.microsoft.com/ASPNET-CMS-Administration-31863627" >Customization 2: Advanced</a>
+</li><li><a href="http://code.msdn.microsoft.com/ASPNET-CMS-Administration-1f03ceef" >Adding User Administration</a>
+<ul>
+<li><a href="http://code.msdn.microsoft.com/ASPNET-CMS-Administration-681f425b" >User Administration</a>
+</li><li><a href="http://code.msdn.microsoft.com/ASPNET-CMS-Administration-1f03ceef" >Roles Administration</a>
+</li><li><a href="http://code.msdn.microsoft.com/ASPNET-From-Scratch-CMS-6d16b251" >Adding Users With Roles</a>
+</li></ul>
+</li><li><a href="http://code.msdn.microsoft.com/ASPNET-From-Scratch-CMS-11758972" >Adding Database Administration</a>
+</li><li><a href="http://code.msdn.microsoft.com/ASPNET-From-Scratch-CMS-d8da2918" >Adding Content Administration</a>
+<ul>
+<li><a href="http://code.msdn.microsoft.com/ASPNET-From-Scratch-CMS-4cc3a1ab" >Frontend Template customization
+</a></li></ul>
+</li><li>Adding Site Administration </li><li>... and anything you think you need here </li></ul>
+<p>However, I will not add these tutorials if no one is interested in this, so if you are interested then rate this article please.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿#region
+
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using Autofac;
+using Autofac.Core;
+
+#endregion
+
+namespace BTL.Application.Web.Infrastructure.Extensions
+{
+    public static class ContainerExtensions
+    {
+        public static void RegisterAssemblyModules(this ContainerBuilder builder, Assembly assembly)
+        {
+            var scanningBuilder = new ContainerBuilder();
+
+            scanningBuilder.RegisterAssemblyTypes(assembly)
+                .Where(t => typeof (IModule).IsAssignableFrom(t) && !t.FullName.ToLower().Contains("autofac"))
+                .As<IModule>();
+
+            using (var scanningContainer = scanningBuilder.Build())
+            {
+                foreach (var module in scanningContainer.Resolve<IEnumerable<IModule>>())
+                    builder.RegisterModule(module);
+            }
+        }
+    }
+}

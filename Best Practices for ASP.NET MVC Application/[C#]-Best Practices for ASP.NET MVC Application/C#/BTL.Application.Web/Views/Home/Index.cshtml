@@ -1,0 +1,18 @@
+﻿@model BTL.Application.Web.Models.HomeIndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@{ Html.EnableClientValidation(); }
+@{ Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "submit_index_form" });  }
+@Html.ValidationSummary(false, "There are some errors!!!")
+
+<div>
+    @*@Html.DropDownList("theme", new SelectList(Model.Theme.Themes, Model.Theme.SelectedTheme, ""), new { @class = "textbox" })*@
+    @Html.DropDownListFor(model => model.Theme.SelectedTheme, new SelectList(Model.Theme.Themes), new { @class = "textbox required"})
+</div>
+
+<input type="submit" value="Submit" name="Submit" />
+
+@{ Html.EndForm(); }

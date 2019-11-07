@@ -1,0 +1,128 @@
+﻿@page "/employee/{action}/{paramEmpID}"
+@page "/employee/{action}"
+@inherits EmployeeDataModel
+
+<h1>@title</h1>
+
+@if (action == "fetch")
+{
+    <p>
+        <a href="/employee/create">Create New</a>
+    </p>
+}
+
+@if (action == "create" || action == "edit")
+{
+    <form>
+        <table class="form-group">
+            <tr>
+                <td>
+                    <label for="Name" class="control-label">Name</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" bind="@emp.Name" />
+                </td>
+                <td width="20">&nbsp;</td>
+                <td>
+                    <label for="Department" class="control-label">Department</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" bind="@emp.Department" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Gender" class="control-label">Gender</label>
+                </td>
+                <td>
+                    <select asp-for="Gender" class="form-control" bind="@emp.Gender">
+                        <option value="">-- Select Gender --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </td>
+                <td width="20">&nbsp;</td>
+                <td>
+                    <label for="City" class="control-label">City</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" bind="@emp.City" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn btn-success" onclick="@(async () => await CreateEmployee())" style="width:220px;" value="Save" />
+                </td>
+                <td></td>
+                <td width="20">&nbsp;</td>
+                <td>
+                    <input type="submit" class="btn btn-danger" onclick="@Cancel" style="width:220px;" value="Cancel" />
+                </td>
+            </tr>
+        </table>
+    </form>
+}
+else if (action == "delete")
+{
+    <div class="col-md-4">
+        <table class="table">
+            <tr>
+                <td>Name</td>
+                <td>@emp.Name</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>@emp.Gender</td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td>@emp.Department</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>@emp.City</td>
+            </tr>
+        </table>
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger" onclick="@(async () => await DeleteEmployee())" value="Delete" />
+            <input type="submit" value="Cancel" onclick="@Cancel" class="btn" />
+        </div>
+    </div>
+}
+
+@if (empList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var emp in empList)
+            {
+                <tr>
+                    <td>@emp.EmployeeId</td>
+                    <td>@emp.Name</td>
+                    <td>@emp.Gender</td>
+                    <td>@emp.Department</td>
+                    <td>@emp.City</td>
+                    <td>
+
+                        <a href='/employee/edit/@emp.EmployeeId'>Edit</a>  |
+                        <a href='/employee/delete/@emp.EmployeeId'>Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=23E9A5CBC52062E31AE45157B970504B" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=779C1C1BECDB79910DE087040C45EE9E" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>C# VB.NET OCR Image to Text, Word, searchable PDF &amp; QR Barcode Read Recognition</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>C# VB.NET OCR Image to Text, Word, searchable PDF &amp; QR Barcode Read Recognition</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, WCF, GDI+, Silverlight, ASP.NET, Win32, .NET, Class Library, Windows Forms, WPF, Microsoft Azure, ASP.NET MVC, C++, .NET Framework 4, .NET Framework, Windows, Visual Basic .NET, Office 365, VB.Net, .NET Framework 4.0, SharePoint Server 2010, Library, Windows General, Service Bus, C# Language, Windows Runtime, ASP.NET MVC 4, .NET Framework 4.5, Windows 8, .NET Framwork, Cloud, Visual C#, ASP.NET Web API, Visual C Sharp .NET, Image process, SharePoint Server 2013, Windows Store app, .NET Development, Image Processing, Bing OCR, OCR, Windows Imaging Component (WIC), Windows 10, Barcode, Barcode Recognition, Barcode Reading, Optical Character Recognition, Royalty Free
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Controls, Graphics, C#, WCF, ASP.NET, Class Library, User Interface, Windows Forms, Graphics and 3D, WPF, Microsoft Azure, Data Access, Images, Media, 2d graphics, Image manipulation, Code Sample, Image Gallery, Image, .NET 4, Imaging, Drawing, How to, Numerical Computing, Text, Windows Forms Controls, Graphics Functions, BitmapImage, Bing OCR Control, OCR, Read Barcode, Barcode, Barcode Recognition, Optical Character Recognition, Barcode scanner
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/23/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/C-VBNET-OCR-API-and-2fde535f">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This code sample shows how to do <a href="http://asprise.com/royalty-free-library/c%23-sharp.net-ocr-api-overview.html" >
+C# VB.NET OCR and barcode recognition to&nbsp;convert images (in various formats like JPEG, PNG, TIFF, PDF, etc.) into editable document formats</a> (<a href="https://code.msdn.microsoft.com/C-VBNET-OCR-API-and-2fde535f/https://asprise.com/royalty-free-library/c%23-sharp.net-ocr-source-code-examples-demos.html#xml" >Word,
+ XML, searchable PDF, etc.</a>) and read barcodes in formats of&nbsp;<span>EAN-8, EAN-13, UPC-A, UPC-E, ISBN-10, ISBN-13, Interleaved 2 of 5, Code 39, Code 128, PDF417, and QR Code.</span></p>
+<h1>Build the Sample</h1>
+<p>Download and unzip the sample project. Open it with Visual Studio 2013 or higher, Tools -&gt; NuGet Package Manager -&gt; Restore, then Press F5 to run it.</p>
+<p>Alternatively, install from NuGet directly:</p>
+<pre><img src="description/nuget-blue.png" alt=""><strong><span class="code" style="font-size:medium">&nbsp;Install-Package asprise-ocr-api</span></strong></pre>
+<p><span>You can invoke the OCR demo Form by copying the following code to Program.cs (for C#):</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">...
+static class Program { // Program.cs
+    [STAThread]
+    static void Main() {
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new asprise_ocr_api.OcrSampleForm());
+    }
+}</pre>
+<div class="preview">
+<pre class="csharp">...&nbsp;
+<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;Program&nbsp;{&nbsp;<span class="cs__com">//&nbsp;Program.cs</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[STAThread]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Main()&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.EnableVisualStyles();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.SetCompatibleTextRenderingDefault(<span class="cs__keyword">false</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.Run(<span class="cs__keyword">new</span>&nbsp;asprise_ocr_api.OcrSampleForm());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><img id="158460" src="description/csharp-ui.png" alt="" height="300">&nbsp;</div>
+<div class="endscriptcode"><div style="background:#FFFFCC;border:dotted 1px #FF0000;width:350px;height:300px;padding:10px;"><a href="https://code.msdn.microsoft.com/C-VBNET-OCR-API-and-2fde535f/https://code.msdn.microsoft.com/C-VBNET-OCR-API-and-2fde535f/https://code.msdn.microsoft.com/site/view/file/158459/1/AspriseOcrDemo_WindowsMedia%20-%20HD%20720i_ConstrainedVBR.wmv">https://code.ms<wbr />dn.microsoft.co<wbr />m/site/view/fil<wbr />e/158459/1/Aspr<wbr />iseOcrDemo_Wind<wbr />owsMedia%20-%20<wbr />HD%20720i_Const<wbr />rainedVBR.wmv</a></div> &nbsp;&nbsp;<a id="x_/site/view/file/158459/1/AspriseOcrDemo_WindowsMedia%20-%20HD%20720i_ConstrainedVBR.wmv" href="https://code.msdn.microsoft.com/C-VBNET-OCR-API-and-2fde535f/https://code.msdn.microsoft.com/C-VBNET-OCR-API-and-2fde535f/https://code.msdn.microsoft.com/site/view/file/158459/1/AspriseOcrDemo_WindowsMedia%20-%20HD%20720i_ConstrainedVBR.wmv">Download
+ video</a>&nbsp;| <a href="https://code.msdn.microsoft.com/C-VBNET-OCR-API-and-2fde535f/https://www.youtube.com/watch?v=v17hhJHXNiA" >
+View video on Youtube</a></div>
+<h1>C# VB.NET OCR in Action</h1>
+<h2><span style="font-size:20px; font-weight:bold">Jump Start</span></h2>
+<p>The following code demonstrates the basic usage of Asprise <a href="http://asprise.com/royalty-free-library/c%23-sharp.net-ocr-api-overview.html" >
+C# VB.NET OCR and Barcode Recognition</a>:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">using asprise_ocr_api;
+
+AspriseOCR.SetUp();
+AspriseOCR ocr = new AspriseOCR();
+ocr.StartEngine(&quot;eng&quot;, AspriseOCR.SPEED_FASTEST);
+
+string s = ocr.Recognize(&quot;C:\path\img.jpg&quot;, -1, -1, -1, -1, -1, AspriseOCR.RECOGNIZE_TYPE_ALL, AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);
+Console.WriteLine(&quot;OCR Result: &quot; &#43; s);
+// process more images here ...
+
+ocr.StopEngine();</pre>
+<pre class="hidden">Imports asprise_ocr_api
+Private ocr As AspriseOCR
+AspriseOCR.SetUp()
+ocr = New AspriseOCR()
+ocr.StartEngine(&quot;eng&quot;, AspriseOCR.SPEED_FASTEST)
+
+Dim s As String = ocr.Recognize(&quot;C:\img.jpg&quot;, -1, -1, -1, -1, -1, AspriseOCR.RECOGNIZE_TYPE_ALL, AspriseOCR.OUTPUT_FORMAT_PLAINTEXT)
+Console.WriteLine(&quot;OCR Result: &quot; &amp; s)
+' process more images here ...
+
+ocr.StopEngine()</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;asprise_ocr_api;&nbsp;
+&nbsp;
+AspriseOCR.SetUp();&nbsp;
+AspriseOCR&nbsp;ocr&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;AspriseOCR();&nbsp;
+ocr.StartEngine(<span class="cs__string">&quot;eng&quot;</span>,&nbsp;AspriseOCR.SPEED_FASTEST);&nbsp;
+&nbsp;
+<span class="cs__keyword">string</span>&nbsp;s&nbsp;=&nbsp;ocr.Recognize(<span class="cs__string">&quot;C:\path\img.jpg&quot;</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;AspriseOCR.RECOGNIZE_TYPE_ALL,&nbsp;AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);&nbsp;
+Console.WriteLine(<span class="cs__string">&quot;OCR&nbsp;Result:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;s);&nbsp;
+<span class="cs__com">//&nbsp;process&nbsp;more&nbsp;images&nbsp;here&nbsp;...</span>&nbsp;
+&nbsp;
+ocr.StopEngine();</pre>
+</div>
+</div>
+</div>
+<p>Line 3: performs one-time setup if it has not been done;</p>
+<p>Lines 4 &amp; 5: Creates a new Ocr engine that recognizes English in fastest speed setting; The evaluation version is able to recognize English (eng), Spanish (spa), Portuguese (por), German (deu) and French (fra). For other languages, please contact us.
+ The list of languages supported can be found&nbsp;<a class="reference internal" href="http://asprise.com/ocr/docs/html/intro-ocr-sdk-library.html#intro-langs">Languages Supported</a>.</p>
+<p>Line 7: All the OCR work is done here. The Recognize method of the AspriseOCR class recognizes all the characters and barcodes from the image and output them as plain text. Other supported output formats are: XML (<code class="docutils literal"><span class="pre">AspriseOCR.OUTPUT_FORMAT_XML</span></code>),
+ searchable PDF (<code class="docutils literal"><span class="pre">Ocr.OUTPUT_FORMAT_PDF</span></code>) and user editable RTF (<code class="docutils literal"><span class="pre">Ocr.OUTPUT_FORMAT_RTF</span></code>).</p>
+<h2>OCR to Searchable PDF Format</h2>
+<p><span>If you set the output format as OUTPUT_FORMAT_PDF, you need to specify the target PDF output file as following:</span></p>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">ocr.Recognize(&quot;C:\test-image.png&quot;, -1, -1, -1, -1, -1,
+  Ocr.RECOGNIZE_TYPE_ALL, Ocr.OUTPUT_FORMAT_PDF,
+  &quot;PROP_PDF_OUTPUT_FILE=ocr-result.pdf|PROP_PDF_OUTPUT_TEXT_VISIBLE=true&quot;);
+</pre>
+<div class="preview">
+<pre class="csharp">ocr.Recognize(<span class="cs__string">&quot;C:\test-image.png&quot;</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;
+&nbsp;&nbsp;Ocr.RECOGNIZE_TYPE_ALL,&nbsp;Ocr.OUTPUT_FORMAT_PDF,&nbsp;
+&nbsp;&nbsp;<span class="cs__string">&quot;PROP_PDF_OUTPUT_FILE=ocr-result.pdf|PROP_PDF_OUTPUT_TEXT_VISIBLE=true&quot;</span>);&nbsp;</pre>
+</div>
+</div>
+</div>
+</div>
+<p>In above code, properties are specified in a single string separated by&nbsp;<code class="docutils literal"><span class="pre">|</span></code>&nbsp;(with key and value separated by&nbsp;<code class="docutils literal"><span class="pre">=</span></code>).
+ Alternatively, you may specify properties separately in pairs:</p>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">ocr.Recognize(&quot;C:\test-image.png&quot;, -1, -1, -1, -1, -1,
+  Ocr.RECOGNIZE_TYPE_ALL, Ocr.OUTPUT_FORMAT_PDF,
+  AspriseOCR.PROP_PDF_OUTPUT_FILE, &quot;ocr-result.pdf&quot;,
+  AspriseOCR.PROP_PDF_OUTPUT_TEXT_VISIBLE, true);
+</pre>
+<div class="preview">
+<pre class="csharp">ocr.Recognize(<span class="cs__string">&quot;C:\test-image.png&quot;</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;
+&nbsp;&nbsp;Ocr.RECOGNIZE_TYPE_ALL,&nbsp;Ocr.OUTPUT_FORMAT_PDF,&nbsp;
+&nbsp;&nbsp;AspriseOCR.PROP_PDF_OUTPUT_FILE,&nbsp;<span class="cs__string">&quot;ocr-result.pdf&quot;</span>,&nbsp;
+&nbsp;&nbsp;AspriseOCR.PROP_PDF_OUTPUT_TEXT_VISIBLE,&nbsp;<span class="cs__keyword">true</span>);&nbsp;</pre>
+</div>
+</div>
+</div>
+</div>
+<h2>Recognizes Text Only Or Barcode Only</h2>
+<p>To save OCR time, you can choose to OCR text or barcode only. Text only:</p>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">string s = ocr.Recognize(&quot;C:\path\img.jpg&quot;, -1, -1, -1, -1, -1,
+   AspriseOCR.RECOGNIZE_TYPE_TEXT, AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">string</span>&nbsp;s&nbsp;=&nbsp;ocr.Recognize(<span class="cs__string">&quot;C:\path\img.jpg&quot;</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;AspriseOCR.RECOGNIZE_TYPE_TEXT,&nbsp;AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><a href="http://asprise.com/royalty-free-library/c%23-sharp.net-ocr-api-overview.html" >Read barcode and QR codes in C# and VB.NET</a>:</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">string s = ocr.Recognize(&quot;C:\path\img.jpg&quot;, -1, -1, -1, -1, -1,
+   AspriseOCR.RECOGNIZE_TYPE_BARCODE, AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);</pre>
+<div class="preview">
+<pre class="js">string&nbsp;s&nbsp;=&nbsp;ocr.Recognize(<span class="js__string">&quot;C:\path\img.jpg&quot;</span>,&nbsp;-<span class="js__num">1</span>,&nbsp;-<span class="js__num">1</span>,&nbsp;-<span class="js__num">1</span>,&nbsp;-<span class="js__num">1</span>,&nbsp;-<span class="js__num">1</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;AspriseOCR.RECOGNIZE_TYPE_BARCODE,&nbsp;AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2>Perform OCR On Part Of The Image</h2>
+<p>In some cases, you might not want to OCR the whole image. In that case, you can OCR on part of the image to save time:</p>
+<div class="highlight-csharp">
+<div class="highlight"></div>
+</div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">string s = ocr.Recognize(&quot;C:\path\img.jpg&quot;, -1, 0, 0, 400, 200,
+   AspriseOCR.RECOGNIZE_TYPE_ALL, AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">string</span>&nbsp;s&nbsp;=&nbsp;ocr.Recognize(<span class="cs__string">&quot;C:\path\img.jpg&quot;</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;<span class="cs__number">0</span>,&nbsp;<span class="cs__number">0</span>,&nbsp;<span class="cs__number">400</span>,&nbsp;<span class="cs__number">200</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;AspriseOCR.RECOGNIZE_TYPE_ALL,&nbsp;AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);</pre>
+</div>
+</div>
+</div>
+<h2 class="endscriptcode">Perform OCR On A Certain Page From The Specified TIFF File</h2>
+<div class="endscriptcode"><span>A PDF or TIFF file may contain multiple pages. If you need to recognize only a certain page, you can specify the page number as following:</span></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">string s = ocr.Recognize(&quot;C:\img1.tif&quot;, 1, -1, -1, -1, -1,
+   AspriseOCR.RECOGNIZE_TYPE_ALL, AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">string</span>&nbsp;s&nbsp;=&nbsp;ocr.Recognize(<span class="cs__string">&quot;C:\img1.tif&quot;</span>,&nbsp;<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;-<span class="cs__number">1</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;AspriseOCR.RECOGNIZE_TYPE_ALL,&nbsp;AspriseOCR.OUTPUT_FORMAT_PLAINTEXT);</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;Note 1 means the second page (the page number of the first page is 0). -1 means all pages.</div>
+</div>
+<div class="endscriptcode"></div>
+<h1>More Information</h1>
+<p style="font-size:15px; line-height:22px; margin-top:0px; color:#333333; font-family:proxima_nova_rgregular,&quot;Droid Sans&quot;,sans-serif; font-style:normal; font-weight:normal; letter-spacing:normal; orphans:2; text-align:start; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; background-color:#ffffff">
+<a href="http://asprise.com/royalty-free-library/c%23-sharp.net-ocr-api-overview.html"  style="text-decoration:none; color:#0066aa"><img src="description/icon-scan-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Learn
+ more about Asprise OCR and Barcode Recognition C# VB.NET API SDK</a></p>
+<p style="font-size:15px; line-height:22px; margin-top:0px; color:#333333; font-family:proxima_nova_rgregular,&quot;Droid Sans&quot;,sans-serif; font-style:normal; font-weight:normal; letter-spacing:normal; orphans:2; text-align:start; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; background-color:#ffffff">
+<a href="http://asprise.com/royalty-free-library/c%23-sharp.net-ocr-barcode-reader-sdk-samples-docs.html"  style="text-decoration:none; color:#0066aa"><img src="description/icon-book-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Access
+ to Asprise C# VB.NET OCR and Barcode Reading Developer's Guide</a></p>
+<p style="font-size:15px; line-height:22px; color:#333333; font-family:proxima_nova_rgregular,&quot;Droid Sans&quot;,sans-serif; font-style:normal; font-weight:normal; letter-spacing:normal; orphans:2; text-align:start; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; background-color:#ffffff">
+<a href="http://asprise.com/ocr/docs/Help/html/429a5bd5-3f62-f489-ede7-025e47709dab.htm"  style="text-decoration:none; color:#0066aa"><img src="description/icon-code-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Browse
+ API (MSDN style) online</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

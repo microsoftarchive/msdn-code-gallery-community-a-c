@@ -1,0 +1,16 @@
+﻿@model IEnumerable<SharePointMvc.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categories</h2>
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>
+            @Html.ActionLink(category.Name, "Discussion", routeValues: new { category = category.Name })<br />
+            <p>@category.Description</p>
+        </li>
+    }
+</ul>

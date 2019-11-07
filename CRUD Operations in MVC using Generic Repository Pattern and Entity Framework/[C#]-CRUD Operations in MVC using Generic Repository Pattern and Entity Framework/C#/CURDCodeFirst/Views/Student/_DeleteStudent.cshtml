@@ -1,0 +1,13 @@
+﻿@model CURDCodeFirst.Models.StudentViewModel
+@using CURDCodeFirst.Models
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("_ModalHeader", new ModalHeader { Heading = "Delete Student" })
+
+    <div class="modal-body form-horizontal">
+        Are you want to delete @Model.Name?
+    </div>
+        @Html.Partial("_ModalFooter", new ModalFooter { SubmitButtonText="Delete"})
+}
+

@@ -1,0 +1,50 @@
+﻿
+When you don't have a file on disk but you have a stream, you can either
+
+<ul>
+    <li>
+        Implement <span style="font-family:Consolas;font-size:13;color:black;background:white;"><span style="color:#2b91af;">IDocumentHandler</span></span> interface:
+
+<pre style="font-family:Consolas;font-size:13;color:black;background:white;"><span style="color:blue;">public</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">CustomDocumentHandler</span>&nbsp;:&nbsp;<span style="color:#2b91af;">IDocumentHandler</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:#2b91af;">DocumentInfo</span>&nbsp;GetInfo(<span style="color:blue;">string</span>&nbsp;inputFile)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">return</span>&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">DocumentInfo</span>(uniqueId,&nbsp;fileName);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:#2b91af;">StreamResult</span>&nbsp;OpenRead(<span style="color:blue;">string</span>&nbsp;inputFile,&nbsp;<span style="color:#2b91af;">InputOptions</span>&nbsp;inputOptions)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">return</span>&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">StreamResult</span>(stream);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</pre>
+
+        Then you should set DocumentViewer.DocumentHandlerType property to the type of this implemented class:
+
+<pre style="font-family:Consolas;font-size:13;color:black;background:white;">documentViewer.DocumentHandlerType&nbsp;=&nbsp;<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">CustomDocumentHandler</span>);
+</pre>
+
+        Now when you set DocumentViewer.Document property to a value, this will be sent to your handler as inputFile parameter and DocumentViewer will be able to load the document with info and stream provided by your handler:
+
+<pre style="font-family:Consolas;font-size:13;color:black;background:white;">documentViewer.Document&nbsp;=&nbsp;<span style="color:#a31515;">&quot;file&nbsp;path&nbsp;or&nbsp;identifier&quot;</span>;
+</pre>        
+    </li>
+    <li>
+        Use <span style="font-family:Consolas;font-size:13;color:black;background:white;"><span style="color:#2b91af;">DocumentSource</span></span> class:
+        
+        <pre style="font-family:Consolas;font-size:13;color:black;background:white;">documentViewer.DocumentSource&nbsp;=&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">DocumentSource</span>(
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">DocumentInfo</span>(uniqueId,&nbsp;fileName),
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">StreamResult</span>(stream)
+);
+</pre>
+        
+        Load document from a byte array:
+      
+        <pre style="font-family:Consolas;font-size:13;color:black;background:white;">documentViewer.DocumentSource&nbsp;=&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">DocumentSource</span>(
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">DocumentInfo</span>(uniqueId,&nbsp;fileName),
+&nbsp;&nbsp;&nbsp;&nbsp;byteArray
+);
+</pre>
+
+    </li>
+</ul>

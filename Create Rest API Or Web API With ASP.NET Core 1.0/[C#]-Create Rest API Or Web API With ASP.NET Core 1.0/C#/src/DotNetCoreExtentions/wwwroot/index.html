@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Books Library</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <style>
+        .form-control.form-control-custom {
+            width: 36%;
+            display: inline-block;
+        }
+
+        #library {
+            margin-top: 15px;
+        }
+
+        .btn.btn-primary.btn-md {
+            margin-top: -5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Books Library</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Famous Books</h2>
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">List Of Famous Books</div>
+                <div class="panel-body"><ul class="list-group" id="books" /></div>
+            </div>
+        </div>
+        <h2>Books Search by ID</h2>
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Search by ID</div>
+                <div class="panel-body">
+                    <input type="text" id="bookId" class="form-control form-control-custom" size="5" />
+                    <button class="btn btn-default" type="submit" onclick="find();">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                    <p id="library" />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+        //api url
+        var uri = 'api/LibraryAPI';//[Route("api/[controller]")] instead of [controller] we can mention our API classname.
+
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+
+                        $('<li>', { text: ItemDetails(item) }).appendTo($('#books')).before("<br />");
+                        $("li").addClass("list-group-item list-group-item-info");
+
+                    });
+                });
+        });
+
+        function ItemDetails(item) {
+            return 'BookId : [ ' + item.id + ' ] -- Author Name : [ ' + item.author + ' ] -- Book Name : [ ' + item.bookName + ' ] -- Category : [ ' + item.category + ' ]';
+        }
+
+        function find() {
+            var id = $('#bookId').val();
+            if (id == '') id = 0;
+
+            $.getJSON(uri + '/' + id)
+                .done(function (data) {
+                    $('#library').text(ItemDetails(data));
+                    $("p").addClass("list-group-item list-group-item-info");
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#library').text('Error: ' + err);
+
+                });
+        }
+
+    </script>
+</body>
+</html>

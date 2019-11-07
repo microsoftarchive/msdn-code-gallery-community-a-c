@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin configuration -->
+<skin>
+  <add key="Style" value="default"/>
+  <add key="Style" value="buttons semitrasparent.child"/>
+	<add key="Style" value="menu semitrasparent.child"/>
+	<add key="Style" value="background fullscreen.child"/>
+	<add key="Setup" value="modern"/>
+  <add key="Style" value="default"/>
+</skin>

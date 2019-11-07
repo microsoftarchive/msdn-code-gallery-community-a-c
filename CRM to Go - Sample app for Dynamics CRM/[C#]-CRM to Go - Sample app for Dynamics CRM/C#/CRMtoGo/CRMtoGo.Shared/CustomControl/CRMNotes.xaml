@@ -1,0 +1,41 @@
+﻿<UserControl
+    x:Class="CRMtoGo.CRMNotes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CRMtoGo.CustomControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="600"
+    d:DesignWidth="400">
+
+    <Grid>
+        <ListView x:Name="lvList" x:FieldModifier="public">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel DataContext="{Binding}">
+                        <TextBlock x:Name="lblTitle" Text="{Binding Subject}"  Style="{ThemeResource MessageDialogTitleStyle}" Tapped="lblTitle_Tapped" />
+                        <TextBlock x:Name="lblNoteText" Text="{Binding NoteText}" TextWrapping="Wrap" Style="{ThemeResource BaseTextBlockStyle}" Tapped="lblNoteText_Tapped" />
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="ms-appx:///Assets/Attach-Clip.png" HorizontalAlignment="Left" MaxWidth="36" MaxHeight="36"/>
+                            <TextBlock x:Name="lblFileName" Text="{Binding FileName}" Style="{ThemeResource BaseTextBlockStyle}" Tapped="lblFileName_Tapped"  />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ProgressRing x:Name="progressRing"/>
+        <StackPanel x:Name="spNote" Visibility="Collapsed">
+            <TextBlock x:Uid="lblNote1" Text="Subject: " Style="{ThemeResource MessageDialogTitleStyle}"/>
+            <TextBox x:Name="txtTitle" Text="{Binding Subject}" PlaceholderText="Enter Title" />
+            <TextBlock x:Uid="lblNote2" Text="Body: " Style="{ThemeResource MessageDialogTitleStyle}"/>
+            <TextBox x:Name="txtNoteText" Text="{Binding NoteText}" PlaceholderText="Enter Note" TextWrapping="Wrap" AcceptsReturn="True"/>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="ms-appx:///Assets/Attach-Clip.png" HorizontalAlignment="Left" MaxWidth="36" MaxHeight="36"/>
+                <TextBlock x:Name="lblFileName" Text="{Binding FileName}" Style="{ThemeResource MessageDialogTitleStyle}"/>
+                <Button x:Name="btnAttach" x:Uid="btnAttach" Content="Attach" Click="btnAttach_Click" Margin="12,0,0,0"/>
+            </StackPanel>
+            <TextBox x:Name="txtId" Visibility="Collapsed" Text="{Binding AnnotationId}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

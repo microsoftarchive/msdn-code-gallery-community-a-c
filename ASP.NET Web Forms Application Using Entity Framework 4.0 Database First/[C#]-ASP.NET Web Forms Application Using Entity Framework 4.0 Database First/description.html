@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/04f9c26e-88fd-4dfd-b715-9733d17420b6Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ASP.NET Web Forms Application Using Entity Framework 4.0 Database First</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>ASP.NET Web Forms Application Using Entity Framework 4.0 Database First</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            ADO.NET Entity Framework, ASP.NET, ASP.NET Web Forms
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            ASP.NET and ADO.NET Entity Framework, Data Access, ORM, ASP.NET Code Sample Downloads
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/19/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>A Visual Studio project which shows how to use the Entity Framework in an ASP.NET Web Forms web application project, using the Database First workflow and the EntityDataSource control. The code illustrates the following topics:</p>
+<ul>
+<li>Performing basic CRUD operations. </li><li>Filtering, ordering, and grouping data. </li><li>Working with related data. </li><li>Table-per-hierarchy inheritance. </li><li>Using stored procedures. </li><li>Using Dynamic Data functionality. </li></ul>
+<p>For handling concurrency using the EntityDataSource, see <a href="http://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa">
+version 2</a> of this project. For tutorials that show you how to create the project, see
+<a href="http://www.asp.net/web-forms/tutorials/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1">
+Getting Started with the Entity Framework</a>.</p>
+<h1>Getting Started</h1>
+<p>To build and run this sample, you must have Visual Studio 2010 installed. Unzip the CSContosoUniversity.zip or VBContosoUniversity.zip file into your Visual Studio Projects directory (My Documents\Visual Studio 2010\Projects) and open the ContosoUniversity.sln
+ solution.</p>
+<h1>Running the Sample</h1>
+<p>To run the sample, hit F5 or choose the Debug | Start Debugging menu command. You will see the home page which includes a menu bar.</p>
+<p><img src="description/ContosoUniversityHomePage.png" alt="" width="564" height="143"></p>
+<p>From this page you can select any of the tabs to perform various actions such as display a list of students, add new students, display a list of courses, and so forth.</p>
+<p><img src="description/StudentList.png" alt="" width="310" height="111"></p>
+<p><img src="description/AddStudents.png" alt="" width="258" height="177"></p>
+<p><img src="description/CoursesList.png" alt="" width="372" height="276"></p>
+<h1>Source Code Overview</h1>
+<p>The <em>ContosoUniversity</em> folder includes the following folders and files</p>
+<ul>
+<li><em>Account</em> folder - Unchanged from what the project template creates. Note that this project does not implement membership functionality.
+</li><li><em>App_Data</em> folder - Holds the SQL Server Express database file. </li><li><em>DAL</em> folder - The data access layer.&nbsp; Holds the .edmx file and a partial class with data annotations for the Student entity.
+</li><li><em>Properties</em> or <em>MyProject</em> folder - Unchanged from what the project template creates.
+</li><li><em>Scripts</em> folder - Unchanged from what the project template creates. </li><li><em>Styles</em> folder - Holds the CSS file, which contains minor changes from what the project template creates.
+</li><li>Web page files </li><li><em>Global.asax</em> file - Unchanged from what the project template creates.
+</li><li><em>Site.master</em> - Master page file. Specifies the layout of all site pages.
+</li><li>Web.config file - Contains the connection string to the database. </li></ul>
+
+</div>
+
+
+    </div>
+</body>
+</html>

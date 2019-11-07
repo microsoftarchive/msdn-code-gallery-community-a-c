@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,1:ImageSprite;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Content/Css:1&amp;amp;hashKey=E7560C71640616C5057FAEACB58DCB00" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/2f95808e-ca34-4249-88ff-44fabe33cdc0Combined.css,1:LinkList,2:ImageSprite,2:SiteFeedbackLink;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Epx/Content/Css:2&amp;amp;hashKey=EEE39C2D6B93379FDAF50337BE99AF8C" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Creating an Excel Workbook with VB.NET and ASP.NET</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Creating an Excel Workbook with VB.NET and ASP.NET</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            ASP.NET, Excel, VB.Net
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Office, Generate Excel Workbook, Microsoft Office
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary Language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">10/3/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Creating-an-Excel-Workbook-3d4a7776">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This sample shows how to create an XLSX file from a database query using VB.NET and ASP.NET. It uses the helper library EPPlus (<a href="http://epplus.codeplex.com/">http://epplus.codeplex.com/</a>) . Reference DLLs are included in the sample</p>
+<h1><span>Building the Sample</span></h1>
+<p>You will need to change the value for the connection string variable &quot;<em>con</em>&quot;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">   'TODO: INSERT CONNECTION STRING
+        Dim conString As String = &quot;INSERT CONNECTION STRING HERE&quot;</pre>
+<div class="preview">
+<pre class="vb">&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'TODO:&nbsp;INSERT&nbsp;CONNECTION&nbsp;STRING</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;conString&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;=&nbsp;<span class="visualBasic__string">&quot;INSERT&nbsp;CONNECTION&nbsp;STRING&nbsp;HERE&quot;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;Additionally this solution file contains 2 database projects which create the sample database. If this database is not created please check the solution targets or creater the database yourself.</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">Additionally there is an SQL file which contains sample data for the database in the file GenerateCountryData.sql. This will insert a lot of sample data into the country database.</div>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p>The web project contrains a sample page which has only one button on the page. Clicking this button generates the XLSX file in memory and then sends it to the browser to be downloaded.</p>
+<p>The GenerateXLSXFile method.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">    Private Sub GenerateXLSXFile(tbl As DataTable)
+
+        Dim excelPackage = New ExcelPackage
+
+        Dim excelWorksheet = excelPackage.Workbook.Worksheets.Add(&quot;DemoPage&quot;)
+
+        excelWorksheet.Cells(&quot;A1&quot;).LoadFromDataTable(tbl, True)
+
+        Response.ContentType = &quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;
+        Response.AddHeader(&quot;content-disposition&quot;, &quot;attachment;  filename=ExcelDemo.xlsx&quot;)
+    Dim stream As MemoryStream = New MemoryStream(excelPackage.GetAsByteArray())
+
+        Response.OutputStream.Write(stream.ToArray(), 0, stream.ToArray().Length)
+
+        Response.Flush()
+
+        Response.Close()
+
+    End Sub</pre>
+<div class="preview">
+<pre id="codePreview" class="vb">&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;GenerateXLSXFile(tbl&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;DataTable)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;excelPackage&nbsp;=&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;ExcelPackage&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;excelWorksheet&nbsp;=&nbsp;excelPackage.Workbook.Worksheets.Add(<span class="visualBasic__string">&quot;DemoPage&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;excelWorksheet.Cells(<span class="visualBasic__string">&quot;A1&quot;</span>).LoadFromDataTable(tbl,&nbsp;<span class="visualBasic__keyword">True</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Response.ContentType&nbsp;=&nbsp;<span class="visualBasic__string">&quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Response.AddHeader(<span class="visualBasic__string">&quot;content-disposition&quot;</span>,&nbsp;<span class="visualBasic__string">&quot;attachment;&nbsp;&nbsp;filename=ExcelDemo.xlsx&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;stream&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;MemoryStream&nbsp;=&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;MemoryStream(excelPackage.GetAsByteArray())&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Response.OutputStream.Write(stream.ToArray(),&nbsp;<span class="visualBasic__number">0</span>,&nbsp;stream.ToArray().Length)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Response.Flush()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Response.Close()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;The method takes a DataTable object (and this can be changed to suit your own needs). It creates a new Excel workbook and worksheet and inserts the data in the cells beginning at A1.</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">It then forces the download by settings the Content Type and Response headers.</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">Generating the datatable</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">  Private Function CreateDataTable() As DataTable
+
+        Dim dataTable As New DataTable(&quot;DT&quot;)
+        'TODO: INSERT CONNECTION STRING
+        Dim conString As String = &quot;INSERT CONNECTION STRING HERE&quot;
+
+        Dim con = New SqlConnection(conString)
+        con.Open()
+
+        Dim sql As String = &quot;SELECT * FROM country;&quot;
+        Dim cmd As New SqlCommand(sql, con)
+
+        Dim adaptor = New SqlDataAdapter
+
+        adaptor.SelectCommand = cmd
+        adaptor.Fill(dataTable)
+        con.Close()
+
+        Return dataTable
+
+
+    End Function</pre>
+<div class="preview">
+<pre class="vb">&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Function</span>&nbsp;CreateDataTable()&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;DataTable&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;dataTable&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;DataTable(<span class="visualBasic__string">&quot;DT&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'TODO:&nbsp;INSERT&nbsp;CONNECTION&nbsp;STRING</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;conString&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;=&nbsp;<span class="visualBasic__string">&quot;INSERT&nbsp;CONNECTION&nbsp;STRING&nbsp;HERE&quot;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;con&nbsp;=&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;SqlConnection(conString)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;con.Open()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;sql&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;=&nbsp;<span class="visualBasic__string">&quot;SELECT&nbsp;*&nbsp;FROM&nbsp;country;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;cmd&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;SqlCommand(sql,&nbsp;con)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;adaptor&nbsp;=&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;SqlDataAdapter&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adaptor.SelectCommand&nbsp;=&nbsp;cmd&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adaptor.Fill(dataTable)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;con.Close()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;dataTable&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Function</span></pre>
+</div>
+</div>
+</div>
+<h1 class="endscriptcode">&nbsp;More Information</h1>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">For more information please see EPPlus on Codeplex <a href="http://epplus.codeplex.com/">
+http://epplus.codeplex.com/</a></div>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

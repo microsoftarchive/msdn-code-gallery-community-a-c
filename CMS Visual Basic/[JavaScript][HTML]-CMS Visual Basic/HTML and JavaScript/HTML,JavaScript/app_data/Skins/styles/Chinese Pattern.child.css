@@ -1,0 +1,13 @@
+tr
+{
+	background-image:url('resources/images/backgrounds/dragon-background.png');
+	background-repeat:repeat;	
+background-attachment:fixed;
+}
+
+
+th, .Button, input[type='submit'], input[type='reset'], input[type='button']
+{
+	background-image:url('resources/images/backgrounds/dragon-skin.png');
+	background-repeat:repeat;	
+}

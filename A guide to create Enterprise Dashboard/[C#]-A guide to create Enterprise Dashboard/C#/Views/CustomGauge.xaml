@@ -1,0 +1,110 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:vg="clr-namespace:Visifire.Gauges;assembly=SLVisifire.Gauges"
+	mc:Ignorable="d"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	x:Class="Visifire.Dashboards.ProductAndSales.Views.CustomGauge"
+	d:DesignWidth="250" d:DesignHeight="295" 
+    VerticalAlignment="{Binding VerticalAlignment}" 
+    HorizontalAlignment="{Binding HorizontalAlignment}">
+    
+    <Grid x:Name="LayoutRoot" >
+        
+        <vg:Gauge Type="Linear" MinWidth="210" VerticalAlignment="Stretch" BackFrameThickness="2" CornerRadius="8,8,0,0" OuterCornerRadius="8,8,0,0"  >
+        	<vg:Gauge.Background>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF19191A"/>
+        			<GradientStop Color="#FF1D1D1D" Offset="1"/>
+        			<GradientStop Color="#FF787878" Offset="0.465"/>
+        		</LinearGradientBrush>
+        	</vg:Gauge.Background>
+            
+            <vg:Gauge.ToolTips>
+                <vg:ToolTip FontSize="14"/>
+            </vg:Gauge.ToolTips>
+            <vg:Gauge.LinearScales>
+                <vg:LinearScale  ScaleThickness="0.1" Position="0.41,0" BorderThickness="0.24" Maximum="{Binding MaxRevenueScale}" ValueFormatString="'$'#########" >
+                    <vg:LinearScale.MajorTicks>
+                        <vg:MajorTicks Placement="Outside" TickLength="0.35" TickWidth="0.05" Background="White"/>
+                    </vg:LinearScale.MajorTicks>
+                    <vg:LinearScale.MinorTicks>
+                        <vg:MinorTicks Placement="Outside" TickLength="0.15" TickWidth="0.02" Background="LightGray" />
+                    </vg:LinearScale.MinorTicks>
+                    <vg:LinearScale.ScaleLabels>
+                        <vg:ScaleLabels Placement="Outside" FontSize="12" FontColor="White"/>
+                    </vg:LinearScale.ScaleLabels>
+                </vg:LinearScale>
+            </vg:Gauge.LinearScales>
+            
+            <vg:Gauge.Indicators>
+                <vg:BarIndicator Value="{Binding RevenueOfSelectProduct}"  ToolTipText="Revenue,\n#Value"  Placement="Center" DistanceFromScale="0.001" BorderThickness="0" LabelStyle="Outside" ShadowEnabled="False" StartWidth="0.07" EndWidth="0.07" BorderBrush="#FFFF9200">
+                	<vg:BarIndicator.Background>
+                		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                			<GradientStop Color="#FFFFDE00" Offset="0"/>
+                			<GradientStop Color="#FFD0D0D0" Offset="0.636"/>
+                		</LinearGradientBrush>
+                	</vg:BarIndicator.Background>
+                </vg:BarIndicator>
+                <vg:MarkerIndicator Value="{Binding TotalRevenueOfAllProduct}" ToolTipText="Total Revenue\nfor all Products, #Value" ValueFormatString="'$'###########.##" LabelEnabled="True" LabelText="Total Revenue\nfor all Products" Placement="Inside" BorderThickness="0" Background="Red" DistanceFromScale="-0.09" IndicatorLength="0.04" IndicatorWidth="0.05" ShadowEnabled="false" FontSize="9.333" />
+            </vg:Gauge.Indicators>
+
+        </vg:Gauge>
+        <vg:Gauge Type="Circular"
+				AnimationEnabled="true" Margin="0,74,10,48" HorizontalAlignment="Right" Height="110" Width="110">
+            <vg:Gauge.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCDCDD0" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.505"/>
+                    <GradientStop Color="#FFB1B2B4" Offset="0"/>
+                    <GradientStop Color="#FFE9E9EA" Offset="0.207"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="0.931"/>
+                </LinearGradientBrush>
+            </vg:Gauge.Background>
+            <vg:Gauge.CircularScales>
+                <vg:CircularScale Radius="0.61"  StartAngle="130" SweepAngle="280" BorderThickness="0" ScaleThickness="0" Interval="20" ValueFormatString="" >
+                    <vg:CircularScale.MajorTicks>
+                        <vg:MajorTicks Placement="Inside" Background="Black" TickLength="0.25" TickWidth="0.03"/>
+                    </vg:CircularScale.MajorTicks>
+                    <vg:CircularScale.MinorTicks>
+                        <vg:MinorTicks Placement="Inside" Background="Black" TickLength="0.08" TickWidth="0.03"/>
+                    </vg:CircularScale.MinorTicks>
+                    <vg:CircularScale.ScaleLabels>
+                        <vg:ScaleLabels FontSize="10" Placement="Outside" FontColor="#FF252525"/>
+                    </vg:CircularScale.ScaleLabels>
+                </vg:CircularScale>
+            </vg:Gauge.CircularScales>
+
+            <vg:Gauge.Indicators>
+                <vg:NeedleIndicator LabelEnabled="false" LabelStyle="Inside" LabelFontSize="24" Value="{Binding RevenueInPercentageOfSelectProduct}" IndicatorWidth=".001" CapWidth="0.38" BorderThickness="1" ValueFormatString="#######.00'%'" BorderBrush="Red" Width="120" Height="120">
+                	<vg:NeedleIndicator.Background>
+                		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                			<GradientStop Color="#FF1D1D1D" Offset="0.731"/>
+                			<GradientStop Color="#FFF3FF21" Offset="0.676"/>
+                			<GradientStop Color="#FFF9F9F9" Offset="0.484"/>
+                			<GradientStop Color="#FFFF1F1F" Offset="0"/>
+                			<GradientStop Color="#FEFD5E5E" Offset="0.44"/>
+                		</LinearGradientBrush>
+                	</vg:NeedleIndicator.Background>
+                    <vg:NeedleIndicator.CapBackground>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="White" Offset="0.756"/>
+                        </RadialGradientBrush>
+                    </vg:NeedleIndicator.CapBackground>
+                </vg:NeedleIndicator>
+            </vg:Gauge.Indicators>
+        </vg:Gauge>
+        <TextBlock HorizontalAlignment="Right" Height="58" Margin="0,0,15,1" TextWrapping="Wrap" Text="%" VerticalAlignment="Bottom" Width="100" Foreground="White" TextAlignment="Center" FontSize="48"/>
+        <Path IsHitTestVisible="False" Data="M0.5,53.5 C99.906593,76.530174 199.55499,75.748718 299,53.5 L299,10.5 C299.71918,4.4528847 296.90054,1.067201 291,0 L11.5,0 C3.4622974,0.036689024 -0.13499151,3.4767148 0.5,10 z" Height="131.013" Margin="5,5,5,0" Stretch="Fill" StrokeThickness="0.6" UseLayoutRounding="False" VerticalAlignment="Top" Opacity="0.33">
+        	<Path.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FFC3C3C3"/>
+        			<GradientStop Color="White" Offset="1"/>
+        		</LinearGradientBrush>
+        	</Path.Fill>
+        </Path>
+    </Grid>
+</UserControl>

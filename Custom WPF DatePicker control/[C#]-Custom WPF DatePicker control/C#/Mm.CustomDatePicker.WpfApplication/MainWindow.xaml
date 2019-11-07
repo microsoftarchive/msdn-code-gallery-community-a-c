@@ -1,0 +1,18 @@
+﻿<Window x:Class="Mm.CustomDatePicker.WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Mm.CustomDatePicker.WpfApplication"
+        xmlns:controls="clr-namespace:Mm.CustomDatePicker.Controls;assembly=Mm.CustomDatePicker.Controls"
+        Title="blog.magnusmontin.net" Height="150" Width="525">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <DockPanel Margin="20">
+        <controls:CustomDatePicker DockPanel.Dock="Top" SelectedDate="{Binding Date}"/>
+        
+        <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+            <TextBlock Text="Selected Date: " FontSize="16" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Date, StringFormat=dd/MM/yyyy}" FontSize="16"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

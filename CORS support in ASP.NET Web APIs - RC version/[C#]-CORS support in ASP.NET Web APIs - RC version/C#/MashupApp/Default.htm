@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mashup</title>
+    <script src="Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Values</h1>
+    <p>
+        <select id='service'>
+            <option value="http://localhost:62588/api/Values">Global CORS (http://localhost:62588/api/Values)</option>
+            <option value="http://localhost:62636/api/Values">Per-Action CORS (http://localhost:62636/api/Values)</option>
+        </select>
+    </p>
+    <p>Id: <input type="text" id="id" /></p>
+    <p>Value: <input type="text" id="value" /></p>
+    <p>
+        <input type="button" id="getAll" value="Get All" />
+        <input type="button" id="getOne" value="Get One" />
+        <input type="button" id="post" value="Add" />
+        <input type="button" id="put" value="Update" />
+        <input type="button" id="delete" value="Delete" />
+    </p>
+    <div id='result'></div>
+    <script type="text/javascript">
+        $("#getAll").click(function () {
+            var valuesAddress = $("#service").val();
+            $.ajax({
+                url: valuesAddress,
+                type: "GET",
+                success: function (result) {
+                    var text = "";
+                    for (var i = 0; i < result.length; i++) {
+                        if (i > 0) text = text + ", ";
+                        text = text + result[i];
+                    }
+
+                    $("#result").text(text);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $("#result").text(textStatus);
+                }
+            });
+        });
+
+        $("#getOne").click(function () {
+            var valuesAddress = $("#service").val();
+            var id = "/" + $("#id").val();
+            $.ajax({
+                url: valuesAddress + id,
+                type: "GET",
+                success: function (result) {
+                    $("#result").text(result);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $("#result").text(textStatus);
+                }
+            });
+        });
+
+        $("#post").click(function () {
+            var valuesAddress = $("#service").val();
+            var data = "\"" + $("#value").val() + "\"";
+            $.ajax({
+                url: valuesAddress,
+                type: "POST",
+                contentType: "application/json",
+                data: data,
+                success: function (result) {
+                    $("#result").text(result);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $("#result").text(textStatus);
+                }
+            });
+        });
+
+        $("#put").click(function () {
+            var valuesAddress = $("#service").val();
+            var id = "/" + $("#id").val();
+            var data = "\"" + $("#value").val() + "\"";
+            $.ajax({
+                url: valuesAddress + id,
+                type: "PUT",
+                contentType: "application/json",
+                data: data,
+                success: function (result) {
+                    $("#result").text(result);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $("#result").text(textStatus);
+                }
+            });
+        });
+
+        $("#delete").click(function () {
+            var valuesAddress = $("#service").val();
+            var id = "/" + $("#id").val();
+            $.ajax({
+                url: valuesAddress + id,
+                type: "DELETE",
+                success: function (result) {
+                    $("#result").text(result);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $("#result").text(textStatus);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

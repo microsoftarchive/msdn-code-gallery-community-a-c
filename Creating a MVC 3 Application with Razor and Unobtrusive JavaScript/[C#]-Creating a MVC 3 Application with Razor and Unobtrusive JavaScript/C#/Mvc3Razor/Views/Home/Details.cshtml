@@ -1,0 +1,30 @@
+﻿@model Mvc3Razor.Models.UserModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Details</h2>
+
+    <fieldset>
+        <legend>Fields</legend>
+        
+        <div class="display-label">UserName</div>
+        <div class="display-field">@Model.UserName</div>
+        
+        <div class="display-label">FirstName</div>
+        <div class="display-field">@Model.FirstName</div>
+        
+        <div class="display-label">LastName</div>
+        <div class="display-field">@Model.LastName</div>
+        
+        <div class="display-label">City</div>
+        <div class="display-field">@Model.City</div>
+        
+    </fieldset>
+
+    <p>
+    @Html.ActionLink("Edit", "Edit", new {  id=@Model.UserName }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

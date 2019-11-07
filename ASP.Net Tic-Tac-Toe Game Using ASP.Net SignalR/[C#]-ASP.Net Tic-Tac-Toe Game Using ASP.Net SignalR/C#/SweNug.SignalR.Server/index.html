@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html class="no-js">
+<head>
+    <title>Tic Tac Toe</title>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <script src="/Scripts/jquery-1.6.4.min.js"></script>
+    <script src="/Scripts/jquery.signalR-1.0.1.min.js"></script>
+    <script src="/signalr/hubs" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var x = new Image();
+            x.src = '/Content/Images/TicTacToeX.png';
+            var o = new Image();
+            o.src = '/Content/Images/TicTacToeO.png';
+
+            $("#register").show();
+            $("#findOpponent").hide();
+            $("#waitingForOpponent").hide();
+            $("#game").hide();
+            $("#findAnotherGame").hide();
+
+            var game = $.connection.game;
+
+            game.client.waitingForOpponent = function (message) {
+                $("#information").html("");
+                $("#information").html("<strong>Waiting for the opponent to play!</strong>");
+                $('#debug').append('<li>You need to wait for the opponent to play!</li>');
+            };
+            game.client.waitingForMarkerPlacement = function (message) {
+                $("#information").html("");
+                $("#information").html("<strong>Your turn!</strong>");
+                $('#debug').append('<li>Your turn! Make your move</li>');
+            };
+            game.client.foundOpponent = function (message, simbolo) {
+                $("#findAnotherGame").hide();
+                $("#waitingForOpponent").hide();
+                $("#gameInformation").html("You are playing against: " + message);
+                $("#simbolo").html("You play with: <img src='" + simbolo + "' height='20' width='20' style='vertical-align:bottom'/>");
+                $('#debug').append('<li>You are playing against ' + message + '</li>');
+
+                $("#game").html('<div id="information" /><br/>');
+                for (var i = 0; i < 9; i++) {
+
+                    $("#game").append("<span id=" + i + " class='box' />");
+                }
+
+                $("#game").show();
+            };
+            game.client.noOpponents = function (message) {
+                $("#information").html("<strong>Looking for an opponent!</strong>");
+                $('#debug').append('<li>Waiting for an opponent to connect...</li>');
+            };
+            game.client.addMarkerPlacement = function (message) {
+                if (message.Simbolo == "O") {
+                    $("#" + message.MarkerPosition).addClass("mark2");
+                    $("#" + message.MarkerPosition).addClass("marked");
+                    $("#information").html("<strong>Waiting for the opponent to play!</strong>");
+                }
+                else {
+                    $("#" + message.MarkerPosition).addClass("mark1");
+                    $("#" + message.MarkerPosition).addClass("marked");
+                    $("#information").html("<strong>Waiting for the opponent to play!</strong>");
+                }
+                $('#debug').append('<li>Move made ​​by ' + message.OpponentName + ' in position ' + message.MarkerPosition + '</li>');
+            };
+            game.client.opponentDisconnected = function (message) {
+                $("#gameInformation").html("<strong>GAME OVER! The opponent quit the game! " + message + " You Win!</strong>");
+                $('#debug').append('<li>His opponent folded. Congratulations, you won!</li>');
+
+                $("#findAnotherGame").show();
+                $("#game").hide();
+            };
+            game.client.registerComplete = function (message) {
+                $('#debug').append('<li>Are you ready to play Tic Tac Toe!</li>');
+            };
+            game.client.gameOver = function (message) {
+                $("#information").html('<strong>End of game! The winner is: ' + message + '</strong>');
+                $('#debug').append('<li>End of game! The winner is: ' + message + '</li>');
+                $("#findAnotherGame").show();
+            };
+            game.client.refreshAmountOfPlayers = function (message) {
+                $("#amountOfGames").html(message.amountOfGames);
+                $("#amountOfClients").html(message.amountOfClients);
+                $("#totalAmountOfGames").html(message.totalGamesPlayed);
+            };
+            $(".box").live("click", function (event) {
+                if ($(this).hasClass("marked")) return;
+
+                game.server.play(event.target.id);
+            });
+            $("#registerName").click(function () {
+                game.server.registerClient($('#gamaName').val());
+
+                $("#register").hide();
+                $("#findOpponent").show();
+            });
+
+            $(".findGame").click(function () {
+                findGame();
+            });
+            $("#findAnotherGame").click(function () {
+                $("#gameInformation").html("");
+                $("#game").hide();
+                $("#findAnotherGame").hide();
+                game.server.registerClient($('#gamaName').val());
+
+                findGame();
+            });
+            function findGame() {
+                game.server.findOpponent();
+                $("#waitingForOpponent").show();
+                $("#register").hide();
+                $("#findOpponent").hide();
+            }
+
+            $.connection.hub.start().done();
+        });
+    </script>
+    <h1><span>Jogo da Velha</span></h1>
+    <span id="gameInformation"></span>
+    <br/>
+    <span id="simbolo"></span>
+    <div>
+        <div id="register">
+            <strong>Your Name:</strong>
+            <br />
+            <input type="text" class="input" id="gamaName" />
+            <input type="button" class="button" id="registerName" value="Play" />
+        </div>
+        <div id="findOpponent">
+            <em>You are close to beat your opponent!</em><br />
+            <input type="button" class="button findGame" id="findGame" value="Find Opponent" />
+        </div>
+        <div id="waitingForOpponent">Looking for an opponent. Please wait!</div>
+        <div id="game">
+        </div>
+        <div class="clear"><input type="button" class="button findGame" id="findAnotherGame" value="Find new Opponent!" /></div>
+        <fieldset>
+            <legend>Debug message</legend>
+            <ul id="debug">
+            </ul>
+        </fieldset>
+    </div>
+    <div id="serverInformation">
+        Number of connected players:  <span id="amountOfClients">0</span><br />
+        Number of rounds in dispute: <span id="amountOfGames">0</span><br />
+        Total general games: <span id="totalAmountOfGames">0</span><br />
+        <br />
+        <br />
+    </div>
+</body>
+</html>

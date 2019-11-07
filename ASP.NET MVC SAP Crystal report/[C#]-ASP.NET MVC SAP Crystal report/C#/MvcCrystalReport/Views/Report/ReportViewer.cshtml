@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "ReportViewer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model MvcCrystalReport.Models.ReportViewerViewModel
+<iframe src="@Model.ReportPath"  style="width:100%; height:1000px; border:none;"></iframe>

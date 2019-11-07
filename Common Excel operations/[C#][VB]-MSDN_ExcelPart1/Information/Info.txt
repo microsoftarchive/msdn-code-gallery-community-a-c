@@ -1,0 +1,145 @@
+* SQL-Server scripts need to be executes under ExcelOperations\SqlScripts
+
+* NuGet packages have been removed from the solution's Package folder so before buiding this
+  solution right click on Solution Explorer and select restore packages.
+
+* NuGet commands
+  https://docs.microsoft.com/en-us/nuget/consume-packages/reinstalling-and-updating-packages
+
+  Nu-Get packages for this solution
+  How to list from the Package Manager Console: Get-Package | ft -AutoSize
+
+Special note on DocumentFormat.OpenXml, there are two releases used.
+  
+Id                                                Versions  ProjectName            
+--                                                --------  -----------            
+DocumentFormat.OpenXml                            {2.5}     SpreadSheetLightLibrary
+SpreadsheetLight                                  {3.4.9}   SpreadSheetLightLibrary
+ClassToExcel.OpenXml                              {1.0.0.4} ExcelOpenXmlLibrary    
+DocumentFormat.OpenXml                            {2.5}     ExcelOpenXmlLibrary    
+Microsoft.NETCore.Platforms                       {1.1.0}   ExcelOpenXmlLibrary    
+Microsoft.Win32.Primitives                        {4.3.0}   ExcelOpenXmlLibrary    
+NETStandard.Library                               {1.6.1}   ExcelOpenXmlLibrary    
+System.AppContext                                 {4.3.0}   ExcelOpenXmlLibrary    
+System.Collections                                {4.3.0}   ExcelOpenXmlLibrary    
+System.Collections.Concurrent                     {4.3.0}   ExcelOpenXmlLibrary    
+System.Console                                    {4.3.0}   ExcelOpenXmlLibrary    
+System.Diagnostics.Debug                          {4.3.0}   ExcelOpenXmlLibrary    
+System.Diagnostics.DiagnosticSource               {4.3.0}   ExcelOpenXmlLibrary    
+System.Diagnostics.Tools                          {4.3.0}   ExcelOpenXmlLibrary    
+System.Diagnostics.Tracing                        {4.3.0}   ExcelOpenXmlLibrary    
+System.Globalization                              {4.3.0}   ExcelOpenXmlLibrary    
+System.Globalization.Calendars                    {4.3.0}   ExcelOpenXmlLibrary    
+System.IO                                         {4.3.0}   ExcelOpenXmlLibrary    
+System.IO.Compression                             {4.3.0}   ExcelOpenXmlLibrary    
+System.IO.Compression.ZipFile                     {4.3.0}   ExcelOpenXmlLibrary    
+System.IO.FileSystem                              {4.3.0}   ExcelOpenXmlLibrary    
+System.IO.FileSystem.Primitives                   {4.3.0}   ExcelOpenXmlLibrary    
+System.IO.Packaging                               {4.4.0}   ExcelOpenXmlLibrary    
+System.Linq                                       {4.3.0}   ExcelOpenXmlLibrary    
+System.Linq.Expressions                           {4.3.0}   ExcelOpenXmlLibrary    
+System.Net.Http                                   {4.3.0}   ExcelOpenXmlLibrary    
+System.Net.Primitives                             {4.3.0}   ExcelOpenXmlLibrary    
+System.Net.Sockets                                {4.3.0}   ExcelOpenXmlLibrary    
+System.ObjectModel                                {4.3.0}   ExcelOpenXmlLibrary    
+System.Reflection                                 {4.3.0}   ExcelOpenXmlLibrary    
+System.Reflection.Extensions                      {4.3.0}   ExcelOpenXmlLibrary    
+System.Reflection.Primitives                      {4.3.0}   ExcelOpenXmlLibrary    
+System.Resources.ResourceManager                  {4.3.0}   ExcelOpenXmlLibrary    
+System.Runtime                                    {4.3.0}   ExcelOpenXmlLibrary    
+System.Runtime.Extensions                         {4.3.0}   ExcelOpenXmlLibrary    
+System.Runtime.Handles                            {4.3.0}   ExcelOpenXmlLibrary    
+System.Runtime.InteropServices                    {4.3.0}   ExcelOpenXmlLibrary    
+System.Runtime.InteropServices.RuntimeInformation {4.3.0}   ExcelOpenXmlLibrary    
+System.Runtime.Numerics                           {4.3.0}   ExcelOpenXmlLibrary    
+System.Security.Cryptography.Algorithms           {4.3.0}   ExcelOpenXmlLibrary    
+System.Security.Cryptography.Encoding             {4.3.0}   ExcelOpenXmlLibrary    
+System.Security.Cryptography.Primitives           {4.3.0}   ExcelOpenXmlLibrary    
+System.Security.Cryptography.X509Certificates     {4.3.0}   ExcelOpenXmlLibrary    
+System.Text.Encoding                              {4.3.0}   ExcelOpenXmlLibrary    
+System.Text.Encoding.Extensions                   {4.3.0}   ExcelOpenXmlLibrary    
+System.Text.RegularExpressions                    {4.3.0}   ExcelOpenXmlLibrary    
+System.Threading                                  {4.3.0}   ExcelOpenXmlLibrary    
+System.Threading.Tasks                            {4.3.0}   ExcelOpenXmlLibrary    
+System.Threading.Timer                            {4.3.0}   ExcelOpenXmlLibrary    
+System.Xml.ReaderWriter                           {4.3.0}   ExcelOpenXmlLibrary    
+System.Xml.XDocument                              {4.3.0}   ExcelOpenXmlLibrary    
+DocumentFormat.OpenXml                            {2.8.1}   MainApplication        
+Microsoft.NETCore.Platforms                       {1.1.0}   MainApplication        
+Microsoft.Win32.Primitives                        {4.3.0}   MainApplication        
+NETStandard.Library                               {1.6.1}   MainApplication        
+System.AppContext                                 {4.3.0}   MainApplication        
+System.Collections                                {4.3.0}   MainApplication        
+System.Collections.Concurrent                     {4.3.0}   MainApplication        
+System.Console                                    {4.3.0}   MainApplication        
+System.Diagnostics.Debug                          {4.3.0}   MainApplication        
+System.Diagnostics.DiagnosticSource               {4.3.0}   MainApplication        
+System.Diagnostics.Tools                          {4.3.0}   MainApplication        
+System.Diagnostics.Tracing                        {4.3.0}   MainApplication        
+System.Globalization                              {4.3.0}   MainApplication        
+System.Globalization.Calendars                    {4.3.0}   MainApplication        
+System.IO                                         {4.3.0}   MainApplication        
+System.IO.Compression                             {4.3.0}   MainApplication        
+System.IO.Compression.ZipFile                     {4.3.0}   MainApplication        
+System.IO.FileSystem                              {4.3.0}   MainApplication        
+System.IO.FileSystem.Primitives                   {4.3.0}   MainApplication        
+System.IO.Packaging                               {4.4.0}   MainApplication        
+System.Linq                                       {4.3.0}   MainApplication        
+System.Linq.Expressions                           {4.3.0}   MainApplication        
+System.Net.Http                                   {4.3.0}   MainApplication        
+System.Net.Primitives                             {4.3.0}   MainApplication        
+System.Net.Sockets                                {4.3.0}   MainApplication        
+System.ObjectModel                                {4.3.0}   MainApplication        
+System.Reflection                                 {4.3.0}   MainApplication        
+System.Reflection.Extensions                      {4.3.0}   MainApplication        
+System.Reflection.Primitives                      {4.3.0}   MainApplication        
+System.Resources.ResourceManager                  {4.3.0}   MainApplication        
+System.Runtime                                    {4.3.0}   MainApplication        
+System.Runtime.Extensions                         {4.3.0}   MainApplication        
+System.Runtime.Handles                            {4.3.0}   MainApplication        
+System.Runtime.InteropServices                    {4.3.0}   MainApplication        
+System.Runtime.InteropServices.RuntimeInformation {4.3.0}   MainApplication        
+System.Runtime.Numerics                           {4.3.0}   MainApplication        
+System.Security.Cryptography.Algorithms           {4.3.0}   MainApplication        
+System.Security.Cryptography.Encoding             {4.3.0}   MainApplication        
+System.Security.Cryptography.Primitives           {4.3.0}   MainApplication        
+System.Security.Cryptography.X509Certificates     {4.3.0}   MainApplication        
+System.Text.Encoding                              {4.3.0}   MainApplication        
+System.Text.Encoding.Extensions                   {4.3.0}   MainApplication        
+System.Text.RegularExpressions                    {4.3.0}   MainApplication        
+System.Threading                                  {4.3.0}   MainApplication        
+System.Threading.Tasks                            {4.3.0}   MainApplication        
+System.Threading.Timer                            {4.3.0}   MainApplication        
+System.Xml.ReaderWriter                           {4.3.0}   MainApplication        
+System.Xml.XDocument                              {4.3.0}   MainApplication        
+
+
+
+Other Excel code samples on MSDN
+-----------------------------------------------------------------------------
+Excel patterns for properly releasing memory once finished with Excel operations (C#)
+https://code.msdn.microsoft.com/Excel-patterns-for-c8df167d?redir=0
+
+Excel get last row and column for sheet, column or range (C#)
+https://code.msdn.microsoft.com/Excel-get-last-row-and-fe764cfc?redir=0
+
+Export Excel from SQL-Server (VB.NET and C#)
+https://code.msdn.microsoft.com/Export-Excel-from-SQL-3d994cb5?redir=0
+
+DataGridView unbound to Excel or Text file (C#)
+https://code.msdn.microsoft.com/DataGridView-unbound-to-02db1c40?redir=0
+
+Alternate methods for with Microsoft Excel in VB.NET projects
+https://code.msdn.microsoft.com/Alternate-methods-to-work-4c52c4a2?redir=0
+
+Export MS-Access table to MS-Excel Worksheet (VB.NET and C#)
+https://code.msdn.microsoft.com/Export-MS-Access-table-to-e5931ec1?redir=0
+
+Read ranges in Excel using OleDb data provider (VB.NET)
+https://code.msdn.microsoft.com/Read-ranges-in-Excel-using-8ff90910?redir=0
+
+Set row height and column width for all cells in an Excel sheet using automation (VB.NET with C# helpers)
+https://code.msdn.microsoft.com/Set-row-height-and-column-633d7acf?redir=0
+
+
+

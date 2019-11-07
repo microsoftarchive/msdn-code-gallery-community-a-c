@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=185AB2A7FFC28B456E0C516753D2A163" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=4EE70F41524C30AB288DA1D97433D514" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>CRUD (Create, Read, Update And Delete) With LINQ</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>CRUD (Create, Read, Update And Delete) With LINQ</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, LINQ to SQL, LINQ, SQL database
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, LINQ to SQL, LINQ, LINQ Queries, Databases
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/4/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/CRUD-Create-Read-Update-a0bf6efd">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><span style="font-size:medium"><strong>Introduction</strong></span></p>
+<p><span style="font-size:small">In this chapter we want &nbsp;to add, Update and Delete Data From Database With LINQ Connection.</span></p>
+<p><span style="font-size:small">__________________________________________________________________________<br>
+</span></p>
+<p><span style="font-size:medium"><strong>Process</strong></span></p>
+<p><span style="font-size:small">The following steps show how to Create, Read, Update and Delete Data from Database with LINQ Connection:</span></p>
+<p><span style="font-size:small">1. First, Click <strong>New Project </strong>in Start Page or On
+<strong>File Menu.</strong></span></p>
+<p><span style="font-size:small">2. In <strong>New Project </strong>Dialog, Click
+<strong>Windows</strong> On Left Pane and <strong>Windows Forms Application </strong>
+On Middle Pane.</span></p>
+<p><span style="font-size:small">3. Change forms layout to this Mode:</span></p>
+<p><strong>&nbsp;<img id="178795" src="description/Layout.png" alt="" width="303" height="448"></strong><strong>&nbsp;</strong></p>
+<p>________________________________________________________________________________________________</p>
+<p><span style="font-size:small">4. First, using <a class="libraryLink" href="https://code.msdn.microsoft.com/CRUD-Create-Read-Update-a0bf6efd/https://msdn.microsoft.com/en-US/library/System.LINQ.aspx"  title="Auto generated link to System.LINQ">System.LINQ</a>:</span></p>
+<p><span style="font-size:small">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using <a class="libraryLink" href="https://code.msdn.microsoft.com/CRUD-Create-Read-Update-a0bf6efd/https://code.msdn.microsoft.com/CRUD-Create-Read-Update-a0bf6efd/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/CRUD-Create-Read-Update-a0bf6efd/https://code.msdn.microsoft.com/CRUD-Create-Read-Update-a0bf6efd/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size:small">5. In The Click Event of add Button Write this Code:</span></p>
+<p><span style="font-size:small">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">if (txt_Name.Text.Replace(&quot; &quot;, &quot;&quot;) != &quot;&quot; || txt_LastName.Text.Replace(&quot; &quot;, &quot;&quot;) != &quot;&quot;)
+
+{
+
+	DialogResult dr = MessageBox.Show(&quot;Do you Want To Add ?&quot;, &quot;CRUD&quot;,  	MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+        if (dr == DialogResult.Yes)
+
+        {
+
+        	DbDataContext dbdc = new DbDataContext();
+
+        	tbl_Student tbls = new tbl_Student()
+
+         	{
+
+          		S_Name = txt_Name.Text,
+
+         		S_LastName = txt_LastName.Text,
+
+         		S_NationalCode = txt_NationalCode.Text
+
+		};
+
+        	dbdc.tbl_Students.InsertOnSubmit(tbls);
+
+        	dbdc.SubmitChanges();
+
+        	dgv_Data.DataSource = dbdc.tbl_Students;
+
+        	S_ID = &quot;&quot;;
+
+        	Clear();
+
+	}
+
+}
+
+else
+
+{
+
+	if (txt_Name.Text.Replace(&quot; &quot;, &quot;&quot;) != &quot;&quot;)
+
+       {
+
+		MessageBox.Show(&quot;Please enter Student Name&quot;, &quot;CRUD&quot;,  		MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+       		txt_Name.Focus();
+
+       }
+
+	else
+
+        {
+
+        	MessageBox.Show(&quot;Please enter Student Lastname&quot;, &quot;CRUD&quot;,  		MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txt_LastName.Focus();
+
+        }
+
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">if</span>&nbsp;(txt_Name.Text.Replace(<span class="cs__string">&quot;&nbsp;&quot;</span>,&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>&nbsp;||&nbsp;txt_LastName.Text.Replace(<span class="cs__string">&quot;&nbsp;&quot;</span>,&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;
+&nbsp;
+{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;DialogResult&nbsp;dr&nbsp;=&nbsp;MessageBox.Show(<span class="cs__string">&quot;Do&nbsp;you&nbsp;Want&nbsp;To&nbsp;Add&nbsp;?&quot;</span>,&nbsp;<span class="cs__string">&quot;CRUD&quot;</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBoxButtons.YesNo,&nbsp;MessageBoxIcon.Question);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(dr&nbsp;==&nbsp;DialogResult.Yes)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DbDataContext&nbsp;dbdc&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;DbDataContext();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tbl_Student&nbsp;tbls&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;tbl_Student()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S_Name&nbsp;=&nbsp;txt_Name.Text,&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S_LastName&nbsp;=&nbsp;txt_LastName.Text,&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S_NationalCode&nbsp;=&nbsp;txt_NationalCode.Text&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbdc.tbl_Students.InsertOnSubmit(tbls);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbdc.SubmitChanges();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dgv_Data.DataSource&nbsp;=&nbsp;dbdc.tbl_Students;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S_ID&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">else</span>&nbsp;
+&nbsp;
+{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(txt_Name.Text.Replace(<span class="cs__string">&quot;&nbsp;&quot;</span>,&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Please&nbsp;enter&nbsp;Student&nbsp;Name&quot;</span>,&nbsp;<span class="cs__string">&quot;CRUD&quot;</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBoxButtons.OK,&nbsp;MessageBoxIcon.Information);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt_Name.Focus();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Please&nbsp;enter&nbsp;Student&nbsp;Lastname&quot;</span>,&nbsp;<span class="cs__string">&quot;CRUD&quot;</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBoxButtons.OK,&nbsp;MessageBoxIcon.Information);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt_LastName.Focus();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>________________________________________________________________________________________________</p>
+<p><span style="font-size:small">6. In The Click Event of edit Button Write this Code:</span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">if (txt_Name.Text.Replace(&quot; &quot;, &quot;&quot;) != &quot;&quot; || txt_LastName.Text.Replace(&quot; &quot;, &quot;&quot;) != &quot;&quot;)
+
+            {
+
+                DialogResult dr = MessageBox.Show(&quot;Do you Want To Edit ?&quot;, &quot;CRUD&quot;, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dr == DialogResult.Yes)
+
+                {
+
+                    DbDataContext dbdc = new DbDataContext();
+
+                    var Edit = dbdc.tbl_Students.Where(tbl_Students =&gt; tbl_Students.S_ID == int.Parse(S_ID)).Single();
+
+                    Edit.S_Name = txt_Name.Text;
+
+                    Edit.S_LastName = txt_LastName.Text;
+
+                    Edit.S_NationalCode = txt_NationalCode.Text;
+
+                    dbdc.SubmitChanges();
+
+                    dgv_Data.DataSource = dbdc.tbl_Students;
+
+                    S_ID = &quot;&quot;;
+
+                    Clear();
+
+                }
+
+            }
+
+            else
+
+            {
+
+                if (txt_Name.Text.Replace(&quot; &quot;, &quot;&quot;) != &quot;&quot;)
+
+                {
+
+                    MessageBox.Show(&quot;Please enter Student Name&quot;, &quot;CRUD&quot;, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txt_Name.Focus();
+
+                }
+
+                else
+
+                {
+
+                    MessageBox.Show(&quot;Please enter Student Lastname&quot;, &quot;CRUD&quot;, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txt_LastName.Focus();
+
+                }
+
+            }</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">if</span>&nbsp;(txt_Name.Text.Replace(<span class="cs__string">&quot;&nbsp;&quot;</span>,&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>&nbsp;||&nbsp;txt_LastName.Text.Replace(<span class="cs__string">&quot;&nbsp;&quot;</span>,&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DialogResult&nbsp;dr&nbsp;=&nbsp;MessageBox.Show(<span class="cs__string">&quot;Do&nbsp;you&nbsp;Want&nbsp;To&nbsp;Edit&nbsp;?&quot;</span>,&nbsp;<span class="cs__string">&quot;CRUD&quot;</span>,&nbsp;MessageBoxButtons.YesNo,&nbsp;MessageBoxIcon.Question);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(dr&nbsp;==&nbsp;DialogResult.Yes)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DbDataContext&nbsp;dbdc&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;DbDataContext();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;Edit&nbsp;=&nbsp;dbdc.tbl_Students.Where(tbl_Students&nbsp;=&gt;&nbsp;tbl_Students.S_ID&nbsp;==&nbsp;<span class="cs__keyword">int</span>.Parse(S_ID)).Single();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit.S_Name&nbsp;=&nbsp;txt_Name.Text;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit.S_LastName&nbsp;=&nbsp;txt_LastName.Text;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit.S_NationalCode&nbsp;=&nbsp;txt_NationalCode.Text;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbdc.SubmitChanges();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dgv_Data.DataSource&nbsp;=&nbsp;dbdc.tbl_Students;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S_ID&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(txt_Name.Text.Replace(<span class="cs__string">&quot;&nbsp;&quot;</span>,&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Please&nbsp;enter&nbsp;Student&nbsp;Name&quot;</span>,&nbsp;<span class="cs__string">&quot;CRUD&quot;</span>,&nbsp;MessageBoxButtons.OK,&nbsp;MessageBoxIcon.Information);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt_Name.Focus();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Please&nbsp;enter&nbsp;Student&nbsp;Lastname&quot;</span>,&nbsp;<span class="cs__string">&quot;CRUD&quot;</span>,&nbsp;MessageBoxButtons.OK,&nbsp;MessageBoxIcon.Information);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt_LastName.Focus();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<p>________________________________________________________________________________________________</p>
+<p><span style="font-size:small">7. In The Click Event of delete Button Write this Code:</span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">if (txt_Name.Text.Replace(&quot; &quot;, &quot;&quot;) != &quot;&quot; || txt_LastName.Text.Replace(&quot; &quot;, &quot;&quot;) != &quot;&quot;)
+
+            {
+
+                DialogResult dr = MessageBox.Show(&quot;Do you Want To Delete This Row ?&quot;, &quot;CRUD&quot;, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dr == DialogResult.Yes)
+
+                {
+
+                    DbDataContext dbdc = new DbDataContext();
+
+                    var Delete = dbdc.tbl_Students.Where(tbl_Students =&gt; tbl_Students.S_ID == int.Parse(S_ID)).Single();
+
+                    dbdc.tbl_Students.DeleteOnSubmit(Delete);
+
+                    dbdc.SubmitChanges();
+
+                    dgv_Data.DataSource = dbdc.tbl_Students;
+
+                    S_ID = &quot;&quot;;
+
+                    Clear();
+
+                }
+
+            }
+
+            else
+
+            {
+
+                if (txt_Name.Text.Replace(&quot; &quot;, &quot;&quot;) != &quot;&quot;)
+
+                {
+
+                    MessageBox.Show(&quot;Please enter Student Name&quot;, &quot;CRUD&quot;, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txt_Name.Focus();
+
+                }
+
+                else
+
+                {
+
+                    MessageBox.Show(&quot;Please enter Student Lastname&quot;, &quot;CRUD&quot;, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txt_LastName.Focus();
+
+                }
+
+            }</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">if</span>&nbsp;(txt_Name.Text.Replace(<span class="cs__string">&quot;&nbsp;&quot;</span>,&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>&nbsp;||&nbsp;txt_LastName.Text.Replace(<span class="cs__string">&quot;&nbsp;&quot;</span>,&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DialogResult&nbsp;dr&nbsp;=&nbsp;MessageBox.Show(<span class="cs__string">&quot;Do&nbsp;you&nbsp;Want&nbsp;To&nbsp;Delete&nbsp;This&nbsp;Row&nbsp;?&quot;</span>,&nbsp;<span class="cs__string">&quot;CRUD&quot;</span>,&nbsp;MessageBoxButtons.YesNo,&nbsp;MessageBoxIcon.Question);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(dr&nbsp;==&nbsp;DialogResult.Yes)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DbDataContext&nbsp;dbdc&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;DbDataContext();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;Delete&nbsp;=&nbsp;dbdc.tbl_Students.Where(tbl_Students&nbsp;=&gt;&nbsp;tbl_Students.S_ID&nbsp;==&nbsp;<span class="cs__keyword">int</span>.Parse(S_ID)).Single();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbdc.tbl_Students.DeleteOnSubmit(Delete);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbdc.SubmitChanges();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dgv_Data.DataSource&nbsp;=&nbsp;dbdc.tbl_Students;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S_ID&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(txt_Name.Text.Replace(<span class="cs__string">&quot;&nbsp;&quot;</span>,&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Please&nbsp;enter&nbsp;Student&nbsp;Name&quot;</span>,&nbsp;<span class="cs__string">&quot;CRUD&quot;</span>,&nbsp;MessageBoxButtons.OK,&nbsp;MessageBoxIcon.Information);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt_Name.Focus();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Please&nbsp;enter&nbsp;Student&nbsp;Lastname&quot;</span>,&nbsp;<span class="cs__string">&quot;CRUD&quot;</span>,&nbsp;MessageBoxButtons.OK,&nbsp;MessageBoxIcon.Information);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt_LastName.Focus();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Good Luck!</strong></p>
+<p><strong>More Information</strong></p>
+<p>My Email-Address is armanmesgari@outlook.com</p>
+<p>To open&nbsp;this sample,&nbsp;you'll need&nbsp;Visual Studio&nbsp;2015.</p>
+<p>This Is Github Link :&nbsp;<span style="text-decoration:underline"><span style="color:#0000ff"><a dir="ltr" href="https://code.msdn.microsoft.com/CRUD-Create-Read-Update-a0bf6efd/https://github.com/armanMesgari/CRUD-With-LINQ" >github.com/armanMesgari/CRUD-With-LINQ</a></span></span></p>
+<p>----------------------------------------------------------------------------------------</p>
+<p>Please Write Your Sight About this Sample.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

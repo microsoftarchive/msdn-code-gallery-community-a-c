@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Converting between RTF and HTML</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Converting between RTF and HTML</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            WPF
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Rich Text, XAML and HTML conversions, RTF and HTML Conversions
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">7/26/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Converting-between-RTF-and-aaa02a6e">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>Have you ever had the desire to convert some RTF text into HTML or take HTML and generate a RTF document? Probably not. But if you did, then you are in luck! I recently had the need to do this conversion and after some searching found out a way to do it
+ by enhancing a sample distributed in the MSDN library called: <a href="http://msdn.microsoft.com/en-us/library/aa972129.aspx">
+XAML to HTML Conversion Demo</a>.</p>
+<p>That sample has code which converts HTML to and from a XAML Flow Document. But this doesn&rsquo;t make things easier until you realize that there is a way to convert RTF to XAML and XAML to RTF&nbsp;easily. The key is to use
+<a title="http://msdn.microsoft.com/en-us/library/system.windows.controls.richtextbox.aspx" href="http://msdn.microsoft.com/en-us/library/system.windows.controls.richtextbox.aspx">
+System.Windows.Controls.RichTextBox</a> which can load RTF/XAML from a stream and save it as XAML/RTF.</p>
+<p><strong>RTF to XAML</strong>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private static string ConvertRtfToXaml(string rtfText)
+{
+    var richTextBox = new RichTextBox();
+    if (string.IsNullOrEmpty(rtfText)) return &quot;&quot;;
+    var textRange = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd);
+    using (var rtfMemoryStream = new MemoryStream())
+    {
+        using (var rtfStreamWriter = new StreamWriter(rtfMemoryStream))
+        {
+            rtfStreamWriter.Write(rtfText);
+            rtfStreamWriter.Flush();
+            rtfMemoryStream.Seek(0, SeekOrigin.Begin);
+            textRange.Load(rtfMemoryStream, DataFormats.Rtf);
+        }
+    }
+    using (var rtfMemoryStream = new MemoryStream())
+    {
+        textRange = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd);
+        textRange.Save(rtfMemoryStream, DataFormats.Xaml);
+        rtfMemoryStream.Seek(0, SeekOrigin.Begin);
+        using (var rtfStreamReader = new StreamReader(rtfMemoryStream))
+        {
+            return rtfStreamReader.ReadToEnd();
+        }
+    }
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;ConvertRtfToXaml(<span class="cs__keyword">string</span>&nbsp;rtfText)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;richTextBox&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;RichTextBox();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">string</span>.IsNullOrEmpty(rtfText))&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;textRange&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;TextRange(richTextBox.Document.ContentStart,&nbsp;richTextBox.Document.ContentEnd);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;rtfMemoryStream&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;MemoryStream())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;rtfStreamWriter&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;StreamWriter(rtfMemoryStream))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtfStreamWriter.Write(rtfText);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtfStreamWriter.Flush();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtfMemoryStream.Seek(<span class="cs__number">0</span>,&nbsp;SeekOrigin.Begin);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textRange.Load(rtfMemoryStream,&nbsp;DataFormats.Rtf);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;rtfMemoryStream&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;MemoryStream())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textRange&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;TextRange(richTextBox.Document.ContentStart,&nbsp;richTextBox.Document.ContentEnd);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textRange.Save(rtfMemoryStream,&nbsp;DataFormats.Xaml);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtfMemoryStream.Seek(<span class="cs__number">0</span>,&nbsp;SeekOrigin.Begin);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;rtfStreamReader&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;StreamReader(rtfMemoryStream))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;rtfStreamReader.ReadToEnd();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p><strong>XAML to RTF</strong>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private static string ConvertXamlToRtf(string xamlText)
+{
+    var richTextBox = new RichTextBox();
+    if (string.IsNullOrEmpty(xamlText)) return &quot;&quot;;
+    var textRange = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd);
+    using (var xamlMemoryStream = new MemoryStream())
+    {
+        using (var xamlStreamWriter = new StreamWriter(xamlMemoryStream))
+        {
+            xamlStreamWriter.Write(xamlText);
+            xamlStreamWriter.Flush();
+            xamlMemoryStream.Seek(0, SeekOrigin.Begin);
+            textRange.Load(xamlMemoryStream, DataFormats.Xaml);
+        }
+    }
+    using (var rtfMemoryStream = new MemoryStream())
+    {
+        textRange = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd);
+        textRange.Save(rtfMemoryStream, DataFormats.Rtf);
+        rtfMemoryStream.Seek(0, SeekOrigin.Begin);
+        using (var rtfStreamReader = new StreamReader(rtfMemoryStream))
+        {
+            return rtfStreamReader.ReadToEnd();
+        }
+    }
+}</pre>
+<div class="preview">
+<pre class="js">private&nbsp;static&nbsp;string&nbsp;ConvertXamlToRtf(string&nbsp;xamlText)&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;richTextBox&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;RichTextBox();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(string.IsNullOrEmpty(xamlText))&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__string">&quot;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;textRange&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;TextRange(richTextBox.Document.ContentStart,&nbsp;richTextBox.Document.ContentEnd);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;using&nbsp;(<span class="js__statement">var</span>&nbsp;xamlMemoryStream&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;MemoryStream())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;using&nbsp;(<span class="js__statement">var</span>&nbsp;xamlStreamWriter&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;StreamWriter(xamlMemoryStream))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xamlStreamWriter.Write(xamlText);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xamlStreamWriter.Flush();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xamlMemoryStream.Seek(<span class="js__num">0</span>,&nbsp;SeekOrigin.Begin);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textRange.Load(xamlMemoryStream,&nbsp;DataFormats.Xaml);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;using&nbsp;(<span class="js__statement">var</span>&nbsp;rtfMemoryStream&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;MemoryStream())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textRange&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;TextRange(richTextBox.Document.ContentStart,&nbsp;richTextBox.Document.ContentEnd);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textRange.Save(rtfMemoryStream,&nbsp;DataFormats.Rtf);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtfMemoryStream.Seek(<span class="js__num">0</span>,&nbsp;SeekOrigin.Begin);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;using&nbsp;(<span class="js__statement">var</span>&nbsp;rtfStreamReader&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;StreamReader(rtfMemoryStream))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;rtfStreamReader.ReadToEnd();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p><strong>&nbsp;</strong>With this code we have all we need to convert RTF to HTML and HTML to RTF. I modified the MSDN library sample to add this RTF/XAML to XAML/RTF conversion and then I either run that XAML through HTML converter which results in the HTML
+ text or I run the HTML through the XAML converter and generate XAML text. I added an interface for these conversion utilities and converted the sample into a library so that I would be able to use it from other projects. Here is the interface:&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public interface IMarkupConverter
+{
+    string ConvertXamlToHtml(string xamlText);
+    string ConvertHtmlToXaml(string htmlText);
+    string ConvertRtfToHtml(string rtfText);
+    string ConvertHtmlToRtf(string htmlText);
+}
+
+public class MarkupConverter : IMarkupConverter
+{
+    public string ConvertXamlToHtml(string xamlText)
+    {
+        return HtmlFromXamlConverter.ConvertXamlToHtml(xamlText, false);
+    }
+
+    public string ConvertHtmlToXaml(string htmlText)
+    {
+        return HtmlToXamlConverter.ConvertHtmlToXaml(htmlText, true);
+    }
+
+    public string ConvertRtfToHtml(string rtfText)
+    {
+        return RtfToHtmlConverter.ConvertRtfToHtml(rtfText);
+    }
+
+    public string ConvertHtmlToRtf(string htmlText)
+    {
+        return HtmlToRtfConverter.ConvertHtmlToRtf(htmlText);
+    }
+}</pre>
+<div class="preview">
+<pre class="js">public&nbsp;interface&nbsp;IMarkupConverter&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;ConvertXamlToHtml(string&nbsp;xamlText);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;ConvertHtmlToXaml(string&nbsp;htmlText);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;ConvertRtfToHtml(string&nbsp;rtfText);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;ConvertHtmlToRtf(string&nbsp;htmlText);&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;
+public&nbsp;class&nbsp;MarkupConverter&nbsp;:&nbsp;IMarkupConverter&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;string&nbsp;ConvertXamlToHtml(string&nbsp;xamlText)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;HtmlFromXamlConverter.ConvertXamlToHtml(xamlText,&nbsp;false);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;string&nbsp;ConvertHtmlToXaml(string&nbsp;htmlText)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;HtmlToXamlConverter.ConvertHtmlToXaml(htmlText,&nbsp;true);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;string&nbsp;ConvertRtfToHtml(string&nbsp;rtfText)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;RtfToHtmlConverter.ConvertRtfToHtml(rtfText);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;string&nbsp;ConvertHtmlToRtf(string&nbsp;htmlText)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;HtmlToRtfConverter.ConvertHtmlToRtf(htmlText);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>With this I am now able to convert from RTF to HTML and from HTML to RTF. However, there is one catch &ndash; the conversion uses the RichTextBox WPF control which requires a single threaded apartment (STA). Therefore in order to run your code that calls
+ the ConvertRtfToHtml or ConvertHtmlToRtf functions,&nbsp;they must also be running in a STA. If you can&rsquo;t have your program run in a STA (for example: when running an ASP .NET website)&nbsp;then you must create a new STA thread to run the conversion.
+ Like this:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">MarkupConverter markupConverter = new MarkupConverter();
+ 
+private string ConvertRtfToHtml(string rtfText)
+{
+   var thread = new Thread(ConvertRtfInSTAThread);
+   var threadData = new ConvertRtfThreadData { RtfText = rtfText };
+   thread.SetApartmentState(ApartmentState.STA);
+   thread.Start(threadData);
+   thread.Join();
+   return threadData.HtmlText;
+}
+ 
+private void ConvertRtfInSTAThread(object rtf)
+{
+   var threadData = rtf as ConvertRtfThreadData;
+   threadData.HtmlText = markupConverter.ConvertRtfToHtml(threadData.RtfText);
+}
+ 
+ 
+private class ConvertRtfThreadData
+{
+   public string RtfText { get; set; }
+   public string HtmlText { get; set; }
+}</pre>
+<div class="preview">
+<pre class="js">MarkupConverter&nbsp;markupConverter&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;MarkupConverter();&nbsp;
+&nbsp;&nbsp;
+private&nbsp;string&nbsp;ConvertRtfToHtml(string&nbsp;rtfText)&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;thread&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;Thread(ConvertRtfInSTAThread);&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;threadData&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;ConvertRtfThreadData&nbsp;<span class="js__brace">{</span>&nbsp;RtfText&nbsp;=&nbsp;rtfText&nbsp;<span class="js__brace">}</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;thread.SetApartmentState(ApartmentState.STA);&nbsp;
+&nbsp;&nbsp;&nbsp;thread.Start(threadData);&nbsp;
+&nbsp;&nbsp;&nbsp;thread.Join();&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;threadData.HtmlText;&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+private&nbsp;<span class="js__operator">void</span>&nbsp;ConvertRtfInSTAThread(object&nbsp;rtf)&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;threadData&nbsp;=&nbsp;rtf&nbsp;as&nbsp;ConvertRtfThreadData;&nbsp;
+&nbsp;&nbsp;&nbsp;threadData.HtmlText&nbsp;=&nbsp;markupConverter.ConvertRtfToHtml(threadData.RtfText);&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+private&nbsp;class&nbsp;ConvertRtfThreadData&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;public&nbsp;string&nbsp;RtfText&nbsp;<span class="js__brace">{</span>&nbsp;get;&nbsp;set;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;public&nbsp;string&nbsp;HtmlText&nbsp;<span class="js__brace">{</span>&nbsp;get;&nbsp;set;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;That is all there is too it! Hopefully, this will come in handy for anyone needing to perform this conversion.</p>
+<p>&nbsp;</p>
+<p><span style="font-size:large">Read more from <a href="http://matthewmanela.com/">
+Matthew Manela</a>&nbsp;at his <a href="http://matthewmanela.com/">blog</a>...</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

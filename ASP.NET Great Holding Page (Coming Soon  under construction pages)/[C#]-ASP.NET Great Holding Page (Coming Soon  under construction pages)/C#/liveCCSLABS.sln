@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "liveCCSLABS", "liveCCSLABS\liveCCSLABS.ccproj", "{80044FB1-9923-44A1-BC71-CFEB7A69B097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRole1", "WebRole1\WebRole1.csproj", "{DF134F12-A1A3-4C7F-8C13-E9BB33DA9809}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ccslabs.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = liveCCSLABS\\liveCCSLABS.ccproj
+		SccProjectName1 = liveCCSLABS
+		SccLocalPath1 = liveCCSLABS
+		SccProjectUniqueName2 = WebRole1\\WebRole1.csproj
+		SccProjectName2 = WebRole1
+		SccLocalPath2 = WebRole1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80044FB1-9923-44A1-BC71-CFEB7A69B097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80044FB1-9923-44A1-BC71-CFEB7A69B097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80044FB1-9923-44A1-BC71-CFEB7A69B097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80044FB1-9923-44A1-BC71-CFEB7A69B097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF134F12-A1A3-4C7F-8C13-E9BB33DA9809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF134F12-A1A3-4C7F-8C13-E9BB33DA9809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF134F12-A1A3-4C7F-8C13-E9BB33DA9809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF134F12-A1A3-4C7F-8C13-E9BB33DA9809}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

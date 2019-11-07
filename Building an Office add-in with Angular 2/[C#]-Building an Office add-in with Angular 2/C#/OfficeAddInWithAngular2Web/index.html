@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>office add-in</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.2.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.2.0/fabric.components.min.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
+     
+    <!--<script src="./scripts/office/1/office.debug.js"></script>-->
+
+    <base href="/">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="./node_modules/core-js/client/shim.min.js"></script>
+    <script src="https://unpkg.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="./node_modules/zone.js/dist/zone.js"></script>
+    <script src="./node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="./node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="./public/js/systemjs.config.js"></script>
+
+    <script>
+        //office.js sets replaceState and pushState null which wil break the Angular 2 router. 
+        window.history.replaceState = function(){};
+        window.history.pushState = function(){};
+    </script>
+
+    <script>
+      System.import('addin').catch(function(err){ console.error(err); });
+    </script>
+</head>
+
+<body>
+    <addin></addin>
+</body>
+
+</html>

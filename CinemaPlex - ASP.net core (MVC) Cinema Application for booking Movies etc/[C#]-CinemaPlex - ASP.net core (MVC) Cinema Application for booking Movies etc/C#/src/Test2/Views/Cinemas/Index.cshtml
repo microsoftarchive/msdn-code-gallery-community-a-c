@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CinemaModel>
+
+@{
+    ViewData["Title"] = "Cinemas Page";
+}
+
+<h2>CinemaPlex Cinema Locations</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                Descripton
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Program.data.Cinemas)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Location, "Details", new { id = item.CineplexID })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShortDescription)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

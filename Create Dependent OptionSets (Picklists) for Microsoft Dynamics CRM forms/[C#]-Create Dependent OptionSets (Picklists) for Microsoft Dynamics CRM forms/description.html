@@ -1,0 +1,899 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.4.0.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=645847E286247732C56097F564F6E2F9" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=DCDE209A80284FC75CEAAA34283AAE44" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Create Dependent OptionSets (Picklists) for Microsoft Dynamics CRM forms</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Create Dependent OptionSets (Picklists) for Microsoft Dynamics CRM forms</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Javascript, Microsoft Dynamics CRM 2016
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Form Scripting
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/24/2018</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Create-Dependent-844db2d1">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>It is a common requirement that the values in one option set field need to be filtered by a value chosen in another option set field. This topic describes one approach to achieve this requirement with a re-usable JScript library, form events, and a JavaScript
+ web resource containing configuration data as JSON.</p>
+<p>To observe and verify the functionality of this sample you can install the DependentOptionSetsSample_2_0_0_0_target_CRM_8.0_managed.zip managed solution included with the Visual Studio solution containing the sample code</p>
+<p>This is the same sample available in the MSDN Library:&nbsp;<a title="Sample: Create dependent OptionSets (picklists)" href="http://msdn.microsoft.com/library/gg594433.aspx" >Sample: Create dependent OptionSets (picklists)</a></p>
+<h1>Goals for this Solution</h1>
+<p>This solution is intended to meet the following requirements:</p>
+<ul>
+<li>It provides a generic, re-usable JScript library that can be used for any pair of option set fields.
+</li></ul>
+<ul class="unordered">
+<li>
+<p>It allows for a chain of dependent option set fields. Because the options of each dependent option set field are filtered based on the value of another field, additional option set field options can be filtered by the option chosen in the first dependent
+ option set field. This allows for the possibility of a set of hierarchically dependent option set fields.</p>
+</li></ul>
+<ul class="unordered">
+<li>
+<p>The filtering of dependent options is set as JSON in a JavaScript web resource. This allows for changing the option mappings without changing the code. Editing JSON data in a JavaScript web resource is easier for a non-developer to configure options with
+ less opportunity to break the code.</p>
+</li></ul>
+<ul>
+<li>The solution supports multiple languages. The filtering is based solely on the data value of the options rather than any text in the options.
+</li><li>Filtering works for any number of instances of an attribute control on the form.
+</li></ul>
+<h1>Example</h1>
+<p>This section describes one application of this approach and the procedure to apply the sample library.</p>
+<p>The <strong>Ticket</strong> (sample_ticket) entity form has three option set fields and options that allow for categorization of products. The following table shows the desired filtering of options set options.</p>
+<table>
+<tbody>
+<tr>
+<th><strong>Category<br>
+</strong><code>(sample_category)</code> </th>
+<th><strong>Sub Category<br>
+</strong><code>(sample_subcategory)</code> </th>
+<th><strong>Type<br>
+</strong><code>(sample_type)</code> </th>
+</tr>
+<tr>
+<td rowspan="11">
+<p><strong>Value:</strong>727000000 <strong>Label:</strong> Software</p>
+</td>
+<td rowspan="4">
+<p><strong>Value:</strong>727000000 <strong>Label:</strong> Personal Productivity</p>
+</td>
+<td>
+<p><strong>Value:</strong>727000000 <strong>Label:</strong> Word Processor</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000001 <strong>Label:</strong> Spreadsheet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000002 <strong>Label:</strong> Internet Browser</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000003 <strong>Label:</strong> E-mail</p>
+</td>
+</tr>
+<tr>
+<td rowspan="3">
+<p><strong>Value:</strong>727000001 <strong>Label:</strong> Business Applications</p>
+</td>
+<td>
+<p><strong>Value:</strong>727000004 <strong>Label:</strong> Customer Relationship Management</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000005 <strong>Label:</strong> Enterprise Resource Management</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000006 <strong>Label:</strong> Human Resource Management</p>
+</td>
+</tr>
+<tr>
+<td rowspan="4">
+<p><strong>Value:</strong>727000002 <strong>Label:</strong> Operating Systems</p>
+</td>
+<td>
+<p><strong>Value:</strong>727000007 <strong>Label:</strong> Windows 10</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000008 <strong>Label:</strong> Windows 8</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000009 <strong>Label:</strong> Windows Server 2016</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000010 <strong>Label:</strong> Windows Server 2012</p>
+</td>
+</tr>
+<tr>
+<td rowspan="19">
+<p><strong>Value:</strong>727000001 <strong>Label:</strong> Hardware</p>
+</td>
+<td rowspan="4">
+<p><strong>Value:</strong>727000003 <strong>Label:</strong> Desktop Computer</p>
+</td>
+<td>
+<p><strong>Value:</strong>727000011 <strong>Label:</strong> Workstation x1000</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000012 <strong>Label:</strong> Workstation x2000</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000013 <strong>Label:</strong> Workstation x3000</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000014 <strong>Label:</strong> Workstation x4000</p>
+</td>
+</tr>
+<tr>
+<td rowspan="4">
+<p><strong>Value:</strong>727000004 <strong>Label:</strong> Laptop Computer</p>
+</td>
+<td>
+<p><strong>Value:</strong>727000015 <strong>Label:</strong> Laptop 1000 series</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000016 <strong>Label:</strong> Laptop 2000 series</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000017 <strong>Label:</strong> Laptop 3000 series</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000018 <strong>Label:</strong> Laptop 4000 series</p>
+</td>
+</tr>
+<tr>
+<td rowspan="4">
+<p><strong>Value:</strong>727000005 <strong>Label:</strong> Monitor</p>
+</td>
+<td>
+<p><strong>Value:</strong>727000019 <strong>Label:</strong> CRT</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000020 <strong>Label:</strong> LCD</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000021 <strong>Label:</strong> LED</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000022 <strong>Label:</strong> Projector</p>
+</td>
+</tr>
+<tr>
+<td rowspan="4">
+<p><strong>Value:</strong>727000006 <strong>Label:</strong> Printer</p>
+</td>
+<td>
+<p><strong>Value:</strong>727000023 <strong>Label:&nbsp;</strong>Inkjet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000024 <strong>Label:</strong> Laser</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000025 <strong>Label:</strong> LED</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000026 <strong>Label:</strong> Solid-ink</p>
+</td>
+</tr>
+<tr>
+<td rowspan="3">
+<p><strong>Value:</strong>727000007 <strong>Label:</strong> Telephone</p>
+</td>
+<td>
+<p><strong>Value:</strong>727000027 <strong>Label:</strong> Landline</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000028 <strong>Label:</strong> Mobile</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Value:</strong>727000029 <strong>Label:</strong> Smart Phone</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>To Enable Filtering</h2>
+<ol>
+<li>
+<p>Convert the desired filtering of options into the following JSON document and upload it as an JavaScript web resource titled
+<strong>sample_TicketDependentOptionSetConfig.js</strong>.&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">[
+  {
+      &quot;parent&quot;: &quot;sample_category&quot;,
+      &quot;child&quot;: &quot;sample_subcategory&quot;,
+      &quot;options&quot;: {
+          &quot;727000000&quot;: [
+              &quot;727000000&quot;,
+              &quot;727000001&quot;,
+              &quot;727000002&quot;
+          ],
+          &quot;727000001&quot;: [
+              &quot;727000003&quot;,
+              &quot;727000004&quot;,
+              &quot;727000005&quot;,
+              &quot;727000006&quot;,
+              &quot;727000007&quot;
+          ]
+      }
+
+  },
+  {
+      &quot;parent&quot;: &quot;sample_subcategory&quot;,
+      &quot;child&quot;: &quot;sample_type&quot;,
+      &quot;options&quot;: {
+          &quot;727000000&quot;: [
+              &quot;727000000&quot;,
+              &quot;727000001&quot;,
+              &quot;727000002&quot;,
+              &quot;727000003&quot;
+          ],
+          &quot;727000001&quot;: [
+              &quot;727000004&quot;,
+              &quot;727000005&quot;,
+              &quot;727000006&quot;
+          ],
+          &quot;727000002&quot;: [
+              &quot;727000007&quot;,
+              &quot;727000008&quot;,
+              &quot;727000009&quot;,
+              &quot;727000010&quot;
+          ],
+          &quot;727000003&quot;: [
+              &quot;727000011&quot;,
+              &quot;727000012&quot;,
+              &quot;727000013&quot;,
+              &quot;727000014&quot;
+          ],
+          &quot;727000004&quot;: [
+              &quot;727000015&quot;,
+              &quot;727000016&quot;,
+              &quot;727000017&quot;,
+              &quot;727000018&quot;
+          ],
+          &quot;727000005&quot;: [
+              &quot;727000019&quot;,
+              &quot;727000020&quot;,
+              &quot;727000021&quot;,
+              &quot;727000022&quot;
+          ],
+          &quot;727000006&quot;: [
+              &quot;727000023&quot;,
+              &quot;727000024&quot;,
+              &quot;727000025&quot;,
+              &quot;727000026&quot;
+          ],
+          &quot;727000007&quot;: [
+              &quot;727000027&quot;,
+              &quot;727000028&quot;,
+              &quot;727000029&quot;
+          ]
+      }
+  }
+]</pre>
+<div class="preview">
+<pre class="js">[&nbsp;
+&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;parent&quot;</span>:&nbsp;<span class="js__string">&quot;sample_category&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;child&quot;</span>:&nbsp;<span class="js__string">&quot;sample_subcategory&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;options&quot;</span>:&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000000&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000000&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000001&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000002&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000001&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000003&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000004&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000005&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000006&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000007&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;<span class="js__brace">}</span>,&nbsp;
+&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;parent&quot;</span>:&nbsp;<span class="js__string">&quot;sample_subcategory&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;child&quot;</span>:&nbsp;<span class="js__string">&quot;sample_type&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;options&quot;</span>:&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000000&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000000&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000001&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000002&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000003&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000001&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000004&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000005&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000006&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000002&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000007&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000008&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000009&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000010&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000003&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000011&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000012&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000013&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000014&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000004&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000015&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000016&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000017&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000018&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000005&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000019&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000020&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000021&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000022&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000006&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000023&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000024&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000025&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000026&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000007&quot;</span>:&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000027&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000028&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;727000029&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+]</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"></div>
+</li><li>
+<p>Create a JavaScript web resource named <strong>sample_SDK.DependentOptionSetSample.js</strong> using the following code.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">//If the SDK namespace object is not defined, create it.
+if (typeof (SDK) == &quot;undefined&quot;)
+{ SDK = {}; }
+// Create Namespace container for functions in this library;
+SDK.DependentOptionSet = {};
+SDK.DependentOptionSet.config = null;
+
+/**
+ * @function SDK.DependentOptionSet.init
+ * @param {string} webResourceName the name of the JavaScript web resource containing the JSON definition 
+ * of option dependencies
+ */
+SDK.DependentOptionSet.init = function (webResourceName) {
+    if (SDK.DependentOptionSet.config == null) {
+        //Retrieve the JavaScript Web Resource specified by the parameter passed
+        var clientURL = Xrm.Page.context.getClientUrl();
+
+        var pathToWR = clientURL &#43; &quot;/WebResources/&quot; &#43; webResourceName;
+        var xhr = new XMLHttpRequest();
+        xhr.open(&quot;GET&quot;, pathToWR, true);
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 /* complete */) {
+                this.onreadystatechange = null;
+                if (this.status == 200) {
+                    SDK.DependentOptionSet.config = JSON.parse(this.response);
+                    SDK.DependentOptionSet.completeInitialization();
+                }
+                else {
+                    throw new Error(&quot;Failed to load configuration data for dependent option sets.&quot;);
+                }
+            }
+        };
+        xhr.send();
+    }
+    else {
+        SDK.DependentOptionSet.completeInitialization();
+    }
+};
+
+/**
+ * @function SDK.DependentOptionSet.completeInitialization
+ * Initializes the dependent option set options when the form loads
+ */
+SDK.DependentOptionSet.completeInitialization = function () {
+    //If the parent field is null, make sure the child field is null and disabled
+    // Otherwise, call fireOnChange to filter the child options
+    for (var i = 0; i &lt; SDK.DependentOptionSet.config.length; i&#43;&#43;) {
+        var parentAttribute = Xrm.Page.getAttribute(SDK.DependentOptionSet.config[i].parent);
+        var parentFieldValue = parentAttribute.getValue();
+        if (parentFieldValue == null || parentFieldValue == -1) {
+            var childAttribute = Xrm.Page.getAttribute(SDK.DependentOptionSet.config[i].child);
+            childAttribute.setValue(null);
+            childAttribute.controls.forEach(function (c) { c.setDisabled(true); });
+        }
+        else {
+            parentAttribute.fireOnChange();
+        }
+    }
+}
+
+/**
+ * @function SDK.DependentOptionSet.filterDependentField
+ * Locates the correct set of configurations
+ * @param {string} parentFieldParam The name of the parent field
+ * @param {string} childFieldParam The name of the dependent field
+ */
+SDK.DependentOptionSet.filterDependentField = function (parentFieldParam, childFieldParam) {
+    //Looping through the array of all the possible dependency configurations
+    for (var i = 0; i &lt; SDK.DependentOptionSet.config.length; i&#43;&#43;) {
+
+        var dependentOptionSet = SDK.DependentOptionSet.config[i];
+
+        /* Match the parameters to the correct dependent optionset mapping*/
+        if ((dependentOptionSet.parent == parentFieldParam) &amp;&amp;
+            (dependentOptionSet.child == childFieldParam)) {
+
+/*
+* Using setTimeout to allow a little time between calling this potentially recursive function.
+* Without including some time between calls, the value at the end of the chain of dependencies 
+* was being set to null on form load.
+*/
+            setTimeout(SDK.DependentOptionSet.filterOptions,
+                100, parentFieldParam,
+                childFieldParam,
+                dependentOptionSet);
+        }
+    }
+};
+
+/**
+ * @function SDK.DependentOptionSet.filterOptions
+ * Filters options available in dependent fields when the parent field changes
+ * @param {string} parentFieldParam The name of the parent field
+ * @param {string} childFieldParam The name of the dependent field
+ * @param {object} dependentOptionSet The configuration data for the dependent options
+ */
+SDK.DependentOptionSet.filterOptions = function (parentFieldParam, childFieldParam, dependentOptionSet)
+{
+    /* Get references to the related fields*/
+    var parentField = Xrm.Page.getAttribute(parentFieldParam);
+    var parentFieldValue = parentField.getValue();
+    var childField = Xrm.Page.getAttribute(childFieldParam);
+    /* Capture the current value of the child field*/
+    var currentChildFieldValue = childField.getValue();
+    /* If the parent field is null, set the Child field to null */
+    //Interactive Service Hub, CRM for Tablets &amp; CRM for phones can return -1 when no option selected
+    if (parentFieldValue == null || parentFieldValue == -1) {
+        childField.setValue(null);
+        childField.fireOnChange(); //filter any dependent optionsets
+        // Any attribute may have any number of controls
+        // So disable each instance
+        childField.controls.forEach(function (c) {
+            c.setDisabled(true);
+        });
+        //Nothing more to do when parent attribute is null
+        return;
+    }
+
+    //The valid child options defined by the configuration
+    var validOptionValues = dependentOptionSet.options[parentFieldValue.toString()];
+
+    //When the parent field has a value
+    //Any attribute may have more than one control in the form,
+    // So iterate over each one
+    childField.controls.forEach(function (c) {
+        c.setDisabled(false);
+        c.clearOptions();
+        //The attribute contains the valid options
+        var childFieldAttribute = c.getAttribute();
+
+        //The attribute options for the Interactive Service Hub, CRM for Tablets &amp; 
+        // CRM for phones clients do not include a definition for an unselected option.
+        // This will add it
+        if (Xrm.Page.context.client.getClient() == &quot;Mobile&quot;) {
+            c.addOption({ text: &quot;&quot;, value: -1 });
+        }
+
+        //For each option value, get the definition from the attribute and add it to the control.
+            validOptionValues.forEach(function (optionValue) {
+                //Get the option defnition from the attribute
+                var option = childFieldAttribute.getOption(parseInt(optionValue));
+                //Add the option to the control
+                c.addOption(option);
+            })
+    });
+    //Set the value back to the current value if it is a valid value.                
+    if (currentChildFieldValue != null &amp;&amp;
+        validOptionValues.indexOf(currentChildFieldValue.toString()) &gt; -1) {
+        childField.setValue(currentChildFieldValue);
+    }
+    else {
+        //Otherwise set it to null
+        childField.setValue(null);
+        childField.fireOnChange(); //filter any other dependent optionsets
+    }
+}</pre>
+<div class="preview">
+<pre class="js"><span class="js__sl_comment">//If&nbsp;the&nbsp;SDK&nbsp;namespace&nbsp;object&nbsp;is&nbsp;not&nbsp;defined,&nbsp;create&nbsp;it.</span>&nbsp;
+<span class="js__statement">if</span>&nbsp;(<span class="js__operator">typeof</span>&nbsp;(SDK)&nbsp;==&nbsp;<span class="js__string">&quot;undefined&quot;</span>)&nbsp;
+<span class="js__brace">{</span>&nbsp;SDK&nbsp;=&nbsp;<span class="js__brace">{</span><span class="js__brace">}</span>;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__sl_comment">//&nbsp;Create&nbsp;Namespace&nbsp;container&nbsp;for&nbsp;functions&nbsp;in&nbsp;this&nbsp;library;</span>&nbsp;
+SDK.DependentOptionSet&nbsp;=&nbsp;<span class="js__brace">{</span><span class="js__brace">}</span>;&nbsp;
+SDK.DependentOptionSet.config&nbsp;=&nbsp;null;&nbsp;
+&nbsp;
+<span class="js__ml_comment">/**&nbsp;
+&nbsp;*&nbsp;@function&nbsp;SDK.DependentOptionSet.init&nbsp;
+&nbsp;*&nbsp;@param&nbsp;{string}&nbsp;webResourceName&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;JavaScript&nbsp;web&nbsp;resource&nbsp;containing&nbsp;the&nbsp;JSON&nbsp;definition&nbsp;&nbsp;
+&nbsp;*&nbsp;of&nbsp;option&nbsp;dependencies&nbsp;
+&nbsp;*/</span>&nbsp;
+SDK.DependentOptionSet.init&nbsp;=&nbsp;<span class="js__operator">function</span>&nbsp;(webResourceName)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(SDK.DependentOptionSet.config&nbsp;==&nbsp;null)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Retrieve&nbsp;the&nbsp;JavaScript&nbsp;Web&nbsp;Resource&nbsp;specified&nbsp;by&nbsp;the&nbsp;parameter&nbsp;passed</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;clientURL&nbsp;=&nbsp;Xrm.Page.context.getClientUrl();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;pathToWR&nbsp;=&nbsp;clientURL&nbsp;&#43;&nbsp;<span class="js__string">&quot;/WebResources/&quot;</span>&nbsp;&#43;&nbsp;webResourceName;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;xhr&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;XMLHttpRequest();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xhr.open(<span class="js__string">&quot;GET&quot;</span>,&nbsp;pathToWR,&nbsp;true);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xhr.onreadystatechange&nbsp;=&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(<span class="js__operator">this</span>.readyState&nbsp;==&nbsp;<span class="js__num">4</span>&nbsp;<span class="js__ml_comment">/*&nbsp;complete&nbsp;*/</span>)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.onreadystatechange&nbsp;=&nbsp;null;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(<span class="js__operator">this</span>.status&nbsp;==&nbsp;<span class="js__num">200</span>)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SDK.DependentOptionSet.config&nbsp;=&nbsp;JSON.parse(<span class="js__operator">this</span>.response);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SDK.DependentOptionSet.completeInitialization();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">throw</span>&nbsp;<span class="js__operator">new</span>&nbsp;<span class="js__error">Error</span>(<span class="js__string">&quot;Failed&nbsp;to&nbsp;load&nbsp;configuration&nbsp;data&nbsp;for&nbsp;dependent&nbsp;option&nbsp;sets.&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xhr.send();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SDK.DependentOptionSet.completeInitialization();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span>;&nbsp;
+&nbsp;
+<span class="js__ml_comment">/**&nbsp;
+&nbsp;*&nbsp;@function&nbsp;SDK.DependentOptionSet.completeInitialization&nbsp;
+&nbsp;*&nbsp;Initializes&nbsp;the&nbsp;dependent&nbsp;option&nbsp;set&nbsp;options&nbsp;when&nbsp;the&nbsp;form&nbsp;loads&nbsp;
+&nbsp;*/</span>&nbsp;
+SDK.DependentOptionSet.completeInitialization&nbsp;=&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//If&nbsp;the&nbsp;parent&nbsp;field&nbsp;is&nbsp;null,&nbsp;make&nbsp;sure&nbsp;the&nbsp;child&nbsp;field&nbsp;is&nbsp;null&nbsp;and&nbsp;disabled</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;Otherwise,&nbsp;call&nbsp;fireOnChange&nbsp;to&nbsp;filter&nbsp;the&nbsp;child&nbsp;options</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(<span class="js__statement">var</span>&nbsp;i&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;i&nbsp;&lt;&nbsp;SDK.DependentOptionSet.config.length;&nbsp;i&#43;&#43;)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;parentAttribute&nbsp;=&nbsp;Xrm.Page.getAttribute(SDK.DependentOptionSet.config[i].parent);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;parentFieldValue&nbsp;=&nbsp;parentAttribute.getValue();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(parentFieldValue&nbsp;==&nbsp;null&nbsp;||&nbsp;parentFieldValue&nbsp;==&nbsp;-<span class="js__num">1</span>)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;childAttribute&nbsp;=&nbsp;Xrm.Page.getAttribute(SDK.DependentOptionSet.config[i].child);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childAttribute.setValue(null);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childAttribute.controls.forEach(<span class="js__operator">function</span>&nbsp;(c)&nbsp;<span class="js__brace">{</span>&nbsp;c.setDisabled(true);&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parentAttribute.fireOnChange();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;
+<span class="js__ml_comment">/**&nbsp;
+&nbsp;*&nbsp;@function&nbsp;SDK.DependentOptionSet.filterDependentField&nbsp;
+&nbsp;*&nbsp;Locates&nbsp;the&nbsp;correct&nbsp;set&nbsp;of&nbsp;configurations&nbsp;
+&nbsp;*&nbsp;@param&nbsp;{string}&nbsp;parentFieldParam&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;parent&nbsp;field&nbsp;
+&nbsp;*&nbsp;@param&nbsp;{string}&nbsp;childFieldParam&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;dependent&nbsp;field&nbsp;
+&nbsp;*/</span>&nbsp;
+SDK.DependentOptionSet.filterDependentField&nbsp;=&nbsp;<span class="js__operator">function</span>&nbsp;(parentFieldParam,&nbsp;childFieldParam)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Looping&nbsp;through&nbsp;the&nbsp;array&nbsp;of&nbsp;all&nbsp;the&nbsp;possible&nbsp;dependency&nbsp;configurations</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(<span class="js__statement">var</span>&nbsp;i&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;i&nbsp;&lt;&nbsp;SDK.DependentOptionSet.config.length;&nbsp;i&#43;&#43;)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;dependentOptionSet&nbsp;=&nbsp;SDK.DependentOptionSet.config[i];&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__ml_comment">/*&nbsp;Match&nbsp;the&nbsp;parameters&nbsp;to&nbsp;the&nbsp;correct&nbsp;dependent&nbsp;optionset&nbsp;mapping*/</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;((dependentOptionSet.parent&nbsp;==&nbsp;parentFieldParam)&nbsp;&amp;&amp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(dependentOptionSet.child&nbsp;==&nbsp;childFieldParam))&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;
+<span class="js__ml_comment">/*&nbsp;
+*&nbsp;Using&nbsp;setTimeout&nbsp;to&nbsp;allow&nbsp;a&nbsp;little&nbsp;time&nbsp;between&nbsp;calling&nbsp;this&nbsp;potentially&nbsp;recursive&nbsp;function.&nbsp;
+*&nbsp;Without&nbsp;including&nbsp;some&nbsp;time&nbsp;between&nbsp;calls,&nbsp;the&nbsp;value&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;chain&nbsp;of&nbsp;dependencies&nbsp;&nbsp;
+*&nbsp;was&nbsp;being&nbsp;set&nbsp;to&nbsp;null&nbsp;on&nbsp;form&nbsp;load.&nbsp;
+*/</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(SDK.DependentOptionSet.filterOptions,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__num">100</span>,&nbsp;parentFieldParam,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childFieldParam,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dependentOptionSet);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span>;&nbsp;
+&nbsp;
+<span class="js__ml_comment">/**&nbsp;
+&nbsp;*&nbsp;@function&nbsp;SDK.DependentOptionSet.filterOptions&nbsp;
+&nbsp;*&nbsp;Filters&nbsp;options&nbsp;available&nbsp;in&nbsp;dependent&nbsp;fields&nbsp;when&nbsp;the&nbsp;parent&nbsp;field&nbsp;changes&nbsp;
+&nbsp;*&nbsp;@param&nbsp;{string}&nbsp;parentFieldParam&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;parent&nbsp;field&nbsp;
+&nbsp;*&nbsp;@param&nbsp;{string}&nbsp;childFieldParam&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;dependent&nbsp;field&nbsp;
+&nbsp;*&nbsp;@param&nbsp;{object}&nbsp;dependentOptionSet&nbsp;The&nbsp;configuration&nbsp;data&nbsp;for&nbsp;the&nbsp;dependent&nbsp;options&nbsp;
+&nbsp;*/</span>&nbsp;
+SDK.DependentOptionSet.filterOptions&nbsp;=&nbsp;<span class="js__operator">function</span>&nbsp;(parentFieldParam,&nbsp;childFieldParam,&nbsp;dependentOptionSet)&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__ml_comment">/*&nbsp;Get&nbsp;references&nbsp;to&nbsp;the&nbsp;related&nbsp;fields*/</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;parentField&nbsp;=&nbsp;Xrm.Page.getAttribute(parentFieldParam);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;parentFieldValue&nbsp;=&nbsp;parentField.getValue();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;childField&nbsp;=&nbsp;Xrm.Page.getAttribute(childFieldParam);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__ml_comment">/*&nbsp;Capture&nbsp;the&nbsp;current&nbsp;value&nbsp;of&nbsp;the&nbsp;child&nbsp;field*/</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;currentChildFieldValue&nbsp;=&nbsp;childField.getValue();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__ml_comment">/*&nbsp;If&nbsp;the&nbsp;parent&nbsp;field&nbsp;is&nbsp;null,&nbsp;set&nbsp;the&nbsp;Child&nbsp;field&nbsp;to&nbsp;null&nbsp;*/</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Interactive&nbsp;Service&nbsp;Hub,&nbsp;CRM&nbsp;for&nbsp;Tablets&nbsp;&amp;&nbsp;CRM&nbsp;for&nbsp;phones&nbsp;can&nbsp;return&nbsp;-1&nbsp;when&nbsp;no&nbsp;option&nbsp;selected</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(parentFieldValue&nbsp;==&nbsp;null&nbsp;||&nbsp;parentFieldValue&nbsp;==&nbsp;-<span class="js__num">1</span>)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childField.setValue(null);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childField.fireOnChange();&nbsp;<span class="js__sl_comment">//filter&nbsp;any&nbsp;dependent&nbsp;optionsets</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;Any&nbsp;attribute&nbsp;may&nbsp;have&nbsp;any&nbsp;number&nbsp;of&nbsp;controls</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;So&nbsp;disable&nbsp;each&nbsp;instance</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childField.controls.forEach(<span class="js__operator">function</span>&nbsp;(c)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.setDisabled(true);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Nothing&nbsp;more&nbsp;to&nbsp;do&nbsp;when&nbsp;parent&nbsp;attribute&nbsp;is&nbsp;null</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//The&nbsp;valid&nbsp;child&nbsp;options&nbsp;defined&nbsp;by&nbsp;the&nbsp;configuration</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;validOptionValues&nbsp;=&nbsp;dependentOptionSet.options[parentFieldValue.toString()];&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//When&nbsp;the&nbsp;parent&nbsp;field&nbsp;has&nbsp;a&nbsp;value</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Any&nbsp;attribute&nbsp;may&nbsp;have&nbsp;more&nbsp;than&nbsp;one&nbsp;control&nbsp;in&nbsp;the&nbsp;form,</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;So&nbsp;iterate&nbsp;over&nbsp;each&nbsp;one</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;childField.controls.forEach(<span class="js__operator">function</span>&nbsp;(c)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.setDisabled(false);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.clearOptions();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//The&nbsp;attribute&nbsp;contains&nbsp;the&nbsp;valid&nbsp;options</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;childFieldAttribute&nbsp;=&nbsp;c.getAttribute();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//The&nbsp;attribute&nbsp;options&nbsp;for&nbsp;the&nbsp;Interactive&nbsp;Service&nbsp;Hub,&nbsp;CRM&nbsp;for&nbsp;Tablets&nbsp;&amp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;CRM&nbsp;for&nbsp;phones&nbsp;clients&nbsp;do&nbsp;not&nbsp;include&nbsp;a&nbsp;definition&nbsp;for&nbsp;an&nbsp;unselected&nbsp;option.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;This&nbsp;will&nbsp;add&nbsp;it</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(Xrm.Page.context.client.getClient()&nbsp;==&nbsp;<span class="js__string">&quot;Mobile&quot;</span>)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.addOption(<span class="js__brace">{</span>&nbsp;text:&nbsp;<span class="js__string">&quot;&quot;</span>,&nbsp;value:&nbsp;-<span class="js__num">1</span>&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//For&nbsp;each&nbsp;option&nbsp;value,&nbsp;get&nbsp;the&nbsp;definition&nbsp;from&nbsp;the&nbsp;attribute&nbsp;and&nbsp;add&nbsp;it&nbsp;to&nbsp;the&nbsp;control.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validOptionValues.forEach(<span class="js__operator">function</span>&nbsp;(optionValue)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Get&nbsp;the&nbsp;option&nbsp;defnition&nbsp;from&nbsp;the&nbsp;attribute</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;option&nbsp;=&nbsp;childFieldAttribute.getOption(<span class="js__function">parseInt</span>(optionValue));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Add&nbsp;the&nbsp;option&nbsp;to&nbsp;the&nbsp;control</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.addOption(option);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Set&nbsp;the&nbsp;value&nbsp;back&nbsp;to&nbsp;the&nbsp;current&nbsp;value&nbsp;if&nbsp;it&nbsp;is&nbsp;a&nbsp;valid&nbsp;value.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(currentChildFieldValue&nbsp;!=&nbsp;null&nbsp;&amp;&amp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validOptionValues.indexOf(currentChildFieldValue.toString())&nbsp;&gt;&nbsp;-<span class="js__num">1</span>)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childField.setValue(currentChildFieldValue);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Otherwise&nbsp;set&nbsp;it&nbsp;to&nbsp;null</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childField.setValue(null);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childField.fireOnChange();&nbsp;<span class="js__sl_comment">//filter&nbsp;any&nbsp;other&nbsp;dependent&nbsp;optionsets</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"></div>
+</li><li>
+<p>Add the <strong>sample_SDK.DependentOptionSetSample.js</strong> Script web resource to the JScript libraries available for the form.</p>
+</li><li>
+<p>In the <strong>Onload</strong> event for the form, configure the event handler to call the<strong> SDK.DependentOptionSet.init
+</strong>function and pass in the name of the XML web resource as a parameter. Use the field on the
+<strong>Handler Properties</strong> dialog box to enter: <span style="font-family:'Courier New'">
+&quot;sample_TicketDependentOptionSetConfig.js&quot;</span> into the field <strong>Comma separated list of parameters that will be passed to the function</strong>.</p>
+</li><li>
+<p>In the <strong>OnChange</strong> event for the <strong>Category</strong> field, set the
+<strong>Function</strong> to <strong>SDK.DependentOptionSet.filterDependentField</strong>.</p>
+<p>In the <strong>Comma separated list of parameters that will be passed to the function</strong> text box enter:
+<span style="font-family:'Courier New'">&quot;sample_category&quot;, &quot;sample_subcategory&quot;</span>.</p>
+</li><li>
+<p>In the <strong>OnChange</strong> event for the <strong>Sub Category</strong> field, set the
+<strong>Function</strong> to <strong>SDK.DependentOptionSet.filterDependentField</strong>.</p>
+<p>In the <strong>Comma separated list of parameters that will be passed to the function</strong> text box enter:
+<span style="font-family:'Courier New'">&quot;sample_subcategory &quot;, &quot;sample_type&quot;</span>.</p>
+</li><li>
+<p>Save and publish all customizations.</p>
+</li></ol>
+<p>When you open the <strong>Ticket</strong> entity form you will find that the <strong>
+Sub Category</strong> and <strong>Type</strong> options are filtered depending on the values chosen for their respective option sets.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

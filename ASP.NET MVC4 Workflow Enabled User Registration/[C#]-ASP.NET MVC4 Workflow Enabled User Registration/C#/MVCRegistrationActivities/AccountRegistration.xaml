@@ -1,0 +1,518 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="MVCRegistrationActivities.AccountRegistration"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:local="clr-namespace:MVCRegistrationActivities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:scs="clr-namespace:System.Collections.Specialized;assembly=System"
+ xmlns:snm="clr-namespace:System.Net.Mail;assembly=System"
+ xmlns:snm1="clr-namespace:System.Net.Mime;assembly=System"
+ xmlns:st="clr-namespace:System.Text;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="RegData" Type="InArgument(local:RegistrationData)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>MVCRegistrationActivities.AccountRegistration_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>MVCRegistrationActivities</x:String>
+      <x:String>System.Configuration</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Configuration</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Web</AssemblyReference>
+      <AssemblyReference>System.Web.ApplicationServices</AssemblyReference>
+      <AssemblyReference>System.Web.Mvc</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>MVCRegistrationActivities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <StateMachine sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <StateMachine.InitialState>
+      <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="One time initialization of variables" DisplayName="Initialize" sap2010:WorkflowViewState.IdRef="State_3">
+        <State.Entry>
+          <Sequence DisplayName="Initialize State Machine Variables" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Assign DisplayName="Assign MaxReminders" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">
+                  <mca:CSharpReference x:TypeArguments="x:Int32">MaxReminders</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">
+                  <mca:CSharpValue x:TypeArguments="x:Int32">RegData.EmailTemplates.Count()</mca:CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </State.Entry>
+        <State.Transitions>
+          <Transition DisplayName="Start" sap2010:WorkflowViewState.IdRef="Transition_5">
+            <Transition.To>
+              <State x:Name="__ReferenceID0" DisplayName="SendMail" sap2010:WorkflowViewState.IdRef="State_2">
+                <State.Entry>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="body" />
+                    </Sequence.Variables>
+                    <local:PromoteRegistrationValues sap2010:Annotation.AnnotationText="The promoted properties must be promoted each time after resuming bookmark" DisplayName="Promote Registration Values" sap2010:WorkflowViewState.IdRef="PromoteRegistrationValues_2">
+                      <local:PromoteRegistrationValues.Email>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">RegData.UserEmail</mca:CSharpValue>
+                        </InArgument>
+                      </local:PromoteRegistrationValues.Email>
+                      <local:PromoteRegistrationValues.UserName>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">RegData.UserName</mca:CSharpValue>
+                        </InArgument>
+                      </local:PromoteRegistrationValues.UserName>
+                    </local:PromoteRegistrationValues>
+                    <local:FormatMailBody DisplayName="Format Mail Body" sap2010:WorkflowViewState.IdRef="FormatMailBody_1">
+                      <local:FormatMailBody.Data>
+                        <InArgument x:TypeArguments="local:RegistrationData">
+                          <mca:CSharpValue x:TypeArguments="local:RegistrationData">RegData</mca:CSharpValue>
+                        </InArgument>
+                      </local:FormatMailBody.Data>
+                      <local:FormatMailBody.EmailTemplateIndex>
+                        <InArgument x:TypeArguments="x:Int32">
+                          <mca:CSharpValue x:TypeArguments="x:Int32">ReminderCount</mca:CSharpValue>
+                        </InArgument>
+                      </local:FormatMailBody.EmailTemplateIndex>
+                      <local:FormatMailBody.MailBody>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mca:CSharpReference x:TypeArguments="x:String">body</mca:CSharpReference>
+                        </OutArgument>
+                      </local:FormatMailBody.MailBody>
+                    </local:FormatMailBody>
+                    <local:SendMail DisplayName="Send Mail" sap2010:WorkflowViewState.IdRef="SendMail_1">
+                      <local:SendMail.AlternateViews>
+                        <InArgument x:TypeArguments="scg:IEnumerable(snm:AlternateView)">
+                          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(snm:AlternateView)">RegData.AlternateViews</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.AlternateViews>
+                      <local:SendMail.Attachments>
+                        <InArgument x:TypeArguments="scg:IEnumerable(snm:Attachment)">
+                          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(snm:Attachment)">RegData.Attachments</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.Attachments>
+                      <local:SendMail.Bcc>
+                        <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
+                          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(x:String)">RegData.Bcc</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.Bcc>
+                      <local:SendMail.Body>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">body</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.Body>
+                      <local:SendMail.BodyArguments>
+                        <InArgument x:TypeArguments="scg:IEnumerable(x:Object)">
+                          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(x:Object)">RegData.BodyArguments</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.BodyArguments>
+                      <local:SendMail.BodyEncoding>
+                        <InArgument x:TypeArguments="st:Encoding">
+                          <mca:CSharpValue x:TypeArguments="st:Encoding">RegData.BodyEncoding</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.BodyEncoding>
+                      <local:SendMail.BodyTransferEncoding>
+                        <InArgument x:TypeArguments="s:Nullable(snm1:TransferEncoding)">
+                          <mca:CSharpValue x:TypeArguments="s:Nullable(snm1:TransferEncoding)">RegData.BodyTransferEncoding</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.BodyTransferEncoding>
+                      <local:SendMail.CC>
+                        <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
+                          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(x:String)">RegData.CC</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.CC>
+                      <local:SendMail.DeliveryNotificationOptions>
+                        <InArgument x:TypeArguments="s:Nullable(snm:DeliveryNotificationOptions)">
+                          <mca:CSharpValue x:TypeArguments="s:Nullable(snm:DeliveryNotificationOptions)">RegData.DeliveryNotificationOptions</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.DeliveryNotificationOptions>
+                      <local:SendMail.EmailTemplate>
+                        <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
+                          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(x:String)">RegData.EmailTemplates</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.EmailTemplate>
+                      <local:SendMail.EmailTemplateIndex>
+                        <InArgument x:TypeArguments="x:Int32">
+                          <mca:CSharpValue x:TypeArguments="x:Int32">ReminderCount</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.EmailTemplateIndex>
+                      <local:SendMail.From>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">RegData.From</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.From>
+                      <local:SendMail.Headers>
+                        <InArgument x:TypeArguments="scs:NameValueCollection">
+                          <mca:CSharpValue x:TypeArguments="scs:NameValueCollection">RegData.Headers</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.Headers>
+                      <local:SendMail.HeadersEncoding>
+                        <InArgument x:TypeArguments="st:Encoding">
+                          <mca:CSharpValue x:TypeArguments="st:Encoding">RegData.HeadersEncoding</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.HeadersEncoding>
+                      <local:SendMail.Host>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">RegData.Host</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.Host>
+                      <local:SendMail.IsBodyHtml>
+                        <InArgument x:TypeArguments="s:Nullable(x:Boolean)">
+                          <mca:CSharpValue x:TypeArguments="s:Nullable(x:Boolean)">RegData.IsBodyHtml</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.IsBodyHtml>
+                      <local:SendMail.Port>
+                        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+                          <mca:CSharpValue x:TypeArguments="s:Nullable(x:Int32)">RegData.Port</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.Port>
+                      <local:SendMail.Priority>
+                        <InArgument x:TypeArguments="s:Nullable(snm:MailPriority)">
+                          <mca:CSharpValue x:TypeArguments="s:Nullable(snm:MailPriority)">RegData.Priority</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.Priority>
+                      <local:SendMail.ReplyToList>
+                        <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
+                          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(x:String)">RegData.ReplyToList</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.ReplyToList>
+                      <local:SendMail.Sender>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">RegData.Sender</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.Sender>
+                      <local:SendMail.Subject>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">RegData.Subject</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.Subject>
+                      <local:SendMail.SubjectEncoding>
+                        <InArgument x:TypeArguments="st:Encoding">
+                          <mca:CSharpValue x:TypeArguments="st:Encoding">RegData.SubjectEncoding</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.SubjectEncoding>
+                      <local:SendMail.To>
+                        <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
+                          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(x:String)">RegData.To</mca:CSharpValue>
+                        </InArgument>
+                      </local:SendMail.To>
+                    </local:SendMail>
+                  </Sequence>
+                </State.Entry>
+                <State.Transitions>
+                  <Transition DisplayName="Confirm" sap2010:WorkflowViewState.IdRef="Transition_1">
+                    <Transition.Trigger>
+                      <local:WaitForCommand DisplayName="Wait For Confirmation" sap2010:WorkflowViewState.IdRef="WaitForCommand_1">
+                        <local:WaitForCommand.Command>
+                          <InArgument x:TypeArguments="local:RegistrationCommand">
+                            <mca:CSharpValue x:TypeArguments="local:RegistrationCommand">RegistrationCommand.Confirm</mca:CSharpValue>
+                          </InArgument>
+                        </local:WaitForCommand.Command>
+                      </local:WaitForCommand>
+                    </Transition.Trigger>
+                    <Transition.To>
+                      <State x:Name="__ReferenceID1" DisplayName="FinalState" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True" />
+                    </Transition.To>
+                    <Transition.Action>
+                      <local:ApproveMembership sap2010:WorkflowViewState.IdRef="ApproveMembership_1">
+                        <local:ApproveMembership.UserName>
+                          <InArgument x:TypeArguments="x:String">
+                            <mca:CSharpValue x:TypeArguments="x:String">RegData.UserName</mca:CSharpValue>
+                          </InArgument>
+                        </local:ApproveMembership.UserName>
+                      </local:ApproveMembership>
+                    </Transition.Action>
+                  </Transition>
+                  <Transition DisplayName="Timeout" sap2010:WorkflowViewState.IdRef="Transition_2">
+                    <Transition.Trigger>
+                      <Sequence x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Delay sap2010:WorkflowViewState.IdRef="Delay_1">
+                          <InArgument x:TypeArguments="x:TimeSpan">
+                            <mca:CSharpValue x:TypeArguments="x:TimeSpan">ReminderDelay</mca:CSharpValue>
+                          </InArgument>
+                        </Delay>
+                        <Assign DisplayName="Increment ReminderCount" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">
+                              <mca:CSharpReference x:TypeArguments="x:Int32">ReminderCount</mca:CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">
+                              <mca:CSharpValue x:TypeArguments="x:Int32">ReminderCount + 1</mca:CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </Transition.Trigger>
+                    <Transition.To>
+                      <x:Reference>__ReferenceID0</x:Reference>
+                    </Transition.To>
+                    <Transition.Condition>
+                      <mca:CSharpValue x:TypeArguments="x:Boolean">ReminderCount &lt; MaxReminders</mca:CSharpValue>
+                    </Transition.Condition>
+                  </Transition>
+                  <Transition DisplayName="Resend" sap2010:WorkflowViewState.IdRef="Transition_3">
+                    <Transition.Trigger>
+                      <local:WaitForCommand DisplayName="Wait For Resend Command" sap2010:WorkflowViewState.IdRef="WaitForCommand_2">
+                        <local:WaitForCommand.Command>
+                          <InArgument x:TypeArguments="local:RegistrationCommand">
+                            <mca:CSharpValue x:TypeArguments="local:RegistrationCommand">RegistrationCommand.SendMail</mca:CSharpValue>
+                          </InArgument>
+                        </local:WaitForCommand.Command>
+                      </local:WaitForCommand>
+                    </Transition.Trigger>
+                    <Transition.To>
+                      <x:Reference>__ReferenceID0</x:Reference>
+                    </Transition.To>
+                  </Transition>
+                  <Transition DisplayName="Cancel" sap2010:WorkflowViewState.IdRef="Transition_7">
+                    <Transition.Trigger>
+                      <local:WaitForCommand DisplayName="Wait For Cancel Command" sap2010:WorkflowViewState.IdRef="WaitForCommand_3">
+                        <local:WaitForCommand.Command>
+                          <InArgument x:TypeArguments="local:RegistrationCommand">
+                            <mca:CSharpValue x:TypeArguments="local:RegistrationCommand">RegistrationCommand.Cancel</mca:CSharpValue>
+                          </InArgument>
+                        </local:WaitForCommand.Command>
+                      </local:WaitForCommand>
+                    </Transition.Trigger>
+                    <Transition.To>
+                      <State x:Name="__ReferenceID2" DisplayName="Cancel Registration" sap2010:WorkflowViewState.IdRef="State_4">
+                        <State.Entry>
+                          <local:RemoveMembership DisplayName="Remove Membership" sap2010:WorkflowViewState.IdRef="RemoveMembership_2">
+                            <local:RemoveMembership.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">RegData.UserName</mca:CSharpValue>
+                              </InArgument>
+                            </local:RemoveMembership.Text>
+                          </local:RemoveMembership>
+                        </State.Entry>
+                        <State.Transitions>
+                          <Transition DisplayName="Finish" sap2010:WorkflowViewState.IdRef="Transition_6" To="{x:Reference __ReferenceID1}" />
+                        </State.Transitions>
+                      </State>
+                    </Transition.To>
+                  </Transition>
+                  <Transition Trigger="{x:Reference __ReferenceID3}" DisplayName="Terminate" sap2010:WorkflowViewState.IdRef="Transition_8" To="{x:Reference __ReferenceID2}">
+                    <Transition.Condition>
+                      <mca:CSharpValue x:TypeArguments="x:Boolean">ReminderCount &gt;= MaxReminders</mca:CSharpValue>
+                    </Transition.Condition>
+                  </Transition>
+                </State.Transitions>
+              </State>
+            </Transition.To>
+          </Transition>
+        </State.Transitions>
+      </State>
+    </StateMachine.InitialState>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <StateMachine.Variables>
+      <Variable x:TypeArguments="x:TimeSpan" Name="ReminderDelay">
+        <Variable.Default>
+          <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.Parse(ConfigurationManager.AppSettings["ReminderDelay"])</mca:CSharpValue>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="ReminderCount" />
+      <Variable x:TypeArguments="x:Int32" Name="MaxReminders" />
+    </StateMachine.Variables>
+    <sads:DebugSymbol.Symbol>d2ZEOlx3Zm12Yy5jb2RlcGxleC5jb21cd2ZtdmNcU2FtcGxlc1xNdmNBcHBsaWNhdGlvbjFcTVZDUmVnaXN0cmF0aW9uQWN0aXZpdGllc1xBY2NvdW50UmVnaXN0cmF0aW9uLnhhbWw8OgPiAhICAQHbAgvbAowBAwH+AVAPzgIXAgEc9gEX9gGKAQIBGjwH0gIPAgELuAIXxQIfAgECUhPoAR4CAVLtARfzAS4CAUz5ARf/ATECAUaEAheWAiICATScAhecAnUCAS+hAhenAi4CASmvAhe1Ai4CASPKAhfKAnYCAR4+C0sWAgEOugIbwAI0AgEFVhVhNwMB8QFiFXIsAwHeAXMV5wEmAgFT8AEd8AGHAQIBTfwBHfwBawIBR4UCGYkCIQIBQIoCGZUCIgIBNaQCHaQCiAECASqyAh2yAoYBAgEkPw1KFgIBD70CIb0CbwIBBlkbWWoDAfgBXhteaQMB8gFvG29lAwHrAWobamUDAeUBZRtlbgMB3wHkARvkAXQDAdgBowEbowGAAQMB0gGAARuAAXUDAcwBywEbywF9AwHGAXsbe4MBAwHAAcEBG8EBeAMBugGPARuPAXADAbQBmQEbmQF0AwGuAdUBG9UBZwMBqAGFARuFAV0DAaIB2gEb2gFoAwGcAbcBG7cBcwMBlgGtARutAWUDAZABlAEblAGOAQMBigHQARvQAX0DAYQBsgEbsgF3AgF+qAEbqAFlAgF4dht2iQECAXLGARvGAXACAWyeARueAZ8BAgFmvAEbvAFlAgFg3wEb3wFzAgFaigEbigF/AgFUhwIdhwJqAgFBkgIfkgJtAgE7jQIfjQJxAgE2RxNHbgIBFUITQmQCARA=</sads:DebugSymbol.Symbol>
+  </StateMachine>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="264,186">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="PromoteRegistrationValues_2" sap:VirtualizedContainerService.HintSize="200,22">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FormatMailBody_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="SendMail_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="222,270">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForCommand_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="State_1" sap:VirtualizedContainerService.HintSize="123,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">300,411</av:Point>
+            <av:Size x:Key="ShapeSize">123,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">109</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ApproveMembership_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_1" sap:VirtualizedContainerService.HintSize="430,509">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">307,323 307,353 361.5,353 361.5,411</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Delay_1" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="264,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_2" sap:VirtualizedContainerService.HintSize="430,727">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">230,294.4 186.027743260619,294.4 186.027743260619,220 276.2,220 276.2,250</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">45</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">22</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForCommand_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_3" sap:VirtualizedContainerService.HintSize="430,509">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">384,290.15 411.267926977825,290.15 411.267926977825,220.681290889485 337.8,220.681290889485 337.8,250</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">40</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">54</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForCommand_3" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="RemoveMembership_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Int32 x:Key="SrcConnectionPointIndex">64</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">45</x:Int32>
+            <av:PointCollection x:Key="ConnectorLocation">253,464.85 283,464.85 283,447.6 300,447.6</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_4" sap:VirtualizedContainerService.HintSize="326,468">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">86,413</av:Point>
+            <av:Size x:Key="ShapeSize">167,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">153</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_7" sap:VirtualizedContainerService.HintSize="430,509">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">230,312.05 194.55,312.05 194.55,413</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">65</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">50</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_8" sap:VirtualizedContainerService.HintSize="430,735">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Int32 x:Key="SrcConnectionPointIndex">45</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">14</x:Int32>
+            <av:PointCollection x:Key="ConnectorLocation">230,293.8 118.6,293.8 118.6,413</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_2" sap:VirtualizedContainerService.HintSize="326,720">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">230,250</av:Point>
+            <av:Size x:Key="ShapeSize">154,73</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">140</x:Double>
+            <x:Double x:Key="StateContainerHeight">36.919999999999931</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">300,171.5 300,201.5 300.2,201.5 300.2,250</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_3" sap:VirtualizedContainerService.HintSize="114,62">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">243,109.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,62</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">100</x:Double>
+            <x:Double x:Key="StateContainerHeight">25.529502790966319</x:Double>
+            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="StateMachine_1" sap:VirtualizedContainerService.HintSize="614,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <x:Double x:Key="StateContainerWidth">600</x:Double>
+            <x:Double x:Key="StateContainerHeight">600</x:Double>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,109.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="MVCRegistrationActivities.AccountRegistration_1" sap:VirtualizedContainerService.HintSize="654,716" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

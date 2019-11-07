@@ -1,0 +1,14 @@
+﻿@model BTL.Application.UserAuthoring.Models.UserListViewModel
+
+@{
+    ViewBag.Title = "User List";
+}
+
+<h2>User List</h2>
+
+<ul>
+@foreach (var user in Model.Users)
+{
+    <li>@user.UserName</li>
+}
+</ul>

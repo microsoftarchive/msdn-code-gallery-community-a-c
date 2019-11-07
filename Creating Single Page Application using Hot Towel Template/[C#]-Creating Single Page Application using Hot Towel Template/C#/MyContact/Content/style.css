@@ -1,0 +1,138 @@
+﻿.contact-content
+{
+    float: left;
+    margin: 2px;
+    padding: 20px;
+    min-height: 40px;
+    border: solid 1px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 1px rgba(255,255,255,.8);
+}
+
+    .contact-content > div
+    {
+        min-width: 400px;
+    }
+
+.view-list
+{
+    margin-top: 1%;
+}
+
+    .view-list > article:hover
+    {
+        border-color: #59C0F3 #0081C2 #194D7B;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        background-color: #0081C2;
+        background-image: -moz-linear-gradient(top,#59C0F3,#0081C2);
+        background-image: -o-linear-gradient(top,#59C0F3,#0081C2);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(#59C0F3),to(#0081C2));
+        background-image: -webkit-linear-gradient(top,#59C0F3,#0081C2);
+        background-image: linear-gradient(to bottom,#59C0F3,#0081C2);
+        background-repeat: repeat-x;
+        color: white;
+        cursor: pointer;
+    }
+
+        .view-list > article:hover small
+        {
+            color: white;
+        }
+
+
+.contactName
+{
+    clear: right;
+    margin-bottom: 2%;
+    font-size: 125%;
+    line-height: 120%;
+}
+
+.view-list > article:hover h1
+{
+    color: white;
+}
+
+
+.float-left
+{
+    float: left;
+}
+
+.left
+{
+    float: inherit;
+}
+
+.center
+{
+    text-align: center;
+}
+
+.name
+{
+    float: left;
+}
+
+.mobemail
+{
+    float: right;
+    margin-top: -10px;
+    padding-right: 70px;
+    vertical-align: middle;
+}
+
+    .mobemail > small
+    {
+        float: right;
+        clear: right;
+    }
+
+div.contact-counter
+{
+    color: rgb(150, 150, 150);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+    div.contact-counter > address
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+.search-content
+{
+    margin: 2px;
+    padding: 10px;
+    min-height: 30px;
+    border: solid 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px rgba(255,255,255,.8);
+}
+
+    .search-content > small
+    {
+        color: rgb(98, 96, 96);
+    }
+
+.button-margin
+{
+    margin: 10px;
+}
+
+.contact-footer
+{
+    clear: left;
+    height: 60px;
+}
+
+.clear-flot-right
+{
+    float: right;
+    clear: right;
+}
+
+.margin-top--10px
+{
+    margin-top: -10px;
+}

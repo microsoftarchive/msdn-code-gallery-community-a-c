@@ -1,0 +1,30 @@
+﻿@model List<AjaxForm.Models.UserViewModel>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-head">User List</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <a id="addUser" href="@Url.Action("AddUser")" class="btn btn-primary">
+                <i class="fa fa-plus"></i> Add User
+            </a>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>UserName</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.UserName</td>
+                        <td>@item.Email</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

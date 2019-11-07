@@ -1,0 +1,14 @@
+﻿<Application
+    x:Class="BluetoothCommunicationSampleController.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BluetoothCommunicationSampleController"
+    xmlns:tcd="using:TCD.Arduino.Bluetooth">
+
+    <Application.Resources>
+        <!--a BluetoothConnectionManager and a UIConverter, available everywhere within this app-->
+        <tcd:BluetoothConnectionManager x:Key="BluetoothManager" />
+        <local:UIConverter x:Key="UIConverter" />
+    </Application.Resources>
+
+</Application>

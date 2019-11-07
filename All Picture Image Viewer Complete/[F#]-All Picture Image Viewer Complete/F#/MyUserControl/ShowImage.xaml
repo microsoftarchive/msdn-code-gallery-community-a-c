@@ -1,0 +1,21 @@
+﻿<UserControl  
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        MinWidth="256" MinHeight="256"
+        >
+    <Canvas Name="canvasMain" MinWidth="256" MinHeight="256" RenderTransformOrigin="0.5,0.5" Background="#FFF6F7F9" >
+        <Label x:Name="lblDrop" Content="DROP IMAGE HERE" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Opacity="0.5" Foreground="#FFF30CE9"   />
+        <CheckBox x:Name="chkUniformToFill" Content="Uniform To Fill"  HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#FF787778"  Canvas.Right="30" Canvas.Top="6" IsChecked="True" />
+
+    </Canvas>
+
+    <UserControl.LayoutTransform>
+        <ScaleTransform x:Name="ucScale"
+                        ScaleX="1.0"
+                        ScaleY="1.0" />
+    </UserControl.LayoutTransform>
+
+</UserControl>
+
+
+

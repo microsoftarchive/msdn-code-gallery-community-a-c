@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business Logic", "Business Logic", "{1B8D15DF-167F-4C37-88DF-21275953C516}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{005D4BAB-A44F-4DE4-9E13-205210B3C637}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPULoadGenerator", "CPULoadGenerator\CPULoadGenerator.csproj", "{DF56C4F8-297D-431B-AE8E-0E56D7D50711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadGenerator", "LoadGenerator\LoadGenerator.csproj", "{35BC3E11-1689-44E5-AD14-D328BC0E61DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF56C4F8-297D-431B-AE8E-0E56D7D50711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF56C4F8-297D-431B-AE8E-0E56D7D50711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF56C4F8-297D-431B-AE8E-0E56D7D50711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF56C4F8-297D-431B-AE8E-0E56D7D50711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BC3E11-1689-44E5-AD14-D328BC0E61DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BC3E11-1689-44E5-AD14-D328BC0E61DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BC3E11-1689-44E5-AD14-D328BC0E61DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BC3E11-1689-44E5-AD14-D328BC0E61DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35BC3E11-1689-44E5-AD14-D328BC0E61DD} = {1B8D15DF-167F-4C37-88DF-21275953C516}
+		{DF56C4F8-297D-431B-AE8E-0E56D7D50711} = {005D4BAB-A44F-4DE4-9E13-205210B3C637}
+	EndGlobalSection
+EndGlobal

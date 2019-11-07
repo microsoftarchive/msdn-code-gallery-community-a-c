@@ -1,0 +1,50 @@
+﻿@model IEnumerable<UserListViewModel>
+@using IdentitySampleApplication.Models
+@using IdentitySampleApplication.Code
+
+<div class="top-buffer"></div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-head">Users</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <a id="createEditUserModal" data-toggle="modal" asp-action="AddUser" data-target="#modal-action-user" class="btn btn-primary">
+                <i class="glyphicon glyphicon-plus"></i>  Add User
+            </a>
+        </div>
+        <div class="top-buffer"></div>
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>                   
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Email</td>                        
+                        <td>
+                            <a id="editUserModal" data-toggle="modal" asp-action="EditUser" asp-route-id="@item.Id" data-target="#modal-action-user"
+                               class="btn btn-info">
+                                <i class="glyphicon glyphicon-pencil"></i>  Edit
+                            </a>
+                            <a id="deleteUserModal" data-toggle="modal" asp-action="DeleteUser" asp-route-id="@item.Id" data-target="#modal-action-user" class="btn btn-danger">
+                                <i class="glyphicon glyphicon-trash"></i>  Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@Html.Partial("_Modal", new BootstrapModel { ID = "modal-action-user", AreaLabeledId = "modal-action-user-label", Size = ModalSize.Medium })
+
+@section scripts
+{
+    <script src="~/js/user-index.js" asp-append-version="true"></script>
+}

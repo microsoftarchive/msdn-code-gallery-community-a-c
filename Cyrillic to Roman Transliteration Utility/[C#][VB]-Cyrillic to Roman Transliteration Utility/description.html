@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=E26C1359372FE948C3C39B3F0FB94413" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/66677cd4-7a4f-4923-84c8-f66a0d1d45deCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=76DF6246C5394201214B48DD1A8F406B" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Cyrillic to Roman Transliteration Utility</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Cyrillic to Roman Transliteration Utility</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            .NET Framework, CLR, .NET Framework 4.0
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Character Encoding
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/28/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Cyrillic-to-Roman-f7e88b29">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="font-size:small">The Cyrillic to Roman Transliteration Utility (CyrillicToRoman.exe) is a command-line utility that transliterates modern Cyrillic characters to the Roman character set. Its syntax is:</span></p>
+<pre><span style="font-size:small">CyrillicToRoman &lt;sourceFile&gt; &lt;destinationFile&gt;</span></pre>
+<p><span style="font-size:small">where <strong>&lt;sourceFile&gt;</strong> is the path and name of a text file that contains Cyrillic text to transliterate, and
+<strong>&lt;destinationFile&gt;</strong> is the path and name of the file that contains the transliterated text.</span></p>
+<p><span style="font-size:small">The utility illustrates the .NET Framework's support for a custom encoder fallback strategy that uses replacement fallback.&nbsp;</span></p>
+<h1><span>Building the Sample</span></h1>
+<p><span style="font-size:small">The example is packaged with an MSBuild project file that targets the .NET Framework Version 4. Download the sample code files to your computer. Open the solution (CyrillicToRoman.sln) in Visual Studio 2010 and build the solution.</span></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><span style="font-size:small">The Cyrillic to Roman Conversion Utility illustrates the extensibility of character encoding in the .NET
+</span><span style="font-size:small">Framework. An encoding system consists of an encoder and a decoder. The encoder is
+</span><span style="font-size:small">responsible for translating a sequence of characters into a sequence of bytes. The
+</span><span style="font-size:small">decoder is responsible for translating the sequence of bytes into a sequence of
+</span><span style="font-size:small">characters. The .NET Framework supports a sizable number of code page and Unicode
+</span><span style="font-size:small">encodings, and also allows the Encoding class to be overridden to support otherwise
+</span><span style="font-size:small">unsupported encodings. It also allows an encoder and a decoder's handling of
+</span><span style="font-size:small">characters and bytes, respectively, that cannot be mapped to be customized.
+</span><span style="font-size:small">Broadly, an encoder or a decoder can handle data that it cannot map by throwing
+</span><span style="font-size:small">an exception or by using some alternate mapping.
+</span></p>
+<p><span style="font-size:small">The transliteration utility works by instantiating an
+<strong>Encoding</strong> object that represents </span><span style="font-size:small">the Windows-1252 encoding. This encoding system supports ASCII characters in the
+</span><span style="font-size:small">range from U&#43;0000 to U&#43;00FF. Because modern Cyrillic characters occupy the range from
+</span><span style="font-size:small">U&#43;0410 to U&#43;044F, they do not automatically map to the Windows-1252 encoding. When
+</span><span style="font-size:small">the utility instantiates its Encoding object, it passes its constructor an instance
+</span><span style="font-size:small">of a class named CyrillicToRomanFallback that is derived from EncoderFallback. This
+</span><span style="font-size:small">class maintains an internal table that maps modern Cyrillic characters to one or more
+</span><span style="font-size:small">Roman characters.</span></p>
+<p><span style="font-size:small">When the encoder encounters a character that it cannot encode, it calls the fallback
+</span><span style="font-size:small">object's <strong>CreateFallbackBuffer</strong> method. This method instantiates a
+<strong>CyrillicToRomanFallbackBuffer </strong></span><span style="font-size:small">object (a subclass of the
+<strong>EncoderFallbackBuffer</strong> class) and passes its constructor </span><span style="font-size:small">the modern Cyrillic character mapping table. It then passes the
+<strong>EncoderFallbackBuffer </strong></span><span style="font-size:small">object's
+<strong><span style="color:#888888">Fallback</span></strong> method each character that it is unable to encode, and if a mapping
+</span><span style="font-size:small">is available, the method can provide a suitable replacement.</span></p>
+<h1><span>Source Code Files</span></h1>
+<ul>
+</ul>
+<p><span style="font-size:small">The Cyrillic to Roman Transliteration Utility (CyrillicToRoman.exe) is a console-mode application that consists of the following project files:</span></p>
+<ul>
+<li><span style="font-size:small"><strong>CyrillicToRoman.sln</strong>, a Visual Studio solution file that serves as a container for its two individual language projects.</span>
+</li><li><span style="font-size:small"><strong>CyrillicToRomanCS.sln</strong>, a C# project file.</span>
+</li><li><span style="font-size:small"><strong>CyrillicToRomanVB.sln</strong>, a Visual Basic project file.</span>
+</li></ul>
+<h1>More Information</h1>
+<p><span style="font-size:small">For additional information about encoding in the .NET Framework, see
+<a title="Character Encoding in the .NET Framework" href="http://go.microsoft.com/fwlink/p/?LinkId=257277" >
+Character Encoding in the .NET Framework</a>.</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

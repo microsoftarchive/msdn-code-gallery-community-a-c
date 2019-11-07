@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Time Off Request" OnQuickLaunch="TRUE" TemplateType="10000" Url="Lists/TimeOffRequest" Description="All Time Off Request whether Holiday or Travel is housed here"></ListInstance>
+</Elements>

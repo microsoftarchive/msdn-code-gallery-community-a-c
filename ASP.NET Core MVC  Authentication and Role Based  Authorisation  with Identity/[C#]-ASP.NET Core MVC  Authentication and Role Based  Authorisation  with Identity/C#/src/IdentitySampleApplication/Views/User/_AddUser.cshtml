@@ -1,0 +1,53 @@
+﻿@model UserViewModel
+@using IdentitySampleApplication.Models
+
+<form asp-action="AddUser" role="form">
+    @await Html.PartialAsync("_ModalHeader", new ModalHeader { Heading = "Add User" })
+    <div class="modal-body form-horizontal">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="Name" class="col-lg-3 col-sm-3 control-label"></label>
+                    <div class="col-lg-6">
+                        <input asp-for="Name" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="col-lg-3 col-sm-3 control-label"></label>
+                    <div class="col-lg-6">
+                        <input asp-for="Email" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ApplicationRoleId" class="col-lg-3 col-sm-3 control-label"></label>
+                    <div class="col-lg-6">
+                        <select asp-for="ApplicationRoleId" asp-items="@Model.ApplicationRoles" class="form-control">
+                            <option>Please select</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="UserName" class="col-lg-3 col-sm-3 control-label"></label>
+                    <div class="col-lg-6">
+                        <input asp-for="UserName" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="col-lg-3 col-sm-3 control-label"></label>
+                    <div class="col-lg-6">
+                        <input asp-for="Password" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword" class="col-lg-3 col-sm-3 control-label"></label>
+                    <div class="col-lg-6">
+                        <input asp-for="ConfirmPassword" class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @await Html.PartialAsync("_ModalFooter", new ModalFooter { })
+</form>

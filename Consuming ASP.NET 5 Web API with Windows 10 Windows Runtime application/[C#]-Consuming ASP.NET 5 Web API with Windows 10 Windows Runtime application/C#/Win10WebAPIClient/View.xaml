@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="Win10WebAPIClient.View"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Win10WebAPIClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Name="viewList">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBlock FontSize="25" FontWeight="Bold" HorizontalAlignment="Center">View user details</TextBlock>
+                <TextBlock HorizontalAlignment="Center">On this page you will see a list of users present on the server. Clicking on one of them would lead you to a single user view.</TextBlock>
+                <Button Margin="10, 0, 0, 0" Click="Button_Click">Go Back</Button>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <ListView Name="listView" SelectionChanged="listView_SelectionChanged">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Height="40" Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="200"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding ID}" Grid.Column="0"></TextBlock>
+                                <TextBlock Text="{Binding Name}" Grid.Column="1"></TextBlock>
+
+                                <Grid.Resources>
+                                    <local:GenderConverter x:Key="genderConverter" />
+                                </Grid.Resources>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <Grid Name="viewSingle" Visibility="Collapsed">
+            <StackPanel Margin="10">
+                <TextBlock Name="name" FontWeight="Bold"></TextBlock>
+                <TextBlock Name="gender"></TextBlock>
+                <TextBlock Name="interests" FontStyle="Italic"></TextBlock>
+                <Button Click="Button_Click">View List</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

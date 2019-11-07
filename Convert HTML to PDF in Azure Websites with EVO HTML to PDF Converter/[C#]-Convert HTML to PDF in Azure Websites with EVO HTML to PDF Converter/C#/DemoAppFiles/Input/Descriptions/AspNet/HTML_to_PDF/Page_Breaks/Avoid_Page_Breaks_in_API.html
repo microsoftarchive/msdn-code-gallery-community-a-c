@@ -1,0 +1,23 @@
+﻿You can avoid the page breaks inside HTML elements in the generated PDF document by setting the <b><i>AvoidHtmlElementsBreakSelectors</i></b> API property. If a HTML element is selected by this selector
+    and the HTML element would be normally rendered on two PDF pages then converter will try to move the rendering of the element to the beginning of the next PDF page. This is possible only if the 
+    element height is smaller than the next PDF page height.<br />
+<br />
+At the top of the demo you can choose the HTML document to convert which can be:
+    <br />
+<ul>
+    <li>
+        <b>HTML Page to Convert URL</b>. The URL must be accessible from the computer where the converter runs. If the page requires authentication or if you are using a proxy server to access Internet
+            then you have to set the converter properties accordingly as described in documentation
+    </li>
+    <li>
+        <b>HTML String to Convert</b>. When you convert a HTML string you also have the option to specify a base URL that will be used
+            by converter to resolve the relative URLs found in the HTML string to fully qualified URLs. If your HTML string uses only fully qualified URLs then this parameter is not necessary
+    </li>
+</ul>
+The options you can set in this demo are:<br />
+<ul>
+    <li>
+        <b>CSS Selector of the HTML Elements for Which to Avoid Page Break Inside</b>. This option represents the CSS selector of the HTML elements for which to try to avoid a page break inside in the generated PDF document.
+            In this demo, the default value of the selector will select all the table rows inside the table with ID 'page_break_inside_avoid_table'
+    </li>
+</ul>

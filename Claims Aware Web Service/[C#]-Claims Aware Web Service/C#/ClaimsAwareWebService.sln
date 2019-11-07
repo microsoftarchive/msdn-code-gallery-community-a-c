@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsAwareWebService", "ClaimsAwareWebService\ClaimsAwareWebService.csproj", "{5D2EF691-77FC-4FC0-9C39-0252180ED8B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{667CD11C-DE9C-4D32-B2D9-F953D84752AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5D2EF691-77FC-4FC0-9C39-0252180ED8B2} = {5D2EF691-77FC-4FC0-9C39-0252180ED8B2}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A1071807-4C8F-4A8C-A56D-A260FC9F461B}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.html = Readme.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D2EF691-77FC-4FC0-9C39-0252180ED8B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2EF691-77FC-4FC0-9C39-0252180ED8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2EF691-77FC-4FC0-9C39-0252180ED8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2EF691-77FC-4FC0-9C39-0252180ED8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667CD11C-DE9C-4D32-B2D9-F953D84752AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667CD11C-DE9C-4D32-B2D9-F953D84752AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667CD11C-DE9C-4D32-B2D9-F953D84752AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667CD11C-DE9C-4D32-B2D9-F953D84752AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

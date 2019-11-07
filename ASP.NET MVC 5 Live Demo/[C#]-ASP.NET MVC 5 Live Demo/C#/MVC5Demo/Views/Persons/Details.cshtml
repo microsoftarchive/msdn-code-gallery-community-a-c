@@ -1,0 +1,41 @@
+@model MVC5Demo.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+	<legend>Person</legend>
+	<dl>
+		<dt>
+			@Html.DisplayNameFor(model => model.Fullname)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Fullname)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Profession)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Profession)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Age)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Age)
+		</dd>
+
+	</dl>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

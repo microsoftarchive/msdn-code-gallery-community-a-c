@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:ImageSprite;/Areas/Epx/Themes/Office/Content:0&amp;amp;hashKey=E1FC421F1D5AE3E6B1DA86D200AF8596" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/a34e5dd0-ca2a-4f10-aa11-3f801e9189ebCombined.css,0:ImageSprite,1:LinkList;/Areas/Epx/Themes/Office/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=9BAB513DD514708AF2FC3AC8D5196E78" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Client-side rendering code sample - Sample 1 (Task Priority color)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/9b7dfc7e-5290-4e34-a742-464e17d98354Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Client-side rendering code sample - Sample 1 (Task Priority color)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            SharePoint, Sharepoint Online, SharePoint Server 2013, SharePoint Foundation 2013, SharePoint 2013
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            SharePoint, SharePoint List, SharePoint client object model (CSOM)
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">3/1/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/office/Client-side-rendering-code-0a786cdd">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span>This JSLink sample allows you to change the priority field&nbsp;text color based on the&nbsp;task priority level (</span><span style="color:#ff0000">High</span><span>,&nbsp;</span><span style="color:#ff6600">Normal&nbsp;</span><span>and&nbsp;</span><span style="color:#ffcc00">Low</span><span>).</span></p>
+<p>&nbsp;</p>
+<p><strong>Note:</strong>&nbsp;This sample is part from&nbsp;<a href="http://code.msdn.microsoft.com/office/Client-side-rendering-JS-2ed3538a">series of samples to learn you how to work with CSR templates</a>.</p>
+<p><span><br>
+</span></p>
+<h1>How to deploy the JSLink templates</h1>
+<p>You can deploy those JSLink files in many ways, you can use OOTB, LIST schema PowerShell or code.&nbsp;&nbsp;<br>
+I describe in the samples&nbsp;below how to deploy JSLink files using OOTB techniques, but if you want to know more about JSLink deployment methods, I recommend this&nbsp;<a class="title" title="Using the JSLink property to change the way your field or views are rendered in SharePoint 2013 - See more at: http://zimmergren.net/technical/sp-2013-using-the-spfield-jslink-property-to-change-the-way-your-field-is-rendered-in-sharepoint-2013#sthash.g1A4qJvM.dpuf" href="http://zimmergren.net/technical/sp-2013-using-the-spfield-jslink-property-to-change-the-way-your-field-is-rendered-in-sharepoint-2013" >article&nbsp;</a>by
+ Tobias Zimmergren.&nbsp;<br>
+<br>
+Before proceeding&nbsp;with the samples,&nbsp;<strong>You have to upload the JavaScript code files on your SharePoint 2013 site</strong>. You can upload to any SharePoint storage document library, _layouts folder or IIS virtual folder, But in the below deployment
+ steps<strong>&nbsp;I&rsquo;m supposing you will upload the JSLink-Samples folder to the site collection Style Library</strong>.</p>
+<p>&nbsp;</p>
+<p><span style="font-size:20px; font-weight:bold"><span>Screenshot</span></span></p>
+<p><img id="109731" src="/office/site/view/file/109731/1/JS%20Link%20(List%20View%20%E2%80%93%20Tasks%20List%20Priority%20color).png" alt="JS-Link" width="520" height="350" style="border:1px solid black"></p>
+<p>&nbsp;</p>
+<ol>
+<li>Create a&nbsp;<strong>Tasks&nbsp;</strong>list </li><li>Create new view that contains the&nbsp;<strong>Priority&nbsp;</strong>field </li><li>Edit the&nbsp;<strong>List View</strong>&nbsp;page&nbsp; </li><li>Go to List view&nbsp;<strong>web-part properties&nbsp;</strong>and add the JSLink file (~sitecollection/Style Library/JSLink-Samples/PriorityColor.js) to&nbsp;<strong>JS link property</strong>&nbsp;under the&nbsp;<strong>Miscellaneous&nbsp;</strong>Tab.
+ &nbsp;
+<p><img id="109732" src="description/List View web-part properties JS Link.png" alt="JS Link WebPart" width="276" height="454" style="border:1px solid black"></p>
+</li><li>Click&nbsp;<strong>Apply&nbsp;</strong>button then&nbsp;<strong>Stop&nbsp;</strong>page editing.
+</li></ol>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">// List View &ndash; Priority Color Sample
+// Muawiyah Shannak , @MuShannak
+
+(function () {
+
+    // Create object that have the context information about the field that we want to change it's output render 
+    var priorityFiledContext = {};
+    priorityFiledContext.Templates = {};
+    priorityFiledContext.Templates.Fields = {
+        // Apply the new rendering for Priority field on List View
+        &quot;Priority&quot;: { &quot;View&quot;: priorityFiledTemplate }
+    };
+
+    SPClientTemplates.TemplateManager.RegisterTemplateOverrides(priorityFiledContext);
+
+})();
+
+// This function provides the rendering logic for list view
+function priorityFiledTemplate(ctx) {
+
+    var priority = ctx.CurrentItem[ctx.CurrentFieldSchema.Name];
+
+    // Return html element with appropriate color based on priority value
+    switch (priority) {
+        case &quot;(1) High&quot;:
+            return &quot;&lt;span style='color :#f00'&gt;&quot; &#43; priority &#43; &quot;&lt;/span&gt;&quot;;
+            break;
+        case &quot;(2) Normal&quot;:
+            return &quot;&lt;span style='color :#ff6a00'&gt;&quot; &#43; priority &#43; &quot;&lt;/span&gt;&quot;;
+            break;
+        case &quot;(3) Low&quot;:
+            return &quot;&lt;span style='color :#cab023'&gt;&quot; &#43; priority &#43; &quot;&lt;/span&gt;&quot;;
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//&nbsp;List&nbsp;View&nbsp;&ndash;&nbsp;Priority&nbsp;Color&nbsp;Sample</span>&nbsp;
+<span class="cs__com">//&nbsp;Muawiyah&nbsp;Shannak&nbsp;,&nbsp;@MuShannak</span>&nbsp;
+&nbsp;
+(function&nbsp;()&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Create&nbsp;object&nbsp;that&nbsp;have&nbsp;the&nbsp;context&nbsp;information&nbsp;about&nbsp;the&nbsp;field&nbsp;that&nbsp;we&nbsp;want&nbsp;to&nbsp;change&nbsp;it's&nbsp;output&nbsp;render&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;priorityFiledContext&nbsp;=&nbsp;{};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;priorityFiledContext.Templates&nbsp;=&nbsp;{};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;priorityFiledContext.Templates.Fields&nbsp;=&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Apply&nbsp;the&nbsp;new&nbsp;rendering&nbsp;for&nbsp;Priority&nbsp;field&nbsp;on&nbsp;List&nbsp;View</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;Priority&quot;</span>:&nbsp;{&nbsp;<span class="cs__string">&quot;View&quot;</span>:&nbsp;priorityFiledTemplate&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;SPClientTemplates.TemplateManager.RegisterTemplateOverrides(priorityFiledContext);&nbsp;
+&nbsp;
+})();&nbsp;
+&nbsp;
+<span class="cs__com">//&nbsp;This&nbsp;function&nbsp;provides&nbsp;the&nbsp;rendering&nbsp;logic&nbsp;for&nbsp;list&nbsp;view</span>&nbsp;
+function&nbsp;priorityFiledTemplate(ctx)&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;priority&nbsp;=&nbsp;ctx.CurrentItem[ctx.CurrentFieldSchema.Name];&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Return&nbsp;html&nbsp;element&nbsp;with&nbsp;appropriate&nbsp;color&nbsp;based&nbsp;on&nbsp;priority&nbsp;value</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">switch</span>&nbsp;(priority)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;<span class="cs__string">&quot;(1)&nbsp;High&quot;</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__string">&quot;&lt;span&nbsp;style='color&nbsp;:#f00'&gt;&quot;</span>&nbsp;&#43;&nbsp;priority&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&lt;/span&gt;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;<span class="cs__string">&quot;(2)&nbsp;Normal&quot;</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__string">&quot;&lt;span&nbsp;style='color&nbsp;:#ff6a00'&gt;&quot;</span>&nbsp;&#43;&nbsp;priority&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&lt;/span&gt;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">case</span>&nbsp;<span class="cs__string">&quot;(3)&nbsp;Low&quot;</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__string">&quot;&lt;span&nbsp;style='color&nbsp;:#cab023'&gt;&quot;</span>&nbsp;&#43;&nbsp;priority&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&lt;/span&gt;&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p><strong>What you should learn if you browse this code sample (PriorityColor.js)?</strong></p>
+<p>If you look at&nbsp;this code sample, you will see how to create the&nbsp;<strong>Field Context</strong>&nbsp;object, and select the field&nbsp;that you want to change its output render. Then the code show you how the&nbsp;<strong>priorityFiledTemplate&nbsp;</strong>function
+ catches the context then returns&nbsp;the output render html.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

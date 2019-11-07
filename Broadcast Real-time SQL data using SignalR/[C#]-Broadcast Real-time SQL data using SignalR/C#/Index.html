@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>New Notifications</title>
+    <script src="Scripts/jquery-1.6.4.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.0.2.min.js"></script>        
+    <script src="signalr/hubs"></script>
+    <script type="text/javascript">
+        $(function () {            
+            // Declare a proxy to reference the hub.
+            var notifications = $.connection.notificationHub;
+            debugger;
+            // Create a function that the hub can call to broadcast messages.
+            notifications.client.recieveNotification = function (totalNewMessages, totalNewCircles, totalNewJobs, totalNewNotifications) {
+                // Add the message to the page.                
+                $('#spanNewMessages').text(totalNewMessages);
+                $('#spanNewCircles').text(totalNewCircles);
+                $('#spanNewJobNotifications').text(totalNewJobs);
+                $('#spanNewNotifications').text(totalNewNotifications);
+            };
+            // Start the connection.
+            $.connection.hub.start().done(function () {
+                notifications.server.sendNotifications();
+            }).fail(function (e) {
+                alert(e);
+            });
+            //$.connection.hub.start();            
+        });
+    </script>
+</head>
+<body>
+    <h1>Broadcast Realtime SQL data using SignalR</h1>
+    <div>
+        <p>You have <span id="spanNewMessages">0</span> New Message Notification.</p>
+        <p>You have <span id="spanNewCircles">0</span> New Circles Notification.</p>
+        <p>You have <span id="spanNewJobNotifications">0</span> New Job Notification.</p>
+        <p>You have <span id="spanNewNotifications">0</span> New Notification.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BizTalk.CallingExternalAssemblyFromInlineXSLT", "BizTalk.CallingExternalAssemblyFromInlineXSLT\BizTalk.CallingExternalAssemblyFromInlineXSLT.btproj", "{B26B627E-54D6-459A-9A15-F077487E4B6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapperExtensionsFunctions", "Mapper.Extensions.Functions\MapperExtensionsFunctions.csproj", "{5774C663-208B-45FD-B772-46DA0E46090F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B26B627E-54D6-459A-9A15-F077487E4B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B26B627E-54D6-459A-9A15-F077487E4B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B26B627E-54D6-459A-9A15-F077487E4B6F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B26B627E-54D6-459A-9A15-F077487E4B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B26B627E-54D6-459A-9A15-F077487E4B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B26B627E-54D6-459A-9A15-F077487E4B6F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5774C663-208B-45FD-B772-46DA0E46090F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5774C663-208B-45FD-B772-46DA0E46090F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5774C663-208B-45FD-B772-46DA0E46090F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5774C663-208B-45FD-B772-46DA0E46090F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

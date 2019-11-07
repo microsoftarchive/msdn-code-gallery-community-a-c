@@ -1,0 +1,13 @@
+﻿@using MvcMobile.Models
+@model Session
+
+@{
+    var index = 0;
+    foreach (var speaker in Model.Speakers.OrderBy(x => x)) {
+        if (index > 0) {
+            if (index == Model.Speakers.Count() - 1) { <text> and </text> } else {<text>, </text> }
+        }
+        @Html.ActionLink(speaker, "SessionsBySpeaker", new { speaker })
+        index++;
+    }
+}

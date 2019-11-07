@@ -1,0 +1,203 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Example of single page searching</title>
+    <link href="Keyoti_SearchEngine_Web_Common/SearchUnit.css" rel="stylesheet" type="text/css" />
+    <script src="Keyoti_SearchEngine_Web_Common/SearchUnit.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        keyotiSearch.useWCFService=true;
+    
+		keyotiTemplateUtility.formatCustomData = function (customDataDictionaryItemName, value) {
+			if (customDataDictionaryItemName == 'publishDate' && value != null && value.length == 10) {
+				//format date to user's locale
+				var date = new Date(value.substring(0, 4), value.substring(5, 7) - 1, value.substring(8, 10));
+				return date.toLocaleDateString();
+			}
+
+			//default provide as-is.
+			return value;
+		};
+
+		</script>
+
+    <link href="_Stylesheet.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+
+        
+        #sew_searchBox
+        {
+            border: 2px solid black; 
+            font-size:20px;
+            padding:5px;
+            border-radius: 9px;
+        }
+
+
+        .sew_watermark
+        {
+            
+            color:#aaa;
+            font-style:italic;   
+        }
+
+        #sew_resultHeader
+        {
+            border-left: solid 2px black;
+            border-top: solid 2px black;
+            border-right: none;
+            border-bottom: none;
+            background:none;
+            margin-left:0px;
+            padding-bottom:0px;
+            margin-bottom:0px;
+            margin-top: 10px;
+        }
+        .sew_header
+        {
+            border: none;
+            background:none;            
+            margin-bottom:0px;
+        }
+        #sew_resultFooter
+        {
+            border-left: none;
+            border-bottom: solid 2px black;
+            border-right: solid 2px black;
+            border-top: none;
+            background:none;
+            margin-left:0px;
+            
+        }
+        
+        .sew_footer
+        {
+            background: none;
+            border:none;
+        }
+        
+        #sew_resultList
+        {
+            border-left: solid 2px #bbb;
+            margin-top:0px;
+            padding-top:0px;
+        }
+        
+        .sew_resultItem
+        {
+            margin-top:0px;
+            padding-top:12px;
+            height:230px;
+        }
+        
+        .resultMetaData
+        {
+            float:right;
+            width: 45%;
+            min-width: 410px;
+        }
+        
+        .resultMetaDataItem
+        {
+            display:inline-block;
+            width:200px;
+            text-align:left;
+            font-size:12px;
+        }        
+        
+        .mealTypeNoContent, .imgNoContent, .preparationTimeNoContent, .cookingTimeNoContent, .mealTypeNoContent, .freeFromNoContent, .publishDateNoContent
+        {
+            display:none;
+        }
+
+        .XimgContent
+        {
+            display:none;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div id='header'>
+        <img src="/images/title-left.png" alt='title' title='Keyoti' />
+    </div>
+    <div id='content'>
+
+        <h1><a href="/index.htm">SearchUnit - Basic Examples</a> : Templates To Customize Appearance</h1>
+        <p>In this example the control's appearance is customized using templates.</p>
+        <div id="sew_searchBoxControl">
+            <input type="text" id="sew_searchBox" />
+            <a href="#stayhere" onclick="keyotiSearchBox.doSearch()" id="sew_searchButton">Search</a>
+        </div>
+         <small>Try keywords like: soup, cheese, chicken, salt</small>
+        
+        <div id="sew_searchResultControl">
+            <div class="sew_ajax_loader_backer"><div class="sew_ajax_loader"></div></div> 
+            <div class="sew_ajax_error">
+                <span class='sew_errorTitle'>Error</span>
+                <p class='sew_errorBody'></p>
+                <div class="sew_ajax_error_footer">
+                    <input type="button" value="OK" id="sew_errorOKButton" />
+                </div>
+            </div>
+            <div id="sew_resultView">
+                <div id="sew_resultHeader">                   
+                    <div id="sew_headerTEMPLATE" class="sew_header">
+                        Page: <b>${PageNumber}</b><br />
+                        Number of results: <b>${NumberOfResults}</b> <br />
+                        Query: <b>&#8220;${Query}&#8221;</b><br />
+                        <span id="sew_ignoredWords">Stop words: ${IgnoredWords}</span>
+                        <div id="sew_didYouMean">Did you mean: <a href="#stayhere" 
+                                onclick="keyotiSearch.search('${SuggestedSearchExpressionEscaped}', 1)">${SuggestedSearchExpression}</a></div>
+                    </div>               
+                </div>
+
+                <div id="sew_resultList">
+                                
+                    <div id="sew_resultItemTEMPLATE" class="sew_resultItem">
+                            <div style="float:left; width:45%; min-width:333px;">
+                                <span class="sew_resultItemLink"><a href="${UriStringWithKeywords}">${Title}</a></span>
+                                <span class="sew_resultItemSummary">${Summary}</span>
+                                <span class="sew_previewResultWrapper" style="max-height:150px;"><img alt="Click to preview the document text" src="/Keyoti_SearchEngine_Web_Common/ResultPreview_Expander_Closed.png"
+                                    onclick="keyotiSearchResultPreviewer.toggleResultPreview(this,
+                                    '${UriStringAsStored}',
+                                    '/Keyoti_SearchEngine_Web_Common/ResultPreview_Expander_Closed.png',
+                                    '/Keyoti_SearchEngine_Web_Common/ResultPreview_Expander_Opened.png')"/>
+                                <span class="sew_previewResultContent">Loading document...</span></span>
+                                
+                                
+                      
+                            </div>
+                                    
+                            <div class="resultMetaData ${CustomDataDictionary.imgDisplayClass}">
+                                <div class="resultMetaImage  ${CustomDataDictionary.imgDisplayClass}" style="float:left; width:200px;">
+                                <a href="${UriStringWithKeywords}"><img width="200" data-src="${CustomDataDictionary.img}" /></a></div>
+                                <div  style="float:right; width:50%;" >
+                                    <span class="resultMetaDataItem ${CustomDataDictionary.preparationTimeDisplayClass}"><span>Preparation time: </span>${CustomDataDictionary.preparationTime} mins</span><br />
+                                    <span class="resultMetaDataItem ${CustomDataDictionary.cookingTimeDisplayClass}"><span>Cooking time: </span>${CustomDataDictionary.cookingTime} mins</span><br />
+                                    <span class="resultMetaDataItem ${CustomDataDictionary.mealTypeDisplayClass}"><span>Meal type: </span>${CustomDataDictionary.mealType}</span><br />                                
+                                    <span class="resultMetaDataItem ${CustomDataDictionary.publishDateDisplayClass}"><span>Recipe date: </span>${CustomDataDictionary.publishDate}</span><Br />
+                                    <span class="resultMetaDataItem ${CustomDataDictionary.freeFromDisplayClass}"><span>Free from: </span>${CustomDataDictionary.freeFrom}</span><br />
+                                </div>
+                             </div> 
+                             <div style="clear: both;"></div>                                                                                                                                                                                                           
+                        </div>                        
+                                
+                </div>
+
+                <div id="sew_resultFooter">                   
+                    <div id="sew_footerTEMPLATE" class="sew_footer">
+                        <span id="previousPageLink">${PreviousPageLink}</span> 
+                        <span id="pageLinksBlock">${PageLinksBlock}</span>
+                        <span id="nextPageLink">${NextPageLink}</span>
+                    </div>               
+                </div>
+
+            </div>
+        </div>
+
+    
+    </div>
+    
+</body>
+</html>

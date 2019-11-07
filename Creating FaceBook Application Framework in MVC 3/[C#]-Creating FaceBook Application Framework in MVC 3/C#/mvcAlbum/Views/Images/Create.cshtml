@@ -1,0 +1,73 @@
+﻿@model mvcAlbum.Models.Image
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm("Create","Images",FormMethod.Post, new { enctype = "multipart/form-data" }))  {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Image</legend>
+
+        <table>
+    <tr>
+         <th>
+            Image Name
+        </th>
+         <th>
+            Category 
+        </th>
+     </tr>
+
+     <tr>
+        <td>
+                    @Html.EditorFor(model => model.ImageName)
+            @Html.ValidationMessageFor(model => model.ImageName)
+        </td>
+        
+        <td>
+                     @Html.DropDownList("CategoryID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CategoryID)
+
+        </td>
+</tr>
+     <tr>
+
+        </tr>
+     <tr>
+
+  </tr>
+   <tr>
+          <th>
+            Desription
+          </th>
+                 <td>
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </td>
+   </tr>    
+       
+     </table>
+
+           <div class="editor-label">
+            @Html.LabelFor(model => model.photo)
+        </div>
+        <div class="editor-field">
+         
+        <input type="file" name="file" />
+        </div>
+
+        <p>
+        <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=185AB2A7FFC28B456E0C516753D2A163" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=4EE70F41524C30AB288DA1D97433D514" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Custom DLL reference within Function App - VS2015</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Custom DLL reference within Function App - VS2015</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Azure Functions
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Azure FunctionApp
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/29/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>When Function App requires external assembly to perform actions following will explain the steps to follow</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>1. Create new VS project with .Net Core Class Library</em></p>
+<p><em>2. Add logic to perform an action within the librabry class and build it with net462 compatible framework&nbsp;</em></p>
+<p><em>3. Create a new project AzureFunction, from Cloud Templates</em></p>
+<p><em>4. Right click add &quot;New Azure Function&quot;, select required filter (Manual trigger in this example)</em></p>
+<p><em>5. In run.csx file add reference #r &lt;yourLibraryProjectName&gt;.dll, add function logic which uses methods from the library</em></p>
+<p><em>6. In project.json file of the Function, add dependency &quot;System.Runtime&quot;: &quot;4.1.0&quot; for framework net46</em></p>
+<p><em>7. Right click and publish the app to Azure</em></p>
+<p><em>8. Upon successful deployment, Open the function (function <em>created &nbsp;above</em>) in the Azure Portal and on the right side browse to the verify files run.csx, function.json, project.json, project.json.lock exist</em></p>
+<p><em>9. Browse to the root function app container --&gt; All Settings --&gt; Development tools --&gt; Console</em></p>
+<p><em>10. Console path begins at &quot;D:\home\site\wwwroot&quot;, browse to your function : cd &lt;yourfunctionname&gt;. DIR helps in copying the name correctly</em></p>
+<p><em>11. Delete project.json.lock file : rm project.json.lock</em></p>
+<p><em>12. Create bin folder : mkdir bin</em></p>
+<p><em>13. Close editor and g</em><em>o back to the Function --&gt; View Files. Now bin folder should be visible</em></p>
+<p><em>14. Due to Function App known bug, manually upload System.Runtime.dll (4.1.0), custom library dll in the bin folder</em></p>
+<p><em>15. Restart the FunctionApp</em></p>
+<p>&nbsp;</p>
+<h1>Sample</h1>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">#r &quot;SampleToSupportFunction.dll&quot;
+
+using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://msdn.microsoft.com/en-US/library/System.Xml.aspx"  title="Auto generated link to System.Xml">System.Xml</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://msdn.microsoft.com/en-US/library/System.IO.aspx"  title="Auto generated link to System.IO">System.IO</a>;
+using SampleToSupportFunction;
+
+public static void Run(string input, TraceWriter log)
+{
+    log.Info($&quot;C# Timer trigger function executed at: {DateTime.Now}&quot;);
+    TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById(&quot;Eastern Standard Time&quot;);
+    var timeToString = Utility.GetDateBytimeZone(easternZone);
+    log.Info($&quot;Time is : {timeToString}&quot;);
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__preproc">#r&nbsp;&quot;SampleToSupportFunction.dll</span>&quot;&nbsp;
+&nbsp;
+<span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://msdn.microsoft.com/en-US/library/System.Xml.aspx"  title="Auto generated link to System.Xml">System.Xml</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://code.msdn.microsoft.com/Custom-DLL-reference-c2c9b57e/https://msdn.microsoft.com/en-US/library/System.IO.aspx"  title="Auto generated link to System.IO">System.IO</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;SampleToSupportFunction;&nbsp;
+&nbsp;
+<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Run(<span class="cs__keyword">string</span>&nbsp;input,&nbsp;TraceWriter&nbsp;log)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;log.Info($<span class="cs__string">&quot;C#&nbsp;Timer&nbsp;trigger&nbsp;function&nbsp;executed&nbsp;at:&nbsp;{DateTime.Now}&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;TimeZoneInfo&nbsp;easternZone&nbsp;=&nbsp;TimeZoneInfo.FindSystemTimeZoneById(<span class="cs__string">&quot;Eastern&nbsp;Standard&nbsp;Time&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;timeToString&nbsp;=&nbsp;Utility.GetDateBytimeZone(easternZone);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;log.Info($<span class="cs__string">&quot;Time&nbsp;is&nbsp;:&nbsp;{timeToString}&quot;</span>);&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em>NetCore Project: SampleToSupportFunction, class&nbsp;</em><em>Utility.cs</em>
+</li><li><em>AzureFunction Project: SampleFunction, run.csx<br>
+</em></li></ul>
+<h1>More Information</h1>
+<p>Azure Function:&nbsp;https://azure.microsoft.com/en-us/services/functions/</p>
+<p><em>Bug Info: https://github.com/dotnet/cli/issues/4171</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

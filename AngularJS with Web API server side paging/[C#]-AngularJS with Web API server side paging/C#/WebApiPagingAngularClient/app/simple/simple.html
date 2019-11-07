@@ -1,0 +1,41 @@
+﻿<section>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">EPL Clubs</div>
+                <div class="panel-body">
+                    <ul class="list-unstyled clubList">
+                        <li ng-repeat="c in clubs">{{c.name}} ({{c.city}})</li>
+                    </ul>
+                    <div class="btn-group-sm">
+                        <button class="btn btn-sm btn-primary" ng-disabled="status.busy || !info.moreAvailable()" ng-click="loadClubs()">more</button>
+                        <button class="btn btn-sm btn-warning" ng-disabled="status.busy" ng-click="clear()">clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="well well-sm" role="alert">
+                <p>{{description}}</p>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">paging options</div>
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="form-group-sm">
+                            <label for="pageSize">page size</label>
+                            <input id="pageSize" type="number" class="form-control" placeholder="page size" max="100" min="0" ng-model="options.size" ng-change="clear()">
+                        </div>
+                        <div class="form-group-sm">
+                            <label for="orderBy">order by</label>
+                            <select id="orderBy" class="form-control" ng-model="options.orderBy" ng-options="sp for sp in info.sortableProperties" ng-change="clear()"></select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="alert alert-info" role="alert">
+                {{status.message}}
+            </div>
+        </div>
+    </div>
+</section>

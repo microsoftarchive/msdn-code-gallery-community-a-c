@@ -1,0 +1,24 @@
+﻿@model PDM.Model.ProductSubCategory
+@{
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        OnSuccess = "OnSuccess",
+        UpdateTargetId = "tableBody",
+        LoadingElementDuration = 1000
+    };
+}
+<div class="row top-buffer" id="addsubCategory1" style="display:none">
+    @using (@Ajax.BeginForm("Create", "ProductSubCategory", ajaxOptions))
+    {
+        <div class="col-sm-4">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @id = "txtProductSubCategoryName", @placeholder = "Category Name" })
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+        <div class="col-sm-4">
+            @Html.Partial("_CategoryDropDown", Model.ProductCategoryCollection)
+        </div>
+        <div class="col-sm-4">
+            <button type="submit" value="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Create</button>
+        </div>
+    }
+</div>

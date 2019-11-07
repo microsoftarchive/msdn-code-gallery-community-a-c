@@ -1,0 +1,55 @@
+﻿<section>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>simple sample</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-heading">new book entry form</div>
+                <div class="panel-body">
+                    <form name="newBookForm" role="form" ng-disabled="status.busy">
+                        <div class="form-group" ng-class="{'has-error': newBookForm.title.$error.unique || newBookForm.title.$error.required && newBookForm.title.$touched}">
+                            <label for="title">title</label>
+                            <input name="title" type="text" class="form-control" ng-model="book.title" ng-change="resetTitle()" placeholder="enter title" min="1" max="255" ng-disabled="status.busy" required>
+                            <ng-messages for="newBookForm.title.$error" ng-show="newBookForm.title.$touched">
+                                <ng-message class="help-block" when="required">required</ng-message>
+                                <ng-message class="help-block" when="unique">title must be unique</ng-message>
+                            </ng-messages>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error': newBookForm.author.$error.required && newBookForm.author.$touched}">
+                            <label for="author">author</label>
+                            <input name="author" type="text" class="form-control" ng-model="book.author" placeholder="enter author name" min="1" max="255" ng-disabled="status.busy" required>
+                            <ng-messages for="newBookForm.author.$error" ng-show="newBookForm.author.$touched">
+                                <ng-message class="help-block" when="required">required</ng-message>                                
+                            </ng-messages>
+                        </div>
+                        <div class="btn-group-sm">
+                            <button class="btn btn-sm btn-primary" type="button" ng-disabled="status.busy|| newBookForm.$invalid" ng-click="save()">save</button>
+                            <button class="btn btn-sm btn-warning" type="button" ng-disabled="status.busy || newBookForm.$pristine" ng-click="clear()">clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="well well-sm" role="alert">
+                <p>
+                    {{description}}
+                </p>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">existing book titles</div>
+                <div class="panel-body">
+                    <ul class="list-unstyled list-inline list-comma">
+                        <li ng-repeat="b in books">{{b.title}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="alert alert-info" role="alert">
+                {{status.message}}
+            </div>
+        </div>
+    </div>
+</section>

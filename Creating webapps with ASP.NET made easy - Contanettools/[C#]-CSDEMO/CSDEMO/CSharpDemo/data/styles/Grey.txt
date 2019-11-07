@@ -1,0 +1,1 @@
+﻿Grey.jpg,0,Gris.jpg,DarkGray,1,0,DarkGray,0,Transparent,0,Arial Black,20,SlateGray,Transparent,1,12,DimGray,White,White,Black,,

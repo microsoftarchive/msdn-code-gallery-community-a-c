@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TestWeb.Models.S3ObjectModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>S3 Objects</h2>
+
+<p>
+    @Html.ActionLink("Upload new Objects", "Index","bucket")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ObjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BucketName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ObjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BucketName)
+        </td>
+        <td>
+          <a href="@item.DownloadLink" target="_blank">Download</a> |
+          @Html.ActionLink("Delete object", "Delete", "Upload", routeValues: new { objectName = item.ObjectName, bucketName = item.BucketName }, htmlAttributes: null)
+
+        </td>
+    </tr>
+}
+
+</table>

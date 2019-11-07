@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataPointsWPF", "DataPointsWPF\DataPointsWPF.vbproj", "{235032E5-B303-4629-B299-94E4A9427492}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF35CC6D-DB00-451F-BD1E-8FBBC389749F}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{235032E5-B303-4629-B299-94E4A9427492}.Debug|x86.ActiveCfg = Debug|x86
+		{235032E5-B303-4629-B299-94E4A9427492}.Debug|x86.Build.0 = Debug|x86
+		{235032E5-B303-4629-B299-94E4A9427492}.Release|x86.ActiveCfg = Release|x86
+		{235032E5-B303-4629-B299-94E4A9427492}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

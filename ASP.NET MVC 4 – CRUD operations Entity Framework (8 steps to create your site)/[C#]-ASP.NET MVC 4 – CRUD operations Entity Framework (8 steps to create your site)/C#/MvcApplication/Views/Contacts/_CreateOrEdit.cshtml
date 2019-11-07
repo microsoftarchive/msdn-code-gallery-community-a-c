@@ -1,0 +1,23 @@
+@model MvcApplication.Models.Contacts
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+</div>
+
+<div class="editor-label">
+    Client
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.ClientId, ((IEnumerable<MvcApplication.Models.Clients>)ViewBag.PossibleClients).Select(option => new SelectListItem {
+        Text = (option == null ? "None" : option.Name), 
+        Value = option.Id.ToString(),
+        Selected = (Model != null) && (option.Id == Model.ClientId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.ClientId)
+</div>

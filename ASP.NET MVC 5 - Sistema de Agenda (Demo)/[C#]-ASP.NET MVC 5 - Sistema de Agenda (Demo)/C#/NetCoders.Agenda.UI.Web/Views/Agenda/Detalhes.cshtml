@@ -1,0 +1,22 @@
+﻿@model NetCoders.Agenda.UI.Web.Models.AgendaVM
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
+}
+
+
+<fieldset>
+    <legend>Detalhes do evento</legend>
+
+    <div class="container">
+        <h3>@Model.Agenda.Titulo <small>&raquo;@Model.Agenda.Data.ToLongDateString()</small></h3>
+        <h4>
+            @Model.Agenda.DescricaoSimples
+        </h4>
+        <p>
+            @Model.Agenda.DescricaoCompleta
+        </p>
+        <p>Cadastrado: <small> @Model.Agenda.Gravado.ToShortDateString()</small></p>
+        <hr />
+    </div>
+</fieldset>

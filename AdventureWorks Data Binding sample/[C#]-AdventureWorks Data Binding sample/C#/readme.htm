@@ -1,0 +1,2075 @@
+﻿<html DIR="LTR" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>AdventureWorks Data Binding (Entity Framework)</title>
+    
+    
+    
+    <style TYPE="text/css">
+body
+{
+background: #FFFFFF;
+color: #000000;
+font-family:    Verdana;
+font-size: medium;
+font-style: normal;
+font-weight: normal;
+margin-top: 0;
+margin-bottom:  0;
+margin-left:    0;
+margin-right:   0;
+width:  100%;
+}
+
+div.#mainSection
+{
+font-size: 70%;
+width: 100%;
+padding-left:    10;
+margin-right: 10;
+}
+
+div.#mainBody
+{
+font-size: 90%;
+margin-top: 10;
+padding-bottom: 20;
+}
+
+div.#header
+{
+background-color: #D2D2D2;
+padding-top:    0;
+padding-bottom: 0;
+padding-left:   10;
+padding-right:  0;
+width:          100%;
+}
+
+div.#header table
+{
+border-bottom-color: #C8CDDE;
+border-bottom-style: solid;
+border-bottom-width: 1;
+width:  100%;
+}
+
+span.#runningHeaderText
+{
+color: #003399;
+font-size: 90%;
+}
+
+span.#nsrTitle
+{
+/*    color: #003399;*/
+font-size: 120%;
+font-weight: 600;
+}
+
+div.#header table td
+{
+color: #000000;
+font-size: 70%;
+margin-top: 0;
+margin-bottom:  0;
+padding-right: 20;
+}
+
+div.#header table tr.#headerTableRow3 td
+{
+padding-bottom: 2;
+padding-top: 5;
+}
+
+div.#header table.#bottomTable
+{
+border-top-color: #FFFFFF;
+border-top-style: solid;
+border-top-width: 1;
+text-align: left;
+}
+
+div.#footer
+{
+font-size: 90%;
+margin-top: 0;
+margin-bottom:  0;
+margin-left:    -5;
+margin-right:   0;
+padding-top:    2;
+padding-bottom: 2;
+padding-left:   0;
+padding-right:  0;
+width:  100%;
+}
+
+hr.#footerHR
+{
+border-bottom-color: #EEEEFF;
+border-bottom-style: solid;
+border-bottom-width: 1;
+border-top-color: C8CDDE;
+border-top-style: solid;
+border-top-width: 1;
+height: 3;
+color: #D2D2D2;
+}
+
+div.section
+{
+padding-top:    2;
+padding-bottom: 2;
+padding-right:  15;
+width:  100%;
+}
+
+.heading
+{
+color:          #000000;
+font-weight:    bold;
+margin-top:     18;
+margin-bottom:  8;
+}
+
+h1.heading
+{
+color: #000000;
+font-size:  150%;
+}
+
+.subHeading
+{
+color:          #000000;
+font-weight:    bold;
+font-size:      150%;
+margin-bottom:  4;
+}
+
+h2.subHeading
+{
+color:          #000000;
+font-weight:    bold;
+font-size:      130%;
+}
+h3.subHeading
+{
+color:  #000000;
+font-size: 125%;
+font-weight: bold;
+}
+
+h4.subHeading
+{
+color: #000000;
+font-size: 110%;
+font-weight: bold;
+}
+
+h4.procedureHeading
+{
+color: #000080;
+font-size: 110%;
+font-weight: bold;
+}
+
+h5.subHeading
+{
+color: #000000;
+font-size: 100%;
+font-weight: bold;
+}
+
+img
+{
+padding-bottom: 10;
+}
+
+img.toggle
+{
+border: 0;
+margin-right: 5;
+padding-bottom: 10;
+}
+
+img.copyCodeImage
+{
+border: 0;
+margin: 1;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.downloadCodeImage
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.viewCodeImage
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.note
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.#membersOptionsFilterImage
+{
+border: 0;
+margin-left: 10;
+vertical-align: middle;
+padding-bottom: 10;
+}
+
+img.#toggleAllImage
+{
+margin-left: 4;
+vertical-align: middle;
+padding-bottom: 10;
+}
+
+div.#mainSection table
+{
+border: 0;
+font-size: 100%;
+width:  100%;
+margin-top: 5px;
+margin-bottom: 15px;
+}
+
+div.#mainSection table tr
+{
+vertical-align: top;
+}
+
+div.#mainSection table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-color: #D8D8D8;
+border-bottom-style: solid;
+border-bottom-width: 1;
+color: #000000;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.#mainSection table td
+{
+background: #F2F2F2;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.#mainSection table td.imageCell
+{
+white-space: nowrap;
+}
+
+div.code
+{
+width: 98%;
+}
+
+div.code table
+{
+border: 0;
+font-size: 95%;
+margin-bottom: 5;
+width: 100%
+}
+
+div.code table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-color: #D8D8D8;
+border-bottom-style: solid;
+border-bottom-width: 1;
+color: #000000;
+font-weight: bold;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.code table td
+{
+background: #CCCCCC;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+padding-top: 5;
+}
+
+div.alert
+{
+margin-left: 10;
+width: 98%;
+}
+
+div.alert table
+{
+border: 1;
+font-size: 100%;
+width:  100%;
+border: solid 1 #DEDFEF;
+}
+
+div.alert table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-width: 0;
+color: #000000;
+padding-left: 5;
+padding-right: 5;
+border: solid 1 #DEDFEF;
+}
+
+div.alert table td
+{
+background: #FFFFFF;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+border: solid 1 #DEDFEF;
+}
+
+span.copyCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+float: right;
+display: inline;
+text-align: right;
+}
+
+.downloadCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+}
+
+.viewCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+}
+
+div.code pre
+{
+font-family:    Monospace, Courier New, Courier;
+font-size: 105%;
+color:  #000000;
+}
+
+code
+{
+font-family:    Monospace, Courier New, Courier;
+font-size: 105%;
+color:  #000000;
+}
+
+dl
+{
+margin-top: 0;
+padding-left:   1;
+}
+
+dd
+{
+margin-bottom:  0;
+margin-left:    0;
+padding-left:   20;
+}
+
+dd p
+{
+margin-top: 5;
+}
+
+ul
+{
+margin-left: 17;
+list-style-type: disc;
+}
+
+ul ul
+{
+margin-bottom: 4;
+margin-left: 17;
+margin-top: 3;
+list-style-type: disc;
+}
+
+ol
+{
+margin-left: 24;
+list-style-type: decimal;
+}
+
+ol ol
+{
+margin-left: 24;
+margin-top: 3;
+list-style-type: lower-alpha;
+}
+
+li
+{
+margin-top: 0;
+margin-bottom: 0;
+padding-bottom: 0;
+padding-top: 0;
+margin-left: 5;
+}
+
+p
+{
+margin-bottom: 15;
+}
+
+.tip
+{
+color:  #0000FF;
+font-style: italic;
+cursor:hand;
+text-decoration:underline;
+}
+
+.math
+{
+font-family: Times New Roman;
+font-size: 125%
+}
+.sourceCodeList
+{
+font-family: Verdana;
+font-size: 90%;
+}
+
+pre.viewCode
+{
+width: 100%;
+overflow: auto;
+}
+
+li:hover table, li.over table
+{
+background-color: #C0C0C0;
+}
+
+li:hover ul, li.over ul
+{
+background-color: #d2d2d2;
+border: 1px solid #000;
+display: block;
+}
+            </style>
+    <style TYPE="text/css">
+body
+{
+background: #FFFFFF;
+color: #000000;
+font-family:    Verdana;
+font-size: medium;
+font-style: normal;
+font-weight: normal;
+margin-top: 0;
+margin-bottom:  0;
+margin-left:    0;
+margin-right:   0;
+width:  100%;
+}
+
+div.#mainSection
+{
+font-size: 70%;
+width: 100%;
+padding-left:    10;
+margin-right: 10;
+}
+
+div.#mainBody
+{
+font-size: 90%;
+margin-top: 10;
+padding-bottom: 20;
+}
+
+div.#header
+{
+background-color: #D2D2D2;
+padding-top:    0;
+padding-bottom: 0;
+padding-left:   10;
+padding-right:  0;
+width:          100%;
+}
+
+div.#header table
+{
+border-bottom-color: #C8CDDE;
+border-bottom-style: solid;
+border-bottom-width: 1;
+width:  100%;
+}
+
+span.#runningHeaderText
+{
+color: #003399;
+font-size: 90%;
+}
+
+span.#nsrTitle
+{
+/*    color: #003399;*/
+font-size: 120%;
+font-weight: 600;
+}
+
+div.#header table td
+{
+color: #000000;
+font-size: 70%;
+margin-top: 0;
+margin-bottom:  0;
+padding-right: 20;
+}
+
+div.#header table tr.#headerTableRow3 td
+{
+padding-bottom: 2;
+padding-top: 5;
+}
+
+div.#header table.#bottomTable
+{
+border-top-color: #FFFFFF;
+border-top-style: solid;
+border-top-width: 1;
+text-align: left;
+}
+
+div.#footer
+{
+font-size: 90%;
+margin-top: 0;
+margin-bottom:  0;
+margin-left:    -5;
+margin-right:   0;
+padding-top:    2;
+padding-bottom: 2;
+padding-left:   0;
+padding-right:  0;
+width:  100%;
+}
+
+hr.#footerHR
+{
+border-bottom-color: #EEEEFF;
+border-bottom-style: solid;
+border-bottom-width: 1;
+border-top-color: C8CDDE;
+border-top-style: solid;
+border-top-width: 1;
+height: 3;
+color: #D2D2D2;
+}
+
+div.section
+{
+padding-top:    2;
+padding-bottom: 2;
+padding-right:  15;
+width:  100%;
+}
+
+.heading
+{
+color:          #000000;
+font-weight:    bold;
+margin-top:     18;
+margin-bottom:  8;
+}
+
+h1.heading
+{
+color: #000000;
+font-size:  150%;
+}
+
+.subHeading
+{
+color:          #000000;
+font-weight:    bold;
+font-size:      150%;
+margin-bottom:  4;
+}
+
+h2.subHeading
+{
+color:          #000000;
+font-weight:    bold;
+font-size:      130%;
+}
+h3.subHeading
+{
+color:  #000000;
+font-size: 125%;
+font-weight: bold;
+}
+
+h4.subHeading
+{
+color: #000000;
+font-size: 110%;
+font-weight: bold;
+}
+
+h4.procedureHeading
+{
+color: #000080;
+font-size: 110%;
+font-weight: bold;
+}
+
+h5.subHeading
+{
+color: #000000;
+font-size: 100%;
+font-weight: bold;
+}
+
+img
+{
+padding-bottom: 10;
+}
+
+img.toggle
+{
+border: 0;
+margin-right: 5;
+padding-bottom: 10;
+}
+
+img.copyCodeImage
+{
+border: 0;
+margin: 1;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.downloadCodeImage
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.viewCodeImage
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.note
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.#membersOptionsFilterImage
+{
+border: 0;
+margin-left: 10;
+vertical-align: middle;
+padding-bottom: 10;
+}
+
+img.#toggleAllImage
+{
+margin-left: 4;
+vertical-align: middle;
+padding-bottom: 10;
+}
+
+div.#mainSection table
+{
+border: 0;
+font-size: 100%;
+width:  100%;
+margin-top: 5px;
+margin-bottom: 15px;
+}
+
+div.#mainSection table tr
+{
+vertical-align: top;
+}
+
+div.#mainSection table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-color: #D8D8D8;
+border-bottom-style: solid;
+border-bottom-width: 1;
+color: #000000;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.#mainSection table td
+{
+background: #F2F2F2;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.#mainSection table td.imageCell
+{
+white-space: nowrap;
+}
+
+div.code
+{
+width: 98%;
+}
+
+div.code table
+{
+border: 0;
+font-size: 95%;
+margin-bottom: 5;
+width: 100%
+}
+
+div.code table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-color: #D8D8D8;
+border-bottom-style: solid;
+border-bottom-width: 1;
+color: #000000;
+font-weight: bold;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.code table td
+{
+background: #CCCCCC;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+padding-top: 5;
+}
+
+div.alert
+{
+margin-left: 10;
+width: 98%;
+}
+
+div.alert table
+{
+border: 1;
+font-size: 100%;
+width:  100%;
+border: solid 1 #DEDFEF;
+}
+
+div.alert table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-width: 0;
+color: #000000;
+padding-left: 5;
+padding-right: 5;
+border: solid 1 #DEDFEF;
+}
+
+div.alert table td
+{
+background: #FFFFFF;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+border: solid 1 #DEDFEF;
+}
+
+span.copyCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+float: right;
+display: inline;
+text-align: right;
+}
+
+.downloadCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+}
+
+.viewCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+}
+
+div.code pre
+{
+font-family:    Monospace, Courier New, Courier;
+font-size: 105%;
+color:  #000000;
+}
+
+code
+{
+font-family:    Monospace, Courier New, Courier;
+font-size: 105%;
+color:  #000000;
+}
+
+dl
+{
+margin-top: 0;
+padding-left:   1;
+}
+
+dd
+{
+margin-bottom:  0;
+margin-left:    0;
+padding-left:   20;
+}
+
+dd p
+{
+margin-top: 5;
+}
+
+ul
+{
+margin-left: 17;
+list-style-type: disc;
+}
+
+ul ul
+{
+margin-bottom: 4;
+margin-left: 17;
+margin-top: 3;
+list-style-type: disc;
+}
+
+ol
+{
+margin-left: 24;
+list-style-type: decimal;
+}
+
+ol ol
+{
+margin-left: 24;
+margin-top: 3;
+list-style-type: lower-alpha;
+}
+
+li
+{
+margin-top: 0;
+margin-bottom: 0;
+padding-bottom: 0;
+padding-top: 0;
+margin-left: 5;
+}
+
+p
+{
+margin-bottom: 15;
+}
+
+.tip
+{
+color:  #0000FF;
+font-style: italic;
+cursor:hand;
+text-decoration:underline;
+}
+
+.math
+{
+font-family: Times New Roman;
+font-size: 125%
+}
+.sourceCodeList
+{
+font-family: Verdana;
+font-size: 90%;
+}
+
+pre.viewCode
+{
+width: 100%;
+overflow: auto;
+}
+
+li:hover table, li.over table
+{
+background-color: #C0C0C0;
+}
+
+li:hover ul, li.over ul
+{
+background-color: #d2d2d2;
+border: 1px solid #000;
+display: block;
+}
+            </style>
+    <style TYPE="text/css">
+body
+{
+background: #FFFFFF;
+color: #000000;
+font-family:    Verdana;
+font-size: medium;
+font-style: normal;
+font-weight: normal;
+margin-top: 0;
+margin-bottom:  0;
+margin-left:    0;
+margin-right:   0;
+width:  100%;
+}
+
+div.#mainSection
+{
+font-size: 70%;
+width: 100%;
+padding-left:    10;
+margin-right: 10;
+}
+
+div.#mainBody
+{
+font-size: 90%;
+margin-top: 10;
+padding-bottom: 20;
+}
+
+div.#header
+{
+background-color: #D2D2D2;
+padding-top:    0;
+padding-bottom: 0;
+padding-left:   10;
+padding-right:  0;
+width:          100%;
+}
+
+div.#header table
+{
+border-bottom-color: #C8CDDE;
+border-bottom-style: solid;
+border-bottom-width: 1;
+width:  100%;
+}
+
+span.#runningHeaderText
+{
+color: #003399;
+font-size: 90%;
+}
+
+span.#nsrTitle
+{
+/*    color: #003399;*/
+font-size: 120%;
+font-weight: 600;
+}
+
+div.#header table td
+{
+color: #000000;
+font-size: 70%;
+margin-top: 0;
+margin-bottom:  0;
+padding-right: 20;
+}
+
+div.#header table tr.#headerTableRow3 td
+{
+padding-bottom: 2;
+padding-top: 5;
+}
+
+div.#header table.#bottomTable
+{
+border-top-color: #FFFFFF;
+border-top-style: solid;
+border-top-width: 1;
+text-align: left;
+}
+
+div.#footer
+{
+font-size: 90%;
+margin-top: 0;
+margin-bottom:  0;
+margin-left:    -5;
+margin-right:   0;
+padding-top:    2;
+padding-bottom: 2;
+padding-left:   0;
+padding-right:  0;
+width:  100%;
+}
+
+hr.#footerHR
+{
+border-bottom-color: #EEEEFF;
+border-bottom-style: solid;
+border-bottom-width: 1;
+border-top-color: C8CDDE;
+border-top-style: solid;
+border-top-width: 1;
+height: 3;
+color: #D2D2D2;
+}
+
+div.section
+{
+padding-top:    2;
+padding-bottom: 2;
+padding-right:  15;
+width:  100%;
+}
+
+.heading
+{
+color:          #000000;
+font-weight:    bold;
+margin-top:     18;
+margin-bottom:  8;
+}
+
+h1.heading
+{
+color: #000000;
+font-size:  150%;
+}
+
+.subHeading
+{
+color:          #000000;
+font-weight:    bold;
+font-size:      150%;
+margin-bottom:  4;
+}
+
+h2.subHeading
+{
+color:          #000000;
+font-weight:    bold;
+font-size:      130%;
+}
+h3.subHeading
+{
+color:  #000000;
+font-size: 125%;
+font-weight: bold;
+}
+
+h4.subHeading
+{
+color: #000000;
+font-size: 110%;
+font-weight: bold;
+}
+
+h4.procedureHeading
+{
+color: #000080;
+font-size: 110%;
+font-weight: bold;
+}
+
+h5.subHeading
+{
+color: #000000;
+font-size: 100%;
+font-weight: bold;
+}
+
+img
+{
+padding-bottom: 10;
+}
+
+img.toggle
+{
+border: 0;
+margin-right: 5;
+padding-bottom: 10;
+}
+
+img.copyCodeImage
+{
+border: 0;
+margin: 1;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.downloadCodeImage
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.viewCodeImage
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.note
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.#membersOptionsFilterImage
+{
+border: 0;
+margin-left: 10;
+vertical-align: middle;
+padding-bottom: 10;
+}
+
+img.#toggleAllImage
+{
+margin-left: 4;
+vertical-align: middle;
+padding-bottom: 10;
+}
+
+div.#mainSection table
+{
+border: 0;
+font-size: 100%;
+width:  100%;
+margin-top: 5px;
+margin-bottom: 15px;
+}
+
+div.#mainSection table tr
+{
+vertical-align: top;
+}
+
+div.#mainSection table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-color: #D8D8D8;
+border-bottom-style: solid;
+border-bottom-width: 1;
+color: #000000;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.#mainSection table td
+{
+background: #F2F2F2;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.#mainSection table td.imageCell
+{
+white-space: nowrap;
+}
+
+div.code
+{
+width: 98%;
+}
+
+div.code table
+{
+border: 0;
+font-size: 95%;
+margin-bottom: 5;
+width: 100%
+}
+
+div.code table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-color: #D8D8D8;
+border-bottom-style: solid;
+border-bottom-width: 1;
+color: #000000;
+font-weight: bold;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.code table td
+{
+background: #CCCCCC;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+padding-top: 5;
+}
+
+div.alert
+{
+margin-left: 10;
+width: 98%;
+}
+
+div.alert table
+{
+border: 1;
+font-size: 100%;
+width:  100%;
+border: solid 1 #DEDFEF;
+}
+
+div.alert table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-width: 0;
+color: #000000;
+padding-left: 5;
+padding-right: 5;
+border: solid 1 #DEDFEF;
+}
+
+div.alert table td
+{
+background: #FFFFFF;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+border: solid 1 #DEDFEF;
+}
+
+span.copyCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+float: right;
+display: inline;
+text-align: right;
+}
+
+.downloadCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+}
+
+.viewCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+}
+
+div.code pre
+{
+font-family:    Monospace, Courier New, Courier;
+font-size: 105%;
+color:  #000000;
+}
+
+code
+{
+font-family:    Monospace, Courier New, Courier;
+font-size: 105%;
+color:  #000000;
+}
+
+dl
+{
+margin-top: 0;
+padding-left:   1;
+}
+
+dd
+{
+margin-bottom:  0;
+margin-left:    0;
+padding-left:   20;
+}
+
+dd p
+{
+margin-top: 5;
+}
+
+ul
+{
+margin-left: 17;
+list-style-type: disc;
+}
+
+ul ul
+{
+margin-bottom: 4;
+margin-left: 17;
+margin-top: 3;
+list-style-type: disc;
+}
+
+ol
+{
+margin-left: 24;
+list-style-type: decimal;
+}
+
+ol ol
+{
+margin-left: 24;
+margin-top: 3;
+list-style-type: lower-alpha;
+}
+
+li
+{
+margin-top: 0;
+margin-bottom: 0;
+padding-bottom: 0;
+padding-top: 0;
+margin-left: 5;
+}
+
+p
+{
+margin-bottom: 15;
+}
+
+.tip
+{
+color:  #0000FF;
+font-style: italic;
+cursor:hand;
+text-decoration:underline;
+}
+
+.math
+{
+font-family: Times New Roman;
+font-size: 125%
+}
+.sourceCodeList
+{
+font-family: Verdana;
+font-size: 90%;
+}
+
+pre.viewCode
+{
+width: 100%;
+overflow: auto;
+}
+
+li:hover table, li.over table
+{
+background-color: #C0C0C0;
+}
+
+li:hover ul, li.over ul
+{
+background-color: #d2d2d2;
+border: 1px solid #000;
+display: block;
+}
+            </style>
+    <style TYPE="text/css">
+body
+{
+background: #FFFFFF;
+color: #000000;
+font-family:    Verdana;
+font-size: medium;
+font-style: normal;
+font-weight: normal;
+margin-top: 0;
+margin-bottom:  0;
+margin-left:    0;
+margin-right:   0;
+width:  100%;
+}
+
+div.#mainSection
+{
+font-size: 70%;
+width: 100%;
+padding-left:    10;
+margin-right: 10;
+}
+
+div.#mainBody
+{
+font-size: 90%;
+margin-top: 10;
+padding-bottom: 20;
+}
+
+div.#header
+{
+background-color: #D2D2D2;
+padding-top:    0;
+padding-bottom: 0;
+padding-left:   10;
+padding-right:  0;
+width:          100%;
+}
+
+div.#header table
+{
+border-bottom-color: #C8CDDE;
+border-bottom-style: solid;
+border-bottom-width: 1;
+width:  100%;
+}
+
+span.#runningHeaderText
+{
+color: #003399;
+font-size: 90%;
+}
+
+span.#nsrTitle
+{
+/*    color: #003399;*/
+font-size: 120%;
+font-weight: 600;
+}
+
+div.#header table td
+{
+color: #000000;
+font-size: 70%;
+margin-top: 0;
+margin-bottom:  0;
+padding-right: 20;
+}
+
+div.#header table tr.#headerTableRow3 td
+{
+padding-bottom: 2;
+padding-top: 5;
+}
+
+div.#header table.#bottomTable
+{
+border-top-color: #FFFFFF;
+border-top-style: solid;
+border-top-width: 1;
+text-align: left;
+}
+
+div.#footer
+{
+font-size: 90%;
+margin-top: 0;
+margin-bottom:  0;
+margin-left:    -5;
+margin-right:   0;
+padding-top:    2;
+padding-bottom: 2;
+padding-left:   0;
+padding-right:  0;
+width:  100%;
+}
+
+hr.#footerHR
+{
+border-bottom-color: #EEEEFF;
+border-bottom-style: solid;
+border-bottom-width: 1;
+border-top-color: C8CDDE;
+border-top-style: solid;
+border-top-width: 1;
+height: 3;
+color: #D2D2D2;
+}
+
+div.section
+{
+padding-top:    2;
+padding-bottom: 2;
+padding-right:  15;
+width:  100%;
+}
+
+.heading
+{
+color:          #000000;
+font-weight:    bold;
+margin-top:     18;
+margin-bottom:  8;
+}
+
+h1.heading
+{
+color: #000000;
+font-size:  150%;
+}
+
+.subHeading
+{
+color:          #000000;
+font-weight:    bold;
+font-size:      150%;
+margin-bottom:  4;
+}
+
+h2.subHeading
+{
+color:          #000000;
+font-weight:    bold;
+font-size:      130%;
+}
+h3.subHeading
+{
+color:  #000000;
+font-size: 125%;
+font-weight: bold;
+}
+
+h4.subHeading
+{
+color: #000000;
+font-size: 110%;
+font-weight: bold;
+}
+
+h4.procedureHeading
+{
+color: #000080;
+font-size: 110%;
+font-weight: bold;
+}
+
+h5.subHeading
+{
+color: #000000;
+font-size: 100%;
+font-weight: bold;
+}
+
+img
+{
+padding-bottom: 10;
+}
+
+img.toggle
+{
+border: 0;
+margin-right: 5;
+padding-bottom: 10;
+}
+
+img.copyCodeImage
+{
+border: 0;
+margin: 1;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.downloadCodeImage
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.viewCodeImage
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.note
+{
+border: 0;
+margin-right: 3;
+padding-bottom: 10;
+}
+
+img.#membersOptionsFilterImage
+{
+border: 0;
+margin-left: 10;
+vertical-align: middle;
+padding-bottom: 10;
+}
+
+img.#toggleAllImage
+{
+margin-left: 4;
+vertical-align: middle;
+padding-bottom: 10;
+}
+
+div.#mainSection table
+{
+border: 0;
+font-size: 100%;
+width:  100%;
+margin-top: 5px;
+margin-bottom: 15px;
+}
+
+div.#mainSection table tr
+{
+vertical-align: top;
+}
+
+div.#mainSection table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-color: #D8D8D8;
+border-bottom-style: solid;
+border-bottom-width: 1;
+color: #000000;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.#mainSection table td
+{
+background: #F2F2F2;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.#mainSection table td.imageCell
+{
+white-space: nowrap;
+}
+
+div.code
+{
+width: 98%;
+}
+
+div.code table
+{
+border: 0;
+font-size: 95%;
+margin-bottom: 5;
+width: 100%
+}
+
+div.code table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-color: #D8D8D8;
+border-bottom-style: solid;
+border-bottom-width: 1;
+color: #000000;
+font-weight: bold;
+padding-left: 5;
+padding-right: 5;
+}
+
+div.code table td
+{
+background: #CCCCCC;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+padding-top: 5;
+}
+
+div.alert
+{
+margin-left: 10;
+width: 98%;
+}
+
+div.alert table
+{
+border: 1;
+font-size: 100%;
+width:  100%;
+border: solid 1 #DEDFEF;
+}
+
+div.alert table th
+{
+text-align: left;
+background: #D8D8D8;
+border-bottom-width: 0;
+color: #000000;
+padding-left: 5;
+padding-right: 5;
+border: solid 1 #DEDFEF;
+}
+
+div.alert table td
+{
+background: #FFFFFF;
+border-top-color: #D8D8D8;
+border-top-style: solid;
+border-top-width: 1;
+padding-left: 5;
+padding-right: 5;
+border: solid 1 #DEDFEF;
+}
+
+span.copyCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+float: right;
+display: inline;
+text-align: right;
+}
+
+.downloadCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+}
+
+.viewCode
+{
+color: #0000ff;
+font-size: 90%;
+font-weight: normal;
+cursor: hand;
+}
+
+div.code pre
+{
+font-family:    Monospace, Courier New, Courier;
+font-size: 105%;
+color:  #000000;
+}
+
+code
+{
+font-family:    Monospace, Courier New, Courier;
+font-size: 105%;
+color:  #000000;
+}
+
+dl
+{
+margin-top: 0;
+padding-left:   1;
+}
+
+dd
+{
+margin-bottom:  0;
+margin-left:    0;
+padding-left:   20;
+}
+
+dd p
+{
+margin-top: 5;
+}
+
+ul
+{
+margin-left: 17;
+list-style-type: disc;
+}
+
+ul ul
+{
+margin-bottom: 4;
+margin-left: 17;
+margin-top: 3;
+list-style-type: disc;
+}
+
+ol
+{
+margin-left: 24;
+list-style-type: decimal;
+}
+
+ol ol
+{
+margin-left: 24;
+margin-top: 3;
+list-style-type: lower-alpha;
+}
+
+li
+{
+margin-top: 0;
+margin-bottom: 0;
+padding-bottom: 0;
+padding-top: 0;
+margin-left: 5;
+}
+
+p
+{
+margin-bottom: 15;
+}
+
+.tip
+{
+color:  #0000FF;
+font-style: italic;
+cursor:hand;
+text-decoration:underline;
+}
+
+.math
+{
+font-family: Times New Roman;
+font-size: 125%
+}
+.sourceCodeList
+{
+font-family: Verdana;
+font-size: 90%;
+}
+
+pre.viewCode
+{
+width: 100%;
+overflow: auto;
+}
+
+li:hover table, li.over table
+{
+background-color: #C0C0C0;
+}
+
+li:hover ul, li.over ul
+{
+background-color: #d2d2d2;
+border: 1px solid #000;
+display: block;
+}
+            </style>
+  </head>
+  <body>
+    <!--Topic built:10/08/2008 21:46:22-->
+
+    
+    
+    
+    
+    
+    <div id="header">
+      <table width="100%" id="topTable"><tr>
+          <td align="left">
+            <span id="nsrTitle">AdventureWorks Data Binding (Entity Framework)</span>
+          </td>
+        </tr></table>    </div>
+    <div id="mainSection">
+      <div id="mainBody"><p> 10/08/2008 21:46:22</p>
+        
+        <font color="DarkGray"> </font><p /> 
+    <p>The AdventureWorks Data Binding sample demonstrates data binding that uses the Entity Framework. This application displays and modifies <code>SalesOrderDetail</code> entities associated with <code>SalesOrderHeader</code> entities.</p>
+  <h1 class="heading">Scenario</h1><div id="sectionSectionEPBHA" class="seeAlsoNoToggleSection">
+      <p>You can bind an <b>ObjectQuery</b> to a <b>DataGridView</b> control on a Windows form in a few lines of code. This sample demonstrates how to create the <b>ObjectQuery</b> and assign the <b>ObjectQuery</b> to the <b>DataSource</b> property of a <b>DataGridView</b> control. For more information about this sample, see the Adventure Works Data Binding sample topics in the <a href="http://msdn.microsoft.com/en-us/library/065daca8-f82b-49d0-a11e-8cceb907a34b"><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Entity Framework documentation</linkText></a>.</p>
+    </div><h1 class="heading">Languages</h1><div id="sectionSectionENBHA" class="seeAlsoNoToggleSection">
+      <ul><li>
+          <p>Conceptual schema definition language (CSDL)</p>
+        </li><li>
+          <p>Store schema definition language (SSDL)</p>
+        </li><li>
+          <p>Mapping specification language (MSL) </p>
+        </li><li>
+          <p>C#</p>
+        </li><li>
+          <p>Entity SQL</p>
+        </li></ul>
+    </div><h1 class="heading">Features</h1><div id="sectionSectionELBHA" class="seeAlsoNoToggleSection">
+      <p>This sample uses the following features of the Entity Framework.</p>
+      <ul><li>
+          <p>Entity Data Model</p>
+        </li><li>
+          <p>Object Services</p>
+        </li><li>
+          <p>Query builder methods</p>
+        </li><li>
+          <p>Data binding</p>
+        </li><li>
+          <p>Project data sources</p>
+        </li><li>
+          <p>Property validation</p>
+        </li><li>
+          <p>Windows Forms</p>
+        </li><li>
+          <p>
+            <b>DataSource</b> control</p>
+        </li><li>
+          <p>
+            <b>DataGrid</b> control</p>
+        </li></ul>
+    </div><h1 class="heading">Prerequisites</h1><div id="sectionSectionEJBHA" class="seeAlsoNoToggleSection">
+      <p>Before running this sample, make sure the following software is installed:</p>
+      <ul><li>
+          <p>Visual Studio 2008 SP1 containing the .NET Framework 3.5</p>
+        </li><li>
+          <p>SQL Server 2005 or 2008 Database Engine</p>
+          <ul><li>
+              <p>AdventureWorks sample database</p>
+            </li><li>
+              <p>SQL Server Management Studio (optional)</p>
+            </li></ul>
+        </li></ul>
+    </div><h1 class="heading">Building the Sample</h1><div id="sectionSectionEHBHA" class="seeAlsoNoToggleSection">
+      <p>Use the following procedure to build the sample.</p>
+      <h3 class="subHeading">To build the AdventureWorks Data Binding sample application</h3><div class="subSection"><ol><li>
+            
+              <p>(Optional) If the AdventureWorks sample database is not already present in your SQL Server instance, download and install it from <a href="http://go.microsoft.com/fwlink/?LinkId=124770"><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Sample Databases for Microsoft SQL Server 2005 SP2</linkText></a>.</p>
+            
+          </li><li>
+            
+              <p>Open the AdWksSalesWinDataBind solution file in Visual Studio.</p>
+            
+          </li><li>
+            
+              <p>(Optional) If you created the AdventureWorks database in an instance of SQL Server other than the default instance on the local machine, specify the correct SQL Server instance by modifying the Data Source in the AdventureworksEntities connection string in the App.Config file of the AdWksSalesWinDataBind project.</p>
+            
+          </li><li>
+            
+              <p>Build the project.</p>
+            
+          </li></ol></div>
+    </div><h1 class="heading">Running the Sample</h1><div id="sectionSectionEFBHA" class="seeAlsoNoToggleSection">
+      <p>Use the following procedure to run the sample.</p>
+      <h3 class="subHeading">To run the AdventureWorks Data Binding application</h3><div class="subSection"><ol><li>
+            
+              <p>Run the application.</p>
+            
+          </li><li>
+            
+              <p>Enter a SalesOrderHeaderID value in the <b>Order Number</b> text box. Use a number between 43659 and 75123, and click the <b>Get Sales Order</b> button.</p>
+            
+          </li><li>
+            
+              <p>In the <b>Sales Order Details</b> data grid, modify the number in the <b>Quantity</b> column, and press <b>Enter</b>.</p>
+              <p>Line and order totals are updated by business logic on the client.</p>
+            
+          </li><li>
+            
+              <p>Click the <b>Add Detail to Order</b> button.</p>
+            
+          </li><li>
+            
+              <p>When the <b>Add SalesOrderDetail</b> dialog appears, click to select a <b>Product</b> from the data grid. </p>
+            
+          </li><li>
+            
+              <p>Enter a quantity and optional discount, which must be a value between 0 and 1.</p>
+            
+          </li><li>
+            
+              <p>Click <b>Create Order</b>. A new order is created and added to the <b>Sales Order Details</b> data grid.</p>
+            
+          </li></ol></div>
+    </div><h1 class="heading">Removing the Sample</h1><div id="sectionSectionEDBHA" class="seeAlsoNoToggleSection">
+      <p>Use the following procedure to remove the AdventureWorks Data Binding sample.</p>
+      <h3 class="subHeading">To remove the AdventureWorks Data Binding application</h3><div class="subSection"><ol><li>
+            
+              <p>Delete the project directory and contents.</p>
+            
+          </li><li>
+            
+              <p>(Optional) Drop the AdventureWorks database from the instance of SQL Server.</p>
+            
+          </li></ol></div>
+    </div><h1 class="heading"><span id="seeAlsoNoToggle">See Also</span></h1><div id="seeAlsoSection" class="seeAlsoNoToggleSection"><h4 class="subHeading">Other Resources</h4><a href="http://msdn.microsoft.com/en-us/library/a437041f-6899-4ae7-96ce-aabf528d7205"><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">ADO.NET Entity Framework</linkText></a><br /><a href="http://msdn.microsoft.com/en-us/library/64a9fba4-9166-4140-be0b-43f15531cdd1"><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Entity Data Model</linkText></a><br /><a href="http://msdn.microsoft.com/en-us/library/1af01b4c-1046-4b5d-bc50-d6f3b64e92af"><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Binding Objects to Controls</linkText></a><br /><br /></div></div>
+      <div id="footer">
+			
+			
+		</div>
+    </div>
+  </body>
+</html>

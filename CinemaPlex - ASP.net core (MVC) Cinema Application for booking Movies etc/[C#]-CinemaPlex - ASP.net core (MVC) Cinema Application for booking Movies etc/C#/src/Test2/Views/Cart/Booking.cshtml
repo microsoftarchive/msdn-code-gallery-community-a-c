@@ -1,0 +1,39 @@
+@model IEnumerable<CinemaPlex.Models.CartModel>
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Http;
+@using Newtonsoft.Json;
+@{
+    ViewData["Title"] = "Booking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    CartModel CartData;
+    var session = Program.data.getSession(Convert.ToInt32(ViewData["SessionId"]));
+    var movie = Program.data.getMovie(session.MovieID);
+}
+
+<h1>Book Seats</h1>
+
+<div class="shopping-cart">
+    <div class="hidden" id="sessionId">@ViewData["SessionId"]</div>
+    <div class="column-labels">
+        <label class="product-image">Image</label>
+    </div>
+    <div class="booking">
+        <div id="seat-map">
+            <div class="front">SCREEN</div>
+        </div>
+        <div class="booking-details">
+            <p>Movie: <span> @movie.Title</span></p>
+            <p>Time: <span>@session.TimeRunning</span></p>
+            <p>Seat: </p>
+            <ul id="selected-seats"></ul>
+            <p>Tickets: <span id="counter">0</span></p>
+            <p>Total: <b>$<span id="total">0</span></b></p>
+
+            <button id="bookSeats" class="checkout-button">Book Seats</button>
+
+            <div id="legend"></div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</div>
+

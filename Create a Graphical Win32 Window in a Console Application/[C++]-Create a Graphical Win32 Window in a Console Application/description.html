@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=B6A3E523D12C9136AC9F4C02B9F5CAFF" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=59CEC968CCF63579590CF573D2095884" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Create a Graphical Win32 Window in a Console Application</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Create a Graphical Win32 Window in a Console Application</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Win32
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C++, Cross Platform Code Reuse, Visual Studio, How to
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">10/12/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Create-a-Graphical-Win32-b107682e">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1><span style="font-size:20px; font-weight:bold">Introduction</span></h1>
+<p>This sample demonstrates how&nbsp;you can&nbsp;get all of the values that would have been passed as parameters to WinMain in a Win32 application from a Console application. It also shows how to use &quot;main&quot; instead of &quot;wmain&quot; or &quot;wWinMain&quot; as the entry point
+ for a Unicode application for ISO C&#43;&#43; compliance.</p>
+<p>The code in this sample is designed only for Unicode programs.&nbsp; It can be adapted for old ASCII/MBCS programs if needed, however the Unicode version of&nbsp;at least one of the functions used in this program is guaranteed to succeed while its ASCII/MBCS
+ counterpart could fail. Check all Windows API documentation and include proper error handling where necessary if you intend to use the functionality demonstrated in this sample in a legacy ASCII/MBCS project.</p>
+<h1><span style="font-size:20px; font-weight:bold">Description</span></h1>
+<p>The WinMain function (&nbsp;<a href="http://msdn.microsoft.com/en-us/library/ff381406(v=vs.85).aspx">http://msdn.microsoft.com/en-us/library/ff381406(v=vs.85).aspx</a>&nbsp;) in a Unicode application has the following prototype:</p>
+<div class="title">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow);</pre>
+<div class="preview">
+<pre class="cplusplus"><span class="cpp__datatype">int</span>&nbsp;WINAPI&nbsp;wWinMain(<span class="cpp__datatype">HINSTANCE</span>&nbsp;hInstance,&nbsp;<span class="cpp__datatype">HINSTANCE</span>&nbsp;hPrevInstance,&nbsp;<span class="cpp__datatype">LPWSTR</span>&nbsp;lpCmdLine,&nbsp;<span class="cpp__datatype">int</span>&nbsp;nCmdShow);</pre>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>The sample includes four helper functions found in the WinMainParameters.h header file.</p>
+<ul>
+<li>The GetHInstance function&nbsp;returns the value that would have been&nbsp;in the &quot;HINSTANCE hInstance&quot; parameter.
+</li><li>The GetHPrevInstance function&nbsp;returns the value that would have been&nbsp;in the &quot;HINSTANCE hPrevInstance&quot; parameter.
+</li><li>The GetLPCmdLine function&nbsp;returns the value that would have been&nbsp;in the &quot;LPWSTR lpCmdLine&quot; parameter.
+</li><li>The GetNCmdShow function&nbsp;returns the value that would have been&nbsp;in the &quot;int nCmdShow&quot; parameter.
+</li></ul>
+<p>The sample uses these&nbsp;functions to create a Win32 window based on the code generated by the C&#43;&#43; Win32 Application project template. The project itself is a Win32 Console application. As noted in the sample, if you want to use &quot;main&quot; as your starting
+ point in an application but do not need a console window, you can set the /ENTRY and /SUBSYSTEM linker options to &quot;mainCRTStartup&quot; and &quot;WINDOWS&quot;, respectively, in order to obtain that behavior.</p>
+<h1>More Information</h1>
+<p>For more information about the /ENTRY linker option, including how to set its value in a C&#43;&#43; project's properties, see:
+<a href="http://msdn.microsoft.com/en-us/library/f9t8842e.aspx">http://msdn.microsoft.com/en-us/library/f9t8842e.aspx</a> .</p>
+<p>For more information about the /SUBSYSTEM linker option, including how to set its value in a C&#43;&#43; project's properties, see:
+<a href="http://msdn.microsoft.com/en-us/library/fcc1zstk.aspx">http://msdn.microsoft.com/en-us/library/fcc1zstk.aspx</a> .</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

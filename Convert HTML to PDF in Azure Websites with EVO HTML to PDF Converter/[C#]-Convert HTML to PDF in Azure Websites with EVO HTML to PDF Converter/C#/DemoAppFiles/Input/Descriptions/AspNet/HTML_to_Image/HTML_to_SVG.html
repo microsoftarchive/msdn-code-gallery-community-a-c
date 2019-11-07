@@ -1,0 +1,42 @@
+﻿<b>EVO HTML to PDF Converter</b> also allows you to easily convert in just a few lines of code HTML pages and HTML strings to vector images in SVG format. In this demo you can experiment with the basic settings
+    of the HTML to SVG converter.<br />
+<br />
+At the top of the demo you can choose the HTML document to convert which can be:
+    <br />
+<ul>
+    <li>
+        <b>A HTML page from a given URL</b>. The URL must be accessible from the computer where the converter runs. If the page requires authentication or if you are using a proxy server to access Internet
+            then you have to set the converter properties accordingly as described in documentation
+    </li>
+    <li>
+        <b>A HTML string</b>. When you convert a HTML string you also have the option to specify a base URL that will be used
+            by converter to resolve the relative URLs found in the HTML string to fully qualified URLs. If your HTML string uses only fully qualified URLs then this parameter is not necessary
+    </li>
+</ul>
+The basic options you can set in this demo are grouped in a few categories.<br />
+<br />
+<b class="subtitle">HTML Viewer Options</b>
+<br />
+<ul>
+    <li>
+        <b>HTML Viewer Width</b>. This option is the equivalent in converter of the browser window width. When the browser window width is changed the HTML content
+            displayed inside the window can have a different layout and something similar happens when you change the HTML Viewer width of the converter. At a given viewer width, the converter will
+            capture by default the whole height of the HTML content, but you can set the HTML Viewer height to capture only the top part of the HTML page
+    </li>
+    <li>
+        <b>HTML Viewer Height</b>. This option is the equivalent in converter of the browser window height and can be used to limit the conversion to the top part of the HTML page. If this property is
+            not set the entire page will be converted
+    </li>
+</ul>
+<b class="subtitle">Navigation Options</b>
+<br />
+<ul>
+    <li>
+        <b>Navigation Timeout</b>. This option represents the maximum time to wait for a web page to be loaded by converter. If the web page cannot be loaded in this time interval the
+            converter will throw an exception
+    </li>
+    <li>
+        <b>Delay Conversion</b>. This option represents an additional time to wait after the HTML page was loaded to allow the asynchronous operations to finish before starting to
+            capture the HTML content. If you cannot estimate the additional time to wait then you have the option to manually trigger the conversion
+    </li>
+</ul>

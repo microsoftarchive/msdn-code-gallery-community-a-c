@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmarkEventsSample", "LandmarkEventsSample\LandmarkEventsSample.csproj", "{124B5F34-50A0-4146-B202-0CC852F3C6CC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://vstfbingmobile:8080/tfs/bingmobile
+		SccProjectUniqueName0 = LandmarkEventsSample\\LandmarkEventsSample.csproj
+		SccProjectName0 = LandmarkEventsSample
+		SccAuxPath0 = http://vstfbingmobile:8080/tfs/bingmobile
+		SccLocalPath0 = LandmarkEventsSample
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Debug|ARM.Build.0 = Debug|ARM
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Debug|ARM.Deploy.0 = Debug|ARM
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Debug|x64.ActiveCfg = Debug|x64
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Debug|x64.Build.0 = Debug|x64
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Debug|x64.Deploy.0 = Debug|x64
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Debug|x86.ActiveCfg = Debug|x86
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Debug|x86.Build.0 = Debug|x86
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Debug|x86.Deploy.0 = Debug|x86
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Release|ARM.ActiveCfg = Release|ARM
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Release|ARM.Build.0 = Release|ARM
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Release|ARM.Deploy.0 = Release|ARM
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Release|x64.ActiveCfg = Release|x64
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Release|x64.Build.0 = Release|x64
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Release|x64.Deploy.0 = Release|x64
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Release|x86.ActiveCfg = Release|x86
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Release|x86.Build.0 = Release|x86
+		{124B5F34-50A0-4146-B202-0CC852F3C6CC}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

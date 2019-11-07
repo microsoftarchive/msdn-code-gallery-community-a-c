@@ -1,0 +1,1 @@
+﻿Maui.jpg,1,gris.jpg,PaleTurquoise,1,0,OliveDrab,1,SeaShell,0,@Arial Unicode MS,130,Transparent,Transparent,,

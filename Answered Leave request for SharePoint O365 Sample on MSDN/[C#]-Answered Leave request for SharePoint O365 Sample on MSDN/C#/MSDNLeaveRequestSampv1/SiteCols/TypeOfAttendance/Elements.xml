@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{2ebfb900-76e6-4bc4-9186-44c2ac261ea8}"
+       Name="TypeOfAttendance"
+       DisplayName="Type Of Attendance"
+       StaticName="TypeOfAttendance"
+       Type="Choice"
+       Description="What is your role for this Event"
+       Required="TRUE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp"
+       FillInChoice="FALSE">
+        <CHOICES>
+          <CHOICE>TBD</CHOICE>          
+          <CHOICE>Worker</CHOICE>
+          <CHOICE>Attendee</CHOICE>
+          <CHOICE>Speaker</CHOICE>
+          <CHOICE>Organizer</CHOICE>
+          <CHOICE>Sponsor</CHOICE>
+          <CHOICE>Other-UseComments</CHOICE>          
+        </CHOICES>
+        <Default>TBD</Default>
+  </Field>
+</Elements>

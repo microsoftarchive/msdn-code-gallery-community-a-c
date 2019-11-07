@@ -1,0 +1,673 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=F16685F880D15198889D0B493E93234D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=FC9EF39AC558A2A3771C9AB6721E0602" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>C# WinForms Dashboard Monitoring with Animation</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>C# WinForms Dashboard Monitoring with Animation</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, WinForms
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, WinForms
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">12/4/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/C-WinForms-Dashboard-with-e9dae71a">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><img id="165285" src="description/anim1.gif" alt="" width="317" height="317"></p>
+<p>&nbsp;</p>
+<p><span>In this article, we will see in detail how to develop a simple WinForms C# application to create a Dashboard Monitoring application for load monitoring the forms one-by-one, within a certain time frame, by user setting.</span><br>
+<br>
+<span>We can see monitoring systems everywhere where users can easily get quick information of current happenings, such as - in factories- the production results; in shopping malls- each floor shop and food court details; in hospitals- doctor&rsquo;s availability
+ and patients waiting list, on airports- departure and arrival flight details, at stations- train schedule information, etc.</span><br>
+<br>
+<span>Here, in this article, let&rsquo;s see how to create a simple monitoring dashboard system to be displayed on any department with user settings.</span><br>
+<strong>&nbsp;</strong></p>
+<h2><strong>Dashboard User Setting</strong></h2>
+<p><span>In some cases, we need to display only certain forms in each floor. For example, &nbsp;let&rsquo;s consider factories with 4 floors and on each floor, there is a different kind of production. We will create different forms to display the production
+ results of each floor. Now, admin needs to set each floor monitoring form display. For example - In the first floor Manager room, the &nbsp;admin needs to display all floor monitoring results; that is, all monitoring forms need to be displayed within few seconds.
+ On the second floor, the admin needs to set monitoring forms to display only the production result of second floor. For example - the monitoring form2, form4, form6 are related to 2nd floor and need to be display one by one.</span><br>
+<br>
+<span>To achieve this, first we create a Setting form. In this form, we can load the form display order and form display time from database or by storing in global class file. In this article, for demo purposes, I have used the setting to be stored in class
+ file globally for each to display.</span></p>
+<h2><strong>Floor 1 - Manager Room display</strong></h2>
+<p><span>Here, from the below image, we can see that when we click Save 1 Button, the Dashboard Monitoring form will display the results of all floor results. Each monitoring form displays simple animation of each floor production result with Message display
+ with animation.</span><br>
+<br>
+</p>
+<p><img id="165285" src="description/anim1.gif" alt="" width="317" height="317"></p>
+<h2><strong>Floor 2 - Production Room display</strong></h2>
+<p><span>Here, from the below image, we can see that when we click Save 2 button, we load the Dashboard Monitoring Form 2,Form 4, and Form 6 showing the second floor production result. Each monitoring form displays simple animation with each floor production
+ result, with Message display with animation.</span></p>
+<p><img id="165287" src="description/anim2.gif" alt="" width="317" height="317"></p>
+<h1><span>Building the Sample</span></h1>
+<h1><strong>Prerequisites</strong></h1>
+<ul>
+<li>Visual Studio 2015: You can download it from&nbsp;<a href="https://code.msdn.microsoft.com/C-WinForms-Dashboard-with-e9dae71a/https://code.msdn.microsoft.com/C-WinForms-Dashboard-with-e9dae71a/https://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs.aspx" ></a><a href="https://code.msdn.microsoft.com/C-WinForms-Dashboard-with-e9dae71a/https://code.msdn.microsoft.com/C-WinForms-Dashboard-with-e9dae71a/https://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs.aspx" >here</a>&nbsp;.
+</li></ul>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<h1><strong>Step 1 - Create C# Windows Forms Application</strong></h1>
+<p>After installing Visual Studio 2015, from your desktop, go to Start &gt;&gt; Programs &gt;&gt; Visual Studio 2015 and click on &quot;Visual Studio 2015&quot;.</p>
+<div>Click New &gt;&gt; Project &gt;&gt; Visual C# &gt;&gt; Windows &gt;&gt; Windows Forms Application.</div>
+<div>&nbsp;</div>
+<div>Enter your Project Name and click OK.</div>
+<p><img id="165288" src="description/2.PNG" alt="" width="394" height="273"></p>
+<h1><strong>Step 2 - Create a GlobalVariable Class file</strong></h1>
+<p><span>Next, we need to create a class for declaring all global variables, for storing all form monitoring display settings, and to set the time for each form display.</span></p>
+<p><img id="165289" src="description/3.PNG" alt="" width="389" height="245"></p>
+<p><span>In this class, let's declare 3 variables, 2 of which will be arrays, to store the form displayindex, the time (in seconds) for each form display, and the total number of forms we are going to display in our Dashboard monitoring application.</span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public class GlobalVariable  
+    {  
+        /// &lt;summary&gt;Index to Display all forms one by one&lt;/summary&gt;   
+        public static int[] frmDisplayIndex = new int[6] { 1, 2, 3, 4, 5, 6 };  
+  
+        /// &lt;summary&gt;Timer Interval to display each Forms&lt;/summary&gt;  
+        public static int[] interval = new int[6] { 4000, 5000, 6000, 5000, 6000, 7000 };  
+  
+        /// &lt;summary&gt;Maximum number of Forms to be displayed&lt;/summary&gt;  
+        public static int formDisplayCount = 6;  
+    }  </pre>
+<div class="preview">
+<pre class="js">public&nbsp;class&nbsp;GlobalVariable&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">///&nbsp;&lt;summary&gt;Index&nbsp;to&nbsp;Display&nbsp;all&nbsp;forms&nbsp;one&nbsp;by&nbsp;one&lt;/summary&gt;&nbsp;&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;int[]&nbsp;frmDisplayIndex&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">1</span>,&nbsp;<span class="js__num">2</span>,&nbsp;<span class="js__num">3</span>,&nbsp;<span class="js__num">4</span>,&nbsp;<span class="js__num">5</span>,&nbsp;<span class="js__num">6</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">///&nbsp;&lt;summary&gt;Timer&nbsp;Interval&nbsp;to&nbsp;display&nbsp;each&nbsp;Forms&lt;/summary&gt;&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;int[]&nbsp;interval&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">4000</span>,&nbsp;<span class="js__num">5000</span>,&nbsp;<span class="js__num">6000</span>,&nbsp;<span class="js__num">5000</span>,&nbsp;<span class="js__num">6000</span>,&nbsp;<span class="js__num">7000</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">///&nbsp;&lt;summary&gt;Maximum&nbsp;number&nbsp;of&nbsp;Forms&nbsp;to&nbsp;be&nbsp;displayed&lt;/summary&gt;&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;int&nbsp;formDisplayCount&nbsp;=&nbsp;<span class="js__num">6</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;</pre>
+</div>
+</div>
+</div>
+<h1 class="endscriptcode">&nbsp;S<strong>tep 3 - Form Setting</strong></h1>
+<div class="endscriptcode"><strong><img id="165290" src="description/1.PNG" alt="" width="294" height="306"><br>
+</strong></div>
+<p><span>We create a common function in form Setting as loadDashboard(). In each button click, we pass the number as floor number.</span><br>
+<br>
+<span>For example, on Save 1 and Save 2 buttons, we pass the numbers as 1, 2 to the loadDashboard() function.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private void button1_Click(object sender, EventArgs e)  
+        {  
+            loadDashboard(1);  
+        }  
+  
+        private void button2_Click(object sender, EventArgs e)  
+        {  
+            loadDashboard(2);  
+        }  </pre>
+<div class="preview">
+<pre class="js">private&nbsp;<span class="js__operator">void</span>&nbsp;button1_Click(object&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loadDashboard(<span class="js__num">1</span>);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;<span class="js__operator">void</span>&nbsp;button2_Click(object&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loadDashboard(<span class="js__num">2</span>);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;<span>Here, in loadDashboard() function, the admin can set each floor the form displays or not. Here in our dashboard, we have set to display 6 forms. In frmDisplayIndex array if in each floor the form needs to be displayed
+ we use the formdisplayIndex .If the forms do not need to be displayed, then we hide the form to displayed. On button 1 click, we display all forms with each form display time. On button 2 click, we display only form 2, 4, and 6. We can see that index 1,3 and
+ 5 are set to 0.</span></div>
+<div class="endscriptcode"><span>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private void loadDashboard(int formDispCount)  
+        {  
+            switch (formDispCount)  
+            {  
+                case 1:  
+                    GlobalVariable.frmDisplayIndex = new int[6] { 1, 2, 3, 4, 5, 6 };  
+                    GlobalVariable.interval = new int[6] { 4000, 2000, 4000, 3000, 4000, 3000 };  
+                    break;  
+                case 2:  
+                    GlobalVariable.frmDisplayIndex = new int[6] { 0, 2, 0, 4,0, 6 };  
+                    GlobalVariable.interval = new int[6] { 500, 1500, 200, 1200, 1000, 1000 };  
+                    break;  
+                case 3:  
+                    GlobalVariable.frmDisplayIndex = new int[6] { 1, 0, 3, 4, 0, 6 };  
+                    GlobalVariable.interval = new int[6] { 1000, 2000, 3000, 2000, 1000, 2000 };  
+                    break;  
+                case 4:  
+                    GlobalVariable.frmDisplayIndex = new int[6] { 1, 2, 0, 4, 5, 6 };  
+                    GlobalVariable.interval = new int[6] { 5000, 5000, 6000, 4000, 6000, 3000 };  
+                    break;  
+                case 5:  
+                    GlobalVariable.frmDisplayIndex = new int[6] { 1, 2, 3, 4, 5, 0 };  
+                    GlobalVariable.interval = new int[6] { 3000, 5000, 6000, 2000, 6000, 3000 };  
+                    break;  
+                case 6:  
+                    GlobalVariable.frmDisplayIndex = new int[6] { 1, 2, 3, 0, 5, 6 };  
+                    GlobalVariable.interval = new int[6] { 4000, 5000, 2000, 6000, 2000, 4000 };  
+                    break;  
+            }  
+            this.Opacity = 0;  
+            this.FormClosed &#43;= new FormClosedEventHandler(Form1_FormClosed);  
+            this.Close();  
+  
+        }  </pre>
+<div class="preview">
+<pre class="js">private&nbsp;<span class="js__operator">void</span>&nbsp;loadDashboard(int&nbsp;formDispCount)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">switch</span>&nbsp;(formDispCount)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">1</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.frmDisplayIndex&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">1</span>,&nbsp;<span class="js__num">2</span>,&nbsp;<span class="js__num">3</span>,&nbsp;<span class="js__num">4</span>,&nbsp;<span class="js__num">5</span>,&nbsp;<span class="js__num">6</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.interval&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">4000</span>,&nbsp;<span class="js__num">2000</span>,&nbsp;<span class="js__num">4000</span>,&nbsp;<span class="js__num">3000</span>,&nbsp;<span class="js__num">4000</span>,&nbsp;<span class="js__num">3000</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">2</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.frmDisplayIndex&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">0</span>,&nbsp;<span class="js__num">2</span>,&nbsp;<span class="js__num">0</span>,&nbsp;<span class="js__num">4</span>,<span class="js__num">0</span>,&nbsp;<span class="js__num">6</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.interval&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">500</span>,&nbsp;<span class="js__num">1500</span>,&nbsp;<span class="js__num">200</span>,&nbsp;<span class="js__num">1200</span>,&nbsp;<span class="js__num">1000</span>,&nbsp;<span class="js__num">1000</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">3</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.frmDisplayIndex&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">1</span>,&nbsp;<span class="js__num">0</span>,&nbsp;<span class="js__num">3</span>,&nbsp;<span class="js__num">4</span>,&nbsp;<span class="js__num">0</span>,&nbsp;<span class="js__num">6</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.interval&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">1000</span>,&nbsp;<span class="js__num">2000</span>,&nbsp;<span class="js__num">3000</span>,&nbsp;<span class="js__num">2000</span>,&nbsp;<span class="js__num">1000</span>,&nbsp;<span class="js__num">2000</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">4</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.frmDisplayIndex&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">1</span>,&nbsp;<span class="js__num">2</span>,&nbsp;<span class="js__num">0</span>,&nbsp;<span class="js__num">4</span>,&nbsp;<span class="js__num">5</span>,&nbsp;<span class="js__num">6</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.interval&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">5000</span>,&nbsp;<span class="js__num">5000</span>,&nbsp;<span class="js__num">6000</span>,&nbsp;<span class="js__num">4000</span>,&nbsp;<span class="js__num">6000</span>,&nbsp;<span class="js__num">3000</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">5</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.frmDisplayIndex&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">1</span>,&nbsp;<span class="js__num">2</span>,&nbsp;<span class="js__num">3</span>,&nbsp;<span class="js__num">4</span>,&nbsp;<span class="js__num">5</span>,&nbsp;<span class="js__num">0</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.interval&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">3000</span>,&nbsp;<span class="js__num">5000</span>,&nbsp;<span class="js__num">6000</span>,&nbsp;<span class="js__num">2000</span>,&nbsp;<span class="js__num">6000</span>,&nbsp;<span class="js__num">3000</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">6</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.frmDisplayIndex&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">1</span>,&nbsp;<span class="js__num">2</span>,&nbsp;<span class="js__num">3</span>,&nbsp;<span class="js__num">0</span>,&nbsp;<span class="js__num">5</span>,&nbsp;<span class="js__num">6</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalVariable.interval&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;int[<span class="js__num">6</span>]&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__num">4000</span>,&nbsp;<span class="js__num">5000</span>,&nbsp;<span class="js__num">2000</span>,&nbsp;<span class="js__num">6000</span>,&nbsp;<span class="js__num">2000</span>,&nbsp;<span class="js__num">4000</span>&nbsp;<span class="js__brace">}</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Opacity&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.FormClosed&nbsp;&#43;=&nbsp;<span class="js__operator">new</span>&nbsp;FormClosedEventHandler(Form1_FormClosed);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Close();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;<strong>Step 4 - Form Main<br>
+<br>
+</strong><span>Now, we add our main form and name the form as frmMain.</span><br>
+<br>
+<strong>Main form Load<br>
+<br>
+</strong><span>In this form load, we add 2 timers for animation and displaying each monitoring form within time range.</span></div>
+<br>
+</span></div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private void frmMain_Load(object sender, EventArgs e)  
+        {  
+//timer to display form one by one with in user defined time range  
+            tmrfrmDisplay.Enabled = true;  
+            tmrfrmDisplay.Tick &#43;= new EventHandler(tmrformDisplay_Tick);  
+            tmrfrmDisplay.Start();  
+  
+//timer to change the message color and move from left to right  
+timerAnimation.Tick &#43;= new EventHandler(timerAnimation_Tick);            timer.Enabled = true;  
+            timer.Interval = colorTimmer;  
+        }  </pre>
+<div class="preview">
+<pre class="js">private&nbsp;<span class="js__operator">void</span>&nbsp;frmMain_Load(object&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+<span class="js__sl_comment">//timer&nbsp;to&nbsp;display&nbsp;form&nbsp;one&nbsp;by&nbsp;one&nbsp;with&nbsp;in&nbsp;user&nbsp;defined&nbsp;time&nbsp;range&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmrfrmDisplay.Enabled&nbsp;=&nbsp;true;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmrfrmDisplay.Tick&nbsp;&#43;=&nbsp;<span class="js__operator">new</span>&nbsp;EventHandler(tmrformDisplay_Tick);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmrfrmDisplay.Start();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+<span class="js__sl_comment">//timer&nbsp;to&nbsp;change&nbsp;the&nbsp;message&nbsp;color&nbsp;and&nbsp;move&nbsp;from&nbsp;left&nbsp;to&nbsp;right&nbsp;&nbsp;</span>&nbsp;
+timerAnimation.Tick&nbsp;&#43;=&nbsp;<span class="js__operator">new</span>&nbsp;EventHandler(timerAnimation_Tick);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timer.Enabled&nbsp;=&nbsp;true;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timer.Interval&nbsp;=&nbsp;colorTimmer;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;<strong>Timer Form Display<br>
+<br>
+</strong><span>This is our main timer; here, we display each monitoring form depending on user setting. Each line is explained well, for easy understanding.</span></div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">//timer to display form one by one with in user defined time range  
+  private void tmrformDisplay_Tick(object sender, EventArgs e)  
+  {  
+//Here we check if the form index value has value as 0 then increase the count to display the next form.  
+    if (GlobalVariable.frmDisplayIndex[counter] == 0)  
+    {  
+        counter = counter &#43; 1;  
+    }  
+            //Call the Formdisplay method to bind forms to the main form panel   
+            Formdisplay(GlobalVariable.frmDisplayIndex[counter]);  
+            //wait till the time for each form display.  
+    tmrfrmDisplay.Interval = GlobalVariable.interval[counter];  
+            //increament the coutner to load next form.  
+    counter&#43;&#43;;  
+            //if the counter reach the total form displayed for this dashb oard application set the counter to 0 to load the monitoring form from first  
+    if (counter &gt;= GlobalVariable.formDisplayCount)  
+    {  
+        counter = 0;  
+        tmrfrmDisplay.Enabled = true;  
+    }  
+}  </pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//timer&nbsp;to&nbsp;display&nbsp;form&nbsp;one&nbsp;by&nbsp;one&nbsp;with&nbsp;in&nbsp;user&nbsp;defined&nbsp;time&nbsp;range&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;tmrformDisplay_Tick(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;
+<span class="cs__com">//Here&nbsp;we&nbsp;check&nbsp;if&nbsp;the&nbsp;form&nbsp;index&nbsp;value&nbsp;has&nbsp;value&nbsp;as&nbsp;0&nbsp;then&nbsp;increase&nbsp;the&nbsp;count&nbsp;to&nbsp;display&nbsp;the&nbsp;next&nbsp;form.&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(GlobalVariable.frmDisplayIndex[counter]&nbsp;==&nbsp;<span class="cs__number">0</span>)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter&nbsp;=&nbsp;counter&nbsp;&#43;&nbsp;<span class="cs__number">1</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Call&nbsp;the&nbsp;Formdisplay&nbsp;method&nbsp;to&nbsp;bind&nbsp;forms&nbsp;to&nbsp;the&nbsp;main&nbsp;form&nbsp;panel&nbsp;&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Formdisplay(GlobalVariable.frmDisplayIndex[counter]);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//wait&nbsp;till&nbsp;the&nbsp;time&nbsp;for&nbsp;each&nbsp;form&nbsp;display.&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;tmrfrmDisplay.Interval&nbsp;=&nbsp;GlobalVariable.interval[counter];&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//increament&nbsp;the&nbsp;coutner&nbsp;to&nbsp;load&nbsp;next&nbsp;form.&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;counter&#43;&#43;;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//if&nbsp;the&nbsp;counter&nbsp;reach&nbsp;the&nbsp;total&nbsp;form&nbsp;displayed&nbsp;for&nbsp;this&nbsp;dashb&nbsp;oard&nbsp;application&nbsp;set&nbsp;the&nbsp;counter&nbsp;to&nbsp;0&nbsp;to&nbsp;load&nbsp;the&nbsp;monitoring&nbsp;form&nbsp;from&nbsp;first&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(counter&nbsp;&gt;=&nbsp;GlobalVariable.formDisplayCount)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmrfrmDisplay.Enabled&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;
+}&nbsp;&nbsp;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;<span>From the timer, we call the FormDisplay method to load each monitoring form after the time limit for each display. In this form, we set the main form opacity to .2 to start animation effect displaying while loading.</span></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private void Formdisplay(int formNumber)  
+        {  
+            pnlGrid.Controls.Clear();  
+            this.Opacity = .2;  
+  
+            switch (formNumber)  
+            {  
+                case 1:  
+                    frmSave1 obj1 = new frmSave1();  
+  
+                    innerform = obj1;  
+                    obj1.TopLevel = false;  
+                    pnlGrid.Controls.Add(obj1);  
+                    obj1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;  
+                    obj1.Dock = DockStyle.Fill;  
+                    obj1.Show();  
+                       
+                    break;  
+                case 2:  
+                    frmSave2 obj2 = new frmSave2();  
+                    innerform = obj2;  
+                    obj2.TopLevel = false;  
+                    pnlGrid.Controls.Add(obj2);  
+                    obj2.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;  
+                    obj2.Dock = DockStyle.Fill;  
+                    obj2.Show();  
+                     
+                    break;  
+                case 3:  
+                    frmSave3 obj3 = new frmSave3();  
+                    innerform = obj3;  
+                    obj3.TopLevel = false;  
+                    pnlGrid.Controls.Add(obj3);  
+                    obj3.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;  
+                    obj3.Dock = DockStyle.Fill;  
+                    obj3.Show();  
+                   
+                    break;  
+                case 4:  
+                    frmSave4 obj4 = new frmSave4();  
+                    innerform = obj4;  
+                    obj4.TopLevel = false;  
+                    pnlGrid.Controls.Add(obj4);  
+                    obj4.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;  
+                    obj4.Dock = DockStyle.Fill;  
+                    obj4.Show();  
+                    
+                    break;  
+                case 5:  
+                    frmSave5 obj5 = new frmSave5();  
+                    innerform = obj5;  
+                    obj5.TopLevel = false;  
+                    pnlGrid.Controls.Add(obj5);  
+                    obj5.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;  
+                    obj5.Dock = DockStyle.Fill;  
+                    obj5.Show();  
+                     
+                    break;  
+                case 6:  
+                    frmSave6 obj6 = new frmSave6();  
+                    innerform = obj6;  
+                    obj6.TopLevel = false;  
+                    pnlGrid.Controls.Add(obj6);  
+                    obj6.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;  
+                    obj6.Dock = DockStyle.Fill;  
+                    obj6.Show();  
+                   
+                    break;  
+            }  
+             
+        }  </pre>
+<div class="preview">
+<pre class="js">private&nbsp;<span class="js__operator">void</span>&nbsp;Formdisplay(int&nbsp;formNumber)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pnlGrid.Controls.Clear();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Opacity&nbsp;=&nbsp;.<span class="js__num">2</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">switch</span>&nbsp;(formNumber)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">1</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frmSave1&nbsp;obj1&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;frmSave1();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;innerform&nbsp;=&nbsp;obj1;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj1.TopLevel&nbsp;=&nbsp;false;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pnlGrid.Controls.Add(obj1);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj1.FormBorderStyle&nbsp;=&nbsp;System.Windows.Forms.FormBorderStyle.None;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj1.Dock&nbsp;=&nbsp;DockStyle.Fill;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj1.Show();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">2</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frmSave2&nbsp;obj2&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;frmSave2();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;innerform&nbsp;=&nbsp;obj2;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj2.TopLevel&nbsp;=&nbsp;false;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pnlGrid.Controls.Add(obj2);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj2.FormBorderStyle&nbsp;=&nbsp;System.Windows.Forms.FormBorderStyle.None;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj2.Dock&nbsp;=&nbsp;DockStyle.Fill;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj2.Show();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">3</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frmSave3&nbsp;obj3&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;frmSave3();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;innerform&nbsp;=&nbsp;obj3;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj3.TopLevel&nbsp;=&nbsp;false;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pnlGrid.Controls.Add(obj3);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj3.FormBorderStyle&nbsp;=&nbsp;System.Windows.Forms.FormBorderStyle.None;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj3.Dock&nbsp;=&nbsp;DockStyle.Fill;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj3.Show();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">4</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frmSave4&nbsp;obj4&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;frmSave4();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;innerform&nbsp;=&nbsp;obj4;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj4.TopLevel&nbsp;=&nbsp;false;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pnlGrid.Controls.Add(obj4);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj4.FormBorderStyle&nbsp;=&nbsp;System.Windows.Forms.FormBorderStyle.None;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj4.Dock&nbsp;=&nbsp;DockStyle.Fill;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj4.Show();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">5</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frmSave5&nbsp;obj5&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;frmSave5();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;innerform&nbsp;=&nbsp;obj5;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj5.TopLevel&nbsp;=&nbsp;false;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pnlGrid.Controls.Add(obj5);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj5.FormBorderStyle&nbsp;=&nbsp;System.Windows.Forms.FormBorderStyle.None;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj5.Dock&nbsp;=&nbsp;DockStyle.Fill;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj5.Show();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">case</span>&nbsp;<span class="js__num">6</span>:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frmSave6&nbsp;obj6&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;frmSave6();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;innerform&nbsp;=&nbsp;obj6;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj6.TopLevel&nbsp;=&nbsp;false;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pnlGrid.Controls.Add(obj6);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj6.FormBorderStyle&nbsp;=&nbsp;System.Windows.Forms.FormBorderStyle.None;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj6.Dock&nbsp;=&nbsp;DockStyle.Fill;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj6.Show();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">break</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;<strong>Timer for Message and main form Animation<br>
+<br>
+</strong><span>In this timer, we display the main form with animation as increasing the opacity . We will be getting the result each time when the main form is loaded, with Fade In effect. In this timer we also randomly change the alert message font color and
+ move the message from right to left continuously.&nbsp;</span></div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">//timer to display form one by one with in user defined time range  
+  private void tmrformDisplay_Tick(object sender, EventArgs e)  
+  {  
+//Here we check if the form index value has value as 0 then increase the count to display the next form.  
+    if (GlobalVariable.frmDisplayIndex[counter] == 0)  
+    {  
+        counter = counter &#43; 1;  
+    }  
+            //Call the Formdisplay method to bind forms to the main form panel   
+            Formdisplay(GlobalVariable.frmDisplayIndex[counter]);  
+            //wait till the time for each form display.  
+    tmrfrmDisplay.Interval = GlobalVariable.interval[counter];  
+            //increament the coutner to load next form.  
+    counter&#43;&#43;;  
+            //if the counter reach the total form displayed for this dashb oard application set the counter to 0 to load the monitoring form from first  
+    if (counter &gt;= GlobalVariable.formDisplayCount)  
+    {  
+        counter = 0;  
+        tmrfrmDisplay.Enabled = true;  
+    }  
+}  </pre>
+<div class="preview">
+<pre class="js"><span class="js__sl_comment">//timer&nbsp;to&nbsp;display&nbsp;form&nbsp;one&nbsp;by&nbsp;one&nbsp;with&nbsp;in&nbsp;user&nbsp;defined&nbsp;time&nbsp;range&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;private&nbsp;<span class="js__operator">void</span>&nbsp;tmrformDisplay_Tick(object&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+<span class="js__sl_comment">//Here&nbsp;we&nbsp;check&nbsp;if&nbsp;the&nbsp;form&nbsp;index&nbsp;value&nbsp;has&nbsp;value&nbsp;as&nbsp;0&nbsp;then&nbsp;increase&nbsp;the&nbsp;count&nbsp;to&nbsp;display&nbsp;the&nbsp;next&nbsp;form.&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(GlobalVariable.frmDisplayIndex[counter]&nbsp;==&nbsp;<span class="js__num">0</span>)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter&nbsp;=&nbsp;counter&nbsp;&#43;&nbsp;<span class="js__num">1</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Call&nbsp;the&nbsp;Formdisplay&nbsp;method&nbsp;to&nbsp;bind&nbsp;forms&nbsp;to&nbsp;the&nbsp;main&nbsp;form&nbsp;panel&nbsp;&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Formdisplay(GlobalVariable.frmDisplayIndex[counter]);&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//wait&nbsp;till&nbsp;the&nbsp;time&nbsp;for&nbsp;each&nbsp;form&nbsp;display.&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;tmrfrmDisplay.Interval&nbsp;=&nbsp;GlobalVariable.interval[counter];&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//increament&nbsp;the&nbsp;coutner&nbsp;to&nbsp;load&nbsp;next&nbsp;form.&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;counter&#43;&#43;;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//if&nbsp;the&nbsp;counter&nbsp;reach&nbsp;the&nbsp;total&nbsp;form&nbsp;displayed&nbsp;for&nbsp;this&nbsp;dashb&nbsp;oard&nbsp;application&nbsp;set&nbsp;the&nbsp;counter&nbsp;to&nbsp;0&nbsp;to&nbsp;load&nbsp;the&nbsp;monitoring&nbsp;form&nbsp;from&nbsp;first&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(counter&nbsp;&gt;=&nbsp;GlobalVariable.formDisplayCount)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmrfrmDisplay.Enabled&nbsp;=&nbsp;true;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;&nbsp;
+<span class="js__brace">}</span>&nbsp;&nbsp;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><a class="LinkNormalBlue">shanuDashboardMonitorAnim.zip</a><em><em>.</em></em>
+</li></ul>
+
+</div>
+
+
+    </div>
+</body>
+</html>

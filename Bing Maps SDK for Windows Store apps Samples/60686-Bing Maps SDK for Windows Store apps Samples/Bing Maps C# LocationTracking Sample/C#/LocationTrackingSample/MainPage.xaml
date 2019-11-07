@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="LocationTrackingSample.MainPage"
+    IsTabStop="false"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LocationTrackingSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bm="using:Bing.Maps"
+    mc:Ignorable="d">
+
+  <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="mapParent" Grid.Column="1">
+      <bm:Map x:Name="map"  Credentials="INSERT_YOUR_BING_MAPS_KEY"/>
+    </Grid>
+  </Grid>
+</Page>

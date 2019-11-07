@@ -1,0 +1,86 @@
+﻿@section Scripts {
+ <script type="text/javascript">
+
+    // Override the submit handler for Form1, to submit using AJAX.
+     $("#form1").submit(function () {
+
+        // This example shows how to send a complex CLR type as HTML form data.
+        var jqxhr = $.post('api/updates/complex', $('#form1').serialize())
+            .success(function () {
+                var loc = jqxhr.getResponseHeader('Location');
+                var a = $('<a/>', { href: loc, text: loc });
+                $('#message').html(a);
+            })
+            .error(function () {
+                $('#message').html("Error posting the update.");
+            });
+        return false;
+    });
+
+    // Do the same thing for Form2
+    $('#form2').submit(function () {
+
+        // This example shows how to send a simple data type as HTML form data.
+        var jqxhr = $.post('api/updates/simple', { "": $('#status1').val() })
+            .success(function () {
+                var loc = jqxhr.getResponseHeader('Location');
+                var a = $('<a/>', { href: loc, text: loc });
+                $('#message').html(a);
+            })
+            .error(function () {
+                $('#message').html("Error posting the update.");
+            });
+        return false;
+    });
+</script>
+}
+
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">ASP.NET Web API</a></p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="content-wrapper main-content clear-fix">
+
+    <h1>Complex Type</h1>
+    <form id="form1" method="post" action="api/updates/complex" 
+        enctype="application/x-www-form-urlencoded">
+        <div>
+        <label for="status">Status</label>
+        </div>
+        <div>
+        <input name="status" type="text" />
+        </div>
+
+        <div>
+        <label for="date">Date</label>
+        </div>
+        <div>
+        <input name="date" type="text" />
+        </div>
+ 
+        <div>
+        <input type="submit" value="Submit" />
+        </div>
+    </form>
+
+    <h1>Simple Type</h1>
+    <form id="form2">
+        <div>
+            <label for="status">Status</label>
+        </div>
+        <div>
+            <input id="status1" type="text" />
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+        
+    <h3 id="message" />
+    </section>
+</div>

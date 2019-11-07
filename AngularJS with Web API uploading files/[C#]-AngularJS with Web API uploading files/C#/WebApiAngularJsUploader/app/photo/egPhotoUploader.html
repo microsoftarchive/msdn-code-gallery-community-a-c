@@ -1,0 +1,17 @@
+﻿<form name="newPhotosForm" role="form" enctype="multipart/form-data" ng-disabled="appStatus.busy || photoManagerStatus.uploading">
+    <div class="form-group" ng-hide="hasFiles">
+        <label for="newPhotos">select and upload new photos</label>
+        <input type="file" id="newPhotos" class="uploadFile" accept="image/*" eg-files="photos" has-files="hasFiles" multiple>
+    </div>
+    <div class="form-group" ng-show="hasFiles && !photoManagerStatus.uploading">
+        <ul class="list-inline">
+            <li><strong>files:</strong></li>
+            <li ng-repeat="photo in photos"> {{photo.name}}</li>
+        </ul>
+        <input class="btn btn-primary" type="button" eg-upload="upload(photos)" value="upload">
+        <input class="btn btn-warning" type="reset" value="cancel" />
+    </div>
+    <div class="form-group" ng-show="photoManagerStatus.uploading">
+        <p class="help-block">uploading</p>
+    </div>
+</form>

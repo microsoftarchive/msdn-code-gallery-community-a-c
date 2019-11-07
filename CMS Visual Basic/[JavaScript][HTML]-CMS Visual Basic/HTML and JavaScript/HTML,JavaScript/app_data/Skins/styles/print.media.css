@@ -1,0 +1,17 @@
+.Button, input[type='submit'], input[type='reset'], input[type='button']
+{
+	display: none !important;
+}
+
+.BatTop, .BarLeft, .BarRight, .Footer
+{
+	display: none !important;
+}
+
+*
+{
+	color: Black !important;
+	background: White !important;
+	background-image: none !important; 
+}
+

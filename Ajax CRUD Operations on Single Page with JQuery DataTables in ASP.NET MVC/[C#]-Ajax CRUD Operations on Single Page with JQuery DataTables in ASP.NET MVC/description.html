@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=0F22413366F5977978C46D94D86B40A8" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=BA54336BC791F42AE754C419920C1AAE" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ajax CRUD Operations on Single Page with JQuery DataTables in ASP.NET MVC</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Ajax CRUD Operations on Single Page with JQuery DataTables in ASP.NET MVC</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, AJAX, ASP.NET MVC, Entity Framework, ASP.NET MVC 5, MVC Grid, JQuery DataTables
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            AJAX, CRUD, ASP.NET MVC 5, JQuery DataTables
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/20/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Implement-Ajax-CRUD-a543a978">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<div style="display:inline!important"><em>This sample demonstrates</em>&nbsp;how <strong>
+CRUD</strong> Operations can be implemented in a gird which is already implemented with Server Side Pagination and Advanced Search features already in it by using&nbsp;<strong>JQuery DataTables</strong>&nbsp;.</div>
+<h1><span>Building the Sample</span></h1>
+<p><em><em>There is file named&nbsp;<strong>dbscript.txt,</strong>&nbsp;you would need to create database with reqired tables and some data in the tables using the script which can be found in the solution, and after that you will need to modify the connection
+ string of the database in the&nbsp;<strong>web.config</strong>&nbsp;which will be used by&nbsp;<strong>Entity Framework</strong>&nbsp;to query records :</em></em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p>At the end of this post, the following will be the output which is working ajax based CRUD implementation in the grid that is created using JQuery DataTables Server Side processing:</p>
+<p><img id="174651" src="description/GridAjaxCRUDDemo.gif" alt="" style="width:100%!important"></p>
+<p><span>You can find the script in attached source code in file name dbScript.sql which also contains sample data to get started quickly, running it will create the DB and will add some sample data in the tables as well.</span></p>
+<p>&nbsp;</p>
+<p>Here is script to create the database:</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>SQL</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">mysql</span>
+<pre class="hidden">CREATE DATABASE [AdvancedSearchGridExampleMVC]
+GO
+CREATE TABLE [dbo].[FacilitySites] ([FacilitySiteID] UNIQUEIDENTIFIER NOT NULL,
+                                    [FacilityName]   NVARCHAR (MAX)   NULL,
+                                    [IsActive]       BIT              NOT NULL,
+                                    [CreatedBy]      UNIQUEIDENTIFIER NOT NULL,
+                                    [CreatedAt]      DATETIME         NOT NULL,
+                                    [ModifiedBy]     UNIQUEIDENTIFIER NULL,
+                                    [ModifiedAt]     DATETIME         NULL,
+                                    [IsDeleted]      BIT              NOT NULL
+                                   );
+GO
+ 
+CREATE TABLE [dbo].[Assets] (
+                             [AssetID]                   UNIQUEIDENTIFIER NOT NULL,
+                             [Barcode]                   NVARCHAR (MAX)   NULL,
+                             [SerialNumber]              NVARCHAR (MAX)   NULL,
+                             [PMGuide]                   NVARCHAR (MAX)   NULL,
+                             [AstID]                     NVARCHAR (MAX)   NOT NULL,
+                             [ChildAsset]                NVARCHAR (MAX)   NULL,
+                             [GeneralAssetDescription]   NVARCHAR (MAX)   NULL,
+                             [SecondaryAssetDescription] NVARCHAR (MAX)   NULL,
+                             [Quantity]                  INT              NOT NULL,
+                             [Manufacturer]              NVARCHAR (MAX)   NULL,
+                             [ModelNumber]               NVARCHAR (MAX)   NULL,
+                             [Building]                  NVARCHAR (MAX)   NULL,
+                             [Floor]                     NVARCHAR (MAX)   NULL,
+                             [Corridor]                  NVARCHAR (MAX)   NULL,
+                             [RoomNo]                    NVARCHAR (MAX)   NULL,
+                             [MERNo]                     NVARCHAR (MAX)   NULL,
+                             [EquipSystem]               NVARCHAR (MAX)   NULL,
+                             [Comments]                  NVARCHAR (MAX)   NULL,
+                             [Issued]                    BIT              NOT NULL,
+                             [FacilitySiteID]            UNIQUEIDENTIFIER NOT NULL
+                            );
+ 
+GO
+ 
+CREATE NONCLUSTERED INDEX [IX_FacilitySiteID]
+   ON [dbo].[Assets]([FacilitySiteID] ASC);
+ 
+GO
+ALTER TABLE [dbo].[Assets]
+    ADD CONSTRAINT [PK_dbo.Assets] PRIMARY KEY CLUSTERED ([AssetID] ASC);
+ 
+GO
+ 
+ALTER TABLE [dbo].[Assets]
+   ADD CONSTRAINT [FK_dbo.Assets_dbo.FacilitySites_FacilitySiteID] FOREIGN KEY ([FacilitySiteID]) _
+REFERENCES [dbo].[FacilitySites] ([FacilitySiteID]) ON DELETE CASCADE;
+ 
+GO</pre>
+<div class="preview">
+<pre class="mysql"><span class="sql__keyword">CREATE</span>&nbsp;<span class="sql__keyword">DATABASE</span>&nbsp;[<span class="sql__id">AdvancedSearchGridExampleMVC</span>]&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+<span class="sql__keyword">CREATE</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">FacilitySites</span>]&nbsp;([<span class="sql__id">FacilitySiteID</span>]&nbsp;<span class="sql__id">UNIQUEIDENTIFIER</span>&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">FacilityName</span>]&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">IsActive</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">BIT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">CreatedBy</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__id">UNIQUEIDENTIFIER</span>&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">CreatedAt</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">DATETIME</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">ModifiedBy</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__id">UNIQUEIDENTIFIER</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">ModifiedAt</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">DATETIME</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">IsDeleted</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">BIT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;&nbsp;
+<span class="sql__keyword">CREATE</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">Assets</span>]&nbsp;(&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">AssetID</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__id">UNIQUEIDENTIFIER</span>&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Barcode</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">SerialNumber</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">PMGuide</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">AstID</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">ChildAsset</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">GeneralAssetDescription</span>]&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">SecondaryAssetDescription</span>]&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Quantity</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">INT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Manufacturer</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">ModelNumber</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Building</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Floor</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Corridor</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">RoomNo</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">MERNo</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">EquipSystem</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Comments</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__id">MAX</span>)&nbsp;&nbsp;&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Issued</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">BIT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">FacilitySiteID</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__id">UNIQUEIDENTIFIER</span>&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);&nbsp;
+&nbsp;&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;&nbsp;
+<span class="sql__keyword">CREATE</span>&nbsp;<span class="sql__id">NONCLUSTERED</span>&nbsp;<span class="sql__keyword">INDEX</span>&nbsp;[<span class="sql__id">IX_FacilitySiteID</span>]&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="sql__keyword">ON</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">Assets</span>]([<span class="sql__id">FacilitySiteID</span>]&nbsp;<span class="sql__keyword">ASC</span>);&nbsp;
+&nbsp;&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+<span class="sql__keyword">ALTER</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">Assets</span>]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">ADD</span>&nbsp;<span class="sql__keyword">CONSTRAINT</span>&nbsp;[<span class="sql__id">PK_dbo</span>.<span class="sql__id">Assets</span>]&nbsp;<span class="sql__keyword">PRIMARY</span>&nbsp;<span class="sql__keyword">KEY</span>&nbsp;<span class="sql__id">CLUSTERED</span>&nbsp;([<span class="sql__id">AssetID</span>]&nbsp;<span class="sql__keyword">ASC</span>);&nbsp;
+&nbsp;&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;&nbsp;
+<span class="sql__keyword">ALTER</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">Assets</span>]&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="sql__keyword">ADD</span>&nbsp;<span class="sql__keyword">CONSTRAINT</span>&nbsp;[<span class="sql__id">FK_dbo</span>.<span class="sql__id">Assets_dbo</span>.<span class="sql__id">FacilitySites_FacilitySiteID</span>]&nbsp;<span class="sql__keyword">FOREIGN</span>&nbsp;<span class="sql__keyword">KEY</span>&nbsp;([<span class="sql__id">FacilitySiteID</span>])&nbsp;<span class="sql__id">_</span>&nbsp;
+<span class="sql__keyword">REFERENCES</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">FacilitySites</span>]&nbsp;([<span class="sql__id">FacilitySiteID</span>])&nbsp;<span class="sql__keyword">ON</span>&nbsp;<span class="sql__keyword">DELETE</span>&nbsp;<span class="sql__keyword">CASCADE</span>;&nbsp;
+&nbsp;&nbsp;
+<span class="sql__id">GO</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">
+<h1>SourceCode</h1>
+<p>The following is the action method which is responsible for inserting the record in database which is called via
+<strong>AJAX.BeginForm</strong>&nbsp;from the partial view for <strong>Create</strong>&nbsp;and it returns the flag back if the addition was successful.</p>
+</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">[HttpPost]
+public async Task&lt;ActionResult&gt; Create(AssetViewModel assetVM)
+{
+   if (!ModelState.IsValid)
+        return View(&quot;_CreatePartial&quot;, assetVM);
+ 
+   Asset asset = MaptoModel(assetVM);
+ 
+   DbContext.Assets.Add(asset);
+   var task = DbContext.SaveChangesAsync();
+   await task;
+ 
+   if (task.Exception != null)
+   {
+       ModelState.AddModelError(&quot;&quot;, &quot;Unable to add the Asset&quot;);
+       return View(&quot;_CreatePartial&quot;, assetVM);
+   }
+ 
+   return Content(&quot;success&quot;);
+}</pre>
+<div class="preview">
+<pre class="csharp">[HttpPost]&nbsp;
+<span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;ActionResult&gt;&nbsp;Create(AssetViewModel&nbsp;assetVM)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(!ModelState.IsValid)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(<span class="cs__string">&quot;_CreatePartial&quot;</span>,&nbsp;assetVM);&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;Asset&nbsp;asset&nbsp;=&nbsp;MaptoModel(assetVM);&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;DbContext.Assets.Add(asset);&nbsp;
+&nbsp;&nbsp;&nbsp;var&nbsp;task&nbsp;=&nbsp;DbContext.SaveChangesAsync();&nbsp;
+&nbsp;&nbsp;&nbsp;await&nbsp;task;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(task.Exception&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ModelState.AddModelError(<span class="cs__string">&quot;&quot;</span>,&nbsp;<span class="cs__string">&quot;Unable&nbsp;to&nbsp;add&nbsp;the&nbsp;Asset&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(<span class="cs__string">&quot;_CreatePartial&quot;</span>,&nbsp;assetVM);&nbsp;
+&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;Content(<span class="cs__string">&quot;success&quot;</span>);&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;The action method source code for other operation is also quite similar to the above one except the data access code changed.</div>
+&nbsp;</div>
+<p>&nbsp;</p>
+<ul>
+</ul>
+<h1>More Information</h1>
+<p><em>There was a article published on <a href="http://www.c-sharpcorner.com/article/ajax-crud-operation-with-jquery-datatables-in-asp-net-mvc-5-for-beginners/">
+this link titled( AJAX CRUD Operations with JQuery DataTables in ASP.NET MVC 5 for Beginners)</a>.&nbsp;</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

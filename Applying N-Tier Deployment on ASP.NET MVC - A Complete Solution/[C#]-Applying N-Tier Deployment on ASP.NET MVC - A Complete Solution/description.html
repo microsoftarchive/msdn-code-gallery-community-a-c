@@ -1,0 +1,2057 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.3.7.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=885BBA985A6DAC76CCC8D57656A8996B" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=567C7B86D7B7DE8A0A4B2A14F36695DC" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Applying N-Tier Deployment on ASP.NET MVC - A Complete Solution</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Applying N-Tier Deployment on ASP.NET MVC - A Complete Solution</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, SQL Server, ASP.NET, Data Access, ASP.NET MVC, MVC, Visual C#
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, ASP.NET, Class Library, Data Access, ASP.NET MVC, Generic C# resuable code, Databases
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/2/2018</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This tutorial aims to mix three main architecture styles through one complete but simple VS 2013 ASP.NET MVC web solution with C# class libraries. These architecture styles are the
+<strong>Model-View-Controller MVC</strong> Presentation Pattern, the <strong>N-Tiers Deployment Architecture</strong> Pattern, and the
+<strong>Repository</strong> Pattern in addition to many inline applied design patterns, such as
+<strong>Separation of Concerns SOC</strong> and <strong>Don&rsquo;t Repeat Yourself DRY</strong>.</p>
+<p>An architecture of anything is the high-level structure of that thing or the skeleton that represents that thing into unified building blocks and components from a specific point of view. When designing a software solution, we need to break it into smaller
+ interrelated components based on a design strategy to produce the required architecture.</p>
+<p>This tutorial attempts to build an ASP.NET MVC 5 web app in a simple way and implement the Repository Pattern with it through N-Tiers deployment.</p>
+<h1><span>Sample Business Case Problem Tutorial</span></h1>
+<p>Suppose that a fictional company called NtierMvc asks you to build a solution with the following business requirements:</p>
+<ul>
+<li>Create, Update, Delete and Retrieve <strong>Employees</strong> Data. </li><li>The Employees input fields are <strong>Id</strong>, <strong>Name</strong>, <strong>
+Age</strong>, <strong>HiringDate</strong>, and <strong>GrossSalary</strong> </li><li>Apply <strong>TAX</strong> deduction Business Rule, which states that &ldquo;Employees with Age less than 30 years old shall get their salary deducted by 50%, Employees with Age less than 40 years old shall get their salary deducted by 40%, Employees with
+ Age less than 50 years old shall get their salary deducted by 30%, Employees with Age less than 60 years old shall get their salary deducted by 20%, and Employees 60 years old and above shall get their GrossSalay without deduction&rdquo;.
+</li><li>When viewing <strong>Employees</strong> data, you should show the a <strong>NetSalary</strong> based on the previous Business Rule.
+</li></ul>
+<h1><span>The Proposed Solution for the Business Case Problem</span></h1>
+<p>The proposed solution in this tutorial is to build simple web solution that apply
+<strong>3-Tier</strong> Deployment Architecture with User Interface Layer built through ASP.NET MVC, a Business Logic Layer that applies the
+<strong>TAX</strong> deduction Business Rule, and a Data Access Layer that applies
+<strong>Repository</strong> Pattern for exchanging data with a SQL Server Database called
+<strong>NtierMvcDB</strong>. <br>
+<br>
+The proposed solution shall contain five projects and one SQL Server database as follows:</p>
+<ol>
+<li>SQL Server Database called <strong>NtierMvcDB</strong> as a data source for the project. This database shall contain a table named
+<strong>Employees</strong>. </li><li>ASP.NET MVC web project named <strong>NtierMvc</strong> for the User Interface Layer.
+</li><li>Class library named <strong>NtierMvc.BusinessLogic</strong> for the Business Logic Layer.
+</li><li>Class library named <strong>NtierMvc.DataAccess</strong> for the Data Access Layer, the Repository.
+</li><li>Class library named <strong>NtierMvc.Common</strong> as a cross-cutting helper component.
+</li><li>Class library named <strong>NtierMvc.Model</strong> as a Data Contract Entity Model component.
+</li></ol>
+<p>The solution Architecture is shown in the below figure</p>
+<p><img id="184769" src="description/NtierMvcArchitecture.jpg" alt="" width="691" height="518"></p>
+<p><em><br>
+</em></p>
+<h1><span>Creating the Database of the Solution</span></h1>
+<p>Let us start through the data source by creating a SQL Server database named <strong>
+NtierMvcDB</strong> for the project. Firstly, create a Schema named <strong>HR</strong> owned by the database owner dbo. Then, create a database table named Employees and let it be as per the following table specifications.</p>
+<p><img id="184770" src="description/EmployeesTable.jpg" alt="" width="402" height="226"></p>
+<p>You can create it using the following T-SQL Script</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>SQL</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">mysql</span>
+<pre class="hidden">USE [master]
+GO
+
+CREATE DATABASE [NtierMvcDB]
+GO
+
+USE [NtierMvcDB]
+GO
+
+CREATE SCHEMA [HR]
+GO
+
+CREATE TABLE [HR].[Employees]
+(
+	[Id] [int] NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Age] [int] NOT NULL,
+	[HiringDate] [datetime] NULL,
+	[GrossSalary] [decimal](10, 2) NOT NULL,
+	[ModifiedDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_Employees] PRIMARY KEY CLUSTERED ([Id] ASC) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [HR].[Employees] ADD  CONSTRAINT [DF_Employees_ModifiedDate]  DEFAULT (GETDATE()) FOR [ModifiedDate]
+GO</pre>
+<div class="preview">
+<pre class="mysql"><span class="sql__keyword">USE</span>&nbsp;[<span class="sql__keyword">master</span>]&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">CREATE</span>&nbsp;<span class="sql__keyword">DATABASE</span>&nbsp;[<span class="sql__id">NtierMvcDB</span>]&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">USE</span>&nbsp;[<span class="sql__id">NtierMvcDB</span>]&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">CREATE</span>&nbsp;<span class="sql__keyword">SCHEMA</span>&nbsp;[<span class="sql__id">HR</span>]&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">CREATE</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">HR</span>].[<span class="sql__id">Employees</span>]&nbsp;
+(&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Id</span>]&nbsp;[<span class="sql__keyword">int</span>]&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__keyword">Name</span>]&nbsp;[<span class="sql__keyword">nvarchar</span>](<span class="sql__number">50</span>)&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Age</span>]&nbsp;[<span class="sql__keyword">int</span>]&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">HiringDate</span>]&nbsp;[<span class="sql__keyword">datetime</span>]&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">GrossSalary</span>]&nbsp;[<span class="sql__keyword">decimal</span>](<span class="sql__number">10</span>,&nbsp;<span class="sql__number">2</span>)&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">ModifiedDate</span>]&nbsp;[<span class="sql__keyword">datetime</span>]&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;<span class="sql__keyword">CONSTRAINT</span>&nbsp;[<span class="sql__id">PK_Employees</span>]&nbsp;<span class="sql__keyword">PRIMARY</span>&nbsp;<span class="sql__keyword">KEY</span>&nbsp;<span class="sql__id">CLUSTERED</span>&nbsp;([<span class="sql__id">Id</span>]&nbsp;<span class="sql__keyword">ASC</span>)&nbsp;<span class="sql__keyword">ON</span>&nbsp;[<span class="sql__keyword">PRIMARY</span>]&nbsp;
+)&nbsp;<span class="sql__keyword">ON</span>&nbsp;[<span class="sql__keyword">PRIMARY</span>]&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">ALTER</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">HR</span>].[<span class="sql__id">Employees</span>]&nbsp;<span class="sql__keyword">ADD</span>&nbsp;&nbsp;<span class="sql__keyword">CONSTRAINT</span>&nbsp;[<span class="sql__id">DF_Employees_ModifiedDate</span>]&nbsp;&nbsp;<span class="sql__keyword">DEFAULT</span>&nbsp;(<span class="sql__id">GETDATE</span>())&nbsp;<span class="sql__keyword">FOR</span>&nbsp;[<span class="sql__id">ModifiedDate</span>]&nbsp;
+<span class="sql__id">GO</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<h1><span>Creating the ASP.NET MVC User Interface Web Project</span></h1>
+<p>The next step is to create the UI ASP.NET MVC web app. Following are the steps to create a project using project templates available in Visual Studio. Open the Visual Studio. Click
+<strong>File</strong> -&gt; <strong>New</strong> -&gt; <strong>Project</strong> menu option.</p>
+<p>A new Project dialog opens. From the left pane, select <strong>Templates</strong> -&gt;
+<strong>Visual C#</strong> -&gt; <strong>Web</strong>. In the middle pane, select ASP.NET Web Application and make sure you are targeting .NET Framework 4.5.2 or above. As shown in the below figure, enter the project name,
+<strong>NtierMvc</strong>, in the Name field and click ok to continue.</p>
+<p><img id="184772" src="description/Fig-01.jpg" alt="" width="720" height="405"></p>
+<p>You will see the following dialog, which asks you to set the initial content for the ASP.NET project. Select the MVC Template and change the authentication to
+<strong>No Authentication</strong>, as shown below. Then, click OK to create an ASP.NET MVC project with predefined MVC Template contents.</p>
+<p><img id="184773" src="description/Fig-02.jpg" alt="" width="680" height="413"></p>
+<p>Now, double click the <strong>web.config</strong> file to open it. Locate the &lt;configuration&gt; section and add connectionString, then locate the &lt;appSettings&gt; section and add custom configuration settings for this part of
+<strong>web.config</strong> file to be as shown below:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xml</span>
+<pre class="hidden">&lt;configuration&gt;
+  &lt;connectionStrings&gt;
+      &lt;add name=&quot;NtierMvc.Connection&quot;
+           connectionString=&quot;Data Source=YourSQLDataSource;Initial Catalog=NtierMvcDB;Integrated Security=False;user id=YourUserId;pwd=YourPassword;Connection Timeout=30;&quot;
+           providerName=&quot;System.Data.SqlClient&quot; /&gt;
+  &lt;/connectionStrings&gt;
+  &lt;appSettings&gt;
+    &lt;!-- The currently applied connection --&gt;
+    &lt;add key=&quot;CurrentAppConnection&quot; value=&quot;NtierMvc.Connection&quot; /&gt;
+    &lt;add key=&quot;EnableLogging&quot; value=&quot;True&quot; /&gt;
+    &lt;add key=&quot;LoggingPath&quot; value=&quot;D:\LoggingData&quot; /&gt;
+    &lt;add key=&quot;webpages:Version&quot; value=&quot;3.0.0.0&quot;/&gt;
+    &lt;add key=&quot;webpages:Enabled&quot; value=&quot;false&quot;/&gt;
+    &lt;add key=&quot;ClientValidationEnabled&quot; value=&quot;true&quot;/&gt;
+    &lt;add key=&quot;UnobtrusiveJavaScriptEnabled&quot; value=&quot;true&quot;/&gt;
+  &lt;/appSettings&gt;&hellip;
+&lt;/configuration&gt;
+</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;configuration</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;<span class="xml__tag_start">&lt;connectionStrings</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">name</span>=<span class="xml__attr_value">&quot;NtierMvc.Connection&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__attr_name">connectionString</span>=<span class="xml__attr_value">&quot;Data&nbsp;Source=YourSQLDataSource;Initial&nbsp;Catalog=NtierMvcDB;Integrated&nbsp;Security=False;user&nbsp;id=YourUserId;pwd=YourPassword;Connection&nbsp;Timeout=30;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__attr_name">providerName</span>=<span class="xml__attr_value">&quot;System.Data.SqlClient&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_end">&lt;/connectionStrings&gt;</span>&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_start">&lt;appSettings</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__comment">&lt;!--&nbsp;The&nbsp;currently&nbsp;applied&nbsp;connection&nbsp;--&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;CurrentAppConnection&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;NtierMvc.Connection&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;EnableLogging&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;True&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;LoggingPath&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;D:\LoggingData&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;webpages:Version&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;3.0.0.0&quot;</span><span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;webpages:Enabled&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;false&quot;</span><span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;ClientValidationEnabled&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;true&quot;</span><span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;UnobtrusiveJavaScriptEnabled&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;true&quot;</span><span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_end">&lt;/appSettings&gt;</span>&hellip;&nbsp;
+<span class="xml__tag_end">&lt;/configuration&gt;</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Let us leave the solution as-is for now, as we shall come back to it later.</p>
+<h1><span>Creating the Cross-cutting Helper Component</span></h1>
+<p>Now, right click on the <strong>NtierMvc</strong> solution and create a C# class library named
+<strong>NtierMvc.Common</strong>, as shown in the below figure.</p>
+<p><img id="184775" src="description/Fig-04.jpg" alt="" width="800" height="450"></p>
+<p>Right click the project <strong>References</strong> and add reference to <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Configuration.aspx"  title="Auto generated link to System.Configuration">System.Configuration</a> as shown in the below figure</p>
+<p><img id="184776" src="description/Fig-05.jpg" alt="" width="700" height="350"></p>
+<p>Then create four classes ConfigurationHandler.cs for calling application settings from the
+<strong>web.config</strong> file, ExceptionHandler.cs for handling Exceptions, LoggingHandler.cs for handling Logging activities, and FileHandler.cs for handling common IO operations. In the ConfigurationHandler class, whenever we instantiate it, we shall call
+ the used connection used and get its type from the app settings from the web.config file as shown below.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private void InitConfigurationHandler()
+{
+    try
+    {
+        //get current connection name 
+        var currentConnectionName = GetAppSettingsValueByKey(&quot;CurrentAppConnection&quot;);
+
+        if (string.IsNullOrEmpty(currentConnectionName))
+            throw new ConfigurationErrorsException(string.Format(&quot;No connection name exist in the current app/web.config.&quot;));
+
+        ConnectionStringSettings connectionName = ConfigurationManager.ConnectionStrings[currentConnectionName];
+        if (connectionName == null)
+            throw new ConfigurationErrorsException(string.Format(&quot;Failed to find connection named '{0}' in app/web.config.&quot;, currentConnectionName));
+
+        _connectionString = connectionName.ConnectionString;
+        _connectionProvider = connectionName.ProviderName;
+
+        if (string.IsNullOrEmpty(_connectionString) || string.IsNullOrEmpty(_connectionProvider))
+            throw new ConfigurationErrorsException(string.Format(&quot;The Connection String and/or the Data Provider can't be found in app/web.config.&quot;));
+    }
+    catch (Exception ex)
+    {
+        // some error occured. Bubble it to caller and encapsulate Exception object
+        throw new Exception(&quot;ConfigurationHandler::InitConfigurationHandler::Error occured.&quot;, ex);
+    }
+}
+
+/// &lt;summary&gt;
+/// Purpose: ConfigurationHandler class constructor
+/// &lt;/summary&gt;
+public ConfigurationHandler()
+{
+    InitConfigurationHandler();
+}
+
+public string GetAppSettingsValueByKey(string sKey)
+{
+    try
+    {
+        if (string.IsNullOrEmpty(sKey))
+            throw new ArgumentNullException(&quot;sKey&quot;, &quot;The AppSettings key name can't be Null or Empty.&quot;);
+
+        if (ConfigurationManager.AppSettings[sKey] == null)
+            throw new ConfigurationErrorsException(string.Format(&quot;Failed to find the AppSettings Key named '{0}' in app/web.config.&quot;, sKey));
+
+        return ConfigurationManager.AppSettings[sKey].ToString();
+    }
+    catch (Exception ex)
+    {
+        //bubble error.
+        throw new Exception(&quot;ConfigurationHandler::GetAppSettingsValueByKey:Error occured.&quot;, ex);
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;InitConfigurationHandler()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//get&nbsp;current&nbsp;connection&nbsp;name&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;currentConnectionName&nbsp;=&nbsp;GetAppSettingsValueByKey(<span class="cs__string">&quot;CurrentAppConnection&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">string</span>.IsNullOrEmpty(currentConnectionName))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;ConfigurationErrorsException(<span class="cs__keyword">string</span>.Format(<span class="cs__string">&quot;No&nbsp;connection&nbsp;name&nbsp;exist&nbsp;in&nbsp;the&nbsp;current&nbsp;app/web.config.&quot;</span>));&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ConnectionStringSettings&nbsp;connectionName&nbsp;=&nbsp;ConfigurationManager.ConnectionStrings[currentConnectionName];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(connectionName&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;ConfigurationErrorsException(<span class="cs__keyword">string</span>.Format(<span class="cs__string">&quot;Failed&nbsp;to&nbsp;find&nbsp;connection&nbsp;named&nbsp;'{0}'&nbsp;in&nbsp;app/web.config.&quot;</span>,&nbsp;currentConnectionName));&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_connectionString&nbsp;=&nbsp;connectionName.ConnectionString;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_connectionProvider&nbsp;=&nbsp;connectionName.ProviderName;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">string</span>.IsNullOrEmpty(_connectionString)&nbsp;||&nbsp;<span class="cs__keyword">string</span>.IsNullOrEmpty(_connectionProvider))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;ConfigurationErrorsException(<span class="cs__keyword">string</span>.Format(<span class="cs__string">&quot;The&nbsp;Connection&nbsp;String&nbsp;and/or&nbsp;the&nbsp;Data&nbsp;Provider&nbsp;can't&nbsp;be&nbsp;found&nbsp;in&nbsp;app/web.config.&quot;</span>));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;some&nbsp;error&nbsp;occured.&nbsp;Bubble&nbsp;it&nbsp;to&nbsp;caller&nbsp;and&nbsp;encapsulate&nbsp;Exception&nbsp;object</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;Exception(<span class="cs__string">&quot;ConfigurationHandler::InitConfigurationHandler::Error&nbsp;occured.&quot;</span>,&nbsp;ex);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__com">///&nbsp;&lt;summary&gt;</span>&nbsp;
+<span class="cs__com">///&nbsp;Purpose:&nbsp;ConfigurationHandler&nbsp;class&nbsp;constructor</span>&nbsp;
+<span class="cs__com">///&nbsp;&lt;/summary&gt;</span>&nbsp;
+<span class="cs__keyword">public</span>&nbsp;ConfigurationHandler()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;InitConfigurationHandler();&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;GetAppSettingsValueByKey(<span class="cs__keyword">string</span>&nbsp;sKey)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">string</span>.IsNullOrEmpty(sKey))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;ArgumentNullException(<span class="cs__string">&quot;sKey&quot;</span>,&nbsp;<span class="cs__string">&quot;The&nbsp;AppSettings&nbsp;key&nbsp;name&nbsp;can't&nbsp;be&nbsp;Null&nbsp;or&nbsp;Empty.&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(ConfigurationManager.AppSettings[sKey]&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;ConfigurationErrorsException(<span class="cs__keyword">string</span>.Format(<span class="cs__string">&quot;Failed&nbsp;to&nbsp;find&nbsp;the&nbsp;AppSettings&nbsp;Key&nbsp;named&nbsp;'{0}'&nbsp;in&nbsp;app/web.config.&quot;</span>,&nbsp;sKey));&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;ConfigurationManager.AppSettings[sKey].ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//bubble&nbsp;error.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;Exception(<span class="cs__string">&quot;ConfigurationHandler::GetAppSettingsValueByKey:Error&nbsp;occured.&quot;</span>,&nbsp;ex);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Please refer back to the attached solution source-code sample and review the logic of this class library and its classes.</p>
+<h1><span>Creating the Data Contract Entity Model Component</span></h1>
+<p>Now, right click on the <strong>NtierMvc</strong> solution and create a C# class library named
+<strong>NtierMvc.Model</strong>, as shown in the below figure.</p>
+<p><img id="184777" src="description/Fig-06.jpg" alt="" width="800" height="450"></p>
+<p>Then create a class named EmployeesEntity.cs. The class shall look like the following</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.ComponentModel.DataAnnotations.aspx"  title="Auto generated link to System.ComponentModel.DataAnnotations">System.ComponentModel.DataAnnotations</a>;
+
+namespace NtierMvc.Model
+{
+    /// &lt;summary&gt;
+    /// Purpose: Data Contract Entity Model Class [EmployeesEntity] for the table [HR].[Employees].
+    /// &lt;/summary&gt;
+    public class EmployeesEntity : IDisposable
+    {
+        #region Class Public Methods
+
+        /// &lt;summary&gt;
+        /// Purpose: Implements the IDispose interface.
+        /// &lt;/summary&gt;
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
+
+        #endregion
+
+        #region Class Property Declarations
+
+        [Required(ErrorMessage = &quot;You must enter an employee ID.&quot;)] 
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = &quot;You must enter an employee Name.&quot;)]
+        [StringLength(50, MinimumLength = 3)]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = &quot;You must enter an employee Age.&quot;)]
+        [Range(15, 80, ErrorMessage = &quot;Age range between 15 and 80 years.&quot;)]
+        public int Age { get; set; }
+
+        [DisplayFormat(DataFormatString = &quot;{0:dd/MM/yyyy}&quot;, ApplyFormatInEditMode = true)]
+        public DateTime? HiringDate { get; set; }
+
+        [Required(ErrorMessage = &quot;You must enter an employee Gross Salary.&quot;)] 
+        public Decimal GrossSalary { get; set; }
+        public Decimal NetSalary { get; set; }
+        public DateTime ModifiedDate { get; set; }
+
+        #endregion
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.ComponentModel.DataAnnotations.aspx"  title="Auto generated link to System.ComponentModel.DataAnnotations">System.ComponentModel.DataAnnotations</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;NtierMvc.Model&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;summary&gt;</span><span class="cs__com">///&nbsp;Purpose:&nbsp;Data&nbsp;Contract&nbsp;Entity&nbsp;Model&nbsp;Class&nbsp;[EmployeesEntity]&nbsp;for&nbsp;the&nbsp;table&nbsp;[HR].[Employees].</span><span class="cs__com">///&nbsp;&lt;/summary&gt;</span><span class="cs__keyword">public</span><span class="cs__keyword">class</span>&nbsp;EmployeesEntity&nbsp;:&nbsp;IDisposable&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{<span class="cs__preproc">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#region&nbsp;Class&nbsp;Public&nbsp;Methods</span><span class="cs__com">///&nbsp;&lt;summary&gt;</span><span class="cs__com">///&nbsp;Purpose:&nbsp;Implements&nbsp;the&nbsp;IDispose&nbsp;interface.</span><span class="cs__com">///&nbsp;&lt;/summary&gt;</span><span class="cs__keyword">public</span><span class="cs__keyword">void</span>&nbsp;Dispose()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GC.SuppressFinalize(<span class="cs__keyword">this</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<span class="cs__preproc">&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#endregion</span><span class="cs__preproc">&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#region&nbsp;Class&nbsp;Property&nbsp;Declarations</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Required(ErrorMessage&nbsp;=&nbsp;<span class="cs__string">&quot;You&nbsp;must&nbsp;enter&nbsp;an&nbsp;employee&nbsp;ID.&quot;</span>)]&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">int</span>&nbsp;Id&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Required(ErrorMessage&nbsp;=&nbsp;<span class="cs__string">&quot;You&nbsp;must&nbsp;enter&nbsp;an&nbsp;employee&nbsp;Name.&quot;</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[StringLength(<span class="cs__number">50</span>,&nbsp;MinimumLength&nbsp;=&nbsp;<span class="cs__number">3</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">string</span>&nbsp;Name&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Required(ErrorMessage&nbsp;=&nbsp;<span class="cs__string">&quot;You&nbsp;must&nbsp;enter&nbsp;an&nbsp;employee&nbsp;Age.&quot;</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Range(<span class="cs__number">15</span>,&nbsp;<span class="cs__number">80</span>,&nbsp;ErrorMessage&nbsp;=&nbsp;<span class="cs__string">&quot;Age&nbsp;range&nbsp;between&nbsp;15&nbsp;and&nbsp;80&nbsp;years.&quot;</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">int</span>&nbsp;Age&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DisplayFormat(DataFormatString&nbsp;=&nbsp;<span class="cs__string">&quot;{0:dd/MM/yyyy}&quot;</span>,&nbsp;ApplyFormatInEditMode&nbsp;=&nbsp;<span class="cs__keyword">true</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;DateTime?&nbsp;HiringDate&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Required(ErrorMessage&nbsp;=&nbsp;<span class="cs__string">&quot;You&nbsp;must&nbsp;enter&nbsp;an&nbsp;employee&nbsp;Gross&nbsp;Salary.&quot;</span>)]&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Decimal&nbsp;GrossSalary&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Decimal&nbsp;NetSalary&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;DateTime&nbsp;ModifiedDate&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}<span class="cs__preproc">&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#endregion</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>As you can see, all of the <strong>EmployeesEntity</strong> class are mapped to the
+<strong>[HR].[Employees]</strong> table except for the <strong>NetSalary</strong> property, which is of Nullable type and its value shall be used to view data to client users and is not needed in inserting data to the database as I shall explain this point
+ later. As you can see, we have put some attributes to each property for further validation operation. We shall discuss the use of the
+<strong>DataAnnotations</strong> attributes later on when we build the ASP.NET MVC web app.</p>
+<h1><span>Creating the Data Access Repository Component</span></h1>
+<p>This class library shall act as an <strong>ORM</strong> data mapper between the SQL Server data source and our solution. Now, right click on the
+<strong>NtierMvc</strong> solution and create a C# class library named <strong>NtierMvc.DataAccess</strong>, as shown in the below figure.</p>
+<p><img id="184778" src="description/Fig-08.jpg" alt="" width="800" height="450"></p>
+<p>Then, add reference to the two class libraries, <strong>NtierMvc.Model</strong> and
+<strong>NtierMvc.Common</strong> as shown in the below figure.</p>
+<p><img id="184779" src="description/Fig-09.jpg" alt="" width="700" height="350"></p>
+<p>Then, add a new folder named <strong>Common</strong> to this class library. Right click on the
+<strong>Common</strong> folder and click on Add New Item, then add an interface and named
+<strong>IRepository</strong> as shown in the following dialog.</p>
+<p><img id="184780" src="description/Fig-10.jpg" alt="" width="682" height="307"></p>
+<p>Its source code should look like the following</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+
+namespace NtierMvc.DataAccess.Common
+{
+    /// &lt;summary&gt;
+    /// Purpose: Interface contains common methods implemented by all repository classes.
+    /// &lt;/summary&gt;
+    public interface IRepository&lt;TEntity&gt; where TEntity : class
+    {
+        #region Methods
+        bool Insert(TEntity entity);
+        bool Update(TEntity entity);
+        bool DeleteById(int id);
+        TEntity SelectById(int id);
+        List&lt;TEntity&gt; SelectAll();
+        #endregion
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;NtierMvc.DataAccess.Common&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;summary&gt;</span><span class="cs__com">///&nbsp;Purpose:&nbsp;Interface&nbsp;contains&nbsp;common&nbsp;methods&nbsp;implemented&nbsp;by&nbsp;all&nbsp;repository&nbsp;classes.</span><span class="cs__com">///&nbsp;&lt;/summary&gt;</span><span class="cs__keyword">public</span><span class="cs__keyword">interface</span>&nbsp;IRepository&lt;TEntity&gt;&nbsp;where&nbsp;TEntity&nbsp;:&nbsp;<span class="cs__keyword">class</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{<span class="cs__preproc">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#region&nbsp;Methods</span><span class="cs__keyword">bool</span>&nbsp;Insert(TEntity&nbsp;entity);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">bool</span>&nbsp;Update(TEntity&nbsp;entity);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">bool</span>&nbsp;DeleteById(<span class="cs__keyword">int</span>&nbsp;id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEntity&nbsp;SelectById(<span class="cs__keyword">int</span>&nbsp;id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;TEntity&gt;&nbsp;SelectAll();<span class="cs__preproc">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#endregion</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>There shall be another two components inside the <strong>Common</strong> folder, the DataHandler.cs class, and Enumerators.cs code file. These items are very handy for the
+<strong>NtierMvc.DataAccess</strong> class library.</p>
+<p>Now, Right click on the <strong>NtierMvc.DataAccess</strong> class library project and click on
+<strong>Add New Item</strong>, then add a class named <strong>EmployeesRepository</strong> as shown in the following dialog and click the
+<strong>Add</strong> button.</p>
+<p><img id="184781" src="description/Fig-11.jpg" alt="" width="680" height="307"></p>
+<p>Now, reference the namespaces <strong>NtierMvc.Common</strong>, <strong>NtierMvc.DataAccess.Common</strong>, and
+<strong>NtierMvc.Model</strong> in the using section of the <strong>EmployeesRepository</strong> class to be as shown below</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Data.Common.aspx"  title="Auto generated link to System.Data.Common">System.Data.Common</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;
+using NtierMvc.Common;
+using NtierMvc.DataAccess.Common;
+using NtierMvc.Model;
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Data.Common.aspx"  title="Auto generated link to System.Data.Common">System.Data.Common</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;NtierMvc.Common;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;NtierMvc.DataAccess.Common;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;NtierMvc.Model;&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Then, let the <strong>EmployeesRepository</strong> class implements the interfaces
+<strong>IDisposable</strong> and <strong>IRepository</strong> for the <strong>EmployeesEntity</strong>, class as shown in the below code</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">/// &lt;summary&gt;
+/// Purpose: Data Access Repository Class [EmployeesRepository] for the table [HR].[Employees].
+/// &lt;/summary&gt;
+public class EmployeesRepository : IRepository&lt;EmployeesEntity&gt;, IDisposable
+{
+    #region Private Declarations
+
+    private LoggingHandler _loggingHandler;
+    private DataHandler _dataHandler;
+    private ConfigurationHandler _configurationHandler;
+    private DbProviderFactory _dbProviderFactory;
+    private string _connectionString;
+    private string _connectionProvider;
+    private int _errorCode, _rowsAffected;
+    private bool _bDisposed;
+
+    #endregion
+
+    #region Class Methods
+
+    public bool Insert(EmployeesEntity entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool Update(EmployeesEntity entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool DeleteById(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public EmployeesEntity SelectById(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List&lt;EmployeesEntity&gt; SelectAll()
+    {
+        throw new NotImplementedException();
+    }
+
+    public EmployeesRepository()
+    {
+        //Repository Initializations
+        _configurationHandler = new ConfigurationHandler();
+        _loggingHandler = new LoggingHandler();
+        _dataHandler = new DataHandler();
+        _connectionString = _configurationHandler.ConnectionString;
+        _connectionProvider = _configurationHandler.ConnectionProvider;
+        _dbProviderFactory = DbProviderFactories.GetFactory(_connectionProvider);
+    }
+
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+    protected virtual void Dispose(bool bDisposing)
+    {
+        // Check to see if Dispose has already been called.
+        if (!_bDisposed)
+        {
+            if (bDisposing)
+            {
+                // Dispose managed resources.
+                _configurationHandler = null;
+                _loggingHandler = null;
+                _dataHandler = null;
+                _dbProviderFactory = null;
+            }
+        }
+        _bDisposed = true;
+    }
+
+    #endregion
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">///&nbsp;&lt;summary&gt;</span><span class="cs__com">///&nbsp;Purpose:&nbsp;Data&nbsp;Access&nbsp;Repository&nbsp;Class&nbsp;[EmployeesRepository]&nbsp;for&nbsp;the&nbsp;table&nbsp;[HR].[Employees].</span><span class="cs__com">///&nbsp;&lt;/summary&gt;</span><span class="cs__keyword">public</span><span class="cs__keyword">class</span>&nbsp;EmployeesRepository&nbsp;:&nbsp;IRepository&lt;EmployeesEntity&gt;,&nbsp;IDisposable&nbsp;
+{<span class="cs__preproc">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;#region&nbsp;Private&nbsp;Declarations</span><span class="cs__keyword">private</span>&nbsp;LoggingHandler&nbsp;_loggingHandler;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;DataHandler&nbsp;_dataHandler;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;ConfigurationHandler&nbsp;_configurationHandler;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;DbProviderFactory&nbsp;_dbProviderFactory;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span><span class="cs__keyword">string</span>&nbsp;_connectionString;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span><span class="cs__keyword">string</span>&nbsp;_connectionProvider;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span><span class="cs__keyword">int</span>&nbsp;_errorCode,&nbsp;_rowsAffected;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span><span class="cs__keyword">bool</span>&nbsp;_bDisposed;<span class="cs__preproc">&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;#endregion</span><span class="cs__preproc">&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;#region&nbsp;Class&nbsp;Methods</span><span class="cs__keyword">public</span><span class="cs__keyword">bool</span>&nbsp;Insert(EmployeesEntity&nbsp;entity)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;NotImplementedException();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">bool</span>&nbsp;Update(EmployeesEntity&nbsp;entity)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;NotImplementedException();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">bool</span>&nbsp;DeleteById(<span class="cs__keyword">int</span>&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;NotImplementedException();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;EmployeesEntity&nbsp;SelectById(<span class="cs__keyword">int</span>&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;NotImplementedException();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;List&lt;EmployeesEntity&gt;&nbsp;SelectAll()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;NotImplementedException();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;EmployeesRepository()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Repository&nbsp;Initializations</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_configurationHandler&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;ConfigurationHandler();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;LoggingHandler();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;DataHandler();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_connectionString&nbsp;=&nbsp;_configurationHandler.ConnectionString;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_connectionProvider&nbsp;=&nbsp;_configurationHandler.ConnectionProvider;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dbProviderFactory&nbsp;=&nbsp;DbProviderFactories.GetFactory(_connectionProvider);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">void</span>&nbsp;Dispose()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dispose(<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GC.SuppressFinalize(<span class="cs__keyword">this</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">protected</span><span class="cs__keyword">virtual</span><span class="cs__keyword">void</span>&nbsp;Dispose(<span class="cs__keyword">bool</span>&nbsp;bDisposing)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Check&nbsp;to&nbsp;see&nbsp;if&nbsp;Dispose&nbsp;has&nbsp;already&nbsp;been&nbsp;called.</span><span class="cs__keyword">if</span>&nbsp;(!_bDisposed)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(bDisposing)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Dispose&nbsp;managed&nbsp;resources.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_configurationHandler&nbsp;=&nbsp;<span class="cs__keyword">null</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler&nbsp;=&nbsp;<span class="cs__keyword">null</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler&nbsp;=&nbsp;<span class="cs__keyword">null</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dbProviderFactory&nbsp;=&nbsp;<span class="cs__keyword">null</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_bDisposed&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}<span class="cs__preproc">&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;#endregion</span>&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>As you can see, we have implemented the <strong>IDisposable</strong> interface to dispose the configuration, logging, and data handler objects. Moreover, we have implemented the
+<strong>IRepository</strong> interface for implementing the <span style="color:#333399">
+Insert</span>, <span style="color:#333399">Update</span>, <span style="color:#333399">
+DeleteById</span>, <span style="color:#333399">SelectById</span>, and <span style="color:#333399">
+SelectAll</span> methods.</p>
+<p>Now, let us talk a little bit about the <span style="color:#333399">Insert</span> method. The
+<span style="color:#333399">Insert</span> method takes entity object of type <strong>
+EmployeesEntity</strong> as an input. Instead of using Entity Framework or other ORM tools for internal data mapping handing, I&rsquo;ve used direct SQL Commands instead in this is a tutorial for simplicity of things, and so, we can see what is actually happens
+ inline, behind the scene, through the use of <strong>Repository</strong> pattern.</p>
+<p>The code is simple, we build a T-SQL insert statement, and passes parameters got from the input entity. We then open a connection to the database and execute the
+<strong>ExecuteNonQuery</strong> command. The code here is customized from an earlier version of
+<strong>LLBLGen ORM</strong> utility. Finally, in case of any error, we populate it through our crosscutting
+<strong>NtierMvc.Common</strong> class library we created earlier. The complete code for this method is as follows</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public bool Insert(EmployeesEntity entity)
+{
+    try
+    {
+        var sb = new StringBuilder();
+        sb.Append(&quot;SET DATEFORMAT DMY; &quot;);
+        sb.Append(&quot;INSERT [HR].[Employees] &quot;);
+        sb.Append(&quot;( &quot;);
+        sb.Append(&quot;[Id], &quot;);
+        sb.Append(&quot;[Name], &quot;);
+        sb.Append(&quot;[Age], &quot;);
+        sb.Append(&quot;[HiringDate], &quot;);
+        sb.Append(&quot;[GrossSalary], &quot;);
+        sb.Append(&quot;[ModifiedDate] &quot;);
+        sb.Append(&quot;) &quot;);
+        sb.Append(&quot;VALUES &quot;);
+        sb.Append(&quot;( &quot;);
+        sb.Append(&quot; @intId, &quot;);
+        sb.Append(&quot; @chnName, &quot;);
+        sb.Append(&quot; @intAge, &quot;);
+        sb.Append(&quot; @dtmHiringDate, &quot;);
+        sb.Append(&quot; @decGrossSalary, &quot;);
+        sb.Append(&quot; ISNULL(@dtmModifiedDate, (getdate())) &quot;);
+        sb.Append(&quot;) &quot;);
+        sb.Append(&quot;SELECT @intErrorCode=@@ERROR; &quot;);
+
+        var commandText = sb.ToString();
+        sb.Clear();
+
+        using (var dbConnection = _dbProviderFactory.CreateConnection())
+        {
+            if (dbConnection == null)
+                throw new ArgumentNullException(&quot;dbConnection&quot;, &quot;The db connection can't be null.&quot;);
+
+            dbConnection.ConnectionString = _connectionString;
+
+            using (var dbCommand = _dbProviderFactory.CreateCommand())
+            {
+                if (dbCommand == null)
+                    throw new ArgumentNullException(&quot;dbCommand&quot; &#43; &quot; The db Insert command for entity [Employees] can't be null. &quot;);
+
+                dbCommand.Connection = dbConnection;
+                dbCommand.CommandText = commandText;
+
+                //Input Parameters
+                _dataHandler.AddParameterToCommand(dbCommand, &quot;@intId&quot;, CsType.Int, ParameterDirection.Input, entity.Id);
+                _dataHandler.AddParameterToCommand(dbCommand, &quot;@chnName&quot;, CsType.String, ParameterDirection.Input, entity.Name);
+                _dataHandler.AddParameterToCommand(dbCommand, &quot;@intAge&quot;, CsType.Int, ParameterDirection.Input, entity.Age);
+                _dataHandler.AddParameterToCommand(dbCommand, &quot;@dtmHiringDate&quot;, CsType.DateTime, ParameterDirection.Input, entity.HiringDate);
+                _dataHandler.AddParameterToCommand(dbCommand, &quot;@decGrossSalary&quot;, CsType.Decimal, ParameterDirection.Input, entity.GrossSalary);
+                _dataHandler.AddParameterToCommand(dbCommand, &quot;@dtmModifiedDate&quot;, CsType.DateTime, ParameterDirection.Input, null);
+
+                //Output Parameters
+                _dataHandler.AddParameterToCommand(dbCommand, &quot;@intErrorCode&quot;, CsType.Int, ParameterDirection.Output, null);
+
+                //Open Connection
+                if (dbConnection.State != ConnectionState.Open)
+                    dbConnection.Open();
+
+                //Execute query.
+                _rowsAffected = dbCommand.ExecuteNonQuery();
+                _errorCode = int.Parse(dbCommand.Parameters[&quot;@intErrorCode&quot;].Value.ToString());
+
+                if (_errorCode != 0)
+                {
+                    // Throw error.
+                    throw new Exception(&quot;The Insert method for entity [Employees] reported the Database ErrorCode: &quot; &#43; _errorCode);
+                }
+            }
+        }
+
+        return true;
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+
+        //Bubble error to caller and encapsulate Exception object
+        throw new Exception(&quot;EmployeesRepository::Insert::Error occured.&quot;, ex);
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span><span class="cs__keyword">bool</span>&nbsp;Insert(EmployeesEntity&nbsp;entity)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;sb&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;StringBuilder();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;SET&nbsp;DATEFORMAT&nbsp;DMY;&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;INSERT&nbsp;[HR].[Employees]&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;(&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[Id],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[Name],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[Age],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[HiringDate],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[GrossSalary],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[ModifiedDate]&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;)&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;VALUES&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;(&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;&nbsp;@intId,&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;&nbsp;@chnName,&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;&nbsp;@intAge,&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;&nbsp;@dtmHiringDate,&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;&nbsp;@decGrossSalary,&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;&nbsp;ISNULL(@dtmModifiedDate,&nbsp;(getdate()))&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;)&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;SELECT&nbsp;@intErrorCode=@@ERROR;&nbsp;&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;commandText&nbsp;=&nbsp;sb.ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Clear();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;dbConnection&nbsp;=&nbsp;_dbProviderFactory.CreateConnection())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(dbConnection&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;ArgumentNullException(<span class="cs__string">&quot;dbConnection&quot;</span>,&nbsp;<span class="cs__string">&quot;The&nbsp;db&nbsp;connection&nbsp;can't&nbsp;be&nbsp;null.&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbConnection.ConnectionString&nbsp;=&nbsp;_connectionString;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;dbCommand&nbsp;=&nbsp;_dbProviderFactory.CreateCommand())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(dbCommand&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;ArgumentNullException(<span class="cs__string">&quot;dbCommand&quot;</span>&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;The&nbsp;db&nbsp;Insert&nbsp;command&nbsp;for&nbsp;entity&nbsp;[Employees]&nbsp;can't&nbsp;be&nbsp;null.&nbsp;&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbCommand.Connection&nbsp;=&nbsp;dbConnection;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbCommand.CommandText&nbsp;=&nbsp;commandText;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Input&nbsp;Parameters</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler.AddParameterToCommand(dbCommand,&nbsp;<span class="cs__string">&quot;@intId&quot;</span>,&nbsp;CsType.Int,&nbsp;ParameterDirection.Input,&nbsp;entity.Id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler.AddParameterToCommand(dbCommand,&nbsp;<span class="cs__string">&quot;@chnName&quot;</span>,&nbsp;CsType.String,&nbsp;ParameterDirection.Input,&nbsp;entity.Name);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler.AddParameterToCommand(dbCommand,&nbsp;<span class="cs__string">&quot;@intAge&quot;</span>,&nbsp;CsType.Int,&nbsp;ParameterDirection.Input,&nbsp;entity.Age);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler.AddParameterToCommand(dbCommand,&nbsp;<span class="cs__string">&quot;@dtmHiringDate&quot;</span>,&nbsp;CsType.DateTime,&nbsp;ParameterDirection.Input,&nbsp;entity.HiringDate);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler.AddParameterToCommand(dbCommand,&nbsp;<span class="cs__string">&quot;@decGrossSalary&quot;</span>,&nbsp;CsType.Decimal,&nbsp;ParameterDirection.Input,&nbsp;entity.GrossSalary);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler.AddParameterToCommand(dbCommand,&nbsp;<span class="cs__string">&quot;@dtmModifiedDate&quot;</span>,&nbsp;CsType.DateTime,&nbsp;ParameterDirection.Input,&nbsp;<span class="cs__keyword">null</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Output&nbsp;Parameters</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler.AddParameterToCommand(dbCommand,&nbsp;<span class="cs__string">&quot;@intErrorCode&quot;</span>,&nbsp;CsType.Int,&nbsp;ParameterDirection.Output,&nbsp;<span class="cs__keyword">null</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Open&nbsp;Connection</span><span class="cs__keyword">if</span>&nbsp;(dbConnection.State&nbsp;!=&nbsp;ConnectionState.Open)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbConnection.Open();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Execute&nbsp;query.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_rowsAffected&nbsp;=&nbsp;dbCommand.ExecuteNonQuery();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_errorCode&nbsp;=&nbsp;<span class="cs__keyword">int</span>.Parse(dbCommand.Parameters[<span class="cs__string">&quot;@intErrorCode&quot;</span>].Value.ToString());&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(_errorCode&nbsp;!=&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Throw&nbsp;error.</span><span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;Exception(<span class="cs__string">&quot;The&nbsp;Insert&nbsp;method&nbsp;for&nbsp;entity&nbsp;[Employees]&nbsp;reported&nbsp;the&nbsp;Database&nbsp;ErrorCode:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;_errorCode);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Bubble&nbsp;error&nbsp;to&nbsp;caller&nbsp;and&nbsp;encapsulate&nbsp;Exception&nbsp;object</span><span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;Exception(<span class="cs__string">&quot;EmployeesRepository::Insert::Error&nbsp;occured.&quot;</span>,&nbsp;ex);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>The same concept and mechanism applied on the <strong>Update</strong>, <strong>
+DeleteById</strong>, <strong>SelectById</strong>, and <strong>SelectAll</strong> methods. For example, the code below shows how we can list all employees.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public List&lt;EmployeesEntity&gt; SelectAll()
+{
+    _errorCode = 0;
+    _rowsAffected = 0;
+
+    var returnedEntities = new List&lt;EmployeesEntity&gt;();
+
+    try
+    {
+        var sb = new StringBuilder();
+        sb.Append(&quot;SET DATEFORMAT DMY; &quot;);
+        sb.Append(&quot;SELECT &quot;);
+        sb.Append(&quot;[Id], &quot;);
+        sb.Append(&quot;[Name], &quot;);
+        sb.Append(&quot;[Age], &quot;);
+        sb.Append(&quot;[HiringDate], &quot;);
+        sb.Append(&quot;[GrossSalary], &quot;);
+        sb.Append(&quot;[ModifiedDate] &quot;);
+        sb.Append(&quot;FROM [HR].[Employees] &quot;);
+        sb.Append(&quot;ORDER BY [Name] &quot;);
+        sb.Append(&quot;SELECT @intErrorCode=@@ERROR; &quot;);
+
+        var commandText = sb.ToString();
+        sb.Clear();
+
+        using (var dbConnection = _dbProviderFactory.CreateConnection())
+        {
+            if (dbConnection == null)
+                throw new ArgumentNullException(&quot;dbConnection&quot;, &quot;The db connection can't be null.&quot;);
+
+            dbConnection.ConnectionString = _connectionString;
+
+            using (var dbCommand = _dbProviderFactory.CreateCommand())
+            {
+                if (dbCommand == null)
+                    throw new ArgumentNullException(&quot;dbCommand&quot; &#43; &quot; The db command for entity [Employees] can't be null. &quot;);
+
+                dbCommand.Connection = dbConnection;
+                dbCommand.CommandText = commandText;
+
+                //Input Parameters - None
+
+                //Output Parameters
+                _dataHandler.AddParameterToCommand(dbCommand, &quot;@intErrorCode&quot;, CsType.Int, ParameterDirection.Output, null);
+
+                //Open Connection
+                if (dbConnection.State != ConnectionState.Open)
+                    dbConnection.Open();
+
+                //Execute query.
+                using (var reader = dbCommand.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            var entity = new EmployeesEntity();
+                            entity.Id = reader.GetInt32(0);
+                            entity.Name = reader.GetString(1);
+                            entity.Age = reader.GetInt32(2);
+                            entity.HiringDate = reader.GetValue(3) == DBNull.Value ? (DateTime?)null : reader.GetDateTime(3);
+                            entity.GrossSalary = reader.GetDecimal(4);
+                            entity.ModifiedDate = reader.GetDateTime(5);
+                            returnedEntities.Add(entity);
+                        }
+                    }
+
+                }
+
+                _errorCode = int.Parse(dbCommand.Parameters[&quot;@intErrorCode&quot;].Value.ToString());
+
+                if (_errorCode != 0)
+                {
+                    // Throw error.
+                    throw new Exception(&quot;The SelectAll method for entity [Employees] reported the Database ErrorCode: &quot; &#43; _errorCode);
+                }
+            }
+        }
+
+        return returnedEntities;
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+
+        //Bubble error to caller and encapsulate Exception object
+        throw new Exception(&quot;EmployeesRepository::SelectAll::Error occured.&quot;, ex);
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;List&lt;EmployeesEntity&gt;&nbsp;SelectAll()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;_errorCode&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;_rowsAffected&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;returnedEntities&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;List&lt;EmployeesEntity&gt;();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;sb&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;StringBuilder();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;SET&nbsp;DATEFORMAT&nbsp;DMY;&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;SELECT&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[Id],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[Name],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[Age],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[HiringDate],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[GrossSalary],&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;[ModifiedDate]&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;FROM&nbsp;[HR].[Employees]&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;ORDER&nbsp;BY&nbsp;[Name]&nbsp;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;SELECT&nbsp;@intErrorCode=@@ERROR;&nbsp;&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;commandText&nbsp;=&nbsp;sb.ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Clear();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;dbConnection&nbsp;=&nbsp;_dbProviderFactory.CreateConnection())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(dbConnection&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;ArgumentNullException(<span class="cs__string">&quot;dbConnection&quot;</span>,&nbsp;<span class="cs__string">&quot;The&nbsp;db&nbsp;connection&nbsp;can't&nbsp;be&nbsp;null.&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbConnection.ConnectionString&nbsp;=&nbsp;_connectionString;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;dbCommand&nbsp;=&nbsp;_dbProviderFactory.CreateCommand())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(dbCommand&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;ArgumentNullException(<span class="cs__string">&quot;dbCommand&quot;</span>&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;The&nbsp;db&nbsp;command&nbsp;for&nbsp;entity&nbsp;[Employees]&nbsp;can't&nbsp;be&nbsp;null.&nbsp;&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbCommand.Connection&nbsp;=&nbsp;dbConnection;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbCommand.CommandText&nbsp;=&nbsp;commandText;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Input&nbsp;Parameters&nbsp;-&nbsp;None</span><span class="cs__com">//Output&nbsp;Parameters</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_dataHandler.AddParameterToCommand(dbCommand,&nbsp;<span class="cs__string">&quot;@intErrorCode&quot;</span>,&nbsp;CsType.Int,&nbsp;ParameterDirection.Output,&nbsp;<span class="cs__keyword">null</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Open&nbsp;Connection</span><span class="cs__keyword">if</span>&nbsp;(dbConnection.State&nbsp;!=&nbsp;ConnectionState.Open)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dbConnection.Open();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Execute&nbsp;query.</span><span class="cs__keyword">using</span>&nbsp;(var&nbsp;reader&nbsp;=&nbsp;dbCommand.ExecuteReader())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(reader.HasRows)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">while</span>&nbsp;(reader.Read())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;entity&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesEntity();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Id&nbsp;=&nbsp;reader.GetInt32(<span class="cs__number">0</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Name&nbsp;=&nbsp;reader.GetString(<span class="cs__number">1</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Age&nbsp;=&nbsp;reader.GetInt32(<span class="cs__number">2</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.HiringDate&nbsp;=&nbsp;reader.GetValue(<span class="cs__number">3</span>)&nbsp;==&nbsp;DBNull.Value&nbsp;?&nbsp;(DateTime?)<span class="cs__keyword">null</span>&nbsp;:&nbsp;reader.GetDateTime(<span class="cs__number">3</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.GrossSalary&nbsp;=&nbsp;reader.GetDecimal(<span class="cs__number">4</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.ModifiedDate&nbsp;=&nbsp;reader.GetDateTime(<span class="cs__number">5</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returnedEntities.Add(entity);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_errorCode&nbsp;=&nbsp;<span class="cs__keyword">int</span>.Parse(dbCommand.Parameters[<span class="cs__string">&quot;@intErrorCode&quot;</span>].Value.ToString());&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(_errorCode&nbsp;!=&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Throw&nbsp;error.</span><span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;Exception(<span class="cs__string">&quot;The&nbsp;SelectAll&nbsp;method&nbsp;for&nbsp;entity&nbsp;[Employees]&nbsp;reported&nbsp;the&nbsp;Database&nbsp;ErrorCode:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;_errorCode);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;returnedEntities;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Bubble&nbsp;error&nbsp;to&nbsp;caller&nbsp;and&nbsp;encapsulate&nbsp;Exception&nbsp;object</span><span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;Exception(<span class="cs__string">&quot;EmployeesRepository::SelectAll::Error&nbsp;occured.&quot;</span>,&nbsp;ex);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Note how we used the <strong>EmployeesEntity</strong> entity model class in passing data to and from the database. Note also we handled the Nullable
+<strong>HiringDate</strong> property.</p>
+<p>Please refer back to the attached solution source-code sample and review the logic of this class library and its classes and methods.</p>
+<p><span style="font-size:20px; font-weight:bold">Creating the Business Logic Component</span></p>
+<p>The Business Logic Layer is one the mostly abandoned component, layer, in software solutions. The reason behind that is, it is only needed in large solutions where there exists large number of business constraints.</p>
+<p>Now, let us create the business logic layer, right click on the <strong>NtierMvc</strong> solution and create a C# class library named
+<strong>NtierMvc.BusinessLogic</strong>, as shown in the below figure.</p>
+<p><img id="184782" src="description/Fig-12.jpg" alt="" width="800" height="450"></p>
+<p>Then, add reference to the class libraries, <strong>NtierMvc.Model</strong>, <strong>
+NtierMvc.DataAccess</strong>, and <strong>NtierMvc.Common</strong> as shown in the below figure.</p>
+<p><img id="184783" src="description/Fig-13.jpg" alt="" width="700" height="350"></p>
+<p>Now, rename the Class1.cs file to EmployeesBusiness.cs or delete it and recreate it as shown in the below figure.</p>
+<p><img id="184784" src="description/Fig-14.jpg" alt="" width="800" height="450"></p>
+<p>Now, implement the <strong>IDisposable</strong> interface as we used to do in this solution. Then, reference the namespaces
+<strong>NtierMvc.Model</strong>, <strong>NtierMvc.DataAccess</strong>, and <strong>
+NtierMvc.Common</strong> in the using section of the EmployeesBusiness.cs created class.</p>
+<p>Then, let us add a private method that represents the main business rule or business constraint required in the project. Remember the applied business rule for viewing the
+<strong>NetSalary</strong> value after deducting the <strong>TAX</strong> amount from the
+<strong>GrossSalary</strong> based on the <strong>Age</strong> of an <strong>Employee</strong>. Here, we&rsquo;re going to apply this rule.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private decimal GetNetSalary(decimal grossSalary, int age)
+{
+    var netSalary = grossSalary;
+
+    if (age &lt; 30)
+    {
+        //Deduct 50% from the Gross Salary
+        netSalary = grossSalary - grossSalary * 0.5M;
+    }
+    else if (age &lt; 40)
+    {
+        //Deduct 40% from the Gross Salary
+        netSalary = grossSalary - grossSalary * 0.4M;
+    }
+    else if (age &lt; 50)
+    {
+        //Deduct 30% from the Gross Salary
+        netSalary = grossSalary - grossSalary * 0.3M;
+    }
+    else if (age &lt; 60)
+    {
+        //Deduct 20% from the Gross Salary
+        netSalary = grossSalary - grossSalary * 0.2M;
+    }
+
+    return Math.Round(netSalary, 2);
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">private</span><span class="cs__keyword">decimal</span>&nbsp;GetNetSalary(<span class="cs__keyword">decimal</span>&nbsp;grossSalary,&nbsp;<span class="cs__keyword">int</span>&nbsp;age)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;netSalary&nbsp;=&nbsp;grossSalary;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(age&nbsp;&lt;&nbsp;<span class="cs__number">30</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Deduct&nbsp;50%&nbsp;from&nbsp;the&nbsp;Gross&nbsp;Salary</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netSalary&nbsp;=&nbsp;grossSalary&nbsp;-&nbsp;grossSalary&nbsp;*&nbsp;<span class="cs__number">0</span>.5M;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span><span class="cs__keyword">if</span>&nbsp;(age&nbsp;&lt;&nbsp;<span class="cs__number">40</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Deduct&nbsp;40%&nbsp;from&nbsp;the&nbsp;Gross&nbsp;Salary</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netSalary&nbsp;=&nbsp;grossSalary&nbsp;-&nbsp;grossSalary&nbsp;*&nbsp;<span class="cs__number">0</span>.4M;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span><span class="cs__keyword">if</span>&nbsp;(age&nbsp;&lt;&nbsp;<span class="cs__number">50</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Deduct&nbsp;30%&nbsp;from&nbsp;the&nbsp;Gross&nbsp;Salary</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netSalary&nbsp;=&nbsp;grossSalary&nbsp;-&nbsp;grossSalary&nbsp;*&nbsp;<span class="cs__number">0</span>.3M;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span><span class="cs__keyword">if</span>&nbsp;(age&nbsp;&lt;&nbsp;<span class="cs__number">60</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Deduct&nbsp;20%&nbsp;from&nbsp;the&nbsp;Gross&nbsp;Salary</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netSalary&nbsp;=&nbsp;grossSalary&nbsp;-&nbsp;grossSalary&nbsp;*&nbsp;<span class="cs__number">0</span>.2M;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;Math.Round(netSalary,&nbsp;<span class="cs__number">2</span>);&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Then, let&rsquo;s add the <strong>CRUD</strong> Operations applied in this BL layer class. We begin with the
+<strong>InsertEmployee</strong> method; look at the following code. We input an entity of type
+<strong>EmployeeEntity</strong> and return Boolean value for the result of the operation, either success or failure.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public bool InsertEmployee(EmployeesEntity entity)
+{
+    try
+    {
+        bool bOpDoneSuccessfully;
+        using (var repository = new EmployeesRepository())
+        {
+            bOpDoneSuccessfully = repository.Insert(entity);
+        }
+
+        return bOpDoneSuccessfully;
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+
+        throw new Exception(&quot;BusinessLogic:EmployeesBusiness::InsertEmployee::Error occured.&quot;, ex);
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span><span class="cs__keyword">bool</span>&nbsp;InsertEmployee(EmployeesEntity&nbsp;entity)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">bool</span>&nbsp;bOpDoneSuccessfully;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;repository&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesRepository())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bOpDoneSuccessfully&nbsp;=&nbsp;repository.Insert(entity);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;bOpDoneSuccessfully;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;Exception(<span class="cs__string">&quot;BusinessLogic:EmployeesBusiness::InsertEmployee::Error&nbsp;occured.&quot;</span>,&nbsp;ex);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>With the same concept but through opposite mechanism, when coding the <strong>
+SelectEmployeeById</strong> method, we input an integer representing the Employee ID and get an entity of type
+<strong>EmployeeEntity</strong> and this is where we apply the required Business Rule for
+<strong>TAX</strong> deduction as shown below</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public EmployeesEntity SelectEmployeeById(int empId)
+{
+    try
+    {
+        EmployeesEntity returnedEntity;
+        using (var repository = new EmployeesRepository())
+        {
+            returnedEntity = repository.SelectById(empId);
+            if (returnedEntity != null)
+                returnedEntity.NetSalary = GetNetSalary(returnedEntity.GrossSalary, returnedEntity.Age);
+        }
+
+        return returnedEntity;
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+
+        throw new Exception(&quot;BusinessLogic:EmployeesBusiness::SelectEmployeeById::Error occured.&quot;, ex);
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;EmployeesEntity&nbsp;SelectEmployeeById(<span class="cs__keyword">int</span>&nbsp;empId)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EmployeesEntity&nbsp;returnedEntity;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;repository&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesRepository())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returnedEntity&nbsp;=&nbsp;repository.SelectById(empId);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(returnedEntity&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returnedEntity.NetSalary&nbsp;=&nbsp;GetNetSalary(returnedEntity.GrossSalary,&nbsp;returnedEntity.Age);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;returnedEntity;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">throw</span><span class="cs__keyword">new</span>&nbsp;Exception(<span class="cs__string">&quot;BusinessLogic:EmployeesBusiness::SelectEmployeeById::Error&nbsp;occured.&quot;</span>,&nbsp;ex);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>For the rest of the methods, please refer back to the attached solution source-code sample and review the logic of this class library and its classes and methods.</p>
+<p><span style="font-size:20px; font-weight:bold">Testing the N-Tiers Layers so far</span></p>
+<p>So far, we did some work that needs to be tested before proceeding further to make sure that the layers talks to each other correctly and as we expects. It is a good idea to create a simple win forms app, just with a single screen, to perform the
+<strong>CRUD</strong> operations and list all entered employees data.</p>
+<p>Moreover, it is a good way to test the business rule before connecting the ASP.NET MVC web app to the Business Logic Layer class library. Here, we just call the business logic class library from within the win form class as shown in the below sample</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private void Insert(int id, string name, int age, DateTime? hiringDate, decimal grossSalary)
+{
+    try
+    {
+        using (var employees = new EmployeesBusiness())
+        {
+            var entity = new EmployeesEntity();
+            entity.Id = id;
+            entity.Name = name;
+            entity.Age = age;
+            entity.HiringDate = hiringDate;
+            entity.GrossSalary = grossSalary;
+            var opSuccessful = employees.InsertEmployee(entity);
+
+            var resultMessage = opSuccessful ? &quot;Done Successfully&quot; : &quot;Error happened!&quot;;
+
+            MessageBox.Show(resultMessage, &quot;Success&quot;, MessageBoxButtons.OK);
+        }
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+
+        MessageBox.Show(&quot;UserInterface:EmployeesForm::Insert::Error occured.&quot; &#43; 
+            Environment.NewLine &#43; ex.Message, &quot;Error&quot;, MessageBoxButtons.OK);
+    }
+}
+
+private void btnInsert_Click(object sender, EventArgs e)
+{
+    Insert(
+        int.Parse(txtId.Text),
+        txtName.Text,
+        int.Parse(txtAge.Text),
+        txtHiringDate.Text.Trim().Length == 0 ? (DateTime?) null : DateTime.ParseExact(txtHiringDate.Text, &quot;dd/MM/yyyy&quot;, CultureInfo.InvariantCulture, DateTimeStyles.None), 
+        Math.Round(Decimal.Parse(txtGrossSalary.Text),3));
+}
+
+private void btnGetById_Click(object sender, EventArgs e)
+{
+    var entity = SelectOne(int.Parse(txtId.Text));
+    if (entity != null)
+    {
+        txtName.Text = entity.Name;
+        txtAge.Text = entity.Age.ToString();
+        txtHiringDate.Text = string.IsNullOrEmpty(entity.HiringDate.ToString())
+            ? string.Empty : Convert.ToDateTime(entity.HiringDate).ToString(&quot;dd/MM/yyyy&quot;);
+        txtGrossSalary.Text = entity.GrossSalary.ToString();
+        txtNetSalary.Text = entity.NetSalary.ToString();
+    }
+    else
+    {
+        MessageBox.Show(&quot;No Employees Found!&quot;, &quot;Warning&quot;, MessageBoxButtons.OK);
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;Insert(<span class="cs__keyword">int</span>&nbsp;id,&nbsp;<span class="cs__keyword">string</span>&nbsp;name,&nbsp;<span class="cs__keyword">int</span>&nbsp;age,&nbsp;DateTime?&nbsp;hiringDate,&nbsp;<span class="cs__keyword">decimal</span>&nbsp;grossSalary)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;employees&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesBusiness())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;entity&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesEntity();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Id&nbsp;=&nbsp;id;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Name&nbsp;=&nbsp;name;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Age&nbsp;=&nbsp;age;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.HiringDate&nbsp;=&nbsp;hiringDate;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.GrossSalary&nbsp;=&nbsp;grossSalary;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;opSuccessful&nbsp;=&nbsp;employees.InsertEmployee(entity);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;resultMessage&nbsp;=&nbsp;opSuccessful&nbsp;?&nbsp;<span class="cs__string">&quot;Done&nbsp;Successfully&quot;</span>&nbsp;:&nbsp;<span class="cs__string">&quot;Error&nbsp;happened!&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(resultMessage,&nbsp;<span class="cs__string">&quot;Success&quot;</span>,&nbsp;MessageBoxButtons.OK);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;UserInterface:EmployeesForm::Insert::Error&nbsp;occured.&quot;</span>&nbsp;&#43;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Environment.NewLine&nbsp;&#43;&nbsp;ex.Message,&nbsp;<span class="cs__string">&quot;Error&quot;</span>,&nbsp;MessageBoxButtons.OK);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;btnInsert_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Insert(&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>.Parse(txtId.Text),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtName.Text,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>.Parse(txtAge.Text),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtHiringDate.Text.Trim().Length&nbsp;==&nbsp;<span class="cs__number">0</span>&nbsp;?&nbsp;(DateTime?)&nbsp;<span class="cs__keyword">null</span>&nbsp;:&nbsp;DateTime.ParseExact(txtHiringDate.Text,&nbsp;<span class="cs__string">&quot;dd/MM/yyyy&quot;</span>,&nbsp;CultureInfo.InvariantCulture,&nbsp;DateTimeStyles.None),&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math.Round(Decimal.Parse(txtGrossSalary.Text),<span class="cs__number">3</span>));&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;btnGetById_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;entity&nbsp;=&nbsp;SelectOne(<span class="cs__keyword">int</span>.Parse(txtId.Text));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(entity&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtName.Text&nbsp;=&nbsp;entity.Name;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtAge.Text&nbsp;=&nbsp;entity.Age.ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtHiringDate.Text&nbsp;=&nbsp;<span class="cs__keyword">string</span>.IsNullOrEmpty(entity.HiringDate.ToString())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;<span class="cs__keyword">string</span>.Empty&nbsp;:&nbsp;Convert.ToDateTime(entity.HiringDate).ToString(<span class="cs__string">&quot;dd/MM/yyyy&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtGrossSalary.Text&nbsp;=&nbsp;entity.GrossSalary.ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtNetSalary.Text&nbsp;=&nbsp;entity.NetSalary.ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;No&nbsp;Employees&nbsp;Found!&quot;</span>,&nbsp;<span class="cs__string">&quot;Warning&quot;</span>,&nbsp;MessageBoxButtons.OK);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>The following figure is screen shot from the form of the sample win forms app used for testing of the Employees data exchange across the
+<strong>N-Tier</strong> layers.&nbsp;</p>
+<p><img id="184786" src="description/Fig-15.jpg" alt="" width="518" height="354"></p>
+<p>This is one of the many advantages of applying an <strong>N-Tier</strong> deployment architecture style in your solution, where you can have more than one user interface for your solution.</p>
+<p>Please refer back to the attached solution source-code sample and review the logic of this win forms app and its methods.</p>
+<p><span style="font-size:20px; font-weight:bold">Building the N-Tier ASP.NET MVC web app</span></p>
+<p>Let&rsquo;s go back to our ASP.NET MVC app, the <strong>NtierMvc</strong> web project. Right click on the project references, and add reference to the class libraries,
+<strong>NtierMvc.Common</strong>, <strong>NtierMvc.Model</strong>, and <strong>NtierMvc.BusinessLogic</strong> as shown in the below figure.</p>
+<p>Notice that we need not to add a reference to the <strong>NtierMvc.DataAccess</strong> library, as we referenced the business logic layer instead.</p>
+<p><img id="184787" src="description/Fig-16.jpg" alt="" width="700" height="350"></p>
+<p>Now, from within the <strong>Solution Explorer</strong> right-click on the <strong>
+Controllers</strong> folder and select <strong>Add</strong> -&gt; <strong>Controller</strong>. The Add Scaffold form appears. Select
+<strong>MVC 5 Controller with read/write actions</strong> choice and click the <strong>
+Add</strong> button as shown in the below figure.</p>
+<p><img id="184788" src="description/Fig-17.jpg" alt="" width="868" height="449"></p>
+<p>Then, in the Add Controller form type <strong>EmployeesController</strong>, as shown in the below figure</p>
+<p><img id="184789" src="description/Fig-18.jpg" alt="" width="600" height="127"></p>
+<p>Now, add reference to the namespaces <strong>NtierMvc.BusinessLogic</strong>, <strong>
+NtierMvc.Common</strong>, and <strong>NtierMvc.Model</strong> in the using section of the
+<strong>EmployeesController</strong> class. Then, add the following code methods to the class.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private LoggingHandler _loggingHandler;
+
+public EmployeesController()
+{
+    _loggingHandler = new LoggingHandler();
+}
+
+protected override void Dispose(bool disposing)
+{
+    if (disposing)
+    {
+        if (_loggingHandler != null)
+        {
+            _loggingHandler.Dispose();
+            _loggingHandler = null;
+        }
+    }
+
+    base.Dispose(disposing);
+}
+
+#region Private Methods
+
+private List&lt;EmployeesEntity&gt; ListAllEmployees()
+{
+    try
+    {
+        using (var employees = new EmployeesBusiness())
+        {
+            return employees.SelectAllEmployees();
+        }
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+    }
+    return null;
+}
+
+private EmployeesEntity SelectEmployeeById(int id)
+{
+    try
+    {
+        using (var employees = new EmployeesBusiness())
+        {
+            return employees.SelectEmployeeById(id);
+        }
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+    }
+    return null;
+}
+
+private void InsertEmployee(int id, string name, int age, DateTime? hiringDate, decimal grossSalary)
+{
+    try
+    {
+        using (var employees = new EmployeesBusiness())
+        {
+            var entity = new EmployeesEntity();
+            entity.Id = id;
+            entity.Name = name;
+            entity.Age = age;
+            entity.HiringDate = hiringDate;
+            entity.GrossSalary = grossSalary;
+            var opSuccessful = employees.InsertEmployee(entity);
+        }
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+    }
+}
+
+private void UpdateEmployee(int id, string name, int age, DateTime? hiringDate, decimal grossSalary)
+{
+    try
+    {
+        using (var employees = new EmployeesBusiness())
+        {
+            var entity = new EmployeesEntity();
+            entity.Id = id;
+            entity.Name = name;
+            entity.Age = age;
+            entity.HiringDate = hiringDate;
+            entity.GrossSalary = grossSalary;
+            var opSuccessful = employees.UpdateEmployee(entity);
+        }
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+    }
+}
+
+private void DeleteEmployee(int id)
+{
+    try
+    {
+        using (var employees = new EmployeesBusiness())
+        {
+            var opSuccessful = employees.DeleteEmployeeById(id);
+        }
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+    }
+}
+
+#endregion
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">private</span>&nbsp;LoggingHandler&nbsp;_loggingHandler;&nbsp;
+&nbsp;
+<span class="cs__keyword">public</span>&nbsp;EmployeesController()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;LoggingHandler();&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">protected</span><span class="cs__keyword">override</span><span class="cs__keyword">void</span>&nbsp;Dispose(<span class="cs__keyword">bool</span>&nbsp;disposing)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(disposing)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(_loggingHandler&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.Dispose();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler&nbsp;=&nbsp;<span class="cs__keyword">null</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">base</span>.Dispose(disposing);&nbsp;
+}<span class="cs__preproc">&nbsp;
+&nbsp;
+#region&nbsp;Private&nbsp;Methods</span><span class="cs__keyword">private</span>&nbsp;List&lt;EmployeesEntity&gt;&nbsp;ListAllEmployees()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;employees&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesBusiness())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;employees.SelectAllEmployees();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">null</span>;&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">private</span>&nbsp;EmployeesEntity&nbsp;SelectEmployeeById(<span class="cs__keyword">int</span>&nbsp;id)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;employees&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesBusiness())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;employees.SelectEmployeeById(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">null</span>;&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;InsertEmployee(<span class="cs__keyword">int</span>&nbsp;id,&nbsp;<span class="cs__keyword">string</span>&nbsp;name,&nbsp;<span class="cs__keyword">int</span>&nbsp;age,&nbsp;DateTime?&nbsp;hiringDate,&nbsp;<span class="cs__keyword">decimal</span>&nbsp;grossSalary)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;employees&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesBusiness())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;entity&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesEntity();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Id&nbsp;=&nbsp;id;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Name&nbsp;=&nbsp;name;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Age&nbsp;=&nbsp;age;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.HiringDate&nbsp;=&nbsp;hiringDate;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.GrossSalary&nbsp;=&nbsp;grossSalary;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;opSuccessful&nbsp;=&nbsp;employees.InsertEmployee(entity);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;UpdateEmployee(<span class="cs__keyword">int</span>&nbsp;id,&nbsp;<span class="cs__keyword">string</span>&nbsp;name,&nbsp;<span class="cs__keyword">int</span>&nbsp;age,&nbsp;DateTime?&nbsp;hiringDate,&nbsp;<span class="cs__keyword">decimal</span>&nbsp;grossSalary)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;employees&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesBusiness())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;entity&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesEntity();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Id&nbsp;=&nbsp;id;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Name&nbsp;=&nbsp;name;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.Age&nbsp;=&nbsp;age;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.HiringDate&nbsp;=&nbsp;hiringDate;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity.GrossSalary&nbsp;=&nbsp;grossSalary;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;opSuccessful&nbsp;=&nbsp;employees.UpdateEmployee(entity);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;DeleteEmployee(<span class="cs__keyword">int</span>&nbsp;id)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;employees&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmployeesBusiness())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;opSuccessful&nbsp;=&nbsp;employees.DeleteEmployeeById(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}<span class="cs__preproc">&nbsp;
+&nbsp;
+#endregion</span></pre>
+</div>
+</div>
+</div>
+<p>Then, add the following <strong>ListAll()</strong> action method</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public ActionResult ListAll()
+{
+    try
+    {
+        var employees = from e in ListAllEmployees()
+                        orderby e.Id
+                        select e;
+        return View(employees);
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+        ViewBag.Message = Server.HtmlEncode(ex.Message);
+        return View(&quot;Error&quot;);
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;ActionResult&nbsp;ListAll()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;employees&nbsp;=&nbsp;from&nbsp;e&nbsp;<span class="cs__keyword">in</span>&nbsp;ListAllEmployees()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderby&nbsp;e.Id&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select&nbsp;e;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(employees);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ViewBag.Message&nbsp;=&nbsp;Server.HtmlEncode(ex.Message);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(<span class="cs__string">&quot;Error&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Now, it is time to add a view showing a list of all <strong>Employees</strong>. Right-click from within the
+<strong>ListAll()</strong> method and select <strong>Add View</strong> menu item to show the following form</p>
+<p><img id="184790" src="description/Fig-19.jpg" alt="" width="600" height="335"></p>
+<p>Modify the content of the <span style="color:#333399">ListAll.cshtml</span> file with the following
+<strong>Razor</strong> html</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>HTML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">html</span>
+<pre class="hidden">@model IEnumerable&lt;NtierMvc.Model.EmployeesEntity&gt;
+
+@{
+    ViewBag.Title = &quot;All Employees&quot;;
+}
+
+&lt;h2&gt;@ViewBag.Title&lt;/h2&gt;
+&lt;p&gt;
+    @Html.ActionLink(&quot;Create New&quot;, &quot;Create&quot;)
+&lt;/p&gt;
+&lt;table class=&quot;table&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;
+            @Html.Encode(&quot;Employee Name&quot;)
+        &lt;/th&gt;
+        &lt;th&gt;
+            @Html.Encode(&quot;Age&quot;)
+        &lt;/th&gt;
+        &lt;th&gt;
+            @Html.Encode(&quot;Hire Date&quot;)
+        &lt;/th&gt;
+        &lt;th&gt;
+            @Html.Encode(&quot;Gross Salary&quot;)
+        &lt;/th&gt;
+        &lt;th&gt;
+            @Html.Encode(&quot;Net Salary&quot;)
+        &lt;/th&gt;
+        &lt;th&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+
+@foreach (var item in Model) {
+    &lt;tr&gt;
+        &lt;td&gt;
+            @Html.DisplayFor(modelItem =&gt; item.Name)
+        &lt;/td&gt;
+        &lt;td&gt;
+            @Html.DisplayFor(modelItem =&gt; item.Age)
+        &lt;/td&gt;
+        &lt;td&gt;
+            @Html.DisplayFor(modelItem =&gt; item.HiringDate)
+        &lt;/td&gt;
+        &lt;td&gt;
+            @Html.DisplayFor(modelItem =&gt; item.GrossSalary)
+        &lt;/td&gt;
+        &lt;td&gt;
+            @Html.DisplayFor(modelItem =&gt; item.NetSalary)
+        &lt;/td&gt;
+        &lt;td&gt;
+            @Html.ActionLink(&quot;Edit&quot;, &quot;Edit&quot;, new { id=item.Id }) |
+            @Html.ActionLink(&quot;Delete&quot;, &quot;Delete&quot;, new { id=item.Id })
+        &lt;/td&gt;
+    &lt;/tr&gt;
+}
+&lt;/table&gt;
+</pre>
+<div class="preview">
+<pre class="html">@model&nbsp;IEnumerable<span class="html__tag_start">&lt;NtierMvc</span>.Model.EmployeesEntity<span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;
+@{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ViewBag.Title&nbsp;=&nbsp;&quot;All&nbsp;Employees&quot;;&nbsp;
+}&nbsp;
+&nbsp;
+<span class="html__tag_start">&lt;h2</span><span class="html__tag_start">&gt;@</span>ViewBag.Title<span class="html__tag_end">&lt;/h2&gt;</span>&nbsp;
+<span class="html__tag_start">&lt;p</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;@Html.ActionLink(&quot;Create&nbsp;New&quot;,&nbsp;&quot;Create&quot;)&nbsp;
+<span class="html__tag_end">&lt;/p&gt;</span>&nbsp;
+<span class="html__tag_start">&lt;table</span>&nbsp;<span class="html__attr_name">class</span>=<span class="html__attr_value">&quot;table&quot;</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;tr</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;th</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.Encode(&quot;Employee&nbsp;Name&quot;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;th</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.Encode(&quot;Age&quot;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;th</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.Encode(&quot;Hire&nbsp;Date&quot;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;th</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.Encode(&quot;Gross&nbsp;Salary&quot;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;th</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.Encode(&quot;Net&nbsp;Salary&quot;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;th</span><span class="html__tag_start">&gt;</span><span class="html__tag_end">&lt;/th&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/tr&gt;</span>&nbsp;
+&nbsp;
+@foreach&nbsp;(var&nbsp;item&nbsp;in&nbsp;Model)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;tr</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;td</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.DisplayFor(modelItem&nbsp;=&gt;&nbsp;item.Name)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;td</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.DisplayFor(modelItem&nbsp;=&gt;&nbsp;item.Age)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;td</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.DisplayFor(modelItem&nbsp;=&gt;&nbsp;item.HiringDate)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;td</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.DisplayFor(modelItem&nbsp;=&gt;&nbsp;item.GrossSalary)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;td</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.DisplayFor(modelItem&nbsp;=&gt;&nbsp;item.NetSalary)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;td</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.ActionLink(&quot;Edit&quot;,&nbsp;&quot;Edit&quot;,&nbsp;new&nbsp;{&nbsp;id=item.Id&nbsp;})&nbsp;|&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.ActionLink(&quot;Delete&quot;,&nbsp;&quot;Delete&quot;,&nbsp;new&nbsp;{&nbsp;id=item.Id&nbsp;})&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/td&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/tr&gt;</span>&nbsp;
+}&nbsp;
+<span class="html__tag_end">&lt;/table&gt;</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Now, let us test the result of this method in browser. Well, it works as expected and it looks like the following. Notice how the
+<span style="color:#333399">Net Salary</span> values differ from one <span style="color:#333399">
+Gross Salary</span> to another.</p>
+<p><img id="184792" src="description/Fig-20.jpg" alt=""></p>
+<p>Modify the <strong>Create(FormCollection collection)</strong> method to be as follows</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">// POST: Employees/Create
+[HttpPost]
+[ValidateAntiForgeryToken]
+public ActionResult Create(FormCollection collection)
+{
+    if (!ModelState.IsValid)
+    {
+        return View();
+    }
+
+    try
+    {
+        InsertEmployee(int.Parse(collection[&quot;Id&quot;]),
+                        collection[&quot;Name&quot;],
+                        int.Parse(collection[&quot;Age&quot;]),
+                        collection[&quot;HiringDate&quot;].Trim().Length == 0
+                        ? (DateTime?)null
+                        : DateTime.ParseExact(collection[&quot;HiringDate&quot;], &quot;dd/MM/yyyy&quot;, CultureInfo.InvariantCulture, DateTimeStyles.None),
+                        decimal.Parse(collection[&quot;GrossSalary&quot;]));
+
+        return RedirectToAction(&quot;ListAll&quot;);
+    }
+    catch (Exception ex)
+    {
+        //Log exception error
+        _loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex), true);
+        ViewBag.Message = Server.HtmlEncode(ex.Message);
+        return View(&quot;Error&quot;);
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//&nbsp;POST:&nbsp;Employees/Create</span>&nbsp;
+[HttpPost]&nbsp;
+[ValidateAntiForgeryToken]&nbsp;
+<span class="cs__keyword">public</span>&nbsp;ActionResult&nbsp;Create(FormCollection&nbsp;collection)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(!ModelState.IsValid)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InsertEmployee(<span class="cs__keyword">int</span>.Parse(collection[<span class="cs__string">&quot;Id&quot;</span>]),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;collection[<span class="cs__string">&quot;Name&quot;</span>],&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>.Parse(collection[<span class="cs__string">&quot;Age&quot;</span>]),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;collection[<span class="cs__string">&quot;HiringDate&quot;</span>].Trim().Length&nbsp;==&nbsp;<span class="cs__number">0</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;(DateTime?)<span class="cs__keyword">null</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;DateTime.ParseExact(collection[<span class="cs__string">&quot;HiringDate&quot;</span>],&nbsp;<span class="cs__string">&quot;dd/MM/yyyy&quot;</span>,&nbsp;CultureInfo.InvariantCulture,&nbsp;DateTimeStyles.None),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">decimal</span>.Parse(collection[<span class="cs__string">&quot;GrossSalary&quot;</span>]));&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;RedirectToAction(<span class="cs__string">&quot;ListAll&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Log&nbsp;exception&nbsp;error</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_loggingHandler.LogEntry(ExceptionHandler.GetExceptionMessageFormatted(ex),&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ViewBag.Message&nbsp;=&nbsp;Server.HtmlEncode(ex.Message);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(<span class="cs__string">&quot;Error&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Right-click from within the <strong>Create(FormCollection collection)</strong> method and select
+<strong>Add View</strong> menu item to show the following form</p>
+<p><img id="184793" src="description/Fig-21.jpg" alt="" width="600" height="335"></p>
+<p>Using the same concept, we modify the <span style="color:#333399">Create.cshtml</span> file with our custom
+<strong>Razor</strong> html. Once finished, we test the <span style="color:#333399">
+Create</span> method and test the validations that we have set in <strong>EmployeesEntity</strong> model class through
+<strong>DataAnnotation</strong>.</p>
+<p>The following screen shot represents the form validation in action.</p>
+<p><img id="184794" src="description/Fig-22.jpg" alt="" width="757" height="438"></p>
+<p>And so on, we continue modifying our Controller methods and add necessary Views to it. Please refer back to the attached solution source-code sample and review the logic of this ASP.NET MVC web app and its methods.</p>
+<p><span style="font-size:20px; font-weight:bold">Migrating ASP.NET Web Forms app to ASP.NET MVC</span></p>
+<p>Finally, can an ASP.NET Web Forms application be converted or migrated into an ASP.NET MVC? The answer is
+<strong>YES</strong>. We need to convert the Master Page to Layout, all ASPX files to cshtml files with Razor syntax, which imply that ASP:TextBox is equivelant to @Html.TextBox and asp:DropDownList is equivalent to @Html.DropDownList, etc.</p>
+<p><span style="font-size:20px; font-weight:bold">Conclusion</span></p>
+<p>This article showed that we are capable to apply <strong>N-Tier</strong> deployment architecture style on ASP.NET MVC web app. I hope this article has helped you in any manner or at least added some knowledge to your development concepts.</p>
+<h1>More Information</h1>
+<p><em>The complete source code and libraries of this article can be found on my account on GitHub at
+<a title="NtierMvc" href="https://code.msdn.microsoft.com/Applying-N-Tier-Deployment-56b6210c/https://github.com/khamid70/NtierMvc">NtierMvc</a> <br>
+</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

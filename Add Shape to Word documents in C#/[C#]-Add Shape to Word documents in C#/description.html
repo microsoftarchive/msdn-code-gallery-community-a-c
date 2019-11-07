@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=14E12FBA75D408888932008A1DC55284" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=1EF58BB40B669B6648C985D72AE79201" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Add Shape to Word documents in C#</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Add Shape to Word documents in C#</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Visual C#.NET
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Add Shape to Word documents in C#
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">12/10/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Add-Shape-to-Word-1418337b">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h2>Introduction</h2>
+<p>This sample shows how to add shape to word documents in C# via a .NET word library-Spire.Doc. Through the code, you'll get clear information about adding shape to word documents in C#.&nbsp;</p>
+<p>Spire.Doc for .NET&nbsp;is a professional Word .NET library which enables developers to&nbsp;create, read, write, convert and&nbsp;print Word document files&nbsp;on any .NET( C#, VB.NET, ASP.NET) platform. Using Spire.Doc, you also can add shape to your
+ word document in C#.</p>
+<p><span>Below is the code snippet:</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">编辑脚本</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">static void Main(string[] args)
+        {
+            Document doc = new Document();
+            Section sec = doc.AddSection();
+            Paragraph para1 = sec.AddParagraph();
+
+            ShapeObject shape1 = para1.AppendShape(50, 50, ShapeType.Donut);
+            ShapeObject shape2 = para1.AppendShape(50, 50, ShapeType.Cube);
+            shape2.Left = 100;
+            ShapeObject Shape3 = para1.AppendShape(50, 50, ShapeType.Diamond);
+            Shape3.Left = 200;
+            ShapeObject shape4 = para1.AppendShape(50, 50, ShapeType.SmileyFace);
+            shape4.Top = 100;
+            ShapeObject shape5 = para1.AppendShape(50, 50, ShapeType.Moon);
+            shape5.Top = 100;
+            shape5.Left = 100;
+            ShapeObject Shape6 = para1.AppendShape(30, 50, ShapeType.LeftArrow);
+            Shape6.Top = 100;
+            Shape6.Left = 200;
+            
+            doc.SaveToFile(&quot;AddShape.docx&quot;, FileFormat.Docx);
+            <a class="libraryLink" href="https://code.msdn.microsoft.com/Add-Shape-to-Word-1418337b/https://code.msdn.microsoft.com/Add-Shape-to-Word-1418337b/https://msdn.microsoft.com/en-US/library/System.Diagnostics.Process.Start.aspx"  title="Auto generated link to System.Diagnostics.Process.Start">System.Diagnostics.Process.Start</a>(&quot;AddShape.docx&quot;);
+        }</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Main(<span class="cs__keyword">string</span>[]&nbsp;args)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document&nbsp;doc&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Document();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section&nbsp;sec&nbsp;=&nbsp;doc.AddSection();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paragraph&nbsp;para1&nbsp;=&nbsp;sec.AddParagraph();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShapeObject&nbsp;shape1&nbsp;=&nbsp;para1.AppendShape(<span class="cs__number">50</span>,&nbsp;<span class="cs__number">50</span>,&nbsp;ShapeType.Donut);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShapeObject&nbsp;shape2&nbsp;=&nbsp;para1.AppendShape(<span class="cs__number">50</span>,&nbsp;<span class="cs__number">50</span>,&nbsp;ShapeType.Cube);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape2.Left&nbsp;=&nbsp;<span class="cs__number">100</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShapeObject&nbsp;Shape3&nbsp;=&nbsp;para1.AppendShape(<span class="cs__number">50</span>,&nbsp;<span class="cs__number">50</span>,&nbsp;ShapeType.Diamond);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shape3.Left&nbsp;=&nbsp;<span class="cs__number">200</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShapeObject&nbsp;shape4&nbsp;=&nbsp;para1.AppendShape(<span class="cs__number">50</span>,&nbsp;<span class="cs__number">50</span>,&nbsp;ShapeType.SmileyFace);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape4.Top&nbsp;=&nbsp;<span class="cs__number">100</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShapeObject&nbsp;shape5&nbsp;=&nbsp;para1.AppendShape(<span class="cs__number">50</span>,&nbsp;<span class="cs__number">50</span>,&nbsp;ShapeType.Moon);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape5.Top&nbsp;=&nbsp;<span class="cs__number">100</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape5.Left&nbsp;=&nbsp;<span class="cs__number">100</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShapeObject&nbsp;Shape6&nbsp;=&nbsp;para1.AppendShape(<span class="cs__number">30</span>,&nbsp;<span class="cs__number">50</span>,&nbsp;ShapeType.LeftArrow);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shape6.Top&nbsp;=&nbsp;<span class="cs__number">100</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shape6.Left&nbsp;=&nbsp;<span class="cs__number">200</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doc.SaveToFile(<span class="cs__string">&quot;AddShape.docx&quot;</span>,&nbsp;FileFormat.Docx);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Add-Shape-to-Word-1418337b/https://code.msdn.microsoft.com/Add-Shape-to-Word-1418337b/https://msdn.microsoft.com/en-US/library/System.Diagnostics.Process.Start.aspx"  title="Auto generated link to System.Diagnostics.Process.Start">System.Diagnostics.Process.Start</a>(<span class="cs__string">&quot;AddShape.docx&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode" style="display:inline!important"><em style="font-size:10px">As an independent Word .NET component, Spire.Doc for .NET doesn't need Microsoft Word to be installed on the machine.</em></div>
+<p>Using Spire.Doc, developers can&nbsp;export word documents to other formats like PDF,&nbsp;XML,&nbsp;RTF,&nbsp;TXT,&nbsp;XPS,&nbsp;EPUB,&nbsp;EMF,&nbsp;and HTML. Other functions like&nbsp;<span>Mail merge, security, format (font, paragraph and page settings),
+ objects (text, image, hyperlink, comment, table, bookmark, header/footer, footnote/endnote etc. are supported as well.</span></p>
+<p>Spire.Doc supports Microsoft Word 97-2003,&nbsp;Microsoft Word&nbsp;2007,&nbsp;Microsoft Word&nbsp;2010,&nbsp;Microsoft Word&nbsp;2013,&nbsp;and C #, VB.NET, ASP.NET and ASP.NET MVC. In addition,&nbsp;Spire.Doc (version 5.5.184) starts to support WordML
+ and WordXML.</p>
+<p><strong><em>How to Download and Install Spire.Doc</em></strong></p>
+<p>Download&nbsp;<a href="http://www.e-iceblue.com/Download/download-word-for-net-now.html">Spire.Doc
+</a>(version 5.5.184 for this sample)&nbsp;here and&nbsp;install it to the specified path on your system.&nbsp;There are several folders, which save dlls for different .NET Framework versions under Bin directory. After creating a project, right click project
+ name &rarr; Add Reference &rarr; Browse &rarr; Spire.Doc folder &rarr; Bin,&nbsp;choose the corresponding dll according to the Framework used by your project,&nbsp;and then add it to your project as reference.</p>
+<p>Welcome to download Spire.Doc to have a free trial.</p>
+<p><strong>Related Links:</strong></p>
+<p>Website:&nbsp;<a href="http://www.e-iceblue.com/">http://www.e-iceblue.com/</a></p>
+<p>Product Home:&nbsp;<a href="http://www.e-iceblue.com/Introduce/word-for-net-introduce.html">http://www.e-iceblue.com/Introduce/word-for-net-introduce.html</a></p>
+<p>Download:&nbsp;<a href="http://www.e-iceblue.com/Download/download-word-for-net-now.html">http://www.e-iceblue.com/Download/download-word-for-net-now.html</a></p>
+<p>Forum:&nbsp;<a href="http://www.e-iceblue.com/forum/">http://www.e-iceblue.com/forum/</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+01/16/2015 10:56 Crunched tallies s=0 e=0
+01/16/2015 11:46 Crunched tallies s=1 e=1
+01/19/2015 11:05 Crunched tallies s=1 e=1
+01/21/2015 12:53 Crunched tallies s=10 e=10

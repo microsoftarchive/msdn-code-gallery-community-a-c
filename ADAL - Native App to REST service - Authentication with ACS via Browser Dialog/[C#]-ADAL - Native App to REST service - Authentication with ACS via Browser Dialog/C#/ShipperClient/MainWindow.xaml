@@ -1,0 +1,14 @@
+﻿<Window x:Class="ShipperClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shipper Client" Height="435" Width="450" 
+        ResizeMode="NoResize" Background="WhiteSmoke"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <StackPanel>
+            <Label Content="Shipper Client" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Margin="10,10,0,0" />
+            <Frame Name="mainFrame" NavigationUIVisibility="Hidden" Focusable="False" />
+        </StackPanel>
+    </Grid>
+</Window>

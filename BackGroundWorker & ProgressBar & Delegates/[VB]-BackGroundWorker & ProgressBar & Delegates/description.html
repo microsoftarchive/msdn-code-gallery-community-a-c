@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:Banner,2:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Shared/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;hashKey=43176693215A318AD0042E0718980CBA" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>BackGroundWorker &amp; ProgressBar &amp; Delegates</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>BackGroundWorker &amp; ProgressBar &amp; Delegates</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Tecnolog&#237;as">Tecnolog&#237;as</label>
+                        <div id="Tecnolog&#237;as">
+                            Visual Basic .NET, VB.Net
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Temas">Temas</label>
+                        <div id="Temas">
+                            threading, Background thread
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">es-ES</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">&#218;ltima actualizaci&#243;n</label>
+                    <div id="LastUpdated">02/06/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">Licencia</label>
+                    <div id="License">
+                        <a href="license.rtf">Licencia de Apache, versi&#243;n 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/BackGroundWorker-25598fff">Vea este ejemplo en l&#237;nea</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copiar c&#243;digo';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>En este ejemplo abordo uno de los principales problemas que nos podemos encontrar al tratar de copiar un archivo pesado, enviar un correo con documentos adjuntos, carga de datos de una consulta sql compleja, entre otras, y es la congelaci&oacute;n de
+ la aplicaci&oacute;n mientras se realiza un proceso, dando una mala imagen de la aplicaci&oacute;n cuando realmente es eficiente pero realmente a qui&eacute;n no le gusta que se le muestre un porcentaje del proceso, el tiempo es oro.<br>
+</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>No hay requerimientos especiales para trabajar con el proyecto<br>
+</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>El proyecto resuelve el problema de la inevitable congelaci&oacute;n de las aplicaci&oacute;nes a la hora de realizar un proceso que requiera de un tiempo en ejecutarse, copiar un archivo, enviar un correo con Attachments, una carga de datos compleja
+ entre otras funciones, gracias al control <a href="http://msdn.microsoft.com/es-es/library/c8dcext2%28v=VS.80%29.aspx" >
+BackGroundWorker</a>.</em></p>
+<p><em>Este control permite que el formulario o control ejecute operaciones de forma as&iacute;ncrona (en segundo plano).<br>
+</em></p>
+<p><em>Ya que el control BackGroundWorker est&aacute; basados en Threads, no podremos acceder a controles que pertenezcan a la UI, puesto que puede provocar una excepci&oacute;n al tratar de acceder a controles que no fueron instanciados en el propio Thread.</em></p>
+<p><em>Para poder paliar este problema en el ejemplo muestro una manera, y es mediante Delegates.</em></p>
+<p><em>Los Delegates se utilizan para implementar m&eacute;todos de devoluci&oacute;n de llamada (callbacks), esenciales para programar procesamiento as&iacute;ncrono o insertar c&oacute;digo de cliente.</em></p>
+<p>&nbsp;</p>
+<p style="text-align:center"><img src="description/BackgroundWorker01.JPG" alt=""></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar script</span>|<span class="pluginRemoveHolderLink">{#scriptcode_dlg.remove_script}</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">Public Class frmPrincipal
+
+    Private cuenta As Integer = 100
+
+    Private Sub btnIniciar_Click(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles btnIniciar.Click
+        Try
+            Me.btnIniciar.Enabled = False
+            cuenta = Me.NumericUpDown1.Value
+            Me.BackgroundWorker1.RunWorkerAsync()
+        Catch ex As Exception
+            MessageBox.Show(&quot;Excepci&oacute;n controlada: &quot; &amp; ex.Message, &quot;Error&quot;, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Delegate Sub AddNumeroDelegate(ByVal number As Integer)
+
+    Private Sub AddNumero(ByVal number As Integer)
+        If txtProgreso.InvokeRequired Then
+            txtProgreso.Invoke(New AddNumeroDelegate(AddressOf AddNumero), number)
+        Else
+            txtProgreso.AppendText(&quot;Elemento &quot; &amp; (number &#43; 1).ToString() &amp; &quot; procesandose..&quot; &#43; Environment.NewLine)
+        End If
+    End Sub
+
+    Private Sub BackgroundWorker1_DoWork(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.ComponentModel.DoWorkEventArgs.aspx"  title="Auto generated link to System.ComponentModel.DoWorkEventArgs">System.ComponentModel.DoWorkEventArgs</a>) Handles BackgroundWorker1.DoWork
+        Try
+            Dim i As Integer
+            While i &lt; cuenta
+                BackgroundWorker1.ReportProgress(100 * i / cuenta, &quot;Procesando (&quot; &amp; i &amp; &quot;/&quot; &amp; cuenta &amp; &quot;) elementos...&quot;)
+                AddNumero(i)
+                Threading.Thread.Sleep(100)
+                i &#43;= 1
+            End While
+            BackgroundWorker1.ReportProgress(100, &quot;Completado!&quot;)
+            e.Result = True
+        Catch ex As Exception
+            e.Result = False
+        End Try
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.ComponentModel.RunWorkerCompletedEventArgs.aspx"  title="Auto generated link to System.ComponentModel.RunWorkerCompletedEventArgs">System.ComponentModel.RunWorkerCompletedEventArgs</a>) Handles BackgroundWorker1.RunWorkerCompleted
+        Try
+            Me.btnIniciar.Enabled = True
+        Catch ex As Exception
+            Me.btnIniciar.Enabled = True
+            MessageBox.Show(&quot;Excepci&oacute;n controlada: &quot; &amp; ex.Message, &quot;Error&quot;, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.ComponentModel.ProgressChangedEventArgs.aspx"  title="Auto generated link to System.ComponentModel.ProgressChangedEventArgs">System.ComponentModel.ProgressChangedEventArgs</a>) Handles BackgroundWorker1.ProgressChanged
+        Try
+            ProgressBar1.Value = e.ProgressPercentage
+            lblEstado.Text = e.UserState
+        Catch ex As Exception
+            MessageBox.Show(&quot;Excepci&oacute;n controlada: &quot; &amp; ex.Message, &quot;Error&quot;, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+End Class</pre>
+<div class="preview">
+<pre id="codePreview" class="vb"><span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;frmPrincipal&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;cuenta&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Integer</span>&nbsp;=&nbsp;<span class="visualBasic__number">100</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;btnIniciar_Click(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;btnIniciar.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.btnIniciar.Enabled&nbsp;=&nbsp;<span class="visualBasic__keyword">False</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cuenta&nbsp;=&nbsp;<span class="visualBasic__keyword">Me</span>.NumericUpDown1.Value&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.BackgroundWorker1.RunWorkerAsync()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Catch</span>&nbsp;ex&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="visualBasic__string">&quot;Excepci&oacute;n&nbsp;controlada:&nbsp;&quot;</span>&nbsp;&amp;&nbsp;ex.Message,&nbsp;<span class="visualBasic__string">&quot;Error&quot;</span>,&nbsp;MessageBoxButtons.OK,&nbsp;MessageBoxIcon.<span class="visualBasic__keyword">Error</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Delegate</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;AddNumeroDelegate(<span class="visualBasic__keyword">ByVal</span>&nbsp;number&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Integer</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;AddNumero(<span class="visualBasic__keyword">ByVal</span>&nbsp;number&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Integer</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;txtProgreso.InvokeRequired&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtProgreso.Invoke(<span class="visualBasic__keyword">New</span>&nbsp;AddNumeroDelegate(<span class="visualBasic__keyword">AddressOf</span>&nbsp;AddNumero),&nbsp;number)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtProgreso.AppendText(<span class="visualBasic__string">&quot;Elemento&nbsp;&quot;</span>&nbsp;&amp;&nbsp;(number&nbsp;&#43;&nbsp;<span class="visualBasic__number">1</span>).ToString()&nbsp;&amp;&nbsp;<span class="visualBasic__string">&quot;&nbsp;procesandose..&quot;</span>&nbsp;&#43;&nbsp;Environment.NewLine)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;BackgroundWorker1_DoWork(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.ComponentModel.DoWorkEventArgs.aspx"  title="Auto generated link to System.ComponentModel.DoWorkEventArgs">System.ComponentModel.DoWorkEventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;BackgroundWorker1.DoWork&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;i&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Integer</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">While</span>&nbsp;i&nbsp;&lt;&nbsp;cuenta&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BackgroundWorker1.ReportProgress(<span class="visualBasic__number">100</span>&nbsp;*&nbsp;i&nbsp;/&nbsp;cuenta,&nbsp;<span class="visualBasic__string">&quot;Procesando&nbsp;(&quot;</span>&nbsp;&amp;&nbsp;i&nbsp;&amp;&nbsp;<span class="visualBasic__string">&quot;/&quot;</span>&nbsp;&amp;&nbsp;cuenta&nbsp;&amp;&nbsp;<span class="visualBasic__string">&quot;)&nbsp;elementos...&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddNumero(i)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Threading.Thread.Sleep(<span class="visualBasic__number">100</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;&#43;=&nbsp;<span class="visualBasic__number">1</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">While</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BackgroundWorker1.ReportProgress(<span class="visualBasic__number">100</span>,&nbsp;<span class="visualBasic__string">&quot;Completado!&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.Result&nbsp;=&nbsp;<span class="visualBasic__keyword">True</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Catch</span>&nbsp;ex&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.Result&nbsp;=&nbsp;<span class="visualBasic__keyword">False</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;BackgroundWorker1_RunWorkerCompleted(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.ComponentModel.RunWorkerCompletedEventArgs.aspx"  title="Auto generated link to System.ComponentModel.RunWorkerCompletedEventArgs">System.ComponentModel.RunWorkerCompletedEventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;BackgroundWorker1.RunWorkerCompleted&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.btnIniciar.Enabled&nbsp;=&nbsp;<span class="visualBasic__keyword">True</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Catch</span>&nbsp;ex&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.btnIniciar.Enabled&nbsp;=&nbsp;<span class="visualBasic__keyword">True</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="visualBasic__string">&quot;Excepci&oacute;n&nbsp;controlada:&nbsp;&quot;</span>&nbsp;&amp;&nbsp;ex.Message,&nbsp;<span class="visualBasic__string">&quot;Error&quot;</span>,&nbsp;MessageBoxButtons.OK,&nbsp;MessageBoxIcon.<span class="visualBasic__keyword">Error</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;BackgroundWorker1_ProgressChanged(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.ComponentModel.ProgressChangedEventArgs.aspx"  title="Auto generated link to System.ComponentModel.ProgressChangedEventArgs">System.ComponentModel.ProgressChangedEventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;BackgroundWorker1.ProgressChanged&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProgressBar1.Value&nbsp;=&nbsp;e.ProgressPercentage&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lblEstado.Text&nbsp;=&nbsp;e.UserState&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Catch</span>&nbsp;ex&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="visualBasic__string">&quot;Excepci&oacute;n&nbsp;controlada:&nbsp;&quot;</span>&nbsp;&amp;&nbsp;ex.Message,&nbsp;<span class="visualBasic__string">&quot;Error&quot;</span>,&nbsp;MessageBoxButtons.OK,&nbsp;MessageBoxIcon.<span class="visualBasic__keyword">Error</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Class</span></pre>
+</div>
+</div>
+</div>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li>Form1.vb </li></ul>
+<h1>More Information</h1>
+<p><em>No hay informaci&oacute;n adicional.<br>
+</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

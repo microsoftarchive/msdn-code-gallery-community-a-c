@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<LocationCategories>
+  <LastUsedID>3</LastUsedID>
+  <LocationCategory locationCategoryID="1" locationCategoryName="default" root="" />
+  <LocationCategory locationCategoryID="2" locationCategoryName="Products" root="" />
+  <LocationCategory locationCategoryID="3" locationCategoryName="Community" root="" />
+</LocationCategories>

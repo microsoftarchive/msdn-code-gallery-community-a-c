@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "RequiredIfSample";
+}
+
+@model CustomAnnotationsWeb.Models.RequiredIfModel
+
+<h2>RequiredIf validation exsample</h2>
+
+<p>If age is under 18, then guardian name is required.</p>
+
+@using (Html.BeginForm("RequiredIfSample", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+
+    <table>
+        <tr>
+            <td>Age:</td>
+            <td>@Html.DropDownListFor(x => x.Age, new SelectList(Enumerable.Range(0, 121)))</td>
+        </tr>
+        <tr>
+            <td>Guardian:</td>
+            <td>@Html.TextBoxFor(x => x.GuardianName)</td>
+        </tr>
+    </table> 
+    
+    <input type="submit" value="Submit" />
+}

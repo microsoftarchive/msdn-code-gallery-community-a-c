@@ -1,0 +1,79 @@
+﻿body
+{
+    font-family:Segoe UI,Arial,Helvetica,Sans-Serif;
+    background-color:#333;
+}
+      
+section
+{
+    position:relative;
+    padding:10px;
+    width:250px;
+    border:5px solid #ccc;
+    background-color:#fff;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:25px;
+}
+      
+section a
+{
+    font-size:.7em;
+}
+      
+section a, section a:link, section a:hover, section a:visited,
+section a:active
+{
+    color:#999;
+    text-decoration:none;
+}
+      
+input,textarea
+{
+    font-family:Segoe UI,Arial,Helvetica,Sans-Serif;
+}
+      
+input
+{
+    display:block;
+}
+      
+#onlineStatus
+{
+    position:absolute;
+    right:0px;
+    top:0px;
+    font-size:.7em;
+    padding:6px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
+    color:#fff;
+}
+        
+#command input
+{
+    display:inline;
+}
+      
+.online
+{
+    background-color:#060;
+}
+      
+.offline
+{
+    background-color:#900;
+}
+      
+#log li
+{
+    font-size:.7em;
+}
+      
+#version
+{
+    font-size:.7em;
+    color:#ccc;
+}

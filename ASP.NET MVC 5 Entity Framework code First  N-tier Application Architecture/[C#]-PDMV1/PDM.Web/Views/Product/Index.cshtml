@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PDM.Model.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <div>
+        <a href="@Url.Action("Create", "Product")">
+            <span class="glyphicon glyphicon-link btn btn-primary">Create</span>
+        </a>
+        @*@Html.ActionLink("Create", "Create", "Product", null, null)
+        <button type="submit" value="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Create</button> |*@
+    </div>
+    <div>
+        <div class="row top-buffer">
+            <div class="bg-primary form-control-static textalign-center">List of Products </div>
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.ProductNumber)</th>
+                        <th>@Html.DisplayNameFor(model => model.SellStartDate)</th>
+                        <th>Details</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    @Html.Partial("List", Model)
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@*delete modal dialog start here*@
+<div class="modal fade" id="deleteProductModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="delete-product-container">
+        </div>
+    </div>
+</div>
+@*delete modal dialog ends here*@
+
+
+
+
+@section scripts
+{
+    <script src="~/Scripts/product.js"></script>
+}

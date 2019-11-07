@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/a3fc301a-8462-48d4-b6ca-44d6bdb74287Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Create a splash screen for a specific length of time in WPF</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Create a splash screen for a specific length of time in WPF</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            WPF
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Splash Screen
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/14/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Create-a-splash-screen-for-3b994ee2">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="font-size:small">This sample identifies how to create a splash screen easily by WPF&nbsp;</span></p>
+<p><span style="font-size:medium"><strong>Building the Sample</strong></span></p>
+<h2>Adding a basic splash screen</h2>
+<p>Adding &nbsp;a Splash Screen to a WPF application is very easy :</p>
+<p>1-Create a WPF application using Visual Studio. And add your Splash Screen image to the project</p>
+<p>2-<span>change the build action of your image Properties&nbsp;to &ldquo;SplashScreen&rdquo;.</span></p>
+<p><span><img id="95940" src="description/splash.PNG" alt="" width="256" height="249"><br>
+</span></p>
+<p>Now your splash screen will be seen before the main window of your application .</p>
+<p>---------------------------------------------------------------------------------------------------------------------------<br>
+<strong><span style="font-size:large">If you want to create a splash screen with WPF application for specific lenght of time&nbsp;</span></strong></p>
+<h3><span style="font-size:medium">Step 1 :</span></h3>
+<p>1-Create a WPF application using Visual Studio. And add your Splash Screen image to the project</p>
+<p>2-Make sure that the build action of your image Properties is set to &quot;<span>Resource</span>&quot; Not &ldquo;SplashScreen&rdquo;.</p>
+<h3>Step 2 :</h3>
+<h3><span>1-Open the App.xaml file and r<strong>emove the StartupUri tag seen below in line 4</strong>.</span>&nbsp;</h3>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;Application x:Class=&quot;Splash_Screen.App&quot;
+             xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+             StartupUri=&quot;MainWindow.xaml&quot;&gt;
+    &lt;Application.Resources&gt;
+         
+    &lt;/Application.Resources&gt;
+&lt;/Application&gt;</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;Application</span>&nbsp;x:<span class="xaml__attr_name">Class</span>=<span class="xaml__attr_value">&quot;Splash_Screen.App&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__attr_name">xmlns</span>=<span class="xaml__attr_value">&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__keyword">xmlns</span>:<span class="xaml__attr_name">x</span>=<span class="xaml__attr_value">&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__attr_name">StartupUri</span>=<span class="xaml__attr_value">&quot;MainWindow.xaml&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;Application</span>.Resources<span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Application.Resources&gt;&nbsp;
+<span class="xaml__tag_end">&lt;/Application&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><span style="font-size:small"><strong>2- <span>Open the App.xaml.cs and change it with this code :<br>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Configuration.aspx"  title="Auto generated link to System.Configuration">System.Configuration</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Diagnostics.aspx"  title="Auto generated link to System.Diagnostics">System.Diagnostics</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Threading.aspx"  title="Auto generated link to System.Threading">System.Threading</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.aspx"  title="Auto generated link to System.Windows">System.Windows</a>;
+
+namespace Splash_Screen
+{
+    /// &lt;summary&gt;
+    /// Interaction logic for App.xaml
+    /// &lt;/summary&gt;
+    public partial class App : Application
+    {
+        private const int MINIMUM_SPLASH_TIME = 1500; // Miliseconds
+        private const int SPLASH_FADE_TIME = 500;     // Miliseconds
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            // Step 1 - Load the splash screen
+            SplashScreen splash = new SplashScreen(&quot;splash.png&quot;);
+            splash.Show(false, true);
+
+            // Step 2 - Start a stop watch
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+
+            // Step 3 - Load your windows but don't show it yet
+            base.OnStartup(e);
+            MainWindow main = new MainWindow();
+
+            // Step 4 - Make sure that the splash screen lasts at least two seconds
+            timer.Stop();
+            int remainingTimeToShowSplash = MINIMUM_SPLASH_TIME - (int)timer.ElapsedMilliseconds;
+            if (remainingTimeToShowSplash &gt; 0)
+                Thread.Sleep(remainingTimeToShowSplash);
+
+            // Step 5 - show the page
+            splash.Close(TimeSpan.FromMilliseconds(SPLASH_FADE_TIME));
+            main.Show();
+        }
+    }</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Configuration.aspx"  title="Auto generated link to System.Configuration">System.Configuration</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Diagnostics.aspx"  title="Auto generated link to System.Diagnostics">System.Diagnostics</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Threading.aspx"  title="Auto generated link to System.Threading">System.Threading</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.aspx"  title="Auto generated link to System.Windows">System.Windows</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;Splash_Screen&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;Interaction&nbsp;logic&nbsp;for&nbsp;App.xaml</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;App&nbsp;:&nbsp;Application&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">const</span>&nbsp;<span class="cs__keyword">int</span>&nbsp;MINIMUM_SPLASH_TIME&nbsp;=&nbsp;<span class="cs__number">1500</span>;&nbsp;<span class="cs__com">//&nbsp;Miliseconds</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">const</span>&nbsp;<span class="cs__keyword">int</span>&nbsp;SPLASH_FADE_TIME&nbsp;=&nbsp;<span class="cs__number">500</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Miliseconds</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">protected</span>&nbsp;<span class="cs__keyword">override</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;OnStartup(StartupEventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Step&nbsp;1&nbsp;-&nbsp;Load&nbsp;the&nbsp;splash&nbsp;screen</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SplashScreen&nbsp;splash&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SplashScreen(<span class="cs__string">&quot;splash.png&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;splash.Show(<span class="cs__keyword">false</span>,&nbsp;<span class="cs__keyword">true</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Step&nbsp;2&nbsp;-&nbsp;Start&nbsp;a&nbsp;stop&nbsp;watch</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stopwatch&nbsp;timer&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Stopwatch();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timer.Start();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Step&nbsp;3&nbsp;-&nbsp;Load&nbsp;your&nbsp;windows&nbsp;but&nbsp;don't&nbsp;show&nbsp;it&nbsp;yet</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">base</span>.OnStartup(e);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MainWindow&nbsp;main&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;MainWindow();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Step&nbsp;4&nbsp;-&nbsp;Make&nbsp;sure&nbsp;that&nbsp;the&nbsp;splash&nbsp;screen&nbsp;lasts&nbsp;at&nbsp;least&nbsp;two&nbsp;seconds</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timer.Stop();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>&nbsp;remainingTimeToShowSplash&nbsp;=&nbsp;MINIMUM_SPLASH_TIME&nbsp;-&nbsp;(<span class="cs__keyword">int</span>)timer.ElapsedMilliseconds;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(remainingTimeToShowSplash&nbsp;&gt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thread.Sleep(remainingTimeToShowSplash);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Step&nbsp;5&nbsp;-&nbsp;show&nbsp;the&nbsp;page</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;splash.Close(TimeSpan.FromMilliseconds(SPLASH_FADE_TIME));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.Show();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;<strong> </strong></div>
+<div class="endscriptcode">What actually i do :<br>
+<ol>
+<li>Add two integer variables, one for the minimum time, 1.5 seconds, and one for the splash screen fade time, .5 seconds.
+</li><li>Override the OnStartup method. </li><li>Add a SplashScreen object using the image you added earlier and show it. </li><li>Add a StopWatch object to monitor the time and start timing. </li><li>Load the Window object that previously was being loaded by the StartupUri, but don&rsquo;t show the window yet.
+</li><li>Stop the StopWatch and then see how much time has elapsed. </li><li>If the time is less than 1.5 seconds sleep the remaining time. </li><li>Stop the SplashScreen. </li><li>show your window. </li></ol>
+&nbsp;</div>
+<div class="endscriptcode"><strong>
+<div class="endscriptcode" style="display:inline!important">
+<ol style="display:inline!important">
+<li style="display:inline!important">I hope to be useful :)&nbsp; </li></ol>
+</div>
+</strong></div>
+</span><br>
+&nbsp;</strong></span></div>
+<div class="endscriptcode"><span style="font-size:small"><strong><br>
+</strong></span></div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

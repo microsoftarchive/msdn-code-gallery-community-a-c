@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin setup -->
+<variables>
+	<!-- Inside variables to define elements to load -->
+	<add key="ImageTopLeft" value="resources/images/logos/vumeter.gif"/>
+	<add key="Logo" value="resources/images/logos/copyright.png"/>
+	<add key="BannerAccommodations" value=""/>
+	<add key="BannerServices" value=""/>
+	<add key="Favicon" value="resources/images/favicons/favicon.ico"/>
+  <add key="SoundOnlyAtStartSession" value="false"/>
+ 	<add key="bgsound" value="class11.mod,turrican.mod,complex.mod,necroscope.mod,sac14.mod,Skid_Row_&amp;_Fairlight_Cracktro.mod,turrican 2.3.mod,Zapped_Out.mod"/>
+ 	<add key="FolderIcons" value="48"/>
+ 	<add key="ButtonsWithIcons" value="false"/>
+  <!-- Optional variables for replace in CSS file -->
+	<add key="BackgroundColorPage" value="#000000"/>
+  <add key="BackgroundImage" value="resources/images/backgrounds/Red Wave.gif"/>
+  <add key="BackgroundSize" value="50%"/>
+  <add key="BackgroundRepeat" value="repeat"/>
+  <add key="FontColor" value="#ffffff"/>
+	<add key="FontFamily" value="Computerfont"/>
+	<add key="FontSize" value="1.2em"/>
+
+<!-- START Font personalizations (need style fonts.child.css) -->
+	<add key="Font1" value="Computerfont"/>
+	<add key="Font2" value="Moltorv2"/>
+  <add key="ButtonsFontSize" value="1.2em"/>
+	<add key="MenuFontSize" value="1.2em"/>
+	<!-- END Font personalizations -->
+
+
+  <add key="BackgroundImageBox" value="resources/images/backgrounds/Black Techno.gif"/>
+ 	<add key="BackgroundColorBox" value="#0c0c0c"/>
+  <add key="BorderColorBox" value="#bbbbbb"/>
+  <add key="BackgroundColorButton" value="#181818"/>
+
+  <add key="PointListMenu" value="resources/images/ListStyleImage/1.gif"/>
+
+  <add key="ColorLink" value="#dddddd"/>
+  <add key="ColorVisitedLink" value="#bbdddd"/>
+
+  <add key="ColorDark" value="#888888"/>
+	<add key="ColorBright" value="#111111"/>
+
+	<add key="Pattern1" value=""/>
+
+	<add key="ParRowColor" value="#151515"/><!-- Back Ground color for par box and box menu-->
+	<add key="OddRowColor" value="#050505"/><!-- Back Ground color for unpair box -->
+	<add key="QuoteColor" value="#444444"/><!-- Back Ground color for quote -->
+
+	<!-- Border of screen -->
+	<add key="BodyMargin" value="10px"/>
+	<add key="BodyBorderWidth" value="0px"/>
+	<add key="BodyMarginInside" value="0px"/>
+
+  <!-- Rounded element -->
+  <add key="RoundedButton" value="8px"/>
+  <add key="RoundedMenu" value="16px"/>
+
+  <!-- shadow -->
+  <add key="shadow" value="5px 5px 15px #000000"/>
+  
+  	<!-- Menu -->
+	<add key="BorderMenu" value="2px outset"/>
+
+
+
+</variables>

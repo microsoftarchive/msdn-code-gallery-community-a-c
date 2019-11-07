@@ -1,0 +1,8 @@
+﻿body
+{
+background:url('$BackgroundImage'), -moz-linear-gradient(top,$StartGradient 0%,$EndGradient 100%)$BackgroundColorPage;
+background:url('$BackgroundImage'), -webkit-linear-gradient(top,$StartGradient 0%,$EndGradient 100%)$BackgroundColorPage;
+background:url('$BackgroundImage'), -o-linear-gradient(top,$StartGradient 0%,$EndGradient 100%)$BackgroundColorPage;
+background:url('$BackgroundImage'), -ms-linear-gradient(top,$StartGradient 0%,$EndGradient 100%)$BackgroundColorPage;
+background:url('$BackgroundImage'), linear-gradient(top,$StartGradient 0%,$EndGradient 100%)$BackgroundColorPage;
+}

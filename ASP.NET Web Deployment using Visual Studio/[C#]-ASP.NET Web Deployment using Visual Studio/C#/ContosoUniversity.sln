@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity", "ContosoUniversity\ContosoUniversity.csproj", "{4ECCD559-E888-48C7-8F15-0F1D8EC7F71F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity.DAL", "ContosoUniversity.DAL\ContosoUniversity.DAL.csproj", "{513AA8A4-A437-45F9-8781-1EC007D51716}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ECCD559-E888-48C7-8F15-0F1D8EC7F71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECCD559-E888-48C7-8F15-0F1D8EC7F71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECCD559-E888-48C7-8F15-0F1D8EC7F71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECCD559-E888-48C7-8F15-0F1D8EC7F71F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513AA8A4-A437-45F9-8781-1EC007D51716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513AA8A4-A437-45F9-8781-1EC007D51716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513AA8A4-A437-45F9-8781-1EC007D51716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513AA8A4-A437-45F9-8781-1EC007D51716}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

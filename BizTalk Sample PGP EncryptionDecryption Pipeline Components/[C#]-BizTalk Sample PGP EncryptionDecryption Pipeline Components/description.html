@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>BizTalk: Sample: PGP Encryption/Decryption Pipeline Components</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>BizTalk: Sample: PGP Encryption/Decryption Pipeline Components</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            BizTalk Server, BizTalk Custom Pipeline Component, PGP
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Security, Encryption/Decr<wbr />yption, BizTalk, Custom Pipeline Component
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/27/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/BizTalk-Sample-PGP-ebcbc8b2">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<pre><span>A sample demonstrates the PGP Encryption/Decryption in pipelines. </span></pre>
+<h1><span style="font-size:20px; font-weight:bold">Description</span></h1>
+<pre>A sample is based on a sample by <a href="http://code.msdn.microsoft.com/BizTalk-Sample-PGP-ebcbc8b2/ http://bajwork.blogspot.com/2007/08/pgp-pipeline-component-v11.html ">Brian Jones </a> See <a href="http://209.40.205.14/wp-content/uploads/2009/07/PGP.zip">original code here</a>.</pre>
+<p>The main additions to original code:</p>
+<ul>
+<li>Single pipeline component was separated to two Encrypt<br>
+and Decrypt pipeline components. It simplifies the pipeline configurations. </li><li>Configuration parameters are stored in SSO,<br>
+which, I hope, improves security. </li><li>File names for temporary files are regenerated randomly<br>
+each time. That eliminates errors in case when temporary file names are based<br>
+on the inbound file names and pipelines are working simultaneously in several<br>
+ports. </li></ul>
+<p>To build pipeline components you have to download a BouncyCastle.Crypto.dll<br>
+assembly from <a href="http://www.bouncycastle.org/csharp">http://www.bouncycastle.org/csharp</a>.</p>
+<p>The solution includes two pairs of the PGP keys. You can<br>
+generate yours pairs using, for example, <strong><a href="http://primianotucci.com">PortablePGP</a></strong> utility</p>
+<p>Configuration includes a config file for a <a href="http://seroter.wordpress.com/2007/09/21/biztalk-sso-configuration-data-storage-tool/">
+<strong>SSO Config Store</strong> utility </a>created by Richard Seroter.&nbsp;&nbsp;</p>
+<p>The test pipeline project includes four pipelines:</p>
+<ul>
+<li>Send and Receive pipelines for Encryption </li><li>Send and Receive pipelines for Decryption. </li></ul>
+<p>To test these pipelines I&rsquo;ve created four receive ports and<br>
+four send ports. They create four test workflows:</p>
+<ul>
+<li><strong>Encryption on a Receive port:<br>
+<br>
+</strong>RP::GLD.Samples.Pipelines.Encrypt.Encode &nbsp;( <strong>PgpEncryptReceive</strong> pipeline )<br>
+&nbsp;==&gt;<br>
+SP:: GLD.Samples.Pipelines.Encrypt.PassThru<br>
+<br>
+</li><li><strong>Encryption on a Send port:<br>
+<br>
+</strong>RP::GLD.Samples.Pipelines.Encrypt.PassThru&nbsp;&nbsp;<br>
+&nbsp;==&gt;<br>
+SP:: GLD.Samples.Pipelines.Encrypt.Encode ( <strong>PgpEncryptSend</strong> pipeline )<br>
+<br>
+</li><li><strong>Decryption on a Receive port:<br>
+<br>
+</strong>RP:: GLD.Samples.Pipelines.Decrypt.Decode ( <strong>PgpDecryptReceive</strong> pipeline )<br>
+&nbsp;==&gt;<br>
+SP:: GLD.Samples.Pipelines.Decrypt.PassThru<br>
+<br>
+</li><li><strong>Decryption on a Send port:<br>
+<br>
+</strong>RP:: GLD.Samples.Pipelines.Decrypt.PassThru <br>
+&nbsp;==&gt;<br>
+SP:: GLD.Samples.Pipelines.Decrypt.Decrypt ( <strong>PgpDecryptSend</strong> pipeline )
+</li></ul>
+<p>&nbsp;</p>
+<p><strong>To test pipelines:</strong></p>
+<ul>
+<li>Use test text files in a <strong>Tests\TestData</strong> folder </li><li>To <strong>test encryption</strong>:
+<ol>
+<li>Copy test files to a <strong>Tests\Encrypt\In</strong> folder </li><li>Encrypted files are created in a <strong>Test\Encrypt\Out</strong> folder. </li></ol>
+</li><li>To <strong>test decryption</strong>:
+<ol>
+<li>Copy test encrypted files from a <strong>Test\Encrypt\Out</strong> folder to a
+<strong>Tests\Decrypt\In</strong> folder </li><li>Decrypted files are created in a <strong>Test\Decrypt\Out</strong> folder. </li></ol>
+</li></ul>
+
+</div>
+
+
+    </div>
+</body>
+</html>

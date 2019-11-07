@@ -1,0 +1,36 @@
+﻿@model IEnumerable<AWS_SQS_Kinesis.Models.MessageModel>
+
+@{
+    ViewData["Title"] = "Messages";
+}
+
+<h2>Recived Messages</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.URL)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.URL)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "DeleteMessage", new { url=item.URL,handler=item.MessageHandler })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

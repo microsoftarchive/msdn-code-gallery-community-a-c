@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.3.6.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=E792A0DF46198DF857D7013CBB95B5D2" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=E492B3BA146D9EA29CB0E2CB3827DF59" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Control Servo Motor from Windows Form Application using Serial Communication</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Control Servo Motor from Windows Form Application using Serial Communication</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows Forms, Visual Studio, arduino
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, Visual Studio, arduino, serial communication, arduino interfacing
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/30/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Control-Servo-Motor-from-a61c06ac">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><span style="font-size:small">This code sample demonstrates how to use to control servo motor attached to arduino in Windows Form Application c# using serial communication.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size:small">Download the code file:</span></p>
+<p><span style="font-size:small">Extract it</span></p>
+<p><span style="font-size:small">Open &quot;Pos&quot;&nbsp;folder<strong>&nbsp;</strong><em>&nbsp;</em> and open file &quot;<strong>pos.ino</strong>&quot; in arduino IDE. Here's the arduino code:</span></p>
+<p>&nbsp;</p>
+<div class="endscriptcode">&nbsp;
+<div></div>
+<div><span style="color:#008000; font-size:small">#include&lt;Servo.h&gt;</span><br>
+<span style="color:#008000; font-size:small">Servo base;</span></div>
+<div><span style="color:#008000; font-size:small">void setup() </span><br>
+<span style="color:#008000; font-size:small">{</span><br>
+<span style="color:#008000; font-size:small">&nbsp; base.attach(8);</span></div>
+<div><span style="color:#008000; font-size:small">&nbsp; Serial.begin(9600);&nbsp;
+</span><br>
+<span style="color:#008000; font-size:small">}</span></div>
+<div><span style="color:#008000; font-size:small">void loop()</span><br>
+<span style="color:#008000; font-size:small">{</span><br>
+<span style="color:#008000; font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int val=Serial.parseInt();</span><br>
+<span style="color:#008000; font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(val!=0)</span><br>
+<span style="color:#008000; font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br>
+<span style="color:#008000; font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; base.write(val);</span><br>
+<span style="color:#008000; font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br>
+<span style="color:#008000; font-size:small">}</span></div>
+<div></div>
+<div><span style="color:#008000; font-size:small"><br>
+</span></div>
+<div><span style="font-size:small">I have attached Servo Motor to pin number 8. You can change pin number in your code. Upload this code to arduino board. I am using arduino UNO, and my port number is COM29 and baud rate is 9600. Notice your port number and
+ baudRate becasue we will use this in our C# code.</span></div>
+<div><span style="font-size:small"><br>
+</span></div>
+</div>
+<div></div>
+<div></div>
+<div><span style="font-size:small">After you successfully uploaded your code, open
+<strong>ServoControl.sln</strong> file in visual studio. </span></div>
+<div><span style="font-size:small">In Solution Explorer open <strong>Form1.cs[Design]</strong> file you will notice that I there is a
+<strong>T</strong><strong>rackBar</strong> control on Form.</span></div>
+<div><img id="180137" width="570" height="235" src="https://i1.code.msdn.s-msft.com/control-servo-motor-from-a61c06ac/image/file/180137/1/trackbar.png" alt=""></div>
+<div><span style="font-size:small">In properties Minimum value was set to 1 and Maxmimun value was set to 180.&nbsp;</span></div>
+<div><span style="font-size:small"><br>
+</span></div>
+<div></div>
+<div><span style="font-size:small">In code file, for serial communication i have used libraray</span></div>
+<div></div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span style="font-size:small">C#</span></div>
+<div class="pluginLinkHolder"><span style="font-size:small"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></span></div>
+<span class="hidden" style="font-size:small">csharp </span>
+<pre class="hidden"><span style="font-size:small">using <a class="libraryLink" href="https://code.msdn.microsoft.com/Control-Servo-Motor-from-a61c06ac/https://code.msdn.microsoft.com/Control-Servo-Motor-from-a61c06ac/https://msdn.microsoft.com/en-US/library/System.IO.Ports.aspx"  title="Auto generated link to System.IO.Ports">System.IO.Ports</a>;</span></pre>
+<div class="preview">
+<pre class="csharp"><span style="font-size:small"><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Control-Servo-Motor-from-a61c06ac/https://code.msdn.microsoft.com/Control-Servo-Motor-from-a61c06ac/https://msdn.microsoft.com/en-US/library/System.IO.Ports.aspx"  title="Auto generated link to System.IO.Ports">System.IO.Ports</a>;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span style="font-size:small">C#</span></div>
+<div class="pluginLinkHolder"><span style="font-size:small"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></span></div>
+<span class="hidden" style="font-size:small">csharp </span>
+<pre class="hidden"><span style="font-size:small">        SerialPort port = new SerialPort();
+        
+        public Form1()
+        {
+            InitializeComponent();
+            init();
+        }
+
+        void init()
+        {
+            
+            port.PortName = &quot;COM29&quot;;
+            port.BaudRate = 9600;
+            try
+            {
+                port.Open();
+            }
+            catch { }
+        }</span></pre>
+<div class="preview">
+<pre class="js"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SerialPort&nbsp;port&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;SerialPort();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;Form1()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitializeComponent();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;init();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">void</span>&nbsp;init()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port.PortName&nbsp;=&nbsp;<span class="js__string">&quot;COM29&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port.BaudRate&nbsp;=&nbsp;<span class="js__num">9600</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port.Open();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">catch</span>&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span></span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><span style="font-size:small">&nbsp;In file <span style="color:#0000ff">
+port.PortName=&quot;COM29&quot;</span> write your port name on which arduino is connected. And also baudrate which was set to 9600 in arduino code.</span></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span style="font-size:small">Following lines of code will send value from trackbar control to arduino board</span></div>
+</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span style="font-size:small">C#</span></div>
+<div class="pluginLinkHolder"><span style="font-size:small"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></span></div>
+<span class="hidden" style="font-size:small">csharp </span>
+<pre class="hidden"><span style="font-size:small"> private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            if (port.IsOpen)
+            {
+                port.WriteLine(trackBar1.Value.ToString());
+            }
+        }</span></pre>
+<div class="preview">
+<pre class="js"><span style="font-size:small">&nbsp;private&nbsp;<span class="js__operator">void</span>&nbsp;trackBar1_Scroll(object&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(port.IsOpen)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port.WriteLine(trackBar1.Value.ToString());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span></span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+<div class="endscriptcode">&nbsp;<span style="font-size:small">Execute the code and control your servo angles with trackBar. If you have any queries you can ask in Q/A section</span></div>
+</div>
+<p>&nbsp;</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

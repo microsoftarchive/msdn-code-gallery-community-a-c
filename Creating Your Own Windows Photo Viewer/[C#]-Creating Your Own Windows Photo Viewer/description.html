@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Creating Your Own Windows Photo Viewer</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Creating Your Own Windows Photo Viewer</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows Forms, .NET Framework, Windows General
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Graphics and 3D, How to
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/28/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Creating-Your-Own-Windows-5b8c7fad">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p style="text-align:justify"><strong>Windows Photo Viewer</strong> is an image viewer developed by Microsoft that is included with the Windows 7. It was also included with Windows XP and Windows Server 2003 under the name of
+<strong>Windows Picture and Fax Viewer</strong>. It was temporarily replaced with Windows Photo Gallery in Windows Vista, but has been reinstated in Windows 7. This program succeeds Imaging for Windows.</p>
+<p style="text-align:justify">Windows Photo Viewer can show pictures, display all pictures in a folder as a slide show, reorient them in in 90&deg; increments, print them either directly or via an online print service, send them in e-mail or burn them to a
+ disc. Windows Photo Viewer supports images in BMP, JPEG, JPEG XR (formerly HD Photo), PNG, ICO and TIFF file formats.</p>
+<p style="text-align:justify">When compared to its previous version (Windows Fax and Picture Viewer), there have been several changes. The first and most noticeable change is seen in their user graphical user interfaces. The second change is their file format
+ support: Although Animated GIF files were supported in Windows Picture and Fax Viewer, they are no longer supported in Windows Photo Viewer. Starting with Windows Vista, Microsoft withdrew the support for this format from this application and left the job
+ of displaying them to Internet Explorer. Windows Picture and Fax Viewer was also capable of viewing multi-page TIFF files, (except those that employed JPEG compression) as well as annotating the TIFF files. Windows Photo Viewer, on the other hand, has added
+ support for JPEG XR file format and ICC profiles.</p>
+<p style="text-align:justify">&nbsp;</p>
+<h1 style="text-align:center"><span>The Project</span></h1>
+<h1 style="text-align:center"><span>Photo Viewer</span></h1>
+<p><em><img src="description/Main.jpg" alt="" width="539" height="388" style="display:block; margin-left:auto; margin-right:auto"><br>
+</em></p>
+<p>&nbsp;</p>
+<h1><span>I/O</span></h1>
+<p><span><em>Open And Save Image.</em><br>
+</span></p>
+<p><span style="font-size:20px; font-weight:bold">Centering Image</span></p>
+<p><em>You Will Learn How To Centering Image<br>
+</em></p>
+<p><span style="font-size:20px; font-weight:bold">Zoom Control</span></p>
+<p><em>You will learn how to Zoom In or Zoom Out Picture</em></p>
+<ul>
+<li><em>50%</em> </li><li>100% </li><li>150% </li><li>200% </li><li>250% </li><li>... </li><li>400% </li></ul>
+<p><span style="font-size:20px; font-weight:bold">Rotate And Flip Control</span></p>
+<p><em>You will learn how to Rotate And Flip The Picture</em></p>
+<p><em><img src="description/flip horizontal.jpg" alt="" width="244" height="175"><img src="description/flip vertical.jpg" alt="" width="240" height="175"></em></p>
+<ul>
+<li><em>Flip Horizontal<br>
+</em></li><li><em>Flip Vertical <br>
+</em></li><li><em>Rotate 90 - 270<br>
+</em></li></ul>
+<h1>Mask Or Unmask</h1>
+<p><em>You will learn how to Mask or Unmask a Picture.</em></p>
+<p><em><img src="description/mask blue.jpg" alt="" width="210" height="150"><img src="description/mask green.jpg" alt="" width="208" height="149"><img src="description/mask red.jpg" alt="" width="208" height="149"></em></p>
+<ul>
+<li><em>Blue Mask <br>
+</em></li><li><em>Green Mask <br>
+</em></li><li><em>Red Mask</em> </li></ul>
+<h1><span>Image Filters</span></h1>
+<p><em>You will learn about Image Filter For Your Photo Edit.</em></p>
+<p><em>&nbsp;</em><em><em>.<img src="description/Grayscale.jpg" alt="" width="337" height="242"></em></em></p>
+<ul>
+<li><em><em>Grayscale</em></em> </li><li><em>Invert</em> </li><li><em>Gamma</em> </li><li><em>Contrast</em> </li><li><em>Brightness</em> </li></ul>
+<p>&nbsp;</p>
+<h1 style="text-align:center"><span>Binary Packages For Microsoft Windows OS (All Version)</span></h1>
+<p style="text-align:center"><span><a title="Download Paint-ProV1" href="http://www.kingdomvirtual.com/Paint-Pro.zip">Paint-Pro V1</a><br>
+</span></p>
+<p>&nbsp;</p>
+<h1 style="text-align:center"><span>Free Wallpaper</span></h1>
+<p style="text-align:center"><span><img src="description/free wallpapers.jpg" alt="" width="320" height="239"><br>
+</span></p>
+<p><span><br>
+</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

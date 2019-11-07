@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=62DBC035A4A8AD76676CA11B61CB6C59" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/7f5fba33-d6b8-44c0-bf25-f1fbb71d9f3dCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=E1AC8963DF2251A819FB3B69D9505C87" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Convert Excel to XML and vice versa in C#</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Convert Excel to XML and vice versa in C#</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, Silverlight, ASP.NET, WinForms, Office Development
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Controls, Convert XML to Excel, Convert Excel to XML, Export Excel to XML, Import XML to Excel, Read Excel from XML file, Import XML data to Excel
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">7/30/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Convert-Excel-to-XML-and-8995eb98">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="font-size:small">How can we export Excel to Office Open XML and import&nbsp;Office Open XML to Excel quickly and with sound quality? The answer is what most developers desire to know. This sample will represent how to transform Excel to Office
+ Open XML and vice versa using free Spire.XLS for .NET.</span></p>
+<h1><span style="font-size:20px; font-weight:bold">Description</span></h1>
+<p><span style="font-size:small"><a href="http://www.e-iceblue.com/Introduce/free-xls-component.html#.U9iXwkAUnxc">Free Spire.XLS for .NET</a> is a professional .NET Excel component which enables developers to fast export Excel to&nbsp;Office Open XML or import&nbsp;Office
+ Open XML to Excel. The whole process of exporting Excel to&nbsp;Office Open XML in C#, VB.NET can be described as 3 simple steps:</span></p>
+<ol>
+<li><span style="font-size:small">Create a new instance of Spire.XLS.Workbook.</span>
+</li><li><span style="font-size:small">Load information from Excel file and transfer into workbook.</span>
+</li><li><span style="font-size:small">Call <strong>workbook.SaveAsXml()</strong> method to save workbook to an XML data file.</span>
+</li></ol>
+<p><span style="font-size:small">On the contrary, while importing XML file to Excel, you can achieve this by another 3 steps:</span></p>
+<ol>
+<li><span style="font-size:small">Create a new instance of Spire.XLS.Workbook.</span>
+</li><li><span style="font-size:small">Load an XML file and imports its data to workbook by calling the method &nbsp;<strong>workbook.LoadFromXml()</strong>.</span>
+</li><li><span style="font-size:small">Use <strong>workbook.SaveToFile()</strong> to save changes to the workbook to generate an new Excel file.</span>
+</li></ol>
+<p><br>
+<strong><span style="font-size:small">This method features:</span></strong></p>
+<ul>
+<li><span style="font-size:small">Microsoft Excel is not necessary on client and/or server side.</span>
+</li><li><span style="font-size:small">Export/import can be proceeding separately or synchronously.</span>
+</li></ul>
+<p><img id="121947" src="description/excelxml-0712.gif" alt=""></p>
+<h1>More Information</h1>
+<p><span style="font-size:small"><em>Free</em> Spire.XLS for .NET is a standalone Excel .NET library and does not depend on Microsoft Office Excel. It supports both for the old Excel 97-2003 format (.xls) and for the new Excel 2007 and Excel 2010 (.xlsx, .xlsm).</span></p>
+<p><span style="font-size:small"><strong>Main Functions</strong></span></p>
+<ul>
+<li><span style="font-size:small">Powerful &amp; High Quality Excel File Conversion</span>
+</li><li><span style="font-size:small">Create Excel Report from Comprehensive Workbook Designer</span>
+</li><li><span style="font-size:small">Freely operate Worksheet</span> </li><li><span style="font-size:small">Easily Manipulate cells &amp; Excel Calculation Engine at run time</span>
+</li><li><span style="font-size:small">Handle Chart, Data and other Elements</span> </li></ul>
+<p><strong><span style="font-size:small">Related links</span></strong></p>
+<p><span style="font-size:small">Website: <a href="http://www.e-iceblue.com/">http://www.e-iceblue.com/</a></span></p>
+<p><span style="font-size:small">Product Home: <a href="http://www.e-iceblue.com/Introduce/free-xls-component.html">
+Free Spire.XLS for .NET</a></span></p>
+<p><span style="font-size:small">Download: <a href="http://www.e-iceblue.com/Download/download-excel-for-net-now.html">
+Free Spire.XLS Download</a><br>
+</span></p>
+<p><span style="font-size:small">Live Demo: <a href="http://www.e-iceblue.com/Knowledgebase/Spire.XLS/Demos.html">
+Spire.XLS Demos</a><br>
+</span></p>
+<p><span style="font-size:small">Forum: <a href="http://www.e-iceblue.com/forum/spire-xls-f4.html">
+Free Spire.XLS Forum</a><br>
+</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

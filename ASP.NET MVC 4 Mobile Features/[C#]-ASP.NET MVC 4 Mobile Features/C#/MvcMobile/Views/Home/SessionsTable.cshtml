@@ -1,0 +1,27 @@
+﻿@using MvcMobile.Models
+@model IEnumerable<Session>
+
+<h2>@ViewBag.Title</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Speaker(s)</th>
+            <th>Date</th>
+            <th>Room</th>
+            <th>Tags</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var session in Model) {
+            <tr>
+                <td>@Html.ActionLink(session.Title, "SessionByCode", new { session.Code })</td>
+                <td>@Html.Partial("_SpeakersLinks", session)</td>
+                <td>@session.DateText</td>
+                <td>@session.Room</td>
+                <td>@Html.Partial("_TagsLinks", session)</td>
+            </tr>                                           
+        }
+    </tbody>
+</table>

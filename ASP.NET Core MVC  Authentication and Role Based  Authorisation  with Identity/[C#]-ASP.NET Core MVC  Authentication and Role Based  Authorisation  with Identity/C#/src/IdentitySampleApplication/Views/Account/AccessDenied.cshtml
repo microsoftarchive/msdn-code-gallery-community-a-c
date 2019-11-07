@@ -1,0 +1,30 @@
+﻿<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="top-buffer"></div>
+        <div class="panel panel-danger">
+            <div class="panel-heading">Access Denied</div>
+            <div class="panel-body">
+                <section>
+                    <h1 class="text-danger">401 ! Access Denied</h1>
+                    <br />
+                    <a href="javascript:void(0)" onClick="backAway()" class="btn btn-success">Back</a>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+@section scripts
+{
+    <script>
+        function backAway() {
+            if (history.length === 1) {
+                window.location = "http://localhost:50841/"
+            } else {
+                history.back();
+            }
+        }
+    </script>
+}

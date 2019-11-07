@@ -1,0 +1,68 @@
+﻿@model consumewebapiusingrestsharp.Models.ServerData
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>ServerData</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InitialDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InitialDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EndDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrderNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsDirty)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsDirty)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Type)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RecordIdentifier)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RecordIdentifier)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

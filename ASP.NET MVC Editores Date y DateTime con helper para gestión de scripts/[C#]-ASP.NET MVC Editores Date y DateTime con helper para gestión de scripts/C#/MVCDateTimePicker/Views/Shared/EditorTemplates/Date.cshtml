@@ -1,0 +1,20 @@
+﻿@using MVCDateTimePicker.Infrastructure
+@model DateTime
+
+@Html.AddScriptFile("datetimepicker_plugin", "~/Scripts/jquery.datetimepicker.js")
+@Html.AddScript("init_Date_Editor"
+    , @"    $(function () {
+        $('.datepicker').datetimepicker({
+            lang: 'es',
+            format: 'd/m/Y',
+            formatDate: 'd/m/Y',
+            dayOfWeekStart: 1,
+            mask: true,
+            timepicker: false
+        });
+    });")
+
+@Html.TextBox("", (Model == DateTime.MinValue ? null : Model.ToString("dd/MM/yyyy"))
+    , new { @class = "datepicker" })
+
+

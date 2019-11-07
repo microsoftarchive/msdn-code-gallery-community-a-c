@@ -1,0 +1,53 @@
+﻿@model MvcWebRole.Models.UnsubscribeVM
+
+@{
+    ViewBag.Title = "Unsubscribe";
+    Layout = null;
+}
+
+<h2>Email List Subscription Service</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="form-horizontal">
+        <h4>Unsubscribe from Mailing List</h4>
+        <hr />
+
+        @Html.HiddenFor(model => model.SubscriberGUID)
+        @Html.HiddenFor(model => model.EmailAddress)
+        @Html.HiddenFor(model => model.ListName)
+
+        @if (Model.Confirmed == null)
+        {
+            <div class="form-group">
+                <p class="control-label">
+                    Do you want to unsubscribe  @Html.DisplayFor(model => model.EmailAddress) from:  @Html.DisplayFor(model => model.ListDescription)?
+                </p>
+                <p class="control-label">
+                    <input type="submit" value="Confirm" name="action" class="btn btn-default" />
+                    &nbsp; &nbsp;
+                    <input type="submit" value="Cancel" name="action" class="btn btn-default" />
+                </p>
+            </div>
+        }
+        @if (Model.Confirmed == false)
+        {
+            <p>
+                @Html.DisplayFor(model => model.EmailAddress)  will NOT be unsubscribed from: @Html.DisplayFor(model => model.ListDescription).
+            </p>
+        }
+        @if (Model.Confirmed == true)
+        {
+            <p>
+                @Html.DisplayFor(model => model.EmailAddress)  has been unsubscribed from:  @Html.DisplayFor(model => model.ListDescription).
+            </p>
+        }
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

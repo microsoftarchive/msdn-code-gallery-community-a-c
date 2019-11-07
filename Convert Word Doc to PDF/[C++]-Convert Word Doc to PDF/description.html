@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=3A44AD9B1EA0657C0755F5E999B5CF4B" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=92B25B29A9FDE21FBE9E6B20A4C0376E" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Convert Word Doc to PDF</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Convert Word Doc to PDF</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            LEADTOOLS
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Document Conversion, Converting DOCX/DOC/HTML/R<wbr />TF to PDF/XPS/Image, HTML to SVG, SVG to PDF, HTML to SVG Converter, Convert Word to SVG, Convert PDF to SVG, DXF to SVG, DXF to PDF
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        Document Imaging SDK by LEADTOOLS
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">2/1/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1><a id="user-content-introduction" class="anchor" href="#introduction"></a>Introduction</h1>
+<p>LEAD is continuously updating and adding new features to LEADTOOLS. One feature that was rolled into Version 19 after the initial release includes enhanced
+<a href="https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842/https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842/https://www.leadtools.com/sdk/formats/svg">SVG support</a>. This enhancement allows users to load document and vector formats as SVG, which can then be handed off to other parts of LEADTOOLS such as the Document Writers. In other words, you can convert
+ from formats such as DOC, PDF, DWG, DXF, etc. to other document formats such as PDF/A, HTML, and SVG without rasterization or OCR.</p>
+<h1><a id="user-content-description" class="anchor" href="#description"></a>Description</h1>
+<p>This C/C&#43;&#43; console application project shows how to use LEADTOOLS to convert a Word DOC to document-based PDF. LEADTOOLS SDKs include flexible and time-tested imaging technology for .NET, C/C&#43;&#43;, WinRT, Objective-C, SWIFT, Java, and web development. With
+ extensive support for more than 150 file formats and more than 200 image processing functions, LEADTOOLS is the most mature and industry recognized imaging SDK available.</p>
+<h2><a id="user-content-source-files" class="anchor" href="#source-files"></a>Source Files</h2>
+<p>Once you have installed LEADTOOLS, create a folder called <code>Git</code> in the
+<code>{LEADTOOLSInstallDir}\Examples</code> folder. Extract the ZIP file contents into the
+<code>Git</code> folder. This should result in a folder structure like <code>C:\LEADTOOLS 19\Examples\GIT\ConvertPdfToTif</code></p>
+<p>The project references and output path are relative to this specific folder location. If you installed LEADTOOLS V19 in the setup's default folder, then no changes are required to run the sample.</p>
+<p>However, if you changed the default install folder, then you will need to review and update the
+<code>filePath</code> and <code>licenseFile</code> variables.</p>
+<h3><a id="user-content-maincpp" class="anchor" href="#maincpp"></a>main.cpp</h3>
+<p>First, you need to update the developer key and paths to the LEADTOOLS license, source, and target files.</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">// TODO: Update with your LEADTOOLS license information.
+swprintf_s(ltsupport::szLicPath, (L_MAXPATH) / (sizeof ltsupport::szLicPath[0]), _T(&quot;D:\\GitHub\\LEADTOOLS\\eval-license-files.lic&quot;));
+swprintf_s(ltsupport::szDevKey, (L_MAXPATH) / (sizeof ltsupport::szDevKey[0]), _T(&quot;{YourDeveloperKey}&quot;));
+
+// TODO: Also, update the paths to these files
+L_TCHAR const szSourceDocument[] = _T(&quot;D:\\GitHub\\LEADTOOLS\\press-release.doc&quot;);
+L_TCHAR const szTargetDocument[] = _T(&quot;D:\\GitHub\\LEADTOOLS\\press-release.pdf&quot;);
+L_TCHAR const szSourceVector[] = _T(&quot;D:\\GitHub\\LEADTOOLS\\random.dxf&quot;);
+L_TCHAR const szTargetVector[] = _T(&quot;D:\\GitHub\\LEADTOOLS\\random.pdf&quot;);</pre>
+<div class="preview">
+<pre class="cplusplus"><span class="cpp__com">//&nbsp;TODO:&nbsp;Update&nbsp;with&nbsp;your&nbsp;LEADTOOLS&nbsp;license&nbsp;information.</span>&nbsp;
+swprintf_s(ltsupport::szLicPath,&nbsp;(L_MAXPATH)&nbsp;/&nbsp;(<span class="cpp__keyword">sizeof</span>&nbsp;ltsupport::szLicPath[<span class="cpp__number">0</span>]),&nbsp;_T(<span class="cpp__string">&quot;D:\\GitHub\\LEADTOOLS\\eval-license-files.lic&quot;</span>));&nbsp;
+swprintf_s(ltsupport::szDevKey,&nbsp;(L_MAXPATH)&nbsp;/&nbsp;(<span class="cpp__keyword">sizeof</span>&nbsp;ltsupport::szDevKey[<span class="cpp__number">0</span>]),&nbsp;_T(<span class="cpp__string">&quot;{YourDeveloperKey}&quot;</span>));&nbsp;
+&nbsp;
+<span class="cpp__com">//&nbsp;TODO:&nbsp;Also,&nbsp;update&nbsp;the&nbsp;paths&nbsp;to&nbsp;these&nbsp;files</span>&nbsp;
+L_TCHAR&nbsp;<span class="cpp__keyword">const</span>&nbsp;szSourceDocument[]&nbsp;=&nbsp;_T(<span class="cpp__string">&quot;D:\\GitHub\\LEADTOOLS\\press-release.doc&quot;</span>);&nbsp;
+L_TCHAR&nbsp;<span class="cpp__keyword">const</span>&nbsp;szTargetDocument[]&nbsp;=&nbsp;_T(<span class="cpp__string">&quot;D:\\GitHub\\LEADTOOLS\\press-release.pdf&quot;</span>);&nbsp;
+L_TCHAR&nbsp;<span class="cpp__keyword">const</span>&nbsp;szSourceVector[]&nbsp;=&nbsp;_T(<span class="cpp__string">&quot;D:\\GitHub\\LEADTOOLS\\random.dxf&quot;</span>);&nbsp;
+L_TCHAR&nbsp;<span class="cpp__keyword">const</span>&nbsp;szTargetVector[]&nbsp;=&nbsp;_T(<span class="cpp__string">&quot;D:\\GitHub\\LEADTOOLS\\random.pdf&quot;</span>);</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<h3><a id="user-content-convert2pdfcpp" class="anchor" href="#convert2pdfcpp"></a>convert2pdf.cpp</h3>
+<p>LoadFileAsSVG() will load any supported document format as an SVG in memory.</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">BOOL LoadFileAsSvg(const L_TCHAR* sourceFile, L_UCHAR** buffer, L_UINT* bufferSize)
+{
+   L_INT nRet = ERROR_FILE_FORMAT;
+   L_BOOL canLoad = FALSE;
+   nRet = L_CanLoadSvg((L_TCHAR*)sourceFile, &amp;canLoad, NULL);
+   if (canLoad)
+   {
+      // Setup the doc options to improve the quality to print level dpi
+      RASTERIZEDOCOPTIONS docOptions = { 0 };
+      L_GetRasterizeDocOptions(&amp;docOptions, sizeof(RASTERIZEDOCOPTIONS));
+      docOptions.uXResolution = 300;
+      docOptions.uYResolution = 300;
+      L_SetRasterizeDocOptions(&amp;docOptions);
+
+      LOADSVGOPTIONS svgOptions = { 0 };
+      svgOptions.uStructSize = sizeof(LOADSVGOPTIONS);
+
+      nRet = L_LoadSvg((L_TCHAR*)sourceFile, &amp;svgOptions, NULL);
+      if (ltsupport::DisplayError(nRet, _T(&quot;L_LoadSvg&quot;)))
+         return FALSE;
+
+      nRet = L_SvgSaveDocumentMemory(svgOptions.SvgHandle, buffer, bufferSize, NULL);
+      ltsupport::DisplayError(nRet, _T(&quot;L_SvgSaveDocumentMemory&quot;));
+
+      // Free the source SVG document
+      nRet = L_SvgFreeNode(svgOptions.SvgHandle);
+      ltsupport::DisplayError(nRet, _T(&quot;L_SvgFreeNode&quot;));
+      svgOptions.SvgHandle = NULL;
+
+      return TRUE;
+   }
+   else { return FALSE; }
+}</pre>
+<div class="preview">
+<pre class="cplusplus"><span class="cpp__datatype">BOOL</span>&nbsp;LoadFileAsSvg(<span class="cpp__keyword">const</span>&nbsp;L_TCHAR*&nbsp;sourceFile,&nbsp;L_UCHAR**&nbsp;buffer,&nbsp;L_UINT*&nbsp;bufferSize)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;L_INT&nbsp;nRet&nbsp;=&nbsp;ERROR_FILE_FORMAT;&nbsp;
+&nbsp;&nbsp;&nbsp;L_BOOL&nbsp;canLoad&nbsp;=&nbsp;FALSE;&nbsp;
+&nbsp;&nbsp;&nbsp;nRet&nbsp;=&nbsp;L_CanLoadSvg((L_TCHAR*)sourceFile,&nbsp;&amp;canLoad,&nbsp;NULL);&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(canLoad)&nbsp;
+&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__com">//&nbsp;Setup&nbsp;the&nbsp;doc&nbsp;options&nbsp;to&nbsp;improve&nbsp;the&nbsp;quality&nbsp;to&nbsp;print&nbsp;level&nbsp;dpi</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RASTERIZEDOCOPTIONS&nbsp;docOptions&nbsp;=&nbsp;{&nbsp;<span class="cpp__number">0</span>&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_GetRasterizeDocOptions(&amp;docOptions,&nbsp;<span class="cpp__keyword">sizeof</span>(RASTERIZEDOCOPTIONS));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docOptions.uXResolution&nbsp;=&nbsp;<span class="cpp__number">300</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docOptions.uYResolution&nbsp;=&nbsp;<span class="cpp__number">300</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_SetRasterizeDocOptions(&amp;docOptions);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOADSVGOPTIONS&nbsp;svgOptions&nbsp;=&nbsp;{&nbsp;<span class="cpp__number">0</span>&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;svgOptions.uStructSize&nbsp;=&nbsp;<span class="cpp__keyword">sizeof</span>(LOADSVGOPTIONS);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nRet&nbsp;=&nbsp;L_LoadSvg((L_TCHAR*)sourceFile,&nbsp;&amp;svgOptions,&nbsp;NULL);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(ltsupport::DisplayError(nRet,&nbsp;_T(<span class="cpp__string">&quot;L_LoadSvg&quot;</span>)))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">return</span>&nbsp;FALSE;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nRet&nbsp;=&nbsp;L_SvgSaveDocumentMemory(svgOptions.SvgHandle,&nbsp;buffer,&nbsp;bufferSize,&nbsp;NULL);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ltsupport::DisplayError(nRet,&nbsp;_T(<span class="cpp__string">&quot;L_SvgSaveDocumentMemory&quot;</span>));&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__com">//&nbsp;Free&nbsp;the&nbsp;source&nbsp;SVG&nbsp;document</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nRet&nbsp;=&nbsp;L_SvgFreeNode(svgOptions.SvgHandle);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ltsupport::DisplayError(nRet,&nbsp;_T(<span class="cpp__string">&quot;L_SvgFreeNode&quot;</span>));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;svgOptions.SvgHandle&nbsp;=&nbsp;NULL;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">return</span>&nbsp;TRUE;&nbsp;
+&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">else</span>&nbsp;{&nbsp;<span class="cpp__keyword">return</span>&nbsp;FALSE;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>SaveAsPdf() converts the in-memory SVG to a PDF file.</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">void SaveAsPdf(const L_TCHAR* targetFile, const L_UCHAR* svgBuffer, L_UINT bufferSize)
+{
+   L_INT nRet;
+   L_SvgNodeHandle hSvgDocument;
+   nRet = L_SvgLoadDocumentMemory(svgBuffer, bufferSize, &amp;hSvgDocument, NULL);
+   if (!ltsupport::DisplayError(nRet, _T(&quot;L_SvgLoadDocumentMemory&quot;)))
+   {
+      // Check if we need to flat it
+      L_BOOL isFlat = FALSE;
+      L_SvgIsFlatDocument(hSvgDocument, &amp;isFlat);
+      if (!isFlat)
+      {
+         L_SvgNodeHandle hFlatDocHandle = NULL;
+         L_SvgFlatDocument(hSvgDocument, &amp;hFlatDocHandle, NULL);
+         L_SvgFreeNode(hSvgDocument);
+         hSvgDocument = hFlatDocHandle;
+      }
+      L_SvgBounds bounds = { 0 };
+      L_SvgGetBounds(hSvgDocument, &amp;bounds, sizeof(L_SvgBounds));
+      if (!bounds.IsValid)
+         L_SvgCalculateBounds(hSvgDocument, FALSE);
+
+      // Create the PDF from the SVG object in memory
+      CreatePdf(targetFile, hSvgDocument);
+
+      // Free memory
+      L_SvgFreeNode(hSvgDocument);
+      hSvgDocument = NULL;
+   }
+}</pre>
+<div class="preview">
+<pre class="cplusplus"><span class="cpp__keyword">void</span>&nbsp;SaveAsPdf(<span class="cpp__keyword">const</span>&nbsp;L_TCHAR*&nbsp;targetFile,&nbsp;<span class="cpp__keyword">const</span>&nbsp;L_UCHAR*&nbsp;svgBuffer,&nbsp;L_UINT&nbsp;bufferSize)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;L_INT&nbsp;nRet;&nbsp;
+&nbsp;&nbsp;&nbsp;L_SvgNodeHandle&nbsp;hSvgDocument;&nbsp;
+&nbsp;&nbsp;&nbsp;nRet&nbsp;=&nbsp;L_SvgLoadDocumentMemory(svgBuffer,&nbsp;bufferSize,&nbsp;&amp;hSvgDocument,&nbsp;NULL);&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(!ltsupport::DisplayError(nRet,&nbsp;_T(<span class="cpp__string">&quot;L_SvgLoadDocumentMemory&quot;</span>)))&nbsp;
+&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__com">//&nbsp;Check&nbsp;if&nbsp;we&nbsp;need&nbsp;to&nbsp;flat&nbsp;it</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_BOOL&nbsp;isFlat&nbsp;=&nbsp;FALSE;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_SvgIsFlatDocument(hSvgDocument,&nbsp;&amp;isFlat);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(!isFlat)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_SvgNodeHandle&nbsp;hFlatDocHandle&nbsp;=&nbsp;NULL;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_SvgFlatDocument(hSvgDocument,&nbsp;&amp;hFlatDocHandle,&nbsp;NULL);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_SvgFreeNode(hSvgDocument);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hSvgDocument&nbsp;=&nbsp;hFlatDocHandle;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_SvgBounds&nbsp;bounds&nbsp;=&nbsp;{&nbsp;<span class="cpp__number">0</span>&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_SvgGetBounds(hSvgDocument,&nbsp;&amp;bounds,&nbsp;<span class="cpp__keyword">sizeof</span>(L_SvgBounds));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(!bounds.IsValid)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_SvgCalculateBounds(hSvgDocument,&nbsp;FALSE);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__com">//&nbsp;Create&nbsp;the&nbsp;PDF&nbsp;from&nbsp;the&nbsp;SVG&nbsp;object&nbsp;in&nbsp;memory</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CreatePdf(targetFile,&nbsp;hSvgDocument);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__com">//&nbsp;Free&nbsp;memory</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L_SvgFreeNode(hSvgDocument);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hSvgDocument&nbsp;=&nbsp;NULL;&nbsp;
+&nbsp;&nbsp;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><a id="user-content-supports-more-than-just-pdf" class="anchor" href="#supports-more-than-just-pdf"></a>Supports More Than Just PDF</h4>
+<p>Changing the output format to something other than PDF is trivial. Just find the call to L_DocWriterInit() in CreatePdf() in convert2PDF.cpp and change the format.</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">nRet = L_DocWriterInit(
+   &amp;hDocWriter,
+   (L_TCHAR*)targetFile, 
+   DOCUMENTFORMAT_PDF, 
+   NULL, NULL, NULL);</pre>
+<div class="preview">
+<pre class="cplusplus">nRet&nbsp;=&nbsp;L_DocWriterInit(&nbsp;
+&nbsp;&nbsp;&nbsp;&amp;hDocWriter,&nbsp;
+&nbsp;&nbsp;&nbsp;(L_TCHAR*)targetFile,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;DOCUMENTFORMAT_PDF,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;NULL,&nbsp;NULL,&nbsp;NULL);</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h1><a id="user-content-more-information" class="anchor" href="#more-information"></a>More Information</h1>
+<p>If you have any questions, do not hesitate to contact <a href="https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842/mailto:support@leadtools.com">
+support@leadtools.com</a></p>
+<p>Download a free LEADTOOLS Evaluation SDK: <a href="https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842/https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842/https://www.leadtools.com/downloads?category=main">
+https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842/https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842/https://www.leadtools.com/downloads?category=main</a></p>
+<p>Read more about LEADTOOLS: <a href="https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842/https://www.leadtools.com">https://code.msdn.microsoft.com/Convert-Word-Doc-to-PDF-ab241842/https://www.leadtools.com/sdk/svg</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

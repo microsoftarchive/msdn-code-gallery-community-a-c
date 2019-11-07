@@ -1,0 +1,185 @@
+﻿@model GridAjaxCRUDMVC.Models.AssetViewModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Delete Asset</h4>
+            <h3>Are you sure you want to delete this?</h3>
+
+        </div>
+
+        <div class="modal-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Barcode)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Barcode)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SerialNumber)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SerialNumber)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FacilitySite)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FacilitySite)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PMGuide)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PMGuide)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.AstID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AstID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ChildAsset)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ChildAsset)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.GeneralAssetDescription)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.GeneralAssetDescription)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SecondaryAssetDescription)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SecondaryAssetDescription)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Quantity)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Manufacturer)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Manufacturer)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModelNumber)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModelNumber)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Building)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Building)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Floor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Floor)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Corridor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Corridor)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.RoomNo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RoomNo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MERNo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MERNo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EquipSystem)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EquipSystem)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Comments)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Comments)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Issued)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Issued)
+                </dd>
+
+            </dl>
+
+            @using (Ajax.BeginForm("Delete", "Asset", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "DeleteAssetSuccess" }, new { @class = "form-horizontal", role = "form" }))
+            {
+
+                <div class="form-actions no-color">
+                    @Html.HiddenFor(x => x.AssetID)
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index",null,new { data_dismiss = "modal" })
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

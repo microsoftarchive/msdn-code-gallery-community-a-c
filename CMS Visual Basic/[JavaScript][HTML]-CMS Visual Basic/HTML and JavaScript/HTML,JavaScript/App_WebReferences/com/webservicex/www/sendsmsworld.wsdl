@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webserviceX.NET" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.webserviceX.NET" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.webserviceX.NET">
+      <s:element name="sendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FromEmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MobileNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="sendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:sendSMS" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:sendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSHttpGetIn">
+    <wsdl:part name="FromEmailAddress" type="s:string" />
+    <wsdl:part name="CountryCode" type="s:string" />
+    <wsdl:part name="MobileNumber" type="s:string" />
+    <wsdl:part name="Message" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSHttpPostIn">
+    <wsdl:part name="FromEmailAddress" type="s:string" />
+    <wsdl:part name="CountryCode" type="s:string" />
+    <wsdl:part name="MobileNumber" type="s:string" />
+    <wsdl:part name="Message" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="SendSMSWorldSoap">
+    <wsdl:operation name="sendSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send unlimited free SMS to following countries.&lt;br&gt;&lt;b&gt;Note:&lt;/b&gt;If your country code 091,Please enter as 91 and if your mobile number 098XXXXX,Please enter as 98XXXX &lt;br&gt;&lt;table cellSpacing=0 cellPadding=5 border=0 border-collapse: collapse bordercolor=#111111&gt;&lt;tr&gt; &lt;td  width=50% &gt;&lt;font size=2 &gt;&lt;b&gt;This SMS covers following countries and&amp;nbsp; networks.&lt;/b&gt;&lt;/td&gt;	&lt;/tr&gt;	&lt;tr&gt;&lt;td  &gt;	&lt;b&gt;Austria -&lt;/b&gt;&lt;font face=Arial size=-1&gt;	Mobilkom&lt;b&gt;&lt;br&gt;	Bulgaria - &lt;/b&gt;Mobiltel  &lt;b&gt;&lt;br&gt;Croatia -&lt;/b&gt; Cronet  &lt;b&gt;&lt;br&gt;Germany -&lt;/b&gt; E-Plus,Mannesman D2 &lt;b&gt;&lt;br&gt;Israel - &lt;/b&gt;Pelephone &lt;b&gt;&lt;br&gt;Lithuania -&lt;/b&gt; Omnitel	&lt;b&gt;&lt;br&gt;Maldives - &lt;/b&gt;Dhiraagu   &lt;b&gt;&lt;br&gt;Norway - &lt;/b&gt;NetCom,TeleNor	&lt;b&gt;&lt;br&gt;	Switzerland - &lt;/b&gt;Bluewin  &lt;b&gt;&lt;br&gt;USA - &lt;/b&gt;Ameritech Cellular services ,Cellular One,  Cingular &lt;b&gt;&lt;br&gt;Brazil - &lt;/b&gt;ATL express,Telemig Cellular &lt;b&gt;&lt;br&gt;Canada -&lt;/b&gt; Bell Mobility, Clearnet, Rogers AT&amp;amp;T Wireless ,Telus &lt;b&gt;&lt;br&gt;France - &lt;/b&gt;Itineris &lt;b&gt;&lt;br&gt;India - &lt;/b&gt;Essar Cell Phone,RPG Cellular &lt;b&gt;&lt;br&gt;Japan - &lt;/b&gt;NTT Docomo &lt;b&gt;	&lt;br&gt;Malaysia - &lt;/b&gt;Celcom &lt;b&gt;&lt;br&gt;New Zealand - &lt;/b&gt;Messagetrack &lt;b&gt;&lt;br&gt;Spain -&lt;/b&gt; MoviStar &lt;b&gt;&lt;br&gt;Ukraine - &lt;/b&gt;Golden Telecom, UMC &lt;b&gt;&lt;br&gt;USA - &lt;/b&gt;Comcast Cellular Communications,Voicestream Wireless Corp. &lt;/td&gt;&lt;/tr&gt;	&lt;/table&gt;</wsdl:documentation>
+      <wsdl:input message="tns:sendSMSSoapIn" />
+      <wsdl:output message="tns:sendSMSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SendSMSWorldHttpGet">
+    <wsdl:operation name="sendSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send unlimited free SMS to following countries.&lt;br&gt;&lt;b&gt;Note:&lt;/b&gt;If your country code 091,Please enter as 91 and if your mobile number 098XXXXX,Please enter as 98XXXX &lt;br&gt;&lt;table cellSpacing=0 cellPadding=5 border=0 border-collapse: collapse bordercolor=#111111&gt;&lt;tr&gt; &lt;td  width=50% &gt;&lt;font size=2 &gt;&lt;b&gt;This SMS covers following countries and&amp;nbsp; networks.&lt;/b&gt;&lt;/td&gt;	&lt;/tr&gt;	&lt;tr&gt;&lt;td  &gt;	&lt;b&gt;Austria -&lt;/b&gt;&lt;font face=Arial size=-1&gt;	Mobilkom&lt;b&gt;&lt;br&gt;	Bulgaria - &lt;/b&gt;Mobiltel  &lt;b&gt;&lt;br&gt;Croatia -&lt;/b&gt; Cronet  &lt;b&gt;&lt;br&gt;Germany -&lt;/b&gt; E-Plus,Mannesman D2 &lt;b&gt;&lt;br&gt;Israel - &lt;/b&gt;Pelephone &lt;b&gt;&lt;br&gt;Lithuania -&lt;/b&gt; Omnitel	&lt;b&gt;&lt;br&gt;Maldives - &lt;/b&gt;Dhiraagu   &lt;b&gt;&lt;br&gt;Norway - &lt;/b&gt;NetCom,TeleNor	&lt;b&gt;&lt;br&gt;	Switzerland - &lt;/b&gt;Bluewin  &lt;b&gt;&lt;br&gt;USA - &lt;/b&gt;Ameritech Cellular services ,Cellular One,  Cingular &lt;b&gt;&lt;br&gt;Brazil - &lt;/b&gt;ATL express,Telemig Cellular &lt;b&gt;&lt;br&gt;Canada -&lt;/b&gt; Bell Mobility, Clearnet, Rogers AT&amp;amp;T Wireless ,Telus &lt;b&gt;&lt;br&gt;France - &lt;/b&gt;Itineris &lt;b&gt;&lt;br&gt;India - &lt;/b&gt;Essar Cell Phone,RPG Cellular &lt;b&gt;&lt;br&gt;Japan - &lt;/b&gt;NTT Docomo &lt;b&gt;	&lt;br&gt;Malaysia - &lt;/b&gt;Celcom &lt;b&gt;&lt;br&gt;New Zealand - &lt;/b&gt;Messagetrack &lt;b&gt;&lt;br&gt;Spain -&lt;/b&gt; MoviStar &lt;b&gt;&lt;br&gt;Ukraine - &lt;/b&gt;Golden Telecom, UMC &lt;b&gt;&lt;br&gt;USA - &lt;/b&gt;Comcast Cellular Communications,Voicestream Wireless Corp. &lt;/td&gt;&lt;/tr&gt;	&lt;/table&gt;</wsdl:documentation>
+      <wsdl:input message="tns:sendSMSHttpGetIn" />
+      <wsdl:output message="tns:sendSMSHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SendSMSWorldHttpPost">
+    <wsdl:operation name="sendSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send unlimited free SMS to following countries.&lt;br&gt;&lt;b&gt;Note:&lt;/b&gt;If your country code 091,Please enter as 91 and if your mobile number 098XXXXX,Please enter as 98XXXX &lt;br&gt;&lt;table cellSpacing=0 cellPadding=5 border=0 border-collapse: collapse bordercolor=#111111&gt;&lt;tr&gt; &lt;td  width=50% &gt;&lt;font size=2 &gt;&lt;b&gt;This SMS covers following countries and&amp;nbsp; networks.&lt;/b&gt;&lt;/td&gt;	&lt;/tr&gt;	&lt;tr&gt;&lt;td  &gt;	&lt;b&gt;Austria -&lt;/b&gt;&lt;font face=Arial size=-1&gt;	Mobilkom&lt;b&gt;&lt;br&gt;	Bulgaria - &lt;/b&gt;Mobiltel  &lt;b&gt;&lt;br&gt;Croatia -&lt;/b&gt; Cronet  &lt;b&gt;&lt;br&gt;Germany -&lt;/b&gt; E-Plus,Mannesman D2 &lt;b&gt;&lt;br&gt;Israel - &lt;/b&gt;Pelephone &lt;b&gt;&lt;br&gt;Lithuania -&lt;/b&gt; Omnitel	&lt;b&gt;&lt;br&gt;Maldives - &lt;/b&gt;Dhiraagu   &lt;b&gt;&lt;br&gt;Norway - &lt;/b&gt;NetCom,TeleNor	&lt;b&gt;&lt;br&gt;	Switzerland - &lt;/b&gt;Bluewin  &lt;b&gt;&lt;br&gt;USA - &lt;/b&gt;Ameritech Cellular services ,Cellular One,  Cingular &lt;b&gt;&lt;br&gt;Brazil - &lt;/b&gt;ATL express,Telemig Cellular &lt;b&gt;&lt;br&gt;Canada -&lt;/b&gt; Bell Mobility, Clearnet, Rogers AT&amp;amp;T Wireless ,Telus &lt;b&gt;&lt;br&gt;France - &lt;/b&gt;Itineris &lt;b&gt;&lt;br&gt;India - &lt;/b&gt;Essar Cell Phone,RPG Cellular &lt;b&gt;&lt;br&gt;Japan - &lt;/b&gt;NTT Docomo &lt;b&gt;	&lt;br&gt;Malaysia - &lt;/b&gt;Celcom &lt;b&gt;&lt;br&gt;New Zealand - &lt;/b&gt;Messagetrack &lt;b&gt;&lt;br&gt;Spain -&lt;/b&gt; MoviStar &lt;b&gt;&lt;br&gt;Ukraine - &lt;/b&gt;Golden Telecom, UMC &lt;b&gt;&lt;br&gt;USA - &lt;/b&gt;Comcast Cellular Communications,Voicestream Wireless Corp. &lt;/td&gt;&lt;/tr&gt;	&lt;/table&gt;</wsdl:documentation>
+      <wsdl:input message="tns:sendSMSHttpPostIn" />
+      <wsdl:output message="tns:sendSMSHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SendSMSWorldSoap" type="tns:SendSMSWorldSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sendSMS">
+      <soap:operation soapAction="http://www.webserviceX.NET/sendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendSMSWorldSoap12" type="tns:SendSMSWorldSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sendSMS">
+      <soap12:operation soapAction="http://www.webserviceX.NET/sendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendSMSWorldHttpGet" type="tns:SendSMSWorldHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="sendSMS">
+      <http:operation location="/sendSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendSMSWorldHttpPost" type="tns:SendSMSWorldHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="sendSMS">
+      <http:operation location="/sendSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SendSMSWorld">
+    <wsdl:port name="SendSMSWorldSoap" binding="tns:SendSMSWorldSoap">
+      <soap:address location="http://www.webservicex.com/sendsmsworld.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendSMSWorldSoap12" binding="tns:SendSMSWorldSoap12">
+      <soap12:address location="http://www.webservicex.com/sendsmsworld.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendSMSWorldHttpGet" binding="tns:SendSMSWorldHttpGet">
+      <http:address location="http://www.webservicex.com/sendsmsworld.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendSMSWorldHttpPost" binding="tns:SendSMSWorldHttpPost">
+      <http:address location="http://www.webservicex.com/sendsmsworld.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

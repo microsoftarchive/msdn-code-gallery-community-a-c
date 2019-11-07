@@ -1,0 +1,22 @@
+﻿aside .Menu,aside .Exchange,aside .Weather
+{
+/* for IE */
+filter:alpha(opacity=80);
+/* CSS3 standard */
+opacity:0.8;
+
+transition: filter 1s;
+transition: opacity 1s;
+-ms-transition: opacity 1s;
+-moz-transition: opacity 1s;
+-webkit-transition: opacity 1s;
+-o-transition: opacity 1s;
+}
+
+aside .Menu:hover,aside .Exchange:hover,aside .Weather:hover
+{
+/* for IE */
+filter:alpha(opacity=100);
+/* CSS3 standard */
+opacity:1;
+}

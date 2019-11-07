@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AdWksSalesWinDataBind.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="currentSalesTaxRate" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.08</Value>
+    </Setting>
+    <Setting Name="currentFreight" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.10</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

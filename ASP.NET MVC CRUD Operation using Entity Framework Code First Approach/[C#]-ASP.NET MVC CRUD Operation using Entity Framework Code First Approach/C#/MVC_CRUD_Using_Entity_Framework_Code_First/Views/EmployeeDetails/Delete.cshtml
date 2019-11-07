@@ -1,0 +1,48 @@
+﻿@model MVC_CRUD_Using_Entity_Framework_Code_First.Models.EmployeeDetails
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EmployeeDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpEmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpEmailId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

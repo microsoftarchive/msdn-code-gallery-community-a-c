@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/angular-material.css" rel="stylesheet" />
+<h2>Index</h2>
+<div ng-controller="AutoCompleteCtrl as ctrl" layout="column" ng-cloak="" class="autocompletedemoBasicUsage" ng-app="MyApp" style="width: 34%;">
+    <md-content class="md-padding">
+        <form ng-submit="$event.preventDefault()">            
+            <md-autocomplete md-no-cache="false" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)" md-item-text="item.display" md-min-length="0" placeholder="Search for products here!.">
+                <md-item-template>
+                    <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    No matching "{{ctrl.searchText}}" were found.
+                </md-not-found>
+            </md-autocomplete>
+        </form>
+    </md-content>
+</div>
+<script src="~/scripts/angular.min.js"></script>
+<script src="~/scripts/angular-route.min.js"></script>
+<script src="~/scripts/angular-aria.min.js"></script>
+<script src="~/scripts/angular-animate.min.js"></script>
+<script src="~/scripts/angular-messages.min.js"></script>
+<script src="~/scripts/angular-material.js"></script>
+<script src="~/scripts/svg-assets-cache.js"></script>
+<script src="~/scripts/Home.js"></script>

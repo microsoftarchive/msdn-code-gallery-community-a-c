@@ -1,0 +1,54 @@
+﻿<Window x:Class="VisualPlugin.UI.Views.PluginSettingsWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		xmlns:livet="http://schemas.livet-mvvm.net/2011/wpf"
+		xmlns:vm="clr-namespace:VisualPlugin.UI.ViewModels"
+		mc:Ignorable="d"
+		d:DataContext="{d:DesignInstance vm:PluginViewModel}"
+		Title="Plugin settings"
+		Background="{DynamicResource ThemeBrushKey}"
+		SizeToContent="WidthAndHeight"
+		UseLayoutRounding="True">
+	
+	<Grid Margin="4">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<TextBlock Foreground="{DynamicResource ForegroundBrushKey}"
+				   FontFamily="{DynamicResource TitleFontFamilyKey}"
+				   FontSize="{DynamicResource TitleFontSizeKey}"
+				   Margin="4">
+			<Run Text="Plugin settings: " />
+			<Run Text="{Binding Plugin.Name, Mode=OneWay}" />
+		</TextBlock>
+
+		<Border Grid.Row="1"
+				BorderBrush="{DynamicResource BorderBrushKey}"
+				BorderThickness="1"
+				Margin="4">
+			<ContentPresenter Content="{Binding SettingsView}" />
+		</Border>
+
+		<Button Grid.Row="2"
+				Content="Close"
+				Style="{DynamicResource SettingsButtonStyleKey}"
+				HorizontalAlignment="Right"
+				Margin="4">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<livet:WindowInteractionMessageAction>
+						<livet:DirectInteractionMessage>
+							<livet:WindowActionMessage Action="Close" />
+						</livet:DirectInteractionMessage>
+					</livet:WindowInteractionMessageAction>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
+	</Grid>
+</Window>

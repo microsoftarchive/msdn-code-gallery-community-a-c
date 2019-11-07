@@ -1,0 +1,83 @@
+﻿<Window x:Class="AsynchronousDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Asynchronous Downloader" x:Name="MyWindow" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <DataTemplate x:Key="NotDownloadedTemplate">
+            <TextBlock Text="Not Downloaded" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </DataTemplate>
+        <DataTemplate x:Key="DownloadedTemplate">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Hyperlink  Command="{Binding ElementName=MyWindow, Path=DataContext.OpenFileCommand}" CommandParameter="{Binding}">
+                    Open File
+                </Hyperlink>
+            </TextBlock>
+        </DataTemplate>
+        <DataTemplate x:Key="DownloadingTemplate">
+            <StackPanel Orientation="Horizontal">
+                <ProgressBar Value="{Binding DownloadPercentage}" Minimum="0" Maximum="100" Width="200"/>
+                <TextBlock Text="{Binding DownloadPercentageString}" Margin="5,0,0,0"/>
+            </StackPanel>
+        </DataTemplate>
+
+    </Window.Resources>
+    <Grid>
+        <DataGrid x:Name="DgGrid" AutoGenerateColumns="False" ItemsSource="{Binding DownloadFiles}" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="File Name">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Filename}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="File Size">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FileSize}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Download Status">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ContentControl x:Name="cc" Content="{Binding}"/>
+                            <DataTemplate.Triggers>
+                                <DataTrigger Binding="{Binding DownloadStatus}" Value="Downloaded">
+                                    <Setter TargetName="cc" Property="ContentTemplate" Value="{DynamicResource DownloadedTemplate}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding DownloadStatus}" Value="Downloading">
+                                    <Setter TargetName="cc" Property="ContentTemplate" Value="{DynamicResource DownloadingTemplate}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding DownloadStatus}" Value="NotDownloaded">
+                                    <Setter TargetName="cc" Property="ContentTemplate" Value="{DynamicResource NotDownloadedTemplate}"/>
+                                </DataTrigger>
+                            </DataTemplate.Triggers>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Download Time">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding DownloadTime}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Download Speed">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding DownloadSpeed}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Download">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Download" Command="{Binding ElementName=MyWindow, Path=DataContext.DownloadCommand}" CommandParameter="{Binding}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

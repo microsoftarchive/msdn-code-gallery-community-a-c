@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=62DBC035A4A8AD76676CA11B61CB6C59" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/607e92c6-96a7-4011-8ec4-6b22eaf39a7eCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=46CB1877D3C0B7D6D06D21CECE7C9CAB" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Convert Word (.doc, .docx) to XPS in C# by using Spire.Doc</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Convert Word (.doc, .docx) to XPS in C# by using Spire.Doc</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, ASP.NET, .NET Framework
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, How to, C# Language Features
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/4/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Convert-Word-doc-docx-to-42693436">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>Spire.Doc for .NET enables developers to quickly and easily generate, read, write, save, print and convert documents on any .NET applications (ASP.NET, WinForms and Web Service) and it supports in C#, VB.NET.</p>
+<p>This is a C # example to convert Word documents (.doc, .docx) via a C# word API Spire.Doc for .NET. The code gives you clear information of create a word document first and then convert it to XPS file format.</p>
+<p>Please check the target XPS file first:</p>
+<p><img id="124714" src="description/Target XPS.png" alt="" width="703" height="639"></p>
+<p>If you load the word document from file or stream, then only three core lines of code are needed:</p>
+<pre>Document doc = new Document();<br>doc.LoadFromFile(&quot;test.docx&quot;);<br>doc.SaveToFile(&quot;toXPS.xps&quot;,FileFormat.XPS);</pre>
+<p>&nbsp;</p>
+<p>Besides convert word to XPS, Spire.Doc aslo supports to convert word document into PDF, Image, HTML, XML, EMF and EPUB, etc. Check the<a href="http://www.e-iceblue.com/Introduce/word-for-net-introduce.html"> main site</a> for detailed information:</p>
+<p>Spire.Doc for .NET enables developers/programmers to build WinForms, Web Services, ASP.NET and other type for .NET applications from version 2.0 to 4.5 on 32-bit or 64-bit system.</p>
+<p><strong>Run Demos</strong></p>
+<p>After installing, the sample projects for C#, VB.NET are put in respective folders: CS and VB. Choose one folder and run sample project in it.</p>
+<p>There are two methods to run demos:<br>
+&bull; Open the appropriate solution file (.sln) to get all projects this package has. To run the specified project, right click project name (for example Edit) &rarr; Debug &rarr; Start new instance. And then the result will be shown.
+<br>
+&bull; Open Demos folder &rarr; WinForms folder &rarr; Specified directory (for example Quick Guide) &rarr; Specified Project folder (for example Edit) &rarr; Open appropriate project (.csproj) &rarr; Debug &rarr; Start Debugging or Press F5.
+<br>
+Get Documentation Guide</p>
+<p><span><strong>Related Links</strong></span></p>
+<p><span><strong>Website:</strong><span class="Apple-converted-space">&nbsp;</span><a href="http://www.e-iceblue.com/" style="color:#960bb4; text-decoration:none">http://www.e-iceblue.com</a></span></p>
+<p><span><strong>Product Introduction</strong>:<span class="Apple-converted-space">&nbsp;</span><a href="http://www.e-iceblue.com/Introduce/free-doc-component.html" style="color:#960bb4; text-decoration:none">http://www.e-iceblue.com/Introduce/free-doc-component.html</a></span></p>
+<p><span><strong>Download</strong>:<span class="Apple-converted-space"> </span>
+<a href="http://www.e-iceblue.com/Download/download-word-for-net-now.html" style="color:#960bb4; text-decoration:none">http://www.e-iceblue.com/Download/download-word-for-net-now.html</a></span></p>
+<p><span><strong>Forum</strong>:<span class="Apple-converted-space">&nbsp;</span><a href="http://code.msdn.microsoft.com/Convert-Word-doc-docx-to-42693436/mailto:http://www.e-iceblue.com/forum/spire-doc-f6.html" style="color:#960bb4; text-decoration:none">Free Word Library Forum</a></span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

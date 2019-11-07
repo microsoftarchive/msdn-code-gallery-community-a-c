@@ -1,0 +1,73 @@
+﻿https://social.technet.microsoft.com/wiki/contents/articles/51100.technet-guru-competitions-february-2018.aspx#Transact-SQL
+
+Export DataGridView to excel
+https://code.msdn.microsoft.com/office/How-to-Export-DataGridView-62f1f8ff
+
+Export MS-Access to MS-Excel
+https://code.msdn.microsoft.com/Export-MS-Access-table-to-e5931ec1
+
+Export Excel from SQL-Server
+https://code.msdn.microsoft.com/Export-Excel-from-SQL-3d994cb5
+
+DataGridView unbound to Excel or Text file (CS)
+https://code.msdn.microsoft.com/DataGridView-unbound-to-02db1c40
+
+
+
+HOW TO: Check the Type of a COM Object (System.__ComObject) with Visual C# .NET
+https://fernandof.wordpress.com/2008/02/05/how-to-check-the-type-of-a-com-object-system__comobject-with-visual-c-net/
+
+Open-XML SDK https://github.com/OfficeDev/Open-XML-SDK
+
+Creating basic Excel workbook with Open XML https://www.codeproject.com/Articles/371203/Creating-basic-Excel-workbook-with-Open-XML
+
+Demo NumberFormat
+
+workRange.NumberFormat = "MM/DD/YYYY"
+
+Talk about EPPlus as many on the web refer to it
+https://github.com/JanKallman/EPPlus
+
+Look at this, looks pretty good
+https://reogrid.net/
+
+Beth's - need to put this into words for the article
+https://blogs.msdn.microsoft.com/bethmassi/2007/10/30/quickly-import-and-export-excel-data-with-linq-to-xml/
+
+
+
+Module Module1
+
+    Sub Main()
+        Dim correctLine As String = ""
+        Dim line1 As String = "Canda has more than ones official language"
+        Dim line2 As String = "Canada has more than one oficial languages"
+        Dim line3 As String = "Canada has nore than one official lnguage"
+        Dim line4 As String = "Canada has nore than one offical language"
+
+        Dim wordsOfLine1() As String = line1.Split(" ")
+        Dim wordsOfLine2() As String = line2.Split(" ")
+        Dim wordsOfLine3() As String = line3.Split(" ")
+        Dim wordsOfLine4() As String = line4.Split(" ")
+
+        Dim getWordSafely = Function(array As String(), index As Integer)
+                                If index > -1 AndAlso index < array.Length Then Return array(index)
+                                Return String.Empty
+                            End Function
+
+        For i As Integer = 0 To wordsOfLine1.Length - 1
+            Dim wordAllLinesTemp As New List(Of String)(New String() {getWordSafely(wordsOfLine1, i), getWordSafely(wordsOfLine2, i),
+                                                        getWordSafely(wordsOfLine3, i), getWordSafely(wordsOfLine4, i)})
+            Dim counts = From n In wordAllLinesTemp
+                         Group n By n Into Group
+                         Order By Group.Count() Descending
+                         Select Group.First
+            correctLine = correctLine & counts.First & " "
+        Next
+        correctLine = correctLine.Remove(correctLine.Length - 1)
+        Console.WriteLine(correctLine)
+        Console.ReadKey()
+
+    End Sub
+
+End Module

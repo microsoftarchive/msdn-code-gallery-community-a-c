@@ -1,0 +1,23 @@
+﻿@model ApplicationRoleViewModel
+@using IdentitySampleApplication.Models
+
+<form asp-action="AddEditApplicationRole" role="form">
+    @await Html.PartialAsync("_ModalHeader", new ModalHeader { Heading =$"{(String.IsNullOrEmpty(Model.Id)? "Add" : "Edit")} Application Role"  })
+    <div class="modal-body form-horizontal">
+        <div class="row">
+            <div class="form-group">
+                <label asp-for="RoleName" class="col-lg-3 col-sm-3 control-label"></label>
+                <div class="col-lg-6">
+                    <input asp-for="RoleName" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="col-lg-3 col-sm-3 control-label"></label>
+                <div class="col-lg-6">
+                    <input asp-for="Description" class="form-control" />
+                </div>
+            </div>
+        </div>
+    </div>
+    @await Html.PartialAsync("_ModalFooter", new ModalFooter { })
+</form>

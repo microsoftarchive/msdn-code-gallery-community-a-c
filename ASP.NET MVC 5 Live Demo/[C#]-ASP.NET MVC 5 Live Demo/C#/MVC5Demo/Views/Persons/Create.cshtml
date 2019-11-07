@@ -1,0 +1,55 @@
+@model MVC5Demo.Models.Person
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>Person</legend>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Fullname, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.Fullname)
+				@Html.ValidationMessageFor(model => model.Fullname, null, new { @class = "help-inline" })
+			</div>
+		</div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Profession, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.Profession)
+				@Html.ValidationMessageFor(model => model.Profession, null, new { @class = "help-inline" })
+			</div>
+		</div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Age, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.Age)
+				@Html.ValidationMessageFor(model => model.Age, null, new { @class = "help-inline" })
+			</div>
+		</div>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Create" class="btn" />
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

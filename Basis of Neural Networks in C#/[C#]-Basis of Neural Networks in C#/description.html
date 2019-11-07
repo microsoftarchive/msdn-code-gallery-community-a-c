@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.3.6.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=3C7B146E4D24AB77A9D9006DC4F48F98" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=1070D4FA49BFA3C2DA44B1CB75FED7A7" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Basis of Neural Networks in C#</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Basis of Neural Networks in C#</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, Visual Studio 2015
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Lists, Neural Network, Backpropagation Neural Network
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/16/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Basis-of-Neural-Networks-f12ce1e9">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><span>Revision <strong>2</strong>&nbsp;(2017-11-16), thanks to <strong>DonAndrea95</strong> for correction</span></p>
+<hr>
+<p><span><br>
+In this article, we'll see how to implement a neural network in&nbsp;</span><strong>C#</strong><span>, i.e. a model capable of processing input data and adjust its internal mechanics to learn how to produce a desired result. We'll see more on this later. The
+ present article will focus on generic definitions about neural networks and their behaviours, offering a simple implementation for the reader to test. In the final paragraph, we will code a small network capable of swapping two variables.&nbsp;</span><br>
+<br>
+<span>This article is a re-release of&nbsp;</span><a href="http://social.technet.microsoft.com/wiki/contents/articles/32140.basis-of-neural-networks-in-visual-basic-net.aspx" >Basis of Neural Networks in Visual Basic .NET</a><span>, written in
+ 2015 and implementing neural network in Visual Basic .NET. In the present article, though, we'll see some improvements about the topic.</span><br>
+<br>
+</p>
+<h1><a name="Introduction"></a>Introduction</h1>
+<h2><a name="A_first_definition"></a>A first definition</h2>
+<p><br>
+<span>The term &quot;neural network&quot; is typically used as a reference to a network or circuit constituted by neurons. We can differentiate two types of neural networks: a) biological and b) artificial. Obviously, speaking about software development, we are here
+ referring to artificial ones, but those kind of implementations get their basic model and inspiration from their natural counterparts, so it can be useful to briefly consider the functioning of what we intend when we speak of biological neural networks.&nbsp;</span><br>
+<br>
+</p>
+<h2><a name="Natural_neural_networks"></a>Natural neural networks</h2>
+<p><br>
+<span>Those are networks constituted by biological neurons, and they are typical of living creatures. The neurons/cells are interconnected into the peripheral nervous system or in the central one. In neurosciences, groups of neurons are identified by the physiological
+ function they perform.&nbsp;</span><br>
+<br>
+</p>
+<h2><a name="Artificial_neural_networks"></a>Artificial neural networks</h2>
+<p><br>
+<span>Artificial networks are mathematical models, which could be implemented through an electronic medium, which mime the functioning of a biological network. Simply speaking, we will have a set of artificial neurons apt to solve a particular problem in the
+ field of artificial intelligence. Like a natural one, an artificial network could &quot;learn&quot;, through time and trial, the nature of a problem, becoming more and more efficient in solving it.&nbsp;</span><br>
+<br>
+</p>
+<h2><a name="Neurons"></a>Neurons</h2>
+<p><br>
+<span>After this simple premise, it should be obvious that in a network, being it natural or artificial, the entity known as &quot;neuron&quot; has a paramount importance, because it receive inputs, and is somewhat responsible of a correct data processing, which end
+ in a result. Think about our brain: it's a wonderful supercomputer composed by 86*10^9 neurons (more or less). An amazing number of entities which constantly exchange and store informations, running on 10^14 synapses. Like we've said, artificial models are
+ trying to capture and reproduce the basic functioning of a neuron, which is based on 3 main parts:</span></p>
+<ul>
+<li>Soma, or cellular body </li><li>Axon, the neuron output line </li><li>Dendrite, the neuron input line, which receives the data from other axons through synapses
+</li></ul>
+<p><span>The soma executes a weighted sum of the input signals, checking if they exceed a certain limit. If they do, the neuron activates itself (resulting in a potential action), staying in a state of quiet otherwise. An artificial model tries to mimic those
+ subparts, with the target of creating an array of interconnected entities capable of adjusting itself on the basis of received inputs, costantly checking the produced results against an expected situation.&nbsp;</span><br>
+<br>
+</p>
+<h1><a name="How_a_network_learns"></a>How a network learns</h1>
+<p><span>Tipically, the neural network theory identifies 3 main methods through which a network can learn (where, with &quot;learn&quot;, we intend - from now on - the process through which a neural network modifies itself to being able to produce a certain result with
+ a given input). Regarding the Visual Basic implementation, we will focus only on one of them, but it's useful to introduce all the paradigms, in order to have a better overview. For a NN (neural network) to learn, it must be &quot;trained&quot;. The training can be
+ supervisioned, if we possess a set of data constituted by input and output values. Through them, a network could learn to infer the relation which binds a neuron with another one. Another method is the unsupervisioned one, which is based on training algorithms
+ which modifies the network's weights relying only on input data, resulting in networks that will learn to group received informations with probabilistic methods. The last methos is the reinforced learning, which doesn't rely on presented data, but on exploration
+ algorithms which produce inputs that will be tested through an agent, which will check their impact on the network, trying to determine the NN performance on a given problem. In this article, when we'll come to code, we will see the first presented case, or
+ the supervisioned training.&nbsp;</span></p>
+<p><span><img id="165421" src="description/6685.backprop.png-550x0.png" alt="" width="550" height="383"></span></p>
+<p><span>&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public class NeuralNetwork
+    {
+        public List&lt;Layer&gt; Layers { get; set; }
+        public double LearningRate { get; set; }
+        public int LayerCount
+        {
+            get
+            {
+                return Layers.Count;
+            }
+        }
+ 
+        public NeuralNetwork(double learningRate, int[] layers)
+        {
+            if (layers.Length &lt; 2) return;
+ 
+            this.LearningRate = learningRate;
+            this.Layers = new List&lt;Layer&gt;();
+ 
+            for(int l = 0; l &lt; layers.Length; l&#43;&#43;)
+            {
+                Layer layer = new Layer(layers[l]);
+                this.Layers.Add(layer);
+ 
+                for (int n = 0; n &lt; layers[l]; n&#43;&#43;)
+                    layer.Neurons.Add(new Neuron());
+ 
+                layer.Neurons.ForEach((nn) =&gt;
+                {
+                    if (l == 0)
+                        nn.Bias = 0;
+                    else
+                        for (int d = 0; d &lt; layers[l - 1]; d&#43;&#43;)
+                            nn.Dendrites.Add(new Dendrite());
+                });
+            }
+        }
+ 
+        private double Sigmoid(double x)
+        {
+            return 1 / (1 &#43; Math.Exp(-x));
+        }
+ 
+        public double[] Run(List&lt;double&gt; input)
+        {
+            if (input.Count != this.Layers[0].NeuronCount) return null;
+ 
+            for (int l = 0; l &lt; Layers.Count; l&#43;&#43;)
+            {
+                Layer layer = Layers[l];
+ 
+                for (int n = 0; n &lt; layer.Neurons.Count; n&#43;&#43;)
+                {
+                    Neuron neuron = layer.Neurons[n];
+ 
+                    if (l == 0)
+                        neuron.Value = input[n];
+                    else
+                    {
+                        neuron.Value = 0;
+                        for (int np = 0; np &lt; this.Layers[l - 1].Neurons.Count; np&#43;&#43;)
+                            neuron.Value = neuron.Value &#43; this.Layers[l - 1].Neurons[np].Value * neuron.Dendrites[np].Weight;
+ 
+                        neuron.Value = Sigmoid(neuron.Value &#43; neuron.Bias);
+                    }
+                }
+            }
+ 
+            Layer last = this.Layers[this.Layers.Count - 1];
+            int numOutput = last.Neurons.Count ;
+            double[] output = new double[numOutput];
+            for (int i = 0; i &lt; last.Neurons.Count; i&#43;&#43;)
+                output[i] = last.Neurons[i].Value;
+ 
+            return output;
+        }
+ 
+        public bool Train(List&lt;double&gt; input, List&lt;double&gt; output)
+        {
+            if ((input.Count != this.Layers[0].Neurons.Count) || (output.Count != this.Layers[this.Layers.Count - 1].Neurons.Count)) return false;
+ 
+            Run(input);
+ 
+            for(int i = 0; i &lt; this.Layers[this.Layers.Count - 1].Neurons.Count; i&#43;&#43;)
+            {
+                Neuron neuron = this.Layers[this.Layers.Count - 1].Neurons[i];
+ 
+                neuron.Delta = neuron.Value * (1 - neuron.Value) * (output[i] - neuron.Value);
+ 
+                for(int j = this.Layers.Count - 2; j &gt; 2; j--)
+                {
+                    for(int k = 0; k &lt; this.Layers[j].Neurons.Count; k&#43;&#43;)
+                    {
+                        Neuron n = this.Layers[j].Neurons[k];
+ 
+                        n.Delta = n.Value *
+                                  (1 - n.Value) *
+                                  this.Layers[j &#43; 1].Neurons[i].Dendrites[k].Weight *
+                                  this.Layers[j &#43; 1].Neurons[i].Delta;
+                    }
+                }
+            }
+ 
+            for(int i = this.Layers.Count - 1; i &gt; 1; i--)
+            {
+                for(int j=0; j &lt; this.Layers[i].Neurons.Count; j&#43;&#43;)
+                {
+                    Neuron n = this.Layers[i].Neurons[j];
+                    n.Bias = n.Bias &#43; (this.LearningRate * n.Delta);
+ 
+                    for (int k = 0; k &lt; n.Dendrites.Count; k&#43;&#43;)
+                        n.Dendrites[k].Weight = n.Dendrites[k].Weight &#43; (this.LearningRate * this.Layers[i - 1].Neurons[k].Value * n.Delta);
+                }
+            }
+ 
+            return true;
+        }
+
+</pre>
+<div class="preview">
+<pre class="js">public&nbsp;class&nbsp;NeuralNetwork&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;List&lt;Layer&gt;&nbsp;Layers&nbsp;<span class="js__brace">{</span>&nbsp;get;&nbsp;set;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;double&nbsp;LearningRate&nbsp;<span class="js__brace">{</span>&nbsp;get;&nbsp;set;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;int&nbsp;LayerCount&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;Layers.Count;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;NeuralNetwork(double&nbsp;learningRate,&nbsp;int[]&nbsp;layers)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(layers.Length&nbsp;&lt;&nbsp;<span class="js__num">2</span>)&nbsp;<span class="js__statement">return</span>;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.LearningRate&nbsp;=&nbsp;learningRate;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Layers&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;List&lt;Layer&gt;();&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>(int&nbsp;l&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;l&nbsp;&lt;&nbsp;layers.Length;&nbsp;l&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Layer&nbsp;layer&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;Layer(layers[l]);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Layers.Add(layer);&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;n&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;n&nbsp;&lt;&nbsp;layers[l];&nbsp;n&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer.Neurons.Add(<span class="js__operator">new</span>&nbsp;Neuron());&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer.Neurons.ForEach((nn)&nbsp;=&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(l&nbsp;==&nbsp;<span class="js__num">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nn.Bias&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;d&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;d&nbsp;&lt;&nbsp;layers[l&nbsp;-&nbsp;<span class="js__num">1</span>];&nbsp;d&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nn.Dendrites.Add(<span class="js__operator">new</span>&nbsp;Dendrite());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;double&nbsp;Sigmoid(double&nbsp;x)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__num">1</span>&nbsp;/&nbsp;(<span class="js__num">1</span>&nbsp;&#43;&nbsp;<span class="js__object">Math</span>.Exp(-x));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;double[]&nbsp;Run(List&lt;double&gt;&nbsp;input)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(input.Count&nbsp;!=&nbsp;<span class="js__operator">this</span>.Layers[<span class="js__num">0</span>].NeuronCount)&nbsp;<span class="js__statement">return</span>&nbsp;null;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;l&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;l&nbsp;&lt;&nbsp;Layers.Count;&nbsp;l&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Layer&nbsp;layer&nbsp;=&nbsp;Layers[l];&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;n&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;n&nbsp;&lt;&nbsp;layer.Neurons.Count;&nbsp;n&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neuron&nbsp;neuron&nbsp;=&nbsp;layer.Neurons[n];&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(l&nbsp;==&nbsp;<span class="js__num">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;neuron.Value&nbsp;=&nbsp;input[n];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;neuron.Value&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;np&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;np&nbsp;&lt;&nbsp;<span class="js__operator">this</span>.Layers[l&nbsp;-&nbsp;<span class="js__num">1</span>].Neurons.Count;&nbsp;np&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;neuron.Value&nbsp;=&nbsp;neuron.Value&nbsp;&#43;&nbsp;<span class="js__operator">this</span>.Layers[l&nbsp;-&nbsp;<span class="js__num">1</span>].Neurons[np].Value&nbsp;*&nbsp;neuron.Dendrites[np].Weight;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;neuron.Value&nbsp;=&nbsp;Sigmoid(neuron.Value&nbsp;&#43;&nbsp;neuron.Bias);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Layer&nbsp;last&nbsp;=&nbsp;<span class="js__operator">this</span>.Layers[<span class="js__operator">this</span>.Layers.Count&nbsp;-&nbsp;<span class="js__num">1</span>];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;numOutput&nbsp;=&nbsp;last.Neurons.Count&nbsp;;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double[]&nbsp;output&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;double[numOutput];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;i&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;i&nbsp;&lt;&nbsp;last.Neurons.Count;&nbsp;i&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output[i]&nbsp;=&nbsp;last.Neurons[i].Value;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;output;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;bool&nbsp;Train(List&lt;double&gt;&nbsp;input,&nbsp;List&lt;double&gt;&nbsp;output)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;((input.Count&nbsp;!=&nbsp;<span class="js__operator">this</span>.Layers[<span class="js__num">0</span>].Neurons.Count)&nbsp;||&nbsp;(output.Count&nbsp;!=&nbsp;<span class="js__operator">this</span>.Layers[<span class="js__operator">this</span>.Layers.Count&nbsp;-&nbsp;<span class="js__num">1</span>].Neurons.Count))&nbsp;<span class="js__statement">return</span>&nbsp;false;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run(input);&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>(int&nbsp;i&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;i&nbsp;&lt;&nbsp;<span class="js__operator">this</span>.Layers[<span class="js__operator">this</span>.Layers.Count&nbsp;-&nbsp;<span class="js__num">1</span>].Neurons.Count;&nbsp;i&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neuron&nbsp;neuron&nbsp;=&nbsp;<span class="js__operator">this</span>.Layers[<span class="js__operator">this</span>.Layers.Count&nbsp;-&nbsp;<span class="js__num">1</span>].Neurons[i];&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;neuron.Delta&nbsp;=&nbsp;neuron.Value&nbsp;*&nbsp;(<span class="js__num">1</span>&nbsp;-&nbsp;neuron.Value)&nbsp;*&nbsp;(output[i]&nbsp;-&nbsp;neuron.Value);&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>(int&nbsp;j&nbsp;=&nbsp;<span class="js__operator">this</span>.Layers.Count&nbsp;-&nbsp;<span class="js__num">2</span>;&nbsp;j&nbsp;&gt;&nbsp;<span class="js__num">2</span>;&nbsp;j--)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>(int&nbsp;k&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;k&nbsp;&lt;&nbsp;<span class="js__operator">this</span>.Layers[j].Neurons.Count;&nbsp;k&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neuron&nbsp;n&nbsp;=&nbsp;<span class="js__operator">this</span>.Layers[j].Neurons[k];&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.Delta&nbsp;=&nbsp;n.Value&nbsp;*&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="js__num">1</span>&nbsp;-&nbsp;n.Value)&nbsp;*&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Layers[j&nbsp;&#43;&nbsp;<span class="js__num">1</span>].Neurons[i].Dendrites[k].Weight&nbsp;*&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Layers[j&nbsp;&#43;&nbsp;<span class="js__num">1</span>].Neurons[i].Delta;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>(int&nbsp;i&nbsp;=&nbsp;<span class="js__operator">this</span>.Layers.Count&nbsp;-&nbsp;<span class="js__num">1</span>;&nbsp;i&nbsp;&gt;&nbsp;<span class="js__num">1</span>;&nbsp;i--)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>(int&nbsp;j=<span class="js__num">0</span>;&nbsp;j&nbsp;&lt;&nbsp;<span class="js__operator">this</span>.Layers[i].Neurons.Count;&nbsp;j&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neuron&nbsp;n&nbsp;=&nbsp;<span class="js__operator">this</span>.Layers[i].Neurons[j];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.Bias&nbsp;=&nbsp;n.Bias&nbsp;&#43;&nbsp;(<span class="js__operator">this</span>.LearningRate&nbsp;*&nbsp;n.Delta);&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;k&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;k&nbsp;&lt;&nbsp;n.Dendrites.Count;&nbsp;k&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.Dendrites[k].Weight&nbsp;=&nbsp;n.Dendrites[k].Weight&nbsp;&#43;&nbsp;(<span class="js__operator">this</span>.LearningRate&nbsp;*&nbsp;<span class="js__operator">this</span>.Layers[i&nbsp;-&nbsp;<span class="js__num">1</span>].Neurons[k].Value&nbsp;*&nbsp;n.Delta);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;true;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><span style="font-size:small">Continue reading here:&nbsp;<a href="http://social.technet.microsoft.com/wiki/contents/articles/36428.basis-of-neural-networks-in-c.aspx" >http://social.technet.microsoft.com/wiki/contents/articles/36428.basis-of-neural-networks-in-c.aspx</a></span></div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

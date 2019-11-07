@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:Banner,2:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Shared/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;hashKey=43176693215A318AD0042E0718980CBA" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Come evitare di eseguire due processi della stessa applicazione</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Come evitare di eseguire due processi della stessa applicazione</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Tecnologie">Tecnologie</label>
+                        <div id="Tecnologie">
+                            Windows Forms, .NET Framework, .NET Framework 4.0
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Argomenti">Argomenti</label>
+                        <div id="Argomenti">
+                            Architecture and Design, threading
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">it-IT</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Ultimo aggiornamento</label>
+                    <div id="LastUpdated">18/03/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">Licenza</label>
+                    <div id="License">
+                        <a href="license.rtf">Licenza di Apache, versione 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Come-evitare-di-eseguire-3dfb6872">Visualizza questo esempio online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copiare il codice';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<div><em><span><em>
+<p>Questo semplice esempio di codice fa uso della Classe Mutex , la quale esegue una verifica di quanti processi di un applicazione sono eseguiti. Viene fornito un semplice esempio dimostrativo scaricabile dove nel file Program.cs , e inserito il codice per
+ evitare che vengano eseguiti due processi della stessa applicazione , quindi compilare il progetto , avviare l'applicazione per due volte dall'eseguibile prodotto dalla compilazione. Nel primo avvio l'applicazione si avvier&agrave; regolarmente , invece tentando
+ di avviare un nuovo processo della stessa applicazione si avr&agrave; visualizzato un messaggio che indica che vi l'applicazione e gi&agrave; in esecuzione.</p>
+</em></span></em></div>
+<h1><span>Building the Sample</span></h1>
+<div><em>Questo esempio e stato creato e compilato con VisualStudio 2010 e net Framework 4.0</em></div>
+<div><span style="font-size:20px; font-weight:bold">&nbsp;</span></div>
+<div><span style="font-size:20px; font-weight:bold">Description</span></div>
+<div>Con questo esempio , verr&agrave; dimostrato cone evitare di eseguire due processi della stessa applicazione.Con vb.net e sufficiente flaggare la check box 'rendi a istanza singola' che trovate nelle propriet&agrave; del progetto alla sezione Applicazione.Questa
+ possibilit&agrave; non e disponibile in un applicazione eseguita con C#, ed ecco che ci viene in aiuto la Classe Mutex.Per maggiori informazioni riguardo la classe Mutex vi rimando al seguente
+<a href="http://msdn.microsoft.com/en-us/library/system.threading.mutex.aspx">Link.</a>&nbsp;</div>
+<div>&nbsp;</div>
+<div>
+<p>Ma ora vediamo come utilizzarla , in questo esempio viene eseguito nel file Program.cs una verifica mediante la classe Mutex.</p>
+</div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Modifica script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+ using <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+ using <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+ using <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>;
+ using <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Threading.aspx"  title="Auto generated link to System.Threading">System.Threading</a>;
+ 
+namespace MutexClassExample
+ {
+     static class Program
+     {
+         static Mutex m;
+         /// &lt;summary&gt;
+         /// Punto di ingresso principale dell'applicazione.
+         /// &lt;/summary&gt;
+         [STAThread]
+         static void Main()
+         {
+             bool first = false;
+             m = new Mutex(true, Application.ProductName.ToString(), out first);
+             if ((first))
+             {
+                 Application.EnableVisualStyles();
+                 Application.SetCompatibleTextRenderingDefault(false);
+                 Application.Run(new Form1());
+                 m.ReleaseMutex();
+             }
+             else
+             {
+               MessageBox.Show(&quot;Applicazione&quot; &#43; &quot; &quot; &#43; Application.ProductName.ToString() &#43; &quot; &quot;  &#43;&quot;gi&agrave; in esecuzione&quot;);
+             }
+         }
+     }
+ }
+ 
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+&nbsp;<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+&nbsp;<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+&nbsp;<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>;&nbsp;
+&nbsp;<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Threading.aspx"  title="Auto generated link to System.Threading">System.Threading</a>;&nbsp;
+&nbsp;&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;MutexClassExample&nbsp;
+&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;Program&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">static</span>&nbsp;Mutex&nbsp;m;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;Punto&nbsp;di&nbsp;ingresso&nbsp;principale&nbsp;dell'applicazione.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[STAThread]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Main()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">bool</span>&nbsp;first&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Mutex(<span class="cs__keyword">true</span>,&nbsp;Application.ProductName.ToString(),&nbsp;<span class="cs__keyword">out</span>&nbsp;first);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;((first))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.EnableVisualStyles();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.SetCompatibleTextRenderingDefault(<span class="cs__keyword">false</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.Run(<span class="cs__keyword">new</span>&nbsp;Form1());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m.ReleaseMutex();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Applicazione&quot;</span>&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;Application.ProductName.ToString()&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&nbsp;&#43;<span class="cs__string">&quot;gi&agrave;&nbsp;in&nbsp;esecuzione&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;}&nbsp;
+&nbsp;&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+<div>Questa riga di codice&nbsp; m = new Mutex(true, Application.ProductName.ToString(), out first); richiede tre parametri.Il primio&nbsp; parametro initiallyOwned di tipo bool ,<span class="hps">vero</span>
+<span class="hps">per dare</span> <span class="hps">la propriet&agrave;</span>
+<span class="hps">thread chiamante</span> <span class="hps">iniziale del</span>
+<span class="hps">mutex</span><span>, altrimenti</span> <span class="hps">false.Il secondo parametro di tipo string a cui dobbiamo assegnare il nome della nostra applicazione , l'ultimo infine sempre di tipo bool che assegna il risultato alla variabile
+ first . Quest'ultima determina se l'applicazione e gi&agrave; in esecuzione o meno a seconda dello stato. In questo caso se true avremo il messaggio di applicazione gi&agrave; in esecuzione , se false significa che non vi era ancora un processo della nostra
+ applicazione avviato.</span></div>
+<div>&nbsp;</div>
+<h1>More Information</h1>
+<div><em>Per maggiori informazioni potete contattarmi a questo <a href="http://community.visual-basic.it/carmelolamonica/default.aspx">
+indirizzo</a> .</em></div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

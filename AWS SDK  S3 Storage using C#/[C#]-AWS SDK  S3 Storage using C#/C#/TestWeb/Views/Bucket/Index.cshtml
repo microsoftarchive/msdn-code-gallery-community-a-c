@@ -1,0 +1,50 @@
+﻿@model IEnumerable<TestWeb.Models.BucketModel>
+
+@{
+  ViewBag.Title = "Index";
+}
+
+<h2>S3 Buckets</h2>
+<p style="color:orangered;font-size:medium">@TempData["Error"]</p>
+<p>
+  @Html.ActionLink("Create new Bucket", "Create")
+</p>
+<p>
+  @Html.ActionLink("View S3 Objects", "Index","Upload")
+</p>
+<table class="table">
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.BucketName)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.RegionName)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.CreationDate)
+    </th>
+    <th></th>
+  </tr>
+
+  @foreach (var item in Model)
+  {
+  <tr>
+    <td>
+      @Html.DisplayFor(modelItem => item.BucketName)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.RegionName)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.CreationDate)
+    </td>
+    <td>
+      <a href="@item.Url" target="_blank">Click to visit url</a> |
+      @Html.ActionLink("Delete", "Delete", "Bucket", routeValues: new { bucket = item.BucketName }, htmlAttributes: null)
+      @Html.ActionLink("Add object", "Upload", "Upload", routeValues: new { bucket = item.BucketName }, htmlAttributes: null)
+
+    </td>
+  </tr>
+  }
+
+</table>

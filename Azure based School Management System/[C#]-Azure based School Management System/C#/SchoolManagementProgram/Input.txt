@@ -1,0 +1,2 @@
+﻿John	Doe		22	170	70	Male	Beirut
+Jane	Smith	20	160	60	Female	Beirut

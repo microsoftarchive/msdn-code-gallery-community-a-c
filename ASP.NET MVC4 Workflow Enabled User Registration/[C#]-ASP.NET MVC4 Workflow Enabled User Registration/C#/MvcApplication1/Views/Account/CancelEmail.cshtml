@@ -1,0 +1,30 @@
+﻿@model MvcApplication1.Models.CancelModel
+
+
+@{
+    ViewBag.Title = "Cancel Registration";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Use the form below to cancel your registration.</h2>
+</hgroup>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm((string)ViewBag.FormAction, "Account")) {
+    @Html.ValidationSummary(false, "Account cancellation was unsuccessful. Please correct the errors and try again.")
+
+    <fieldset>
+        <legend>Cancellation Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email)
+            </li>
+        </ol>
+        <input type="submit" value="Submit" />
+    </fieldset>
+}

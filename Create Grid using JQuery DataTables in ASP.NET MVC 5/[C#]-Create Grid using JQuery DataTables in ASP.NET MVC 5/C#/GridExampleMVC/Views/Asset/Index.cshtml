@@ -1,0 +1,50 @@
+﻿@model IEnumerable< GridExampleMVC.Models.Asset>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary list-panel" id="list-panel">
+            <div class="panel-heading list-panel-heading">
+                <h1 class="panel-title list-panel-title">Assets</h1>
+            </div>
+            <div class="panel-body">
+                <table id="assets-data-table" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Bar Code</th>
+                            <th>Manufacturer</th>
+                            <th>Model Number</th>
+                            <th>Building</th>
+                            <th>Room No</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var asset in Model)
+                        {
+                            <tr>
+                                <td>@asset.Barcode</td>
+                                <td>@asset.Manufacturer</td>
+                                <td>@asset.ModelNumber</td>
+                                <td>@asset.Building</td>
+                                <td>@asset.RoomNo</td>
+                                <td>@asset.Quantity</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    
+ <script type="text/javascript">
+     $(document).ready(function () {
+
+         $('#assets-data-table').DataTable();
+     });
+    </script>   
+    
+ }

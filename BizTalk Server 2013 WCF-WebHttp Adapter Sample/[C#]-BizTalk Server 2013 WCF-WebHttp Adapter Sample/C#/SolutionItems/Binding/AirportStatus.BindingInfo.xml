@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0" BindingStatus="NoBindings" BoundEndpoints="0" TotalEndpoints="0">
+  <Timestamp>2013-02-27T06:44:19.5717924+01:00</Timestamp>
+  <ModuleRefCollection>
+    <ModuleRef Name="[Application:AirportStatus]" Version="" Culture="" PublicKeyToken="" FullName="[Application:AirportStatus], Version=, Culture=, PublicKeyToken=">
+      <Services />
+      <TrackedSchemas>
+        <Schema FullName="AirportStatus.Demo.Solution.Schemas.PropertySchema" AssemblyQualifiedName="AirportStatus.Demo.Solution.Schemas.PropertySchema,AirportStatus.Demo.Solution.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="AirportStatus.Demo.Solution.Schemas.AirportStatus" RootName="Request" AssemblyQualifiedName="AirportStatus.Demo.Solution.Schemas.AirportStatus,AirportStatus.Demo.Solution.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="AirportStatus.Demo.Solution.Schemas.AirportStatus" RootName="Response" AssemblyQualifiedName="AirportStatus.Demo.Solution.Schemas.AirportStatus,AirportStatus.Demo.Solution.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="AirportStatus.Demo.Solution.Schemas.AirportStatusResponseInstance" RootName="AirportStatus" AssemblyQualifiedName="AirportStatus.Demo.Solution.Schemas.AirportStatusResponseInstance,AirportStatus.Demo.Solution.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+      </TrackedSchemas>
+    </ModuleRef>
+    <ModuleRef Name="AirportStatus.Demo.Solution.Pipelines" Version="1.0.0.0" Culture="neutral" PublicKeyToken="d943142d645507a2" FullName="AirportStatus.Demo.Solution.Pipelines, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="AirportStatus.Demo.Solution.Schemas" Version="1.0.0.0" Culture="neutral" PublicKeyToken="d943142d645507a2" FullName="AirportStatus.Demo.Solution.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="AirportStatus.Demo.Solution.Transforms" Version="1.0.0.0" Culture="neutral" PublicKeyToken="d943142d645507a2" FullName="AirportStatus.Demo.Solution.Transforms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+  </ModuleRefCollection>
+  <SendPortCollection>
+    <SendPort Name="SP_GetAirportStatus" IsStatic="true" IsTwoWay="true" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="AirportStatus.Demo.Solution.Pipelines.SendPipelineRemoveBody" FullyQualifiedName="AirportStatus.Demo.Solution.Pipelines.SendPipelineRemoveBody, AirportStatus.Demo.Solution.Pipelines, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>http://services.faa.gov/airport/</Address>
+        <TransportType Name="WCF-WebHttp" Capabilities="387" ConfigurationClsid="e5b2de81-de67-4559-869b-20925949a1e0" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;ServiceCertificate vt="8" /&gt;&lt;HttpMethodAndUrl vt="8"&gt;&amp;lt;BtsHttpUrlMapping&amp;gt;
+&amp;lt;Operation Method="GET" Url="status/{airportcode}?format=xml" /&amp;gt;
+&amp;lt;/BtsHttpUrlMapping&amp;gt;&lt;/HttpMethodAndUrl&gt;&lt;ProxyUserName vt="8" /&gt;&lt;ClientCertificate vt="8" /&gt;&lt;EndpointBehaviorConfiguration vt="8"&gt;&amp;lt;behavior name="EndpointBehavior" /&amp;gt;&lt;/EndpointBehaviorConfiguration&gt;&lt;UseAcsAuthentication vt="11"&gt;0&lt;/UseAcsAuthentication&gt;&lt;VariablePropertyMapping vt="8"&gt;&amp;lt;BtsVariablePropertyMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;
+  &amp;lt;Variable Name="AIRPORTCODE" PropertyName="AIRPORTCODE" PropertyNamespace="https://AirportStatus.Demo.Solution.Schemas.PropertySchema" /&amp;gt;
+&amp;lt;/BtsVariablePropertyMapping&amp;gt;&lt;/VariablePropertyMapping&gt;&lt;SecurityMode vt="8"&gt;None&lt;/SecurityMode&gt;&lt;ProxyToUse vt="8"&gt;Default&lt;/ProxyToUse&gt;&lt;TransportClientCredentialType vt="8"&gt;None&lt;/TransportClientCredentialType&gt;&lt;OpenTimeout vt="8"&gt;00:01:00&lt;/OpenTimeout&gt;&lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;&lt;CloseTimeout vt="8"&gt;00:01:00&lt;/CloseTimeout&gt;&lt;SendTimeout vt="8"&gt;00:01:00&lt;/SendTimeout&gt;&lt;MaxReceivedMessageSize vt="3"&gt;65536&lt;/MaxReceivedMessageSize&gt;&lt;HttpHeaders vt="8" /&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="false">
+          <TransportType Name="WCF-WebHttp" Capabilities="387" ConfigurationClsid="e5b2de81-de67-4559-869b-20925949a1e0" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="None" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="BTS.MessageType" Operator="0" Value="http://AirportStatus.Demo.Solution.Schemas.AirportStatus#Request" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms>
+        <Transform FullName="AirportStatus.Demo.Solution.Transforms.AirportStatusRequestToAirPortStatus" AssemblyQualifiedName="AirportStatus.Demo.Solution.Transforms.AirportStatusRequestToAirPortStatus,AirportStatus.Demo.Solution.Transforms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2" />
+      </Transforms>
+      <InboundTransforms>
+        <Transform FullName="AirportStatus.Demo.Solution.Transforms.AirportStatusResponseToAirportStatus" AssemblyQualifiedName="AirportStatus.Demo.Solution.Transforms.AirportStatusResponseToAirportStatus,AirportStatus.Demo.Solution.Transforms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2" />
+      </InboundTransforms>
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>AirportStatus</ApplicationName>
+    </SendPort>
+    <SendPort Name="SP_Archive_Send" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="None" Description="" />
+      <PrimaryTransport>
+        <Address>C:\Projects\AirportStatus.Demo.Solution\Archive_Send\%MessageID%.xml</Address>
+        <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;UseTempFileOnWrite vt="11"&gt;0&lt;/UseTempFileOnWrite&gt;&lt;AllowCacheOnWrite vt="11"&gt;0&lt;/AllowCacheOnWrite&gt;&lt;CopyMode vt="19"&gt;1&lt;/CopyMode&gt;&lt;FileName vt="8"&gt;%MessageID%.xml&lt;/FileName&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2013-01-04T23:00:00</FromTime>
+        <ToTime>2013-01-05T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="false">
+          <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2013-01-04T23:00:00</FromTime>
+        <ToTime>2013-01-05T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="BTS.MessageType" Operator="0" Value="http://AirportStatus.Demo.Solution.Schemas.AirportStatus#Request" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms>
+        <Transform FullName="AirportStatus.Demo.Solution.Transforms.AirportStatusRequestToAirPortStatus" AssemblyQualifiedName="AirportStatus.Demo.Solution.Transforms.AirportStatusRequestToAirPortStatus,AirportStatus.Demo.Solution.Transforms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d943142d645507a2" />
+      </Transforms>
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>AirportStatus</ApplicationName>
+    </SendPort>
+  </SendPortCollection>
+  <DistributionListCollection />
+  <ReceivePortCollection>
+    <ReceivePort Name="WcfReceivePort_BizTalkWcfServiceAirport/AirportService" IsTwoWay="true" BindingOption="0">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="WcfService_BizTalkWcfServiceAirport/AirportService">
+          <Description xsi:nil="true" />
+          <Address>/BizTalkWcfServiceAirport/AirportService.svc</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2000-01-01T00:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2000-01-01T23:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2000-01-01T00:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2000-01-01T23:59:59</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="WCF-WSHttp" Capabilities="899" ConfigurationClsid="2b219014-ba04-4b70-a66b-a8c418b109fd" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;InboundNodeEncoding vt="8"&gt;Xml&lt;/InboundNodeEncoding&gt;&lt;MessageEncoding vt="8"&gt;Text&lt;/MessageEncoding&gt;&lt;EnableTransaction vt="11"&gt;0&lt;/EnableTransaction&gt;&lt;OutboundBodyLocation vt="8"&gt;UseBodyElement&lt;/OutboundBodyLocation&gt;&lt;MaxReceivedMessageSize vt="3"&gt;65536&lt;/MaxReceivedMessageSize&gt;&lt;InboundBodyLocation vt="8"&gt;UseBodyElement&lt;/InboundBodyLocation&gt;&lt;AlgorithmSuite vt="8"&gt;Basic256&lt;/AlgorithmSuite&gt;&lt;OutboundXmlTemplate vt="8"&gt;&amp;lt;bts-msg-body xmlns="http://www.microsoft.com/schemas/bts2007" encoding="xml"/&amp;gt;&lt;/OutboundXmlTemplate&gt;&lt;NegotiateServiceCredential vt="11"&gt;-1&lt;/NegotiateServiceCredential&gt;&lt;EstablishSecurityContext vt="11"&gt;-1&lt;/EstablishSecurityContext&gt;&lt;SecurityMode vt="8"&gt;Message&lt;/SecurityMode&gt;&lt;IncludeExceptionDetailInFaults vt="11"&gt;0&lt;/IncludeExceptionDetailInFaults&gt;&lt;TransportClientCredentialType vt="8"&gt;Windows&lt;/TransportClientCredentialType&gt;&lt;OpenTimeout vt="8"&gt;00:01:00&lt;/OpenTimeout&gt;&lt;MessageClientCredentialType vt="8"&gt;Windows&lt;/MessageClientCredentialType&gt;&lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;&lt;SuspendMessageOnFailure vt="11"&gt;0&lt;/SuspendMessageOnFailure&gt;&lt;CloseTimeout vt="8"&gt;00:01:00&lt;/CloseTimeout&gt;&lt;SendTimeout vt="8"&gt;00:01:00&lt;/SendTimeout&gt;&lt;MaxConcurrentCalls vt="3"&gt;200&lt;/MaxConcurrentCalls&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="None" Description="" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="None" Description="" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>true</Enable>
+          <ReceiveHandler Name="BizTalkServerIsolatedHost" HostTrusted="false">
+            <TransportType Name="WCF-WSHttp" Capabilities="899" ConfigurationClsid="2b219014-ba04-4b70-a66b-a8c418b109fd" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="None" Description="" />
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>0</Tracking>
+      <Transforms />
+      <OutboundTransforms />
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>AirportStatus</ApplicationName>
+    </ReceivePort>
+  </ReceivePortCollection>
+  <PartyCollection xsi:nil="true" />
+</BindingInfo>

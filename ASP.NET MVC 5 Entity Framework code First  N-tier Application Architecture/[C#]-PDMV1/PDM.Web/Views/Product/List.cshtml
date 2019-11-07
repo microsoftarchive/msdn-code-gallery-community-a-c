@@ -1,0 +1,34 @@
+﻿@model IEnumerable<PDM.Model.Product>
+
+@if (Model.Count() == 0)
+{
+    <tr><td>No records found</td></tr>
+}
+else
+{
+    foreach (var item in Model)
+    {
+        @Html.HiddenFor(m => item.PhotoID)
+    <tr>
+        <td>@Html.DisplayFor(m => item.Name)</td>
+        <td>@Html.DisplayFor(m => item.ProductNumber)</td>
+        <td>@Html.DisplayFor(m => item.SellStartDate)</td>
+        <td>
+            <a href="@Url.Action("Details", "Product", new { id = item.ProductID })">
+                <span class="glyphicon glyphicon-th-list" id="details-product"></span>
+            </a>
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", "Product", new {id = item.ProductID })">
+                <span class="glyphicon glyphicon-edit" id="edit-product"></span>
+            </a>
+        </td>
+        <td>
+            <a>
+                <span class="glyphicon glyphicon-remove" id="delete-product" data-id="@item.ProductID"></span>
+            </a>
+        </td>
+    </tr>
+    }
+}
+

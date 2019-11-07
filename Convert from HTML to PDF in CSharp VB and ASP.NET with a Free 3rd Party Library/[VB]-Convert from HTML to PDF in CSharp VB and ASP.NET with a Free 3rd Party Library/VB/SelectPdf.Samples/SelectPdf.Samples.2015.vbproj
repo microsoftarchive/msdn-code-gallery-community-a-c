@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{4C10400D-F58D-472F-A356-180C1D86481F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SelectPdf.Samples</RootNamespace>
+    <AssemblyName>SelectPdf.Samples</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ColorCode, Version=1.0.1.62759, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ColorCode.1.0.1\lib\ColorCode.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Select.HtmlToPdf, Version=19.1.0.0, Culture=neutral, PublicKeyToken=e0ae9f6e27a97018, processorArchitecture=MSIL">
+      <HintPath>..\packages\Select.HtmlToPdf.19.1.0\lib\net40\Select.HtmlToPdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="automatic-bookmarks.aspx" />
+    <Content Include="conversion-delay.aspx" />
+    <Content Include="convert-and-email.aspx" />
+    <Content Include="convert-current-page-to-pdf.aspx" />
+    <Content Include="convert-html-code-to-pdf.aspx" />
+    <Content Include="convert-url-to-pdf.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="files\classic.css" />
+    <Content Include="files\css.css" />
+    <Content Include="files\document.html" />
+    <Content Include="files\document2.html" />
+    <Content Include="files\footer.html" />
+    <Content Include="files\header.html" />
+    <Content Include="files\html5.js" />
+    <Content Include="files\ie.css" />
+    <Content Include="files\jquery-migrate.min.js" />
+    <Content Include="files\jquery.js" />
+    <Content Include="files\js-conversion.html" />
+    <Content Include="files\logo.png" />
+    <Content Include="files\navigation.js" />
+    <Content Include="files\style.css" />
+    <Content Include="files\tfg_style.css" />
+    <Content Include="html-to-pdf-converter-links.aspx" />
+    <Content Include="html-to-pdf-converter.aspx" />
+    <Content Include="html-to-pdf-headers-and-footers.aspx" />
+    <Content Include="http-cookies.aspx" />
+    <Content Include="http-headers.aspx" />
+    <Content Include="http-post-request.aspx" />
+    <Content Include="media-types.aspx" />
+    <Content Include="page-breaks.aspx" />
+    <Content Include="pdf-converter-properties.aspx" />
+    <Content Include="pdf-converter-security.aspx" />
+    <Content Include="pdf-converter-viewer-preferences.aspx" />
+    <Content Include="view-http-cookies.aspx" />
+    <Content Include="view-http-headers.aspx" />
+    <Content Include="view-http-post-data.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="automatic-bookmarks.aspx.designer.vb">
+      <DependentUpon>automatic-bookmarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="automatic-bookmarks.aspx.vb">
+      <DependentUpon>automatic-bookmarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="conversion-delay.aspx.designer.vb">
+      <DependentUpon>conversion-delay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="conversion-delay.aspx.vb">
+      <DependentUpon>conversion-delay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="convert-and-email.aspx.designer.vb">
+      <DependentUpon>convert-and-email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="convert-and-email.aspx.vb">
+      <DependentUpon>convert-and-email.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="convert-current-page-to-pdf.aspx.designer.vb">
+      <DependentUpon>convert-current-page-to-pdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="convert-current-page-to-pdf.aspx.vb">
+      <DependentUpon>convert-current-page-to-pdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="convert-html-code-to-pdf.aspx.designer.vb">
+      <DependentUpon>convert-html-code-to-pdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="convert-html-code-to-pdf.aspx.vb">
+      <DependentUpon>convert-html-code-to-pdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="convert-url-to-pdf.aspx.designer.vb">
+      <DependentUpon>convert-url-to-pdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="convert-url-to-pdf.aspx.vb">
+      <DependentUpon>convert-url-to-pdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helper.vb" />
+    <Compile Include="html-to-pdf-converter-links.aspx.designer.vb">
+      <DependentUpon>html-to-pdf-converter-links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html-to-pdf-converter-links.aspx.vb">
+      <DependentUpon>html-to-pdf-converter-links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html-to-pdf-converter.aspx.designer.vb">
+      <DependentUpon>html-to-pdf-converter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html-to-pdf-converter.aspx.vb">
+      <DependentUpon>html-to-pdf-converter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html-to-pdf-headers-and-footers.aspx.designer.vb">
+      <DependentUpon>html-to-pdf-headers-and-footers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html-to-pdf-headers-and-footers.aspx.vb">
+      <DependentUpon>html-to-pdf-headers-and-footers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="http-cookies.aspx.designer.vb">
+      <DependentUpon>http-cookies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="http-cookies.aspx.vb">
+      <DependentUpon>http-cookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="http-headers.aspx.designer.vb">
+      <DependentUpon>http-headers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="http-headers.aspx.vb">
+      <DependentUpon>http-headers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="http-post-request.aspx.designer.vb">
+      <DependentUpon>http-post-request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="http-post-request.aspx.vb">
+      <DependentUpon>http-post-request.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="media-types.aspx.designer.vb">
+      <DependentUpon>media-types.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="media-types.aspx.vb">
+      <DependentUpon>media-types.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="page-breaks.aspx.designer.vb">
+      <DependentUpon>page-breaks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page-breaks.aspx.vb">
+      <DependentUpon>page-breaks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pdf-converter-properties.aspx.designer.vb">
+      <DependentUpon>pdf-converter-properties.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pdf-converter-properties.aspx.vb">
+      <DependentUpon>pdf-converter-properties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pdf-converter-security.aspx.designer.vb">
+      <DependentUpon>pdf-converter-security.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pdf-converter-security.aspx.vb">
+      <DependentUpon>pdf-converter-security.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pdf-converter-viewer-preferences.aspx.designer.vb">
+      <DependentUpon>pdf-converter-viewer-preferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pdf-converter-viewer-preferences.aspx.vb">
+      <DependentUpon>pdf-converter-viewer-preferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples.Master.designer.vb">
+      <DependentUpon>Samples.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Samples.Master.vb">
+      <DependentUpon>Samples.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view-http-cookies.aspx.designer.vb">
+      <DependentUpon>view-http-cookies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view-http-cookies.aspx.vb">
+      <DependentUpon>view-http-cookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view-http-headers.aspx.designer.vb">
+      <DependentUpon>view-http-headers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view-http-headers.aspx.vb">
+      <DependentUpon>view-http-headers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view-http-post-data.aspx.designer.vb">
+      <DependentUpon>view-http-post-data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view-http-post-data.aspx.vb">
+      <DependentUpon>view-http-post-data.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="files\doc.pdf" />
+    <Content Include="files\doc1.pdf" />
+    <Content Include="files\doc2.pdf" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Samples.Master" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60776/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

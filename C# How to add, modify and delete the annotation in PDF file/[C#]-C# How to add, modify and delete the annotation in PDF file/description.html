@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.4.0.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=B4594652562F4A360060B480B3676CD8" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=278A9BE8C165EB5FE01E0496D97E4AE5" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>C# How to add, modify and delete the annotation in PDF file</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>C# How to add, modify and delete the annotation in PDF file</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, .NET, Class Library, c# control, PDF API
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, Class Library, PDF, .Net Programming, PDF annotation
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">2/8/2018</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>An annotation conveys additional and significant information to the readers, it provides us a choice to edit and enrich the document freely. This sample project will show you how to deal with the annotations with the help of component Free Spire.PDF for
+ .NET in C#.</p>
+<p><strong>The tools you need</strong>: Free Spire.PDF for .NET</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Visual Studio 2013</p>
+<p><strong>Preparation:</strong> Download and install the component from the <a href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://www.e-iceblue.com/Download/download-pdf-for-net-free.html">
+official website</a>, and add the Spire.PDF.dll into the program assemblies as a reference. You can get the details from the full code below.</p>
+<p>The full code:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">编辑脚本</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using Spire.Pdf;
+using Spire.Pdf.General.Find;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;
+using Spire.Pdf.Annotations;
+using Spire.Pdf.Graphics;
+
+namespace Annotation_PDF
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Initialize an instance of PdfDocument class and load the file
+            PdfDocument doc = new PdfDocument();
+            doc.LoadFromFile(@&quot;C:\Users\Administrator\Desktop\sample.pdf&quot;);
+
+            //Get the first page
+            PdfPageBase page = doc.Pages[0];
+
+            //Call the FindText() method to  find the text  where you need to add annotation      
+      PdfTextFind[] results = page.FindText(&quot;IPCC&quot;).Finds;
+
+            //Specify the location of annotation
+            float x = results[0].Position.X - doc.PageSettings.Margins.Top;
+            float y = results[0].Position.Y - doc.PageSettings.Margins.Left &#43; results[0].Size.Height - 23;
+
+            //Create the pop-up annotation
+            RectangleF rect = new RectangleF(x, y, 15, 0);
+            PdfPopupAnnotation popupAnnotation = new PdfPopupAnnotation(rect);
+
+            //Add the text into the annotation and set the icon and color
+            popupAnnotation.Text = &quot;IPCC,This is a scientific and intergovernmental body under the auspices of the United Nations.&quot;;
+            popupAnnotation.Icon = PdfPopupIcon.Help;
+            popupAnnotation.Color = Color.SandyBrown;
+
+            //Add the annotation to the PDF file
+            page.AnnotationsWidget.Add(popupAnnotation);
+
+            //Save the file and view
+            doc.SaveToFile(&quot;Annotation.pdf&quot;);
+            <a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Diagnostics.Process.Start.aspx"  title="Auto generated link to System.Diagnostics.Process.Start">System.Diagnostics.Process.Start</a>(&quot;Annotation.pdf&quot;);
+        }
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;Spire.Pdf;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Spire.Pdf.General.Find;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Spire.Pdf.Annotations;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Spire.Pdf.Graphics;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;Annotation_PDF&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">class</span>&nbsp;Program&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Main(<span class="cs__keyword">string</span>[]&nbsp;args)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Initialize&nbsp;an&nbsp;instance&nbsp;of&nbsp;PdfDocument&nbsp;class&nbsp;and&nbsp;load&nbsp;the&nbsp;file</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PdfDocument&nbsp;doc&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;PdfDocument();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doc.LoadFromFile(@<span class="cs__string">&quot;C:\Users\Administrator\Desktop\sample.pdf&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Get&nbsp;the&nbsp;first&nbsp;page</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PdfPageBase&nbsp;page&nbsp;=&nbsp;doc.Pages[<span class="cs__number">0</span>];&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Call&nbsp;the&nbsp;FindText()&nbsp;method&nbsp;to&nbsp;&nbsp;find&nbsp;the&nbsp;text&nbsp;&nbsp;where&nbsp;you&nbsp;need&nbsp;to&nbsp;add&nbsp;annotation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PdfTextFind[]&nbsp;results&nbsp;=&nbsp;page.FindText(<span class="cs__string">&quot;IPCC&quot;</span>).Finds;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Specify&nbsp;the&nbsp;location&nbsp;of&nbsp;annotation</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">float</span>&nbsp;x&nbsp;=&nbsp;results[<span class="cs__number">0</span>].Position.X&nbsp;-&nbsp;doc.PageSettings.Margins.Top;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">float</span>&nbsp;y&nbsp;=&nbsp;results[<span class="cs__number">0</span>].Position.Y&nbsp;-&nbsp;doc.PageSettings.Margins.Left&nbsp;&#43;&nbsp;results[<span class="cs__number">0</span>].Size.Height&nbsp;-&nbsp;<span class="cs__number">23</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Create&nbsp;the&nbsp;pop-up&nbsp;annotation</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RectangleF&nbsp;rect&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;RectangleF(x,&nbsp;y,&nbsp;<span class="cs__number">15</span>,&nbsp;<span class="cs__number">0</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PdfPopupAnnotation&nbsp;popupAnnotation&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;PdfPopupAnnotation(rect);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Add&nbsp;the&nbsp;text&nbsp;into&nbsp;the&nbsp;annotation&nbsp;and&nbsp;set&nbsp;the&nbsp;icon&nbsp;and&nbsp;color</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;popupAnnotation.Text&nbsp;=&nbsp;<span class="cs__string">&quot;IPCC,This&nbsp;is&nbsp;a&nbsp;scientific&nbsp;and&nbsp;intergovernmental&nbsp;body&nbsp;under&nbsp;the&nbsp;auspices&nbsp;of&nbsp;the&nbsp;United&nbsp;Nations.&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;popupAnnotation.Icon&nbsp;=&nbsp;PdfPopupIcon.Help;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;popupAnnotation.Color&nbsp;=&nbsp;Color.SandyBrown;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Add&nbsp;the&nbsp;annotation&nbsp;to&nbsp;the&nbsp;PDF&nbsp;file</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;page.AnnotationsWidget.Add(popupAnnotation);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Save&nbsp;the&nbsp;file&nbsp;and&nbsp;view</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doc.SaveToFile(<span class="cs__string">&quot;Annotation.pdf&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Diagnostics.Process.Start.aspx"  title="Auto generated link to System.Diagnostics.Process.Start">System.Diagnostics.Process.Start</a>(<span class="cs__string">&quot;Annotation.pdf&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Run the program and you will get the result like below:</p>
+<p><strong>Screenshot:</strong></p>
+<h1><img id="184489" src="description/12.png" alt="" width="780" height="497"></h1>
+<p>&nbsp;</p>
+<p><strong>2. How to modify the existing annotation?</strong></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">编辑脚本</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using Spire.Pdf;
+using Spire.Pdf.Annotations;
+using Spire.Pdf.Graphics;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;
+
+namespace ModifyAnnotation_PDF
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Initialize an instance of PdfDocument class and load the file
+            PdfDocument pdf = new PdfDocument(@&quot;C:\Users\Administrator\Desktop\Annotation.pdf&quot;);
+
+            //Get the first annotation in the first page
+            PdfAnnotation annotation = pdf.Pages[0].AnnotationsWidget[0];
+
+            //Add the modified text and set the formatting
+            annotation.Text = &quot; Dedicate to the task of providing the world with an objective, scientific view of climate change and its political and economic impacts.&quot;;
+            annotation.Border = new PdfAnnotationBorder(1f);
+            annotation.Color = new PdfRGBColor(Color.LightGreen);
+            annotation.Flags = PdfAnnotationFlags.Locked;
+
+            //Save the file and view
+            pdf.SaveToFile(&quot;result.pdf&quot;);
+            <a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Diagnostics.Process.Start.aspx"  title="Auto generated link to System.Diagnostics.Process.Start">System.Diagnostics.Process.Start</a>(&quot;result.pdf&quot;);
+        }
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;Spire.Pdf;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Spire.Pdf.Annotations;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Spire.Pdf.Graphics;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;ModifyAnnotation_PDF&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">class</span>&nbsp;Program&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Main(<span class="cs__keyword">string</span>[]&nbsp;args)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Initialize&nbsp;an&nbsp;instance&nbsp;of&nbsp;PdfDocument&nbsp;class&nbsp;and&nbsp;load&nbsp;the&nbsp;file</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PdfDocument&nbsp;pdf&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;PdfDocument(@<span class="cs__string">&quot;C:\Users\Administrator\Desktop\Annotation.pdf&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Get&nbsp;the&nbsp;first&nbsp;annotation&nbsp;in&nbsp;the&nbsp;first&nbsp;page</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PdfAnnotation&nbsp;annotation&nbsp;=&nbsp;pdf.Pages[<span class="cs__number">0</span>].AnnotationsWidget[<span class="cs__number">0</span>];&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Add&nbsp;the&nbsp;modified&nbsp;text&nbsp;and&nbsp;set&nbsp;the&nbsp;formatting</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;annotation.Text&nbsp;=&nbsp;<span class="cs__string">&quot;&nbsp;Dedicate&nbsp;to&nbsp;the&nbsp;task&nbsp;of&nbsp;providing&nbsp;the&nbsp;world&nbsp;with&nbsp;an&nbsp;objective,&nbsp;scientific&nbsp;view&nbsp;of&nbsp;climate&nbsp;change&nbsp;and&nbsp;its&nbsp;political&nbsp;and&nbsp;economic&nbsp;impacts.&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;annotation.Border&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;PdfAnnotationBorder(1f);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;annotation.Color&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;PdfRGBColor(Color.LightGreen);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;annotation.Flags&nbsp;=&nbsp;PdfAnnotationFlags.Locked;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Save&nbsp;the&nbsp;file&nbsp;and&nbsp;view</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pdf.SaveToFile(<span class="cs__string">&quot;result.pdf&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Diagnostics.Process.Start.aspx"  title="Auto generated link to System.Diagnostics.Process.Start">System.Diagnostics.Process.Start</a>(<span class="cs__string">&quot;result.pdf&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Screenshot:</strong></p>
+<p><img id="184491" src="description/13.png" alt="" width="754" height="484"></p>
+<p>&nbsp;</p>
+<p><strong>3. How to delete the annotation?</strong></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">编辑脚本</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using Spire.Pdf;
+
+namespace DeleteAnnotation_PDF
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Create an object of PdfDocument class and load the PDF 
+            PdfDocument document = new PdfDocument();
+            document.LoadFromFile(@&quot;C:\Users\Administrator\Desktop\Annotation.pdf&quot;);
+
+            //Get the first annotation in the first page and remove it
+            document.Pages[0].AnnotationsWidget.RemoveAt(0);
+
+            //Save the file and view
+            document.SaveToFile(&quot;output.pdf&quot;);
+            <a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Diagnostics.Process.Start.aspx"  title="Auto generated link to System.Diagnostics.Process.Start">System.Diagnostics.Process.Start</a>(&quot;output.pdf&quot;);
+        }
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;Spire.Pdf;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;DeleteAnnotation_PDF&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">class</span>&nbsp;Program&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">static</span><span class="cs__keyword">void</span>&nbsp;Main(<span class="cs__keyword">string</span>[]&nbsp;args)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Create&nbsp;an&nbsp;object&nbsp;of&nbsp;PdfDocument&nbsp;class&nbsp;and&nbsp;load&nbsp;the&nbsp;PDF&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PdfDocument&nbsp;document&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;PdfDocument();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.LoadFromFile(@<span class="cs__string">&quot;C:\Users\Administrator\Desktop\Annotation.pdf&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Get&nbsp;the&nbsp;first&nbsp;annotation&nbsp;in&nbsp;the&nbsp;first&nbsp;page&nbsp;and&nbsp;remove&nbsp;it</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.Pages[<span class="cs__number">0</span>].AnnotationsWidget.RemoveAt(<span class="cs__number">0</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Save&nbsp;the&nbsp;file&nbsp;and&nbsp;view</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.SaveToFile(<span class="cs__string">&quot;output.pdf&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://msdn.microsoft.com/en-US/library/System.Diagnostics.Process.Start.aspx"  title="Auto generated link to System.Diagnostics.Process.Start">System.Diagnostics.Process.Start</a>(<span class="cs__string">&quot;output.pdf&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;</pre>
+</div>
+</div>
+</div>
+<p>Run the program and the annotation has been removed.</p>
+<p><strong>Useful information</strong></p>
+<p><strong>Spire.PDF for .NET</strong> is a professional PDF component applied to creating, writing, editing, handling and reading PDF files without any external dependencies within .NET application.</p>
+<p>Many rich features can be supported by the .NET PDF API, such as security setting (including digital signature), PDF text/attachment/image extract, PDF merge/split, metadata update, section, graph/image drawing and inserting, table creation and processing,
+ and importing data etc. Besides, Spire.PDF for .NET can be applied to easily converting Text, Image and HTML to PDF with C#/VB.NET in high quality.</p>
+<p><strong>Related links</strong></p>
+<p>Website: <a href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://www.e-iceblue.com/">https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://www.e-iceblue.com/</a></p>
+<p>Forum:<a href="https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://www.e-iceblue.com/forum/spire-pdf-f7.html">&nbsp;https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://code.msdn.microsoft.com/C-How-to-add-modify-and-e311730d/https://www.e-iceblue.com/forum/spire-pdf-f7.html</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

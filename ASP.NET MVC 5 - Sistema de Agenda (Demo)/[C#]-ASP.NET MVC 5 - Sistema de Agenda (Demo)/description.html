@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/04f9c26e-88fd-4dfd-b715-9733d17420b6Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ASP.NET MVC 5 - Sistema de Agenda (Demo Palestra .NETCODERS)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>ASP.NET MVC 5 - Sistema de Agenda (Demo Palestra .NETCODERS)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Tecnologias">Tecnologias</label>
+                        <div id="Tecnologias">
+                            C#, Bootstrap, Visual Studio 2013, Entity Framework 5, ASP.NET MVC 5, Bootswatch, SQL Server 2014, Layers e Pattern
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="T&#243;picos">T&#243;picos</label>
+                        <div id="T&#243;picos">
+                            ASP.NET MVC 5
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        Web Essentials 2013
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">pt-BR</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">&#218;ltima Atualiza&#231;&#227;o</label>
+                    <div id="LastUpdated">27/01/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">Licen&#231;a</label>
+                    <div id="License">
+                        <a href="license.rtf">Licen&#231;a do Apache, Vers&#227;o 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/ASPNET-MVC-5-Sistema-de-ae13e51f">Exiba este exemplo online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copiar c&#243;digo';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>&nbsp;</p>
+<h1>ASP.NET MVC 5.</h1>
+<p><em>Com a lan&ccedil;amento do Visual Studio 2013 a comunidade de desenvolvimento Web olha para a nova vers&atilde;o de framework Web da Microsoft com brilho nos olhos.</em></p>
+<p><em>O ASP.NET MVC 5 veio para dominar o desenvolvimento para Web, tornando o que era bom ainda melhor.</em></p>
+<p><em><br>
+</em></p>
+<h1><span>A Demo.</span></h1>
+<p><em>Este exemplo de c&oacute;digo em Visual C# com .NET, ASP.NET MVC 5, Twitter Bootstrap (Framework para desenvolvimento Web Front End agil), Bootswatch (C&oacute;digo CSS temas para o Bootstrap) e Entity Framework 5.0, Simula um pequeno sistema de agenda,
+ onde voc&ecirc; pode salvar seus eventos e visualiz&aacute;-los</em></p>
+<p><em><br>
+</em></p>
+<p><span style="font-size:20px; font-weight:bold">.NET CODERS</span></p>
+<p><em>Esta palestra foi uma realiza&ccedil;&atilde;o do grupo de estudantes e desenvolvedores Brasileiros totalmente presencial e gratuita.</em></p>
+<p><em><br>
+</em></p>
+<h1><span>Camadas do Sistema e suas Responsabilidades.</span></h1>
+<ul>
+<li><em>Model - Camada respons&aacute;vel por distribuir reflexivamente as classes e suas propriedades para as demais camadas.</em>
+</li><li><em>Business - Camada respons&aacute;vel por aplicar regras de neg&oacute;cio, valida&ccedil;&otilde;es, fun&ccedil;&otilde;es b&aacute;sicas do sistema e tratamento de excess&otilde;es.</em>
+</li><li><em>Repository - Camada de conversa&ccedil;&atilde;o, ou seja respons&aacute;vel por transmitir os dados, opera&ccedil;&otilde;s CRUD.</em>
+</li><li><em>Data Access - Camada de acesso a base de dados, no caso da demo usamos o ORM EntityFramework 5.0.</em>
+</li></ul>
+<p>&nbsp;</p>
+<h1>Mais Informa&ccedil;&otilde;es.</h1>
+<p><em>Para mais informa&ccedil;&otilde;es, entre em contato:</em></p>
+<p><em>E-mail: anderson.anzileiro@live.com</em></p>
+<p><em>Blog: http://andersonanzileiro.wordpress.com.br</em></p>
+<p><em>Site Grupo:&nbsp;http://netcoders.com.br/</em></p>
+<p><em>SlideShare:&nbsp;http://pt.slideshare.net/andersonluis39948</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

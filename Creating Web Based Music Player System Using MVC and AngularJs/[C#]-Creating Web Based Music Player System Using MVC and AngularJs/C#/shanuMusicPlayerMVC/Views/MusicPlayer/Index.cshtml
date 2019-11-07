@@ -1,0 +1,342 @@
+﻿<style>
+    .actualColor {
+        background-color: #4cff00;
+        color: #9F000F;
+        border: solid 1px #659EC7;
+        cursor: pointer;
+        font-size: x-large;
+    }
+
+    .changeColor1 {
+        background-color: #ff0000;
+        color: #FFFFFF;
+        border: solid 1px #659EC7;
+        font-size: x-large;
+        cursor: pointer;
+    }
+
+
+    .actualColor2 {
+        background-color: #ffffff;
+        color: #9F000F;
+        cursor: pointer;
+        font-size: x-large;
+    }
+
+    .changeColor2 {
+        background-color: #ffd800;
+        color: #FFFFFF;
+        border: dashed 1px #659EC7;
+        font-size: x-large;
+        cursor: pointer;
+    }
+</style>
+<html data-ng-app="AngularJs_Module">
+@{
+    ViewBag.Title = "SHANU Music Player";
+}
+<body data-ng-controller="AngularJs_Controller">
+    <img src="~/Images/blank.gif" alt="" width="1" height="10" />
+
+    <table width="99%" style=" border-bottom:3px solid #3273d5;">
+        <tr>
+
+            <td width="190">
+                <table width="99%">
+                    <tr>
+                        <td>
+                            Welcome Mr. {{'SHANU'}}
+
+                        </td>
+
+
+                    </tr>
+                </table>
+            </td>
+            <td class="style1" align="center">
+                <h3>Shanu Music Player using MVC & AngularJS  :)</h3>
+            </td>
+            <td align="right">
+                <div>
+                    Today Date is :
+                    {{date | date:'yyyy-MM-dd'}}
+                </div>
+
+            </td>
+        </tr>
+    </table>
+
+    <img src="~/Images/blank.gif" alt="" width="1" height="2" />
+    <table id="tblContainer" style='width: 99%;table-layout:fixed;'>       
+                  <tr >
+                        <td colspan="2">
+                            <table style="width: 99%; background-color:#FFFFFF; borderdashed 3px #6D7B8D; padding 5px;width 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                                <tr style="height: 30px; background-color:#6cb137 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                    <td>
+                                        <h3> Manage Music Details Add/Edit ,Upload Music Details</h3>
+                                    </td>
+                                </tr>
+                                <tr>                                   
+                                    <td valign="top">
+                                        <form novalidate name="f2" ng-submit="saveMusicDetails()">
+                                            <table style="color:#9F000F;font-size:large" cellpadding="4" cellspacing="6">
+
+                                                <tr>
+                                                    <td>
+                                                        <b>Music Identity ID: </b>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <input type="text" name="txtmusicID" ng-model="musicID" value="0" style="background-color:tan" readonly />
+                                                        <br />
+
+                                                    </td>
+                                                    <td>
+                                                        <b>Singer Name : </b>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <input type="text" name="txtSingerName" ng-model="SingerName" placeholder="Singer Name ID..." required />
+                                                        <br />
+                                                        <span class="error" ng-show="(f2.file.$dirty || IsFormSubmitted) && f2.txtSingerName.$error.required">Singer Name Required!</span>
+
+                                                    </td>
+
+                                                   
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td>
+                                                        <b> Album Name: </b>
+                                                    </td>
+
+                                                    <td>
+                                                        <select name="opSelect" id="opSelect" ng-model="AlbumNameS">
+                                                            <option value="" selected>-- Select --</option>
+                                                            <option ng-repeat="option in AlbumData" value="{{option.AlbumName}}">{{option.AlbumName}}</option>
+
+                                                        </select>
+                                                        <br />
+                                                        <span class="error" ng-show="(f2.file.$dirty || IsFormSubmitted) && f2.opSelect.$error.required">Select Album!</span>
+
+                                                    </td>
+                                                  
+
+
+                                                    <td>
+                                                        <b> Music File Upload: </b>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <input type="file" name="file" accept="mp3/*" onchange="angular.element(this).scope().selectmp3FileforUpload(this.files)" required />
+                                                        <span class="error" ng-show="(f2.file.$dirty || IsFormSubmitted) && f2.file.$error.required">Music File required!</span>
+                                                        <span class="error">{{FileInvalidMessage}}</span>
+
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <b>Description: </b>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <input type="text" name="txtDescription" ng-model="Description" placeholder="Description..." required />
+                                                        <br />
+                                                        <span class="error" ng-show="(f2.file.$dirty || IsFormSubmitted) && f1.txtDescription.$error.required">Description required!</span>
+
+                                                    </td>                                               
+                                                   
+                                                    <td colspan="2">
+                                                        <input type="submit" value="Save Music" style="background-color:#e20952;color:#FFFFFF" required />
+                                                    </td>
+                                                </tr>
+
+
+
+                                            </table>
+
+                                        </form>
+                                    
+                                    </td>
+                                </tr>
+                                </table>
+                         </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+
+                            <table style="width: 99%; background-color:#FFFFFF; border solid 2px #6D7B8D; padding 5px;width 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+
+                                <tr style="height: 30px; background-color:#476444 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                    <td width="40" align="center"><b>Edit</b></td>
+                                    <td width="40" align="center"><b>Delete</b></td>
+                                    <td width="100" align="center"><b>Singer Name </b></td>
+                                    <td width="120" align="center"><b>Album Name</b></td>
+                                    <td width="120" align="center"><b>MusicFileName</b></td>
+                                    <td width="120" align="center"><b>Description</b></td>
+                                </tr>
+                                <tbody data-ng-repeat="details in MusicData">
+                                    <tr>
+
+                                        <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">
+                                                <img src="~/Images/edit.gif" alt="Edit" width="24px" height="24px" ng-click="MusicEdit(details.MusicID, details.SingerName, details.AlbumName, details.MusicFileName, details.Description)">
+                                            
+                                            </span>
+                                        </td>
+
+                                        <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">
+                                                <img src="~/Images/delete.gif" alt="Delete" width="24px" height="24px" ng-click="MusicDelete(details.MusicID)">
+                                            </span>
+                                        </td>
+
+                                        <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">{{details.SingerName}}</span>
+                                        </td>
+
+                                        <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">{{details.AlbumName}}</span>
+                                        </td>
+
+                                        <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">{{details.MusicFileName}}</span>
+                                        </td>
+                                        <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">{{details.Description}}</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </td>
+                    </tr>
+
+        </table>
+    <img src="~/Images/blank.gif" alt="" width="1" height="2" />
+    <table   style='width: 99%;table-layout:fixed;'>
+        <tr>
+            <td colspan="2">
+                <table style="width: 99%; background-color:#FFFFFF; border dashed 3px #6D7B8D; padding 5px;width 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                    <tr style="height: 30px; background-color:#e20952 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td >
+                            <h3> Manage Album Details</h3>
+                        </td>
+
+                    </tr>
+                    </table>
+            </td>
+        </tr>
+        <tr>
+            <td width="40%" valign="top">
+                <form novalidate name="f1" ng-submit="saveAlbum()">
+                    <table style="color:#9F000F;font-size:large" cellpadding="4" cellspacing="6">
+
+                        <tr>
+                            <td>
+                                <b>Album ID: </b>
+                            </td>
+
+                            <td>
+
+                                <input type="text" name="txtAlbumIdentitys" ng-model="AlbumIdentitys" value="0" style="background-color:tan" readonly />
+                                <br />
+
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <b> Album Name : </b>
+                            </td>
+
+
+                            <td>
+
+                                <input type="text" name="txtAlbumName" ng-model="AlbumName" placeholder="Album Name ..." required />
+                                <br />
+                                <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.txtAlbumName.$error.required">Album Name required!</span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Select Album Image File : </b>
+                            </td>
+
+                            <td>
+                                <input type="file" name="file" accept="image/*" onchange="angular.element(this).scope().selectFileforUpload(this.files)" required />
+                                <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.file.$error.required">Image required!</span>
+                                <span class="error">{{FileInvalidMessage}}</span>
+
+                                <br />
+
+                            </td>
+
+
+                        <tr>
+
+                            <td colspan="2">
+                                <input type="submit" value="Save Album" style="background-color:#407531;color:#FFFFFF" required />
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+
+                </form>
+
+            </td>
+
+
+            <td valign="top">
+
+                <table style="width: 70%; background-color:#FFFFFF;bordersolid 2px #6D7B8D; padding 5px;width 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+
+                    <tr style="height: 30px; background-color:#5e2f50 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td width="40" align="center"><b>ID </b></td>
+                        <td width="120" align="center"><b>Album Name</b></td>
+                        <td width="50" align="center"><b>Image</b></td>
+
+                    </tr>
+                    <tbody data-ng-repeat="details in AlbumData">
+                        <tr>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">{{details.AlbumID}}</span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">{{details.AlbumName}}</span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <img src="~/uploads/{{details.ImageName}}" alt="{{details.ImageName}}" width="48px" height="48px">
+                            </td>
+
+
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+    
+     
+</body>
+</html>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-animate.js"></script>
+<script src="~/Scripts/angular-animate.min.js"></script>
+<script src="~/Scripts/MYAngular/controller.js"></script>

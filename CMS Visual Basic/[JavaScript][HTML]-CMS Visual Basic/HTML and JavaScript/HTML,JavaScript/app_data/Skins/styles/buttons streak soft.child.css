@@ -1,0 +1,13 @@
+th, .Button, input[type='submit'], input[type='reset'], input[type='button']
+{
+	background-image:url('resources/images/backgrounds/vertical streak soft.png');
+	background-repeat:repeat;
+	background-attachment:scroll;
+	background-position:center bottom;
+	border-style:none;
+}
+
+.Button:hover, input[type='submit']:hover, input[type='reset']:hover, input[type='button']:hover
+{	
+	border-style:none;
+}

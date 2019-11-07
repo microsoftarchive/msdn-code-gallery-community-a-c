@@ -1,0 +1,70 @@
+8	Elizabeth Jean	Andersen	(123)555-0100	Purchasing Representative	Company H	2522,00	1
+							0
+18	Catherine	Autier Miconi	(123)555-0100	Purchasing Representative	Company R	250000,00	1
+							0
+3	Thomas	Axen	(123)555-0100	Purchasing Representative	Company C	-5200,00	0
+17	Jean Philippe	Bagel	(444) 444-444	Owner	Company Q	-5925,00	0
+							0
+1	Anna	Bedecs	(111) 111-111	Owner	Company A	-2500,00	0
+							
+12	John Robert	Edwards	(123)555-0100	Purchasing Manager	Company L	12525,00	1
+							
+19	Alexander P.	Eggerer	(123)555-0100	Accounting Assistant	Company ttt	130000,00	0
+							
+23	Michael	Entin	(123)555-0100	Purchasing Manager	Company W	-2525,00	0
+							
+16	Daniel	Goldschmidt	(123)555-0100	Purchasing Representative	Company P	15000,00	0
+							
+2	Antonio Jose	Gratacos Solsona	(111)111-1111	Owner	Company B	2300,00	0
+							
+14	Carlos	Grilo	(123)555-0100	Purchasing Representative	Company N	323200,00	0
+							
+24	Jonas	Hasselberg	(123)555-0100	Owner	Company X	324400,00	0
+							
+11	Peter	Krschne	(123)555-0100	Purchasing Manager	Company K	434300,00	0
+							
+15	Helena	Kupkova	(123)555-0100	Purchasing Manager	Company O	4343400,00	0
+							
+4	Christina	Lee	(123)555-0100	Purchasing Manager	Company D	4300,00	1
+							
+29	Soo Jung	Lee	(123)555-0100	Purchasing Manager	Company CC	434300,00	0
+							
+20	George	Li	(123)555-0100	Purchasing Manager	Company T	434300,00	1
+							
+26	Run	Liu	(123)555-0100	Accounting Assistant	Company Z	34300,00	0
+							
+13	Andre	Ludick	(123)555-0100	Purchasing Representative	Company M	34300,00	0
+							
+9	Sven	Mortensen	(123)555-0100	Purchasing Managerfgfgfgf	Company I	3400,00	0
+							
+5	Martin	O?Donnell	(123)555-0100	Owner	Company E	343400,00	0
+							
+6	John	Walker	(123)555-0100	Purchasing Assistant	Company x	250025,00	0
+							
+28	Amritansh	Raghav	(123)555-0100	Purchasing Manager	Company BB	34300,00	0
+							
+22	Luciana	Ramos	(123)555-0100	Purchasing Assistant	Company V gfdgfdgdf	34300,00	0
+							
+25	John	Rodman	(123)555-0100	Purchasing Manager	Company Y	43400,00	0
+							
+21	Bernard	Tham	(123)555-0100	Accounting Manager	Company U	34300,00	0
+							
+27	Karen	Toh	(123)555-0100	Purchasing Manager	Company AA	23200,00	0
+							
+10	Roland	Wacker	(123)555-0100	Purchasing Manager	Company J	65500,00	0
+							
+7	Ming-Yang	Xie	(123)555-0100	Owner	Company G	676700,00	0
+							
+30	John	Carpenter	(123)456-7777	President	NewTeck	233300,00	0
+							
+31	Johan	Roberts				000,00	0
+							
+32	JOHN	PEREZ	(012)222-2222	ASDFASDFASD	MY COMPANY	23223,00	0
+							
+17	Jean Philippe	Bagel	(313)213-1111	Owner	Company Q	800000,00	0
+							
+17	Jean Philippe	Bagel	(313)213-1111	Owner	Company Q	800000,00	0
+							
+33	Johnny	Walker	619	Mr	Big Company	500000,00	0
+							
+17	Jean Philippe	Bagel	(313)213-1111	Owner	Company Q	800000,00	0

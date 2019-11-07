@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TNWiki.BizTalk.Streaming.PipelineComponents", "TNWiki.BizTalk.Streaming.PipelineComponents\TNWiki.BizTalk.Streaming.PipelineComponents.csproj", "{AC66ED76-461D-48DD-BCED-6CC22A400247}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TNWiki.BizTalk.Streaming.Pipelines", "TNWiki.BizTalk.Streaming.Pipelines\TNWiki.BizTalk.Streaming.Pipelines.btproj", "{00756ED2-64E3-437E-B8CB-3147A5F7CAB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TNWiki.BizTalk.Streaming.Schemas", "TNWiki.BizTalk.Streaming.Schemas\TNWiki.BizTalk.Streaming.Schemas.btproj", "{4F1CDD50-B93F-4D6B-9395-319BA6D9F86A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC66ED76-461D-48DD-BCED-6CC22A400247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC66ED76-461D-48DD-BCED-6CC22A400247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC66ED76-461D-48DD-BCED-6CC22A400247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC66ED76-461D-48DD-BCED-6CC22A400247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00756ED2-64E3-437E-B8CB-3147A5F7CAB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00756ED2-64E3-437E-B8CB-3147A5F7CAB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00756ED2-64E3-437E-B8CB-3147A5F7CAB9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{00756ED2-64E3-437E-B8CB-3147A5F7CAB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00756ED2-64E3-437E-B8CB-3147A5F7CAB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00756ED2-64E3-437E-B8CB-3147A5F7CAB9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4F1CDD50-B93F-4D6B-9395-319BA6D9F86A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F1CDD50-B93F-4D6B-9395-319BA6D9F86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F1CDD50-B93F-4D6B-9395-319BA6D9F86A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4F1CDD50-B93F-4D6B-9395-319BA6D9F86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F1CDD50-B93F-4D6B-9395-319BA6D9F86A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F1CDD50-B93F-4D6B-9395-319BA6D9F86A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

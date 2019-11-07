@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Captcha for Windows Application</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Captcha for Windows Application</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, Windows Forms
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            CAPTCHA
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">2/6/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Captcha-for-Windows-c5ea873c">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>captcha in C#.<br>
+</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>It requires two libraries <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a> and System.Drawing.<br>
+</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><img id="107516" src="description/captcha.JPG" alt="" width="304" height="303"></p>
+<h1><strong>Captcha:</strong></h1>
+<p>A CAPTCHA is acronym for <strong>C</strong>omplete <strong>A</strong>utomated <strong>
+P</strong>ublic <strong>T</strong>uring test to tell <strong>C</strong>omputers and
+<strong>H</strong>umans <strong>A</strong>part.</p>
+<p>This term was coined in 2000 by Luis von Ahn,Manuel Blum, Nicholas Hopper and John Langford of Carnegie Mellon University. At the time they developed the first CAPTCHA to be used by Yahoo.</p>
+<p>A CAPTCHA is a program that can generate and grade tests that humans can pass but current computer programs cannot. For Example, humans can read distorted text as the one shown below, but current computer can't.</p>
+<p>This sample explains how to use Captcha in your windows application using c#.</p>
+<p>Captcha is used to restrict autmated form registration/submission of data from unwanted program/virus/spam etc. It ensures the submission done by human being. In this process we are creating dynamically image for verification of 6 character code. The verification
+ code contains alphanumeric, but you can change this as per your requirement.</p>
+<p>We are creating Image Dynamically and Storing in D drive temporary.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>VB Script</span><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vbs</span><span class="hidden">csharp</span>
+<pre class="hidden">Private Sub CreateImage()
+        Dim code As String = GetRandomText()
+        Dim bitmap As New Bitmap(200, 50, PixelFormat.Format32bppArgb)
+        Dim g As Graphics = Graphics.FromImage(bitmap)
+        Dim pen As New Pen(Color.Yellow)
+        Dim rect As New Rectangle(0, 0, 200, 50)
+        Dim b As New SolidBrush(Color.Black)
+        Dim White As New SolidBrush(Color.White)
+        Dim counter As Integer = 0
+        g.DrawRectangle(pen, rect)
+        g.FillRectangle(b, rect)
+        For i As Integer = 0 To code.Length - 1
+            g.DrawString(code(i).ToString(), New Font(&quot;Georgia&quot;, 10 &#43; rand.[Next](14, 18)), White, New PointF(10 &#43; counter, 10))
+            counter &#43;= 20
+        Next
+        DrawRandomLines(g)
+        If File.Exists(&quot;d:/tempimage.bmp&quot;) Then
+            Try
+                File.Delete(&quot;d:/tempimage.bmp&quot;)
+                bitmap.Save(&quot;d:/tempimage.bmp&quot;)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        Else
+            bitmap.Save(&quot;d:/tempimage.bmp&quot;)
+        End If
+        g.Dispose()
+        bitmap.Dispose()
+        PictureBox1.Image = Image.FromFile(&quot;d:/tempimage.bmp&quot;)
+    End Sub</pre>
+<pre class="hidden">private void CreateImage()
+        {
+            string code = GetRandomText();
+            Bitmap bitmap = new Bitmap(200, 50, PixelFormat.Format32bppArgb);
+            Graphics g = Graphics.FromImage(bitmap);
+            Pen pen = new Pen(Color.Yellow);
+            Rectangle rect = new Rectangle(0, 0, 200, 50);
+            SolidBrush b = new SolidBrush(Color.Black);
+            SolidBrush White = new SolidBrush(Color.White);
+            int counter = 0;
+            g.DrawRectangle(pen, rect);
+            g.FillRectangle(b, rect);
+            for (int i = 0; i &lt; code.Length; i&#43;&#43;)
+            {
+                g.DrawString(code[i].ToString(), new Font(&quot;Georgia&quot;, 10 &#43; rand.Next(14, 18)), White, new PointF(10 &#43; counter, 10));
+                counter &#43;= 20;
+            }
+            DrawRandomLines(g);
+            if (File.Exists(&quot;d:/tempimage.bmp&quot;))
+            {
+                try
+                {
+                    File.Delete(&quot;d:/tempimage.bmp&quot;);
+                    bitmap.Save(&quot;d:/tempimage.bmp&quot;);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                bitmap.Save(&quot;d:/tempimage.bmp&quot;);
+            }
+            g.Dispose();
+            bitmap.Dispose();
+            pictureBox1.Image = Image.FromFile(&quot;d:/tempimage.bmp&quot;);
+        }</pre>
+<div class="preview">
+<pre class="vbs"><span class="vbScript__keyword">Private</span>&nbsp;<span class="vbScript__keyword">Sub</span>&nbsp;CreateImage()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Dim</span>&nbsp;code&nbsp;<span class="vbScript__keyword">As</span>&nbsp;<span class="vbScript__keyword">String</span>&nbsp;=&nbsp;GetRandomText()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Dim</span>&nbsp;bitmap&nbsp;<span class="vbScript__keyword">As</span>&nbsp;<span class="vbScript__keyword">New</span>&nbsp;Bitmap(<span class="vbScript__number">200</span>,&nbsp;<span class="vbScript__number">50</span>,&nbsp;PixelFormat.Format32bppArgb)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Dim</span>&nbsp;g&nbsp;<span class="vbScript__keyword">As</span>&nbsp;Graphics&nbsp;=&nbsp;Graphics.FromImage(bitmap)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Dim</span>&nbsp;pen&nbsp;<span class="vbScript__keyword">As</span>&nbsp;<span class="vbScript__keyword">New</span>&nbsp;Pen(Color.Yellow)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Dim</span>&nbsp;rect&nbsp;<span class="vbScript__keyword">As</span>&nbsp;<span class="vbScript__keyword">New</span>&nbsp;Rectangle(<span class="vbScript__number">0</span>,&nbsp;<span class="vbScript__number">0</span>,&nbsp;<span class="vbScript__number">200</span>,&nbsp;<span class="vbScript__number">50</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Dim</span>&nbsp;b&nbsp;<span class="vbScript__keyword">As</span>&nbsp;<span class="vbScript__keyword">New</span>&nbsp;SolidBrush(Color.Black)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Dim</span>&nbsp;White&nbsp;<span class="vbScript__keyword">As</span>&nbsp;<span class="vbScript__keyword">New</span>&nbsp;SolidBrush(Color.White)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Dim</span>&nbsp;counter&nbsp;<span class="vbScript__keyword">As</span>&nbsp;<span class="vbScript__keyword">Integer</span>&nbsp;=&nbsp;<span class="vbScript__number">0</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.DrawRectangle(pen,&nbsp;rect)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.FillRectangle(b,&nbsp;rect)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">For</span>&nbsp;i&nbsp;<span class="vbScript__keyword">As</span>&nbsp;<span class="vbScript__keyword">Integer</span>&nbsp;=&nbsp;<span class="vbScript__number">0</span>&nbsp;<span class="vbScript__keyword">To</span>&nbsp;code.Length&nbsp;-&nbsp;<span class="vbScript__number">1</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.DrawString(code(i).ToString(),&nbsp;<span class="vbScript__keyword">New</span>&nbsp;Font(<span class="vbScript__string">&quot;Georgia&quot;</span>,&nbsp;<span class="vbScript__number">10</span>&nbsp;&#43;&nbsp;rand.[<span class="vbScript__keyword">Next</span>](<span class="vbScript__number">14</span>,&nbsp;<span class="vbScript__number">18</span>)),&nbsp;White,&nbsp;<span class="vbScript__keyword">New</span>&nbsp;PointF(<span class="vbScript__number">10</span>&nbsp;&#43;&nbsp;counter,&nbsp;<span class="vbScript__number">10</span>))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter&nbsp;&#43;=&nbsp;<span class="vbScript__number">20</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Next</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DrawRandomLines(g)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">If</span>&nbsp;File.Exists(<span class="vbScript__string">&quot;d:/tempimage.bmp&quot;</span>)&nbsp;<span class="vbScript__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File.Delete(<span class="vbScript__string">&quot;d:/tempimage.bmp&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bitmap.Save(<span class="vbScript__string">&quot;d:/tempimage.bmp&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Catch</span>&nbsp;ex&nbsp;<span class="vbScript__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(ex.Message)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">End</span>&nbsp;<span class="vbScript__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">Else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bitmap.Save(<span class="vbScript__string">&quot;d:/tempimage.bmp&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">End</span>&nbsp;<span class="vbScript__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.Dispose()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bitmap.Dispose()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PictureBox1.Image&nbsp;=&nbsp;Image.FromFile(<span class="vbScript__string">&quot;d:/tempimage.bmp&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="vbScript__keyword">End</span>&nbsp;<span class="vbScript__keyword">Sub</span></pre>
+</div>
+</div>
+</div>
+<p>This method contains the Random generation of lines</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span><span class="hidden">csharp</span>
+<pre class="hidden"> Private Sub DrawRandomLines(ByVal g As Graphics)
+        Dim green As New SolidBrush(Color.Green)
+        'For Creating Lines on The Captcha
+        For i As Integer = 0 To 19
+            g.DrawLines(New Pen(green, 2), GetRandomPoints())
+        Next
+    End Sub</pre>
+<pre class="hidden"> private void DrawRandomLines(Graphics g)
+        {
+            SolidBrush green = new SolidBrush(Color.Green);
+             //For Creating Lines on The Captcha
+            for (int i = 0; i &lt; 20; i&#43;&#43;)
+            {
+                g.DrawLines(new Pen(green, 2), GetRandomPoints());
+            }
+
+        }</pre>
+<div class="preview">
+<pre class="vb">&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;DrawRandomLines(<span class="visualBasic__keyword">ByVal</span>&nbsp;g&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Graphics)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;green&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;SolidBrush(Color.Green)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'For&nbsp;Creating&nbsp;Lines&nbsp;on&nbsp;The&nbsp;Captcha</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">For</span>&nbsp;i&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Integer</span>&nbsp;=&nbsp;<span class="visualBasic__number">0</span>&nbsp;<span class="visualBasic__keyword">To</span>&nbsp;<span class="visualBasic__number">19</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.DrawLines(<span class="visualBasic__keyword">New</span>&nbsp;Pen(green,&nbsp;<span class="visualBasic__number">2</span>),&nbsp;GetRandomPoints())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Next</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">This method Contains the Random generation of points.</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span><span class="hidden">csharp</span>
+<pre class="hidden"> Private Function GetRandomPoints() As Point()
+        Dim points As Point() = {New Point(rand.[Next](10, 150), rand.[Next](10, 150)), New Point(rand.[Next](10, 100), rand.[Next](10, 100))}
+        Return points
+    End Function</pre>
+<pre class="hidden"> private Point[] GetRandomPoints()
+        {
+            Point[] points = { new Point(rand.Next(10, 150), rand.Next(10, 150)), new Point(rand.Next(10, 100), rand.Next(10, 100)) };
+            return points;
+        }</pre>
+<div class="preview">
+<pre class="vb">&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Function</span>&nbsp;GetRandomPoints()&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Point()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;points&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Point()&nbsp;=&nbsp;{<span class="visualBasic__keyword">New</span>&nbsp;Point(rand.[<span class="visualBasic__keyword">Next</span>](<span class="visualBasic__number">10</span>,&nbsp;<span class="visualBasic__number">150</span>),&nbsp;rand.[<span class="visualBasic__keyword">Next</span>](<span class="visualBasic__number">10</span>,&nbsp;<span class="visualBasic__number">150</span>)),&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;Point(rand.[<span class="visualBasic__keyword">Next</span>](<span class="visualBasic__number">10</span>,&nbsp;<span class="visualBasic__number">100</span>),&nbsp;rand.[<span class="visualBasic__keyword">Next</span>](<span class="visualBasic__number">10</span>,&nbsp;<span class="visualBasic__number">100</span>))}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;points&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Function</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">you can generate random text by using this method.</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span><span class="hidden">csharp</span>
+<pre class="hidden"> Private code As String
+    Private Function GetRandomText() As String
+        Dim randomText As New StringBuilder()
+        If [String].IsNullOrEmpty(code) Then
+            Dim alphabets As String = &quot;abcdefghijklmnopqrstuvwxyz1234567890&quot;
+            Dim r As New Random()
+            For j As Integer = 0 To 5
+                randomText.Append(alphabets(r.[Next](alphabets.Length)))
+            Next
+            code = randomText.ToString()
+        End If
+        Return code
+    End Function</pre>
+<pre class="hidden">        string code;
+        private string GetRandomText()
+        {
+            StringBuilder randomText = new StringBuilder();
+            if (String.IsNullOrEmpty(code))
+            {
+                string alphabets = &quot;abcdefghijklmnopqrstuvwxyz1234567890&quot;;
+                Random r = new Random();
+                for (int j = 0; j &lt;= 5; j&#43;&#43;)
+                {
+                    randomText.Append(alphabets[r.Next(alphabets.Length)]);
+                }
+                code = randomText.ToString();
+            }
+            return code;
+        }</pre>
+<div class="preview">
+<pre class="vb">&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;code&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Function</span>&nbsp;GetRandomText()&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;randomText&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;StringBuilder()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;[<span class="visualBasic__keyword">String</span>].IsNullOrEmpty(code)&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;alphabets&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;=&nbsp;<span class="visualBasic__string">&quot;abcdefghijklmnopqrstuvwxyz1234567890&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;r&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;Random()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">For</span>&nbsp;j&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Integer</span>&nbsp;=&nbsp;<span class="visualBasic__number">0</span>&nbsp;<span class="visualBasic__keyword">To</span>&nbsp;<span class="visualBasic__number">5</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;randomText.Append(alphabets(r.[<span class="visualBasic__keyword">Next</span>](alphabets.Length)))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Next</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code&nbsp;=&nbsp;randomText.ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;code&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Function</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em>source code file name #1 - summary for this source code file.</em> </li><li><em><em>source code file name #2 - summary for this source code file.</em></em>
+</li></ul>
+<h1>More Information</h1>
+<p><em>For more information on X, see ...?</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

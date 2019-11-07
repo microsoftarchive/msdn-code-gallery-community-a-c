@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "DateTimeSample";
+}
+
+@model CustomAnnotationsWeb.Models.DateTimeModel
+
+<h2>DateTimeCompare validation attribute exsample</h2>
+
+<p>If begins is greater than or equal to end, validation won't succeed.</p>
+
+@using (Html.BeginForm("DateTimeSample", "Home", FormMethod.Post))
+{ 
+    @Html.ValidationSummary()
+
+    <table>
+        <tr>
+            <td>Begins:</td>
+            <td>@Html.TextBoxFor(x => x.StartDate)</td>
+        </tr>
+        <tr>
+            <td>Ends:</td>
+            <td>@Html.TextBoxFor(x => x.EndDate)</td>
+        </tr>
+    </table>
+    
+    <input type="submit" value="Submit" />
+}

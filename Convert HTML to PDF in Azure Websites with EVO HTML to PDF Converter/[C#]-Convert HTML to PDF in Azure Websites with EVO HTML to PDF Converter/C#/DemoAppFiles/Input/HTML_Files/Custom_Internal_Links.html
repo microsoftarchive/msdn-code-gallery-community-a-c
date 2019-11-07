@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Define Custom URI Links in HTML</title>
+</head>
+<body style="font-family: 'Times New Roman'; font-size: 14px">
+    <table data-internal-link-enabled="true" data-link-target-id="internalLinkTargetID" style="border: 1px solid green; width: 650px">
+        <tr>
+            <td style="font-weight: bold; color: navy" colspan="2">This HTML Table is Converted to an Internal Link in PDF Using 'Data-Internal-Link-Enabled' Attribute
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px">
+                <img alt="Logo Image" style="width: 350px" src="img/logo.jpg" />
+            </td>
+            <td style="font-size: 40px; font-weight: normal; color: navy; text-align: center">>>>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <span style="font-weight: bold; color: black">The Internal Link Below was Explicitly Disabled Using 'Data-Internal-Link-Enabled' Attribute:</span><br />
+    <br />
+    <a data-link-enabled="false" href="#disableLinkTargetID" style="font-size: 18px; font-weight: bold; color: gray">This Internal Internal Link is Disabled in PDF</a>
+    <br />
+    <br />
+    <span data-target-id="internalLinkTargetID" style="page-break-before: always; font-size: 14px; font-weight: bold; color: green">This HTML element is the target of the custom internal link defined in HTML by Data-Internal-Link-Enabled="true" attribute.<br />
+        The element has a 'Data-Target-Id' attribute with value 'internalLinkTargetID' matching the value of the 'Data-Link-Target-Id'<br />
+        attribute of the internal link.
+    </span>
+    <br />
+    <br />
+    <span id="disableLinkTargetID" style="page-break-before: always; font-size: 14px; font-weight: bold; color: gray">This HTML element is the target of the internal link disabled by Data-Internal-Link-Enabled="false" attribute.
+    </span>
+</body>
+</html>

@@ -1,0 +1,106 @@
+﻿#app {
+	height: 100%;
+}
+
+	#app .win-splitviewpanetoggle {
+		float: left;
+	}
+
+	#app .header {
+		white-space: nowrap;
+	}
+
+	#app .title {
+		font-size: 25px;
+		left: 50px;
+		margin-top: 6px;
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	#app .nav-commands {
+		margin-top: 20px;
+	}
+
+	#app .win-splitview-pane-closed .win-splitviewcommand-label {
+		visibility: hidden;
+	}
+
+	#app .win-splitview-content {
+		background-color: #757575;
+	}
+
+	#app .divContainer {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0;
+		left: 0px;
+		padding-top: 15px;
+		padding-left: 25px;
+		padding-right: 25px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-word-break: break-word;
+		word-break: break-word;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+	}
+
+.header, .nav-commands {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input {
+	-webkit-user-select: auto !important;
+}
+
+/* Template for the items in the ListViews in this sample */
+.smallListIconTextItem {
+	width: 100%;
+	height: 70px;
+	padding: 5px;
+	overflow: hidden;
+	display: table-cell;
+}
+
+	.smallListIconTextItem img.smallListIconTextItem-Image {
+		width: 48px;
+		height: 48px;
+		margin: 5px;
+		margin-right: 20px;
+	}
+
+	.smallListIconTextItem .smallListIconTextItem-Detail {
+		margin: 5px;
+	}
+
+.listLayoutTopHeaderTemplateRoot, .gridLayoutLeftHeaderTemplateRoot {
+	font-size: larger;
+	margin-left: 16px;
+}
+
+#listView {
+	height: 100%;
+}
+
+hr.styleHr {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(190, 190, 190, 0.75), rgba(190, 190, 190, 0));
+}
+
+#divResult {
+	vertical-align: top;
+}
+
+.SplitViewCommand-hover {
+	background-color: #757575;
+}

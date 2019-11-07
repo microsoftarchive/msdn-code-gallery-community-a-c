@@ -1,0 +1,37 @@
+﻿@model Groupdocs.Comparison.Common.ChangeInfo[]
+
+@{
+    ViewBag.Title = "Index";
+}
+<h3>List of all changes:</h3>
+<table cellpadding="8">
+    <thead style="background: #ccc">
+        <tr>
+            <td>ID</td>
+            <td>Page number</td>
+            <td>Text</td>
+            <td>Modification type</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Groupdocs.Comparison.Common.ChangeInfo one in @Model)
+        {
+            <tr>
+                <td>
+                    @(one.Id)
+                </td>
+                <td>
+                    @(one.Page.Id)
+                </td>
+                <td>
+                    @(one.Text)
+                </td>
+                <td>
+                    @(one.TypeStr)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br/>
+<a href="Home/StandardGui">Standard GUI</a>

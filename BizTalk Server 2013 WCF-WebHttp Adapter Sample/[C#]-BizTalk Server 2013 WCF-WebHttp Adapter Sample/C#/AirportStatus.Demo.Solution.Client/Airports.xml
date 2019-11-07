@@ -1,0 +1,728 @@
+<Airports>
+<Airport Code="0AK" Name="Pilot Station Airport "/>
+<Airport Code="16A" Name="Nunapitchuk Airport "/>
+<Airport Code="1G4" Name="Grand Canyon West Airport "/>
+<Airport Code="2A3" Name="Larsen Bay Airport "/>
+<Airport Code="2A9" Name="Kotlik Airport "/>
+<Airport Code="3A5" Name="Marshall Don Hunter Sr"/>
+<Airport Code="3T7" Name="Middle Bass Island Airport "/>
+<Airport Code="3W2" Name="Put - in - Bay Airport "/>
+<Airport Code="6R7" Name="Old Harbor Airport "/>
+<Airport Code="74S" Name="Anacortes Airport "/>
+<Airport Code="A61" Name="Tuntutuliak Airport "/>
+<Airport Code="A85" Name="Kwigillingok Airport "/>
+<Airport Code="ABE" Name="Lehigh Valley International Airport "/>
+<Airport Code="ABI" Name="Abilene Regional Airport "/>
+<Airport Code="ABQ" Name="Albuquerque International Sunport"/>
+<Airport Code="ABR" Name="Aberdeen Regional Airport "/>
+<Airport Code="ABY" Name="Southwest Georgia Regional Airport "/>
+<Airport Code="ACB" Name="Bellaire/Antrim County Airport "/>
+<Airport Code="ACK" Name="Nantucket Memorial Airport "/>
+<Airport Code="ACT" Name="Waco Regional Airport "/>
+<Airport Code="ACV" Name="Arcata Airport "/>
+<Airport Code="ACY" Name="Atlantic City International Airport "/>
+<Airport Code="ADK" Name="Adak Airport "/>
+<Airport Code="ADQ" Name="Kodiak Airport "/>
+<Airport Code="AEX" Name="Alexandria International Airport "/>
+<Airport Code="AFM" Name="Ambler Airport "/>
+<Airport Code="AGC" Name="Allegheny County Airport "/>
+<Airport Code="AGN" Name="Angoon Seaplane Base"/>
+<Airport Code="AGS" Name="Augusta Regional Airport "/>
+<Airport Code="AHN" Name="Athens/Ben Epps Airport "/>
+<Airport Code="AIA" Name="Alliance Municipal Airport "/>
+<Airport Code="AID" Name="Anderson Municipal Airport "/>
+<Airport Code="AIY" Name="Atlantic City Municipal Airport/"/>
+<Airport Code="AIZ" Name="Lee C Fine Memorial Airport "/>
+<Airport Code="AKN" Name="King Salmon Airport "/>
+<Airport Code="AKP" Name="Anaktuvuk Pass Airport "/>
+<Airport Code="AKW" Name="Klawock Airport "/>
+<Airport Code="ALB" Name="Albany International Airport "/>
+<Airport Code="ALM" Name="Alamogordo-White Sands Regional Airport "/>
+<Airport Code="ALN" Name="St Louis Regional Airport "/>
+<Airport Code="ALO" Name="Waterloo Regional Airport "/>
+<Airport Code="ALS" Name="San Luis Valley Regional Airport "/>
+<Airport Code="ALW" Name="Walla Walla Regional Airport "/>
+<Airport Code="AMA" Name="Amarillo International Airport "/>
+<Airport Code="ANB" Name="Anniston Municipal Airport "/>
+<Airport Code="ANC" Name="Anchorage International Airport "/>
+<Airport Code="AND" Name="Anderson Regional Airport "/>
+<Airport Code="ANI" Name="Aniak Airport "/>
+<Airport Code="AOO" Name="Altoona-Blair County Airport "/>
+<Airport Code="APF" Name="Naples Municipal Airport "/>
+<Airport Code="APN" Name="Alpena County Regional Airport "/>
+<Airport Code="AQH" Name="Quinhagak Airport "/>
+<Airport Code="AQT" Name="Nuiqsut Airport "/>
+<Airport Code="ART" Name="Watertown International Airport "/>
+<Airport Code="ASE" Name="Aspen-Pitkin County Airport "/>
+<Airport Code="ASN" Name="Talladega Municipal Airport "/>
+<Airport Code="AST" Name="Astoria Regional Airport "/>
+<Airport Code="ATK" Name="Atqasuk Edward Burnell Sr Memorial Airport "/>
+<Airport Code="ATL" Name="Atlanta International Airport "/>
+<Airport Code="ATW" Name="Outagamie County Regional Airport "/>
+<Airport Code="ATY" Name="Watertown Municipal Airport "/>
+<Airport Code="AUG" Name="Augusta State Airport "/>
+<Airport Code="AUK" Name="Alakanuk Airport "/>
+<Airport Code="AUS" Name="Austin-Bergstrom International Airport "/>
+<Airport Code="AVL" Name="Asheville Regional Airport "/>
+<Airport Code="AVP" Name="Wilkes-Barre/Scranton International Airport "/>
+<Airport Code="AWI" Name="Wainwright Airport "/>
+<Airport Code="AXN" Name="Chandler Field Airport "/>
+<Airport Code="AZO" Name="Kalamazoo/Battle Creek International Airport "/>
+<Airport Code="BAF" Name="Barnes Municipal Airport "/>
+<Airport Code="BAK" Name="Columbus Municipal Airport "/>
+<Airport Code="BCE" Name="Bryce Canyon Airport "/>
+<Airport Code="BDE" Name="Baudette International Airport "/>
+<Airport Code="BDL" Name="Bradley International Airport "/>
+<Airport Code="BDR" Name="Igor I Sikorsky Memorial Airport "/>
+<Airport Code="BED" Name="Bedford Hanscom Field"/>
+<Airport Code="BEH" Name="Southwest Michigan Regional Airport "/>
+<Airport Code="BET" Name="Bethel Airport "/>
+<Airport Code="BFD" Name="Bradford Regional Airport "/>
+<Airport Code="BFF" Name="Western Nebraska Regional Airport "/>
+<Airport Code="BFI" Name="Boeing Field/King County International Airport "/>
+<Airport Code="BFL" Name="Meadows Field Airport "/>
+<Airport Code="BGM" Name="Greater Binghamton Airport "/>
+<Airport Code="BGR" Name="Bangor International Airport "/>
+<Airport Code="BHB" Name="Hancock County-Bar Harbor Airport "/>
+<Airport Code="BHM" Name="Birmingham International Airport "/>
+<Airport Code="BID" Name="Block Island State Airport "/>
+<Airport Code="BIG" Name="Allen Aaf Airport "/>
+<Airport Code="BIL" Name="Billings Logan International Airport "/>
+<Airport Code="BIS" Name="Bismarck Municipal Airport "/>
+<Airport Code="BJI" Name="Bemidji Regional Airport "/>
+<Airport Code="BKL" Name="Burke Lakefront Airport "/>
+<Airport Code="BKW" Name="Raleigh County Memorial Airport "/>
+<Airport Code="BKX" Name="Brookings Municipal Airport "/>
+<Airport Code="BLI" Name="Bellingham International Airport "/>
+<Airport Code="BLM" Name="Monmouth Executive Airport "/>
+<Airport Code="BLV" Name="Midamerica Airport "/>
+<Airport Code="BMG" Name="Monroe County Airport "/>
+<Airport Code="BMI" Name="Central Illinois Regional Airport "/>
+<Airport Code="BNA" Name="Nashville International Airport "/>
+<Airport Code="BOI" Name="Boise Airport "/>
+<Airport Code="BOS" Name="Boston Logan International Airport "/>
+<Airport Code="BPK" Name="Baxter County Regional Airport "/>
+<Airport Code="BPT" Name="Southeast Texas Regional Airport "/>
+<Airport Code="BQK" Name="Brunswick Golden Isles Airport "/>
+<Airport Code="BQN" Name="Aguadilla Airport "/>
+<Airport Code="BRD" Name="Brainerd Lakes Regional Airport "/>
+<Airport Code="BRL" Name="Southeast Iowa Regional Airport "/>
+<Airport Code="BRO" Name="Brownsville/South Padre Island International Airport "/>
+<Airport Code="BRW" Name="Wiley Post-Will Rogers Memorial Airport "/>
+<Airport Code="BTI" Name="Barter Island LRRS Airport "/>
+<Airport Code="BTL" Name="W K Kellogg Airport "/>
+<Airport Code="BTM" Name="Bert Mooney Airport "/>
+<Airport Code="BTR" Name="Baton Rouge International Airport "/>
+<Airport Code="BTV" Name="Burlington International Airport "/>
+<Airport Code="BUF" Name="Buffalo Niagara International Airport "/>
+<Airport Code="BUR" Name="Burbank Bob Hope Airport "/>
+<Airport Code="BVK" Name="Buckland Airport "/>
+<Airport Code="BWG" Name="Bowling Green-Warren County Regional Airport "/>
+<Airport Code="BWI" Name="Baltimore/Washington International Airport "/>
+<Airport Code="BZN" Name="Bozeman Gallatin Field Airport "/>
+<Airport Code="CAE" Name="Columbia Metropolitan Airport "/>
+<Airport Code="CAK" Name="Akron-Canton Airport "/>
+<Airport Code="CCR" Name="Buchanan Field Airport "/>
+<Airport Code="CDB" Name="Cold Bay Airport "/>
+<Airport Code="CDC" Name="Cedar City Regional Airport "/>
+<Airport Code="CDV" Name="Cordova Municipal Airport "/>
+<Airport Code="CDW" Name="Essex County Airport "/>
+<Airport Code="CEC" Name="Jack Mc Namara Field Airport "/>
+<Airport Code="CEF" Name="Westover Metropolitan Airport "/>
+<Airport Code="CEZ" Name="Cortez Municipal Airport "/>
+<Airport Code="CFK" Name="Chefornak Airport "/>
+<Airport Code="CGA" Name="Craig Airport "/>
+<Airport Code="CGF" Name="Cuyahoga County Airport "/>
+<Airport Code="CGI" Name="Cape Girardeau Regional Airport "/>
+<Airport Code="CGX" Name="Merrill C Meigs Field"/>
+<Airport Code="CHA" Name="Chattanooga Metropolitan Airport "/>
+<Airport Code="CHO" Name="Charlottesville-Albemarle Airport "/>
+<Airport Code="CHS" Name="Charleston International Airport "/>
+<Airport Code="CIC" Name="Chico Municipal Airport "/>
+<Airport Code="CID" Name="Cedar Rapids Eastern Iowa Airport "/>
+<Airport Code="CIU" Name="Chippewa County International Airport "/>
+<Airport Code="CKB" Name="Harrison/Marion Regional Airport "/>
+<Airport Code="CLE" Name="Cleveland Hopkins International Airport "/>
+<Airport Code="CLL" Name="Easterwood Airport "/>
+<Airport Code="CLM" Name="William R Fairchild International Airport "/>
+<Airport Code="CLT" Name="Charlotte/Douglas International Airport "/>
+<Airport Code="CMH" Name="Port Columbus International Airport "/>
+<Airport Code="CMI" Name="Champaign Willard Airport "/>
+<Airport Code="CMX" Name="Houghton County Memorial Airport "/>
+<Airport Code="CNM" Name="Cavern City Air Terminal"/>
+<Airport Code="CNY" Name="Cavern City Air Terminal"/>
+<Airport Code="COD" Name="Yellowstone Regional Airport "/>
+<Airport Code="COE" Name="Coeur D'alene Airport "/>
+<Airport Code="COS" Name="Colorado Springs Airport "/>
+<Airport Code="COU" Name="Columbia Regional Airport "/>
+<Airport Code="CPR" Name="Natrona County International Airport "/>
+<Airport Code="CPX" Name="Culebra Airport "/>
+<Airport Code="CRP" Name="Corpus Christi International Airport "/>
+<Airport Code="CRQ" Name="Mc Clellan-Palomar Airport "/>
+<Airport Code="CRW" Name="Charleston Yeager Airport "/>
+<Airport Code="CSG" Name="Columbus Metropolitan Airport "/>
+<Airport Code="CVG" Name="Cincinnati/Northern Kentucky International Airport "/>
+<Airport Code="CVO" Name="Corvallis Municipal Airport "/>
+<Airport Code="CVX" Name="Charlevoix Municipal Airport "/>
+<Airport Code="CWA" Name="Central Wisconsin Airport "/>
+<Airport Code="CWI" Name="Clinton Municipal Airport "/>
+<Airport Code="CYS" Name="Cheyenne Regional Airport "/>
+<Airport Code="D76" Name="Robert (Bob) Curtis Memorial Airport "/>
+<Airport Code="DAB" Name="Daytona Beach International Airport "/>
+<Airport Code="DAL" Name="Dallas Love"/>
+<Airport Code="DAN" Name="Danville Regional Airport "/>
+<Airport Code="DAY" Name="Dayton International Airport "/>
+<Airport Code="DBQ" Name="Dubuque Regional Airport "/>
+<Airport Code="DCA" Name="Ronald Reagan Washington National Airport "/>
+<Airport Code="DDC" Name="Dodge City Regional Airport "/>
+<Airport Code="DDH" Name="William H. Morse State Airport "/>
+<Airport Code="DEC" Name="Decatur Airport "/>
+<Airport Code="DEN" Name="Denver International Airport "/>
+<Airport Code="DET" Name="Detroit City Airport "/>
+<Airport Code="DFW" Name="Dallas/Fort Worth International Airport "/>
+<Airport Code="DHN" Name="Dothan Regional Airport "/>
+<Airport Code="DIK" Name="Dickinson - Theodore Roosevelt Regional Airport "/>
+<Airport Code="DLG" Name="Dillingham Airport "/>
+<Airport Code="DLH" Name="Duluth International Airport "/>
+<Airport Code="DNV" Name="Vermilion County Airport "/>
+<Airport Code="DRO" Name="Durango-La Plata County Airport "/>
+<Airport Code="DRT" Name="Del Rio International Airport "/>
+<Airport Code="DSM" Name="Des Moines International Airport "/>
+<Airport Code="DTW" Name="Detroit Metro Airport "/>
+<Airport Code="DUJ" Name="Du Bois-Jefferson County Airport "/>
+<Airport Code="DUT" Name="Unalaska Airport "/>
+<Airport Code="DUY" Name="Kongiganak Airport "/>
+<Airport Code="DVL" Name="Devils Lake Municipal Airport "/>
+<Airport Code="DVT" Name="Deer Valley Municipal Airport "/>
+<Airport Code="DXR" Name="Danbury Municipal Airport "/>
+<Airport Code="EAR" Name="Kearney Municipal Airport "/>
+<Airport Code="EAT" Name="Pangborn Memorial Airport "/>
+<Airport Code="EAU" Name="Chippewa Valley Regional Airport "/>
+<Airport Code="EEK" Name="Eek Airport "/>
+<Airport Code="EEN" Name="Keene/Dillant-Hopkins Airport "/>
+<Airport Code="EFD" Name="Ellington Field"/>
+<Airport Code="EFK" Name="Newport State Airport "/>
+<Airport Code="EGE" Name="Eagle County Regional Airport "/>
+<Airport Code="EKM" Name="Elkhart Municipal Airport "/>
+<Airport Code="EKO" Name="Elko Regional Airport "/>
+<Airport Code="ELI" Name="Elim Airport "/>
+<Airport Code="ELM" Name="Elmira/Corning Regional Airport "/>
+<Airport Code="ELO" Name="Ely Municipal Airport "/>
+<Airport Code="ELP" Name="El Paso International Airport "/>
+<Airport Code="ELY" Name="Ely Airport "/>
+<Airport Code="ENA" Name="Kenai Municipal Airport "/>
+<Airport Code="ENM" Name="Emmonak Airport "/>
+<Airport Code="ENW" Name="Kenosha Regional Airport "/>
+<Airport Code="ERI" Name="Erie International Airport "/>
+<Airport Code="ESC" Name="Delta County Airport "/>
+<Airport Code="ESF" Name="Esler Regional Airport "/>
+<Airport Code="EUG" Name="Eugene Airport "/>
+<Airport Code="EVV" Name="Evansville Regional Airport "/>
+<Airport Code="EWB" Name="New Bedford Regional Airport "/>
+<Airport Code="EWN" Name="Craven County Regional Airport "/>
+<Airport Code="EWR" Name="Newark Liberty International Airport "/>
+<Airport Code="EWU" Name="Newtok Airport "/>
+<Airport Code="EYW" Name="Key West International Airport "/>
+<Airport Code="FAI" Name="Fairbanks International Airport "/>
+<Airport Code="FAQ" Name="Fitiuta Airport "/>
+<Airport Code="FAR" Name="Hector International Airport "/>
+<Airport Code="FAT" Name="Fresno Air Terminal"/>
+<Airport Code="FAY" Name="Fayetteville Regional/Grannis Field Airport "/>
+<Airport Code="FHR" Name="Friday Harbor Airport "/>
+<Airport Code="FHU" Name="Sierra Vista Municipal Airport "/>
+<Airport Code="FKL" Name="Venango Regional Airport "/>
+<Airport Code="FLG" Name="Flagstaff Pulliam Airport "/>
+<Airport Code="FLL" Name="Fort Lauderdale Hollywood International Airport "/>
+<Airport Code="FLO" Name="Florence Regional Airport "/>
+<Airport Code="FMN" Name="Four Corners Regional Airport "/>
+<Airport Code="FNL" Name="Fort Collins-Loveland Municipal Airport "/>
+<Airport Code="FNT" Name="Bishop International Airport "/>
+<Airport Code="FOD" Name="Fort Dodge Regional Airport "/>
+<Airport Code="FOE" Name="Forbes Field Airport "/>
+<Airport Code="FRG" Name="Republic Airport "/>
+<Airport Code="FRM" Name="Fairmont Municipal Airport "/>
+<Airport Code="FSD" Name="Sioux Falls Regional Airport "/>
+<Airport Code="FSM" Name="Fort Smith Airport "/>
+<Airport Code="FTW" Name="Fort Worth Meacham International Airport "/>
+<Airport Code="FWA" Name="Fort Wayne International Airport "/>
+<Airport Code="FYU" Name="Fort Yukon Airport "/>
+<Airport Code="FYV" Name="Drake Field"/>
+<Airport Code="GAL" Name="Edward G. Pitka Sr Airport "/>
+<Airport Code="GAM" Name="Gambell Airport "/>
+<Airport Code="GBD" Name="Great Bend Municipal Airport "/>
+<Airport Code="GBH" Name="Galbraith Lake Airport "/>
+<Airport Code="GCC" Name="Gillette-Campbell County Airport "/>
+<Airport Code="GCK" Name="Garden City Regional Airport "/>
+<Airport Code="GCN" Name="Grand Canyon National Park Airport "/>
+<Airport Code="GED" Name="Sussex County Airport "/>
+<Airport Code="GEG" Name="Spokane International Airport "/>
+<Airport Code="GFK" Name="Grand Forks International Airport "/>
+<Airport Code="GFL" Name="Floyd Bennett Memorial Airport "/>
+<Airport Code="GGG" Name="East Texas Regional Airport "/>
+<Airport Code="GGV" Name="Kwigillingok Airport "/>
+<Airport Code="GGW" Name="Wokal Field/Glasgow International Airport "/>
+<Airport Code="GJT" Name="Walker Field Airport "/>
+<Airport Code="GKN" Name="Gulkana Airport "/>
+<Airport Code="GLD" Name="Goodland Municipal Airport "/>
+<Airport Code="GLH" Name="Mid Delta Regional Airport "/>
+<Airport Code="GLR" Name="Gaylord Regional Airport "/>
+<Airport Code="GLS" Name="Galveston/Scholes International Airport "/>
+<Airport Code="GNV" Name="Gainesville Regional Airport "/>
+<Airport Code="GON" Name="Groton-New London Airport "/>
+<Airport Code="GPI" Name="Glacier Park International Airport "/>
+<Airport Code="GPT" Name="Gulfport-Biloxi International Airport "/>
+<Airport Code="GPZ" Name="Grand Rapids/Itasca County Airport "/>
+<Airport Code="GRB" Name="Austin Straubel International Airport "/>
+<Airport Code="GRI" Name="Central Nebraska Regional Airport "/>
+<Airport Code="GRK" Name="Killeen-Fort Hood Regional Airport "/>
+<Airport Code="GRO" Name="Rota International Airport "/>
+<Airport Code="GRR" Name="Gerald R. Ford International Airport "/>
+<Airport Code="GSN" Name="Saipan International Airport "/>
+<Airport Code="GSO" Name="Piedmont Triad International Airport "/>
+<Airport Code="GSP" Name="Greenville/Spartanburg Airport "/>
+<Airport Code="GST" Name="Gustavus Airport "/>
+<Airport Code="GTF" Name="Great Falls International Airport "/>
+<Airport Code="GTR" Name="Golden Triangle Regional Airport "/>
+<Airport Code="GUC" Name="Gunnison-Crested Butte Regional Airport "/>
+<Airport Code="GUM" Name="Guam International Airport "/>
+<Airport Code="GUP" Name="Gallup Municipal Airport "/>
+<Airport Code="GYH" Name="Donaldson Center Airport "/>
+<Airport Code="GYR" Name="Phoenix Goodyear Airport "/>
+<Airport Code="GYY" Name="Gary Regional Airport "/>
+<Airport Code="HDN" Name="Yampa Valley Regional Airport "/>
+<Airport Code="HFD" Name="Hartford-Brainard Airport "/>
+<Airport Code="HGR" Name="Hagerstown Regional Airport "/>
+<Airport Code="HIB" Name="Chisholm-Hibbing Airport "/>
+<Airport Code="HII" Name="Lake Havasu City Airport "/>
+<Airport Code="HKS" Name="Hawkins Field Airport "/>
+<Airport Code="HKY" Name="Hickory Regional Airport "/>
+<Airport Code="HLA" Name="Huslia Airport "/>
+<Airport Code="HLN" Name="Helena Regional Airport "/>
+<Airport Code="HND" Name="Henderson Executive Airport "/>
+<Airport Code="HNH" Name="Hoonah Airport "/>
+<Airport Code="HNL" Name="Honolulu International Airport "/>
+<Airport Code="HNM" Name="Hana Airport "/>
+<Airport Code="HNS" Name="Haines Airport "/>
+<Airport Code="HOB" Name="Lea County Regional Airport "/>
+<Airport Code="HOM" Name="Homer Airport "/>
+<Airport Code="HON" Name="Huron Regional Airport "/>
+<Airport Code="HOT" Name="Memorial Field Airport "/>
+<Airport Code="HOU" Name="Hobby Airport "/>
+<Airport Code="HPB" Name="Hooper Bay Airport "/>
+<Airport Code="HPN" Name="Westchester County Airport "/>
+<Airport Code="HRL" Name="Valley International Airport "/>
+<Airport Code="HRO" Name="Boone County Airport "/>
+<Airport Code="HSL" Name="Huslia Airport "/>
+<Airport Code="HSV" Name="Huntsville International Airport "/>
+<Airport Code="HTS" Name="Tri-State Airport "/>
+<Airport Code="HUF" Name="Terre Haute International Airport "/>
+<Airport Code="HUT" Name="Hutchinson Municipal Airport "/>
+<Airport Code="HVN" Name="Tweed New Haven Regional Airport "/>
+<Airport Code="HXD" Name="Hilton Head Airport "/>
+<Airport Code="HYA" Name="Barnstable Municipal Airport "/>
+<Airport Code="HYL" Name="Hollis Seaplane Base"/>
+<Airport Code="HYS" Name="Hays Regional Airport "/>
+<Airport Code="IAD" Name="Washington Dulles International Airport "/>
+<Airport Code="IAH" Name="Bush Intercontinental Airport "/>
+<Airport Code="IAN" Name="Bob Baker Memorial Airport "/>
+<Airport Code="ICT" Name="Wichita Mid-Continent Airport "/>
+<Airport Code="IDA" Name="Idaho Falls Regional Airport "/>
+<Airport Code="IFP" Name="Laughlin/Bullhead International Airport "/>
+<Airport Code="IGM" Name="Kingman Airport "/>
+<Airport Code="IIK" Name="Kipnuk Airport "/>
+<Airport Code="ILE" Name="Skylark Field"/>
+<Airport Code="ILG" Name="New Castle Airport "/>
+<Airport Code="ILI" Name="Iliamna Airport "/>
+<Airport Code="ILL" Name="Willmar Municipal Airport "/>
+<Airport Code="ILM" Name="Wilmington International Airport "/>
+<Airport Code="IMT" Name="Iron Mountain Airport "/>
+<Airport Code="IND" Name="Indianapolis International Airport "/>
+<Airport Code="INL" Name="Falls International Airport "/>
+<Airport Code="INT" Name="Smith Reynolds Airport "/>
+<Airport Code="IPL" Name="Imperial County Airport "/>
+<Airport Code="IPT" Name="Williamsport Regional Airport "/>
+<Airport Code="IRK" Name="Kirksville Regional Airport "/>
+<Airport Code="ISN" Name="Sloulin Field International Airport "/>
+<Airport Code="ISO" Name="Kinston Regional Jetport"/>
+<Airport Code="ISP" Name="Macarthur Airport "/>
+<Airport Code="ITH" Name="Ithaca Tompkins Regional Airport "/>
+<Airport Code="ITO" Name="Hilo International Airport "/>
+<Airport Code="IWA" Name="Williams Gateway Airport "/>
+<Airport Code="IWD" Name="Gogebic-Iron County Airport "/>
+<Airport Code="IXD" Name="Olathe/New Century Aircenter Airport "/>
+<Airport Code="IYK" Name="Inyokern Airport "/>
+<Airport Code="JAC" Name="Jackson Hole Airport "/>
+<Airport Code="JAN" Name="Jackson-Evers International Airport "/>
+<Airport Code="JAX" Name="Jacksonville International Airport "/>
+<Airport Code="JBR" Name="Jonesboro Municipal Airport "/>
+<Airport Code="JEF" Name="Jefferson City Memorial Airport "/>
+<Airport Code="JFK" Name="John F. Kennedy International Airport "/>
+<Airport Code="JHW" Name="Chautauqua County/Jamestown Airport "/>
+<Airport Code="JLN" Name="Joplin Regional Airport "/>
+<Airport Code="JMS" Name="Jamestown Regional Airport "/>
+<Airport Code="JNU" Name="Juneau International Airport "/>
+<Airport Code="JRB" Name="Downtown Manhattan Heliport"/>
+<Airport Code="JST" Name="Johnstown-Cambria County Airport "/>
+<Airport Code="JVL" Name="Southern Wisconsin Regional Airport "/>
+<Airport Code="JXN" Name="Jackson County Airport "/>
+<Airport Code="KAE" Name="Kake Airport "/>
+<Airport Code="KAL" Name="Kaltag Airport "/>
+<Airport Code="KDK" Name="Kodiak Municipal Airport "/>
+<Airport Code="KEB" Name="English Bay Airport "/>
+<Airport Code="KKA" Name="Koyuk Airport "/>
+<Airport Code="KLG" Name="Kalskag Airport "/>
+<Airport Code="KOA" Name="Kona International Airport "/>
+<Airport Code="KSM" Name="St Mary's Airport "/>
+<Airport Code="KTB" Name="Thorne Bay Airport "/>
+<Airport Code="KTN" Name="Ketchikan International Airport "/>
+<Airport Code="KVC" Name="King Cove Airport "/>
+<Airport Code="KVL" Name="Kivalina Airport "/>
+<Airport Code="KWT" Name="Kwethluk Airport "/>
+<Airport Code="LAA" Name="Lamar Municipal Airport "/>
+<Airport Code="LAF" Name="Purdue University Airport "/>
+<Airport Code="LAL" Name="Lakeland Linder Regional Airport "/>
+<Airport Code="LAN" Name="Lansing Capital City Airport "/>
+<Airport Code="LAR" Name="Laramie Regional Airport "/>
+<Airport Code="LAS" Name="Mccarran International Airport "/>
+<Airport Code="LAW" Name="Lawton-Fort Sill Regional Airport "/>
+<Airport Code="LAX" Name="Los Angeles International Airport "/>
+<Airport Code="LBB" Name="Lubbock International Airport "/>
+<Airport Code="LBE" Name="Arnold Palmer Regional Airport "/>
+<Airport Code="LBF" Name="North Platte Regional Airport "/>
+<Airport Code="LBL" Name="Liberal Municipal Airport "/>
+<Airport Code="LBX" Name="Brazoria County Airport "/>
+<Airport Code="LCH" Name="Lake Charles Regional Airport "/>
+<Airport Code="LCK" Name="Rickenbacker International Airport "/>
+<Airport Code="LEB" Name="Lebanon Municipal Airport "/>
+<Airport Code="LEX" Name="Blue Grass Airport "/>
+<Airport Code="LFT" Name="Lafayette Regional Airport "/>
+<Airport Code="LGA" Name="La Guardia Airport "/>
+<Airport Code="LGB" Name="Long Beach Airport "/>
+<Airport Code="LHD" Name="Lake Hood Airport "/>
+<Airport Code="LIH" Name="Lihue Airport "/>
+<Airport Code="LIT" Name="Little Rock National Airport "/>
+<Airport Code="LMT" Name="Klamath Falls Airport "/>
+<Airport Code="LNK" Name="Lincoln Airport "/>
+<Airport Code="LNS" Name="Lancaster Airport "/>
+<Airport Code="LNY" Name="Lanai Airport "/>
+<Airport Code="LPR" Name="Lorain County Regional Airport "/>
+<Airport Code="LRD" Name="Laredo International Airport "/>
+<Airport Code="LRU" Name="Las Cruces International Airport "/>
+<Airport Code="LSE" Name="La Crosse Municipal Airport "/>
+<Airport Code="LUK" Name="Cincinnati Municipal Airport "/>
+<Airport Code="LWB" Name="Greenbrier Valley Airport "/>
+<Airport Code="LWS" Name="Lewiston-Nez Perce County Airport "/>
+<Airport Code="LYH" Name="Lynchburg Regional Airport/"/>
+<Airport Code="MAF" Name="Midland International Airport "/>
+<Airport Code="MAZ" Name="Mayaquez Airport "/>
+<Airport Code="MBA" Name="Manokotak Airport "/>
+<Airport Code="MBL" Name="Manistee County-Blacker"/>
+<Airport Code="MBS" Name="Saginaw International Airport "/>
+<Airport Code="MCC" Name="Mc Clellan Airfield"/>
+<Airport Code="MCE" Name="Merced Municipal Airport "/>
+<Airport Code="MCG" Name="McGrath Airport "/>
+<Airport Code="MCI" Name="Kansas City International Airport "/>
+<Airport Code="MCK" Name="Mc Cook Regional Airport "/>
+<Airport Code="MCN" Name="Middle Georgia Regional Airport "/>
+<Airport Code="MCO" Name="Orlando International Airport "/>
+<Airport Code="MCW" Name="Mason City Municipal Airport "/>
+<Airport Code="MDH" Name="Southern Illinois Airport "/>
+<Airport Code="MDM" Name="Marshall Don Hunter Sr Airport "/>
+<Airport Code="MDT" Name="Harrisburg International Airport "/>
+<Airport Code="MDW" Name="Chicago Midway Airport "/>
+<Airport Code="MDY" Name="Henderson Field Airport "/>
+<Airport Code="MEI" Name="Key Field Airport "/>
+<Airport Code="MEM" Name="Memphis Airport "/>
+<Airport Code="MFD" Name="Mansfield Lahm Regional Airport "/>
+<Airport Code="MFE" Name="Mcallen-Miller International Airport "/>
+<Airport Code="MFR" Name="Medford Rogue Valley International Airport "/>
+<Airport Code="MGM" Name="Montgomery Regional Airport "/>
+<Airport Code="MGW" Name="Morgantown Municipal Airport "/>
+<Airport Code="MHE" Name="Mitchell Municipal Airport "/>
+<Airport Code="MHK" Name="Manhattan Regional Airport "/>
+<Airport Code="MHT" Name="Manchester Airport "/>
+<Airport Code="MIA" Name="Miami International Airport "/>
+<Airport Code="MIE" Name="Delaware County Airport "/>
+<Airport Code="MIV" Name="Millville Municipal Airport "/>
+<Airport Code="MJX" Name="Robert J. Miller Air Park"/>
+<Airport Code="MKC" Name="Charles B. Wheeler Downtown Airport "/>
+<Airport Code="MKE" Name="General Mitchell International Airport "/>
+<Airport Code="MKG" Name="Muskegon County Airport "/>
+<Airport Code="MKK" Name="Molokai Airport "/>
+<Airport Code="MKL" Name="Mc Kellar-Sipes Regional Airport "/>
+<Airport Code="MKT" Name="Mankato Regional Airport "/>
+<Airport Code="MLB" Name="Melbourne International Airport "/>
+<Airport Code="MLI" Name="Quad City International Airport "/>
+<Airport Code="MLL" Name="Marshall Airport "/>
+<Airport Code="MLU" Name="Monroe Regional Airport "/>
+<Airport Code="MMH" Name="Mammoth Yosemite Airport "/>
+<Airport Code="MMU" Name="Morristown Municipal Airport "/>
+<Airport Code="MMV" Name="Mc Minnville Municipal Airport "/>
+<Airport Code="MNM" Name="Menominee-Marinette Twin County Airport "/>
+<Airport Code="MOB" Name="Mobile Regional Airport "/>
+<Airport Code="MOD" Name="Modesto City-County Airport "/>
+<Airport Code="MOT" Name="Minot International Airport "/>
+<Airport Code="MOU" Name="Mountain Village Airport "/>
+<Airport Code="MPV" Name="Edward F. Knapp State Airport "/>
+<Airport Code="MQI" Name="Dare County Regional Airport "/>
+<Airport Code="MQJ" Name="Mount Comfort Airport "/>
+<Airport Code="MQY" Name="Smyrna Airport "/>
+<Airport Code="MRI" Name="Merrill Field Anchorage"/>
+<Airport Code="MRY" Name="Monterey Peninsula Airport "/>
+<Airport Code="MSL" Name="Northwest Alabama Regional Airport "/>
+<Airport Code="MSN" Name="Dane County Regional Airport "/>
+<Airport Code="MSO" Name="Missoula International Airport "/>
+<Airport Code="MSP" Name="Minneapolis/St. Paul International Airport "/>
+<Airport Code="MSS" Name="Massena International Airport "/>
+<Airport Code="MSV" Name="Sullivan County International Airport "/>
+<Airport Code="MSY" Name="New Orleans International Airport "/>
+<Airport Code="MTH" Name="Florida Keys Marathon Airport "/>
+<Airport Code="MTJ" Name="Montrose Regional Airport "/>
+<Airport Code="MTM" Name="Metlakatla Airport "/>
+<Airport Code="MTO" Name="Coles County Memorial Airport "/>
+<Airport Code="MUE" Name="Waimea - Kohala Airport "/>
+<Airport Code="MVL" Name="Morrisville-Stowe State Airport "/>
+<Airport Code="MVN" Name="Mount Vernon Airport "/>
+<Airport Code="MVY" Name="Martha's Vineyard Airport "/>
+<Airport Code="MWA" Name="Williamson County Regional Airport "/>
+<Airport Code="MWH" Name="Grant County International Airport "/>
+<Airport Code="MYR" Name="Myrtle Beach Airport "/>
+<Airport Code="MZJ" Name="Pinal Airpark"/>
+<Airport Code="N93" Name="Golovin Airport "/>
+<Airport Code="NEW" Name="Lakefront Airport "/>
+<Airport Code="NQA" Name="Millington Regional Jetport"/>
+<Airport Code="NUL" Name="Nulato Airport "/>
+<Airport Code="OAJ" Name="Jacksonville/Albert J Ellis Airport "/>
+<Airport Code="OAK" Name="Oakland International Airport "/>
+<Airport Code="OCF" Name="Ocala International Airport "/>
+<Airport Code="OFK" Name="Karl Stefan Memorial Airport "/>
+<Airport Code="OGD" Name="Ogden-Hinckley Airport "/>
+<Airport Code="OGG" Name="Kahului Airport "/>
+<Airport Code="OGS" Name="Ogdensburg International Airport "/>
+<Airport Code="OKC" Name="Will Rogers World Airport "/>
+<Airport Code="OLM" Name="Olympia Airport "/>
+<Airport Code="OMA" Name="Eppley Airfield"/>
+<Airport Code="OME" Name="Nome Airport "/>
+<Airport Code="ONP" Name="Newport Municipal Airport "/>
+<Airport Code="ONT" Name="Ontario International Airport "/>
+<Airport Code="OOK" Name="Toksook Bay Airport "/>
+<Airport Code="OQU" Name="Quonset State Airport "/>
+<Airport Code="ORD" Name="Chicago O'hare International Airport "/>
+<Airport Code="ORF" Name="Norfolk International Airport "/>
+<Airport Code="ORH" Name="Worcester Regional Airport "/>
+<Airport Code="ORI" Name="Port Lions Airport "/>
+<Airport Code="ORS" Name="Orcas Island Airport "/>
+<Airport Code="ORV" Name="Robert (Bob) Curtis Memorial Airport "/>
+<Airport Code="OSH" Name="Wittman Regional Airport "/>
+<Airport Code="OSU" Name="Ohio State University Airport "/>
+<Airport Code="OTG" Name="Worthington Municipal Airport "/>
+<Airport Code="OTH" Name="North Bend Municipal Airport "/>
+<Airport Code="OTM" Name="Ottumwa Industrial Airport "/>
+<Airport Code="OTZ" Name="Ralph Wien Memorial Airport "/>
+<Airport Code="OWB" Name="Owensboro-Daviess County Airport "/>
+<Airport Code="OXC" Name="Waterbury-Oxford Airport "/>
+<Airport Code="OXR" Name="Oxnard Airport "/>
+<Airport Code="PAE" Name="Snohomish County Airport "/>
+<Airport Code="PAH" Name="Paducah Barkley Regional Airport "/>
+<Airport Code="PBI" Name="Palm Beach International Airport "/>
+<Airport Code="PCW" Name="Carl R Keller Field Port"/>
+<Airport Code="PDT" Name="Eastern Oregon Regional Airport "/>
+<Airport Code="PDX" Name="Portland International Airport "/>
+<Airport Code="PFN" Name="Panama City-Bay County International Airport "/>
+<Airport Code="PGA" Name="Page Municipal Airport "/>
+<Airport Code="PGD" Name="Charlotte County Airport "/>
+<Airport Code="PGM" Name="Port Graham Airport "/>
+<Airport Code="PGV" Name="Pitt-Greenville Airport "/>
+<Airport Code="PHF" Name="Newport News/Williamsburg International Airport "/>
+<Airport Code="PHL" Name="Philadelphia International Airport "/>
+<Airport Code="PHO" Name="Point Hope Airport "/>
+<Airport Code="PHX" Name="Phoenix Sky Harbor International Airport "/>
+<Airport Code="PIA" Name="Peoria Regional Airport "/>
+<Airport Code="PIB" Name="Hattiesburg-Laurel Regional Airport "/>
+<Airport Code="PIE" Name="St. Petersburg-Clearwater International Airport "/>
+<Airport Code="PIH" Name="Pocatello Regional Airport "/>
+<Airport Code="PIR" Name="Pierre Regional Airport "/>
+<Airport Code="PIT" Name="Pittsburgh International Airport "/>
+<Airport Code="PKB" Name="Mid-Ohio Valley Regional Airport "/>
+<Airport Code="PLB" Name="Clinton County Airport "/>
+<Airport Code="PLK" Name="M Graham Clark - Taney County Airport "/>
+<Airport Code="PLN" Name="Pellston Regional Airport "/>
+<Airport Code="PMD" Name="Palmdale Regional Airport "/>
+<Airport Code="PNC" Name="Ponca City Regional Airport "/>
+<Airport Code="PNS" Name="Pensacola Regional Airport "/>
+<Airport Code="POU" Name="Dutchess County Airport "/>
+<Airport Code="PPC" Name="Prospect Creek Airport "/>
+<Airport Code="PPG" Name="Pago Pago International Airport "/>
+<Airport Code="PQI" Name="Northern Maine Regional Airport "/>
+<Airport Code="PQL" Name="Trent Lott International Airport "/>
+<Airport Code="PRB" Name="Paso Robles Municipal Airport "/>
+<Airport Code="PRC" Name="Ernest A. Love Field Airport "/>
+<Airport Code="PSC" Name="Tri-Cities Airport "/>
+<Airport Code="PSE" Name="Mercedita Airport "/>
+<Airport Code="PSG" Name="Petersburg Airport "/>
+<Airport Code="PSM" Name="Pease International Airport "/>
+<Airport Code="PSP" Name="Palm Springs International Airport "/>
+<Airport Code="PTH" Name="Port Heiden Airport "/>
+<Airport Code="PTK" Name="Oakland County International Airport "/>
+<Airport Code="PUB" Name="Pueblo Memorial Airport "/>
+<Airport Code="PUW" Name="Pullman/Moscow Regional Airport "/>
+<Airport Code="PVC" Name="Provincetown Municipal Airport "/>
+<Airport Code="PVD" Name="T.F. Green Airport "/>
+<Airport Code="PVU" Name="Provo Municipal Airport "/>
+<Airport Code="PWM" Name="Portland International Jetport"/>
+<Airport Code="PWT" Name="Bremerton National Airport "/>
+<Airport Code="RAP" Name="Rapid City Regional Airport "/>
+<Airport Code="RDD" Name="Redding Municipal Airport "/>
+<Airport Code="RDG" Name="Reading Regional Airport "/>
+<Airport Code="RDM" Name="Roberts Field"/>
+<Airport Code="RDU" Name="Raleigh-Durham International Airport "/>
+<Airport Code="RFD" Name="Greater Rockford Airport "/>
+<Airport Code="RHI" Name="Rhinelander-Oneida County Airport "/>
+<Airport Code="RIC" Name="Richmond International Airport "/>
+<Airport Code="RIW" Name="Riverton Regional Airport "/>
+<Airport Code="RKD" Name="Knox County Regional Airport "/>
+<Airport Code="RKS" Name="Rock Springs-Sweetwater County Airport "/>
+<Airport Code="RME" Name="Griffiss Airpark"/>
+<Airport Code="RMG" Name="Richard B Russell Airport "/>
+<Airport Code="RNO" Name="Reno-Tahoe International Airport "/>
+<Airport Code="ROA" Name="Roanoke Regional Airport "/>
+<Airport Code="ROC" Name="Greater Rochester International Airport "/>
+<Airport Code="ROW" Name="Roswell Industrial Air Center Airport "/>
+<Airport Code="RSH" Name="Russian Mission Airport "/>
+<Airport Code="RST" Name="Rochester International Airport "/>
+<Airport Code="RSW" Name="Southwest Florida International Airport "/>
+<Airport Code="RUT" Name="Rutland State Airport "/>
+<Airport Code="RWI" Name="Rocky Mount-Wilson Regional Airport "/>
+<Airport Code="SAF" Name="Santa Fe Municipal Airport "/>
+<Airport Code="SAN" Name="San Diego International Airport "/>
+<Airport Code="SAT" Name="San Antonio International Airport "/>
+<Airport Code="SAV" Name="Savannah/Hilton Head International Airport "/>
+<Airport Code="SAW" Name="Sawyer International Airport "/>
+<Airport Code="SBA" Name="Santa Barbara Airport "/>
+<Airport Code="SBD" Name="San Bernardino International Airport "/>
+<Airport Code="SBN" Name="South Bend Regional Airport "/>
+<Airport Code="SBP" Name="San Luis County Regional Airport "/>
+<Airport Code="SBY" Name="Salisbury-Ocean City Wicomico Regional Airport "/>
+<Airport Code="SCC" Name="Deadhorse Airport "/>
+<Airport Code="SCK" Name="Stockton Metropolitan Airport "/>
+<Airport Code="SCM" Name="Scammon Bay Airport "/>
+<Airport Code="SDF" Name="Louisville International Airport "/>
+<Airport Code="SDP" Name="Sand Point Airport "/>
+<Airport Code="SDY" Name="Sidney-Richland Municipal Airport "/>
+<Airport Code="SEA" Name="Seattle/Tacoma International Airport "/>
+<Airport Code="SFB" Name="Orlando Sanford International Airport "/>
+<Airport Code="SFO" Name="San Francisco International Airport "/>
+<Airport Code="SFZ" Name="North Central State Airport "/>
+<Airport Code="SGF" Name="Springfield Branson Regional Airport "/>
+<Airport Code="SGH" Name="Springfield-Beckley Municipal Airport "/>
+<Airport Code="SGJ" Name="St Augustine Airport "/>
+<Airport Code="SGU" Name="St George Municipal Airport "/>
+<Airport Code="SGY" Name="Skagway Airport "/>
+<Airport Code="SHD" Name="Shenandoah Valley Regional Airport "/>
+<Airport Code="SHG" Name="Shungnak Airport "/>
+<Airport Code="SHH" Name="Shishmaref Airport "/>
+<Airport Code="SHR" Name="Sheridan County Airport "/>
+<Airport Code="SHV" Name="Shreveport Regional Airport "/>
+<Airport Code="SIG" Name="Fernando Luis Ribas Dominicci Airport "/>
+<Airport Code="SIT" Name="Sitka Rocky Gutierrez Airport "/>
+<Airport Code="SJC" Name="San Jose International Airport "/>
+<Airport Code="SJT" Name="San Angelo Regional Airport/"/>
+<Airport Code="SJU" Name="Luis Munoz Marin International Airport "/>
+<Airport Code="SKX" Name="Taos Regional Airport "/>
+<Airport Code="SLC" Name="Salt Lake City International Airport "/>
+<Airport Code="SLE" Name="Salem Municipal Airport "/>
+<Airport Code="SLK" Name="Adirondack Regional Airport "/>
+<Airport Code="SLN" Name="Salina Municipal Airport "/>
+<Airport Code="SMF" Name="Sacramento International Airport "/>
+<Airport Code="SMX" Name="Santa Maria Public Airport "/>
+<Airport Code="SNA" Name="John Wayne Airport "/>
+<Airport Code="SNP" Name="Saint Paul Island Airport "/>
+<Airport Code="SOP" Name="Moore County Airport "/>
+<Airport Code="SOV" Name="Seldovia Airport "/>
+<Airport Code="SOW" Name="Show Low Regional Airport "/>
+<Airport Code="SPI" Name="Abraham Lincoln Capital Airport "/>
+<Airport Code="SPS" Name="Wichita Falls Municipal Airport "/>
+<Airport Code="SQI" Name="Whiteside County Airport "/>
+<Airport Code="SRQ" Name="Sarasota-Bradenton International Airport "/>
+<Airport Code="SRR" Name="Sierra Blanca Regional Airport "/>
+<Airport Code="STC" Name="St Cloud Regional Airport "/>
+<Airport Code="STJ" Name="Rosecrans Memorial Airport "/>
+<Airport Code="STL" Name="Lambert-St. Louis International Airport "/>
+<Airport Code="STP" Name="St Paul Downtown Airport "/>
+<Airport Code="STS" Name="Sonoma County Airport "/>
+<Airport Code="STT" Name="Cyril E King Airport "/>
+<Airport Code="STX" Name="Henry E Rohlsen Airport "/>
+<Airport Code="SUN" Name="Friedman Memorial Airport "/>
+<Airport Code="SUS" Name="Spirit Of St Louis Airport "/>
+<Airport Code="SUX" Name="Sioux Gateway Airport "/>
+<Airport Code="SVA" Name="Savoonga Airport "/>
+<Airport Code="SVC" Name="Grant County Airport "/>
+<Airport Code="SWF" Name="Stewart International Airport "/>
+<Airport Code="SWO" Name="Stillwater Regional Airport "/>
+<Airport Code="SYR" Name="Syracuse Hancock International Airport "/>
+<Airport Code="T44" Name="Trident Basin Seaplane Base"/>
+<Airport Code="TAL" Name="Ralph M Calhoun Memorial Airport "/>
+<Airport Code="TBN" Name="Waynesville Regional Airport "/>
+<Airport Code="TCL" Name="Tuscaloosa Regional Airport "/>
+<Airport Code="TEB" Name="Teterboro Airport "/>
+<Airport Code="TEX" Name="Telluride Regional Airport "/>
+<Airport Code="TIX" Name="Space Coast Regional Airport "/>
+<Airport Code="TLH" Name="Tallahassee Regional Airport "/>
+<Airport Code="TLT" Name="Tuluksak Airport "/>
+<Airport Code="TNI" Name="Tinian International Airport "/>
+<Airport Code="TOG" Name="Togiak Airport "/>
+<Airport Code="TOL" Name="Toledo Express Airport "/>
+<Airport Code="TPA" Name="Tampa International Airport "/>
+<Airport Code="TPL" Name="Draughon-Miller Central Texas Regional Airport "/>
+<Airport Code="TRI" Name="Tri-Cities Regional Airport "/>
+<Airport Code="TTN" Name="Trenton Mercer Airport "/>
+<Airport Code="TUL" Name="Tulsa International Airport "/>
+<Airport Code="TUP" Name="Tupelo Regional Airport "/>
+<Airport Code="TUS" Name="Tucson International Airport "/>
+<Airport Code="TVC" Name="Cherry Capital Airport "/>
+<Airport Code="TVF" Name="Thief River Falls Regional Airport "/>
+<Airport Code="TVL" Name="Lake Tahoe Airport "/>
+<Airport Code="TVR" Name="Vicksburg Tallulah Regional Airport "/>
+<Airport Code="TWF" Name="Magic Valley Regional Airport "/>
+<Airport Code="TXK" Name="Texarkana Regional Airport "/>
+<Airport Code="TYR" Name="Tyler Pounds Regional Airport "/>
+<Airport Code="TYS" Name="Mcghee Tyson Airport "/>
+<Airport Code="UCA" Name="Oneida County Airport "/>
+<Airport Code="UIN" Name="Quincy Regional Airport "/>
+<Airport Code="UNK" Name="Unalakleet Airport "/>
+<Airport Code="UNV" Name="University Park Airport "/>
+<Airport Code="UOX" Name="University-Oxford Airport "/>
+<Airport Code="UUU" Name="Newport State Airport "/>
+<Airport Code="VAK" Name="Chevak Airport "/>
+<Airport Code="VCT" Name="Victoria Regional Airport "/>
+<Airport Code="VCV" Name="Southern California Logistics Airport "/>
+<Airport Code="VDZ" Name="North Las Vegas Air Terminal"/>
+<Airport Code="VGT" Name="North Las Vegas Air Terminal"/>
+<Airport Code="VIS" Name="Visalia Municipal Airport "/>
+<Airport Code="VLD" Name="Valdosta Regional Airport "/>
+<Airport Code="VPS" Name="Fort Walton Beach Airport "/>
+<Airport Code="VPZ" Name="Porter County Municipal Airport "/>
+<Airport Code="VQQ" Name="Cecil Field Airport "/>
+<Airport Code="VQS" Name="Vieques Airport "/>
+<Airport Code="VRB" Name="Vero Beach Municipal Airport "/>
+<Airport Code="WBB" Name="Stebbins Airport "/>
+<Airport Code="WDG" Name="Woodring Municipal Airport "/>
+<Airport Code="WLK" Name="Selawik Airport "/>
+<Airport Code="WNA" Name="Napakiak Airport "/>
+<Airport Code="WRG" Name="Wrangell Airport "/>
+<Airport Code="WRL" Name="Worland Municipal Airport "/>
+<Airport Code="WST" Name="Westerly State Airport "/>
+<Airport Code="WTK" Name="Noatak Airport "/>
+<Airport Code="WWD" Name="Cape May County Airport "/>
+<Airport Code="WYS" Name="West Yellowstone Airport "/>
+<Airport Code="X44" Name="Miami Airport "/>
+<Airport Code="X95" Name="Diego Jimenez Torres Airport "/>
+<Airport Code="XNA" Name="Northwest Arkansas Regional Airport "/>
+<Airport Code="YAK" Name="Yakutat Airport "/>
+<Airport Code="YKM" Name="Yakima Air Terminal/Mcallister Field"/>
+<Airport Code="YKN" Name="Chan Gurney Municipal Airport "/>
+<Airport Code="YNG" Name="Youngstown Regional Airport "/>
+<Airport Code="YUM" Name="Yuma International Airport "/>
+<Airport Code="Z08" Name="Ofu Airport "/>
+<Airport Code="Z09" Name="Kasigluk Airport "/>
+</Airports>

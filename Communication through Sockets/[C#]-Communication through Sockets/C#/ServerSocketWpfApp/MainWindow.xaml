@@ -1,0 +1,17 @@
+﻿<Window x:Class="ServerSocketWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Server Socket" Height="553" Width="366" Icon="icon (2).ico">
+    <Grid Background="#FFD7CBFD">
+        <TextBox Name="tbMsgReceived" IsEnabled="False" HorizontalAlignment="Left" Height="124" Margin="60,122,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="222" BorderThickness="3"/>
+        <Button x:Name="Start_Button" Content="Start server" HorizontalAlignment="Left" Margin="60,23,0,0" VerticalAlignment="Top" Width="120" Click="Start_Click" Background="Black" Foreground="White"/>
+        <TextBlock x:Name="tbStatus" HorizontalAlignment="Left" Margin="185,37,0,0" TextWrapping="Wrap" Text="Not connected yet !" VerticalAlignment="Top" Width="163" Height="55"/>
+        <Button Name="Send_Button" Content="Send message" HorizontalAlignment="Left" Margin="60,429,0,0" VerticalAlignment="Top" Width="120" Click="Send_Click" Background="Black" Foreground="White"/>
+        <Button Name="Close_Button" Content="Close connection" HorizontalAlignment="Left" Margin="60,475,0,0" VerticalAlignment="Top" Width="120" Click="Close_Click" Background="Black" Foreground="White"/>
+        <TextBox x:Name="tbMsgToSend" HorizontalAlignment="Left" Height="124" Margin="60,287,0,0" TextWrapping="Wrap" Text="This message will be send to the client side socket." VerticalAlignment="Top" Width="222" BorderThickness="3"/>
+        <Button Name="StartListen_Button" Content="Start listening" HorizontalAlignment="Left" Margin="60,59,0,0" VerticalAlignment="Top" Width="120" Click="Listen_Click" Background="Black" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="16"><Run Text="Message to send to client"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="60,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="16"><Run Text="Message to receive from client"/><LineBreak/><Run/></TextBlock>
+
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/crm/2011/tools/pluginregistration">
+  <Solutions>
+    <Solution Assembly="Develop1.Crm.Workflow.dll" Id="00000000-0000-0000-0000-000000000000" IsolationMode="Sandbox" SourceType="Database">
+      <WorkflowTypes>
+        <WorkflowType FriendlyName="Change Process Stage" Name="Change Process Stage" Description="Change Process Stage" WorkflowActivityGroupName="Develop 1" Id="00000000-0000-0000-0000-000000000000" TypeName="Develop1.Crm.Workflow.ChangeProcessStageActivity" />
+        <WorkflowType FriendlyName="Query Current Process Stage" Name="Query Current Process Stage" Description="Query Current Process Stage" WorkflowActivityGroupName="Develop 1" Id="00000000-0000-0000-0000-000000000000" TypeName="Develop1.Crm.Workflow.QueryCurrentProcessStage" />
+      </WorkflowTypes>
+    </Solution>
+  </Solutions>
+  <XamlWorkflows />
+</Register>

@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://msdn.microsoft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=21D5488088B5A5BC02F849ABC7D50089" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://msdn.microsoft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=94D8F40A3C1E5E4B7CBE86060A05CCA5" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Caching In Web API</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Caching In Web API</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, ASP.NET, ASP.NET MVC, ASP.NET Web API, System.Runtime.<wbr />Caching, WebAPI
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Caching, Performance, Development, Web Development
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">3/23/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><span style="font-size:small">In this article we will are going to learn how we can use caching in Web API. Normally caching is the process of storing data somewhere for the future requests, in our case we can avoid the unwanted hit to database to get the
+ data if we cache the data somewhere, this way we can make sure that the data is served in a faster manner. Here we are going to see the caching in our Web API controller. If you are new to caching, I have written an article about caching in MVC, please read
+ it here:&nbsp;<a href="http://sibeeshpassion.com/caching-in-mvc/" >Caching In MVC</a>. We will explain caching with the help of&nbsp;<em><a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx"  title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a></em>&nbsp;which is given by Microsoft. This DLL is not available in the default references,
+ you may need to add that separately. I will show you how. I am creating this application in Visual Studio 2015. You can always get the tips/tricks/blogs about these mentioned technologies from the links given below.</span></p>
+<li><span style="font-size:small"><a href="http://sibeeshpassion.com/category/mvc/" >MVC Tips, Tricks, Blogs</a></span>
+</li><li><span style="font-size:small"><a href="http://sibeeshpassion.com/category/web-api/" >Web API Tips, Tricks, Blogs</a></span>
+<p><span style="font-size:small">Now we will go and create our application. I hope you will like this.</span></p>
+<p><strong><span style="font-size:small">Background</span></strong></p>
+<p><span style="font-size:small">For the past few days I am working with Web API.Here we are going to see a demo of how to use Caching in Web API in our MVC application. We are going to use the DLL&nbsp;<em>System.Runtime.Caching.dll</em>, which you need to
+ add as reference.</span></p>
+<p><strong><span style="font-size:small">Create a MVC application</span></strong></p>
+<p><span style="font-size:small">Click File-&gt; New-&gt; Project then select MVC application. From the following pop up we will select the template as empty and select the core references and folders for MVC.</span></p>
+<div class="wp-caption x_alignnone" id="attachment_11405"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png"><img class="size-full x_wp-image-11405" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png" alt="Empty Template With MVC And Web API Folders" width="650" height="484"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">Empty Template With MVC And Web API Folders</span></p>
+</div>
+<p><span style="font-size:small">Once you click OK, a project with MVC like folder structure with core references will be created for you.</span></p>
+<div class="wp-caption x_alignnone" id="attachment_11362"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Folder-Structure-And-References-For-Empty-MVC-Project.png"><img class="size-full x_wp-image-11362" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Folder-Structure-And-References-For-Empty-MVC-Project.png" alt="Folder Structure And References For Empty MVC Project" width="267" height="367"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">Folder Structure And References For Empty MVC Project</span></p>
+</div>
+<p><span style="font-size:small">Once your application is ready, we can add the reference for&nbsp;<em><a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx"  title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a></em></span></p>
+<p><strong><span style="font-size:small">Add reference for <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx"  title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a></span></strong></p>
+<p><span style="font-size:small">To add the reference, right click on References and click Add reference.</span></p>
+<div class="wp-caption x_alignnone" id="attachment_11411"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Add_References_.png"><img class="size-full x_wp-image-11411" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Add_References_.png" alt="Add_References" width="482" height="316"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">Add_References</span></p>
+</div>
+<p><span style="font-size:small">Now click on the browse button, and search for&nbsp;<em><a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx"  title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a></em></span></p>
+<div class="wp-caption x_alignnone" id="attachment_11412"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/References_Found_-e1458732611680.png"><img class="size-full x_wp-image-11412" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/References_Found_-e1458732611680.png" alt="References_Found_" width="650" height="373"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">References_Found_</span></p>
+</div>
+<p><span style="font-size:small">And the click OK, the DLL will be added to your references now.</span></p>
+<p><strong><span style="font-size:small">Using the code</span></strong></p>
+<p><span style="font-size:small">We will set up our database first so that we can create Entity Model for our application later.</span></p>
+<p><strong><span style="font-size:small">Create a database</span></strong></p>
+<p><span style="font-size:small">The following query can be used to create a database in your SQL Server.</span></p>
+<div>
+<div class="syntaxhighlighter sql" id="highlighter_856680">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>SQL</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">mysql</span>
+<pre class="hidden">USE [master]
+GO
+ 
+/****** Object:  Database [TrialsDB]   
+CREATE DATABASE [TrialsDB]
+ CONTAINMENT = NONE
+ ON  PRIMARY
+( NAME = N'TrialsDB', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\TrialsDB.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON
+( NAME = N'TrialsDB_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\TrialsDB_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
+ 
+ALTER DATABASE [TrialsDB] SET COMPATIBILITY_LEVEL = 110
+GO
+ 
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [TrialsDB].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ 
+ALTER DATABASE [TrialsDB] SET ANSI_NULL_DEFAULT OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET ANSI_NULLS OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET ANSI_PADDING OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET ANSI_WARNINGS OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET ARITHABORT OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET AUTO_CLOSE OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET AUTO_CREATE_STATISTICS ON
+GO
+ 
+ALTER DATABASE [TrialsDB] SET AUTO_SHRINK OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET AUTO_UPDATE_STATISTICS ON
+GO
+ 
+ALTER DATABASE [TrialsDB] SET CURSOR_CLOSE_ON_COMMIT OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET CURSOR_DEFAULT  GLOBAL
+GO
+ 
+ALTER DATABASE [TrialsDB] SET CONCAT_NULL_YIELDS_NULL OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET NUMERIC_ROUNDABORT OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET QUOTED_IDENTIFIER OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET RECURSIVE_TRIGGERS OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET  DISABLE_BROKER
+GO
+ 
+ALTER DATABASE [TrialsDB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET DATE_CORRELATION_OPTIMIZATION OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET TRUSTWORTHY OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET ALLOW_SNAPSHOT_ISOLATION OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET PARAMETERIZATION SIMPLE
+GO
+ 
+ALTER DATABASE [TrialsDB] SET READ_COMMITTED_SNAPSHOT OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET HONOR_BROKER_PRIORITY OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET RECOVERY FULL
+GO
+ 
+ALTER DATABASE [TrialsDB] SET  MULTI_USER
+GO
+ 
+ALTER DATABASE [TrialsDB] SET PAGE_VERIFY CHECKSUM 
+GO
+ 
+ALTER DATABASE [TrialsDB] SET DB_CHAINING OFF
+GO
+ 
+ALTER DATABASE [TrialsDB] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF )
+GO
+ 
+ALTER DATABASE [TrialsDB] SET TARGET_RECOVERY_TIME = 0 SECONDS
+GO
+ 
+ALTER DATABASE [TrialsDB] SET  READ_WRITE
+GO</pre>
+<div class="preview">
+<pre class="js">USE&nbsp;[master]&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+/******&nbsp;<span class="js__object">Object</span>:&nbsp;&nbsp;Database&nbsp;[TrialsDB]&nbsp;&nbsp;&nbsp;&nbsp;
+CREATE&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;
+&nbsp;CONTAINMENT&nbsp;=&nbsp;NONE&nbsp;
+&nbsp;ON&nbsp;&nbsp;PRIMARY&nbsp;
+(&nbsp;NAME&nbsp;=&nbsp;N<span class="js__string">'TrialsDB'</span>,&nbsp;FILENAME&nbsp;=&nbsp;N<span class="js__string">'C:\Program&nbsp;Files\Microsoft&nbsp;SQL&nbsp;Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\TrialsDB.mdf'</span>&nbsp;,&nbsp;SIZE&nbsp;=&nbsp;3072KB&nbsp;,&nbsp;MAXSIZE&nbsp;=&nbsp;UNLIMITED,&nbsp;FILEGROWTH&nbsp;=&nbsp;1024KB&nbsp;)&nbsp;
+&nbsp;LOG&nbsp;ON&nbsp;
+(&nbsp;NAME&nbsp;=&nbsp;N<span class="js__string">'TrialsDB_log'</span>,&nbsp;FILENAME&nbsp;=&nbsp;N<span class="js__string">'C:\Program&nbsp;Files\Microsoft&nbsp;SQL&nbsp;Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\TrialsDB_log.ldf'</span>&nbsp;,&nbsp;SIZE&nbsp;=&nbsp;1024KB&nbsp;,&nbsp;MAXSIZE&nbsp;=&nbsp;2048GB&nbsp;,&nbsp;FILEGROWTH&nbsp;=&nbsp;<span class="js__num">10</span>%)&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;COMPATIBILITY_LEVEL&nbsp;=&nbsp;<span class="js__num">110</span>&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+IF&nbsp;(<span class="js__num">1</span>&nbsp;=&nbsp;FULLTEXTSERVICEPROPERTY(<span class="js__string">'IsFullTextInstalled'</span>))&nbsp;
+begin&nbsp;
+EXEC&nbsp;[TrialsDB].[dbo].[sp_fulltext_database]&nbsp;@action&nbsp;=&nbsp;<span class="js__string">'enable'</span>&nbsp;
+end&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;ANSI_NULL_DEFAULT&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;ANSI_NULLS&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;ANSI_PADDING&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;ANSI_WARNINGS&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;ARITHABORT&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;AUTO_CLOSE&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;AUTO_CREATE_STATISTICS&nbsp;ON&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;AUTO_SHRINK&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;AUTO_UPDATE_STATISTICS&nbsp;ON&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;CURSOR_CLOSE_ON_COMMIT&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;CURSOR_DEFAULT&nbsp;&nbsp;GLOBAL&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;CONCAT_NULL_YIELDS_NULL&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;NUMERIC_ROUNDABORT&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;QUOTED_IDENTIFIER&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;RECURSIVE_TRIGGERS&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;&nbsp;DISABLE_BROKER&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;AUTO_UPDATE_STATISTICS_ASYNC&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;DATE_CORRELATION_OPTIMIZATION&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;TRUSTWORTHY&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;ALLOW_SNAPSHOT_ISOLATION&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;PARAMETERIZATION&nbsp;SIMPLE&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;READ_COMMITTED_SNAPSHOT&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;HONOR_BROKER_PRIORITY&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;RECOVERY&nbsp;FULL&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;&nbsp;MULTI_USER&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;PAGE_VERIFY&nbsp;CHECKSUM&nbsp;&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;DB_CHAINING&nbsp;OFF&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;FILESTREAM(&nbsp;NON_TRANSACTED_ACCESS&nbsp;=&nbsp;OFF&nbsp;)&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;TARGET_RECOVERY_TIME&nbsp;=&nbsp;<span class="js__num">0</span>&nbsp;SECONDS&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+ALTER&nbsp;DATABASE&nbsp;[TrialsDB]&nbsp;SET&nbsp;&nbsp;READ_WRITE&nbsp;
+GO</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">Now we will create the table we needed. As of now I am going to create the table&nbsp;<em>tblTags</em></span></p>
+<p><span style="font-size:small">Create tables in database</span></p>
+<p><span style="font-size:small">Below is the query to create the table&nbsp;<em>tblTags</em>.</span></p>
+<div>
+<div class="syntaxhighlighter sql" id="highlighter_300513">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>SQL</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">mysql</span>
+<pre class="hidden">USE [TrialsDB]
+GO
+ 
+/****** Object:  Table [dbo].[tblTags]    Script Date: 23-Mar-16 5:01:22 PM ******/
+SET ANSI_NULLS ON
+GO
+ 
+SET QUOTED_IDENTIFIER ON
+GO
+ 
+CREATE TABLE [dbo].[tblTags](
+    [tagId] [int] IDENTITY(1,1) NOT NULL,
+    [tagName] [nvarchar](50) NOT NULL,
+    [tagDescription] [nvarchar](max) NULL,
+ CONSTRAINT [PK_tblTags] PRIMARY KEY CLUSTERED
+(
+    [tagId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+ 
+GO</pre>
+<div class="preview">
+<pre class="js">USE&nbsp;[TrialsDB]&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+/******&nbsp;Object:&nbsp;&nbsp;Table&nbsp;[dbo].[tblTags]&nbsp;&nbsp;&nbsp;&nbsp;Script&nbsp;Date:&nbsp;<span class="js__num">23</span>-Mar<span class="js__num">-16</span>&nbsp;<span class="js__num">5</span>:<span class="js__num">01</span>:<span class="js__num">22</span>&nbsp;PM&nbsp;******/&nbsp;
+SET&nbsp;ANSI_NULLS&nbsp;ON&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+SET&nbsp;QUOTED_IDENTIFIER&nbsp;ON&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+CREATE&nbsp;TABLE&nbsp;[dbo].[tblTags](&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[tagId]&nbsp;[int]&nbsp;IDENTITY(<span class="js__num">1</span>,<span class="js__num">1</span>)&nbsp;NOT&nbsp;NULL,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[tagName]&nbsp;[nvarchar](<span class="js__num">50</span>)&nbsp;NOT&nbsp;NULL,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[tagDescription]&nbsp;[nvarchar](max)&nbsp;NULL,&nbsp;
+&nbsp;CONSTRAINT&nbsp;[PK_tblTags]&nbsp;PRIMARY&nbsp;KEY&nbsp;CLUSTERED&nbsp;
+(&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[tagId]&nbsp;ASC&nbsp;
+)WITH&nbsp;(PAD_INDEX&nbsp;=&nbsp;OFF,&nbsp;STATISTICS_NORECOMPUTE&nbsp;=&nbsp;OFF,&nbsp;IGNORE_DUP_KEY&nbsp;=&nbsp;OFF,&nbsp;ALLOW_ROW_LOCKS&nbsp;=&nbsp;ON,&nbsp;ALLOW_PAGE_LOCKS&nbsp;=&nbsp;ON)&nbsp;ON&nbsp;[PRIMARY]&nbsp;
+)&nbsp;ON&nbsp;[PRIMARY]&nbsp;TEXTIMAGE_ON&nbsp;[PRIMARY]&nbsp;
+&nbsp;&nbsp;
+GO</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">Can we insert some data to the tables now?</span></p>
+<p><span style="font-size:small">Insert data to table</span></p>
+<p><span style="font-size:small">You can use the below query to insert the data to the table&nbsp;<em>tblTags</em></span></p>
+<div>
+<div class="syntaxhighlighter sql" id="highlighter_519281">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>SQL</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">mysql</span>
+<pre class="hidden">USE [TrialsDB]
+GO
+ 
+INSERT INTO [dbo].[tblTags]
+           ([tagName]
+           ,[tagDescription])
+     VALUES
+           (&lt;tagName, nvarchar(50),&gt;
+           ,&lt;tagDescription, nvarchar(max),&gt;)
+GO</pre>
+<div class="preview">
+<pre class="js">USE&nbsp;[TrialsDB]&nbsp;
+GO&nbsp;
+&nbsp;&nbsp;
+INSERT&nbsp;INTO&nbsp;[dbo].[tblTags]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([tagName]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,[tagDescription])&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VALUES&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&lt;tagName,&nbsp;nvarchar(<span class="js__num">50</span>),&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&lt;tagDescription,&nbsp;nvarchar(max),&gt;)&nbsp;
+GO</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">Next thing we are going to do is creating a ADO.NET Entity Data Model.</span></p>
+<p><strong><span style="font-size:small">Create Entity Data Model</span></strong></p>
+<p><span style="font-size:small">Right click on your model folder and click new, select ADO.NET Entity Data Model. Follow the steps given. Once you have done the processes, you can see the edmx file and other files in your model folder. Here I gave&nbsp;<em>Dashboard</em>&nbsp;for
+ our Entity data model name. Now you can see a file with edmx extension have been created.</span><br>
+<span style="font-size:small">Now will create our Web API controller.</span></p>
+<p><strong><span style="font-size:small">Create Web API Controller</span></strong></p>
+<p><span style="font-size:small">To create a Web API controller, just right click on your controller folder and click Add -&gt; Controller -&gt; Select Web API 2 controller with actions, using Entity Framework.</span></p>
+<div class="wp-caption x_alignnone" id="attachment_11401"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png"><img class="size-full x_wp-image-11401" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png" alt="Web API 2 Controller With Actions Using Entity Framework" width="650" height="448"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">Web API 2 Controller With Actions Using Entity Framework</span></p>
+</div>
+<p><span style="font-size:small">Now select&nbsp;<em>tblTag (CachingInWebAPI.Models)</em>&nbsp;as our Model class and&nbsp;<em>TrialsDBEntities (CachingInWebAPI.Models)</em>&nbsp;as data context class.</span></p>
+<p><span style="font-size:small">As you can see It has been given the name of our controller as&nbsp;<em>tblTags</em>. Here I am not going to change that, if you wish to change, you can do that.</span></p>
+<p><span style="font-size:small">Now you will be given the following codes in our new Web API controller.</span></p>
+<div>
+<div class="syntaxhighlighter csharp" id="highlighter_10715">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Data.Entity.aspx"  title="Auto generated link to System.Data.Entity">System.Data.Entity</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Data.Entity.Infrastructure.aspx"  title="Auto generated link to System.Data.Entity.Infrastructure">System.Data.Entity.Infrastructure</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Net.aspx"  title="Auto generated link to System.Net">System.Net</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Net.Http.aspx"  title="Auto generated link to System.Net.Http">System.Net.Http</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Web.Http.aspx"  title="Auto generated link to System.Web.Http">System.Web.Http</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Web.Http.Description.aspx"  title="Auto generated link to System.Web.Http.Description">System.Web.Http.Description</a>;
+using CachingInWebAPI.Models;
+ 
+namespace CachingInWebAPI.Controllers
+{
+    public class tblTagsController : ApiController
+    {
+        private TrialsDBEntities db = new TrialsDBEntities();
+ 
+        // GET: api/tblTags
+        public IQueryable&lt;tblTag&gt; GettblTags()
+        {
+            return db.tblTags;
+        }
+ 
+        // GET: api/tblTags/5
+        [ResponseType(typeof(tblTag))]
+        public IHttpActionResult GettblTag(int id)
+        {
+            tblTag tblTag = db.tblTags.Find(id);
+            if (tblTag == null)
+            {
+                return NotFound();
+            }
+ 
+            return Ok(tblTag);
+        }
+ 
+        // PUT: api/tblTags/5
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PuttblTag(int id, tblTag tblTag)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+ 
+            if (id != tblTag.tagId)
+            {
+                return BadRequest();
+            }
+ 
+            db.Entry(tblTag).State = EntityState.Modified;
+ 
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!tblTagExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+ 
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+ 
+        // POST: api/tblTags
+        [ResponseType(typeof(tblTag))]
+        public IHttpActionResult PosttblTag(tblTag tblTag)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+ 
+            db.tblTags.Add(tblTag);
+            db.SaveChanges();
+ 
+            return CreatedAtRoute(&quot;DefaultApi&quot;, new { id = tblTag.tagId }, tblTag);
+        }
+ 
+        // DELETE: api/tblTags/5
+        [ResponseType(typeof(tblTag))]
+        public IHttpActionResult DeletetblTag(int id)
+        {
+            tblTag tblTag = db.tblTags.Find(id);
+            if (tblTag == null)
+            {
+                return NotFound();
+            }
+ 
+            db.tblTags.Remove(tblTag);
+            db.SaveChanges();
+ 
+            return Ok(tblTag);
+        }
+ 
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+ 
+        private bool tblTagExists(int id)
+        {
+            return db.tblTags.Count(e =&gt; e.tagId == id) &gt; 0;
+        }
+    }
+}</pre>
+<div class="preview">
+<pre class="js">using&nbsp;System;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Data.Entity.aspx"  title="Auto generated link to System.Data.Entity">System.Data.Entity</a>;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Data.Entity.Infrastructure.aspx"  title="Auto generated link to System.Data.Entity.Infrastructure">System.Data.Entity.Infrastructure</a>;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Net.aspx"  title="Auto generated link to System.Net">System.Net</a>;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Net.Http.aspx"  title="Auto generated link to System.Net.Http">System.Net.Http</a>;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Web.Http.aspx"  title="Auto generated link to System.Web.Http">System.Web.Http</a>;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Web.Http.Description.aspx"  title="Auto generated link to System.Web.Http.Description">System.Web.Http.Description</a>;&nbsp;
+using&nbsp;CachingInWebAPI.Models;&nbsp;
+&nbsp;&nbsp;
+namespace&nbsp;CachingInWebAPI.Controllers&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;class&nbsp;tblTagsController&nbsp;:&nbsp;ApiController&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;TrialsDBEntities&nbsp;db&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;TrialsDBEntities();&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;GET:&nbsp;api/tblTags</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IQueryable&lt;tblTag&gt;&nbsp;GettblTags()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;db.tblTags;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;GET:&nbsp;api/tblTags/5</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ResponseType(<span class="js__operator">typeof</span>(tblTag))]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IHttpActionResult&nbsp;GettblTag(int&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tblTag&nbsp;tblTag&nbsp;=&nbsp;db.tblTags.Find(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(tblTag&nbsp;==&nbsp;null)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;NotFound();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;Ok(tblTag);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;PUT:&nbsp;api/tblTags/5</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ResponseType(<span class="js__operator">typeof</span>(<span class="js__operator">void</span>))]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IHttpActionResult&nbsp;PuttblTag(int&nbsp;id,&nbsp;tblTag&nbsp;tblTag)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(!ModelState.IsValid)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;BadRequest(ModelState);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(id&nbsp;!=&nbsp;tblTag.tagId)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;BadRequest();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Entry(tblTag).State&nbsp;=&nbsp;EntityState.Modified;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.SaveChanges();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">catch</span>&nbsp;(DbUpdateConcurrencyException)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(!tblTagExists(id))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;NotFound();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">throw</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;StatusCode(HttpStatusCode.NoContent);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;POST:&nbsp;api/tblTags</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ResponseType(<span class="js__operator">typeof</span>(tblTag))]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IHttpActionResult&nbsp;PosttblTag(tblTag&nbsp;tblTag)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(!ModelState.IsValid)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;BadRequest(ModelState);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.tblTags.Add(tblTag);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.SaveChanges();&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;CreatedAtRoute(<span class="js__string">&quot;DefaultApi&quot;</span>,&nbsp;<span class="js__operator">new</span>&nbsp;<span class="js__brace">{</span>&nbsp;id&nbsp;=&nbsp;tblTag.tagId&nbsp;<span class="js__brace">}</span>,&nbsp;tblTag);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;DELETE:&nbsp;api/tblTags/5</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ResponseType(<span class="js__operator">typeof</span>(tblTag))]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IHttpActionResult&nbsp;DeletetblTag(int&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tblTag&nbsp;tblTag&nbsp;=&nbsp;db.tblTags.Find(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(tblTag&nbsp;==&nbsp;null)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;NotFound();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.tblTags.Remove(tblTag);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.SaveChanges();&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;Ok(tblTag);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;override&nbsp;<span class="js__operator">void</span>&nbsp;Dispose(bool&nbsp;disposing)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(disposing)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Dispose();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;base.Dispose(disposing);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;bool&nbsp;tblTagExists(int&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;db.tblTags.Count(e&nbsp;=&gt;&nbsp;e.tagId&nbsp;==&nbsp;id)&nbsp;&gt;&nbsp;<span class="js__num">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">As we are not going to use only read operation, you can remove other functionalities and keep only&nbsp;<em>Get&nbsp;</em>methods for now.</span></p>
+<div>
+<div class="syntaxhighlighter csharp" id="highlighter_918707">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">// GET: api/tblTags
+       public IQueryable&lt;tblTag&gt; GettblTags()
+       {
+           return db.tblTags;
+       }</pre>
+<div class="preview">
+<pre class="js"><span class="js__sl_comment">//&nbsp;GET:&nbsp;api/tblTags</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IQueryable&lt;tblTag&gt;&nbsp;GettblTags()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;db.tblTags;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">So the coding part to fetch the data from database is ready, now we need to check whether our Web API is ready for action!. To check that, you just need to run the URL&nbsp;<em>http://localhost:4832/api/tblTags</em>. Here<em>tblTags</em>&nbsp;is
+ our Web API controller name. I hope you get the data as a result.</span></p>
+<div class="wp-caption x_alignnone" id="attachment_11413"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Web_API_Result-e1458733092316.png"><img class="size-full x_wp-image-11413" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Web_API_Result-e1458733092316.png" alt="Web_API_Result" width="650" height="342"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">Web_API_Result</span></p>
+</div>
+<p><span style="font-size:small">Now we will start testing our caching. For that please import the namespace&nbsp;<em><a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx"  title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a>;</em></span></p>
+<div>
+<div class="syntaxhighlighter csharp" id="highlighter_259868">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2"><br>
+<br>
+</div>
+</td>
+<td class="code"><br>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using <a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx"  title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a>;
+</pre>
+<div class="preview">
+<pre class="js">using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx"  title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a>;&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+</div>
+<p><span style="font-size:small">Next we will create an instance of&nbsp;<em>MemoryCache&nbsp;</em>class.</span></p>
+<div class="wp-caption x_alignnone" id="attachment_11415"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/MemoryCache_Tooltip_.png"><img class="size-full x_wp-image-11415" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/MemoryCache_Tooltip_.png" alt="MemoryCache_Tooltip_" width="654" height="102"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">MemoryCache_Tooltip_</span></p>
+</div>
+<p><span style="font-size:small">As you can see there are four possible settings we can set in&nbsp;<em>MemoryCache&nbsp;</em>class.</span></p>
+<div class="wp-caption x_alignnone" id="attachment_11416"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/MemoryCache_Settings-e1458734646751.png"><img class="size-full x_wp-image-11416" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/MemoryCache_Settings-e1458734646751.png" alt="MemoryCache_Settings" width="650" height="123"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">MemoryCache_Settings</span></p>
+</div>
+<p><span style="font-size:small">Now we can add MemoryCache as follows.</span></p>
+<p><span style="font-size:small"></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public IQueryable&lt;tblTag&gt; GettblTags()
+        {
+            var ca = db.tblTags;
+            memCache.Add(&quot;tag&quot;, ca, DateTimeOffset.UtcNow.AddMinutes(5));
+            return db.tblTags;
+        }</pre>
+<div class="preview">
+<pre class="js">public&nbsp;IQueryable&lt;tblTag&gt;&nbsp;GettblTags()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;ca&nbsp;=&nbsp;db.tblTags;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memCache.Add(<span class="js__string">&quot;tag&quot;</span>,&nbsp;ca,&nbsp;DateTimeOffset.UtcNow.AddMinutes(<span class="js__num">5</span>));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;db.tblTags;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"></div>
+</span>
+<p></p>
+<div class="wp-caption x_alignnone" id="attachment_11417"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/MemoryCache_Add-e1458734908183.png"><img class="size-full x_wp-image-11417" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/MemoryCache_Add-e1458734908183.png" alt="MemoryCache_Add" width="650" height="70"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">MemoryCache_Add</span></p>
+</div>
+<p><span style="font-size:small">Here &ldquo;tag&rdquo; is my key and &ldquo;ca&rdquo; is my values and DateTimeOffset.UtcNow.AddMinutes(5) is for setting the cache for five minutes from now.</span></p>
+<p><span style="font-size:small">Shall we check how it works now? To check whether the content has been added to the cache we need to use the Get method, please see the code block below.</span></p>
+<div>
+<div class="syntaxhighlighter csharp" id="highlighter_787486">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">var res = memCache.Get(&quot;tag&quot;);
+            if (res != null)
+            {
+                return res;
+            }
+            else {
+                var ca = db.tblTags;
+                memCache.Add(&quot;tag&quot;, ca, DateTimeOffset.UtcNow.AddMinutes(5));
+                return db.tblTags;
+            }</pre>
+<div class="preview">
+<pre class="js"><span class="js__statement">var</span>&nbsp;res&nbsp;=&nbsp;memCache.Get(<span class="js__string">&quot;tag&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(res&nbsp;!=&nbsp;null)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;res;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;ca&nbsp;=&nbsp;db.tblTags;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memCache.Add(<span class="js__string">&quot;tag&quot;</span>,&nbsp;ca,&nbsp;DateTimeOffset.UtcNow.AddMinutes(<span class="js__num">5</span>));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;db.tblTags;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p><span style="font-size:small">We will get the cache values in the variable res, remember this values will be there only for five minutes. You can always change that as per need. If the value is not null, we will just return it and do the manipulation and
+ if it is null we will go ahead and fetch the data from database and add the value to cache. Now please run your API by running the URL&nbsp;<em>http://localhost:4832/api/tblTags</em>.</span></p>
+<div class="wp-caption x_alignnone" id="attachment_11418"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Cache_Value_Null.png"><img class="size-full x_wp-image-11418" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Cache_Value_Null.png" alt="Cache_Value_Null" width="624" height="215"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">Cache_Value_Null</span></p>
+</div>
+<p><span style="font-size:small">You can see that we are setting the value to memCache as the&nbsp;<em>memCache.Get(&ldquo;tag&rdquo;)</em>&nbsp;is null.</span></p>
+<div class="wp-caption x_alignnone" id="attachment_11419"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Cache_Value_Not_Null.png"><img class="size-full x_wp-image-11419" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/Cache_Value_Not_Null.png" alt="Cache_Value_Not_Null" width="596" height="215"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">Cache_Value_Not_Null</span></p>
+</div>
+<p><span style="font-size:small">So we just tried to load the same Web API URL within five minutes, so we gets values from<em>memCache.Get(&ldquo;tag&rdquo;)</em>. Sounds good?</span></p>
+<p><span style="font-size:small">There is an option to remove our cache too, we will see that now. We will use the&nbsp;<em>Remove</em>&nbsp;function for the same. First we will check whether the key is available in the&nbsp;<em>MemoryCache</em>, if it is available
+ we will remove that.</span></p>
+<p><span style="font-size:small"></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">//This is to remove the MemoryCache - start
+                if (memCache.Contains(&quot;tag&quot;))
+                {
+                    memCache.Remove(&quot;tag&quot;);
+                }
+                //This is to remove the MemoryCache - end
+</pre>
+<div class="preview">
+<pre class="js"><span class="js__sl_comment">//This&nbsp;is&nbsp;to&nbsp;remove&nbsp;the&nbsp;MemoryCache&nbsp;-&nbsp;start</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(memCache.Contains(<span class="js__string">&quot;tag&quot;</span>))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memCache.Remove(<span class="js__string">&quot;tag&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//This&nbsp;is&nbsp;to&nbsp;remove&nbsp;the&nbsp;MemoryCache&nbsp;-&nbsp;end</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+</span>
+<p></p>
+<div>
+<div class="syntaxhighlighter csharp" id="highlighter_388804"></div>
+</div>
+<div class="wp-caption x_alignnone" id="attachment_11420"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/MemoryCache_Remove-e1458737311814.png"><img class="size-full x_wp-image-11420" src="https://code.msdn.microsoft.com/Caching-In-Web-API-cb40be30/description/MemoryCache_Remove-e1458737311814.png" alt="MemoryCache_Remove" width="650" height="299"></a>
+</span>
+<p class="wp-caption-text"><span style="font-size:small">MemoryCache_Remove</span></p>
+</div>
+<p><span style="font-size:small">We have done everything!. That&rsquo;s fantastic right? Have a happy coding.</span></p>
+<h1></h1>
+</li>
+</div>
+
+
+    </div>
+</body>
+</html>

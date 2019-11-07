@@ -1,0 +1,16 @@
+﻿@model ContactManager.Models.Contact
+
+
+<form id="addContact" data-bind="submit: createContactFromForm">
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Contact</legend>
+
+        @Html.EditorForModel()
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+</form>

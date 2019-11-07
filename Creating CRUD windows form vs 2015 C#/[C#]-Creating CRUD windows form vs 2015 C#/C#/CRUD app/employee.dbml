@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kaafi" Class="employeeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.39;Initial Catalog=kaafi;User ID=sa" SettingsObjectName="CRUD_app.Properties.Settings" SettingsPropertyName="kaafiConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.employeetab" Member="employeetabs">
+    <Type Name="employeetab">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="empid" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="empname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="empdep" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="empimage" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

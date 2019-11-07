@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.4.1.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=108612E2CC4F976C14444324F9F015F7" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=EB101E94E2F72F68528E12AC56A6D446" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Convert from HTML to PDF in CSharp VB and ASP.NET with a Free 3rd Party Library</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Convert from HTML to PDF in CSharp VB and ASP.NET with a Free 3rd Party Library</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, ASP.NET, .NET Framework, VB.Net
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            HTML to PDF, Html To Pdf Conversion, Pdf Library, Html to Pdf Azure
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">5/10/2019</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Convert-from-HTML-to-PDF-09ce2a1d">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>Converting from html to pdf is not an easy task. There are some tools that can do that, but most of them cost thousands of dollars.</p>
+<p>Select.Pdf offers a Community Edition (FREE) of the powerful <a title="Html To Pdf Converter for .NET" href="http://selectpdf.com/html-to-pdf-converter/">
+Html To Pdf Converter for .NET</a> that can be found in the full featured pdf library Select.Pdf for .NET. The free html to pdf converter offers most of the features the professional sdk offers, the most notable limitation is that it can only generate pdf documents
+ up to 5 pages long.</p>
+<p>The <a title="Free Html To Pdf for .NET" href="http://selectpdf.com/community-edition/">
+community edition</a> contains ready to use samples, coded in C# and VB.NET for Windows Forms and ASP.NET. Select.Pdf Html To Pdf Converter for .NET works on any Windows OS and on Windows Azure.</p>
+<p>SelectPdf Html To Pdf Converter provides versions for .NET Framework and .NET Core 2.0 and above (through .NET Standard 2.0). SelectPdf only works on Windows. SelectPdf works on Azure cloud, including Azure Web Apps (Basic plan or above) with some limitations.</p>
+<h1>Html to Pdf Converter For .NET - Community Edition Features</h1>
+<ul>
+<li>Generate pdf documents up to 5 pages </li><li>Convert any web page to pdf </li><li>Convert any raw html string to pdf </li><li>Set pdf page settings (page size, page orientation, page margins) </li><li>Resize content during conversion to fit the pdf page </li><li>Set pdf document properties </li><li>Set pdf viewer preferences </li><li>Set pdf security (passwords, permissions) </li><li>Set conversion delay and web page navigation timeout </li><li>Custom headers and footers </li><li>Support for html in headers and footers </li><li>Automatic and manual page breaks </li><li>Repeat html table headers on each page </li><li>Support for @media types screen and print </li><li>Support for internal and external links </li><li>Generate bookmarks automatically based on html elements </li><li>Support for HTTP headers </li><li>Support for HTTP cookies </li><li>Support for web pages that require authentication </li><li>Support for proxy servers </li><li>Enable/disable javascript </li><li>Modify color space </li><li>Multithreading support </li><li>HTML5/CSS3 support </li><li>Web fonts support </li></ul>
+<h1><span>Building the Sample</span></h1>
+<p>The sample project attached presents most of the SelectPdf Html To Pdf Converter Features. A reference to the Select.Pdf Html To Pdf for .NET was a added as a NuGet Package. Alternatively, the free product can be downloaded from&nbsp;<a title="Free Html To Pdf Converter" href="http://selectpdf.com/community-edition/">http://selectpdf.com/community-edition/</a>.</p>
+<p>SelectPdf Free Html To Pdf Converter is very easy to use. Below is a small sample code. A lot more can be found in the sample project attached.</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">// instantiate the html to pdf converter
+HtmlToPdf converter = new HtmlToPdf();
+
+// convert the url to pdf
+PdfDocument doc = converter.ConvertUrl(url);
+
+// save pdf document
+doc.Save(file);
+
+// close pdf document
+doc.Close();</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//&nbsp;instantiate&nbsp;the&nbsp;html&nbsp;to&nbsp;pdf&nbsp;converter</span>&nbsp;
+HtmlToPdf&nbsp;converter&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;HtmlToPdf();&nbsp;
+&nbsp;
+<span class="cs__com">//&nbsp;convert&nbsp;the&nbsp;url&nbsp;to&nbsp;pdf</span>&nbsp;
+PdfDocument&nbsp;doc&nbsp;=&nbsp;converter.ConvertUrl(url);&nbsp;
+&nbsp;
+<span class="cs__com">//&nbsp;save&nbsp;pdf&nbsp;document</span>&nbsp;
+doc.Save(file);&nbsp;
+&nbsp;
+<span class="cs__com">//&nbsp;close&nbsp;pdf&nbsp;document</span>&nbsp;
+doc.Close();</pre>
+</div>
+</div>
+</div>
+<p><span style="font-size:small">ASP.NET MVC Sample available here:&nbsp;<a href="https://code.msdn.microsoft.com/Convert-from-HTML-to-PDF-09ce2a1d/https://code.msdn.microsoft.com/Free-Html-To-Pdf-Converter-04e4438e">https://code.msdn.microsoft.com/Convert-from-HTML-to-PDF-09ce2a1d/https://code.msdn.microsoft.com/Free-Html-To-Pdf-Converter-04e4438e</a></span></p>
+<p><span style="font-size:small">ASP.NET Core MVC Sample available here:&nbsp;<a href="https://code.msdn.microsoft.com/Convert-from-HTML-to-PDF-09ce2a1d/https://code.msdn.microsoft.com/Convert-from-HTML-to-PDF-d63582e8">https://code.msdn.microsoft.com/Convert-from-HTML-to-PDF-09ce2a1d/https://code.msdn.microsoft.com/Convert-from-HTML-to-PDF-d63582e8</a></span></p>
+<p><span style="font-size:small"><br>
+</span></p>
+<p><span style="font-size:small"><br>
+</span></p>
+<h1>IMPORTANT</h1>
+<p>This Community Edition of SelectPdf IS NOT THE FREE TRIAL for SelectPdf Commercial Library. This is a FREE product with
+<strong>limited functionality</strong>. If you want to try the full featured SelectPdf Library, download a free trial version from here:
+<a title="Html To Pdf Converter" href="http://selectpdf.com/pdf-library-for-net/" >
+http://selectpdf.com/pdf-library-for-net/</a></p>
+<p>The following features are not part of the free community edition. To use any of these features you need the full
+<strong>commercial</strong> <a title="SelectPdf Library for .NET" href="http://selectpdf.com/pdf-library-for-net/" >
+SelectPdf Library for .NET</a>:</p>
+<p>- Create PDF documents with more than 5 pages.<br>
+- Convert only a certain section of the page, specified by the html element ID.<br>
+- Manually start the conversion to PDF from javascript.<br>
+- Specify a JS startup script that will run before the conversion.<br>
+- Hide parts of the web page during the html to pdf conversion.<br>
+- Load and modify existing PDF documents.<br>
+- Add additional HTML, text, images to PDF (using PdfHtmlElement, PdfTextElement, PdfImageElement objects).<br>
+- Get web elements location in PDF.<br>
+- Specify the open action of the PDF document (jump to page, run script).<br>
+- Custom headers and footers on specific PDF pages.<br>
+- Form fields filling.<br>
+- PDF portfolios management.<br>
+- Resize/scale content of existing PDF documents.<br>
+- Extract text from PDF (PDF to Text converter).<br>
+- Search for text in PDF.<br>
+- Convert PDF pages to images (PDF to Image converter).</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

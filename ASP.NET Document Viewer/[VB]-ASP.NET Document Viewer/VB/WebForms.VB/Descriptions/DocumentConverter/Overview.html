@@ -1,0 +1,60 @@
+﻿<p>DocumentConverter class allows you to convert between wide range of document file formats.</p>
+<ul>
+    <li>
+        <p>
+            You can use static Convert method to easily convert an input document to another format:
+        </p>
+<pre style="font-family:Consolas;font-size:13;color:black;background:white;"><span style="color:#2b91af;">DocumentConverter</span>.Convert(<span style="color:#a31515;">&quot;MyDocument.docx&quot;</span>,&nbsp;<span style="color:#2b91af;">DocumentFormat</span>.Pdf);
+</pre>
+        <p>Convert method also returns an instance of DocumentConverterResult class which has some useful properties:</p>
+<pre style="font-family:Consolas;font-size:13;color:black;background:white;"><span style="color:blue;">var</span>&nbsp;result&nbsp;=&nbsp;<span style="color:#2b91af;">DocumentConverter</span>.Convert(inputDocument,&nbsp;<span style="color:#2b91af;">DocumentFormat</span>.Docx);
+result.ElapsedTime&nbsp;<span style="color:green;">/*&nbsp;Total&nbsp;elapse&nbsp;time&nbsp;for&nbsp;the&nbsp;document&nbsp;conversion&nbsp;*/</span>
+result.OutputFiles&nbsp;<span style="color:green;">/*&nbsp;A&nbsp;string&nbsp;array&nbsp;for&nbsp;the&nbsp;paths&nbsp;of&nbsp;the&nbsp;converted&nbsp;(output)&nbsp;document&nbsp;files.&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;there&nbsp;is&nbsp;only&nbsp;one&nbsp;output&nbsp;file,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;a&nbsp;single&nbsp;item&nbsp;array.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;the&nbsp;output&nbsp;is&nbsp;a&nbsp;directory&nbsp;(e.g.&nbsp;for&nbsp;DocumentFormat.Web&nbsp;format),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;string&nbsp;will&nbsp;have&nbsp;a&nbsp;trailing&nbsp;backslash&nbsp;(\).*/</span>
+</pre>
+        
+    </li>
+    <li>
+        <p>
+            You can use static CanConvert method to check beforehand if an input document can be directly converted another format.
+        </p>
+<pre style="font-family:Consolas;font-size:13;color:black;background:white;"><span style="color:blue;">if</span>&nbsp;(<span style="color:#2b91af;">DocumentConverter</span>.CanConvert(<span style="color:#a31515;">&quot;MyDocument.docx&quot;</span>,&nbsp;<span style="color:#2b91af;">DocumentFormat</span>.Pdf))
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;...</span>
+}
+</pre>
+
+    </li>
+    <li>
+        <p>
+            You can also create an instance of DocumentConverter class with an input document and call instance methods ConvertTo and CanConvertTo.
+            This is useful especially when you want to convert the same input document to several output formats.
+        </p>
+        <pre style="font-family:Consolas;font-size:13;color:black;background:white;"><span style="color:blue;">var</span>&nbsp;documentConverter&nbsp;=&nbsp;<span style="color:blue;">new</span>&nbsp;<span style="color:#2b91af;">DocumentConverter</span>(<span style="color:#a31515;">&quot;MyDocument.xlsx&quot;</span>);
+documentConverter.ConvertTo(<span style="color:#2b91af;">DocumentFormat</span>.Pdf);
+documentConverter.ConvertTo(<span style="color:#a31515;">&quot;MyDocument.xps&quot;</span>);
+<span style="color:blue;">var</span>&nbsp;result&nbsp;&nbsp;=&nbsp;documentConverter.ConvertTo(<span style="color:#2b91af;">DocumentFormat</span>.Jpg);
+<span style="color:blue;">if</span>&nbsp;(documentConverter.CanConvertTo(<span style="color:#2b91af;">DocumentFormat</span>.Html))
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;</span>
+}
+</pre>
+    </li>
+    <li>
+        <p>
+            You can enumerate possible output document formats for a given input document file with EnumeratePossibleOutputFormats method and vice versa with EnumeratePossibleInputFormats method:
+        </p>
+        <pre style="font-family:Consolas;font-size:13;color:black;background:white;"><span style="color:blue;">foreach</span>&nbsp;(<span style="color:blue;">var</span>&nbsp;outputFormat&nbsp;<span style="color:blue;">in</span>&nbsp;<span style="color:#2b91af;">DocumentConverter</span>.EnumeratePossibleOutputFormats(inputDocument))
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;...</span>
+}
+ 
+<span style="color:blue;">foreach</span>&nbsp;(<span style="color:blue;">var</span>&nbsp;inputFormat&nbsp;<span style="color:blue;">in</span>&nbsp;<span style="color:#2b91af;">DocumentConverter</span>.EnumeratePossibleInputFormats(outputDocument))
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;...</span>
+}
+</pre>
+    </li>
+</ul>

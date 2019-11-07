@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="WpfCommonDataAccess.userClock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             Height="200" Width="200">
+
+    <UserControl.Resources>
+        <FrameworkElement x:Key="dt" Tag="{x:Static s:DateTime.Now}" />
+
+        <TransformGroup x:Key="angleSecond">
+            <ScaleTransform 
+                ScaleX="{Binding Source={StaticResource dt}, Path=Tag.Second}" />
+            <ScaleTransform ScaleX="6" />
+        </TransformGroup>
+        <Style TargetType="{x:Type Path}">
+            <Setter Property="Stroke" 
+                    Value="{DynamicResource 
+                                {x:Static SystemColors.WindowTextBrushKey}}" />
+            <Setter Property="StrokeThickness" Value="2" />
+            <Setter Property="StrokeStartLineCap" Value="Round" />
+            <Setter Property="StrokeEndLineCap" Value="Round" />
+            <Setter Property="StrokeLineJoin" Value="Round" />
+            <Setter Property="StrokeDashCap" Value="Round" />
+        </Style>
+    </UserControl.Resources>
+
+    <Viewbox>
+        <Canvas Width="200" Height="200">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="100" Y="100" />
+            </Canvas.RenderTransform>
+            <Path Data="M 0 -90 A 90 90 0 1 1 -0.01 -90"
+                  StrokeDashArray="0 7.854"
+                  StrokeThickness="6" />
+            <Path Data="M 0 10 L 0 -80">
+                <Path.RenderTransform>
+                    <RotateTransform x:Name="xformSecond" 
+                        Angle="{Binding Source={StaticResource angleSecond}, 
+                                        Path=Value.M11}" />
+                </Path.RenderTransform>
+            </Path>
+        </Canvas>
+    </Viewbox>
+
+    <UserControl.Triggers>
+
+        <EventTrigger RoutedEvent="Canvas.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+
+                    <DoubleAnimation Storyboard.TargetName="xformSecond"
+                                     Storyboard.TargetProperty="Angle"
+                                     From="0" To="360" Duration="0:1:0"
+                                     IsAdditive="True"
+                                     RepeatBehavior="Forever" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+
+    </UserControl.Triggers>
+
+
+</UserControl>

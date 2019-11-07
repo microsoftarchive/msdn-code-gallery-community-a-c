@@ -1,0 +1,119 @@
+﻿@model Chess.Models.chessModel
+
+<link href="~/Content/chess.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.2.min.js"></script>
+
+<table id="chessBoard">
+    @{    
+        for (int i = 1; i <= 8; i++)
+        {
+        <tr>
+            @for (int j = 1; j <= 8; j++)
+            {
+                <td id='@i@j' class='@(((i + j) % 2 == 0) ? "white" : "black")' ><span></span>
+                    <p></p>
+                    @foreach (var pieces in Model.pieces)
+                    {
+                        if (pieces.col == j && pieces.row == i)
+                        {
+                        <div id='@pieces.id' class='@pieces.color@pieces.name' data-color='@pieces.color'></div>
+                        }
+                    }
+                </td>
+            }
+        </tr>
+        }        
+    }
+</table>
+
+<script>
+    var x, y;
+    var counter = 0;
+    var pieces;
+    var color = "";
+
+    $("div").draggable({
+        containment: "#chessBoard",
+        revert: "invalid",
+        //helper: "clone",
+        //handle: "p",
+        // cancel: "p.ui-widget-header",
+        // snap: "td",
+        //  snapMode: "inner",//"inner", "outer", "both"
+        // grid: [ 50,50 ],
+        scroll: false,
+        cursor: "move",
+        // cursorAt: { top: 56, left: 25 },
+        start: function (event, ui) {//taş hareket ettirilmeden önceki konum bilgilerini al
+            x = ui.offset.top;
+            y = ui.offset.left;
+            //color = $("#25").css("background-color");
+            //$("#62").css("background-color", "#F2F5A9")
+            //$("#52").css("background-color", "#F2F5A9")
+        },
+        drag: function () {
+        },
+        stop: function (event, ui) {
+            //$("#" + event.originalEvent.target.id).offset({ top: x, left: y })
+            //$("#62").css("background-color", color)
+        }
+    });
+
+    $("div[data-color=Black]").draggable('disable');
+
+    //$(".Whitepawn").draggable({ axis: "y" });
+    //$(".blackPawn").draggable({ axis: "y" });
+    //$(".Rook").draggable({ axis: "xy" });
+
+
+    $("td").droppable({
+        //activeClass: "state",        
+        hoverClass: "ui-state-active",
+        drop: function (event, ui) {
+
+            var value = {
+                id: ui.draggable[0].id,
+                target: event.target.id,
+                col: event.target.id.substr(1, 1),
+                row: event.target.id.substr(0, 1)
+            }
+
+            $.ajax({
+                url: '@Url.Action("moveControl", "Home")',
+                type: "POST",
+                data: value,
+                beforeSend: function (xhr) {
+                },
+                success: function (str) {
+                    var result = str.split(';');
+                    if (result[0] == "True") {
+                        counter++;
+                        if (counter % 2 == 0) {
+                            $("div[data-color=Black]").draggable('disable');
+                            $("div[data-color=White]").draggable('enable');
+                        } else {
+                            $("div[data-color=Black]").draggable('enable');
+                            $("div[data-color=White]").draggable('disable');
+                        }
+                        if (result[1]) {
+                            $("#" + result[1]).hide("explode", 1000);
+                            $("#" + result[1]).remove();
+                        }
+                    } else {
+                        $("#" + ui.draggable[0].id).offset({ top: x, left: y })
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                }
+            });
+            //$(this)
+            //.addClass("ui-state-highlight")
+            //.find("p")
+            //.html("Dropped!");
+        }
+    })
+</script>
+

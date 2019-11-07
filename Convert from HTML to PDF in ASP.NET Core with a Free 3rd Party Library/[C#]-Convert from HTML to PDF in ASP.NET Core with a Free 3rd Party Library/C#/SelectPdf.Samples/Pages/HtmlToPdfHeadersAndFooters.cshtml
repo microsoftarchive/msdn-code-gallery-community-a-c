@@ -1,0 +1,62 @@
+﻿@page
+@model SelectPdf.Samples.Pages.HtmlToPdfHeadersAndFootersModel
+@{
+    Layout = "~/Pages/_Layout.cshtml";
+    ViewData["Title"] = "SelectPdf Free Html To Pdf Converter for .NET Core - Pdf Headers and Footers with Html to Pdf Converter - C# / ASP.NET Core MVC6";
+    ViewData["Description"] = "SelectPdf Pdf Headers and Footers with Html to Pdf Converter Sample for C#/ASP.NET Core MVC6. Pdf Library for .NET with full sample code in C# and VB.NET.";
+    ViewData["Keywords"] = "header, footer, pdf library, sample code, html to pdf, pdf converter";
+}
+
+<form method="post">
+    <article class="post type-post status-publish format-standard hentry">
+        <header class="entry-header">
+            <h1 class="entry-title">SelectPdf Free Html To Pdf Converter for .NET Core - Pdf Headers and Footers with Html to Pdf Converter - C# / ASP.NET Core MVC6 Sample</h1>
+        </header>
+        <!-- .entry-header -->
+
+        <div class="entry-content">
+            <p>
+                This sample shows how to convert an url to pdf using SelectPdf Pdf Library for .NET and how to set html headers and footers for the generated pdf document.
+                <br />
+                <br />
+                This sample will also show how to add page numbers in the footer of the generated pdf document.
+            </p>
+            <p>
+                Url:<br />
+                <input type="text" value="https://selectpdf.com" asp-for="TxtUrl" style="width:90%" />
+            </p>
+            <div class="col2">
+                Header:<br />
+                <input type="checkbox" asp-for="showHeaderOnFirstPage" checked="checked">Show on First Page
+                <br />
+                <input type="checkbox" asp-for="showHeaderOnOddPages" checked="checked">Show on Odd Numbered Pages
+                <br />
+                <input type="checkbox" asp-for="showHeaderOnEvenPages" checked="checked">Show on Even Numbered Pages
+                <br />
+                Height:&nbsp;<input type="text" value="50" asp-for="headerHeight" style="width:50px" /> px<br />
+                <a href="files/header.html" target="_blank">Sample header</a><br />
+                <br />
+            </div>
+            <div class="col2">
+                Footer:<br />
+                <input type="checkbox" asp-for="showFooterOnFirstPage" checked="checked">Show on First Page
+                <br />
+                <input type="checkbox" asp-for="showFooterOnOddPages" checked="checked">Show on Odd Numbered Pages
+                <br />
+                <input type="checkbox" asp-for="showFooterOnEvenPages" checked="checked">Show on Even Numbered Pages
+                <br />
+                Height:&nbsp;<input type="text" value="30" asp-for="footerHeight" style="width:50px" /> px<br />
+                <input type="checkbox" asp-for="showPageNumbering" checked="checked">Add page numbers
+                <br />
+                <a href="files/footer.html" target="_blank">Sample footer</a><br />
+                <br />
+            </div>
+            <div class="col-clear"></div>
+            <p>
+                <input type="submit" name="BtnConvert" value="Create PDF" class="mybutton" />
+            </p>
+        </div>
+        <!-- .entry-content -->
+    </article>
+    <!-- #post -->
+</form>

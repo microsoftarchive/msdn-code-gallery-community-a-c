@@ -1,0 +1,272 @@
+﻿<style>
+    .actualColor {
+        background-color: #4cff00;
+        color: #9F000F;
+        border: solid 1px #659EC7;
+        cursor: pointer;
+        font-size: x-large;
+    }
+
+    .changeColor1 {
+        background-color: #ff0000;
+        color: #FFFFFF;
+        border: solid 1px #659EC7;
+        font-size: x-large;
+        cursor: pointer;
+    }
+
+
+    .actualColor2 {
+        background-color: #ffffff;
+        color: #9F000F;
+        cursor: pointer;
+        font-size: x-large;
+    }
+
+    .changeColor2 {
+        background-color: #ffd800;
+        color: #FFFFFF;
+        border: dashed 1px #659EC7;
+        font-size: x-large;
+        cursor: pointer;
+    }
+    .columns {
+  columns: 3;
+}
+</style>
+<html data-ng-app="AngularJsHome_Module">
+@{
+    ViewBag.Title = "SHANU Music Player";
+}
+<body data-ng-controller="AngularJsHome_Controller">
+    <img src="~/Images/blank.gif" alt="" width="1" height="10" />
+
+    <table width="99%" style=" border-bottom:3px solid #3273d5;">
+        <tr>
+
+            <td width="190">
+                <table width="99%">
+                    <tr>
+                        <td>
+                            Welcome Mr. {{'SHANU'}}
+
+                        </td>
+
+
+                    </tr>
+                </table>
+            </td>
+            <td class="style1" align="center">
+                <h3>Shanu Music Player using MVC & AngularJS  :)</h3>
+            </td>
+            <td align="right">
+                <div>
+                    Today Date is :
+                    {{date | date:'yyyy-MM-dd'}}
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <img src="~/Images/blank.gif" alt="" width="1" height="2" />
+
+    <table style='width: 99%;table-layout:fixed;'>
+        <tr ng-show="showSounds">
+            <td>               
+                <audio id="audioPlay">
+                    <source  src="{{selectedSongstoPlay}}"></source>
+                </audio>
+
+            </td>
+        </tr>
+        <tr ng-show="showButton">
+            <td align="right">
+                <input type="button" value="Show Album List" style="background-color:#367e28;color:#FFFFFF;font-size:large;width:200px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;" ng-click="showAlbumDetails()" />
+
+            </td>
+        </tr>
+    </table>
+
+    <img src="~/Images/blank.gif" alt="" width="1" height="2" />
+     
+    <table style='width: 99%;table-layout:fixed;'>        
+
+    <tr ng-show="showAlbum">
+        <td>
+
+            <table style='width: 99%;table-layout:fixed;'>
+                <tr>
+                    <td  >
+                        <table style="width: 99%; background-color:#FFFFFF; border:dashed 3px #6D7B8D; padding 5px;width 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                            <tr style="height: 30px; background-color:#e20952 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                <td align="center">
+                                    <h3> Click on Album Image to play Music</h3>
+                                </td>
+
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+            <tr>
+                <td>
+                    <img src="~/Images/blank.gif" alt="" width="1" height="2" />
+                </td>
+            </tr>
+                <tr>
+                    <td>
+
+                        <div class="columns">
+                            <div ng-repeat="details in AlbumData">
+                                <table style='width: 99%;table-layout:fixed;'>
+                                    <tr>
+                                        <td align="center">
+                                            <img src="~/uploads/{{details.ImageName}}" alt="{{details.ImageName}}" width="144px" height="144px" ng-click="showMusicAlbum(details.AlbumName, details.ImageName)" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <span style="color:#257815;font-size:large"><b>{{details.AlbumName}}</b></span>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <img src="~/Images/blank.gif" alt="" width="1" height="2" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td></tr></table>
+                    </td>
+                </tr>
+
+                <tr ng-show="showMusics">
+                    <td align="center">
+                        <table style="background-color:#FFFFFF; border:dashed 3px #6D7B8D; padding:10px;width:70%;table-layout:fixed;" cellpadding="12" cellspacing="12">
+
+                            <tr style="height: 20px; background-color:#ccd4dd ; color:#6D7B8D ;border: solid 1px #659EC7;">
+                                <td align="center">
+                                    <h2> <img src="~/Images/head.png" /> Shanu Music Player   </h2>
+                                </td>
+
+                            </tr>
+                            <tr style="height: 20px; background-color:#f76832 ; color:#FFFFFF ;">
+                                <td>
+                                    <table style="width:99%; background-color:#FFFFFF ; color:#e20952 ;border: solid 10px #FFFFFF;">
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>
+                                                <img src="~/uploads/{{AlbumImage}}" alt="{{AlbumImage}}" width="168px" height="168px" />
+
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td align="left">
+                                                <span style="color:#0094ff;font-size:large;">Album Title : </span>
+                                                <span style="color:#e20952;font-size:xx-large;"><b>{{AlbumName}}</b></span>
+
+                                                <br />
+                                                <span style="color:#0094ff;font-size:large;">Current Song : </span>
+                                                <span style="color:#367e28;font-size:x-large;"><b>{{CurrentSong}}</b></span>
+                                                <hr />
+                                             
+
+                                                @*<br />
+                                <img src="~/Images/playAll.png" /> <span style="color:#0094ff;font-size:large;">Play ALL</span>*@
+
+                                            </td>
+                                        </tr>
+                                        @*<tr>
+                            <td colspan="2"></td>
+                            <td colspan="2" align="left">
+
+
+                            </td>
+                        </tr>*@
+
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr style="height: 20px; background-color:#fce804 ; color:#FFFFFF ;">
+                                <td align="center">
+                                    <table wisth="98%">
+                                        <tr>
+                                            <td>
+                                                <img src="~/Images/previous.png" height="48" width="48" ng-click="previousSong()" />
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td>
+                                                <img src="~/Images/stop.png" height="48" width="48" ng-click="pauseMusic()" />
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td>
+                                                <img src="~/Images/playnew.png" height="48" width="48" ng-click="playCurrent()" />
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td>
+                                                <img src="~/Images/next.png" height="48" width="48" ng-click="nextSong()" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </td>
+                                </tr>
+                            <tr style="height: 20px; background-color:#f76832 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                <td>
+                                    <table style="width: 99%; background-color:#FFFFFF; border solid 2px #6D7B8D; padding 5px;width 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+
+                                        <tr style="height: 30px; background-color:#476444 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                            <td width="40" align="center"><b>SNO.</b></td>
+                                            <td width="40" align="center"><b>Play</b></td>
+                                            <td width="100" align="center"><b>Singer Name </b></td>
+                                            <td width="120" align="center"><b>MusicFileName</b></td>
+                                            <td width="120" align="center"><b>Description</b></td>
+                                        </tr>
+                                        <tbody data-ng-repeat="details in MusicData">
+                                            <tr>
+
+                                                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                    <span style="color:#9F000F">
+                                                        {{ $index }}
+                                                    </span>
+                                                </td>
+
+                                                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                    <span style="color:#9F000F">
+                                                        <img src="~/Images/play.png" alt="Play" width="32px" height="32px" ng-click="playMusic($index , details.MusicFileName)">
+
+                                                    </span>
+                                                </td>
+
+                                                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                    <span style="color:#9F000F">{{details.SingerName}}</span>
+                                                    <img src="~/Images/music.png" height="24" width="24" />
+                                                </td>
+
+                                                <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                    <span style="color:#9F000F">{{details.MusicFileName}}</span>
+                                                </td>
+                                                <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                    <span style="color:#9F000F">{{details.Description}}</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+
+                        </table>
+                    </td>
+                </tr>
+
+
+            </table>
+</body>
+</html>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-animate.js"></script>
+<script src="~/Scripts/angular-animate.min.js"></script>
+<script src="~/Scripts/MYAngular/Homecontroller.js"></script>

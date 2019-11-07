@@ -1,0 +1,81 @@
+@model IEnumerable<CinemaPlex.Models.SessionModel>
+
+@{
+    ViewData["Title"] = "Session Movie";
+    int sessionId = Convert.ToInt32(ViewData["SessionID"]);
+    var sessionResults = Program.data.getSession(sessionId);
+    int movieId = sessionResults.MovieID;
+    var movieResults = Program.data.getMovie(movieId);
+    var cinemaResults = Program.data.getCinema(sessionResults.CineplexID);
+}
+
+<h2>Sessions</h2>
+
+<p>
+    <a asp-action="Index">Back to Sessions</a>
+</p>
+<div class="block">
+    <div class="left movie-content-left">
+        <div id="ThumbImageDiv"><img src="@movieResults.MovieLogo" alt="@movieResults.Title"></div>
+        <div class="movie-name-info">
+            <h4>
+                @movieResults.Title
+            </h4>
+            <h5>
+                @Html.ActionLink(cinemaResults.Location, "Details", "Cinemas", new { id = cinemaResults.CineplexID })
+            </h5>
+            <span>
+                @movieResults.Classification, @movieResults.RunningTime
+            </span>
+        </div>
+    </div>
+    <div class="right movie-content-right">
+        <div id="MovieInfo">
+            <div class="movie-landing-content">
+                <h1>@movieResults.Title</h1>
+                <p>@movieResults.Description</p>
+                <div class="summary">
+                    <div class="leftSide">
+                        Director
+                    </div><div class="rightSide">
+                        @movieResults.Director
+                    </div><div class="clear">
+
+                    </div><div class="leftSide">
+                        Main Cast
+                    </div><div class="rightSide">
+                        @movieResults.MainCast
+                    </div><div class="clear">
+
+                    </div><div class="leftSide">
+                        Classification
+                    </div><div class="rightSide">
+                        @movieResults.Classification
+                    </div><div class="clear">
+
+                    </div><div class="leftSide">
+                        Release Date
+                    </div><div class="rightSide">
+                        @movieResults.ReleaseDate
+                    </div><div class="clear">
+
+                    </div><div class="leftSide">
+                        Running Time
+                    </div><div class="rightSide">
+                        @movieResults.RunningTime
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-group">
+            @Html.ActionLink("Add to Cart", "Add", "Cart", new { id = sessionId }, new { @class = "btn btn-default" })
+        </div>
+        <div class="video" id="trailer">
+            <script>
+            setTimeout(function () {
+                searchMovie('@movieResults.Title');
+            }, 500);
+            </script>
+        </div>
+    </div>
+    <div class="clear"></div>

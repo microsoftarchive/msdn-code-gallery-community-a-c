@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfSessionSecurityTokenCacheService.SessionSecurityTokenCacheService" CodeBehind="SessionSecurityTokenCacheService.svc.cs" %>

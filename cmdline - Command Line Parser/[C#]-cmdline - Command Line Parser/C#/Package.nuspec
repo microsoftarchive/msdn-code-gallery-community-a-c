@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
+    <projectUrl>http://code.msdn.microsoft.com/Command-Line-Parser-Library-a8ba828a</projectUrl>
+    <iconUrl>http://i1.code.msdn.s-msft.com/command-line-parser-library-</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright 2012</copyright>
+    <tags>CommandLine</tags>
+  </metadata>
+</package>

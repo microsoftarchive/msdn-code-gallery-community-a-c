@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=D051540662D994D8842C2D71427E5FFB" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=B296DC89199ECF6E28A0D94C3246485C" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Creating a “real life” CRUD API App for DocumentDB</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Creating a “real life” CRUD API App for DocumentDB</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Azure API App, Azure DocumentDB
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Web API, DocumentDB, Azure API App
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/11/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Creating-a-real-life-CRUD-96cc034e">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>DocumentDB is a highly scalable, NoSQL document database service in Azure. On azure.microsoft.com you can find a lot information about DocumentDB. For example how you can create a DocumentDB or how to build your first app. But in a &ldquo;real life&rdquo;
+ scenario (for example in project for a customer) this information is probably not enough or even relevant because the samples are often console applications and maybe you want to create a Mobile or a Web App. Often you also need to modify the data from the
+ client or add meta data to it. For example a creation date or an order status. Therefore its good practice to create a custom Web API to handle the inserts, updates, deletes and data retrievals. There you have complete control on the object that is sent by
+ the client. But how do you do that if you want to store the data in DocumentDB?&nbsp; In that case it can take quite some time to find the additional info that you need. Therefore I created an API App to show how you can insert, update, delete or get a customer
+ order and how to add additional (meta data) to the orders! The sample can easily&nbsp;be modified for other type of objects.</em></p>
+<p><em>&nbsp;</em></p>
+<p><em>The following methods are implemented in the API App:</em></p>
+<p><em>- Create an Order&nbsp; <br>
+- Read an Order by Id<br>
+- Update an Order<br>
+- Delete an order <br>
+<br>
+<img id="147209" src="https://i1.code.msdn.s-msft.com/creating-a-real-life-crud-96cc034e/image/file/147209/1/swagger.png" alt="" width="602" height="291"></em></p>
+<h1><em>&nbsp;</em></h1>
+<h4>Create an Order</h4>
+<p>When an object is stored in DocumentDB is automatically a guid created for the object. This guid is sent back to client and can be used to retrieve the order.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public async Task&lt;string&gt; CreateOrder(ClientOrder order)
+{
+    string id = null;
+
+    //Create a server order with extra properties
+    ServerOrder s = new ServerOrder();
+
+    s.customer = order.customer;
+    s.item = order.item;
+
+    //Add meta data to the order
+    s.OrderStatus = &quot;in progress&quot;;
+    s.CreationDate = DateTime.UtcNow;
+
+    //Get a Document client
+    using (client = new DocumentClient(new Uri(endpointUrl),     authorizationKey))
+    {
+
+        string pathLink = string.Format(&quot;dbs/{0}/colls/{1}&quot;,         databaseId, collectionId);
+        
+        ResourceResponse&lt;Document&gt; doc = await client.        CreateDocumentAsync(pathLink, s);
+
+        //Return the created id
+        id = doc.Resource.Id;
+    }
+
+    return id;
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;<span class="cs__keyword">string</span>&gt;&nbsp;CreateOrder(ClientOrder&nbsp;order)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>&nbsp;id&nbsp;=&nbsp;<span class="cs__keyword">null</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Create&nbsp;a&nbsp;server&nbsp;order&nbsp;with&nbsp;extra&nbsp;properties</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ServerOrder&nbsp;s&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;ServerOrder();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;s.customer&nbsp;=&nbsp;order.customer;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;s.item&nbsp;=&nbsp;order.item;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Add&nbsp;meta&nbsp;data&nbsp;to&nbsp;the&nbsp;order</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;s.OrderStatus&nbsp;=&nbsp;<span class="cs__string">&quot;in&nbsp;progress&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;s.CreationDate&nbsp;=&nbsp;DateTime.UtcNow;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Get&nbsp;a&nbsp;Document&nbsp;client</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(client&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;DocumentClient(<span class="cs__keyword">new</span>&nbsp;Uri(endpointUrl),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorizationKey))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>&nbsp;pathLink&nbsp;=&nbsp;<span class="cs__keyword">string</span>.Format(<span class="cs__string">&quot;dbs/{0}/colls/{1}&quot;</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;databaseId,&nbsp;collectionId);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ResourceResponse&lt;Document&gt;&nbsp;doc&nbsp;=&nbsp;await&nbsp;client.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CreateDocumentAsync(pathLink,&nbsp;s);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Return&nbsp;the&nbsp;created&nbsp;id</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;=&nbsp;doc.Resource.Id;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;id;&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<ul>
+</ul>
+<h1>More Information</h1>
+<p><em>For more information, see the blogpost: <a href="http://www.ithero.nl/post/2016/01/11/Creating-a-real-life-CRUD-API-App-for-DocumentDB.aspx">
+Creating a &ldquo;real life&rdquo; CRUD API App for DocumentDB</a></em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

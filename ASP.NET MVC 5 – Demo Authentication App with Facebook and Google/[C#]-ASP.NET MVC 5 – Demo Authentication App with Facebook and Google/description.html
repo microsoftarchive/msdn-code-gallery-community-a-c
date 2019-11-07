@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=E26C1359372FE948C3C39B3F0FB94413" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/007decc8-6c12-4163-b4b5-9d2256e5c10eCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=76DF6246C5394201214B48DD1A8F406B" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ASP.NET MVC 5 – Demo Authentication App with Facebook and Google</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>ASP.NET MVC 5 – Demo Authentication App with Facebook and Google</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, ASP.NET, ASP.NET MVC, .NET Framework, .NET Framework 4.0, ASP.NET MVC 4, MVC, MVC Examples, ASP.NET MVC 5, MVC5
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Controls, C#, Data Binding, User Interface, Data Access, ASP.NET MVC, ASP.NET MVC Basics, MVC Example
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">2/1/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/MVC5-Authentication-App-b5200efd">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><span><span>MVC5 came with some really nice stuff. In this post I&rsquo;ll dig into the authentication with external logins as Microsoft calls them.&nbsp;</span></span><span>With this demo, I will demonstrate how it&rsquo;s possible to configure application,
+ to allow authentication using Google and Facebook.&nbsp;</span></p>
+<p>&nbsp;</p>
+<h1>STEP1. Create new project on Visual Studio 2013</h1>
+<p class="Instructions">Open Visual Studio</p>
+<p class="Instructions">Create new ASP.NET Web Application Project</p>
+<p class="Instructions">Give a name to the project (in this case I call him MVC5Authentication)</p>
+<p class="Instructions"><img id="106477" src="description/MVC1.jpg" alt="" width="951" height="536"></p>
+<p class="Instructions">&nbsp;</p>
+<h1>STEP2. Select option Change Authentication</h1>
+<p class="Instructions">Select MVC template</p>
+<p class="Instructions">Select option Change Authentication</p>
+<p>&nbsp;</p>
+<p><img id="106478" src="description/MVC2.jpg" alt="" width="765" height="537"></p>
+<p>&nbsp;</p>
+<p class="Instructions">This option open a new window, were we need to check the option &ldquo;Individual User Account&rdquo;</p>
+<p class="Instructions"><img id="106479" src="description/MVC3.jpg" alt="" width="716" height="315"></p>
+<p>&nbsp;</p>
+<p>Start application.</p>
+<p>As we see on the next image on the right part where it&rsquo;s possible to have other authentication services it&rsquo;s empty.</p>
+<p>On the next step, we will configure the application, to provide two new authentication services (Google and Facebook)</p>
+<p><img id="106480" src="description/MVC4.jpg" alt="" width="1298" height="498"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>STEP3. Enable Google and Facebook OpenID</h1>
+<p class="Instructions">Open&nbsp;App_Start\Startup.Auth.cs&nbsp;file and remove the comment&nbsp;characters in&nbsp;//app.UseGoogleAuthentication();&nbsp; to&nbsp;enable Google authentication and in app.UseFacebookAuthentication to enable Facebook authentication.</p>
+<p class="Instructions">&nbsp;</p>
+<p class="Instructions"><img id="106481" src="description/MVC5.jpg" alt="" width="1306" height="546"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public partial class Startup
+
+    {
+
+        // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
+
+        public void ConfigureAuth(IAppBuilder app)
+
+        {
+
+            // Enable the application to use a cookie to store information for the signed in user
+
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+
+            {
+
+                AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+
+                LoginPath = new PathString(&quot;/Account/Login&quot;)
+
+            });
+
+            // Use a cookie to temporarily store information about a user logging in with a third party login provider
+
+            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+
+ 
+
+            // Uncomment the following lines to enable logging in with third party login providers
+
+            //app.UseMicrosoftAccountAuthentication(
+
+            //    clientId: &quot;&quot;,
+
+            //    clientSecret: &quot;&quot;);
+
+ 
+
+            //app.UseTwitterAuthentication(
+
+            //   consumerKey: &quot;&quot;,
+
+            //   consumerSecret: &quot;&quot;);
+
+ 
+
+            app.UseFacebookAuthentication(
+
+               appId: &quot;&quot;,
+
+               appSecret: &quot;&quot;);
+
+ 
+
+            app.UseGoogleAuthentication();
+
+        }
+
+    }</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;Startup&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;For&nbsp;more&nbsp;information&nbsp;on&nbsp;configuring&nbsp;authentication,&nbsp;please&nbsp;visit&nbsp;http://go.microsoft.com/fwlink/?LinkId=301864</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;ConfigureAuth(IAppBuilder&nbsp;app)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Enable&nbsp;the&nbsp;application&nbsp;to&nbsp;use&nbsp;a&nbsp;cookie&nbsp;to&nbsp;store&nbsp;information&nbsp;for&nbsp;the&nbsp;signed&nbsp;in&nbsp;user</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseCookieAuthentication(<span class="cs__keyword">new</span>&nbsp;CookieAuthenticationOptions&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AuthenticationType&nbsp;=&nbsp;DefaultAuthenticationTypes.ApplicationCookie,&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LoginPath&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;PathString(<span class="cs__string">&quot;/Account/Login&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Use&nbsp;a&nbsp;cookie&nbsp;to&nbsp;temporarily&nbsp;store&nbsp;information&nbsp;about&nbsp;a&nbsp;user&nbsp;logging&nbsp;in&nbsp;with&nbsp;a&nbsp;third&nbsp;party&nbsp;login&nbsp;provider</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Uncomment&nbsp;the&nbsp;following&nbsp;lines&nbsp;to&nbsp;enable&nbsp;logging&nbsp;in&nbsp;with&nbsp;third&nbsp;party&nbsp;login&nbsp;providers</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//app.UseMicrosoftAccountAuthentication(</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;&nbsp;&nbsp;&nbsp;clientId:&nbsp;&quot;&quot;,</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;&nbsp;&nbsp;&nbsp;clientSecret:&nbsp;&quot;&quot;);</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//app.UseTwitterAuthentication(</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;&nbsp;&nbsp;consumerKey:&nbsp;&quot;&quot;,</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;&nbsp;&nbsp;consumerSecret:&nbsp;&quot;&quot;);</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseFacebookAuthentication(&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appId:&nbsp;<span class="cs__string">&quot;&quot;</span>,&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appSecret:&nbsp;<span class="cs__string">&quot;&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseGoogleAuthentication();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Start application again.</div>
+<p>&nbsp;</p>
+<p>On the start, the application, give us the following error.</p>
+<p>This error, happens because is necessary to create and configure an App on Facebook, that provide us an appID and appSecret, which will be use on the UseFacebookAuthentocation method.</p>
+<p>&nbsp;</p>
+<p><img id="106482" src="description/MVC6.jpg" alt="" width="1279" height="520"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>STEP4. Setting up SSL</h1>
+<p>To connect to Facebook, you will need to set up IIS-Express to use SSL. Even&nbsp;though Google doesn't require you to use SSL to log in, it's a security best &nbsp;practice to require SSL in your application.&nbsp;</p>
+<p>On the project solution Press F4.</p>
+<p>Enable SSL (a new URL will be provided)</p>
+<p>&nbsp;</p>
+<p>&nbsp;<img id="106484" src="description/MVC7.jpg" alt="" width="309" height="442"></p>
+<p>&nbsp;</p>
+<p>Access to the properties of the solution and change the project URL, providing the URL given on the project properties SSL URL</p>
+<p><img id="106485" src="description/MVC8.jpg" alt="" width="1008" height="528"></p>
+<p>&nbsp;</p>
+<h1>STEP5. Configure App Facebook</h1>
+<p>Open Facebook web page and create a new App</p>
+<p>Set the Display Name and the Category</p>
+<p>&nbsp;</p>
+<p><img id="106486" src="description/MVC10.jpg" alt="" width="961" height="520"></p>
+<p>&nbsp;</p>
+<p>After create the app, we get access to appID and appSecret</p>
+<p><img id="106487" src="description/MVC11.jpg" alt="" width="953" height="234"></p>
+<p>&nbsp;</p>
+<p>Set the SSL URL, on the valid OAuth URLs, to give access of our application to Facebook.</p>
+<p>&nbsp;<img id="106489" src="description/cd518d1f-f951-456f-8f46-cb552b87bdbdMVC11.jpg" alt="" width="953" height="234"></p>
+<p>&nbsp;</p>
+<p>Set appID and appSecret into our code.</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">// For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
+
+        public void ConfigureAuth(IAppBuilder app)
+
+        {
+
+            // Enable the application to use a cookie to store information for the signed in user
+
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+
+            {
+
+                AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+
+                LoginPath = new PathString(&quot;/Account/Login&quot;)
+
+            });
+
+            // Use a cookie to temporarily store information about a user logging in with a third party login provider
+
+            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+
+ 
+
+            // Uncomment the following lines to enable logging in with third party login providers
+
+            //app.UseMicrosoftAccountAuthentication(
+
+            //    clientId: &quot;&quot;,
+
+            //    clientSecret: &quot;&quot;);
+
+ 
+
+            //app.UseTwitterAuthentication(
+
+            //   consumerKey: &quot;&quot;,
+
+            //   consumerSecret: &quot;&quot;);
+
+ 
+
+            //change the id and secret toconnect to your application
+
+            app.UseFacebookAuthentication(
+
+               appId: &quot;574609735957646&quot;,
+
+               appSecret: &quot;4339c983ffa2685c1b09d580e3380455&quot;);
+
+ 
+
+            app.UseGoogleAuthentication();
+
+        }</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//&nbsp;For&nbsp;more&nbsp;information&nbsp;on&nbsp;configuring&nbsp;authentication,&nbsp;please&nbsp;visit&nbsp;http://go.microsoft.com/fwlink/?LinkId=301864</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;ConfigureAuth(IAppBuilder&nbsp;app)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Enable&nbsp;the&nbsp;application&nbsp;to&nbsp;use&nbsp;a&nbsp;cookie&nbsp;to&nbsp;store&nbsp;information&nbsp;for&nbsp;the&nbsp;signed&nbsp;in&nbsp;user</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseCookieAuthentication(<span class="cs__keyword">new</span>&nbsp;CookieAuthenticationOptions&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AuthenticationType&nbsp;=&nbsp;DefaultAuthenticationTypes.ApplicationCookie,&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LoginPath&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;PathString(<span class="cs__string">&quot;/Account/Login&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Use&nbsp;a&nbsp;cookie&nbsp;to&nbsp;temporarily&nbsp;store&nbsp;information&nbsp;about&nbsp;a&nbsp;user&nbsp;logging&nbsp;in&nbsp;with&nbsp;a&nbsp;third&nbsp;party&nbsp;login&nbsp;provider</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Uncomment&nbsp;the&nbsp;following&nbsp;lines&nbsp;to&nbsp;enable&nbsp;logging&nbsp;in&nbsp;with&nbsp;third&nbsp;party&nbsp;login&nbsp;providers</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//app.UseMicrosoftAccountAuthentication(</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;&nbsp;&nbsp;&nbsp;clientId:&nbsp;&quot;&quot;,</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;&nbsp;&nbsp;&nbsp;clientSecret:&nbsp;&quot;&quot;);</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//app.UseTwitterAuthentication(</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;&nbsp;&nbsp;consumerKey:&nbsp;&quot;&quot;,</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;&nbsp;&nbsp;consumerSecret:&nbsp;&quot;&quot;);</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//change&nbsp;the&nbsp;id&nbsp;and&nbsp;secret&nbsp;toconnect&nbsp;to&nbsp;your&nbsp;application</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseFacebookAuthentication(&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appId:&nbsp;<span class="cs__string">&quot;574609735957646&quot;</span>,&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appSecret:&nbsp;<span class="cs__string">&quot;4339c983ffa2685c1b09d580e3380455&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseGoogleAuthentication();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<h1>STEP6. Run application</h1>
+<p>Run application after save all the changes below.</p>
+<p>As you see, now after our configuration, we application provide two new services of logn (Google and Facebook)</p>
+<h1><img id="106488" src="description/MVC13.jpg" alt="" width="1280" height="503"></h1>
+<h1>Resources</h1>
+<p class="Instructions">&nbsp;</p>
+<p class="Instructions"><a href="http://openid.net/specs/openid-authentication-2_0.html">http://openid.net/specs/openid-authentication-2_0.html</a></p>
+<p class="Instructions"><a href="http://oauth.net/2/">http://oauth.net/2/</a></p>
+<p class="Instructions">&nbsp;</p>
+<p>For more examples, follow my blog at</p>
+<p><a href="http://joaoeduardosousa.wordpress.com/">http://joaoeduardosousa.wordpress.com/</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

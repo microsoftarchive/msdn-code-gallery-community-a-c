@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Define a Table of Contents in HTML</title>
+    <style type="text/css">
+        body
+        {
+            font-family: 'Times New Roman';
+            font-size: 14px;
+        }
+
+        .level1_toc
+        {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .level2_toc
+        {
+            font-weight: bold;
+            font-size: 20px;
+            page-break-before: always;
+        }
+
+        .level3_toc
+        {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .level4_toc
+        {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <span data-toc-item="true" data-toc-level="1" data-toc-title="Part 1 of Table of Contents" class="level1_toc">Part 1 of a Table of Contents Defined in HTML</span><br />
+    <br />
+    Any HTML element can be marked to become an item in the table of contents in the generated PDF document using the <b><i>data-toc-item="true"</i></b> attribute.
+    Additionally you can define the table of contents item level using the <b><i>data-toc-level</i></b> attribute and the table of contents item title using the 
+    <b><i>data-toc-title</i></b> attribute.<br />
+    <br />
+    <br />
+    <span style="font-size: 20px; font-weight: bold">Part Chapters:</span><br />
+    <div style="margin-left: 20px">
+
+        <br />
+        <a href="#part1_chapter1" style="font-size: 16px; font-weight: bold; line-height: 30px">Chapter 1</a><br />
+        <a href="#part1_chapter2" style="font-size: 16px; font-weight: bold; line-height: 30px">Chapter 2</a><br />
+    </div>
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="2" id="part1_chapter1" class="level2_toc">1.1 Chapter 1 of Part 1</span><br />
+    <br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. 
+    Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+    Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Curabitur sodales ligula in libero. 
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">1.1.1 Section 1 of Chapter 1 of Part 1</span><br />
+    <br />
+    Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. 
+    Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, 
+    luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, 
+    euismod in, nibh.  
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">1.1.2 Section 2 of Chapter 1 of Part 1</span><br />
+    <br />
+    Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. 
+    Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. 
+    Suspendisse in justo eu magna luctus suscipit.
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">1.1.3 Section 3 of Chapter 1 of Part 1</span><br />
+    <br />
+    Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. 
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. 
+    In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. 
+    Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. 
+    <br />
+    <br />
+
+    <span data-toc-item="true" data-toc-level="2" id="part1_chapter2" class="level2_toc">1.2 Chapter 2 of Part 1</span><br />
+    <br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. 
+    Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+    Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Curabitur sodales ligula in libero. 
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">1.2.1 Section 1 of Chapter 2 of Part 1</span><br />
+    <br />
+    Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. 
+    Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, 
+    luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, 
+    euismod in, nibh.  
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="4" class="level4_toc">1.2.1.1 Paragraph 1 of Section 1 of Chapter 2 of Part 1</span><br />
+    <br />
+    Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. 
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. 
+    In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. 
+    Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.  
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="4" class="level4_toc">1.2.1.2 Paragraph 2 of Section 1 of Chapter 2 of Part 1</span><br />
+    <br />
+    Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. 
+    Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. 
+    Suspendisse in justo eu magna luctus suscipit.  
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">1.2.2 Section 2 of Chapter 2 of Part 1</span><br />
+    <br />
+    Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. 
+    Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. 
+    Suspendisse in justo eu magna luctus suscipit.
+    <br />
+    <br />
+
+    <!-- Part 2 -->
+    <span data-toc-item="true" data-toc-level="1" data-toc-title="Part 2 of Table of Contents" style="page-break-before: always" class="level1_toc">Part 2 of a Table of Contents Defined in HTML</span><br />
+    <br />
+    Any HTML element can be marked to become an item in the table of contents in the generated PDF document using the <b><i>data-toc-item="true"</i></b> attribute.
+    Additionally you can define the table of contents item level using the <b><i>data-toc-level</i></b> attribute and the table of contents item title using the 
+    <b><i>data-toc-title</i></b> attribute.<br />
+    <br />
+    <br />
+    <span style="font-size: 20px; font-weight: bold">Chapters:</span><br />
+    <div style="margin-left: 20px">
+
+        <br />
+        <a href="#part2_chapter1" style="font-size: 16px; font-weight: bold; line-height: 30px">Chapter 1</a><br />
+        <a href="#part2_chapter2" style="font-size: 16px; font-weight: bold; line-height: 30px">Chapter 2</a><br />
+    </div>
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="2" id="part2_chapter1" class="level2_toc">2.1 Chapter 1 of Part 2</span><br />
+    <br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. 
+    Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+    Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Curabitur sodales ligula in libero. 
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">2.1.1 Section 1 of Chapter 1 of Part 2</span><br />
+    <br />
+    Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. 
+    Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, 
+    luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, 
+    euismod in, nibh.  
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">2.1.2 Section 2 of Chapter 1 of Part 2</span><br />
+    <br />
+    Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. 
+    Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. 
+    Suspendisse in justo eu magna luctus suscipit.
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">2.1.3 Section 3 of Chapter 1 of Part 2</span><br />
+    <br />
+    Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. 
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. 
+    In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. 
+    Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. 
+    <br />
+    <br />
+
+    <span data-toc-item="true" data-toc-level="2" id="part2_chapter2" class="level2_toc">2.2 Chapter 2 of Part 2</span><br />
+    <br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. 
+    Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+    Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Curabitur sodales ligula in libero. 
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">2.2.1 Section 1 of Chapter 2 of Part 2</span><br />
+    <br />
+    Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. 
+    Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, 
+    luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, 
+    euismod in, nibh.  
+    <br />
+    <br />
+    <span data-toc-item="true" data-toc-level="3" class="level3_toc">2.2.2 Section 2 of Chapter 2 of Part 2</span><br />
+    <br />
+    Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+    Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. 
+    Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. 
+    Suspendisse in justo eu magna luctus suscipit.
+</body>
+</html>

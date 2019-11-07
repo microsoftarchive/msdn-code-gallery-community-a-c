@@ -1,0 +1,5 @@
+﻿<ul class="pagination">
+    <li><a href="" ng-click="gotoPage(1)">&laquo;</a></li>
+    <li ng-repeat="p in pages" ng-class="{active: p === currentPage}"><a href="" ng-click="gotoPage(p)">{{p}}</a></li>
+    <li><a href="" ng-click="gotoPage(totalPages)">&raquo;</a></li>
+</ul>

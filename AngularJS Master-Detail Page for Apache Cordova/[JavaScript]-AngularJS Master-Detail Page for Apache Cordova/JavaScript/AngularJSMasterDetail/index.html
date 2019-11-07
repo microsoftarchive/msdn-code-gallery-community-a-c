@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html ng-app="angularApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>angularapp</title>
+
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/overrides.css" rel="stylesheet" />
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <!-- angularapp references -->
+    <script src="scripts/frameworks/angular.min.js"></script>
+    <script src="scripts/frameworks/angular-resource.min.js"></script>
+    <script src="scripts/frameworks/angular-route.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+</head>
+<body>
+
+    <div ng-controller="ListCtrl" class="container-list">
+        <div class="header">
+            <!--Sidebar content-->
+            <div id="searchTitle">Search:</div><input id="search" ng-model="query" />
+        </div>
+        <div class="container">
+            <div class="main-list">
+                <button ng-repeat="item in data | filter:query | orderBy:orderProp" ng-click="go('/data/'+item.id)">
+                        <span>{{item.name}}</span>
+                </button>
+            </div>
+            <div ng-view></div>
+        </div>
+    </div>
+
+    <script src="scripts/vhsupport.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

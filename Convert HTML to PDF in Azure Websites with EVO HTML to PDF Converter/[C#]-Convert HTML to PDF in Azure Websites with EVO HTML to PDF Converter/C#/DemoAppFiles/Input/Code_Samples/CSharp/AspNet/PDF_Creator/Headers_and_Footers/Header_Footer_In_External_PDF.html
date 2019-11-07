@@ -1,0 +1,217 @@
+﻿<pre style='font-size:11px; color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#808030; '>.</span>Collections<span style='color:#808030; '>.</span>Generic<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#808030; '>.</span>Web<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#808030; '>.</span>Web<span style='color:#808030; '>.</span>UI<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#808030; '>.</span>Web<span style='color:#808030; '>.</span>UI<span style='color:#808030; '>.</span>WebControls<span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>using</span> System<span style='color:#808030; '>.</span>Drawing<span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// Use EVO PDF Namespace</span>
+<span style='color:#800000; font-weight:bold; '>using</span> EvoPdf<span style='color:#808030; '>.</span>HtmlToPdfClient<span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>namespace</span> EvoHtmlToPdfDemo<span style='color:#808030; '>.</span>PDF_Creator<span style='color:#808030; '>.</span>Headers_and_Footers
+<span style='color:#800080; '>{</span>
+    <span style='color:#800000; font-weight:bold; '>public</span> partial <span style='color:#800000; font-weight:bold; '>class</span> Header_Footer_In_External_PDF <span style='color:#808030; '>:</span> System<span style='color:#808030; '>.</span>Web<span style='color:#808030; '>.</span>UI<span style='color:#808030; '>.</span>Page
+    <span style='color:#800080; '>{</span>
+        <span style='color:#800000; font-weight:bold; '>protected</span> <span style='color:#800000; font-weight:bold; '>void</span> createPdfButton_Click<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>object</span> sender<span style='color:#808030; '>,</span> EventArgs e<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#696969; '>// Get the server IP and port</span>
+            String serverIP <span style='color:#808030; '>=</span> textBoxServerIP<span style='color:#808030; '>.</span>Text<span style='color:#800080; '>;</span>
+            <span style='color:#800000; font-weight:bold; '>uint</span> serverPort <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>uint</span><span style='color:#808030; '>.</span>Parse<span style='color:#808030; '>(</span>textBoxServerPort<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Create a PDF document</span>
+            Document pdfDocument <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> Document<span style='color:#808030; '>(</span>serverIP<span style='color:#808030; '>,</span> serverPort<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set optional service password</span>
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>textBoxServicePassword<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>.</span>Length <span style='color:#808030; '>></span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span>
+                pdfDocument<span style='color:#808030; '>.</span>ServicePassword <span style='color:#808030; '>=</span> textBoxServicePassword<span style='color:#808030; '>.</span>Text<span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set license key received after purchase to use the converter in licensed mode</span>
+            <span style='color:#696969; '>// Leave it not set to use the converter in demo mode</span>
+            pdfDocument<span style='color:#808030; '>.</span>LicenseKey <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>4W9+bn19bn5ue2B+bn1/YH98YHd3d3c=</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Add a PDF page to PDF document</span>
+            PdfPage pdfPage <span style='color:#808030; '>=</span> pdfDocument<span style='color:#808030; '>.</span>AddPage<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Add a default document header</span>
+            AddHeader<span style='color:#808030; '>(</span>pdfDocument<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>true</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Add a default document footer</span>
+            AddFooter<span style='color:#808030; '>(</span>pdfDocument<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>true</span><span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>true</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Create a HTML to PDF element to add to document</span>
+            HtmlToPdfElement htmlToPdfElement <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> HtmlToPdfElement<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> urlTextBox<span style='color:#808030; '>.</span>Text<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Optionally set a delay before conversion to allow asynchonous scripts to finish</span>
+            htmlToPdfElement<span style='color:#808030; '>.</span>ConversionDelay <span style='color:#808030; '>=</span> <span style='color:#008c00; '>2</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Add HTML to PDF element to document</span>
+            pdfPage<span style='color:#808030; '>.</span>AddElement<span style='color:#808030; '>(</span>htmlToPdfElement<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Insert an external PDF document in the beginning of the final PDF document</span>
+            <span style='color:#800000; font-weight:bold; '>string</span> pdfFileBefore <span style='color:#808030; '>=</span> Server<span style='color:#808030; '>.</span>MapPath<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>~/DemoAppFiles/Input/PDF_Files/Merge_Before_Conversion.pdf</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            pdfDocument<span style='color:#808030; '>.</span>InsertDocument<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> pdfFileBefore<span style='color:#808030; '>,</span> addHeaderFooterInInsertedPdfCheckBox<span style='color:#808030; '>.</span>Checked<span style='color:#808030; '>,</span>
+                            showHeaderInFirstPageCheckBox<span style='color:#808030; '>.</span>Checked<span style='color:#808030; '>,</span> showFooterInFirstPageCheckBox<span style='color:#808030; '>.</span>Checked<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Append an external PDF document at the end of the final PDF document</span>
+            <span style='color:#800000; font-weight:bold; '>string</span> pdfFileAfter <span style='color:#808030; '>=</span> Server<span style='color:#808030; '>.</span>MapPath<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>~/DemoAppFiles/Input/PDF_Files/Merge_After_Conversion.pdf</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            pdfDocument<span style='color:#808030; '>.</span>AppendDocument<span style='color:#808030; '>(</span>pdfFileAfter<span style='color:#808030; '>,</span> addHeaderFooterInAppendedPdfCheckBox<span style='color:#808030; '>.</span>Checked<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>true</span><span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>true</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Save the PDF document in a memory buffer</span>
+            <span style='color:#800000; font-weight:bold; '>byte</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> outPdfBuffer <span style='color:#808030; '>=</span> pdfDocument<span style='color:#808030; '>.</span>Save<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Send the PDF as response to browser</span>
+
+            <span style='color:#696969; '>// Set response content type</span>
+            Response<span style='color:#808030; '>.</span>AddHeader<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Content-Type</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>application/pdf</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Instruct the browser to open the PDF file as an attachment or inline</span>
+            Response<span style='color:#808030; '>.</span>AddHeader<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Content-Disposition</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> String<span style='color:#808030; '>.</span>Format<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>attachment; filename=Header_Footer_in_External_PDF.pdf; size={0}</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> outPdfBuffer<span style='color:#808030; '>.</span>Length<span style='color:#808030; '>.</span>ToString<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Write the PDF document buffer to HTTP response</span>
+            Response<span style='color:#808030; '>.</span>BinaryWrite<span style='color:#808030; '>(</span>outPdfBuffer<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// End the HTTP response and stop the current page processing</span>
+            Response<span style='color:#808030; '>.</span>End<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#696969; '>/// &lt;summary></span>
+        <span style='color:#696969; '>/// Add a header to document</span>
+        <span style='color:#696969; '>/// &lt;/summary></span>
+        <span style='color:#696969; '>/// &lt;param name="pdfDocument">The PDF document object&lt;/param></span>
+        <span style='color:#696969; '>/// &lt;param name="drawHeaderLine">A flag indicating if a line should be drawn at the bottom of the header&lt;/param></span>
+        <span style='color:#800000; font-weight:bold; '>private</span> <span style='color:#800000; font-weight:bold; '>void</span> AddHeader<span style='color:#808030; '>(</span>Document pdfDocument<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>bool</span> drawHeaderLine<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>string</span> headerHtmlString <span style='color:#808030; '>=</span> System<span style='color:#808030; '>.</span>IO<span style='color:#808030; '>.</span>File<span style='color:#808030; '>.</span>ReadAllText<span style='color:#808030; '>(</span>Server<span style='color:#808030; '>.</span>MapPath<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>~/DemoAppFiles/Input/HTML_Files/Header_HTML.html</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            <span style='color:#800000; font-weight:bold; '>string</span> headerBaseUrl <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>http://www.evopdf.com/demo/DemoAppFiles/Input/HTML_Files/</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Create the document footer template</span>
+            pdfDocument<span style='color:#808030; '>.</span>AddHeaderTemplate<span style='color:#808030; '>(</span><span style='color:#008c00; '>60</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Create a HTML element to be added in header</span>
+            HtmlToPdfElement headerHtml <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> HtmlToPdfElement<span style='color:#808030; '>(</span>headerHtmlString<span style='color:#808030; '>,</span> headerBaseUrl<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set the HTML element to fit the container height</span>
+            headerHtml<span style='color:#808030; '>.</span>FitHeight <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>true</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Add HTML element to header</span>
+            pdfDocument<span style='color:#808030; '>.</span>Header<span style='color:#808030; '>.</span>AddElement<span style='color:#808030; '>(</span>headerHtml<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>drawHeaderLine<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                <span style='color:#800000; font-weight:bold; '>float</span> headerWidth <span style='color:#808030; '>=</span> pdfDocument<span style='color:#808030; '>.</span>GetPage<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>PageSize<span style='color:#808030; '>.</span>Width<span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>float</span> headerHeight <span style='color:#808030; '>=</span> pdfDocument<span style='color:#808030; '>.</span>Header<span style='color:#808030; '>.</span>Height<span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Create a line element for the bottom of the header</span>
+                LineElement headerLine <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> LineElement<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> headerHeight <span style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> headerWidth<span style='color:#808030; '>,</span> headerHeight <span style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Set line color</span>
+                headerLine<span style='color:#808030; '>.</span>ForeColor <span style='color:#808030; '>=</span> RgbColor<span style='color:#808030; '>.</span>Gray<span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Add line element to the bottom of the header</span>
+                pdfDocument<span style='color:#808030; '>.</span>Header<span style='color:#808030; '>.</span>AddElement<span style='color:#808030; '>(</span>headerLine<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#696969; '>/// &lt;summary></span>
+        <span style='color:#696969; '>/// Add a footer to document</span>
+        <span style='color:#696969; '>/// &lt;/summary></span>
+        <span style='color:#696969; '>/// &lt;param name="pdfDocument">The PDF document object&lt;/param></span>
+        <span style='color:#696969; '>/// &lt;param name="addPageNumbers">A flag indicating if the page numbering is present in footer&lt;/param></span>
+        <span style='color:#696969; '>/// &lt;param name="drawFooterLine">A flag indicating if a line should be drawn at the top of the footer&lt;/param></span>
+        <span style='color:#800000; font-weight:bold; '>private</span> <span style='color:#800000; font-weight:bold; '>void</span> AddFooter<span style='color:#808030; '>(</span>Document pdfDocument<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>bool</span> addPageNumbers<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>bool</span> drawFooterLine<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>string</span> footerHtmlString <span style='color:#808030; '>=</span> System<span style='color:#808030; '>.</span>IO<span style='color:#808030; '>.</span>File<span style='color:#808030; '>.</span>ReadAllText<span style='color:#808030; '>(</span>Server<span style='color:#808030; '>.</span>MapPath<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>~/DemoAppFiles/Input/HTML_Files/Footer_HTML.html</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            <span style='color:#800000; font-weight:bold; '>string</span> footerBaseUrl <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>http://www.evopdf.com/demo/DemoAppFiles/Input/HTML_Files/</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Create the document footer template</span>
+            pdfDocument<span style='color:#808030; '>.</span>AddFooterTemplate<span style='color:#808030; '>(</span><span style='color:#008c00; '>60</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set footer background color</span>
+            RectangleElement backColorRectangle <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> RectangleElement<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> pdfDocument<span style='color:#808030; '>.</span>Footer<span style='color:#808030; '>.</span>Width<span style='color:#808030; '>,</span> pdfDocument<span style='color:#808030; '>.</span>Footer<span style='color:#808030; '>.</span>Height<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            backColorRectangle<span style='color:#808030; '>.</span>BackColor <span style='color:#808030; '>=</span> RgbColor<span style='color:#808030; '>.</span>WhiteSmoke<span style='color:#800080; '>;</span>
+            pdfDocument<span style='color:#808030; '>.</span>Footer<span style='color:#808030; '>.</span>AddElement<span style='color:#808030; '>(</span>backColorRectangle<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Create a HTML element to be added in footer</span>
+            HtmlToPdfElement footerHtml <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> HtmlToPdfElement<span style='color:#808030; '>(</span>footerHtmlString<span style='color:#808030; '>,</span> footerBaseUrl<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Set the HTML element to fit the container height</span>
+            footerHtml<span style='color:#808030; '>.</span>FitHeight <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>true</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Add HTML element to footer</span>
+            pdfDocument<span style='color:#808030; '>.</span>Footer<span style='color:#808030; '>.</span>AddElement<span style='color:#808030; '>(</span>footerHtml<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+            <span style='color:#696969; '>// Add page numbering</span>
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>addPageNumbers<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                <span style='color:#696969; '>// Create a text element with page numbering place holders &amp;p; and &amp; P;</span>
+                TextElement footerText <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> TextElement<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>30</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Page &amp;p; of &amp;P;  </span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>new</span> PdfFont<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Times New Roman</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>10</span><span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>true</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Align the text at the right of the footer</span>
+                footerText<span style='color:#808030; '>.</span>TextAlign <span style='color:#808030; '>=</span> HorizontalTextAlign<span style='color:#808030; '>.</span>Right<span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Set page numbering text color</span>
+                footerText<span style='color:#808030; '>.</span>ForeColor <span style='color:#808030; '>=</span> RgbColor<span style='color:#808030; '>.</span>Navy<span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Embed the text element font in PDF</span>
+                footerText<span style='color:#808030; '>.</span>EmbedSysFont <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>true</span><span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Add the text element to footer</span>
+                pdfDocument<span style='color:#808030; '>.</span>Footer<span style='color:#808030; '>.</span>AddElement<span style='color:#808030; '>(</span>footerText<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>drawFooterLine<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                <span style='color:#800000; font-weight:bold; '>float</span> footerWidth <span style='color:#808030; '>=</span> pdfDocument<span style='color:#808030; '>.</span>GetPage<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>PageSize<span style='color:#808030; '>.</span>Width<span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Create a line element for the top of the footer</span>
+                LineElement footerLine <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> LineElement<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> footerWidth<span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Set line color</span>
+                footerLine<span style='color:#808030; '>.</span>ForeColor <span style='color:#808030; '>=</span> RgbColor<span style='color:#808030; '>.</span>Gray<span style='color:#800080; '>;</span>
+
+                <span style='color:#696969; '>// Add line element to the bottom of the footer</span>
+                pdfDocument<span style='color:#808030; '>.</span>Footer<span style='color:#808030; '>.</span>AddElement<span style='color:#808030; '>(</span>footerLine<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#800000; font-weight:bold; '>protected</span> <span style='color:#800000; font-weight:bold; '>void</span> Page_Load<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>object</span> sender<span style='color:#808030; '>,</span> EventArgs e<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>!</span>IsPostBack<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                <span style='color:#800000; font-weight:bold; '>string</span> currentPageUrl <span style='color:#808030; '>=</span> HttpContext<span style='color:#808030; '>.</span>Current<span style='color:#808030; '>.</span>Request<span style='color:#808030; '>.</span>Url<span style='color:#808030; '>.</span>AbsoluteUri<span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>string</span> rootUrl <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>http://www.evopdf.com/demo/</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+
+                pdfBeforeHyperLink<span style='color:#808030; '>.</span>NavigateUrl <span style='color:#808030; '>=</span> rootUrl <span style='color:#808030; '>+</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>DemoAppFiles/Input/PDF_Files/Merge_Before_Conversion.pdf</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+                pdfAfterHyperLink<span style='color:#808030; '>.</span>NavigateUrl <span style='color:#808030; '>=</span> rootUrl <span style='color:#808030; '>+</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>DemoAppFiles/Input/PDF_Files/Merge_After_Conversion.pdf</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+
+                sampleCodeLiteral<span style='color:#808030; '>.</span>Text <span style='color:#808030; '>=</span> System<span style='color:#808030; '>.</span>IO<span style='color:#808030; '>.</span>File<span style='color:#808030; '>.</span>ReadAllText<span style='color:#808030; '>(</span>Server<span style='color:#808030; '>.</span>MapPath<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>~/DemoAppFiles/Input/Code_Samples/CSharp/AspNet/PDF_Creator/Headers_and_Footers/Header_Footer_In_External_PDF.html</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                descriptionLiteral<span style='color:#808030; '>.</span>Text <span style='color:#808030; '>=</span> System<span style='color:#808030; '>.</span>IO<span style='color:#808030; '>.</span>File<span style='color:#808030; '>.</span>ReadAllText<span style='color:#808030; '>(</span>Server<span style='color:#808030; '>.</span>MapPath<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>~/DemoAppFiles/Input/Descriptions/AspNet/PDF_Creator/Headers_and_Footers/Header_Footer_In_External_PDF.html</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+                Master<span style='color:#808030; '>.</span>CollapseAll<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                Master<span style='color:#808030; '>.</span>ExpandNode<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>PDF_Creator</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                Master<span style='color:#808030; '>.</span>ExpandNode<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>PDF_Creator_Headers_and_Footers</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                Master<span style='color:#808030; '>.</span>SelectNode<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>PDF_Creator_Header_Footer_in_External_PDF</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span>
+
+        <span style='color:#800000; font-weight:bold; '>protected</span> <span style='color:#800000; font-weight:bold; '>void</span> demoMenu_MenuItemClick<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>object</span> sender<span style='color:#808030; '>,</span> MenuEventArgs e<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>switch</span> <span style='color:#808030; '>(</span>e<span style='color:#808030; '>.</span>Item<span style='color:#808030; '>.</span>Value<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Live_Demo</span><span style='color:#800000; '>"</span><span style='color:#808030; '>:</span>
+                    demoMultiView<span style='color:#808030; '>.</span>SetActiveView<span style='color:#808030; '>(</span>liveDemoView<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                    <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Description</span><span style='color:#800000; '>"</span><span style='color:#808030; '>:</span>
+                    demoMultiView<span style='color:#808030; '>.</span>SetActiveView<span style='color:#808030; '>(</span>descriptionView<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                    <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Sample_Code</span><span style='color:#800000; '>"</span><span style='color:#808030; '>:</span>
+                    demoMultiView<span style='color:#808030; '>.</span>SetActiveView<span style='color:#808030; '>(</span>sampleCodeView<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                    <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+                <span style='color:#800000; font-weight:bold; '>default</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span>
+    <span style='color:#800080; '>}</span>
+<span style='color:#800080; '>}</span>
+</pre>

@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=7E8AE736B3916315969078A030E59D3C" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=687A75FEEFACF9BEAB81BAEA56BF2A0D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Calculator</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Calculator</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C++
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C++
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/23/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Calculator-43845ce8">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>A little about the creator</h1>
+<p>&nbsp;</p>
+<p style="text-align:center">Hi,I am Gordan.I come from the UK.I have been programming for 6 months.My first language that I learned was HTML5,and then came others like CSS,JS,VB.Net...In my fifth month I started learning C&#43;&#43; and I am still learning it.<br>
+I live in Liverpool,and I am 12 years old.&nbsp;</p>
+<h1>THANK YOU SO MUCH FOR 100 DOWNLOADS!!!THE BIG UPDATE IS COMING SOON!!!!!</h1>
+<h1></h1>
+<p>&nbsp;</p>
+<h1>WHAT IS NEW!!!</h1>
+<p>*Absolute value is added!!!<br>
+<br>
+*Pow is added!!!<br>
+<br>
+*Settings are fixed!!!</p>
+<p>*All bugs are fixed!!!</p>
+<p>*Converter has been added!!!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2></h2>
+<h1>&nbsp;Description</h1>
+<p style="text-align:left">This is a scientific calculator.It has all the basic operations with some advanced.<br>
+<br>
+</p>
+<p>Like:</p>
+<p>sin,cos,tan,sqr,sqrt,cosh(still in dev),sinh(still in dev),tanh(still in dev).</p>
+<p>&nbsp;</p>
+<h1>Code Source<br>
+<br>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;ccomplex&gt;
+#include &lt;complex&gt;
+
+void calculate();
+namespace pi{
+
+
+	double const pi = 3.1415926535897932384626433832795; 
+
+
+}
+namespace e{
+
+double const e = 2.718;
+
+
+}
+using namespace std;
+
+
+int main(){
+
+	char options;
+	char choose;
+	double num1,num2;
+	double sum = 0;
+begin:
+
+	cout &lt;&lt; &quot;Welcome to my calculator&quot; &lt;&lt; endl &lt;&lt; &quot;To calculate press C for help H and to exit E.&quot; &lt;&lt; endl;
+	cin &gt;&gt; options;
+	if (options = 67){ 
+	do
+	{
+calc:
+		cout &lt;&lt; &quot;Enter a x value&quot; &lt;&lt; flush;
+	    cin &gt;&gt; num1;
+	    cout &lt;&lt; &quot;Enter a y value&quot; &lt;&lt; flush;
+	    cin &gt;&gt; num2;
+
+		cout &lt;&lt; &quot;Choose your operator&quot; &lt;&lt; endl &lt;&lt; &quot;1)&#43;,-,*,/;&quot; &lt;&lt; endl &lt;&lt; &quot;2)sqr,sqrt&quot;&lt;&lt; endl &lt;&lt; &quot;3)sin,cos,tan&quot; &lt;&lt; endl &lt;&lt; &quot;4)sinh,cosh,tanh&quot; &lt;&lt; endl &lt;&lt; &quot;5)Constants&quot; &lt;&lt; endl;
+		cin &gt;&gt; choose;
+		switch (choose)
+		{
+		case 43:
+			{
+			sum = num1 &#43; num2;
+			cout &lt;&lt; num1  &lt;&lt; &quot;&#43;&quot; &lt;&lt; num2 &lt;&lt; &quot;=&quot; &lt;&lt; sum &lt;&lt; endl;
+			}
+			break;
+		case 45:
+			{
+			
+				sum = num1 - num2;
+				cout &lt;&lt; num1 &lt;&lt; &quot;-&quot; &lt;&lt; num2 &lt;&lt; &quot;=&quot; &lt;&lt; sum &lt;&lt; endl;
+
+
+			}
+			break;
+		case 42:
+			{
+			
+				sum = num1 * num2;
+				cout &lt;&lt; num1 &lt;&lt; &quot;*&quot; &lt;&lt; num2 &lt;&lt; &quot;=&quot; &lt;&lt; sum &lt;&lt; endl;
+
+			}
+			break;
+		case 47:
+			{
+			
+				if(num2 == 0){
+				
+					cout &lt;&lt; &quot;Invalid&quot; &lt;&lt; endl;
+				
+				}
+				else{
+				
+					sum = num1 / num2;
+					cout &lt;&lt; num1 &lt;&lt; &quot;/&quot; &lt;&lt; num2 &lt;&lt; &quot;=&quot; &lt;&lt; sum  &lt;&lt; endl;
+
+				}
+
+			}
+			break;
+		case 83:
+			sum= num1 * num1;
+			cout &lt;&lt; num1    &lt;&lt; &quot;  on squared is  &quot; &lt;&lt;   sum &lt;&lt; endl;
+			break;
+		case 81:
+			sum = sqrt(num1);
+			cout &lt;&lt; &quot;The squared root of   &quot; &lt;&lt; num1 &lt;&lt; &quot;   is equal to  &quot; &lt;&lt; sum &lt;&lt; endl;
+			break;
+		case 113:
+			sum = sqrt(num1);
+			cout &lt;&lt; &quot;The squared root of   &quot; &lt;&lt; num1 &lt;&lt; &quot;   is equal to  &quot; &lt;&lt; sum &lt;&lt; endl;
+			break;
+		case 115:
+			sum= num1 * num1;
+			cout &lt;&lt; num1    &lt;&lt; &quot;  on squared is  &quot; &lt;&lt;   sum &lt;&lt; endl;
+			break;
+		case 84:
+			sum = tan(num1);
+			cout &lt;&lt; &quot;The tangent of  &quot; &lt;&lt; num1 &lt;&lt; &quot;  is  &quot; &lt;&lt; sum &lt;&lt; endl;
+			break;
+		case 79:
+			sum = cos(num1);
+			cout &lt;&lt; &quot;The cosine of &quot; &lt;&lt; num1 &lt;&lt; &quot;  is  &quot; &lt;&lt; sum &lt;&lt; endl;
+			break;
+		case 73:
+			sum = sin(num1);
+			cout &lt;&lt; &quot;The sine of &quot; &lt;&lt; num1 &lt;&lt; &quot;  is  &quot; &lt;&lt; sum &lt;&lt; endl;
+		case 53:
+			cout &lt;&lt;&quot;The value of PI is   &quot; &lt;&lt; pi::pi &lt;&lt; endl &lt;&lt; &quot;The value of Euler's constant is  &quot; &lt;&lt; e::e &lt;&lt; endl; 
+		default:
+
+			cout &lt;&lt; &quot;Operator does not exist&quot; &lt;&lt; endl; 
+
+			
+		}
+		
+		cout &lt;&lt; &quot;Do you want to exit or do more calculations&quot; &lt;&lt; endl;
+		cin &gt;&gt; options;
+		
+
+	} while ((choose != '&#43;') &amp;&amp; (choose != '-') &amp;&amp; (choose != '*') &amp;&amp; (choose = '/') );
+ }
+	switch(options){ 
+	
+	case 67:
+		goto calc;
+		break;
+	case 69 :
+		abort();
+		break;
+	case 72:
+		cout &lt;&lt;&quot;This is a scientific calculator.It has basic operations,advanced operations.As you would expect for the basic operations it is their signs,but for the advanced goes &quot; &lt;&lt;endl
+			&lt;&lt; &quot;Geometry funtions:sin-I,cos-O and the tan-T;(all functions must be uppercase letters).&quot; &lt;&lt; endl &lt;&lt; 
+			&quot;For functions:sqr-S,sqrt-Q;(uppercase letters)&quot;&lt;&lt; endl;
+		goto begin;
+		break;
+	}
+
+	system(&quot;pause&quot;);
+	cin.get();
+	return 0;
+}
+</pre>
+<div class="preview">
+<pre class="cplusplus"><span class="cpp__preproc">#include&nbsp;&lt;iostream&gt;</span><span class="cpp__preproc">&nbsp;
+#include&nbsp;&lt;cmath&gt;</span><span class="cpp__preproc">&nbsp;
+#include&nbsp;&lt;ccomplex&gt;</span><span class="cpp__preproc">&nbsp;
+#include&nbsp;&lt;complex&gt;</span><span class="cpp__keyword">void</span>&nbsp;calculate();&nbsp;
+<span class="cpp__keyword">namespace</span>&nbsp;pi{&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">double</span><span class="cpp__keyword">const</span>&nbsp;pi&nbsp;=&nbsp;<span class="cpp__number">3.1415926535897932384626433832795</span>;&nbsp;&nbsp;
+&nbsp;
+&nbsp;
+}&nbsp;
+<span class="cpp__keyword">namespace</span>&nbsp;e{&nbsp;
+&nbsp;
+<span class="cpp__datatype">double</span><span class="cpp__keyword">const</span>&nbsp;e&nbsp;=&nbsp;<span class="cpp__number">2.718</span>;&nbsp;
+&nbsp;
+&nbsp;
+}&nbsp;
+<span class="cpp__keyword">using</span><span class="cpp__keyword">namespace</span>&nbsp;std;&nbsp;
+&nbsp;
+&nbsp;
+<span class="cpp__datatype">int</span>&nbsp;main(){&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">char</span>&nbsp;options;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">char</span>&nbsp;choose;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">double</span>&nbsp;num1,num2;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">double</span>&nbsp;sum&nbsp;=&nbsp;<span class="cpp__number">0</span>;&nbsp;
+begin:&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;Welcome&nbsp;to&nbsp;my&nbsp;calculator&quot;</span>&nbsp;&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;To&nbsp;calculate&nbsp;press&nbsp;C&nbsp;for&nbsp;help&nbsp;H&nbsp;and&nbsp;to&nbsp;exit&nbsp;E.&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;options;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(options&nbsp;=&nbsp;<span class="cpp__number">67</span>){&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">do</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+calc:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;Enter&nbsp;a&nbsp;x&nbsp;value&quot;</span>&nbsp;&lt;&lt;&nbsp;flush;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;num1;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;Enter&nbsp;a&nbsp;y&nbsp;value&quot;</span>&nbsp;&lt;&lt;&nbsp;flush;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;num2;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;Choose&nbsp;your&nbsp;operator&quot;</span>&nbsp;&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;1)&#43;,-,*,/;&quot;</span>&nbsp;&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;2)sqr,sqrt&quot;</span>&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;3)sin,cos,tan&quot;</span>&nbsp;&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;4)sinh,cosh,tanh&quot;</span>&nbsp;&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;5)Constants&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;choose;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">switch</span>&nbsp;(choose)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">43</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;num1&nbsp;&#43;&nbsp;num2;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;num1&nbsp;&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;&#43;&quot;</span>&nbsp;&lt;&lt;&nbsp;num2&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;=&quot;</span>&nbsp;&lt;&lt;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">45</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;num1&nbsp;-&nbsp;num2;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;num1&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;-&quot;</span>&nbsp;&lt;&lt;&nbsp;num2&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;=&quot;</span>&nbsp;&lt;&lt;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">42</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;num1&nbsp;*&nbsp;num2;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;num1&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;*&quot;</span>&nbsp;&lt;&lt;&nbsp;num2&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;=&quot;</span>&nbsp;&lt;&lt;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">47</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>(num2&nbsp;==&nbsp;<span class="cpp__number">0</span>){&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;Invalid&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">else</span>{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;num1&nbsp;/&nbsp;num2;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;num1&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;/&quot;</span>&nbsp;&lt;&lt;&nbsp;num2&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;=&quot;</span>&nbsp;&lt;&lt;&nbsp;sum&nbsp;&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">83</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum=&nbsp;num1&nbsp;*&nbsp;num1;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;num1&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;&nbsp;&nbsp;on&nbsp;squared&nbsp;is&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;&nbsp;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">81</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;sqrt(num1);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;The&nbsp;squared&nbsp;root&nbsp;of&nbsp;&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;num1&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;&nbsp;&nbsp;&nbsp;is&nbsp;equal&nbsp;to&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">113</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;sqrt(num1);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;The&nbsp;squared&nbsp;root&nbsp;of&nbsp;&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;num1&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;&nbsp;&nbsp;&nbsp;is&nbsp;equal&nbsp;to&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">115</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum=&nbsp;num1&nbsp;*&nbsp;num1;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;num1&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;&nbsp;&nbsp;on&nbsp;squared&nbsp;is&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;&nbsp;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">84</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;tan(num1);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;The&nbsp;tangent&nbsp;of&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;num1&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;&nbsp;&nbsp;is&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">79</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;cos(num1);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;The&nbsp;cosine&nbsp;of&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;num1&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;&nbsp;&nbsp;is&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">73</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;sin(num1);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;The&nbsp;sine&nbsp;of&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;num1&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;&nbsp;&nbsp;is&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;sum&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">53</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;<span class="cpp__string">&quot;The&nbsp;value&nbsp;of&nbsp;PI&nbsp;is&nbsp;&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;pi::pi&nbsp;&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;The&nbsp;value&nbsp;of&nbsp;Euler's&nbsp;constant&nbsp;is&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;e::e&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">default</span>:&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;Operator&nbsp;does&nbsp;not&nbsp;exist&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;Do&nbsp;you&nbsp;want&nbsp;to&nbsp;exit&nbsp;or&nbsp;do&nbsp;more&nbsp;calculations&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;options;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="cpp__keyword">while</span>&nbsp;((choose&nbsp;!=&nbsp;<span class="cpp__string">'&#43;'</span>)&nbsp;&amp;&amp;&nbsp;(choose&nbsp;!=&nbsp;<span class="cpp__string">'-'</span>)&nbsp;&amp;&amp;&nbsp;(choose&nbsp;!=&nbsp;<span class="cpp__string">'*'</span>)&nbsp;&amp;&amp;&nbsp;(choose&nbsp;=&nbsp;<span class="cpp__string">'/'</span>)&nbsp;);&nbsp;
+&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">switch</span>(options){&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">67</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">goto</span>&nbsp;calc;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">69</span>&nbsp;:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;abort();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">case</span><span class="cpp__number">72</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;<span class="cpp__string">&quot;This&nbsp;is&nbsp;a&nbsp;scientific&nbsp;calculator.It&nbsp;has&nbsp;basic&nbsp;operations,advanced&nbsp;operations.As&nbsp;you&nbsp;would&nbsp;expect&nbsp;for&nbsp;the&nbsp;basic&nbsp;operations&nbsp;it&nbsp;is&nbsp;their&nbsp;signs,but&nbsp;for&nbsp;the&nbsp;advanced&nbsp;goes&nbsp;&quot;</span>&nbsp;&lt;&lt;endl&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&nbsp;<span class="cpp__string">&quot;Geometry&nbsp;funtions:sin-I,cos-O&nbsp;and&nbsp;the&nbsp;tan-T;(all&nbsp;functions&nbsp;must&nbsp;be&nbsp;uppercase&nbsp;letters).&quot;</span>&nbsp;&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__string">&quot;For&nbsp;functions:sqr-S,sqrt-Q;(uppercase&nbsp;letters)&quot;</span>&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">goto</span>&nbsp;begin;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;system(<span class="cpp__string">&quot;pause&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cin.get();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">return</span><span class="cpp__number">0</span>;&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;The definition of a calculator</div>
+</h1>
+<p>1) A calculator is a device that performs arithmetic operations on numbers. The simplest calculators can do only addition, subtraction, multiplication, and division. More sophisticated calculators can handle&nbsp;<a href="http://whatis.techtarget.com/definition/exponent">exponent</a>&nbsp;ial
+ operations, roots,&nbsp;<a href="http://searchcio-midmarket.techtarget.com/definition/logarithm">logarithm</a>&nbsp;s, trigonometric functions, and hyperbolic functions. Internally, some calculators actually perform all of these functions by repeated processes
+ of addition.</p>
+<p>Most calculators these days require electricity to operate. Portable, battery-powered calculators are popular with engineers and engineering students. Before 1970, a more primitive form of calculator, the&nbsp;<a href="http://searchcio-midmarket.techtarget.com/definition/logarithm">slide
+ rule</a>&nbsp;, was commonly used. It consisted of a slat of wood, called the slide, that could be moved in and out of a reinforced pair of slats. Both the slide and the outer pair of slats had calibrated numerical scales. A movable, transparent sleeve called
+ the cursor was used to align numerals on the scales. The slide rule did not require any source of power, but its precision was limited, and it was necessary to climb a learning curve to become proficient with it.</p>
+<p>One of the most primitive calculators, the&nbsp;<a href="http://whatis.techtarget.com/definition/abacus">abacus</a>&nbsp;is still used in some regions of the Far East. The abacus uses groups of beads to denote numbers. Like the slide rule, the abacus requires
+ no source of power. The beads are positioned in several parallel rows, and can be moved up and down to denote arithmetic operations. It is said that a skilled abacus user can do some calculations just as fast as a person equipped with a battery-powered calculator.</p>
+<p>As calculators became more advanced during the 1970s, they became able to make computations involving variables (unknowns). These were the first personal computers. Today's personal computers can still perform such operations, and most are provided with
+ a virtual calculator program that actually looks, on screen, like a handheld calculator. The buttons are actuated by pointing and clicking.</p>
+<p>Theoretically, a modern computer is a calculator that works with&nbsp;<a href="http://searchcio-midmarket.techtarget.com/definition/binary">binary</a>&nbsp;numbers and has a much larger memory. But in the practical sense, a computer is far more than a mere
+ calculator, because of the wide variety of non-computational tasks it can perform.</p>
+<p>2) A calculator is a person who performs arithmetic or other mathematical calculations.</p>
+<h1>
+<div class="endscriptcode"></div>
+</h1>
+<p>&nbsp;</p>
+<h1>I am ready for critics,and if you have a solution to these bugs send me a message(please)!!!!<br>
+<br>
+Send a mail at&nbsp;</h1>
+<p>gordandjuric@hotmail.com or at gordancraft@hotmail.com</p>
+<p>&nbsp;</p>
+<h1>Thank you for downloading my sample<br>
+AGAIN THANK YOU FOR 100 DOWNLOADS !!!!!!&nbsp;</h1>
+
+</div>
+
+
+    </div>
+</body>
+</html>

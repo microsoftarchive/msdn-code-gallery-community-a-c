@@ -1,0 +1,75 @@
+﻿<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        Employee Management
+    </div>
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <div style="padding-bottom:10px"><button class="btn btn-primary" (click)="addUser()">Add</button></div>
+            <div class="alert alert-info" role="alert" *ngIf="indLoading"><img src="../../images/loading.gif" width="32" height="32" /> Loading...</div>
+            <div *ngIf='users && users.length==0' class="alert alert-info" role="alert">No record found!</div>
+            <table class='table table-striped' *ngIf='users && users.length'>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.FirstName}}</td>
+                        <td>{{user.LastName}}</td>
+                        <td>{{user.Gender}}</td>
+                        <td>
+                            <button title="Edit" class="btn btn-primary" (click)="editUser(user.Id)">Edit</button>
+                            <button title="Delete" class="btn btn-danger" (click)="deleteUser(user.Id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+            </div>
+        </div>
+        <div *ngIf="msg" role="alert" class="alert alert-info alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            {{msg}}
+        </div>
+    </div>
+</div>
+
+<modal #modal>
+    <form novalidate (ngSubmit)="onSubmit(userFrm)" [formGroup]="userFrm">
+        <modal-header [show-close]="true">
+            <h4 class="modal-title">{{modalTitle}}</h4>
+        </modal-header>
+        <modal-body>
+
+            <div class="form-group">
+                <div>
+                    <span>Full name*</span>
+                    <input type="text" class="form-control" placeholder="First Name" formControlName="FirstName">
+                </div>
+                <div>
+                    <span>Full name</span>
+                    <input type="text" class="form-control" placeholder="Last Name" formControlName="LastName">
+                </div>
+                <div>
+                    <span>Gender*</span>
+                    <select formControlName="Gender" class="form-control">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+            </div>
+        </modal-body>
+        <modal-footer>
+            <div>
+                <a class="btn btn-default" (click)="modal.dismiss()">Cancel</a>
+                <button type="submit" [disabled]="userFrm.invalid" class="btn btn-primary">{{modalBtnTitle}}</button>
+            </div>
+        </modal-footer>
+    </form>
+</modal>

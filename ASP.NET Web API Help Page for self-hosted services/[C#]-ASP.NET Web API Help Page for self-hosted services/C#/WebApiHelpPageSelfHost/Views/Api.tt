@@ -1,0 +1,39 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ import namespace="System.Web.Http.Description" #>
+<#@ import namespace="System.Web.Http.Controllers" #>
+<#@ import namespace="System.Collections.ObjectModel" #>
+<#@ import namespace="WebApiHelpPage.Models" #>
+<#@ import namespace="System.Web.Http" #>
+<#@ import namespace="System.Web" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Threading" #>
+<#@ import namespace="System.Net.Http.Headers" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="WebApiHelpPage" #>
+<#
+    var description = Model.ApiDescription;
+    var title = description.HttpMethod.Method + " " + description.RelativePath;
+#>
+
+<html>
+<head>
+    <title><#=title#></title>
+	<style type="text/css">
+		<#@ include file="HelpPage.css" #>
+	</style>
+</head>
+<body>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="<#=HomePageLink#>">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <#@ include file="DisplayTemplates\HelpPageApiModel.tt" #>
+    </section>
+</div>
+</body>
+</html>

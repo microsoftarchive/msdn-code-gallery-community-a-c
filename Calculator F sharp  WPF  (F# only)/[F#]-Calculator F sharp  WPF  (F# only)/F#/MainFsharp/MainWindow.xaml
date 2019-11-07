@@ -1,0 +1,16 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  
+        xmlns:MyUserControl="clr-namespace:MyUserControl;assembly=MyUserControl" 
+  
+        Width="220" Height="342" ResizeMode="NoResize" Title="Calculator" Icon="AP.ico" >
+
+    <Grid x:Name="gridAll" Margin="0,0,0,0"  RenderTransformOrigin="0.5,0.5" Width="204" Height="315" >
+        <MyUserControl:Calculator HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+
+
+    </Grid>
+</Window>
+

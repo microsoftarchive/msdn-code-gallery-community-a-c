@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Classic Cascading DDL";
+}
+
+@using (Html.BeginForm("IndexDDL", "Home", FormMethod.Post, 
+    new { id = "CountryStateFormID", 
+          data_stateListAction = @Url.Action("StateList") })) {
+    <fieldset>
+        <legend>Country/State</legend>
+        @Html.DropDownList("Countries", ViewBag.Country as SelectList,
+            "Select a Country", new { id = "CountriesID" })
+        <div id="StatesDivID" >
+            <label for="States">States</label>
+            <select id="StatesID"  name="States"></select>
+        </div>
+        <p>
+            <input type="submit" value="Submit" id="SubmitID" />
+        </p>
+    </fieldset>
+}
+
+<script src="@Url.Content("~/Scripts/countryState.js")"></script>

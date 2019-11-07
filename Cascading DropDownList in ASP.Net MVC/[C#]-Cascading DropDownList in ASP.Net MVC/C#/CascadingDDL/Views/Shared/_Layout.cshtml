@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.5.1.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/myReady.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>Cascading DDL</h1>
+            </div>
+            <div id="logindisplay">
+                No Logon
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink("Index", "Index", "Home")</li>
+                    <li>@Html.ActionLink("IndexDDL", "IndexDDL", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+    <noscript>
+        <div>
+            <h2>This site requires JavaScript</h2>
+        </div>
+    </noscript>
+</body>
+</html>

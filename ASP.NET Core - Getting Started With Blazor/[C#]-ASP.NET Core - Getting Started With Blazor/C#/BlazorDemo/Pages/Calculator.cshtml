@@ -1,0 +1,79 @@
+﻿@page "/calculator"
+
+<h1>Basic Calculator Using Blazor</h1>
+<hr />
+<div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label class="control-label">First Number</label>
+        </div>
+        <div class="col-sm-4">
+            <input class="form-control" type="text" placeholder="Enter First Number" bind="@operand1" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-3">
+            <label class="control-label">Second Number</label>
+        </div>
+        <div class="col-sm-4">
+            <input class="form-control" type="text" placeholder="Enter Second Number" bind="@operand2" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-3">
+            <label class="control-label">Result</label>
+        </div>
+        <div class="col-sm-4">
+            <input readonly class="form-control" bind="@finalResult" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-3">
+            <button onclick="@AddNumbers" class="btn btn-primary">
+                Add
+                (+)
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button onclick="@SubtractNumbers" class="btn btnwarning">Subtract (−)</button>
+        </div>
+        <div class="col-md-3">
+            <button onclick="@MultiplyNumbers" class="btn btn-success">Multiply (X)</button>
+        </div>
+        <div class="col-md-3">
+            <button onclick="@DivideNumbers" class="btn btn-info">Divide (/)</button>
+        </div>
+    </div>
+</div>
+
+@functions {
+double operand1 { get; set; }
+double operand2 { get; set; }
+string finalResult { get; set; }
+void AddNumbers()
+{
+    finalResult = (operand1 + operand2).ToString();
+}
+void SubtractNumbers()
+{
+    finalResult = (operand1 - operand2).ToString();
+}
+void MultiplyNumbers()
+{
+    finalResult = (operand1 * operand2).ToString();
+}
+void DivideNumbers()
+{
+    if (operand2 != 0)
+    {
+        finalResult = (operand1 / operand2).ToString();
+    }
+    else
+    {
+        finalResult = "Cannot Divide by Zero";
+    }
+}
+}

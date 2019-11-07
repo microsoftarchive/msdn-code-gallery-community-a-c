@@ -1,0 +1,45 @@
+﻿<div ng-cloak>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>{{vm.title}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info active">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-11 col-xs-10">name</div>
+                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">size (kb)</div>
+                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">created on</div>
+                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">modified on</div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2"></div>
+                    </div>
+                </li>
+                <li class="list-group-item" ng-show="vm.photos.length === 0" ng-mouseenter="vm.setPreviewPhoto()">no photos</li>
+                <li ng-repeat="photo in vm.photos" class="list-group-item" ng-mouseenter="vm.setPreviewPhoto(photo)" ng-mouseleave="vm.setPreviewPhoto()">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-11 col-xs-10 wraptext">{{photo.name}}</div>
+                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">{{photo.size}}</div>
+                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">{{photo.created | date: short}}</div>
+                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">{{photo.modified | date: short}}</div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+                            <button type="button" class="btn btn-xs btn-danger" ng-click="vm.remove(photo)">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <eg-photo-uploader></eg-photo-uploader>
+        </div>        
+        <div class="col-md-3 hidden-sm hidden-xs" style="height: 150px; width: 150px; margin-bottom: 5px;">
+            <img ng-src="album/{{vm.previewPhoto.name}}" style="max-height: 150px" ng-show="vm.previewPhoto" class="img-responsive" alt="vm.previewPhoto.name" />
+        </div>            
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <eg-app-status></eg-app-status>
+        </div>
+    </div>
+</div>

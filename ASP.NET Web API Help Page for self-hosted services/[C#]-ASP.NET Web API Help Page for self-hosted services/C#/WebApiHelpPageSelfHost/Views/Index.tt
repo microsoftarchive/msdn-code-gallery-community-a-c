@@ -1,0 +1,47 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ import namespace="System.Web.Http.Description" #>
+<#@ import namespace="System.Web.Http.Controllers" #>
+<#@ import namespace="System.Collections.ObjectModel" #>
+<#@ import namespace="WebApiHelpPage.Models" #>
+<#@ import namespace="System.Web.Http" #>
+<#@ import namespace="System.Linq" #>
+
+<#
+	var title = "ASP.NET Web API Help Page";
+    // Group APIs by controller
+    ILookup<string, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor.ControllerName);
+#>
+
+<html>
+<head>
+    <title><#=title#></title>
+	<style type="text/css">
+		<#@ include file="HelpPage.css" #>
+	</style>
+</head>
+<body>
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <h1><#=title#></h1>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <h2>Introduction</h2>
+            <p>
+                Provide a general description of your APIs here.
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <# foreach (IGrouping<string, ApiDescription> controllerGroup in apiGroups)
+		{ #>
+            <#@ include file="DisplayTemplates\ApiGroup.tt" #>
+        <# } #>
+    </section>
+</div>
+</body>
+</html>

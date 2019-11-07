@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VBAsyncExampleWPF_Async_HttpClient", "AsyncExampleWPF.vb\VBAsyncExampleWPF_Async_HttpClient.vbproj", "{B0102F2A-2DE9-4EBB-9DB4-8B7CB135A839}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = preSolution
+		{B0102F2A-2DE9-4EBB-9DB4-8B7CB135A839}.Debug|x86.ActiveCfg = Debug|x86
+		{B0102F2A-2DE9-4EBB-9DB4-8B7CB135A839}.Debug|x86.Build.0 = Debug|x86
+		{B0102F2A-2DE9-4EBB-9DB4-8B7CB135A839}.Release|x86.ActiveCfg = Release|x86
+		{B0102F2A-2DE9-4EBB-9DB4-8B7CB135A839}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

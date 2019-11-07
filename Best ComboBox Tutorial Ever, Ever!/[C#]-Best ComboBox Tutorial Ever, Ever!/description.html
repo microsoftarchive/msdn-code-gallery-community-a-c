@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Best ComboBox Tutorial Ever, Ever!</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Best ComboBox Tutorial Ever, Ever!</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, WPF, XAML
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            DataGrid, ComboBox, XML data, WPF Data Binding, ListBoxItem, Binding, WPF Binding, CellTemplate, XAML Array, ItemsSource, SelectedValue, SelectedItem, DisplayMemberPa<wbr />th, StaticResource, Static Data, XML Binding, XmlDataProvider<wbr />, x:Array, CompositeCollec<wbr />tion, CollectionConta<wbr />iner, DataGridComboBo<wbr />xColumn, DataGridTemplat<wbr />eColumn, DataGridTextCol<wbr />umn, CellEditingTemp<wbr />late, ElementStyle, EditingElementS<wbr />tyle
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/20/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Best-ComboBox-Tutorial-5cc27f82">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<div>This project covers everything you need to know about ComboBoxes and so much more! It covers populating data from many sources and types, as well as binding and generating list items with code-behind and MVVM style sources. This applies to any ItemsControl
+ like ListBoxes and also DataGridComboBoxColumns.</div>
+<div></div>
+<div><img id="67001" src="description/combos.png" alt="" width="613" height="273"></div>
+<div>&nbsp;</div>
+<h1><span>Building the Sample</span></h1>
+<div>Just download, unzip, open and run!</div>
+<div>&nbsp;</div>
+<h1><span style="font-size:20px">Description</span></h1>
+<div>This project contains 12 distinct examples of ComboBox creation.</div>
+<div></div>
+<h2>1. List&lt;string&gt; SelectedItem</h2>
+<div>This ComboBox is simply populated with a string collection. As a string object is not a Class, SelectedItem and SelectedValue are the same. We bind SelectedItem to a property that is also shared with a label to show the result.</div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;TextBlock Text=&quot;Example 1&quot; VerticalAlignment=&quot;Center&quot;/&gt;
+&lt;ComboBox ItemsSource=&quot;{Binding MyStringOptions}&quot; Grid.Column=&quot;1&quot; SelectedItem=&quot;{Binding SelectedOption1}&quot; Margin=&quot;5&quot;/&gt;
+&lt;TextBlock Text=&quot;{Binding SelectedOption1}&quot; Grid.Column=&quot;2&quot; Margin=&quot;10,5,5,0&quot; VerticalAlignment=&quot;Center&quot;/&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;TextBlock&nbsp;Text=<span class="js__string">&quot;Example&nbsp;1&quot;</span>&nbsp;VerticalAlignment=<span class="js__string">&quot;Center&quot;</span>/&gt;&nbsp;
+&lt;ComboBox&nbsp;ItemsSource=<span class="js__string">&quot;{Binding&nbsp;MyStringOptions}&quot;</span>&nbsp;Grid.Column=<span class="js__string">&quot;1&quot;</span>&nbsp;SelectedItem=<span class="js__string">&quot;{Binding&nbsp;SelectedOption1}&quot;</span>&nbsp;Margin=<span class="js__string">&quot;5&quot;</span>/&gt;&nbsp;
+&lt;TextBlock&nbsp;Text=<span class="js__string">&quot;{Binding&nbsp;SelectedOption1}&quot;</span>&nbsp;Grid.Column=<span class="js__string">&quot;2&quot;</span>&nbsp;Margin=<span class="js__string">&quot;10,5,5,0&quot;</span>&nbsp;VerticalAlignment=<span class="js__string">&quot;Center&quot;</span>/&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+<h2>2. List&lt;Class&gt; SelectedItem</h2>
+<div>This ComboBox's itemsSource is a collection of MyClass, which has Name and Age properties. SelectedItem is again used, but as it is a class, we can now use all the properties of the SelectedItem. Notice we use DisplayMemberPath to define which property
+ is shown in the list.</div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;TextBlock Grid.Row=&quot;1&quot; Text=&quot;Example 2&quot; VerticalAlignment=&quot;Center&quot;/&gt;
+&lt;ComboBox Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; ItemsSource=&quot;{Binding MyClassOptions}&quot; SelectedItem=&quot;{Binding SelectedClass}&quot; DisplayMemberPath=&quot;Name&quot; Margin=&quot;5&quot;/&gt;
+&lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;2&quot; Margin=&quot;10,5,5,0&quot; VerticalAlignment=&quot;Center&quot;&gt;&lt;Run Text=&quot;{Binding SelectedClass.Name}&quot;/&gt;&lt;Run Text=&quot; - &quot;/&gt;&lt;Run Text=&quot;{Binding SelectedClass.Age}&quot;/&gt;&lt;/TextBlock&gt;
+</pre>
+<div class="preview">
+<pre class="js">&lt;TextBlock&nbsp;Grid.Row=<span class="js__string">&quot;1&quot;</span>&nbsp;Text=<span class="js__string">&quot;Example&nbsp;2&quot;</span>&nbsp;VerticalAlignment=<span class="js__string">&quot;Center&quot;</span>/&gt;&nbsp;
+&lt;ComboBox&nbsp;Grid.Row=<span class="js__string">&quot;1&quot;</span>&nbsp;Grid.Column=<span class="js__string">&quot;1&quot;</span>&nbsp;ItemsSource=<span class="js__string">&quot;{Binding&nbsp;MyClassOptions}&quot;</span>&nbsp;SelectedItem=<span class="js__string">&quot;{Binding&nbsp;SelectedClass}&quot;</span>&nbsp;DisplayMemberPath=<span class="js__string">&quot;Name&quot;</span>&nbsp;Margin=<span class="js__string">&quot;5&quot;</span>/&gt;&nbsp;
+&lt;TextBlock&nbsp;Grid.Row=<span class="js__string">&quot;1&quot;</span>&nbsp;Grid.Column=<span class="js__string">&quot;2&quot;</span>&nbsp;Margin=<span class="js__string">&quot;10,5,5,0&quot;</span>&nbsp;VerticalAlignment=<span class="js__string">&quot;Center&quot;</span>&gt;&lt;Run&nbsp;Text=<span class="js__string">&quot;{Binding&nbsp;SelectedClass.Name}&quot;</span><span class="js__reg_exp">/&gt;&lt;Run&nbsp;Text=&quot;&nbsp;-&nbsp;&quot;/</span>&gt;&lt;Run&nbsp;Text=<span class="js__string">&quot;{Binding&nbsp;SelectedClass.Age}&quot;</span><span class="js__reg_exp">/&gt;&lt;/</span>TextBlock&gt;&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<h2 class="endscriptcode">3. List&lt;Class&gt; SelectedValue</h2>
+</div>
+<div>This example is similar to the previous, but captures one SelectedValue from the Class, instead of the whole object. When you use SelectedValue on a class object, you need to specify SelectedValuePath.</div>
+<h2>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;TextBlock Grid.Row=&quot;2&quot; Text=&quot;Example 3&quot; VerticalAlignment=&quot;Center&quot;/&gt;
+&lt;ComboBox Grid.Row=&quot;2&quot; Grid.Column=&quot;1&quot; ItemsSource=&quot;{Binding MyClassOptions}&quot; SelectedValuePath=&quot;Age&quot; SelectedValue=&quot;{Binding SelectedAge}&quot; DisplayMemberPath=&quot;Name&quot; Margin=&quot;5&quot;/&gt;
+&lt;TextBlock Grid.Row=&quot;2&quot; Grid.Column=&quot;2&quot; Margin=&quot;10,5,5,0&quot; VerticalAlignment=&quot;Center&quot;&gt;&lt;Run Text=&quot;Selected age: &quot;/&gt;&lt;Run Text=&quot;{Binding SelectedAge}&quot;/&gt;&lt;/TextBlock&gt;
+</pre>
+<div class="preview">
+<pre class="js">&lt;TextBlock&nbsp;Grid.Row=<span class="js__string">&quot;2&quot;</span>&nbsp;Text=<span class="js__string">&quot;Example&nbsp;3&quot;</span>&nbsp;VerticalAlignment=<span class="js__string">&quot;Center&quot;</span>/&gt;&nbsp;
+&lt;ComboBox&nbsp;Grid.Row=<span class="js__string">&quot;2&quot;</span>&nbsp;Grid.Column=<span class="js__string">&quot;1&quot;</span>&nbsp;ItemsSource=<span class="js__string">&quot;{Binding&nbsp;MyClassOptions}&quot;</span>&nbsp;SelectedValuePath=<span class="js__string">&quot;Age&quot;</span>&nbsp;SelectedValue=<span class="js__string">&quot;{Binding&nbsp;SelectedAge}&quot;</span>&nbsp;DisplayMemberPath=<span class="js__string">&quot;Name&quot;</span>&nbsp;Margin=<span class="js__string">&quot;5&quot;</span>/&gt;&nbsp;
+&lt;TextBlock&nbsp;Grid.Row=<span class="js__string">&quot;2&quot;</span>&nbsp;Grid.Column=<span class="js__string">&quot;2&quot;</span>&nbsp;Margin=<span class="js__string">&quot;10,5,5,0&quot;</span>&nbsp;VerticalAlignment=<span class="js__string">&quot;Center&quot;</span>&gt;&lt;Run&nbsp;Text=<span class="js__string">&quot;Selected&nbsp;age:&nbsp;&quot;</span><span class="js__reg_exp">/&gt;&lt;Run&nbsp;Text=&quot;{Binding&nbsp;SelectedAge}&quot;/</span>&gt;&lt;/TextBlock&gt;&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+4. ComboBox ItemTemplate</h2>
+<div>What if you want to display more than one property? Instead of using DisplayMemberPath, you can define your own ItemTemplate, and build your list item however you want.</div>
+<div>&nbsp;</div>
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;ComboBox . . . ItemTemplate=&quot;{StaticResource Example4ItemTemplate}&quot; /&gt;</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;ComboBox</span>&nbsp;.&nbsp;.&nbsp;.&nbsp;<span class="xaml__attr_name">ItemTemplate</span>=<span class="xaml__attr_value">&quot;{StaticResource&nbsp;Example4ItemTemplate}&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;DataTemplate x:Key=&quot;Example4ItemTemplate&quot;&gt;
+    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
+        &lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;
+        &lt;TextBlock Text=&quot;, Aged &quot;/&gt;
+        &lt;TextBlock Text=&quot;{Binding Age}&quot; Grid.Column=&quot;1&quot; /&gt;
+    &lt;/StackPanel&gt;
+&lt;/DataTemplate&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;DataTemplate&nbsp;x:Key=<span class="js__string">&quot;Example4ItemTemplate&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;StackPanel&nbsp;Orientation=<span class="js__string">&quot;Horizontal&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Text=<span class="js__string">&quot;{Binding&nbsp;Name}&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Text=<span class="js__string">&quot;,&nbsp;Aged&nbsp;&quot;</span>/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Text=<span class="js__string">&quot;{Binding&nbsp;Age}&quot;</span>&nbsp;Grid.Column=<span class="js__string">&quot;1&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/StackPanel&gt;&nbsp;
+&lt;/DataTemplate&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<h2 class="endscriptcode">5. XAML Array - Static XAML Data</h2>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">If your ComboBox options are limited, static and not worth coding, or if you are in a hurry, then you can just dump the data into the actual XAML.</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;ComboBox . . . ItemsSource=&quot;{StaticResource Example9_XamlArray}&quot; /&gt;</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;ComboBox</span>&nbsp;.&nbsp;.&nbsp;.&nbsp;<span class="xaml__attr_name">ItemsSource</span>=<span class="xaml__attr_value">&quot;{StaticResource&nbsp;Example9_XamlArray}&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+<h2 class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;x:Array x:Key=&quot;Example9_XamlArray&quot; Type=&quot;sys:String&quot;
+        xmlns:sys=&quot;clr-namespace:System;assembly=mscorlib&quot;&gt;
+    &lt;sys:String&gt;Bear&lt;/sys:String&gt;
+    &lt;sys:String&gt;Bird&lt;/sys:String&gt;
+    &lt;sys:String&gt;Cat&lt;/sys:String&gt;
+    &lt;sys:String&gt;Cow&lt;/sys:String&gt;
+    &lt;sys:String&gt;Dog&lt;/sys:String&gt;
+    &lt;sys:String&gt;Elephant&lt;/sys:String&gt;
+    &lt;sys:String&gt;Fish&lt;/sys:String&gt;
+    &lt;sys:String&gt;Goat&lt;/sys:String&gt;
+    &lt;sys:String&gt;Hamster&lt;/sys:String&gt;
+&lt;/x:Array&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;x:<span class="js__object">Array</span>&nbsp;x:Key=<span class="js__string">&quot;Example9_XamlArray&quot;</span>&nbsp;Type=<span class="js__string">&quot;sys:String&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlns:sys=<span class="js__string">&quot;clr-namespace:System;assembly=mscorlib&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;sys:<span class="js__object">String</span>&gt;Bear&lt;/sys:<span class="js__object">String</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;sys:<span class="js__object">String</span>&gt;Bird&lt;/sys:<span class="js__object">String</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;sys:<span class="js__object">String</span>&gt;Cat&lt;/sys:<span class="js__object">String</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;sys:<span class="js__object">String</span>&gt;Cow&lt;/sys:<span class="js__object">String</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;sys:<span class="js__object">String</span>&gt;Dog&lt;/sys:<span class="js__object">String</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;sys:<span class="js__object">String</span>&gt;Elephant&lt;/sys:<span class="js__object">String</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;sys:<span class="js__object">String</span>&gt;Fish&lt;/sys:<span class="js__object">String</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;sys:<span class="js__object">String</span>&gt;Goat&lt;/sys:<span class="js__object">String</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;sys:<span class="js__object">String</span>&gt;Hamster&lt;/sys:<span class="js__object">String</span>&gt;&nbsp;
+&lt;/x:<span class="js__object">Array</span>&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+6. XML Data - XmldataProvider</h2>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">There are many reasons why your data may be in XML. ComboBoxes can consume your XMl through an XmlDataProvider.</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;ComboBox . . . ItemsSource=&quot;{Binding Source={StaticResource WorkmenData}}&quot; DisplayMemberPath=&quot;@Name&quot; SelectedValuePath=&quot;@Name&quot; /&gt;</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;ComboBox</span>&nbsp;.&nbsp;.&nbsp;.&nbsp;<span class="xaml__attr_name">ItemsSource</span>=<span class="xaml__attr_value">&quot;{Binding&nbsp;Source={StaticResource&nbsp;WorkmenData}}&quot;</span>&nbsp;<span class="xaml__attr_name">DisplayMemberPath</span>=<span class="xaml__attr_value">&quot;@Name&quot;</span>&nbsp;<span class="xaml__attr_name">SelectedValuePath</span>=<span class="xaml__attr_value">&quot;@Name&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;XmlDataProvider x:Key=&quot;WorkmenData&quot; XPath=&quot;Workmen/Man&quot;&gt;
+    &lt;x:XData&gt;
+        &lt;Workmen xmlns=&quot;&quot;&gt;
+            &lt;Man Name=&quot;Bob&quot; /&gt;
+            &lt;Man Name=&quot;Charles&quot; /&gt;
+            &lt;Man Name=&quot;Harry&quot; /&gt;
+            &lt;Man Name=&quot;Mark&quot; /&gt;
+            &lt;Man Name=&quot;Nick&quot; /&gt;
+            &lt;Man Name=&quot;William&quot; /&gt;
+        &lt;/Workmen&gt;
+    &lt;/x:XData&gt;
+&lt;/XmlDataProvider&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;XmlDataProvider&nbsp;x:Key=<span class="js__string">&quot;WorkmenData&quot;</span>&nbsp;XPath=<span class="js__string">&quot;Workmen/Man&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;x:XData&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Workmen&nbsp;xmlns=<span class="js__string">&quot;&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Man&nbsp;Name=<span class="js__string">&quot;Bob&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Man&nbsp;Name=<span class="js__string">&quot;Charles&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Man&nbsp;Name=<span class="js__string">&quot;Harry&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Man&nbsp;Name=<span class="js__string">&quot;Mark&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Man&nbsp;Name=<span class="js__string">&quot;Nick&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Man&nbsp;Name=<span class="js__string">&quot;William&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Workmen&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/x:XData&gt;&nbsp;
+&lt;/XmlDataProvider&gt;</pre>
+</div>
+</div>
+</div>
+<h2 class="endscriptcode">7. Static Class Property</h2>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">ItemSource binding can even target a static class property, which can either contain preformatted data, or could be used to retrieve data from database or file sources.</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<h2 class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;ComboBox Grid.Row=&quot;6&quot; Grid.Column=&quot;1&quot; DisplayMemberPath=&quot;Model&quot; Margin=&quot;5&quot; ItemsSource=&quot;{Binding Source={x:Static model:StaticData.MyCarsStatic}}&quot; /&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;ComboBox&nbsp;Grid.Row=<span class="js__string">&quot;6&quot;</span>&nbsp;Grid.Column=<span class="js__string">&quot;1&quot;</span>&nbsp;DisplayMemberPath=<span class="js__string">&quot;Model&quot;</span>&nbsp;Margin=<span class="js__string">&quot;5&quot;</span>&nbsp;ItemsSource=<span class="js__string">&quot;{Binding&nbsp;Source={x:Static&nbsp;model:StaticData.MyCarsStatic}}&quot;</span>&nbsp;/&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+8. Composite Collection</h2>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">Composite Collections allow you to group together any collections or objects of different types, into one listable collection.</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;CompositeCollection x:Key=&quot;Example7_CompositeCollection&quot;&gt;
+    &lt;CollectionContainer Collection=&quot;{Binding Source={StaticResource WorkmenData}}&quot; /&gt;
+    &lt;CollectionContainer Collection=&quot;{Binding Source={StaticResource MyCarsCollection}}&quot;/&gt;
+    &lt;ListBoxItem Background=&quot;Yellow&quot;&gt;Another ListBoxItem&lt;/ListBoxItem&gt;
+&lt;/CompositeCollection&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;CompositeCollection&nbsp;x:Key=<span class="js__string">&quot;Example7_CompositeCollection&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CollectionContainer&nbsp;Collection=<span class="js__string">&quot;{Binding&nbsp;Source={StaticResource&nbsp;WorkmenData}}&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CollectionContainer&nbsp;Collection=<span class="js__string">&quot;{Binding&nbsp;Source={StaticResource&nbsp;MyCarsCollection}}&quot;</span>/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ListBoxItem&nbsp;Background=<span class="js__string">&quot;Yellow&quot;</span>&gt;Another&nbsp;ListBoxItem&lt;/ListBoxItem&gt;&nbsp;
+&lt;/CompositeCollection&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">How does it know how to display each type of data? You define DataTemplates for each DataType.</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;ComboBox.Resources&gt;
+    &lt;DataTemplate DataType=&quot;Man&quot;&gt;
+        &lt;TextBlock Background=&quot;LightBlue&quot; Text=&quot;{Binding XPath=@Name}&quot;/&gt;
+    &lt;/DataTemplate&gt;
+    &lt;DataTemplate DataType=&quot;{x:Type model:MyCar}&quot;&gt;
+        &lt;TextBlock Background=&quot;LightGreen&quot; Text=&quot;{Binding Model}&quot;/&gt;
+    &lt;/DataTemplate&gt;
+&lt;/ComboBox.Resources&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;ComboBox.Resources&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&nbsp;DataType=<span class="js__string">&quot;Man&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Background=<span class="js__string">&quot;LightBlue&quot;</span>&nbsp;Text=<span class="js__string">&quot;{Binding&nbsp;XPath=@Name}&quot;</span>/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&nbsp;DataType=<span class="js__string">&quot;{x:Type&nbsp;model:MyCar}&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Background=<span class="js__string">&quot;LightGreen&quot;</span>&nbsp;Text=<span class="js__string">&quot;{Binding&nbsp;Model}&quot;</span>/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;&nbsp;
+&lt;/ComboBox.Resources&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+<h2 class="endscriptcode">9. DataGridTemplateColumn CellTemplate</h2>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">With a CellTemplate, you can add your own physical ComboBox to a DataGrid column. This SHOWS the ComboBox, and allows single-click access.</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;DataGridTemplateColumn Header=&quot;Example 9&quot;&gt;
+    &lt;DataGridTemplateColumn.CellTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;ComboBox ItemsSource=&quot;{Binding PartIds, RelativeSource={RelativeSource AncestorType=Window}}&quot; SelectedItem=&quot;{Binding PartId, UpdateSourceTrigger=PropertyChanged}&quot; /&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/DataGridTemplateColumn.CellTemplate&gt;
+&lt;/DataGridTemplateColumn&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;DataGridTemplateColumn&nbsp;Header=<span class="js__string">&quot;Example&nbsp;9&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataGridTemplateColumn.CellTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ComboBox&nbsp;ItemsSource=<span class="js__string">&quot;{Binding&nbsp;PartIds,&nbsp;RelativeSource={RelativeSource&nbsp;AncestorType=Window}}&quot;</span>&nbsp;SelectedItem=<span class="js__string">&quot;{Binding&nbsp;PartId,&nbsp;UpdateSourceTrigger=PropertyChanged}&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataGridTemplateColumn.CellTemplate&gt;&nbsp;
+&lt;/DataGridTemplateColumn&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Note the ItemsSource is pointing to a separate source, using RelativeSource AncestorType=Window to get back to the DataContext/ViewModel.</div>
+<div class="endscriptcode">&nbsp;</div>
+<h2 class="endscriptcode">10. DataGridTemplateColumn&nbsp;CellEditingTemplate</h2>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">This example has both CellTemplate, for a custom label style, and CellEditingTemplate which shows the ComboBox, similar to the default DataGridComboBoxCoilumn, but customisable.</div>
+<div class="endscriptcode">&nbsp;</div>
+<h2 class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;DataGridTemplateColumn.CellTemplate&gt;
+    &lt;DataTemplate&gt;
+        &lt;TextBlock Background=&quot;LightBlue&quot; Foreground=&quot;BlueViolet&quot; Text=&quot;{Binding PartId}&quot; /&gt;
+    &lt;/DataTemplate&gt;
+&lt;/DataGridTemplateColumn.CellTemplate&gt;
+&lt;DataGridTemplateColumn.CellEditingTemplate&gt;
+    &lt;DataTemplate&gt;
+        &lt;ComboBox ItemsSource=&quot;{Binding PartIds, RelativeSource={RelativeSource AncestorType=Window}}&quot; SelectedItem=&quot;{Binding PartId, UpdateSourceTrigger=PropertyChanged}&quot; /&gt;
+    &lt;/DataTemplate&gt;
+&lt;/DataGridTemplateColumn.CellEditingTemplate&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;DataGridTemplateColumn.CellTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Background=<span class="js__string">&quot;LightBlue&quot;</span>&nbsp;Foreground=<span class="js__string">&quot;BlueViolet&quot;</span>&nbsp;Text=<span class="js__string">&quot;{Binding&nbsp;PartId}&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;&nbsp;
+&lt;/DataGridTemplateColumn.CellTemplate&gt;&nbsp;
+&lt;DataGridTemplateColumn.CellEditingTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ComboBox&nbsp;ItemsSource=<span class="js__string">&quot;{Binding&nbsp;PartIds,&nbsp;RelativeSource={RelativeSource&nbsp;AncestorType=Window}}&quot;</span>&nbsp;SelectedItem=<span class="js__string">&quot;{Binding&nbsp;PartId,&nbsp;UpdateSourceTrigger=PropertyChanged}&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;&nbsp;
+&lt;/DataGridTemplateColumn.CellEditingTemplate&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+11. DataGridComboBoxColumn</h2>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">This is the standard autogenerated ComboBox column of a DataGrid. CellTemplate defaults to a label, CellEditingTemplate is a ComboBox.</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;DataGridComboBoxColumn Header=&quot;Example 11&quot; SelectedItemBinding=&quot;{Binding PartId, UpdateSourceTrigger=PropertyChanged}&quot;&gt;
+    &lt;DataGridComboBoxColumn.ElementStyle&gt;
+        &lt;Style TargetType=&quot;ComboBox&quot;&gt;
+            &lt;Setter Property=&quot;ItemsSource&quot; Value=&quot;{Binding Path=PartIds, RelativeSource={RelativeSource AncestorType=Window}}&quot; /&gt;
+        &lt;/Style&gt;
+    &lt;/DataGridComboBoxColumn.ElementStyle&gt;
+    &lt;DataGridComboBoxColumn.EditingElementStyle&gt;
+        &lt;Style TargetType=&quot;ComboBox&quot;&gt;
+            &lt;Setter Property=&quot;ItemsSource&quot; Value=&quot;{Binding Path=PartIds, RelativeSource={RelativeSource AncestorType=Window}}&quot; /&gt;
+        &lt;/Style&gt;
+    &lt;/DataGridComboBoxColumn.EditingElementStyle&gt;
+&lt;/DataGridComboBoxColumn&gt;</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;DataGridComboBoxColumn</span>&nbsp;<span class="xaml__attr_name">Header</span>=<span class="xaml__attr_value">&quot;Example&nbsp;11&quot;</span>&nbsp;<span class="xaml__attr_name">SelectedItemBinding</span>=<span class="xaml__attr_value">&quot;{Binding&nbsp;PartId,&nbsp;UpdateSourceTrigger=PropertyChanged}&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;DataGridComboBoxColumn</span>.ElementStyle<span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;Style</span>&nbsp;<span class="xaml__attr_name">TargetType</span>=<span class="xaml__attr_value">&quot;ComboBox&quot;</span><span class="xaml__tag_start">&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="css__element">Setter</span>&nbsp;<span class="css__element">Property</span>=&quot;<span class="css__element">ItemsSource</span>&quot;&nbsp;<span class="css__element">Value</span>=&quot;{Binding&nbsp;Path=PartIds,&nbsp;RelativeSource={RelativeSource&nbsp;AncestorType=Window}}&quot;&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/Style&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataGridComboBoxColumn.ElementStyle&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;DataGridComboBoxColumn</span>.EditingElementStyle<span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;Style</span>&nbsp;<span class="xaml__attr_name">TargetType</span>=<span class="xaml__attr_value">&quot;ComboBox&quot;</span><span class="xaml__tag_start">&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="css__element">Setter</span>&nbsp;<span class="css__element">Property</span>=&quot;<span class="css__element">ItemsSource</span>&quot;&nbsp;<span class="css__element">Value</span>=&quot;{Binding&nbsp;Path=PartIds,&nbsp;RelativeSource={RelativeSource&nbsp;AncestorType=Window}}&quot;&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_end">&lt;/Style&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataGridComboBoxColumn.EditingElementStyle&gt;&nbsp;
+<span class="xaml__tag_end">&lt;/DataGridComboBoxColumn&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Note we have to help wire back in the&nbsp;ItemsSource,&nbsp;because DataGrid.Columns property doesn't have DataContext.</div>
+<div class="endscriptcode">&nbsp;</div>
+<h2 class="endscriptcode">12. Using an Object&nbsp;Collection&nbsp;for Options</h2>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">The previous DataGrid examples used a List&lt;string&gt; for the ComboBox Items. This&nbsp;final&nbsp;example assumes the options are themselves objects with properties.</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;DataGridTemplateColumn.CellTemplate&gt;
+    &lt;DataTemplate&gt;
+        &lt;ComboBox ItemsSource=&quot;{Binding CarParts, RelativeSource={RelativeSource AncestorType=Window}}&quot; DisplayMemberPath=&quot;PartName&quot; SelectedValuePath=&quot;PartID&quot;  SelectedValue=&quot;{Binding PartId, UpdateSourceTrigger=PropertyChanged}&quot; /&gt;
+    &lt;/DataTemplate&gt;
+&lt;/DataGridTemplateColumn.CellTemplate&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;DataGridTemplateColumn.CellTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ComboBox&nbsp;ItemsSource=<span class="js__string">&quot;{Binding&nbsp;CarParts,&nbsp;RelativeSource={RelativeSource&nbsp;AncestorType=Window}}&quot;</span>&nbsp;DisplayMemberPath=<span class="js__string">&quot;PartName&quot;</span>&nbsp;SelectedValuePath=<span class="js__string">&quot;PartID&quot;</span>&nbsp;&nbsp;SelectedValue=<span class="js__string">&quot;{Binding&nbsp;PartId,&nbsp;UpdateSourceTrigger=PropertyChanged}&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;&nbsp;
+&lt;/DataGridTemplateColumn.CellTemplate&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">This final DataGrid also allows inputting new rows of data. When you add a new row of data, you will notice the Model and registration columns don't update with new values. This is because they do not implement INotifyPropertyChanged.</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="description/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

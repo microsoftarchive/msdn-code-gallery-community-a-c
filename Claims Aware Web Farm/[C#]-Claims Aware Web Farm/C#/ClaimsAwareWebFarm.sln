@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfSessionSecurityTokenCacheService", "WcfSessionSecurityTokenCacheService\WcfSessionSecurityTokenCacheService.csproj", "{258D5770-7853-400F-AC47-FD63EF05A129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{258D5770-7853-400F-AC47-FD63EF05A129} = {258D5770-7853-400F-AC47-FD63EF05A129}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheLibrary", "CacheLibrary\CacheLibrary.csproj", "{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Release|ARM.ActiveCfg = Release|Any CPU
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Release|x64.ActiveCfg = Release|Any CPU
+		{258D5770-7853-400F-AC47-FD63EF05A129}.Release|x86.ActiveCfg = Release|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Release|x64.ActiveCfg = Release|Any CPU
+		{B4AA6972-8E4B-436A-B155-EF9FD27DFE28}.Release|x86.ActiveCfg = Release|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Release|x64.ActiveCfg = Release|Any CPU
+		{E237F0F3-F47E-4EDE-86CD-E01ED0488D6A}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

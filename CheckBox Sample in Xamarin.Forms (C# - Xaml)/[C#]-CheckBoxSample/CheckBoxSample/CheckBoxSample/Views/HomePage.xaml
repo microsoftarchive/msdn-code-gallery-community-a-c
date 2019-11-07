@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CheckBoxSample.Views.HomePage"
+    xmlns:ctrls="clr-namespace:CheckBoxSample.Controls" >
+	<StackLayout>
+        <StackLayout x:Name="stackPanel" Margin="20,20,0,0">
+           <Label Text="CheckBox inside ListBox" FontSize="25" FontAttributes="Bold" />
+            <ListView x:Name="CountryListView"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="True"
+                BackgroundColor="White"
+                ItemsSource="{Binding CountryList}" Margin="5" HeightRequest="200">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                             <StackLayout Padding="5">
+                                <ctrls:CheckBox x:Name="cbUS" Title="{Binding Name}" IsVisible="{Binding IsVisible}" IsChecked="{Binding IsSelected}" BorderImageSource="checkborder" CheckedBackgroundImageSource="checkcheckedbg" CheckmarkImageSource="checkcheckmark" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView> 
+
+            <Label Text="Countries CheckBox Individual:" FontSize="25" FontAttributes="Bold" />
+            <ctrls:CheckBox x:Name="cbIndia" Title="India" IsChecked="True" BorderImageSource="checkborder" CheckedBackgroundImageSource="checkcheckedbg" CheckmarkImageSource="checkcheckmark" />
+            <ctrls:CheckBox x:Name="cbUK" Title="UK" BorderImageSource="checkborder" CheckedBackgroundImageSource="checkcheckedbg" CheckmarkImageSource="checkcheckmark" />
+            <ctrls:CheckBox x:Name="cbUS" Title="US" BorderImageSource="checkborder" CheckedBackgroundImageSource="checkcheckedbg" CheckmarkImageSource="checkcheckmark" />
+                 
+        </StackLayout>
+     </StackLayout>
+</ContentPage>

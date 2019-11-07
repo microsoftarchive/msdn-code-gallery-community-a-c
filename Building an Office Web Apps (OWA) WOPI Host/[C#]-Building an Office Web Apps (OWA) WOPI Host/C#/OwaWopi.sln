@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{79989302-820C-480B-93DF-20615FFE7128}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUploadClient", "FileUploadClient\FileUploadClient.csproj", "{BBC08578-8E01-4279-BBA6-9977C753723A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyGen", "KeyGen\KeyGen.csproj", "{35813987-BF53-4D21-BF54-D2A92613F42C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WopiHost", "WopiHost\WopiHost.csproj", "{9425357E-AD29-4529-9A6D-19C8AA739A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WopiHost.Tests", "WopiHost.Tests\WopiHost.Tests.csproj", "{0EAC82D5-5488-42B1-A3E3-027CE005BF51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBC08578-8E01-4279-BBA6-9977C753723A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC08578-8E01-4279-BBA6-9977C753723A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC08578-8E01-4279-BBA6-9977C753723A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC08578-8E01-4279-BBA6-9977C753723A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35813987-BF53-4D21-BF54-D2A92613F42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35813987-BF53-4D21-BF54-D2A92613F42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35813987-BF53-4D21-BF54-D2A92613F42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35813987-BF53-4D21-BF54-D2A92613F42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9425357E-AD29-4529-9A6D-19C8AA739A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9425357E-AD29-4529-9A6D-19C8AA739A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9425357E-AD29-4529-9A6D-19C8AA739A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9425357E-AD29-4529-9A6D-19C8AA739A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EAC82D5-5488-42B1-A3E3-027CE005BF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EAC82D5-5488-42B1-A3E3-027CE005BF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EAC82D5-5488-42B1-A3E3-027CE005BF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EAC82D5-5488-42B1-A3E3-027CE005BF51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

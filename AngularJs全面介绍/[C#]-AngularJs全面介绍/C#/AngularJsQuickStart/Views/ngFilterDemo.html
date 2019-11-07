@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html ng-app="mainApp" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AngularJs 过滤器演示</title>
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="/Scripts/angular-route.js"></script>
+    <script src="/Scripts/App/controllers/homeController.js"></script>
+    <script src="/Scripts/App/services/services.js"></script>
+    <script src="/Scripts/App/filters/filter.js"></script>
+    <script src="/Scripts/App/directives/directives.js"></script>
+</head>
+<body>
+    <div ng-controller="filterController">
+        <input ng-model="greeting" type="text"><br>
+        No filter: {{greeting}}<br>
+        Reverse: {{greeting|reverse}}<br>
+        Reverse + uppercase: {{greeting|reverse:true}}<br>
+    </div>
+    <script src="/Scripts/App/appmain.js"></script>
+</body>
+</html>

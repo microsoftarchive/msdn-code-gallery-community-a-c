@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Students" Class="DbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\CrudWithLinq\bin\Debug\Students.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="CrudWithLinq.Properties.Settings" SettingsPropertyName="StudentsConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_Student" Member="tbl_Students">
+    <Type Name="tbl_Student">
+      <Column Name="S_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="S_Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="S_LastName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="S_NationalCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

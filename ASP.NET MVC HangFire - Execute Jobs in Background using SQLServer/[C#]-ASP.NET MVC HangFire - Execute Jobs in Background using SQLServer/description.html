@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=2045FD7A6E627F471DA2371FE578A63B" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=5C0A3A6AD580964D88CAF6AE235CF2A6" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ASP.NET MVC HangFire - Execute Jobs in Background using SQLServer</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>ASP.NET MVC HangFire - Execute Jobs in Background using SQLServer</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, MVC, ASP.NET MVC 5, Hangfire
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, ASP.NET, MVC, Hangfire
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/14/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/ASPNET-MVC-HangFire-bb45a2fe">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><strong><span style="font-size:small">Introduction</span></strong></p>
+<p>This article walks you through configuration of HangFire.</p>
+<p>&quot;An easy way to perform fire-and-forget, delayed and recurring tasks inside ASP.NET applications&quot; -
+<a href="http://hangfire.io/">http://hangfire.io/</a></p>
+<p>We can easily configure different types of jobs (recurring, schedule or fire and forget)</p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size:small">STEP 1 - Create ASP.NET Web Application</span></strong></p>
+<ul type="disc">
+<li lang="en-US"><span>Open Visual Studio 2015 and create a new project of type ASP.NET Web Application.</span>
+</li><li lang="en-US"><span>On this project I create a solution called HangFire.</span>
+</li></ul>
+<p lang="en-US">&nbsp;</p>
+<p lang="en-US"><img id="142546" src="description/1.png" alt="" width="600" height="400"></p>
+<ul type="disc">
+<li><span>Press OK, and a new screen will appear, with several options of template to use on our project.</span>
+</li><li><span>Select the option MVC.</span> </li></ul>
+<p lang="en-US">&nbsp;</p>
+<p><img id="142549" src="description/a5a75f94-bcf6-45f4-a0f2-3d6f42e289971.png" alt="" width="600" height="400"></p>
+<p lang="en-US">&nbsp;</p>
+<p lang="en-US"><strong><span style="font-size:small">STEP 2 - Install Nuget</span></strong></p>
+<p>&nbsp;</p>
+<p>In order to use HangFire we need to install a Nuget package.</p>
+<p>We can install using the Package Manager Console</p>
+<ul type="disc">
+<li><span>PM&gt; Install-Package HangFire -Version 1.4.6</span> </li></ul>
+<p>Or using the Visual Studio Nuget Management</p>
+<p>&nbsp;</p>
+<p><img id="142550" src="description/3.png" alt="" width="600" height="400"></p>
+<p>&nbsp;</p>
+<p lang="en-US"><strong><span style="font-size:small">STEP 3 - Configure Startup class</span></strong></p>
+<p>&nbsp;</p>
+<p>Need to provide connection string to our database.~</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using Hangfire;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC-HangFire-bb45a2fe/https://code.msdn.microsoft.com/ASPNET-MVC-HangFire-bb45a2fe/https://msdn.microsoft.com/en-US/library/Microsoft.Owin.aspx"  title="Auto generated link to Microsoft.Owin">Microsoft.Owin</a>;
+using Owin;
+using System;
+
+[assembly: OwinStartupAttribute(typeof(HangFire.Startup))]
+namespace HangFire
+{
+    public partial class Startup
+    {
+        public void Configuration(IAppBuilder app)
+        {
+            ConfigureAuth(app);
+
+            GlobalConfiguration.Configuration
+                .UseSqlServerStorage(&quot;connectionString&quot;);
+
+            BackgroundJob.Enqueue(() =&gt; Console.WriteLine(&quot;Fire-and-forget!&quot;));
+
+            app.UseHangfireDashboard();
+            app.UseHangfireServer();
+        }
+    }
+}
+</pre>
+<div class="preview">
+<pre class="js">using&nbsp;Hangfire;&nbsp;
+using&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC-HangFire-bb45a2fe/https://code.msdn.microsoft.com/ASPNET-MVC-HangFire-bb45a2fe/https://msdn.microsoft.com/en-US/library/Microsoft.Owin.aspx"  title="Auto generated link to Microsoft.Owin">Microsoft.Owin</a>;&nbsp;
+using&nbsp;Owin;&nbsp;
+using&nbsp;System;&nbsp;
+&nbsp;
+[assembly:&nbsp;OwinStartupAttribute(<span class="js__operator">typeof</span>(HangFire.Startup))]&nbsp;
+namespace&nbsp;HangFire&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;partial&nbsp;class&nbsp;Startup&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;<span class="js__operator">void</span>&nbsp;Configuration(IAppBuilder&nbsp;app)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ConfigureAuth(app);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GlobalConfiguration.Configuration&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.UseSqlServerStorage(<span class="js__string">&quot;connectionString&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BackgroundJob.Enqueue(()&nbsp;=&gt;&nbsp;Console.WriteLine(<span class="js__string">&quot;Fire-and-forget!&quot;</span>));&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseHangfireDashboard();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.UseHangfireServer();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<p lang="en-US"><strong><span style="font-size:small">STEP 4 - Run</span></strong></p>
+<p lang="en-US">Run application using the address of it follow by /hangfire, like on the image below.</p>
+<p>&nbsp;</p>
+<p><img id="142551" src="description/4.png" alt="" width="600" height="400"></p>
+<p>When we run this address for the first time, new table will be created on our database.</p>
+<p><img id="142552" src="description/5.png" alt="" width="229" height="200"></p>
+<p>&nbsp;</p>
+<p lang="en-US"><strong><span style="font-size:small">Resources</span></strong></p>
+<p lang="en-US">Some good resources about Signal could be found here:</p>
+<ul type="disc">
+<li lang="en-US"><span>My personal blog:&nbsp;</span><a href="http://joaoeduardosousa.wordpress.com/"><span>http://joaoeduardosousa.wordpress.com/
+</span></a></li></ul>
+<ul type="disc">
+<li><a href="http://hangfire.io/"><span>http://hangfire.io/</span></a> </li></ul>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="1b2dd8e5-77f9-4ae9-8683-c4e46a492b0f" Publisher="CN=Michael" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>BluetoothCommunicationSampleController</DisplayName>
+    <PublisherDisplayName>Michael</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="BluetoothCommunicationSampleController.App">
+      <m2:VisualElements DisplayName="BluetoothCommunicationSampleController" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="BluetoothCommunicationSampleController" ForegroundText="light" BackgroundColor="#464646">
+        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+        <m2:ApplicationView MinWidth="width320" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <m2:DeviceCapability Name="bluetooth.rfcomm">
+      <m2:Device Id="any">
+        <m2:Function Type="name:serialPort" />
+      </m2:Device>
+    </m2:DeviceCapability>
+  </Capabilities>
+</Package>

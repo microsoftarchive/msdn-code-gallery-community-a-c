@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AlwaysNote" Class="AlwaysNoteDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=184.168.47.19;Initial Catalog=AlwaysNote;Persist Security Info=True;User ID=sandeep" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AlwaysNoteConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="sandeep.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<DateTime>
+
+@{
+    ViewBag.Title = "All dates";
+}
+
+<h2>Dates</h2>
+
+<ul>
+    @foreach(var date in Model) {
+        <li>@Html.ActionLink(date.ToString("ddd, MMM dd, h:mm tt"), "SessionsByDate", new { date })</li>
+    }
+</ul>

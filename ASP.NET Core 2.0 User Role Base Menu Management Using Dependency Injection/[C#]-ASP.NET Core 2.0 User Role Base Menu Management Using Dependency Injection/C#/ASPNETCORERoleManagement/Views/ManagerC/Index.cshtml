@@ -1,0 +1,37 @@
+﻿@inject ASPNETCORERoleManagement.Services.MenuMasterService menus
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Manager Dashboard</h1>
+<h2>Welcome to Manager Dashboard</h2>
+
+ Us Page</h2>
+
+@if (User.Identity.IsAuthenticated)
+{
+    var UserRoles = "";
+    if (@User.IsInRole("Admin"))
+    {
+        UserRoles = "Admin";
+    }
+    else
+    {
+        UserRoles = "Manager";
+    }
+
+    @if (menus.GetMenuMaster(@UserRoles).Any())
+    {
+        @foreach (var menuNames in menus.GetMenuMaster(@UserRoles))
+        {
+            <ul>
+                <li>@menuNames.MenuName</li>
+            </ul>
+        }
+
+    }
+
+    <h1>@User.Identity.Name;</h1>
+    <h2>@UserRoles</h2>
+
+}
+

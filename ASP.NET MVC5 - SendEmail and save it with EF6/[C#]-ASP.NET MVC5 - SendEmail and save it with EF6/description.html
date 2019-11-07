@@ -1,0 +1,690 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=FF87DB5D668F4397624AF66FA88458FE" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=F9C66A62B3DAB917C75ADE32259A068D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ASP.NET MVC5 - SendEmail and save it with EF6</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>ASP.NET MVC5 - SendEmail and save it with EF6</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, ASP.NET, ASP.NET MVC, ASP.NET MVC 5, MVC Scaffolding
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, ASP.NET, ASP.NET MVC, ASP.NET MVC 5
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/7/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>Using MVC, Entity Framework, and ASP.NET Scaffolding, you can create a web application that provides an interface to an existing database table. This demo shows you how to automatically generate code that enables users to display, edit, create, and delete
+ data that resides on the database. The generated code corresponds to the columns in the database table.</p>
+<p>This demo focuses on using ASP.NET Scaffolding to generate the controllers and views.</p>
+<p>&nbsp;</p>
+<h1><span>STEP1 - &nbsp;Create new project on Visual Studio 2015</span></h1>
+<p class="Instructions">Open Visual Studio</p>
+<p class="Instructions">Create new ASP.NET Web Application Project</p>
+<p class="Instructions">Give a name to the project (in this case I call him MVC5)</p>
+<p class="Instructions">Select Template MVC</p>
+<p class="Instructions">&nbsp;</p>
+<p class="Instructions"><img id="144481" src="https://code.msdn.microsoft.com/site/view/file/144481/1/1.PNG" alt="" width="600" height="400"></p>
+<p class="Instructions">&nbsp;</p>
+<h1>STEP2 - &nbsp;Create class Email</h1>
+<p>Add new class to the project (this class represents a table, and the properties the colums of that table)</p>
+<p>Give a name to that class (in my sample I call him EmailModel)</p>
+<p>On the class create the following code:</p>
+<p>&nbsp;</p>
+<p></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar Script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Data.Entity.aspx"  title="Auto generated link to System.Data.Entity">System.Data.Entity</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Dynamic.aspx"  title="Auto generated link to System.Dynamic">System.Dynamic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Web.aspx"  title="Auto generated link to System.Web">System.Web</a>;
+
+namespace MVC5.Models
+{
+    public class Email
+    {
+        public int ID { get; set; }
+        public string To { get; set; }
+        public string Subject { get; set; }
+        public string Message { get; set; }
+    }
+
+    public class EmailDBContext : DbContext
+    {
+        public DbSet&lt;Email&gt; Emails { get; set; }
+    }
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Data.Entity.aspx"  title="Auto generated link to System.Data.Entity">System.Data.Entity</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Dynamic.aspx"  title="Auto generated link to System.Dynamic">System.Dynamic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Web.aspx"  title="Auto generated link to System.Web">System.Web</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;MVC5.Models&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;Email&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">int</span>&nbsp;ID&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;To&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;Subject&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;Message&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;EmailDBContext&nbsp;:&nbsp;DbContext&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;DbSet&lt;Email&gt;&nbsp;Emails&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Put the class inside the Models folders, just to organize your code.</div>
+<p></p>
+<p>&nbsp;</p>
+<h1>STEP3 - &nbsp;Create controller with views using Entity Framework</h1>
+<p>Add new Scaffolded to the project (new item existent on MVC5)</p>
+<p>&nbsp;</p>
+<p><img id="106308" src="https://code.msdn.microsoft.com/site/view/file/106308/1/MVC53.jpg" alt="" width="519" height="247"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;Choose option MVC5 Controller with views using Entity Framework</p>
+<p>&nbsp;</p>
+<p><img id="144482" src="https://code.msdn.microsoft.com/site/view/file/144482/1/2.PNG" alt="" width="600" height="400"></p>
+<p>Click Add</p>
+<p>If you receive an error, it may be because you did not build the project in the previous section. If so, try building the project, and then add the scaffolded item again.</p>
+<p>After the code generation process is complete, you will see a new controller and views in your project.</p>
+<p>&nbsp;</p>
+<h1>STEP4 - Controller and Views Generation</h1>
+<h1>The Controller was automatically created with CRUD operations</h1>
+<p></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar Script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Data.Entity.aspx"  title="Auto generated link to System.Data.Entity">System.Data.Entity</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Net.aspx"  title="Auto generated link to System.Net">System.Net</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Web.aspx"  title="Auto generated link to System.Web">System.Web</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Web.Mvc.aspx"  title="Auto generated link to System.Web.Mvc">System.Web.Mvc</a>;
+using MVC5.Models;
+
+namespace MVC5.Controllers
+{
+    public class EmailsController : Controller
+    {
+        private EmailDBContext db = new EmailDBContext();
+
+        // GET: Emails
+        public async Task&lt;ActionResult&gt; Index()
+        {
+            return View(await db.Emails.ToListAsync());
+        }
+
+        // GET: Emails/Details/5
+        public async Task&lt;ActionResult&gt; Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Email email = await db.Emails.FindAsync(id);
+            if (email == null)
+            {
+                return HttpNotFound();
+            }
+            return View(email);
+        }
+
+        // GET: Emails/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Emails/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task&lt;ActionResult&gt; Create([Bind(Include = &quot;ID,To,Subject,Message&quot;)] Email email)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Emails.Add(email);
+                await db.SaveChangesAsync();
+                Services.EmailService emailService = new Services.EmailService();
+                await emailService.SendEmailAsync(email.To, email.Message, email.Subject);
+                return RedirectToAction(&quot;Index&quot;);
+            }
+
+            return View(email);
+        }
+
+        // GET: Emails/Edit/5
+        public async Task&lt;ActionResult&gt; Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Email email = await db.Emails.FindAsync(id);
+            if (email == null)
+            {
+                return HttpNotFound();
+            }
+            return View(email);
+        }
+
+        // POST: Emails/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task&lt;ActionResult&gt; Edit([Bind(Include = &quot;ID,To,Subject,Message&quot;)] Email email)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(email).State = EntityState.Modified;
+                await db.SaveChangesAsync();
+                return RedirectToAction(&quot;Index&quot;);
+            }
+            return View(email);
+        }
+
+        // GET: Emails/Delete/5
+        public async Task&lt;ActionResult&gt; Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Email email = await db.Emails.FindAsync(id);
+            if (email == null)
+            {
+                return HttpNotFound();
+            }
+            return View(email);
+        }
+
+        // POST: Emails/Delete/5
+        [HttpPost, ActionName(&quot;Delete&quot;)]
+        [ValidateAntiForgeryToken]
+        public async Task&lt;ActionResult&gt; DeleteConfirmed(int id)
+        {
+            Email email = await db.Emails.FindAsync(id);
+            db.Emails.Remove(email);
+            await db.SaveChangesAsync();
+            return RedirectToAction(&quot;Index&quot;);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Data.Entity.aspx"  title="Auto generated link to System.Data.Entity">System.Data.Entity</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Net.aspx"  title="Auto generated link to System.Net">System.Net</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Web.aspx"  title="Auto generated link to System.Web">System.Web</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Web.Mvc.aspx"  title="Auto generated link to System.Web.Mvc">System.Web.Mvc</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;MVC5.Models;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;MVC5.Controllers&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">class</span>&nbsp;EmailsController&nbsp;:&nbsp;Controller&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;EmailDBContext&nbsp;db&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EmailDBContext();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;GET:&nbsp;Emails</span><span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;ActionResult&gt;&nbsp;Index()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(await&nbsp;db.Emails.ToListAsync());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;GET:&nbsp;Emails/Details/5</span><span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;ActionResult&gt;&nbsp;Details(<span class="cs__keyword">int</span>?&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(id&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">new</span>&nbsp;HttpStatusCodeResult(HttpStatusCode.BadRequest);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;email&nbsp;=&nbsp;await&nbsp;db.Emails.FindAsync(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(email&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;HttpNotFound();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(email);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;GET:&nbsp;Emails/Create</span><span class="cs__keyword">public</span>&nbsp;ActionResult&nbsp;Create()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;POST:&nbsp;Emails/Create</span><span class="cs__com">//&nbsp;To&nbsp;protect&nbsp;from&nbsp;overposting&nbsp;attacks,&nbsp;please&nbsp;enable&nbsp;the&nbsp;specific&nbsp;properties&nbsp;you&nbsp;want&nbsp;to&nbsp;bind&nbsp;to,&nbsp;for&nbsp;</span><span class="cs__com">//&nbsp;more&nbsp;details&nbsp;see&nbsp;http://go.microsoft.com/fwlink/?LinkId=317598.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HttpPost]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ValidateAntiForgeryToken]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;ActionResult&gt;&nbsp;Create([Bind(Include&nbsp;=&nbsp;<span class="cs__string">&quot;ID,To,Subject,Message&quot;</span>)]&nbsp;Email&nbsp;email)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(ModelState.IsValid)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Emails.Add(email);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;db.SaveChangesAsync();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Services.EmailService&nbsp;emailService&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Services.EmailService();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;emailService.SendEmailAsync(email.To,&nbsp;email.Message,&nbsp;email.Subject);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;RedirectToAction(<span class="cs__string">&quot;Index&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(email);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;GET:&nbsp;Emails/Edit/5</span><span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;ActionResult&gt;&nbsp;Edit(<span class="cs__keyword">int</span>?&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(id&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">new</span>&nbsp;HttpStatusCodeResult(HttpStatusCode.BadRequest);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;email&nbsp;=&nbsp;await&nbsp;db.Emails.FindAsync(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(email&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;HttpNotFound();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(email);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;POST:&nbsp;Emails/Edit/5</span><span class="cs__com">//&nbsp;To&nbsp;protect&nbsp;from&nbsp;overposting&nbsp;attacks,&nbsp;please&nbsp;enable&nbsp;the&nbsp;specific&nbsp;properties&nbsp;you&nbsp;want&nbsp;to&nbsp;bind&nbsp;to,&nbsp;for&nbsp;</span><span class="cs__com">//&nbsp;more&nbsp;details&nbsp;see&nbsp;http://go.microsoft.com/fwlink/?LinkId=317598.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HttpPost]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ValidateAntiForgeryToken]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;ActionResult&gt;&nbsp;Edit([Bind(Include&nbsp;=&nbsp;<span class="cs__string">&quot;ID,To,Subject,Message&quot;</span>)]&nbsp;Email&nbsp;email)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(ModelState.IsValid)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Entry(email).State&nbsp;=&nbsp;EntityState.Modified;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;db.SaveChangesAsync();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;RedirectToAction(<span class="cs__string">&quot;Index&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(email);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;GET:&nbsp;Emails/Delete/5</span><span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;ActionResult&gt;&nbsp;Delete(<span class="cs__keyword">int</span>?&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(id&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span><span class="cs__keyword">new</span>&nbsp;HttpStatusCodeResult(HttpStatusCode.BadRequest);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;email&nbsp;=&nbsp;await&nbsp;db.Emails.FindAsync(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(email&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;HttpNotFound();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;View(email);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;POST:&nbsp;Emails/Delete/5</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HttpPost,&nbsp;ActionName(<span class="cs__string">&quot;Delete&quot;</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ValidateAntiForgeryToken]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;ActionResult&gt;&nbsp;DeleteConfirmed(<span class="cs__keyword">int</span>&nbsp;id)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;email&nbsp;=&nbsp;await&nbsp;db.Emails.FindAsync(id);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Emails.Remove(email);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;db.SaveChangesAsync();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;RedirectToAction(<span class="cs__string">&quot;Index&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">protected</span><span class="cs__keyword">override</span><span class="cs__keyword">void</span>&nbsp;Dispose(<span class="cs__keyword">bool</span>&nbsp;disposing)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(disposing)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Dispose();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">base</span>.Dispose(disposing);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p></p>
+<h1>STEP5 - Create Email Service</h1>
+<p>&nbsp;</p>
+<p></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar Script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Net.aspx"  title="Auto generated link to System.Net">System.Net</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Net.Mail.aspx"  title="Auto generated link to System.Net.Mail">System.Net.Mail</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;
+
+namespace Services
+{
+    public class EmailService
+    {
+        public async Task&lt;bool&gt; SendEmailAsync(string emailTo, string mailbody, string subject)
+        {
+            var from = new MailAddress(&quot;abc@abc.com&quot;);
+            var to = new MailAddress(emailTo);
+
+            var useDefaultCredentials = true;
+            var enableSsl = false;
+            var replyto = &quot;&quot;; // set here your email;
+            var userName = string.Empty;
+            var password = string.Empty;
+            var port = 25;
+            var host = &quot;localhost&quot;;
+
+            userName = &quot;abc&quot;; // setup here the username;
+            password = &quot;abc&quot;; // setup here the password;
+            bool.TryParse(&quot;true&quot;, out useDefaultCredentials); //setup here if it uses defaault credentials
+            bool.TryParse(&quot;true&quot;, out enableSsl); //setup here if it uses ssl
+            int.TryParse(&quot;25&quot;, out port); //setup here the port
+            host = &quot;www.google.com&quot;; //setup here the host
+
+            using (var mail = new MailMessage(from, to))
+            {
+                mail.Subject = subject;
+                mail.Body = mailbody;
+                mail.IsBodyHtml = true;
+
+                mail.ReplyToList.Add(new MailAddress(replyto, &quot;My Email&quot;));
+                mail.ReplyToList.Add(from);
+                mail.DeliveryNotificationOptions = DeliveryNotificationOptions.Delay |
+                                                   DeliveryNotificationOptions.OnFailure |
+                                                   DeliveryNotificationOptions.OnSuccess;
+
+                using (var client = new SmtpClient())
+                {
+                    client.Host = host;
+                    client.EnableSsl = enableSsl;
+                    client.Port = port;
+                    client.UseDefaultCredentials = useDefaultCredentials;
+
+                    if (!client.UseDefaultCredentials &amp;&amp; !string.IsNullOrEmpty(userName) &amp;&amp;
+                        !string.IsNullOrEmpty(password))
+                    {
+                        client.Credentials = new NetworkCredential(userName, password);
+                    }
+
+                    await client.SendMailAsync(mail);
+                }
+            }
+
+            return true;
+        }
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Net.aspx"  title="Auto generated link to System.Net">System.Net</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Net.Mail.aspx"  title="Auto generated link to System.Net.Mail">System.Net.Mail</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://code.msdn.microsoft.com/ASPNET-MVC5-SendEmail-and-09e6cf76/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;Services&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;EmailService&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;async&nbsp;Task&lt;<span class="cs__keyword">bool</span>&gt;&nbsp;SendEmailAsync(<span class="cs__keyword">string</span>&nbsp;emailTo,&nbsp;<span class="cs__keyword">string</span>&nbsp;mailbody,&nbsp;<span class="cs__keyword">string</span>&nbsp;subject)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;from&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;MailAddress(<span class="cs__string">&quot;abc@abc.com&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;to&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;MailAddress(emailTo);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;useDefaultCredentials&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;enableSsl&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;replyto&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>;&nbsp;<span class="cs__com">//&nbsp;set&nbsp;here&nbsp;your&nbsp;email;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;userName&nbsp;=&nbsp;<span class="cs__keyword">string</span>.Empty;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;password&nbsp;=&nbsp;<span class="cs__keyword">string</span>.Empty;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;port&nbsp;=&nbsp;<span class="cs__number">25</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;host&nbsp;=&nbsp;<span class="cs__string">&quot;localhost&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userName&nbsp;=&nbsp;<span class="cs__string">&quot;abc&quot;</span>;&nbsp;<span class="cs__com">//&nbsp;setup&nbsp;here&nbsp;the&nbsp;username;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;password&nbsp;=&nbsp;<span class="cs__string">&quot;abc&quot;</span>;&nbsp;<span class="cs__com">//&nbsp;setup&nbsp;here&nbsp;the&nbsp;password;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">bool</span>.TryParse(<span class="cs__string">&quot;true&quot;</span>,&nbsp;<span class="cs__keyword">out</span>&nbsp;useDefaultCredentials);&nbsp;<span class="cs__com">//setup&nbsp;here&nbsp;if&nbsp;it&nbsp;uses&nbsp;defaault&nbsp;credentials</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">bool</span>.TryParse(<span class="cs__string">&quot;true&quot;</span>,&nbsp;<span class="cs__keyword">out</span>&nbsp;enableSsl);&nbsp;<span class="cs__com">//setup&nbsp;here&nbsp;if&nbsp;it&nbsp;uses&nbsp;ssl</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>.TryParse(<span class="cs__string">&quot;25&quot;</span>,&nbsp;<span class="cs__keyword">out</span>&nbsp;port);&nbsp;<span class="cs__com">//setup&nbsp;here&nbsp;the&nbsp;port</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host&nbsp;=&nbsp;<span class="cs__string">&quot;www.google.com&quot;</span>;&nbsp;<span class="cs__com">//setup&nbsp;here&nbsp;the&nbsp;host</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;mail&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;MailMessage(from,&nbsp;to))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mail.Subject&nbsp;=&nbsp;subject;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mail.Body&nbsp;=&nbsp;mailbody;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mail.IsBodyHtml&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mail.ReplyToList.Add(<span class="cs__keyword">new</span>&nbsp;MailAddress(replyto,&nbsp;<span class="cs__string">&quot;My&nbsp;Email&quot;</span>));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mail.ReplyToList.Add(from);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mail.DeliveryNotificationOptions&nbsp;=&nbsp;DeliveryNotificationOptions.Delay&nbsp;|&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DeliveryNotificationOptions.OnFailure&nbsp;|&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DeliveryNotificationOptions.OnSuccess;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;client&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SmtpClient())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;client.Host&nbsp;=&nbsp;host;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;client.EnableSsl&nbsp;=&nbsp;enableSsl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;client.Port&nbsp;=&nbsp;port;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;client.UseDefaultCredentials&nbsp;=&nbsp;useDefaultCredentials;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(!client.UseDefaultCredentials&nbsp;&amp;&amp;&nbsp;!<span class="cs__keyword">string</span>.IsNullOrEmpty(userName)&nbsp;&amp;&amp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!<span class="cs__keyword">string</span>.IsNullOrEmpty(password))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;client.Credentials&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;NetworkCredential(userName,&nbsp;password);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;client.SendMailAsync(mail);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"></div>
+<p></p>
+<p><span style="font-size:2em">MVC5 Resources</span></p>
+<p>Some good online resources about MVC5:</p>
+<p>ASP.NET MVC5 : The official Microsoft .NET WebSite<br>
+<a href="http://www.asp.net/mvc/tutorials/mvc-5">http://www.asp.net/mvc/tutorials/mvc-5</a></p>
+<p>&nbsp;</p>
+<p>For more examples, follow my blog at</p>
+<p><a href="http://joaoeduardosousa.wordpress.com/">http://joaoeduardosousa.wordpress.com/</a></p>
+<p>&nbsp;</p>
+<h1><strong>Check my other source code:</strong></h1>
+<p><a href="http://code.msdn.microsoft.com/MVC4-ENTITY-FRAMEWORK-10-e15ef983" >http://code.msdn.microsoft.com/MVC4-ENTITY-FRAMEWORK-10-e15ef983</a></p>
+<p><a href="http://code.msdn.microsoft.com/ASPNET-MVC-5-Bootstrap-30-622be454" >http://code.msdn.microsoft.com/ASPNET-MVC-5-Bootstrap-30-622be454</a></p>
+<p><a href="http://code.msdn.microsoft.com/MVC5-Authentication-App-b5200efd" >http://code.msdn.microsoft.com/MVC5-Authentication-App-b5200efd</a></p>
+<p><a href="http://code.msdn.microsoft.com/ASPNET-WebAPI-2-Stream-7d96cb70" >http://code.msdn.microsoft.com/ASPNET-WebAPI-2-Stream-7d96cb70</a></p>
+<p><a href="http://code.msdn.microsoft.com/ASPNET-WebAPI-Basic-Redis-ade42ca7" >http://code.msdn.microsoft.com/ASPNET-WebAPI-Basic-Redis-ade42ca7</a></p>
+<p><a href="http://code.msdn.microsoft.com/ASPNET-WebApi-Use-Redis-as-a0d942a3" >http://code.msdn.microsoft.com/ASPNET-WebApi-Use-Redis-as-a0d942a3</a></p>
+<p><a href="http://code.msdn.microsoft.com/ASPNET-MVC-connect-with-1f40770f" >http://code.msdn.microsoft.com/ASPNET-MVC-connect-with-1f40770f</a></p>
+<p><a href="http://code.msdn.microsoft.com/ASPNET-WebAPI-Enable-Cors-666b88eb" >http://code.msdn.microsoft.com/ASPNET-WebAPI-Enable-Cors-666b88eb</a></p>
+<p><a href="http://code.msdn.microsoft.com/ASPNET-WebAPI-Entity-2f8797a1" >http://code.msdn.microsoft.com/ASPNET-WebAPI-Entity-2f8797a1</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

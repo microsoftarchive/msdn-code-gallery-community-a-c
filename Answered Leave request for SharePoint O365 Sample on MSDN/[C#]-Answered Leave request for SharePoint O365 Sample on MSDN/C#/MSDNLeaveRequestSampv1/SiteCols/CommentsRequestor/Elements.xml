@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{024b2733-016e-40e5-8e42-09745132e4a5}"
+       Name="CommentsRequestor"
+       DisplayName="Comments on Request"
+       StaticName="CommentsRequestor"
+       Description="Place any notes or comments that will assist us in making this decision"
+       Type="Note"
+       RichText="TRUE"
+       RichTextMode="Compatible"
+       NumLines="6"
+       Required="FALSE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp">
+  </Field>
+</Elements>

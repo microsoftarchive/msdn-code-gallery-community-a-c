@@ -1,0 +1,27 @@
+﻿<#@ template debug="false" hostspecific="true" language="VB" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data" #>
+<#@ output extension=".vb" #>
+
+Public NotInheritable Class TextosLoader
+
+<#
+	Dim rutaArchivo As String = Host.ResolveAssemblyReference("$(ProjectDir)") + "Content\Textos.xml"
+	Dim tablaTextos As DataTable = New DataTable()
+	tablaTextos.ReadXml(rutaArchivo)
+	Dim textos As DataRow() = tablaTextos.Select("Idioma='es'")
+	For Each row As DataRow In textos
+		WriteLine(String.Format("	Public Shared ReadOnly Property {0}() As String", row("Id")))
+		WriteLine("		Get")
+		WriteLine(String.Format("			Return TextosBBDD.Recuperar(""{0}"")", row("Id")))
+		WriteLine("		End Get")
+		WriteLine("	End Property")
+	Next
+#>
+
+End Class

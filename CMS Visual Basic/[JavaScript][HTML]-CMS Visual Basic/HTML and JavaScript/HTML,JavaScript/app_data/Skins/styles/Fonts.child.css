@@ -1,0 +1,39 @@
+@font-face {
+ font-family: $font1;
+ src: url("resources/fonts/$font1.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: $font1;
+ src: url("resources/fonts/$font1.ttf") /* TTF file for CSS3 browsers */
+}
+
+@font-face {
+ font-family: $font2;
+ src: url("resources/fonts/$font2.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: $font2;
+ src: url("resources/fonts/$font2.ttf") /* TTF file for CSS3 browsers */
+}
+
+.Button, input[type='submit'], input[type='reset'], input[type='button']
+{
+  font-family: '$font1' !important;
+	font-size: $ButtonsFontSize;
+}
+
+h1, h2, h3, h4, h5, h6, .WebSiteTitle
+{
+  font-family: '$font2' !important;
+  text-shadow: 2px 2px 3px #666;
+}
+
+.m0, .m1, .m2, .m3, th
+{
+  font-family: '$font1' !important;
+}
+
+.m1, .m2, .m3, th
+{
+  font-size: $MenuFontSize;
+}

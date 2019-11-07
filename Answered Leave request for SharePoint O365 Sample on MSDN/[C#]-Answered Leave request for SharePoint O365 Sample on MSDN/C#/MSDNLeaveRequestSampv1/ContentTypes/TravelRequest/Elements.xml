@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100387611C50AA747C19A970E190CAB1F61" Name="TravelRequest" Group="1_FabianLeaveTravelApp" Description="Use this form to request approval for Travel" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{784b6ef3-9605-4229-a292-8ee8cdb19092}" DisplayName="Leave Requestor" Required="TRUE" Description="The person who will be taking this time off work" Name="LeaveRequestor" Sealed="FALSE" />
+      <FieldRef ID="{66ba5e09-4b88-42e5-ac11-ec939111ec22}" DisplayName="Approval Manager" Required="TRUE" Description="The Supervisor or Manager who will be tasked to Approve this Request" Name="ApproverMngr" Sealed="FALSE" />
+      <FieldRef ID="{474ad9e5-92e4-4f86-8365-69a5cd1ccae4}" DisplayName="Start Time" Required="TRUE" Description="When will you be taking time off. First date actually not in office?" Name="StartTime" Sealed="FALSE" />
+      <FieldRef ID="{6e785dd3-9c4c-4a4f-a296-df97a8221a0a}" DisplayName="End Time" Required="TRUE" Description="When will you be back in the office?" Name="EndTime" Sealed="FALSE" />
+      <FieldRef ID="{7a529359-587d-404c-ba27-2a70399a51c9}" DisplayName="Destination" Required="FALSE" Description="Where are you going?" Name="Destination" Sealed="FALSE" />
+      <FieldRef ID="{2ebfb900-76e6-4bc4-9186-44c2ac261ea8}" DisplayName="Type Of Attendance" Required="TRUE" Description="What is your role for this Event" Name="TypeOfAttendance" Sealed="FALSE" />
+      <FieldRef ID="{c13fc594-fefc-4741-b9cc-4c1528850912}" DisplayName="Type Of Travel" Required="TRUE" Description="What is your purpose of Travel" Name="TypeOfTravel" Sealed="FALSE" />
+      <FieldRef ID="{aba92cb3-04e6-4f51-b4d7-83b343394c54}" DisplayName="Expense Comments" Required="FALSE" Description="Place any notes or comments about whether you will need a voucher or need to be reimbursed etc. that will assist us in making this decision" Name="ExpenseComments" NumLines="6" Sealed="FALSE" />
+      <FieldRef ID="{024b2733-016e-40e5-8e42-09745132e4a5}" DisplayName="Comments on Request" Required="FALSE" Description="Place any notes or comments that will assist us in making this decision" Name="CommentsRequestor" NumLines="6" Sealed="FALSE" />
+      <FieldRef ID="{f3349d6a-7d08-4b8c-9001-1c0182499324}" DisplayName="Leave Request Status" Required="TRUE" Description="DO NOT MODIFY THIS FIELD" Name="LeaveRequestStatus" Sealed="FALSE" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

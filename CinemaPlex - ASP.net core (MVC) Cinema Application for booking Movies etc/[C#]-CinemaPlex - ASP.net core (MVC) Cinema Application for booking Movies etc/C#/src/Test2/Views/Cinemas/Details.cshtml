@@ -1,0 +1,85 @@
+@model IEnumerable<CinemaModel>
+
+@{
+    int cinemaId = Convert.ToInt32(ViewData["CinemaId"]);
+    var cinemaResults = Program.data.getCinema(cinemaId);
+    ViewData["Title"] = "Cinema - " + cinemaResults.Location;
+    var sessionResults = Program.data.getSessionsbyCinema(cinemaId);
+    var mapsAddress = cinemaResults.Address.Replace(" ", "+");
+}
+
+<h2>Cinemas</h2>
+
+<p>
+    <a asp-action="Index">Back to Cinemas</a>
+</p>
+<div class="block">
+    <div class="left movie-content-left">
+        <div class="movie-name-info">
+            <h4>
+                CinemaPlex
+            </h4>
+            <span>
+                @cinemaResults.Location
+            </span>
+            <span>
+                @cinemaResults.Address
+            </span>
+        </div>
+    </div>
+    <div class="right movie-content-right">
+        <div id="MovieInfo">
+            <div class="movie-landing-content">
+                <h1>
+                    @cinemaResults.Location
+                </h1>
+                <p>
+                    @cinemaResults.LongDescription
+                </p>
+            </div>
+        </div
+    </div>
+    <div class="clear"></div>
+    <h2>Sessions for this cinema:</h2>
+@if (sessionResults != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Movie
+                </th>
+                <th>
+                    Session Time
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var session in sessionResults)
+            {
+                var movieDetails = Program.data.getMovie(session.MovieID);
+            <tr>
+                <td>
+                    @Html.ActionLink(movieDetails.Title, "Details", "Sessions", new { id = session.SessionID })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => session.TimeRunning)
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p> No sessions for this movie found..</p>
+}
+    <iframe width="600" height="450" frameborder="0" style="border:0"
+<<<<<<< HEAD
+            src="https://www.google.com/maps/embed/v1/place?q=@mapsAddress&key="></iframe> 
+=======
+            src="https://www.google.com/maps/embed/v1/place?q=@mapsAddress&key=AIzaSyBkkj6qQ0qLfTGHYJPuL9asFAAk9hlguJ4"></iframe> 
+>>>>>>> d2759e5ca7591045760af98f06a0621de2dbd255
+</div>
+
+

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    @Html.Raw(ViewData["Meta"])
+    @Html.Raw(ViewData["Links"])
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    @Html.Raw(ViewData["Styles"])
+</head>
+<body class="mx-1 my-1">
+    <h3 class="text-danger">Error:</h3>
+    <h5 class="text-danger">Error(s) occurred while processing your request.</h5>
+
+</body>
+</html>

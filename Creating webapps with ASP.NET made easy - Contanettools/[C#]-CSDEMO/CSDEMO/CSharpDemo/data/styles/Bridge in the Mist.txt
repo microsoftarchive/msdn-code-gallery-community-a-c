@@ -1,0 +1,1 @@
+﻿Bridge.jpg,1,,LightCyan,2,1,DarkBlue,1,PowderBlue,10,Lucida Calligraphy,20,SeaGreen,SkyBlue,,

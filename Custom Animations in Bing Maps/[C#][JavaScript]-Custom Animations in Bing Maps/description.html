@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=EC831D2F780A53CF4C404B53E768954F" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/9ae73d2a-fcad-4226-9f7a-19a1900a0aefCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=DF234F4FF3DA5D35A03D2829D4F99E0D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Custom Animations in Bing Maps</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Custom Animations in Bing Maps</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, Javascript, Visual Basic .NET, Bing Maps, HTML5, Windows Runtime, Windows 8, Windows Store app, Windows 8.1
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Animation, Graphics, C#, XAML, Javascript, Visual Basic .NET, Bing Maps, Animations, XAML Animation, Windows Store app
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        Bing Maps SDK for Windows 8.1 Store apps, Bing Maps SDK for Windows 8.1 Store apps, Bing Maps SDK for Windows 8.1 Store apps
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">7/11/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Custom-Animations-in-Bing-eda51660">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>Bing Maps is a very powerful mapping platform that is often used for creating engaging user experiences. The fluid interactive maps make for a great canvas when visualizing location based data. In this code sample we are going to take a look at how to make
+ the user experience a little more engaging by adding custom animations that can be used in both web and Windows Store apps.&nbsp;</p>
+<h1><span>Building the Sample</span></h1>
+<p>To run the samples you must install the <a href="http://visualstudiogallery.msdn.microsoft.com/224eb93a-ebc4-46ba-9be7-90ee777ad9e1">
+Bing Maps SDK for Windows Store apps</a>&nbsp;and get a <a href="http://msdn.microsoft.com/en-us/library/ff428642.aspx">
+Bing Maps key</a> for Windows Store apps. You must also have Windows 8.1 and Visual Studio 2013.</p>
+<p>Any of the code samples that use Bing Maps will have a string, &ldquo;YOUR_BING_MAPS_KEY&rdquo;, in the code where you will need to specify your Bing Maps key.</p>
+<p>If you are using Bing Maps in a C# or Visual Basic app you will need to perform the following steps for your app project to work correctly with Bing Maps.</p>
+<ul>
+<li>Add a reference to&nbsp;Bing Maps SDK for C#, C&#43;&#43;, or Visual Basic if the reference isn&rsquo;t already there.
+</li><li>Set the&nbsp;Active solution platform&nbsp;in Visual Studio to one of the following; ARM,&nbsp;x86&nbsp;or&nbsp;x64
+</li><li>Add a reference to&nbsp;Microsoft Visual C&#43;&#43; Runtime Package. &nbsp;
+<ul>
+</ul>
+</li></ul>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p>This code sample shows how to create several different types of animations. Here is are some fo the animations that are included:</p>
+<table>
+<tbody>
+<tr>
+<td>Scaling Pushpin when hovered</td>
+<td>&nbsp;<img id="119862" src="description/ScalingPin.gif" alt="" width="94" height="110"></td>
+</tr>
+<tr>
+<td>Drop a Pushpin</td>
+<td><img id="119863" src="description/DropPin.gif" alt="" width="60" height="179"></td>
+</tr>
+<tr>
+<td>Bounce a Pushpin</td>
+<td><img id="119866" src="description/BouncePin.gif" alt="" width="60" height="179"><br>
+</td>
+</tr>
+<tr>
+<td>Animate Pushpin along a straight line path</td>
+<td><img id="119865" src="description/PinOnStraightPath.gif" alt="" width="237" height="90"></td>
+</tr>
+<tr>
+<td>Animate Pushpin along a geodesic path</td>
+<td><img id="119867" src="description/PinOnGeodesicPath.gif" alt="" width="237" height="89"></td>
+</tr>
+<tr>
+<td>Animate the drawing of a straight line path</td>
+<td><img id="119868" src="description/DrawStraightPath.gif" alt="" width="231" height="67"></td>
+</tr>
+<tr>
+<td>Animate the drawing of a geodesic path</td>
+<td><img id="119869" src="description/DrawGeodesicPath.gif" alt="" width="228" height="80"></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+    </div>
+</body>
+</html>
