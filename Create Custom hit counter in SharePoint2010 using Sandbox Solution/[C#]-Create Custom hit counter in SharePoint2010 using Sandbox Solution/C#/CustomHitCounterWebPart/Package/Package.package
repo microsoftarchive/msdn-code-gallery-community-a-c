@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="ff12169f-594f-444e-bccd-d316b4d3e152" solutionId="ff12169f-594f-444e-bccd-d316b4d3e152" resetWebServer="false" name="CustomHitCounterWebPart" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
-  <features>
-    <featureReference itemId="3900b08d-7515-4c10-9b9d-55c69f1b2bd4" />
-  </features>
-</package>

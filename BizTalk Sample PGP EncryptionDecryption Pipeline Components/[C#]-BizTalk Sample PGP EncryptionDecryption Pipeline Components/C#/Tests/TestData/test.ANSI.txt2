@@ -1,8 +1,0 @@
-test.ANSI.txt2:
-
-Internet Explorer Enhanced Security Configuration is enabled
-Internet Explorer Enhanced Security Configuration is currently enabled on your server. This configures a number of security settings that define how users browse Inte
-rnet and intranet Web sites. The configuration also reduces the exposure of your server to Web sites that might pose a security risk. For a complete list of the security settings in this configuration, see Effects of Internet Explorer Enhanced Security Configuration.
-
-This enhanced level of security can prevent Web sites from displaying correctly in Internet Explorer and restrict access to network resources, such as files on Universal Naming Convention (UNC) shares. If you want to browse a Web site that requires Internet Explorer functionality that has been disabled, you can add the Web site to the inclusion lists in the Local intranet or Trusted sites zones. For more information, see Managing Internet Explorer Enhanced Security Configuration.
-

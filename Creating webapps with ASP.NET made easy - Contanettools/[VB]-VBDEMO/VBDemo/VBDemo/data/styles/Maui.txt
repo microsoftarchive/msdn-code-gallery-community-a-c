@@ -1,1 +1,0 @@
-﻿Maui.jpg,1,,Cyan,1,3,DarkSlateGray,1,Cyan,0,Tempus Sans ITC,22,Transparent,Transparent,1,,

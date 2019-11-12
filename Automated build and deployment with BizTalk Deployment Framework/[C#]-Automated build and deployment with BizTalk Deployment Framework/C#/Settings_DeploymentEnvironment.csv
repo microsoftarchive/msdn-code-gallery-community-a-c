@@ -1,7 +1,0 @@
-Name;Value
-programFilesDirectory;F:\Program Files (x86)
-productNameSuffix; for BizTalk
-deployBizTalkMgmtDB;true
-environmentSettingsFileName;Exported_LocalSettings
-bizTalkServerInstallationDirectory;F:\Program Files (x86)\Microsoft BizTalk Server 2013
-databaseServer;localhost

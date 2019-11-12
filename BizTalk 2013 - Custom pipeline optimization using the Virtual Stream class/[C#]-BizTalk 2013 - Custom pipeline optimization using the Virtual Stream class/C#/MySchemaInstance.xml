@@ -1,4 +1,0 @@
-﻿<ns0:Sample xmlns:ns0="http://TNWiki.BizTalk.Streaming.Schemas.MyDifferentSchema">
-  <ValueA>1</ValueA> 
-  <ValueB>2</ValueB> 
-</ns0:Sample>

@@ -1,4 +1,0 @@
-﻿<%@ ServiceHost
-    Service="BTL.Services.AppAuthentication.Service.AppAuthenticationService, BTL.Services.AppAuthentication.Service"    
-    Factory="BTL.Services.AppAuthentication.Service.AppAuthenticationServiceHostFactory, BTL.Services.AppAuthentication.Service" %>
-    

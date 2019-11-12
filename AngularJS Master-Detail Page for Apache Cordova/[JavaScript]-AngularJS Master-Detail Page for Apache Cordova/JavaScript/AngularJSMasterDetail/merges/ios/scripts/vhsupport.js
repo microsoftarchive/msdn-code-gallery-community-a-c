@@ -1,5 +1,0 @@
-﻿(function () {
-
-    window.isVHPartiallySupported = true;
-
-})();

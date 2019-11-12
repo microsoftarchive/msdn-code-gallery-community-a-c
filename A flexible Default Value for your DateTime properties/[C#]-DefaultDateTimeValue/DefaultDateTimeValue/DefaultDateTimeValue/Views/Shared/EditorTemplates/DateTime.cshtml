@@ -1,9 +1,0 @@
-﻿@using DefaultDateTimeValue.Models
-
-@{
-    DateTime value = ViewData.TemplateInfo.FormattedModelValue is DateTime ?
-        (DateTime)ViewData.TemplateInfo.FormattedModelValue :
-        DefaultDateTimeValueAttribute.GetDefaultValue(ViewData.ModelMetadata.ContainerType, ViewData.ModelMetadata.PropertyName);
-}
-
-@Html.TextBox(string.Empty, value, htmlAttributes: ViewData["htmlAttributes"])
