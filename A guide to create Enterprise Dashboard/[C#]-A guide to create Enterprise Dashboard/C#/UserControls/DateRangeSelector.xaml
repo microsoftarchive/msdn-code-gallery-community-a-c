@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Visifire.Dashboards.UserControls.DateRangeSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    mc:Ignorable="d"
+    >
+    <Grid Background="Transparent" MaxWidth="300" MaxHeight="32">
+        <StackPanel VerticalAlignment="Stretch" Width="300" Orientation="Horizontal" >
+            <TextBlock VerticalAlignment="Center" Text="From:"></TextBlock>
+            <sdk:DatePicker Height="23" Name="FromDatePicker" Width="120" />
+            <TextBlock VerticalAlignment="Center" Text="  To:"></TextBlock>
+            <sdk:DatePicker Height="23" Name="ToDatePicker" Width="120" />
+        </StackPanel>
+    </Grid>
+</UserControl>

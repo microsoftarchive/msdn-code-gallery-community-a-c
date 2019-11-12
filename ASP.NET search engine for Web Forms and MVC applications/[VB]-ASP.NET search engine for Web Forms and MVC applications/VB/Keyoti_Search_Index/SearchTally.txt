@@ -1,0 +1,8 @@
+﻿cheese	2
+chicken	150
+chili	3
+curry	2
+food	47
+salt	4
+soup	37
+tomato	26

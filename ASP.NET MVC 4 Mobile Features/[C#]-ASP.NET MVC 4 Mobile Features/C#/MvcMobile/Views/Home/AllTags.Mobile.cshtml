@@ -1,0 +1,12 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "All tags";
+}
+
+
+<ul data-role="listview" data-filter="true">
+    @foreach(var tag in Model) {
+        <li>@Html.ActionLink(tag, "SessionsByTag", new { tag })</li>
+    }
+</ul>

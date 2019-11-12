@@ -1,0 +1,29 @@
+@media not all  and (min-device-width: 0in) and (max-device-width: 7in)
+{
+    aside .Menu, aside .Exchange, aside .Weather
+    {
+        transition: transform 1s;
+        -ms-transition: -ms-transform 1s;
+        -moz-transition: -moz-transform 1s; /* Firefox 4 */
+        -webkit-transition: -webkit-transform 1s; /* Safari and Chrome */
+        -o-transition: -o-transform 1s; /* Opera */
+        position: relative;
+        z-index: 2;
+        box-shadow: 5px 5px 5px #000000;
+        -moz-box-shadow: 5px 5px 5px #000000;
+        -webkit-box-shadow: 5px 5px 5px #000000;
+    }
+
+    aside .Menu:hover, aside .Exchange:hover, aside .Weather:hover
+    {
+        transform: translate(300px,50%) scale(3,3);
+        -ms-transform: translate(300px,50%) scale(3,3); /* IE 9 */
+        -moz-transform: translate(300px,50%) scale(3,3); /* Firefox */
+        -webkit-transform: translate(300px,50%) scale(3,3); /* Safari and Chrome */
+        -o-transform: translate(300px,50%) scale(3,3); /* Opera */
+        z-index: 10;
+        box-shadow: 5px 5px 45px #000000;
+        -moz-box-shadow: 5px 5px 45px #000000;
+        -webkit-box-shadow: 5px 5px 45px #000000;
+    }
+}

@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost
+    Service="BTL.Services.AppSecurity.Service.AppSecurityService, BTL.Services.AppSecurity.Service"    
+    Factory="BTL.Services.AppSecurity.Service.AppSecurityServiceHostFactory, BTL.Services.AppSecurity.Service" %>
+    

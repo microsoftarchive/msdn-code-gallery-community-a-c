@@ -1,0 +1,18 @@
+﻿<div class="row">
+    <!--show all the filter options and their values-->
+    <div class="col-md-12">
+        <h3>filter by:</h3>
+        <ul class="list-unstyled">
+            <li ng-repeat="(filterType,filterValues) in availableFilters">
+                <h4>{{filterType}}</h4>
+                <ul class="list-unstyled">
+                    <li ng-repeat="filterValue in filterValues">
+                        <!--<input type="checkbox" ng-change="filterChanged(filterType, filterValue)" />-->
+                        <input type="checkbox" ng-click="setSelected(filterType, filterValue)" ng-checked="query[filterType] && query[filterType].indexOf(filterValue.id.toString()) >= 0" />
+                        <a href="" ng-click="setSelected(filterType, filterValue)">{{filterValue.name}}</a>                         
+                    </li>
+                </ul>              
+            </li>
+        </ul>
+    </div>
+</div>

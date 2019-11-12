@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindImgInGrid_UI", "BindImgInGrid_UI\BindImgInGrid_UI.csproj", "{1718175B-73EB-413A-B719-97D503570D7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{3534E7AC-F69E-46EC-8C9A-7AB24486F77F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLayer", "CommonLayer\CommonLayer.csproj", "{3E989C32-CE59-4730-81B4-8802EE32F813}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBAccess", "DBAccess\DBAccess.csproj", "{4A0114AD-386E-4163-9162-5ECE8C38D66F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1718175B-73EB-413A-B719-97D503570D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1718175B-73EB-413A-B719-97D503570D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1718175B-73EB-413A-B719-97D503570D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1718175B-73EB-413A-B719-97D503570D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3534E7AC-F69E-46EC-8C9A-7AB24486F77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3534E7AC-F69E-46EC-8C9A-7AB24486F77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3534E7AC-F69E-46EC-8C9A-7AB24486F77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3534E7AC-F69E-46EC-8C9A-7AB24486F77F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E989C32-CE59-4730-81B4-8802EE32F813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E989C32-CE59-4730-81B4-8802EE32F813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E989C32-CE59-4730-81B4-8802EE32F813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E989C32-CE59-4730-81B4-8802EE32F813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A0114AD-386E-4163-9162-5ECE8C38D66F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A0114AD-386E-4163-9162-5ECE8C38D66F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A0114AD-386E-4163-9162-5ECE8C38D66F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A0114AD-386E-4163-9162-5ECE8C38D66F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

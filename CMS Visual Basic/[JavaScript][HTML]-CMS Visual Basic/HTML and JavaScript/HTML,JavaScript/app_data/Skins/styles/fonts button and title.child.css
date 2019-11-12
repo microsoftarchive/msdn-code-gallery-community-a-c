@@ -1,0 +1,21 @@
+.Button, input[type='submit'], input[type='reset'], input[type='button']
+{
+    font-family: $FontButton !important;
+	font-size: $FontButtonSize;
+}
+
+h1, h2, h3, h4, h5, h6, .WebSiteTitle
+{
+    font-family: $FontTitle !important;
+    text-shadow: 2px 2px 3px #666;
+}
+
+.m0, .m1, .m2, .m3, th
+{
+    font-family: $FontButton !important;
+}
+
+.m1, .m2, .m3, th
+{
+    font-size: $FontMenuSize;
+}

@@ -1,0 +1,28 @@
+﻿<b>EVO HTML to PDF Converter</b> allows you to select when you want to start conversion of the HTML page to PDF. You can start conversion immediately after the page was loaded, 
+    delayed after the page was loaded with a constant time interval or manually by calling the <i>evoConverter.startConversion()</i> method from the HTML page JavaScript code.<br />
+<br />
+At the top of the demo you can choose the HTML document to convert which can be:
+    <br />
+<ul>
+    <li>
+        <b>HTML Page URL or Local File to Convert</b>. The URL must be accessible from the computer where the converter runs. If the page requires authentication or if you are using a proxy server to access Internet
+            then you have to set the converter properties accordingly as described in documentation
+    </li>
+    <li>
+        <b>HTML String with Manual Triggering</b>. When you convert a HTML string you also have the option to specify a base URL that will be used
+            by converter to resolve the relative URLs found in the HTML string to fully qualified URLs. If your HTML string uses only fully qualified URLs then this parameter is not necessary
+    </li>
+</ul>
+<b class="subtitle">Select Triggering Mode</b>
+<br />
+<ul>
+    <li>
+        <b>Auto</b>. The rendering to PDF will start immediately after the page was loaded 
+    </li>
+    <li>
+        <b>Delayed</b>. The rendering to PDF will start delayed after the page was loaded with a constant time interval. In this case you can also set the delay in seconds to wait before starting the rendering to PDF
+    </li>
+    <li>
+        <b>Manual</b>. The rendering to PDF will start when the <i>evoConverter.startConversion()</i> method is called from the HTML page JavaScript code
+    </li>
+</ul>

@@ -1,0 +1,59 @@
+﻿<UserControl
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc="clr-namespace:Visifire.Dashboards.Commons"
+    xmlns:vc="clr-namespace:Visifire.Charts;assembly=SLVisifire.Charts"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:views="clr-namespace:Visifire.Dashboards.ProductAndSales.Views" x:Class="ProductAndSales.MainPage"
+    xmlns:viewModels="clr-namespace:Visifire.Dashboards.ProductAndSales.ViewModels"
+    mc:Ignorable="d"
+    d:DesignWidth="1024" d:DesignHeight="700" Background="Red" >
+    <UserControl.DataContext>
+        <viewModels:MainPageViewModel />
+    </UserControl.DataContext>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Padding="0" VerticalContentAlignment="Top" HorizontalContentAlignment="Left">
+        <Grid x:Name="LayoutRoot" Background="White" MinWidth="1010" MinHeight="660" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65" />
+            <RowDefinition Height="0.406*" />
+			<RowDefinition Height="0.501*" />
+        </Grid.RowDefinitions>
+        
+        <Border BorderBrush="Black" BorderThickness="1" Height="60" Margin="0,-6,0,0" VerticalAlignment="Top" CornerRadius="7">
+    		<Border.Background>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="White" Offset="0.439"/>
+    				<GradientStop Color="DarkGray" Offset="1"/>
+    				<GradientStop Color="#FFDBDBDB" Offset="0.841"/>
+    				<GradientStop Color="#FFD2D0D0" Offset="0.504"/>
+    				<GradientStop Color="#FFE9E9E9"/>
+    			</LinearGradientBrush>
+    		</Border.Background>
+            <Border.Effect>
+                <DropShadowEffect Color="LightGray"/>
+            </Border.Effect>
+        	<Grid Margin="0">
+        		<TextBlock TextWrapping="Wrap" Text="Powered by Visifire" HorizontalAlignment="Right" Margin="0,20,53,17" TextAlignment="Center" Opacity="0.36" FontSize="12" FontFamily="Arial Unicode MS"/>
+                <Rectangle Cursor="Hand" Width="35" RadiusX="4" RadiusY="4" Height="35" StrokeThickness="2" HorizontalAlignment="Right" Margin="0,0,15,0" Opacity="0.735" VerticalAlignment="Center" MouseLeftButtonUp="Logo_MouseLeftButtonUp" MouseEnter="Logo_MouseEnter" MouseLeave="Logo_MouseLeave">
+        			<Rectangle.Stroke>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Color="#FF656565" Offset="1"/>
+        					<GradientStop Color="#FFB4B4B4"/>
+        					<GradientStop Color="#FFF7F6F6" Offset="0.295"/>
+        				</LinearGradientBrush>
+        			</Rectangle.Stroke>
+        			<Rectangle.Fill>
+        				<ImageBrush Stretch="Uniform" ImageSource="visifire_logo.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<TextBlock HorizontalAlignment="Left" Text="Sales Dashboard" VerticalAlignment="Center" FontSize="18" Margin="15,0,0,0" FontFamily="Aharoni"/>
+        	</Grid>
+    	</Border>
+
+        <views:ProductWiseSalesView SelectedProduct="{Binding SelectedProduct, Mode=TwoWay}" Grid.Row="1" Grid.RowSpan="2"/>
+
+    </Grid>
+    </ScrollViewer>
+</UserControl>

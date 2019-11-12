@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "File Upload";
+}
+
+<h2>Upload</h2>
+<form id="frmMainUpload" action="@ViewBag.RootPath/api/upload" enctype="multipart/form-data" method="POST">
+    What files are you uploading?
+     <input id="data" name="data" type="file" multiple>
+    <br>
+    <input type="submit" value="Upload" />
+    <div>
+        <span id="txtMessages"></span>
+    </div>
+    <div id="fileLinks">
+    </div>
+</form>
+
+
+@section scripts{
+    <script>
+        $('#frmMainUpload').submit(function () {
+            var formData = new FormData($(this)[0]);
+            $.ajax({
+                url: $(this).attr("action"),
+                type: 'POST',
+                data: formData,
+                async: false,
+                success: function (data) {
+                    $('#txtMessages').html("<b>files have been uploaded...</b>");
+                    buildLinks(data);
+                    reset($('#data'));
+                    //location.reload();
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+            return false;
+        });
+
+        window.reset = function (e) {
+            e.wrap('<form>').closest('form').get(0).reset();
+            e.unwrap();
+        }
+
+        window.buildLinks = function (data) {
+            var newLinks = "";
+            for (var item in data) {
+                newLinks += "<a target='_blank' href='" + data[item].Url + "'>" + data[item].Url + "</a></br>";
+            }
+
+            $('#fileLinks').html(newLinks);
+        }
+    </script>
+
+}

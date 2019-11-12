@@ -1,0 +1,32 @@
+﻿@model MvcMobile.Models.Session
+
+@{
+    ViewBag.Title = "Session";
+}
+
+<div class="session">
+    <h1>@Html.ActionLink(Model.Title, "SessionByCode", new { Model.Code })</h1>
+    <h2>
+        @{
+            var index = 0;
+            foreach (var speaker in Model.Speakers) {
+                if (index > 0) {
+                    if (index == Model.Speakers.Count() - 1) { <text> and </text> } else {<text>, </text> }
+                }
+                @Html.ActionLink(speaker, "SessionsBySpeaker", new { speaker })
+                index++;
+            }
+        }
+    </h2>
+    <h3>When: @Model.DateText</h3>
+    <h3>Where: @Model.Room</h3>
+    <h3>Code: @Model.Code</h3>
+    <p>@Model.Description</p>
+    <p>
+        Tags:
+        @foreach (var tag in Model.Tags) {
+            @Html.ActionLink(tag, "SessionsByTag", new { tag })
+            <text> </text>
+        }
+    </p>
+</div>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatisticsLibrary", "StatisticsLibrary\StatisticsLibrary.csproj", "{75BBF632-445B-4E2C-9CD6-A2820675F354}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75BBF632-445B-4E2C-9CD6-A2820675F354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BBF632-445B-4E2C-9CD6-A2820675F354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BBF632-445B-4E2C-9CD6-A2820675F354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BBF632-445B-4E2C-9CD6-A2820675F354}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,285 @@
+﻿
+<html data-ng-app="RESTClientModule">
+@{
+    ViewBag.Title = "Shanu - ShoppingCart";
+}
+
+<body data-ng-controller="AngularJs_WCFController">
+
+    <img src="~/Images/blank.gif" alt="" width="1" height="10" />
+    <table width="99%" style=" border-bottom:3px solid #3273d5;">
+        <tr>
+
+            <td width=" 250">
+                <table width="99%">
+                    <tr>
+                        <td>
+                            Welcome Mr. {{'SHANU'}}
+
+                        </td>
+
+
+                    </tr>
+                </table>
+            </td>
+            <td class="style1" align="center">
+                <h3>Shanu - Shopping Cart using AngularJs, MVC and WCF   :)</h3>
+
+
+            </td>
+            <td align="right">
+                <div ng-controller="AngularJs_WCFController">
+                    Today Date is :
+                    {{date | date:'yyyy-MM-dd'}}
+                </div>
+
+            </td>
+        </tr>
+    </table>
+
+    <img src="~/Images/blank.gif" alt="" width="1" height="6" />
+    <table id="tblContainer" style='width: 99%;table-layout:fixed;'>
+        <tr>
+            <td>
+                <table style=" background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td>
+                            <h3> Item Management -   Add New Items / Upload Image for Item</h3>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+
+                                    <td width="20"></td>
+                                    <td valign="top">
+                                        <form novalidate name="f1" ng-submit="SaveFile()">
+                                            <table style="color:#9F000F;font-size:large" cellpadding="4" cellspacing="6">
+
+                                                <tr>
+                                                    <td>
+                                                        <b>Item code </b>
+                                                    </td>
+
+                                                    <td>
+                                                        : <input type="text" name="txtItem_ID" ng-model="Item_ID" value="0" readonly />
+                                                        <br />
+                                                       
+                                                    </td>
+
+
+                                                    <td>
+                                                        <b>   Item Name</b>
+                                                    </td>
+
+                                                    <td>
+                                                        :
+                                                        <input type="text" name="txtItem_Name" ng-model="Item_Name" placeholder=" Item Name..." required />
+                                                        <br />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.txtItem_Name.$error.required">Item Name required!</span>
+                                                    </td>
+                                                    <td rowspan="3">
+                                                        <input type="submit" value="Save Item" style="background-color:#336699;color:#FFFFFF" required />
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b> Price  </b>
+                                                    </td>
+
+                                                    <td>
+                                                        : <input type="text" name="txtItem_Price" ng-model="Item_Price" value="0" required />
+                                                        <br />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.txtItem_Price.$error.required">Prize required!</span>
+                                                    </td>
+
+
+                                                    <td>
+                                                        <b> Description </b>
+
+                                                    </td>
+                                                    <td>
+                                                        : <input name="txtDescription" ng-model="Description" style="width:400px" placeholder=" Item Description..." >
+                                                        <br />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.txtDescription.$error.required">Description required!</span>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b> Added BY  </b>
+                                                    </td>
+
+                                                    <td>
+                                                        : <input type="text" name="txtAddedBy" ng-model="txtAddedBy" placeholder=" User Name..."  /><br />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.txtAddedBy.$error.required">Name required!</span>
+                                                    </td>
+
+
+                                                    <td>
+                                                        <b> Upload File </b>
+
+                                                    </td>
+                                                    <td>
+                                                        <input type="file" name="file" value="Upload File" accept="image/*" onchange="angular.element(this).scope().selectFileforUpload(this.files)" required />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.file.$error.required">Image required!</span>
+                                                        <span class="error">{{FileInvalidMessage}}</span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </form>
+
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <img src="~/Images/blank.gif" alt="" width="1" height="4" />
+            </td>
+        </tr>
+
+        <tr>
+
+            <td>
+                <table style=" background-color:#FFFFFF; border: solid 2px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td width="40" align="center">
+                            <b>Image</b>
+                        </td>
+
+                        <td width="40" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'Item_ID'; reverse=!reverse">
+
+                            <b>Item Code</b>
+                        </td>
+
+                        <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'Item_Name'; reverse=!reverse">
+                            <b>Item Name</b>
+                        </td>
+
+                        <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'Description'; reverse=!reverse">
+                            <b>Decription</b>
+                        </td>
+
+                        <td width="40" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'Item_Price'; reverse=!reverse">
+                            <b>Price</b>
+                        </td>
+
+                        <td width="90" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'AddedBy'; reverse=!reverse">
+                            <b>User Name</b>
+                        </td>
+
+                    </tr>
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td width="40" align="center">
+                            Filter By ->
+                        </td>
+
+                        <td width="40" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+
+                            <input ng-model="search.Item_ID" style="width:76px" placeholder="ItemCode...">
+                        </td>
+
+                        <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+                            <input ng-model="search.Item_Name" placeholder=" Name...">
+                        </td>
+
+                        <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+                            <input ng-model="search.Description" placeholder="Description...">
+                        </td>
+
+                        <td width="40" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;"></td>
+
+                        <td width="90" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+                            <input ng-model="search.AddedBy">
+                        </td>
+
+                    </tr>
+
+                    <tbody data-ng-repeat="detail in getItemDetailsDisp | filter:search  | orderBy:predicate:reverse">
+
+                        <tr>
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    <img src="~/Images/{{detail.Image_Name}}" alt="{{detail.Item_Name}}" width="48px" height="48px">
+                                </span>
+
+                            </td>
+                            <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.Item_ID}}
+                                </span>
+
+                            </td>
+
+                            <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.Item_Name}}
+                                </span>
+
+                            </td>
+
+                            <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.Description}}
+                                </span>
+
+                            </td>
+
+                            <td align="right" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.Item_Price}}
+                                </span>
+
+                            </td>
+
+                            <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.AddedBy}}
+                                </span>
+
+                            </td>
+                        </tr>
+
+                </table>
+
+            </td>
+
+
+
+        </tr>
+
+
+
+    </table>
+    <img src="~/Images/blank.gif" alt="" width="1" height="10" />
+
+
+</body>
+
+</html>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-animate.js"></script>
+<script src="~/Scripts/angular-animate.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+
+<script src="~/Scripts/angular-file-upload.js" ></script>
+<script src="~/Scripts/angular-file-upload.min.js" ></script>
+
+<script src="~/Scripts/shanuAngularScript/Modules.js"></script>
+
+<script src="~/Scripts/shanuAngularScript/Services.js"></script>
+
+<script src="~/Scripts/shanuAngularScript/Controllers.js"></script>
+

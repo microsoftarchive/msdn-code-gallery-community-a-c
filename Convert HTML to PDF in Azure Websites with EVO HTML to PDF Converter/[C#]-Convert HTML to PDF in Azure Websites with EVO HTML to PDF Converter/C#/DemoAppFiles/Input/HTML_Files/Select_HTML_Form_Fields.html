@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Select HTML Form Fields to Convert to PDF Form</title>
+</head>
+<body style="font-family: 'Times New Roman'; font-size: 14px">
+    <form name="inputForm" action="http://www.evopdf.com/pdf_forms_submit/" method="post">
+        <table>
+            <tr>
+                <td>First name:</td>
+                <td style="width: 10px"></td>
+                <td>
+                    <input data-pdf-form-field="true" type="text" name="firstname" value="Enter First Name"></td>
+            </tr>
+            <tr>
+                <td>Last name:</td>
+                <td style="width: 10px"></td>
+                <td>
+                    <input data-pdf-form-field="true" type="text" name="lastname"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td style="width: 10px"></td>
+                <td>
+                    <input data-pdf-form-field="true" type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td style="width: 10px"></td>
+                <td>
+                    <input data-pdf-form-field="true" type="radio" name="gender" value="male" checked="checked">Male &nbsp;
+                    <input data-pdf-form-field="true" type="radio" name="gender" value="female">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Vehicle:</td>
+                <td style="width: 10px"></td>
+                <td>
+                    <input type="checkbox" name="car" value="car" checked="checked">I have a car &nbsp;
+                    <input type="checkbox" name="bike" value="bike">I have a bike
+                </td>
+            </tr>
+            <tr>
+                <td>Vehicle Type:</td>
+                <td style="width: 10px"></td>
+                <td>
+                    <select>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="audi" selected="selected">Audi</option>
+                        <option value="opel">Opel</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td style="width: 10px"></td>
+                <td>
+                    <textarea style="width: 250px; height: 75px">Enter your comments here:
+First comment line
+Second comment line</textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 10px"></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input data-pdf-form-field="true" type="submit" name="submitButton" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

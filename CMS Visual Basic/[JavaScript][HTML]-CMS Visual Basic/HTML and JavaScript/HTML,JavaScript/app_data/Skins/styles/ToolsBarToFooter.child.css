@@ -1,0 +1,40 @@
+.Footer
+{
+	margin-bottom: 150px;
+}
+
+.ToolsBar
+{
+  border:2px solid black;
+	position:fixed;
+	left: 5%;
+	width: 90%;
+	bottom: 5px;
+	z-index: 100;
+	text-align: center;
+	background-color: rgb(60,60,60);
+ /* for IE */
+  filter:alpha(opacity=80);
+  /* CSS3 standard */
+  opacity:0.8;
+}
+
+.ToolsBar:hover
+{
+ /* for IE */
+  filter:alpha(opacity=100);
+  /* CSS3 standard */
+  opacity:1;
+}
+
+.Button
+{
+    margin-top:2px !important;
+    margin-bottom:2px !important;
+}
+
+.Button, input[type='submit'], input[type='reset'], input[type='button']
+{
+    margin: 2px !important;
+    padding: 3px !important;
+}

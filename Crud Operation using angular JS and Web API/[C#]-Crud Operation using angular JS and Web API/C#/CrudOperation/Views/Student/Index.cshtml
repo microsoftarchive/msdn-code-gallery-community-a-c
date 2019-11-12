@@ -1,0 +1,109 @@
+﻿<div ng-app="myapp">
+    <div ng-controller="StudentCtrl">
+        <form novalidate name="frmStudent" id="frmStudent" class="form-horizontal row-border">
+            <br />
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="input17"> First Name</label>
+                    <div class="col-md-7">
+                        <input type="text"
+                               id="idFirstName"
+                               class="form-control"
+                               name="nameFirstName" ng-model="firstName" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="input17"> Last Name</label>
+                    <div class="col-md-7">
+                        <input type="text"
+                               id="idLastName"
+                               class="form-control"
+                               name="nameFirstName" ng-model="lasttName" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="input17"> Email</label>
+                    <div class="col-md-7">
+                        <input type="text"
+                               id="idEmail"
+                               class="form-control"
+                               name="nameEmail" ng-model="email" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="input17"> Address</label>
+                    <div class="col-md-7">
+                        <input type="text"
+                               id="idAddress"
+                               class="form-control"
+                               name="nameAdress" ng-model="adress" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        </div>
+                        <div class="col-md-7">
+                            <span id="save" class="btn btn-success margin-right-btn" ng-click="SaveUpdate()">
+                                <i class="icon-save"></i> {{btnText}}
+                            </span>
+                        </div>
+                    </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr />
+
+            <table class="table table-hover general-table">
+                <thead class="grid-top-panel">
+                    <tr>
+                        <th style="display:none">StudentID</th>                       
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="dataModel in studnets">
+                        <td style="display:none">{{dataModel.StudentID}}</td>                        
+                        <td> {{dataModel.FirstName}}</td>
+                        <td> {{dataModel.LastName}}</td>
+                        <td>{{dataModel.Email}}</td>
+                        <td>{{dataModel.Address}}</td>
+                        <td style="text-align:right; color:white">
+                            <span>                                
+                                <span id="save" class="btn btn-primary margin-right-btn" ng-click="GetStudentByID(dataModel)">
+                                     Edit
+                                </span>
+                            </span>
+                        </td>
+                        <td style="text-align:right; color:white">
+                            <span>
+                                <span id="save" class="btn btn-danger margin-right-btn" ng-click="DeleteStudent(dataModel)">
+                                    Delete
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+
+
+
+            <br />
+            <br />
+        </form>
+
+
+
+     
+
+    </div>
+</div>
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/ScriptsNg/Module/app.js"></script>
+<script src="~/ScriptsNg/Controller/StudentCtrl.js"></script>
+<script src="~/ScriptsNg/Services/CrudService.js"></script>

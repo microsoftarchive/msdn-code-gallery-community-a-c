@@ -1,0 +1,21 @@
+﻿<p>
+    DocumentViewer raises several client-side events:
+    <ul>
+        <li>Loaded - raised when the viewer has been loaded.</li>
+        <li>Failed - raised when an error occurs.</li>
+        <li>DocumentLoaded - raised when a document has been loaded.</li>
+        <li>PageChanged - raised when viewed page is changed.</li>
+        <li>PageRendered - raised when a page had finished rendering.</li>
+        <li>RotationChanged - raised when when page rotation is changed.</li>
+        <li>Downloading - raised before user downloads the original document or PDF version.</li>
+        <li>Printing - raised before user prints the document.</li>
+        <li>PrintProgress - raised when print progress is changed.</li>
+        <li>Printed - raised when printing is completed.</li>
+        <li>TextSelected - raised when user selects text in the document.</li>
+        <li>TextCopied - raised when user copies the selected text in the document.</li>
+    </ul>
+</p>
+<p>
+    The value of an event property should be a valid JavaScript function name which is accessible on the host page. 
+    Function names should be specified without parentheses like "FunctionName" or "Namespace.FunctionName". 
+</p>

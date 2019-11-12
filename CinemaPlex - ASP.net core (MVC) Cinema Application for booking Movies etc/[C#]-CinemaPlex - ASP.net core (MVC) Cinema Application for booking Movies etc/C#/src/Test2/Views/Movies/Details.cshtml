@@ -1,0 +1,109 @@
+@model IEnumerable<CinemaPlex.Models.MovieModel>
+
+@{
+    ViewData["Title"] = "Movies";
+    int movieId = Convert.ToInt32(ViewData["MovieId"]);
+    var movieResults = Program.data.getMovie(movieId);
+    var sessionResults = Program.data.getSessionsbyMovie(movieId);
+}
+
+<h2>Movies</h2>
+
+<p>
+    <a asp-action="Index">Back to Movies</a>
+</p>
+<div class="block">
+    <div class="left movie-content-left">
+        <div id="ThumbImageDiv"><img src="@movieResults.MovieLogo" alt="@movieResults.Title"></div>
+        <div class="movie-name-info">
+            <h4>
+                @movieResults.Title
+            </h4>
+            <span>
+                @movieResults.Classification, @movieResults.RunningTime
+            </span>
+        </div>
+    </div>
+    <div class="right movie-content-right">
+        <div id="MovieInfo">
+            <div class="movie-landing-content">
+                <h1>@movieResults.Title</h1>
+                <p>@movieResults.Description</p>
+                <div class="summary">
+                    <div class="leftSide">
+                        Director
+                    </div><div class="rightSide">
+                        @movieResults.Director
+                    </div><div class="clear">
+
+                    </div><div class="leftSide">
+                        Main Cast
+                    </div><div class="rightSide">
+                        @movieResults.MainCast
+                    </div><div class="clear">
+
+                    </div><div class="leftSide">
+                        Classification
+                    </div><div class="rightSide">
+                        @movieResults.Classification
+                    </div><div class="clear">
+
+                    </div><div class="leftSide">
+                        Release Date
+                    </div><div class="rightSide">
+                        @movieResults.ReleaseDate
+                    </div><div class="clear">
+
+                    </div><div class="leftSide">
+                        Running Time
+                    </div><div class="rightSide">
+                        @movieResults.RunningTime
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video" id="trailer">
+            <script>
+            setTimeout(function () {
+                searchMovie('@movieResults.Title');
+            }, 500);
+            </script>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<h2>Sessions for this movie:</h2>
+@if (sessionResults != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Cinema
+                </th>
+                <th>
+                    Session Time
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var session in sessionResults)
+            {
+                var cinemaDetails = Program.data.getCinema(session.CineplexID);
+                <tr>
+                    <td>
+                        @Html.ActionLink(cinemaDetails.Location, "Details", "Cinemas", new { id = cinemaDetails.CineplexID })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => session.TimeRunning)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p> No sessions for this movie found..</p>
+}

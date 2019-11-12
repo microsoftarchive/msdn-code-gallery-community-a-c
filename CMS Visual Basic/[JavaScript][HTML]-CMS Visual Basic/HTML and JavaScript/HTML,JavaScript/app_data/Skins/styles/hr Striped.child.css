@@ -1,0 +1,10 @@
+hr
+{
+padding-top:20px;
+border:none;
+background:-moz-linear-gradient(top,rgba(100,100,100,0.5) 0%,rgba(255,255,255,0.5) 50%,rgba(100,100,100,0.5) 100%),-moz-repeating-linear-gradient(45deg,$ColorDark 0px,$ColorBright 0px,$ColorBright 25px,$ColorDark 25px,$ColorDark 50px);
+background:-webkit-linear-gradient(top,rgba(100,100,100,0.5) 0%,rgba(255,255,255,0.5) 50%,rgba(100,100,100,0.5) 100%),-webkit-repeating-linear-gradient(45deg,$ColorDark 0px,$ColorBright 0px,$ColorBright 25px,$ColorDark 25px,$ColorDark 50px);
+background:-o-linear-gradient(top,rgba(100,100,100,0.5) 0%,rgba(255,255,255,0.5) 50%,rgba(100,100,100,0.5) 100%),-o-repeating-linear-gradient(45deg,$ColorDark 0px,$ColorBright 0px,$ColorBright 25px,$ColorDark 25px,$ColorDark 50px);
+background:-ms-linear-gradient(top,rgba(100,100,100,0.5) 0%,rgba(255,255,255,0.5) 50%,rgba(100,100,100,0.5) 100%),-ms-repeating-linear-gradient(45deg,$ColorDark 0px,$ColorBright 0px,$ColorBright 25px,$ColorDark 25px,$ColorDark 50px);
+background:linear-gradient(top,rgba(100,100,100,0.5) 0%,rgba(255,255,255,0.5) 50%,rgba(100,100,100,0.5) 100%), repeating-linear-gradient(45deg,$ColorDark 0px,$ColorBright 0px,$ColorBright 25px,$ColorDark 25px,$ColorDark 50px);
+}

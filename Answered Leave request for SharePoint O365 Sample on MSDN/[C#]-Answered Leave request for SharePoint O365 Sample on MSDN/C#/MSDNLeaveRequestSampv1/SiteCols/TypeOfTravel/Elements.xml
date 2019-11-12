@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{c13fc594-fefc-4741-b9cc-4c1528850912}"
+       Name="TypeOfTravel"
+       DisplayName="Type Of Travel"
+       StaticName="TypeOfTravel"
+       Type="Choice"
+       Description="What is your purpose of Travel"
+       Required="TRUE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp"
+       FillInChoice="FALSE">
+        <CHOICES>
+          <CHOICE>TBD</CHOICE>          
+          <CHOICE>Work</CHOICE>
+          <CHOICE>Conference</CHOICE>
+          <CHOICE>Training</CHOICE>
+          <CHOICE>PTO</CHOICE>
+          <CHOICE>Other-UseComments</CHOICE>          
+        </CHOICES>
+        <Default>TBD</Default>
+  </Field>
+</Elements>

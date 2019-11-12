@@ -1,0 +1,32 @@
+﻿<section>
+    <header>
+        <h2 class="page-title" data-bind="text: title"></h2>
+
+        <div class="search-content">
+            <small>Name: </small>
+            <input data-bind="value: searchName" placeholder="[name]" />
+            <button class="btn btn-info"
+                data-bind="click: search">
+                Search</button>
+            <button class="btn btn-info"
+                data-bind="click: clearSearch">
+                Clear</button>
+        </div>
+    </header>
+    <div class="contact-counter">
+        <small data-bind="text: contacts().length"></small>
+        <small>found</small>
+    </div>
+    <section class="view-list" data-bind="foreach: contacts">
+        <article class="contact-content" title="Go to edit">
+            <div title="Go to edit">
+                <small data-bind="text: name" class="contactName "></small>
+                <small data-bind="text: mobile" class="clear-flot-right margin-top--10px"></small>
+                <small data-bind="text: email" class="clear-flot-right"></small>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <h2 class="contact-footer" style=""></h2>
+    </footer>
+</section>

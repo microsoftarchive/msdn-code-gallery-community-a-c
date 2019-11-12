@@ -1,0 +1,53 @@
+﻿@page
+@model SelectPdf.Samples.Pages.HttpHeadersModel
+@{
+    Layout = "~/Pages/_Layout.cshtml";
+    ViewData["Title"] = "SelectPdf Free Html To Pdf Converter for .NET Core - Sending HTTP Headers with Html to Pdf Converter - C# / ASP.NET Core MVC6";
+    ViewData["Description"] = "SelectPdf Sending HTTP Headers with Html to Pdf Converter Sample for C#/ASP.NET Core MVC6. Pdf Library for .NET with full sample code in C# and VB.NET.";
+    ViewData["Keywords"] = "http headers, pdf library, sample code, html to pdf, pdf converter";
+}
+
+<form method="post">
+    <article class="post type-post status-publish format-standard hentry">
+        <header class="entry-header">
+            <h1 class="entry-title">SelectPdf Free Html To Pdf Converter for .NET Core - Sending HTTP Headers with Html to Pdf Converter - C# / ASP.NET Core MVC6 Sample</h1>
+        </header>
+        <!-- .entry-header -->
+
+        <div class="entry-content">
+            <p>
+                This sample shows how to send HTTP headers to the page that will be converted using the html to pdf converter from SelectPdf Pdf Library for .NET.
+                <br />
+                <br />
+                Below, there is a link to a test page that will display the HTTP headers sent to it. Converting this page will display the headers sent by the html to pdf converter.
+                <br />
+                <br />
+                <a name="LnkTest" href="/ViewHttpHeaders" Target="_blank">Test page</a>
+            </p>
+            <p>
+                Url:<br />
+                <input type="text" asp-for="TxtUrl" style="width: 90%" />
+                <br />
+                <br />
+                HTTP Headers:<br />
+                <br />
+                Name: <input type="text" asp-for="TxtName1" value="Name1" style="width: 40%" />
+                Value: <input type="text" asp-for="TxtValue1" value="Value1" style="width: 40%" />
+                <br />
+                Name: <input type="text" asp-for="TxtName2" value="Name2" style="width: 40%" />
+                Value: <input type="text" asp-for="TxtValue2" value="Value2" style="width: 40%" />
+                <br />
+                Name: <input type="text" asp-for="TxtName3" value="Name3" style="width: 40%" />
+                Value: <input type="text" asp-for="TxtValue3" value="Value3" style="width: 40%" />
+                <br />
+                Name: <input type="text" asp-for="TxtName4" value="Name4" style="width: 40%" />
+                Value: <input type="text" asp-for="TxtValue4" value="Value4" style="width: 40%" />
+                <br />
+                <br />
+                <input type="submit" name="BtnConvert" value="Create PDF" class="mybutton" />
+            </p>
+        </div>
+        <!-- .entry-content -->
+    </article>
+    <!-- #post -->
+</form>

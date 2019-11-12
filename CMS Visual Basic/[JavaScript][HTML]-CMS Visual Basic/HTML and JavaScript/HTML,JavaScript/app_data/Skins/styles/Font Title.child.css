@@ -1,0 +1,13 @@
+@font-face {
+ font-family: $FontTitle;
+ src: url("resources/fonts/$FontTitle.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: $FontTitle;
+ src: url("resources/fonts/$FontTitle.ttf") /* TTF file for CSS3 browsers */
+}
+
+h1, .WebSiteTitle
+{
+  font-family: '$FontTitle' !important;
+}

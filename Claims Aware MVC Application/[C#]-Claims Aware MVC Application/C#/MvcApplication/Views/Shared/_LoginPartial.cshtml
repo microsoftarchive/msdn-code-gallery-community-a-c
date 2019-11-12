@@ -1,0 +1,9 @@
+﻿@if (Request.IsAuthenticated) {
+    <p>
+        Hello, @User.Identity.Name!
+    </p>
+} else {
+    <p>
+        You are anonymous!
+    </p>
+}

@@ -1,0 +1,34 @@
+﻿@model CURDCodeFirst.Models.StudentViewModel
+@using CURDCodeFirst.Models
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("_ModalHeader", new ModalHeader { Heading = String.Format("{0} Student", @Model.Id == 0 ? "Add" : "Edit") })
+    <div class="modal-body form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName, new { @class = "col-lg-3 col-sm-3 control-label" })
+            <div class="col-lg-6">
+                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control " })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.LastName, new { @class = "col-lg-3 col-sm-3 control-label" })
+            <div class="col-lg-6">
+                @Html.TextBoxFor(model => model.LastName, new { @class = "form-control " })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.EnrollmentNo, new { @class = "col-lg-3 col-sm-3 control-label" })
+            <div class="col-lg-6">
+                @Html.TextBoxFor(model => model.EnrollmentNo, new { @class = "form-control " })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, new { @class = "col-lg-3 col-sm-3 control-label" })
+            <div class="col-lg-6">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control " })
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_ModalFooter", new ModalFooter { })
+}

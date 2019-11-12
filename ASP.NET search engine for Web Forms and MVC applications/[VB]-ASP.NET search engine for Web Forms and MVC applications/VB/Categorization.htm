@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Categorization example</title>
+    <link href="Keyoti_SearchEngine_Web_Common/SearchUnit.css" rel="stylesheet" type="text/css" />
+    <script src="Keyoti_SearchEngine_Web_Common/SearchUnit.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        keyotiSearch.useWCFService=true;
+        keyotiSearch.indexDirectory = "~/CategorizedWebSite/IndexDirectory";   
+		keyotiSearch.onCategoryControlsCreated = function (data) {
+            if (!data.CategoriesEnabled)
+                alert("Sorry this feature is only present in the Pro edition, but you have installed either the Lite or Community edition.");
+        }
+		 </script>
+    <link href="_Stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id='header'>
+        <img src="/images/title-left.png" alt='title' title='Keyoti' />
+    </div>
+    <div id='content'>
+        <h1><a href="/index.htm">SearchUnit - Basic Examples</a> : Categorization</h1>
+        <p>SearchUnit (Pro) includes first class support for 'content' and 'location' categorization of results.  Templates can be used to change the control type (eg to a drop down) and appearance.  Categorization can be used alongside filters.</p>
+        <div id="sew_searchBoxControl"></div> <small>Try keywords like: purchase, postal, pens, lighthouse</small>
+        <br /><br />
+        
+        Location: <div id="sew_locationChooserControl"></div>
+        Content: <div id="sew_contentChooserControl"></div>
+        
+        <div style="max-width:800px;">
+            <div id="sew_searchResultControl"></div>
+        </div>
+    </div>
+</body>
+</html>

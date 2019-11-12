@@ -1,0 +1,14 @@
+﻿<Window x:Name="WPFCommonData" x:Class="WpfCommonDataAccess.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Common Data Providers" Height="400" Width="1100" Closing="WPFCommonData_Closing">
+    <Grid>
+        <TextBox x:Name="txtConnectionString" Height="23" TextWrapping="Wrap" Text="Connection String" VerticalAlignment="Top" Margin="0,0,355,0" TextChanged="txtConnectionString_TextChanged"/>
+        <ComboBox x:Name="comboProviders"  HorizontalAlignment="Right" Margin="0,0,69,0" VerticalAlignment="Top" Width="286" ToolTip="Db Providers Name installed on your PC..." SelectionChanged="comboProviders_SelectionChanged"/>
+        <Button x:Name="btnTest" Content="TEST" Margin="0,0,-2,0" VerticalAlignment="Top" ToolTip="Test Connection String" HorizontalAlignment="Right" Width="71" Click="btnTest_Click"/>
+        <TextBox x:Name="txtSQL"  Margin="0,22,0,23" TextWrapping="NoWrap" Text="SQL code here&#xD;&#xA;" ToolTip="SQL code here..." UndoLimit="1000" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" />
+        <Button x:Name="btnRun" Content="RUN" Margin="0,0,0,1" HorizontalAlignment="Right" Width="69" Height="22" VerticalAlignment="Bottom" Click="btnRun_Click"/>
+        <TextBlock x:Name="txtStatus" TextWrapping="Wrap" Text="Status" Height="23" VerticalAlignment="Bottom" Margin="0,0,69,0"/>
+
+    </Grid>
+</Window>

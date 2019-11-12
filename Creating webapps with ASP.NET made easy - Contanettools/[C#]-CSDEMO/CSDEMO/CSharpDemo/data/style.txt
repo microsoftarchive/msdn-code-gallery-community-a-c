@@ -1,0 +1,1 @@
+﻿ContaNetTools.jpg,1,Gris.jpg,DeepSkyBlue,3,4,White,1,SkyBlue,20,Arial,14,White,Transparent,1,8,,

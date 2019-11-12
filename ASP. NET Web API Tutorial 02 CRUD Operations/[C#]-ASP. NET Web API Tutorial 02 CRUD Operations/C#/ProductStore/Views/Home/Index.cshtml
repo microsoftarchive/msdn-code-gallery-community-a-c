@@ -1,0 +1,277 @@
+﻿@{
+    ViewBag.Title = "Product Store";
+}
+
+
+@section scripts { 
+    <style type="text/css">
+        table
+        {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            color: #666666;
+            min-width: 200px;
+        }
+        
+        tr
+        {
+            border: 1px solid #000;
+            line-height: 25px;
+        }
+        
+        th
+        {
+            background-color: #B1C3CC;
+            color: #000;
+            font-size: 13px;
+            text-align: left;
+        }
+        
+        th, td
+        {
+            padding-left: 5px;
+        }
+
+        #status {
+            color: red;
+        }
+        
+    </style>
+
+    <script src="@Url.Content("~/Scripts/knockout-2.1.0.debug.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function ViewModel() {
+
+            var self = this;
+
+            // A nested view model that represents a single product.
+            function ProductViewModel(product) {
+                var self = this;
+
+                self.Id = product.Id;
+                self.Name = product.Name;
+                self.Price = product.Price;
+                self.Category = product.Category;
+            }
+
+            self.products = ko.observableArray();   // Contains the list of products
+            self.product = ko.observable();
+
+            self.status = ko.observable();
+
+            // Get a list of all products
+            self.getAll = function () {
+
+                self.products.removeAll();
+                $.getJSON("/api/products", function (products) {
+                    $.each(products, function (index, product) {
+                        self.products.push(new ProductViewModel(product));
+                    })
+                });
+            }
+
+            // Find a product by product ID
+            self.getById = function () {
+                self.status("");
+                var id = $('#productId').val();
+
+                if (!id.length) {
+                    self.status("ID is required");
+                    return;
+                }
+                
+                // Send AJX request to get the product by ID
+                $.getJSON(
+                    'api/products/' + id,
+                    function (data) {
+                        self.product(new ProductViewModel(data));
+                    })
+                    // Handler for error response:
+                    .fail(
+                        function (xhr, textStatus, err) {
+                            self.product(null);
+                            self.status(err);
+                        });
+            }
+
+            // Update product details
+            self.update = function() {
+                self.status("");
+                var id = $('#productId').val();
+
+                var product = {
+                    Name: $('#name').val(),
+                    Price: $('#price').val(),
+                    Category: $('#category').val()
+                };
+
+                $.ajax({
+                    url: 'api/products/' + id,
+                    cache: false,
+                    type: 'PUT',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(product),
+                    success: self.getAll
+                })
+                .fail(
+                function (xhr, textStatus, err) {
+                    self.status(err);
+                });
+            }
+
+            self.create = function () {
+                self.status("");
+
+                var product = {
+                    Name: $('#name2').val(),
+                    Price: $('#price2').val(),
+                    Category: $('#category2').val()
+                };
+
+                $.ajax({
+                    url: 'api/products',
+                    cache: false,
+                    type: 'POST',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(product),
+                    statusCode: {
+                        201 /*Created*/: function (data) {
+                            self.products.push(data);
+                        }
+                    }
+                })
+                .fail(
+                function (xhr, textStatus, err) {
+                    self.status(err);
+                });
+
+            }
+
+            // Initialize the view-model
+            $.getJSON("/api/products", function (products) {
+                $.each(products, function (index, product) {
+                    self.products.push(new ProductViewModel(product));
+                })
+            });
+
+        }
+
+        function clearStatus() {
+            $('#status').html('');
+        }
+
+        function add() {
+
+            clearStatus();
+
+            var product = ko.toJS(viewModel);
+            var json = JSON.stringify(product);
+
+            $.ajax({
+                url: API_URL,
+                cache: false,
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: json,
+                statusCode: {
+                    201 /*Created*/: function (data) {
+                        self.products.push(data);
+                    }
+                }
+            });
+        }
+
+        var viewModel = new ViewModel();
+        ko.applyBindings(viewModel);
+
+        // Initialize jQuery tab widget
+        $("#tabs").tabs();
+     
+    </script>
+} 
+
+
+<div id="body">
+    <section class="content-wrapper main-content">
+        <h3>Products</h3>
+
+        <table id="products">
+        <thead>
+            <tr><th>ID</th><th>Name</th><th>Category</th><th>Price</th></tr>
+        </thead>
+        <tbody data-bind="foreach: products">
+            <tr>
+                <td data-bind="text: Id"></td>
+                <td data-bind="text: Name"></td>
+                <td data-bind="text: Category"></td>
+                <td data-bind="text: Price"></td>
+            </tr>
+        </tbody>
+        </table>
+
+    </section>
+    <section id="detail" class="content-wrapper">
+
+    <div id="tabs"> <!-- div for jQuery UI tabs -->
+	    <ul>
+		    <li><a href="#viewTab">View Product</a></li>
+		    <li><a href="#addNewTab">Add New Product</a></li>
+	    </ul>
+
+        <div id="viewTab">
+        <label for="productId">ID</label>
+        <input type="text" title="ID" name='Id' id="productId" size="5"/>
+        <input type="button" value="Get" data-bind="click: getById"/>
+
+        <div data-bind="if: product()">
+            <div>
+            <label for="name">Name</label>
+            <input data-bind="value: product().Name" type="text" title="Name" id="name" />
+            </div>
+
+            <div>
+            <label for="category">Category</label>
+            <input data-bind="value: product().Category" type="text" title="Category" id="category" />
+            </div>
+
+            <div>
+            <label for="price">Price</label>
+            <input data-bind="value: product().Price" type="text" title="Price" id="price" />
+            </div>
+
+            <div>
+            <input type="button" value="Update" data-bind="click: update" />
+            </div>
+        </div>
+        </div>
+
+        <div id="addNewTab">
+            <div>
+            <label for="name">Name</label>
+            <input type="text" title="Name" id="name2" />
+            </div>
+
+            <div>
+            <label for="category">Category</label>
+            <input type="text" title="Category" id="category2" />
+            </div>
+
+            <div>
+            <label for="price">Price</label>
+            <input type="text" title="Price" id="price2" />
+            </div>
+
+            <div>
+            <input type="button" value="Add New" data-bind="click: create"" />
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <p id="status" data-bind="text: status" />
+    </div>
+
+    </section>
+</div>
+

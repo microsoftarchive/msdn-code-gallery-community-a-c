@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ShanuSchoppingCart_WCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ShanuSchoppingCart_WCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfshoppingCartDataContract.itemDetailsDataContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="shoppingCartDataContract.itemDetailsDataContract" nillable="true" type="tns:shoppingCartDataContract.itemDetailsDataContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfshoppingCartDataContract.itemDetailsDataContract" nillable="true" type="tns:ArrayOfshoppingCartDataContract.itemDetailsDataContract" />
+  <xs:complexType name="shoppingCartDataContract.itemDetailsDataContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Item_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Item_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Item_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Item_Price" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="shoppingCartDataContract.itemDetailsDataContract" nillable="true" type="tns:shoppingCartDataContract.itemDetailsDataContract" />
+</xs:schema>

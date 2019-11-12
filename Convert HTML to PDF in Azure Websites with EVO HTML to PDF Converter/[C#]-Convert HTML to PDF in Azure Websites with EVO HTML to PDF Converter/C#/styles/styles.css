@@ -1,0 +1,40 @@
+﻿body {
+	font-family:Vedana; 
+	font-size:12px; 
+	font-weight:normal;
+	margin: 5px 5px 5px 5px;
+}
+
+table 
+{
+    font-family: Verdana; 
+    font-size: 12px;
+    border-spacing: 0px;
+}
+
+td { padding: 0px; }
+
+li
+{
+    margin-top: 5px;
+}
+
+input[type="checkbox"]
+{
+    margin-left : 0px;
+}
+
+input[type="radio"]
+{
+    margin-left : 0px;
+}
+
+.title
+{
+    font-size: 16px;
+}
+
+.subtitle
+{
+    font-size: 14px;
+}

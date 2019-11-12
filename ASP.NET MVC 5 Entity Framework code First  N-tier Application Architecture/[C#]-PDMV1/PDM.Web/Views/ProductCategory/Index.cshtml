@@ -1,0 +1,72 @@
+﻿@model PDM.Model.ProductCategory
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="container-fluid">
+        <div class="row top-buffer">
+            @Html.Partial("Search")
+            <div class="col-sm-1" style="margin-top:6px">
+                <a><span class="glyphicon glyphicon-refresh" id="btnrefreshCategory" title="Refresh"></span></a>
+            </div>
+            <div class="col-sm-1" style="margin-top:6px">
+                <a><span class="glyphicon glyphicon-plus" id="btnAddCategory" title="Add Category"></span></a>
+            </div>
+        </div>
+
+        @Html.Partial("Create", Model)
+
+        <div class="row top-buffer">
+            <div class="bg-primary form-control-static textalign-center">List of Categories </div>
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>Product Category Name</th>
+                        <th>Details</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    @Html.Partial("List", Model.ProductCategoryCollection)
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+@*Edit modal dialog start here*@
+<div class="modal fade" id="editCategoryModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="edit-category-container">
+        </div>
+    </div>
+</div>
+@*Edit modal dialog ends here*@
+
+
+@*detais modal dialog start here*@
+<div class="modal fade" id="detailsCategoryModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="details-category-container">
+        </div>
+    </div>
+</div>
+@*detais modal dialog ends here*@
+
+@*detais modal dialog start here*@
+<div class="modal fade" id="deleteCategoryModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="delete-category-container">
+        </div>
+    </div>
+</div>
+@*detais modal dialog ends here*@
+
+@section scripts
+{
+    <script src="~/Scripts/category.js"></script>
+}

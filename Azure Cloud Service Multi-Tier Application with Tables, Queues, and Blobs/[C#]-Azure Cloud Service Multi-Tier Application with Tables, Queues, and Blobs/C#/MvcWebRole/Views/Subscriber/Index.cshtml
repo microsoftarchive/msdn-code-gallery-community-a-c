@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MvcWebRole.Models.Subscriber>
+
+@{
+    ViewBag.Title = "Subscribers";
+}
+
+<h2>Subscribers</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ListName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Verified)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ListName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Verified)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { PartitionKey = item.PartitionKey, RowKey=item.RowKey }) |
+            @Html.ActionLink("Details", "Details", new { PartitionKey = item.PartitionKey, RowKey=item.RowKey }) |
+            @Html.ActionLink("Delete", "Delete", new { PartitionKey = item.PartitionKey, RowKey=item.RowKey  })
+        </td>
+    </tr>
+}
+
+</table>

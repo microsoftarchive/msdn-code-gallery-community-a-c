@@ -1,0 +1,13 @@
+== LICENSE ==
+
+The UNDERCON design, by LIM CHENG SOON, is licensed under the GNU General Public License:
+
+    This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. See the GNU General Public License for more details.
+
+    To view the GNU General Public License in it's entirety write to the Free Software Foundation, Inc, 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA or visit
+    
+    http://www.fsf.org/licensing/licenses/gpl.html
+    
+    If you have any further questions feel free to contact the author of this program, LIM CHENG SOON, at ceo@netizensmedia.com.  

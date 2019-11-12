@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AllPictureImageViewer", "AllPictureImageViewer\AllPictureImageViewer.fsproj", "{103E168A-BF11-4FC2-B814-F6DD954E112F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MyUserControl", "MyUserControl\MyUserControl.fsproj", "{EA8D1AB8-B22A-49E7-B1D7-138AD88E7081}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{103E168A-BF11-4FC2-B814-F6DD954E112F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{103E168A-BF11-4FC2-B814-F6DD954E112F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{103E168A-BF11-4FC2-B814-F6DD954E112F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{103E168A-BF11-4FC2-B814-F6DD954E112F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA8D1AB8-B22A-49E7-B1D7-138AD88E7081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8D1AB8-B22A-49E7-B1D7-138AD88E7081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8D1AB8-B22A-49E7-B1D7-138AD88E7081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8D1AB8-B22A-49E7-B1D7-138AD88E7081}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E1D853A-1C26-4B55-A019-09D6C58CE01D}
+	EndGlobalSection
+EndGlobal
+
+
+

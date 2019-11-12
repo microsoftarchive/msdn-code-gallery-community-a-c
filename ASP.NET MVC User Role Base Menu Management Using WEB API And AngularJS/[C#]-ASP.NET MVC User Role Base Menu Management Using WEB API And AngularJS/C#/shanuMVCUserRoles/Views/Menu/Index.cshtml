@@ -1,0 +1,475 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+
+<html data-ng-app="RESTClientModule">
+@{
+    ViewBag.Title = "Menu Management";
+}
+
+<style>
+    ul, li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu {
+        background: transparent;
+        height: 30px;
+        padding: 0 10px;
+        color: #FFFFFF;
+    }
+
+        .menu > li {
+            display: inline-block;
+            padding: 2px 6px 22px 2px;
+            display: inline-block;
+            text-align: center;
+            height: 32px;
+            width: 176px;
+            color: #FFFFFF;
+        }
+
+            .menu > li a {
+                display: inline-block;
+                background: url(../../Images/R1.PNG);
+                padding: 2px 6px 22px 2px;
+                display: inline-block;
+                text-align: center;
+                height: 32px;
+                width: 176px;
+                color: #FFFFFF;
+            }
+
+                .menu > li a:hover {
+                    display: inline-block;
+                    background: url(../../Images/R2.PNG);
+                    padding: 2px 6px 22px 2px;
+                    display: inline-block;
+                    text-align: center;
+                    height: 32px;
+                    width: 176px;
+                    color: #000000;
+                }
+
+    .sub-menu {
+        position: absolute;
+        display: none;
+        background-color: transparent;
+        padding: 5px;
+    }
+
+        .sub-menu > li {
+            display: block;
+            cursor: pointer;
+            background: url(../../Images/R1.PNG);
+        }
+
+            .sub-menu > li a:hover {
+                display: block;
+                cursor: pointer;
+                background: url(../../Images/R2.PNG);
+            }
+
+
+
+    .sub-menu2 {
+        position: absolute;
+        display: none;
+        background-color: pink;
+    }
+
+        .sub-menu2 > li {
+            display: block;
+            cursor: pointer;
+            background-color: green;
+        }
+
+            .sub-menu2 > li a:hover {
+                display: block;
+                cursor: pointer;
+                background-color: pink;
+            }
+
+
+    .sub-menu2 {
+        margin-top: -20px;
+        margin-left: 178px;
+    }
+
+    li:hover .sub-menu {
+        display: block;
+    }
+
+    li:hover .sub-menu2 {
+        display: block;
+    }
+</style>
+
+<body data-ng-controller="AngularJs_Controller">
+    <img src="~/Images/blank.gif" alt="" width="1" height="10" />
+    <table width="99%" style=" border-bottom:3px solid #3273d5;">
+        <tr>
+
+            <td class="style1">
+                <h3>Shanu - MVC Angular JS Menu Management  :)</h3>
+            </td>
+
+        </tr>
+    </table>
+    <img src="~/Images/blank.gif" alt="" width="1" height="2" />
+    <table id="tblContainer" style='width: 99%;table-layout:fixed;'>
+        <tr ng-show="showItem">
+            <td>
+                <table style=" background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td>
+                            <h3> Search Menu Details</h3>
+                           
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+
+                                    <td width="20"></td>
+                                    <td valign="top">
+
+                                        <table style="color:#9F000F;font-size:large" cellpadding="4" cellspacing="6">
+
+                                            <tr>
+                                                <td>
+                                                    <b>Menu ID</b>
+                                                </td>
+
+                                                <td>
+                                                    : <input type="text" name="txtMenuID" ng-model="sMenuID" value="" />
+                                                    <br />
+                                                </td>
+
+                                                <td>
+                                                    <b>   Email </b>
+                                                </td>
+
+                                                <td>
+                                                    :
+                                                    <input type="text" name="txtMenuName" ng-model="sMenuName" />
+
+                                                </td>
+                                                <td>
+                                                    <input type="submit" value="Search" style="background-color:#336699;color:#FFFFFF" ng-click="searchMenuDetails()" />
+
+                                                </td>
+                                            </tr>
+
+
+                                        </table>
+
+
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <img src="~/Images/blank.gif" alt="" width="1" height="4" />
+            </td>
+        </tr>
+        <tr ng-show="showMenuAdd">
+            <td>
+                <table width="99%">
+                    <tr>
+                        <td align="right">
+                            <input type="button" value="Add/Edit Menu Details" style="background-color:#334668;color:#FFFFFF;font-size:large;width:200px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;" ng-click="showMenuAddDetails()" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr ng-show="addEditMenu">
+            <td>
+
+                <table style=" background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td>
+                            <h3> Add/Edit Menu Details</h3>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+
+                                    <td width="20"></td>
+                                    <td valign="top">
+                                        <form novalidate name="f1" ng-submit="saveDetails()">
+                                            <table style="color:#9F000F;font-size:large" cellpadding="4" cellspacing="6">
+
+                                                <tr>
+                                                    <td>
+                                                        <b>Menu Identity ID: </b>
+                                                    </td>
+
+                                                    <td>
+                                                    
+                                                        <input type="text" name="txtMenuIDens" ng-model="MenuIdentitys" value="0" style="background-color:tan" readonly />
+                                                        <br />
+
+                                                    </td>
+
+
+                                                    <td>
+                                                        <b> * User Role : </b>
+                                                    </td>
+
+                                                    <td>
+                                                        <select name="opSelect" id="opSelect" ng-model="selectedUserRole">
+                                                            <option value="" selected>-- Select --</option>
+                                                            <option ng-repeat="option in userRoleData" value="{{option.Name}}">{{option.Name}}</option>
+
+                                                        </select>
+                                                        <br />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.opSelect.$error.required">Select User Role!</span>
+
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td>
+                                                        <b>Menu ID: </b>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <input type="text" name="txtMenuIDs" ng-model="menuIDs" placeholder=" Menu ID..." required />
+                                                        <br />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.txtMenuIDs.$error.required">Menu ID required!</span>
+
+                                                    </td>
+
+
+                                                    <td>
+                                                        <b> Menu Display Name : </b>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <input type="text" name="txtmenuNames" ng-model="menuNames" placeholder=" Menu Name ..." required />
+                                                        <br />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.txtmenuNames.$error.required">Menu Name required!</span>
+
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <b>File Name: </b>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <input type="text" name="txtmenuFileNames" ng-model="menuFileNames" placeholder=" File Name..." required />
+                                                        <br />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.txtMenuIDs.$error.required">File Name required!</span>
+
+                                                    </td>
+
+
+                                                    <td>
+                                                        <b> Menu URL : </b>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <input type="text" name="txtMenuURLs" ng-model="MenuURLs" placeholder=" Menu URL ..." required />
+                                                        <br />
+                                                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.txtMenuURLs.$error.required">Menu URL required!</span>
+
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <b>Parent MenuID : </b>
+                                                    </td>
+
+                                                    <td>
+                                                        <select name="opSelect" id="opSelect" ng-model="parentMenuIDs">
+                                                            <option value="*" selected>*</option>
+                                                            <option ng-repeat="option in MenuDataSelect" value="{{option.MenuID}}">{{option.MenuID}}</option>
+                                                            <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.parentMenuIDs.$error.required">Select parent ID required!</span>
+
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <b>  Menu Visible(Yes/No) : </b> <input type="checkbox" ng-model="UseYNs">
+                                                        </td>
+
+                                                    <td >
+
+
+                                                        <input type="submit" value="Save Item" style="background-color:#336699;color:#FFFFFF" required />
+
+                                                    </td>
+                                                </tr>
+
+
+
+                                            </table>
+
+                                        </form>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <img src="~/Images/blank.gif" alt="" width="1" height="4" />
+
+
+            </td>
+        </tr>
+        <tr ng-show="MenuList">
+
+            <td>
+
+                <table style=" background-color:#FFFFFF; border: solid 2px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td width="40" align="center">Edit</td>
+                        <td width="40" align="center">Delete</td>
+                        <td width="100" align="center">Menu ID</td>
+                        <td width="120" align="center">Menu Name</td>
+                        <td width="120" align="center">Parent Menu ID</td>
+                        <td width="120" align="center">User Role</td>
+                        <td width="100" align="center">Menu File Name</td>
+                        <td width="200" align="center">Menu URL</td>
+                        <td width="100" align="center">Menu Visible </td>
+
+                    </tr>
+                    <tbody data-ng-repeat="menus in MenuData">
+                        <tr>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    <img src="~/Images/edit.gif" alt="Edit" width="24px" height="24px" ng-click="menuEdit(menus.MenuIdentity,menus.MenuID,menus.MenuName,menus.Parent_MenuID,menus.User_Roll,menus.MenuFileName,menus.MenuURL,menus.USE_YN)">
+                                </span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    <img src="~/Images/delete.gif" alt="Delete" width="24px" height="24px" ng-click="MenuDelete(menus.MenuIdentity,menus.MenuName)">
+                                </span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">{{menus.MenuID}}</span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">{{menus.MenuName}}</span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">{{menus.Parent_MenuID}}</span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">{{menus.User_Roll}}</span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">{{menus.MenuFileName}}</span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">{{menus.MenuURL}}</span>
+                            </td>
+
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">{{menus.USE_YN}}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+  
+
+    <img src="~/Images/blank.gif" alt="" width="1" height="6" />
+    <table  style='width: 99%;table-layout:fixed;'>
+        <tr>
+            <td>
+                <table style=" background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td>
+                            <h3> Menu Details</h3>
+                            <input type="hidden" id="txtuserRoleName" value="@ViewBag.UserRole" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="overflow:visible;height:100px;">
+                                <ul class="menu">
+                                    <li data-ng-repeat="menus in generateMenuData | filter:{Parent_MenuID:'*'}">
+                                        @{var url = Url.Action("{{menus.MenuFileName}}", "{{menus.MenuURL}}", new { id = "{{id=menus.MenuURL}}" });
+                                            url = HttpUtility.UrlDecode(url);
+                                        }
+                                        <a data-ng-href="@url">{{menus.MenuName}}</a>
+
+                                        <ul class="sub-menu">
+                                            <li data-ng-repeat="submenus in generateMenuData | filter:{Parent_MenuID:menus.MenuID}:true" ng-mouseover="showsubMenu(1,submenus.MenuID);" ng-mouseout="showsubMenu(0,submenus.MenuID);">
+                                                @{var url1 = Url.Action("{{submenus.MenuFileName}}", "{{submenus.MenuURL}}", new { id = "{{id=submenus.MenuURL}}" });
+                                                    url1 = HttpUtility.UrlDecode(url1);
+                                                }
+                                                <a data-ng-href="@url1">{{submenus.MenuName}}</a>
+
+                                                <ul ng-show="showSubDetails" class="sub-menu2">
+                                                    <li data-ng-repeat="sub1menus in generateMenuData  | filter:{Parent_MenuID:submenus.MenuID}" ng-mouseover="showsubMenu(3,9);">
+                                                        @{var url2 = Url.Action("{{sub1menus.MenuFileName}}", "{{sub1menus.MenuURL}}", new { id = "{{id=sub1menus.MenuURL}}" });
+                                                            url2 = HttpUtility.UrlDecode(url2);
+                                                        }
+                                                        <a data-ng-href="@url2">{{sub1menus.MenuName}}</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-animate.js"></script>
+<script src="~/Scripts/angular-animate.min.js"></script>
+<script src="~/Scripts/MYAngular/controller.js"></script>
+
+
+

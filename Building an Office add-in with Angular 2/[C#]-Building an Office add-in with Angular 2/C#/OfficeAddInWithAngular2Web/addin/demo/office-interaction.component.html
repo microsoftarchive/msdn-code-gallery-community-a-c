@@ -1,0 +1,35 @@
+<div class="ms-Grid">
+    <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12">
+            <h2 class="ms-font-xxl">{{title}}</h2>
+        </div>
+    </div>
+    <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12">
+            <p>{{description}}</p>
+        </div>
+    </div>
+    <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12">
+            <form class="form" role="form" #sampleForm="ngForm" (ngSubmit)="submit()">
+                <div class="ms-TextField ms-TextField--multiline">
+                    <label class="ms-Label">Enter text here</label>
+                    <textarea class="ms-TextField-field" [(ngModel)]="userInput" name="userInput" #name="ngModel" [disabled]="isBusy" required></textarea>
+                </div>
+                <button class="ms-Button ms-Button--primary" type="submit" [disabled]="isBusy">
+                    <span class="ms-Button-label">submit</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12">
+            <p>{{feedback}}</p>
+        </div>
+    </div>
+    <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12">
+            <back-button destination="overview"></back-button>
+        </div>
+    </div>
+</div>

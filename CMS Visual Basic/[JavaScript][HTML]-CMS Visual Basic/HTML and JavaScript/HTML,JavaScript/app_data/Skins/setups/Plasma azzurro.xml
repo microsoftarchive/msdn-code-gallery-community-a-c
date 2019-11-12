@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin setup -->
+<variables>
+	<!-- Inside variables to define elements to load -->
+	<add key="ImageTopLeft" value="resources/images/logos/wc.png"/>
+	<add key="Logo" value="resources/images/logos/copyright.png"/>
+	<add key="BannerAccommodations" value=""/>
+	<add key="BannerServices" value=""/>
+	<add key="Favicon" value="resources/images/favicons/favicon.ico"/>
+	<add key="FolderIcons" value="48"/>
+ 	<add key="bgsound" value=""/>
+  	<add key="SoundOnlyAtStartSession" value="true"/>
+ 	<add key="ButtonsWithIcons" value="false"/>
+  <!-- Optional variables for replace in CSS file -->
+	<add key="BackgroundColorPage" value="white"/>
+  	<add key="BackgroundImage" value="resources/images/backgrounds/plasma3.gif"/>
+  	<add key="BackgroundSize" value="100%"/>
+  	<add key="BackgroundRepeat" value="repeat"/>
+  	<add key="FontColor" value="#001"/>
+	<add key="FontFamily" value="verdana"/>
+	<add key="FontSize" value="0.8em"/>
+
+  <!-- START Font personalizations (need style fonts.child.css) -->
+	<add key="Font1" value="Computerfont"/>
+	<add key="Font2" value="Moltorv2"/>
+ 	<add key="ButtonsFontSize" value="2em"/>
+	<add key="MenuFontSize" value="1.4em"/>
+	<!-- END Font personalizations -->
+
+
+  <add key="BackgroundImageBox" value="resources/images/backgrounds/papir2.gif"/>
+	<add key="BackgroundColorBox" value="white"/>
+	<add key="BorderColorBox" value="#6f688f"/>
+	<add key="BackgroundColorButton" value="#bdb1f2"/>
+
+	<add key="PointListMenu" value="resources/images/ListStyleImage/3.png"/>
+
+	<add key="ColorLink" value="#9e0514"/>
+	<add key="ColorVisitedLink" value="#b80617"/>
+
+	<add key="ColorDark" value="#8981b1"/>
+	<add key="ColorBright" value="#c4b8fd"/>
+
+	<add key="Pattern1" value=""/>
+
+	<add key="ParRowColor" value="#edeafc"/>
+	<!-- Back Ground color for par box and box menu-->
+	<add key="OddRowColor" value="#fbebeb"/>
+	<!-- Back Ground color for unpair box -->
+	<add key="QuoteColor" value="white"/>
+	<!-- Back Ground color for quote -->
+
+	<!-- Border of screen -->
+	<add key="BodyMargin" value="10px"/>
+	<add key="BodyBorderWidth" value="0px"/>
+	<add key="BodyMarginInside" value="0px"/>
+
+	<!-- Rounded element -->
+	<add key="RoundedButton" value="8px"/>
+	<add key="RoundedMenu" value="16px"/>
+
+	<!-- shadow -->
+	<add key="shadow" value="5px 5px 15px #000000"/>
+
+	<!-- Menu -->
+	<add key="BorderMenu" value="2px outset"/>
+
+
+
+</variables>

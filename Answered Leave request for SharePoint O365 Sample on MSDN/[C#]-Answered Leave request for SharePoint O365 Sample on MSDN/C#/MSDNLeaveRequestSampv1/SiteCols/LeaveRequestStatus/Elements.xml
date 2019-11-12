@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{f3349d6a-7d08-4b8c-9001-1c0182499324}"
+       Name="LeaveRequestStatus"
+       DisplayName="Leave Request Status"
+       StaticName="LeaveRequestStatus"
+       Type="Choice"
+       Description="DO NOT MODIFY THIS FIELD"
+       Required="TRUE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp"
+       FillInChoice="FALSE">
+        <CHOICES>
+          <CHOICE>Submitted</CHOICE>          
+          <CHOICE>Pending</CHOICE>
+          <CHOICE>Rejected</CHOICE>
+          <CHOICE>Approved</CHOICE>
+        </CHOICES>
+        <Default>Submitted</Default>
+  </Field>
+</Elements>

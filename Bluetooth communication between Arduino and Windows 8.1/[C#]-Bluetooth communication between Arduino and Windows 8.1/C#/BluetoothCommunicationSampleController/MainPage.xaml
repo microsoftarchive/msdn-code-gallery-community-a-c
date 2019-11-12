@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="BluetoothCommunicationSampleController.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BluetoothCommunicationSampleController"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!--the StackPanel below contains the Connect/Cancel/Disconnect Buttons. They are bound to the BluetoothManager and use the UIConverter to enable/disable-->
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" DataContext="{StaticResource BluetoothManager}">
+                    <TextBlock Text="Connection" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,0,0,10" />
+                    <ProgressRing IsActive="{Binding State, Converter={StaticResource UIConverter}, ConverterParameter=BluetoothInProgress}" Margin="10" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" DataContext="{StaticResource BluetoothManager}">
+                    <Button Content="Connect" IsEnabled="{Binding State, Converter={StaticResource UIConverter}, ConverterParameter=BluetoothConnect}" Width="100" Click="BluetoothConnect_Click" />
+                    <Button Content="Cancel" Command="{Binding BluetoothCancelCommand}" IsEnabled="{Binding State, Converter={StaticResource UIConverter}, ConverterParameter=BluetoothConnecting}" Width="100" />
+                    <Button Content="Disconnect" Command="{Binding BluetoothDisconnectCommand}" IsEnabled="{Binding State, Converter={StaticResource UIConverter}, ConverterParameter=BluetoothDisconnect}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center">
+                <Button x:Name="redButton" Click="LEDButton_Click" Content="Red" Width="100" Tag="RED" />
+                <Button x:Name="greenButton" Click="LEDButton_Click" Content="Green" Width="100" Tag="GREEN" />
+            </StackPanel>
+            <TextBlock Text="A0" />
+            <ProgressBar x:Name="A0bar" Maximum="1023" Height="40" Foreground="#FF2FC6FF" />
+            <ScrollViewer x:Name="scrollViewer" Height="200" Margin="0,10">
+                <TextBlock x:Name="console" TextWrapping="Wrap" />
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>

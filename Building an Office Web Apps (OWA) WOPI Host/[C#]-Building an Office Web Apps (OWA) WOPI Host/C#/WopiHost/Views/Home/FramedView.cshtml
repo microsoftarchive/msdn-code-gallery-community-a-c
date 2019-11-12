@@ -1,0 +1,83 @@
+﻿@model MainWeb.Models.FileRequest
+
+@{
+    ViewBag.Title = "OWA WOPI Host";
+}
+
+<h2>Wopi Host</h2>
+<div>
+    <div>
+        <fieldset>
+            <legend>OWA Url utility</legend>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.name)
+            </div>
+            <div class="display-field inset">
+                @Html.TextBoxFor(model => model.name)
+            </div>
+            <div>
+                Sample Documents
+            </div>
+            <div class="display-label">
+                @Html.DropDownListFor(
+                 x => x.SelectedItemId,
+                 new SelectList(Model.Items, "Value", "Text"))
+            </div>
+        </fieldset>
+        <input id="btnGetLink" type="submit" value="Get Link" />
+        <div>
+            <div>Result URL</div>
+            <span id="urlResult"></span>
+            <div id="urlResultLink"></div>
+        </div>
+    </div>
+    <div>
+        Frame View
+        <div>
+            <iframe id="mainFrame" width="1000" height="900"></iframe>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#btnGetLink').click(function () {
+                $('#urlResult').text("");
+                $('#urlResultLink').html("");
+                var url1 = $('input[id=name]').val();
+                var token = $('input[id=access_token]').val();
+                var pathAndQuery = "?name=" + url1 + "&access_token=" + token;
+
+                $.getJSON('@ViewBag.RootPath' + '/api/Link/GetLink' + pathAndQuery, function (data, status, x) {
+                    var newUrl = data.Url;
+                    var newUrlLink = "<a target='_blank' href='" + newUrl + "'>" + newUrl + "</a>";
+
+                    $('#urlResult').text(newUrl);
+                    $('#urlResultLink').html(newUrlLink);
+
+                    $('#mainFrame').attr('src', newUrl);
+
+                });
+
+            });
+
+            $('#SelectedItemId').change(function () {
+                var choice = $(this).val();
+                $('input[id=name]').val(choice);
+            });
+        });
+    </script>
+}
+
+@section extraStyles {
+    <style>
+        input[id=name] {
+            width: 600px;
+        }
+
+        input[id=access_token] {
+            width: 600px;
+        }
+    </style>
+}

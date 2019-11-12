@@ -1,0 +1,93 @@
+﻿@using WebApplication.Extensions
+@model WebApplication.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage";
+    ViewBag.SubTitle = "Change your account settings";
+}
+
+@if (ViewBag.StatusMessage != string.Empty)
+{
+    <div class="callout callout-info" style="margin-bottom: 0 !important;">
+        <h4><i class="fa fa-info"></i> Note:</h4>
+        @ViewBag.StatusMessage
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="box box-primary">
+            <div class="box-body box-profile">
+                <img class="profile-user-img img-responsive img-circle" src="~/AdminLTE/dist/img/user.svg" alt="User profile picture">
+                <h3 class="profile-username text-center">@User.Identity.GetUserNameIdentifier()</h3>
+                <p class="text-muted text-center">@User.Identity.GetUserEmail()</p>
+                <ul class="list-group list-group-unbordered">
+                    <li class="list-group-item">
+                        <b>Password</b>
+                        <div class="pull-right">
+                            [@(Model.HasPassword ? Html.ActionLink(" Change your password ", "ChangePassword") : Html.ActionLink("Create", "SetPassword"))]
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <b>External Logins</b>
+                        <div class="pull-right">
+                           @Model.Logins.Count [ @Html.ActionLink(" Manage ", "ManageLogins") ]
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        @*
+                            Phone Numbers can used as a second factor of verification in a two-factor authentication system.
+
+                             See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                                for details on setting up this ASP.NET application to support two-factor authentication using SMS.
+
+                             Uncomment the following block after you have set up two-factor authentication
+                        *@
+                        <b>Phone Number</b>
+                        <div class="pull-right">
+                            @(Model.PhoneNumber ?? "None") [
+                            @if (Model.PhoneNumber != null)
+                            {
+                                @Html.ActionLink("Change", "AddPhoneNumber")
+                                @: &nbsp;|&nbsp;
+                                @Html.ActionLink("Remove", "RemovePhoneNumber")
+                            }
+                            else
+                            {
+                                @Html.ActionLink("Add", "AddPhoneNumber")
+                            }
+                            ]
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Two-Factor Authentication</b>
+                        <p>
+                            There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                            for details on setting up this ASP.NET application to support two-factor authentication.
+                        </p>
+                        @*@if (Model.TwoFactor)
+                            {
+                                using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <text>Enabled
+                                    <input type="submit" value="Disable" class="btn btn-link" />
+                                    </text>
+                                }
+                            }
+                            else
+                            {
+                                using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <text>Disabled
+                                    <input type="submit" value="Enable" class="btn btn-link" />
+                                    </text>
+                                }
+                            }*@
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8"></div>
+</div>

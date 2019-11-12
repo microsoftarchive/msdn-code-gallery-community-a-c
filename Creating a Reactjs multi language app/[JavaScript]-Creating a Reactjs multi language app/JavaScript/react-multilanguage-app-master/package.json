@@ -1,0 +1,34 @@
+{
+  "name": "react-multilanguage-app",
+  "version": "1.0.0",
+  "description": "React Office UI Fabric Multilanguage App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dedug": "webpack --progress --colors --watch",
+    "prod": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giuleon/react-multilanguage-app.git"
+  },
+  "author": "Giuliano De Luca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giuleon/react-multilanguage-app/issues"
+  },
+  "homepage": "https://github.com/giuleon/react-multilanguage-app#readme",
+  "dependencies": {
+    "@types/prop-types": "^15.5.1",
+    "@types/react": "^15.0.38",
+    "@types/react-dom": "^15.5.1",
+    "office-ui-fabric-react": "^4.22.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.2.1",
+    "source-map-loader": "^0.2.1",
+    "typescript": "^2.4.2"
+  }
+}

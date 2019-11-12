@@ -1,0 +1,278 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML dir=ltr XMLNS:MSHelp = "http://msdn.microsoft.com/mshelp" xmlns:ddue = 
+"http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink = 
+"http://www.w3.org/1999/xlink" xmlns:tool = "http://www.microsoft.com/tooltip" 
+XMLNS:[default] http://ddue.schemas.microsoft.com/authoring/2003/5 = 
+"http://ddue.schemas.microsoft.com/authoring/2003/5"><HEAD><TITLE>Code First Northwind Data Service</TITLE>
+<META content="text/html; CHARSET=utf-8" http-equiv=Content-Type></META>
+<META name=save content=history></META><LINK rel=stylesheet type=text/css 
+href="readme_files/Classic.css"></LINK>
+<SCRIPT src="readme_files/script.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16800"></HEAD>
+<BODY><INPUT id=userDataCache class=userDataStyle type=hidden></INPUT><INPUT 
+id=hiddenScrollOffset type=hidden></INPUT><IMG 
+style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=dropDownImage 
+src="readme_files/drpdown.gif"></IMG><IMG 
+style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=dropDownHoverImage 
+src="readme_files/drpdown_orange.gif"></IMG><IMG 
+style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=copyImage 
+src="readme_files/copycode.gif"></IMG><IMG 
+style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=copyHoverImage 
+src="readme_files/copycodeHighlight.gif"></IMG><IMG 
+style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=collapseImage 
+src="readme_files/collapse.gif"></IMG><IMG 
+style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=expandImage 
+src="readme_files/exp.gif"></IMG>
+<DIV id=header>
+<TABLE id=topTable width="100%">
+  <TBODY>
+  <TR id=headerTableRow1>
+    <TD align=left><SPAN id=runningHeaderText></SPAN></TD></TR>
+  <TR id=headerTableRow2>
+    <TD align=left><SPAN id=nsrTitle>Code First Northwind Data 
+    Service</SPAN></TD></TR>
+  <TR id=headerTableRow3>
+    <TD></TD></TR></TBODY></TABLE></DIV>
+<DIV id=mainSection>
+<DIV id=mainBody>
+<DIV id=allHistory class=saveHistory onload="loadAll()" 
+onsave="saveAll()"></DIV>
+<P>The code-first functionality in Entity Framework 4.1 enables you to create a 
+data model by first creating a set of data classes and then exposing those 
+classes as typed <A 
+href="http://msdn.microsoft.com/en-us/library/gg696460(v=VS.103).aspx" 
+target=_blank alt=""><linkText 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">DbSet</linkText></A> 
+objects accessible from a <A 
+href="http://msdn.microsoft.com/en-us/library/system.data.entity.dbcontext(v=VS.103).aspx" 
+target=_blank alt=""><linkText 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">DbContext</linkText></A> 
+object. For more information, see <A 
+href="http://msdn.microsoft.com/en-us/library/gg696169(v=VS.103).aspx" 
+target=_blank alt=""><linkText 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Creating and Mapping 
+a Conceptual Model (Entity Framework 4.1)</linkText></A>.</P>
+<P>Because <A 
+href="http://msdn.microsoft.com/en-us/library/system.data.entity.dbcontext(v=VS.103).aspx" 
+target=_blank alt=""><linkText 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">DbContext</linkText></A> 
+inherits from <A 
+href="http://msdn.microsoft.com/en-us/library/system.data.objects.objectcontext" 
+target=_blank alt=""><linkText 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">ObjectContext</linkText></A>, 
+you can use <A 
+href="http://msdn.microsoft.com/en-us/library/system.data.entity.dbcontext(v=VS.103).aspx" 
+target=_blank alt=""><linkText 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">DbContext</linkText></A> 
+as the data source for a data service using the Entity Framework provider. This 
+sample defines an OData service by creating a code-first data model to access 
+tables in an existing Northwind sample database. This data model is used as the 
+Entity Framework-based provider for the data service. This sample shows how to 
+the data service to support an Entity Framework provider based on <A 
+href="http://msdn.microsoft.com/en-us/library/system.data.entity.dbcontext(v=VS.103).aspx" 
+target=_blank alt=""><linkText 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">DbContext</linkText></A> 
+instead of the usual typed <A 
+href="http://msdn.microsoft.com/en-us/library/system.data.objects.objectcontext" 
+target=_blank alt=""><linkText 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">ObjectContext</linkText></A>.</P>
+<DIV>
+<H2 class=heading><SPAN style="CURSOR: default" tabIndex=0 
+onkeypress=ExpandCollapse_CheckKey(ID0ECABA) 
+onclick=ExpandCollapse(ID0ECABA)><IMG id=ID0ECABA class=toggle name=toggleSwitch 
+src="readme_files/collapse.gif"></IMG>Prerequisites</SPAN></H2>
+<DIV id=sectionSection0 class=section><content 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+<P xmlns="">Before running this sample, make sure that the following software is 
+installed:</P>
+<UL xmlns="">
+  <LI class=unordered>Visual Studio 2010<BR>
+  <LI class=unordered>An instance of Microsoft&nbsp;SQL Server.&nbsp;This 
+  includes SQL Server Express, which is included in a default installation of 
+  Visual Studio.<BR>
+  <LI class=unordered>The Northwind sample database. To download this sample 
+  database, see the download page, <A 
+  href="http://go.microsoft.com/fwlink/?linkid=24758" target=_blank 
+  alt=""><linkText 
+  xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Sample Databases 
+  for SQL Server</linkText></A>.<BR>
+  <LI class=unordered>Entity Framework 4.1, which can be downloaded and 
+  installed from the <A href="http://go.microsoft.com/fwlink/?LinkId=207115" 
+  target=_blank alt=""><linkText 
+  xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Download 
+  Center</linkText></A>.<BR></LI></UL></content></DIV></DIV>
+<DIV>
+<H2 class=heading><SPAN style="CURSOR: default" tabIndex=0 
+onkeypress=ExpandCollapse_CheckKey(ID0EBABA) 
+onclick=ExpandCollapse(ID0EBABA)><IMG id=ID0EBABA class=toggle name=toggleSwitch 
+src="readme_files/collapse.gif"></IMG>Building and Accessing the Sample Data 
+Service</SPAN></H2>
+<DIV id=sectionSection1 class=section><content 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+<P xmlns="">Use the following procedures to configure, build, and access the 
+sample data service.</P>
+<DIV xmlns="">
+<DIV><SPAN style="CURSOR: default" tabIndex=0 
+onkeypress=ExpandCollapse_CheckKey(ID0EBABABA) 
+onclick=ExpandCollapse(ID0EBABABA)><IMG id=ID0EBABABA class=toggle 
+name=toggleSwitch src="readme_files/collapse.gif"></IMG><B>To configure the data 
+service and build the sample</B></SPAN></DIV>
+<DIV class=subSection><ddue:steps 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+<OL class=ordered xmlns="">
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">Unzip the sample files on the local computer.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">In Visual Studio, open the CodeFirstNorthwind.sln solution file in 
+  the root directory of the sample.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">In Solution Explorer, expand <B>References</B> and locate the 
+  entry for EntityFramework. </P>
+  <P xmlns="">If this reference is indicated with a yellow triangle because the 
+  reference assembly cannot currently be located, remove and re-add a reference 
+  to the installed Entity Framework 4.1 assembly.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">(Optional) In the Solution Explorer, open the Web.config file and 
+  change the <I>data source</I> parameter in the <B>NorthwindEntities</B> 
+  connection string to the name of the SQL Server instance running the Northwind 
+  database. </P>
+  <P xmlns="">Do this only if Northwind is running on a SQL Server instance 
+  other than the default SQL Server Express instance.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">Build the sample.</P></content></LI></OL></ddue:steps></DIV></DIV>
+<DIV xmlns="">
+<DIV><SPAN style="CURSOR: default" tabIndex=0 
+onkeypress=ExpandCollapse_CheckKey(ID0EAABABA) 
+onclick=ExpandCollapse(ID0EAABABA)><IMG id=ID0EAABABA class=toggle 
+name=toggleSwitch src="readme_files/collapse.gif"></IMG><B>To run the Northwind 
+data service sample</B></SPAN></DIV>
+<DIV class=subSection><ddue:steps 
+xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+<OL class=ordered xmlns="">
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">(Optional) In Internet Explorer, from the <B>Tools</B> menu, 
+  select <B>Internet Options</B>, click the <B>Content</B> tab, click 
+  <B>Settings</B>, and clear <B>Turn on feed viewing</B>. </P>
+  <P xmlns="">This makes sure that feed reading is disabled. If you do not 
+  disable this functionality, then the Web browser will treat the returned 
+  AtomPub encoded document as an XML feed instead of displaying the raw XML 
+  data. </P>
+  <DIV class=alert xmlns="">
+  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+    <TBODY>
+    <TR>
+      <TH align=left><IMG class=note src="readme_files/note.gif"></IMG>Note: 
+      </TH></TR>
+    <TR>
+      <TD>If your browser cannot display the feed as raw XML data, you should 
+        still be able to view the feed as the source code for the page.
+        <P></P></TD></TR></TBODY></TABLE>
+  <P></P></DIV></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">With the project loaded in Visual Studio, press F5.</P>
+  <P xmlns="">A new browser window is opened and the root URI of the service is 
+  displayed.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">In Visual Studio, press the F5 key to start debugging the 
+  application.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">Open a Web browser on the local computer. In the address bar, 
+  enter the following URI:</P>
+  <DIV class=code xmlns=""><SPAN codeLanguage="other">
+  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+    <TBODY>
+    <TR>
+      <TH>&nbsp;</TH>
+      <TH><SPAN class=copyCode onfocusin=ChangeCopyCodeIcon(this) 
+        onmouseover=ChangeCopyCodeIcon(this) onfocusout=ChangeCopyCodeIcon(this) 
+        tabIndex=0 onkeypress=CopyCode_CheckKey(this) 
+        onmouseout=ChangeCopyCodeIcon(this) onclick=CopyCode(this)><IMG 
+        class=copyCodeImage name=ccImage align=absMiddle 
+        src="readme_files/copycode.gif"></IMG>Copy Code</SPAN></TH></TR>
+    <TR>
+      <TD colSpan=2><PRE>http://localhost:54321/northwind.svc</PRE></TD></TR></TBODY></TABLE></SPAN></DIV>
+  <P xmlns="">This returns the default service document, which contains a list 
+  of entity sets that are exposed by this data service.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">In the address bar of your Web browser, enter the following 
+  URI:</P>
+  <DIV class=code xmlns=""><SPAN codeLanguage="other">
+  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+    <TBODY>
+    <TR>
+      <TH>&nbsp;</TH>
+      <TH><SPAN class=copyCode onfocusin=ChangeCopyCodeIcon(this) 
+        onmouseover=ChangeCopyCodeIcon(this) onfocusout=ChangeCopyCodeIcon(this) 
+        tabIndex=0 onkeypress=CopyCode_CheckKey(this) 
+        onmouseout=ChangeCopyCodeIcon(this) onclick=CopyCode(this)><IMG 
+        class=copyCodeImage name=ccImage align=absMiddle 
+        src="readme_files/copycode.gif"></IMG>Copy Code</SPAN></TH></TR>
+    <TR>
+      <TD colSpan=2><PRE>http://localhost:54321/northwind.svc/Customers</PRE></TD></TR></TBODY></TABLE></SPAN></DIV>
+  <P xmlns="">This returns a set of all customers in the Northwind sample 
+  database.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">In the address bar of your Web browser, enter the following 
+  URI:</P>
+  <DIV class=code xmlns=""><SPAN codeLanguage="other">
+  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+    <TBODY>
+    <TR>
+      <TH>&nbsp;</TH>
+      <TH><SPAN class=copyCode onfocusin=ChangeCopyCodeIcon(this) 
+        onmouseover=ChangeCopyCodeIcon(this) onfocusout=ChangeCopyCodeIcon(this) 
+        tabIndex=0 onkeypress=CopyCode_CheckKey(this) 
+        onmouseout=ChangeCopyCodeIcon(this) onclick=CopyCode(this)><IMG 
+        class=copyCodeImage name=ccImage align=absMiddle 
+        src="readme_files/copycode.gif"></IMG>Copy Code</SPAN></TH></TR>
+    <TR>
+      <TD colSpan=2><PRE>http://localhost:54321/northwind.svc/Customers('ALFKI')</PRE></TD></TR></TBODY></TABLE></SPAN></DIV>
+  <P xmlns="">This returns an entity instance for the specific customer, 
+  <CODE>ALFKI</CODE>.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">In the address bar of your Web browser, enter the following 
+  URI:</P>
+  <DIV class=code xmlns=""><SPAN codeLanguage="other">
+  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+    <TBODY>
+    <TR>
+      <TH>&nbsp;</TH>
+      <TH><SPAN class=copyCode onfocusin=ChangeCopyCodeIcon(this) 
+        onmouseover=ChangeCopyCodeIcon(this) onfocusout=ChangeCopyCodeIcon(this) 
+        tabIndex=0 onkeypress=CopyCode_CheckKey(this) 
+        onmouseout=ChangeCopyCodeIcon(this) onclick=CopyCode(this)><IMG 
+        class=copyCodeImage name=ccImage align=absMiddle 
+        src="readme_files/copycode.gif"></IMG>Copy Code</SPAN></TH></TR>
+    <TR>
+      <TD colSpan=2><PRE>http://localhost:54321/northwind.svc/Customers('ALFKI')/Orders</PRE></TD></TR></TBODY></TABLE></SPAN></DIV>
+  <P xmlns="">This traverses the relationship between customers and orders to 
+  return a set of all orders for the specific customer 
+  <CODE>ALFKI</CODE>.</P></content>
+  <LI><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns="">In the address bar of your Web browser, enter the following 
+  URI:</P>
+  <DIV class=code xmlns=""><SPAN codeLanguage="other">
+  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+    <TBODY>
+    <TR>
+      <TH>&nbsp;</TH>
+      <TH><SPAN class=copyCode onfocusin=ChangeCopyCodeIcon(this) 
+        onmouseover=ChangeCopyCodeIcon(this) onfocusout=ChangeCopyCodeIcon(this) 
+        tabIndex=0 onkeypress=CopyCode_CheckKey(this) 
+        onmouseout=ChangeCopyCodeIcon(this) onclick=CopyCode(this)><IMG 
+        class=copyCodeImage name=ccImage align=absMiddle 
+        src="readme_files/copycode.gif"></IMG>Copy Code</SPAN></TH></TR>
+    <TR>
+      <TD colSpan=2><PRE>http://localhost:54321/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643</PRE></TD></TR></TBODY></TABLE></SPAN></DIV>
+  <P xmlns="">This filters orders that belong to the specific customer 
+  <CODE>ALFKI</CODE> so that only a specific order is returned based on the 
+  supplied <CODE>OrderID</CODE> 
+value.</P></content></LI></OL></ddue:steps></DIV></DIV></content></DIV></DIV><!--
+      [if gte IE 5]>
+      <tool:tip element="languageFilterToolTip" avoidmouse="false"/>
+      <![endif]
+    --></DIV>
+<P></P>
+<HR>
+</HR><BR><BR></DIV></BODY></HTML>

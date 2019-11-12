@@ -1,0 +1,17 @@
+﻿<b>EVO HTML to PDF Converter</b> allows you select directly in HTML the elements to exclude from rendering to PDF by setting the <i><b>data-exclude</b></i> attribute on HTML elements you want to exclude. 
+    The converter does not reflow the HTML content when you exclude an element from rendering and the place where the element would be normally rendered remains blank. 
+    If you want to reflow the HTML content when the HTML element is hidden, you have to set <i>display:none</i> style for HTML element, eventually creating two separate stylesheets for screen and for print.
+    <br />
+<br />
+At the top of the demo you can choose the HTML document to convert which can be:
+    <br />
+<ul>
+    <li>
+        <b>HTML Page to Convert URL</b>. The URL must be accessible from the computer where the converter runs. If the page requires authentication or if you are using a proxy server to access Internet
+            then you have to set the converter properties accordingly as described in documentation
+    </li>
+    <li>
+        <b>HTML String with Exclude Attributes</b>. When you convert a HTML string you also have the option to specify a base URL that will be used
+            by converter to resolve the relative URLs found in the HTML string to fully qualified URLs. If your HTML string uses only fully qualified URLs then this parameter is not necessary
+    </li>
+</ul>

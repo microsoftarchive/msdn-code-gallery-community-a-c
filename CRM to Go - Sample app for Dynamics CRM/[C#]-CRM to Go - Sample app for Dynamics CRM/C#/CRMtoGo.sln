@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRMtoGo", "CRMtoGo", "{5FAE5290-41AC-42CD-8EDE-017EA208389A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CRMtoGo.Shared", "CRMtoGo\CRMtoGo.Shared\CRMtoGo.Shared.shproj", "{1C9F1F3B-A1E7-496C-A8F4-CB11625B9FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMtoGo.WindowsPhone", "CRMtoGo\CRMtoGo.WindowsPhone\CRMtoGo.WindowsPhone.csproj", "{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMtoGoBackgroundTasks", "CRMtoGoBackgroundTasks\CRMtoGoBackgroundTasks.csproj", "{F1B83EAC-ECCB-4E16-BA97-43654094467F}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CRMtoGo\CRMtoGo.Shared\CRMtoGo.Shared.projitems*{0c96738b-e3e8-4a01-b0d1-bf4666a83b06}*SharedItemsImports = 4
+		CRMtoGo\CRMtoGo.Shared\CRMtoGo.Shared.projitems*{1c9f1f3b-a1e7-496c-a8f4-cb11625b9fae}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|ARM.ActiveCfg = Debug|ARM
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|ARM.Build.0 = Debug|ARM
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|ARM.Deploy.0 = Debug|ARM
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|x86.ActiveCfg = Debug|x86
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|x86.Build.0 = Debug|x86
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Debug|x86.Deploy.0 = Debug|x86
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|ARM.ActiveCfg = Release|ARM
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|ARM.Build.0 = Release|ARM
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|ARM.Deploy.0 = Release|ARM
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|x64.ActiveCfg = Release|Any CPU
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|x86.ActiveCfg = Release|x86
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|x86.Build.0 = Release|x86
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06}.Release|x86.Deploy.0 = Release|x86
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Release|x64.ActiveCfg = Release|Any CPU
+		{F1B83EAC-ECCB-4E16-BA97-43654094467F}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C9F1F3B-A1E7-496C-A8F4-CB11625B9FAE} = {5FAE5290-41AC-42CD-8EDE-017EA208389A}
+		{0C96738B-E3E8-4A01-B0D1-BF4666A83B06} = {5FAE5290-41AC-42CD-8EDE-017EA208389A}
+	EndGlobalSection
+EndGlobal

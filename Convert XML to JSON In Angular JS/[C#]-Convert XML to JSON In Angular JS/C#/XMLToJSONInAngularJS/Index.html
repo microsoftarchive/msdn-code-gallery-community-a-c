@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert XML to JSON In Angular JS - SibeeshPassion </title>
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="xml2json.js"></script>
+</head>
+<body>
+    <div ng-app="httpApp" ng-controller="httpController">
+    </div>
+    <script>
+        var app = angular.module('httpApp', []);
+        app.controller('httpController', function ($scope, $http) {
+            $http.get("Sitemap.xml",
+                    {
+                        transformResponse: function (cnv) {
+                            var x2js = new X2JS();
+                            var aftCnv = x2js.xml_str2json(cnv);
+                            return aftCnv;
+                        }
+                    })
+            .success(function (response) {
+                console.log(response);
+            });
+        });
+    </script>
+</body>
+</html>

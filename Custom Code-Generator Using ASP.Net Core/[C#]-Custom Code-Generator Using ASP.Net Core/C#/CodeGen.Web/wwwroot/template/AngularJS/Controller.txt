@@ -1,0 +1,79 @@
+﻿
+app.controller('#ControllerName', [#ServiceInjected, function (#SrvParam) {
+    $scope.vmfrm = {};
+
+    //******=========Get All=========******
+    GetAll();
+	function GetAll() {
+		$http({
+			method: 'GET',
+			url: #UrlGet
+		}).then(function (response) {
+		   console.log(response.data);
+		}, function (response) {
+		   console.log(response);
+		});
+	};
+
+	//******=========Get Single=========******
+	$scope.GetByID = function (model) {
+		$http({
+			method: 'GET',
+			url: #Url_GetByID
+		}).then(function (response) {
+		   $scope.vmfrm = response.data;
+		}, function (error) {
+		   console.log(error);
+		});
+	};
+
+	//******=========Save=========******
+	$scope.Save = function () {
+		$http({
+			method: 'POST',
+			url: #Url_Post,
+			data: $scope.vmfrm
+		}).then(function (response) {
+			$scope.reset();
+			GetAll();
+		}, function (error) {
+			console.log(error);
+		});
+	};
+
+	//******=========Update=========******
+	$scope.Update = function () {
+		$http({
+			method: 'PUT',
+			url: #Url_Put,
+			data: $scope.vmfrm
+		}).then(function (response) {
+			$scope.reset();
+			GetAll();
+		}, function (error) {
+			console.log(error);
+		});
+	};
+
+	//******=========Delete=========******
+	$scope.Delete = function (model) {
+		var IsConf = confirm('You are about to delete data. Are you sure?');
+		if (IsConf) {
+			$http({
+				method: 'DELETE',
+				url: #Url_Delete,
+			}).then(function (response) {
+				$scope.reset();
+				GetAll();
+			}, function (error) {
+				console.log(error);
+			});
+		}
+	};
+
+	//******=========Clear Form=========******
+	$scope.Reset = function () {
+		$scope.vmfrm = {};
+	};
+
+}]);

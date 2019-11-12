@@ -1,0 +1,48 @@
+
+CyrillicToRoman is a command-line utility that transliterates modern Cyrillic characters 
+to their Roman or Latin equivalents. It uses a modified Library of Congress system for 
+transliteration. Its syntax is:
+
+   CyrillicToRoman <sourceFile> <destinationFile>
+   
+where <sourceFile> is the path and filename of a text file that contains modern Cyrillic
+characters, and <destinationFile> is the name of the text file that will store the
+original text with its Cyrillic characters replaced by transliterated Roman characters.
+If a file path is included in <destinationFile> and any portion of that path does
+not exist, the utility terminates.   
+
+The specific mappings of upper- and lower-case Cyrillic characters
+to Roman characters are listed in the constructor of the CyrillicToRomanFallback 
+class, where the entries of a case mapping table named table are defined.
+
+The utility illustrates the extensibility of the character encoding in the .NET 
+Framework. An encoding system consists of an encoder and a decoder. The encoder is 
+responsible for translating a sequence of characters into a sequence of bytes. The 
+decoder is responsible for translating the sequence of bytes into a sequence of
+characters. The .NET Framework supports a sizable number of code page and Unicode
+encodings, and also allows the Encoding class to be overridden to support otherwise
+unsupported encodings. It also allows an encoder and a decoder's handling of 
+characters and bytes, respectively, that cannot be mapped to be customized. 
+Broadly, an encoder or a decoder can handle data that it cannot map by throwing
+an exception or by using some alternate mapping. For more information, see
+"Character Encoding in the .NET Framework" at 
+http://msdn.microsoft.com/en-us/library/ms404377.aspx.
+
+The transliteration utility works by instantiating an Encoding object that represents
+the Windows-1252 encoding. This encoding system supports ASCII characters in the 
+range from U+00 to U+FF. Because modern Cyrillic characters occupy the range from 
+U+0410 to U+044F, they do not automatically map to the Windows-1252 encoding. When
+the utility instantiates its Encoding object, it passes its constructor an instance 
+of a class named CyrillicToRomanFallback that is derived from EncoderFallback. This
+class maintains an internal table that maps modern Cyrillic characters to one or more
+Roman characters.
+
+When the encoder encounters a character that it cannot encode, it calls the fallback
+object's CreateFallbackBuffer method. This method instantiates a CyrillicToRomanFallbackBuffer
+object (a subclass of the EncoderFallbackBuffer class) and passes its constructor 
+the modern Cyrillic character mapping table. It then passes the EncoderFallbackBuffer
+object's Fallback method each character that it is unable to encode, and if a mapping
+is available, the method can provide a suitable replacement.
+
+     
+ 

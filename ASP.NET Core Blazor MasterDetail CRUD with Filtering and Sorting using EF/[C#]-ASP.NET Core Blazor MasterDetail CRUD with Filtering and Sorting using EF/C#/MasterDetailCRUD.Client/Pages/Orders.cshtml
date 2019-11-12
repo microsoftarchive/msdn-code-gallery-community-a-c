@@ -1,0 +1,715 @@
+﻿@using MasterDetailCRUD.Shared
+@using MasterDetailCRUD.Shared.Models
+@page "/Orders"
+@using Microsoft.AspNetCore.Blazor.Browser.Interop
+
+@using System.Collections.Generic
+@using Microsoft.AspNetCore.Blazor
+
+@inject HttpClient Http
+
+@if (Messages != "")
+{
+    <div id="outPopUp" style="position: absolute;  width: 312px;  height: 252px;  z-index: 15;  top: 50%;  left: 50%;  margin: -100px 0 0 -150px;  background: #f6cd2f;">
+       <div id="outPopUp" style="position: absolute;  width: 300px;  height: 248px;    background: #360849;">
+            <img src="Images/C2.png"  onclick="@closeMessage" />
+            <span style="color:#ECF3F4;font-size:xx-large;display: inline-block;    margin: 10px 10px 0 0;   padding: 5px 10px ">
+                @Messages
+            </span>
+        </div>
+
+    </div>
+}
+
+
+<img src="~/Images/blank.gif" alt="" width="1" height="10" />
+<table width="99%" style=" border-bottom:3px solid #3273d5;">
+    <tr>
+        <td class="style1" align="center"  >
+            <h3>Shanu ASP.NET Core Blazor Master/Detail  CRUD using WEB API & EF :)</h3>
+            <h3>Master/Detail HTML Grid with Filter, Sorting and Detail Grid Grand Total Row</h3>
+        </td>
+
+    </tr>
+</table>
+<img src="~/Images/blank.gif" alt="" width="1" height="2" />
+
+<table width="100%" style="background:#05163D;color:honeydew">
+    <tr>
+        <td width="20">&nbsp;</td>
+        <td>
+            <h2> Add New Order Master Information</h2>
+        </td>
+        <td>&nbsp;</td>
+        <td align="right">
+            <button class="btn btn-info" onclick="@AddNewOrderMasters">Add New Order</button>
+        </td>
+        <td width="10">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+    </tr>
+</table>
+
+@if (showAddMaster == true)
+{
+    <table style=" background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+        <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+            <td>
+                <h3> Add/Edit Order Master</h3>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <table class="form-group">
+                    <tr>
+                        <td>
+                            <label for="Name" class="control-label">Order No</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsM.OrderNo" readonly />
+                        </td>
+                        <td width="20">&nbsp;</td>
+                        <td>
+                            <label for="Name" class="control-label">Table Name</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsM.TableId" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Email" class="control-label">Description</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsM.Description" />
+                        </td>
+                        <td width="20">&nbsp;</td>
+                        <td>
+                            <label for="Name" class="control-label">Date</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsM.OrderDate" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Name" class="control-label">Waiter Name</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsM.WaiterName" />
+                        </td>
+                        <td width="20">&nbsp;</td>
+                        <td></td>
+                        <td>
+                            <button type="submit" class="btn btn-success" onclick="@(async () => await SaveOrderMasters())" style="width:220px;">Save</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+}
+
+@if (showAddDetail == true)
+{
+    <table style=" background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+        <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+            <td>
+                <h3> Add/Edit Order Details</h3>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <table class="form-group">
+                    <tr>
+                        <td>
+                            <label for="Name" class="control-label">Order Detail No</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsD.OrderDetailNo" readonly />
+                        </td>
+                        <td width="20">&nbsp;</td>
+                        <td>
+                            <label for="Name" class="control-label">Order Number</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsD.OrderNo" readonly />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Email" class="control-label">Item Name</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsD.ItemName" />
+                        </td>
+                        <td width="20">&nbsp;</td>
+                        <td>
+                            <label for="Name" class="control-label">Comments</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsD.Notes" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Name" class="control-label">Quantity</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsD.Qty" />
+                        </td>
+                        <td width="20">&nbsp;</td>
+                        <td>
+                            <label for="Name" class="control-label">Price</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" bind="@ordsD.Price" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="center">
+                            <button type="submit" class="btn btn-success" onclick="@(async () => await SaveOrderDetails())" style="width:220px;">Save</button>
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+}
+
+<img src="~/Images/blank.gif" alt="" width="1" height="2" />
+<hr />
+@if (ordMaster == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <table style=" background-color:#FFFFFF; border: solid 2px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+
+        <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+            <td width="120"></td>
+            <td width="40" align="center"><b>Edit</b></td>
+            <td width="40" align="center"><b>Delete</b></td>
+            <td width="120" align="center" style="cursor: pointer;">
+                <b>OrderNo</b> &nbsp;
+                <img src="@ImageSortname" onclick="@(async () => await StudentSorting("OrderNo"))" height="24" width="24" />
+
+            </td>
+            <td width="240" align="center" style="cursor: pointer;">
+                <b>Table Name</b> &nbsp;
+                <img src="@ImageSortname" onclick="@(async () => await StudentSorting("TableId"))" height="24" width="24" />
+
+            </td>
+            <td width="240" align="center" style="cursor: pointer;">
+                <b>Description</b> &nbsp;
+                <img src="@ImageSortname" onclick="@(async () => await StudentSorting("Description"))" height="24" width="24" />
+
+            </td>
+            <td width="120" align="center" style="cursor: pointer;">
+                <b> Order Date</b> &nbsp;
+                <img src="@ImageSortname" onclick="@(async () => await StudentSorting("OrderDate"))" height="24" width="24" />
+            </td>
+            <td width="340" align="center" style="cursor: pointer;">
+                <b> Waiter Name</b> &nbsp;
+                <img src="@ImageSortname" onclick="@(async () => await StudentSorting("WaiterName"))" height="24" width="24" />
+
+            </td>
+        </tr>
+        <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;">
+            <td width="140" align="center" colspan="4">
+                <img src="Images/filter.png" width="24" height="24" /> Filter By
+            </td>
+            <td width="180" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+                <input width="70" onchange=@OnTableIdChanged oninput="(this.dispatchEvent(new CustomEvent('change', {bubbles: true})))" />
+            </td>
+            <td width="180" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+                <input width="70" onchange=@OnDescriptionChanged oninput="(this.dispatchEvent(new CustomEvent('change', {bubbles: true})))" />
+            </td>
+            <td width="180" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;"></td>
+            <td width="180" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+                <input width="70" onchange=@OnWaiterNameChanged oninput="(this.dispatchEvent(new CustomEvent('change', {bubbles: true})))" />
+            </td>
+        </tr>
+        @foreach (var OrderMasterobj in ordMaster)
+        {
+            <tr style="border-style:dashed;border-width:2px;border-color: @(OrderMasterobj.OrderNo == orderIDs ? "#ff6a00": "#a2aabe")">
+                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+
+                    @if (@OrderMasterobj.OrderNo == orderIDs)
+                    {
+                        <img src="@Imagename" onclick="@(async () => await getOrderDetails(@OrderMasterobj.OrderNo))" />
+                    }
+                    else
+                    {
+                        <img src="Images/toggle.png" onclick="@(async () => await getOrderDetails(@OrderMasterobj.OrderNo))" />
+
+                    }
+
+                </td>
+                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        <img src="Images/edit.gif" alt="Edit" width="24px" height="24px" onclick="@(async () => await EditOrderMaster(@OrderMasterobj.OrderNo))" />
+                    </span>
+                </td>
+                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        <img src="Images/delete.gif" alt="Delete" width="24px" height="24px" onclick="@(async () => await DeleteOrderMaster(@OrderMasterobj.OrderNo))" />
+                    </span>
+                </td>
+                <td align="left" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        @OrderMasterobj.OrderNo
+                    </span>
+                </td>
+                <td align="left" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        @OrderMasterobj.TableId
+                    </span>
+                </td>
+                <td align="left" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        @OrderMasterobj.Description
+                    </span>
+                </td>
+                <td align="left" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        @OrderMasterobj.OrderDate
+                    </span>
+                </td>
+                <td align="left" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        @OrderMasterobj.WaiterName
+                    </span>
+                </td>
+            </tr>
+            @if (ordDetail != null)
+            {
+                @if (showDetailStatus == 1)
+                {
+                    @if (@OrderMasterobj.OrderNo == orderIDs)
+                    {
+                        <tr style="background-color:#6D7B8D ; color:honeydew ;border-style:dashed;border-width:2px;border-color:#ECF3F4;">
+                            <td colspan="8" align="center">
+                                Order Details of  Order NO - <strong> @OrderMasterobj.OrderNo </strong> ,Total @ordDetail.Length  details for this Order
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <button class="btn btn-info" onclick="@(async () => await AddNewOrderDetails(@OrderMasterobj.OrderNo))">Add New Detail</button>
+                            </td>
+                            <td colspan="7">
+
+                                <table style="background-color:#ECF3F4; border: solid 2px #3273d5; padding: 5px;width: 99%;table-layout:fixed;">
+
+                                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;">
+                                        <td width="40" align="center"><b>Edit</b></td>
+                                        <td width="40" align="center"><b>Delete</b></td>
+                                        <td width="240" align="center">
+                                            <b> Order Number</b>
+                                        </td>
+                                        <td width="240" align="center">
+                                            <b>  Order Detail Number</b>
+                                        </td>
+                                        <td width="120" align="center">
+                                            <b> Item Name</b>
+                                        </td>
+                                        <td width="340" align="center">
+                                            <b>Comments</b>
+                                        </td>
+                                        <td width="120" align="center">
+                                            <b>  QTY</b>
+                                        </td>
+                                        <td width="120" align="center">
+                                            <b> Price</b>
+                                        </td>
+                                    </tr>
+                                    @foreach (var orderDetailsObj in ordDetail)
+                                    {
+                                        <tr>
+                                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                <span style="color:#9F000F">
+                                                    <img src="Images/edit.gif" alt="Edit" width="24px" height="24px" onclick="@(async () => await EditOrderDetails(@orderDetailsObj.OrderDetailNo))" />
+                                                </span>
+                                            </td>
+                                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                <span style="color:#9F000F">
+                                                    <img src="Images/delete.gif" alt="Delete" width="24px" height="24px" onclick="@(async () => await DeleteOrderDetails(@orderDetailsObj.OrderDetailNo))" />
+                                                </span>
+                                            </td>
+                                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                @orderDetailsObj.OrderNo
+                                            </td>
+                                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+
+                                                <span style="color:#9F000F">
+                                                    @orderDetailsObj.OrderDetailNo
+                                                </span>
+                                            </td>
+                                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                <span style="color:#9F000F">
+                                                    @orderDetailsObj.ItemName
+                                                </span>
+                                            </td>
+                                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                <span style="color:#9F000F">
+                                                    @orderDetailsObj.Notes
+                                                </span>
+                                            </td>
+                                            <td align="right" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                <span style="color:#9F000F">
+                                                    @orderDetailsObj.Qty
+                                                </span>
+                                            </td>
+
+                                            <td align="right" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                <span style="color:#9F000F">
+                                                    @orderDetailsObj.Price
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </table>
+
+
+                            </td>
+                        </tr>
+                    }
+                }
+            }
+        }
+    </table>
+}
+
+
+@functions {
+    OrderMasters[] ordMaster;
+    OrderDetails[] ordDetail;
+
+
+    OrderMasters ordsM = new OrderMasters();
+    OrderDetails ordsD = new OrderDetails();
+
+    Boolean showAddMaster = false;
+    Boolean showAddDetail = false;
+
+    int showDetailStatus = 0;
+    int sortStatus = 0;
+    int orderIDs = 0;
+    string Imagename = "Images/toggle.png";
+    string ImageSortname = "Images/sortAsc.png";
+
+    string Messages = "";
+
+    protected override async Task OnInitAsync()
+    {
+        ordMaster = await Http.GetJsonAsync<OrderMasters[]>("/api/OrderMasters/");
+        ordsD = new OrderDetails();
+        ordsM = new OrderMasters();
+        Messages = "";
+    }
+
+    //to Add New Order Master
+
+    void AddNewOrderMasters()
+    {
+
+        ordsM = new OrderMasters();
+        ordsM.OrderDate = DateTime.Now;
+        showAddMaster = true;
+        showAddDetail = false;
+        Messages = "";
+    }
+
+    //Save New or update Order Master
+
+    protected async Task SaveOrderMasters()
+    {
+        if (ordsM.OrderNo == 0)
+
+        {
+            await Http.SendJsonAsync(HttpMethod.Post, "/api/OrderMasters/", ordsM);
+
+        }
+        else
+        {
+            await Http.SendJsonAsync(HttpMethod.Put, "/api/OrderMasters/" + ordsM.OrderNo, ordsM);
+        }
+        ordsM = new OrderMasters();
+        ordMaster = await Http.GetJsonAsync<OrderMasters[]>("/api/OrderMasters/");
+
+        Messages = "Order Master Save to Database !";
+        showAddMaster = false;
+
+    }
+
+
+
+
+    //Edit Order Master
+
+
+    protected async Task EditOrderMaster(int OrderNos)
+    {
+        showAddMaster = true;
+        ordsM = await Http.GetJsonAsync<OrderMasters>("/api/OrderMasters/" + Convert.ToInt32(OrderNos));
+    }
+
+    //Delete Order Master
+    protected async Task DeleteOrderMaster(int OrderNos)
+    {
+        // ids = studentID.ToString();
+        await Http.DeleteAsync("/api/OrderMasters/" + Convert.ToInt32(OrderNos));
+
+
+        // await Http.DeleteAsync("/api/StudentMasters/Delete/" + Convert.ToInt32(studentID));
+
+        ordMaster = await Http.GetJsonAsync<OrderMasters[]>("/api/OrderMasters/");
+        Messages = "Order Master Deleted from Database !";
+    }
+
+    //Sorting
+
+    protected async Task StudentSorting(string SortColumn)
+    {
+        ordMaster = await Http.GetJsonAsync<OrderMasters[]>("/api/OrderMasters/");
+        Messages = "";
+
+        if (sortStatus == 1)
+        {
+            ImageSortname = "Images/sortDec.png";
+            sortStatus = 0;
+
+            switch (SortColumn)
+            {
+                case "OrderNo":
+                    ordMaster = ordMaster.OrderBy(x => x.OrderNo).ToArray();
+                    break;
+                case "TableId":
+                    ordMaster = ordMaster.OrderBy(x => x.TableId).ToArray();
+                    break;
+
+                case "Description":
+                    ordMaster = ordMaster.OrderBy(x => x.Description).ToArray();
+                    break;
+                case "OrderDate":
+                    ordMaster = ordMaster.OrderBy(x => x.OrderDate).ToArray();
+                    break;
+                case "WaiterName":
+                    ordMaster = ordMaster.OrderBy(x => x.WaiterName).ToArray();
+                    break;
+            }
+        }
+        else
+        {
+            ImageSortname = "Images/sortAsc.png";
+            sortStatus = 1;
+
+            switch (SortColumn)
+            {
+                case "OrderNo":
+                    ordMaster = ordMaster.OrderByDescending(x => x.OrderNo).ToArray();
+                    break;
+                case "TableId":
+                    ordMaster = ordMaster.OrderByDescending(x => x.TableId).ToArray();
+                    break;
+
+                case "Description":
+                    ordMaster = ordMaster.OrderByDescending(x => x.Description).ToArray();
+                    break;
+                case "OrderDate":
+                    ordMaster = ordMaster.OrderByDescending(x => x.OrderDate).ToArray();
+                    break;
+                case "WaiterName":
+                    ordMaster = ordMaster.OrderByDescending(x => x.WaiterName).ToArray();
+                    break;
+            }
+        }
+    }
+
+
+
+    // For Filtering by OrderNo
+    void OnOrderNoChanged(UIChangeEventArgs args)
+    {
+        string values = args.Value.ToString();
+        studentFilteringList(values, "OrderNo");
+    }
+
+
+    // For Filtering by TableId
+    void OnTableIdChanged(UIChangeEventArgs args)
+    {
+        string values = args.Value.ToString();
+        studentFilteringList(values, "TableId");
+    }
+
+
+    // For Filtering by Description
+    void OnDescriptionChanged(UIChangeEventArgs args)
+    {
+        string values = args.Value.ToString();
+        studentFilteringList(values, "Description");
+    }
+
+
+    // For Filtering by OrderDate
+    void OnOrderDateChanged(UIChangeEventArgs args)
+    {
+        string values = args.Value.ToString();
+        studentFilteringList(values, "OrderDate");
+    }
+
+    // For Filtering by WaiterName
+    void OnWaiterNameChanged(UIChangeEventArgs args)
+    {
+        string values = args.Value.ToString();
+        studentFilteringList(values, "WaiterName");
+    }
+
+
+
+    //Filtering
+    protected async Task studentFilteringList(String Value, string columnName)
+    {
+        ordMaster = await Http.GetJsonAsync<OrderMasters[]>("/api/OrderMasters/");
+
+        Messages = "";
+        if (Value.Trim().Length > 0)
+        {
+
+            switch (columnName)
+            {
+
+                case "TableId":
+                    ordMaster = ordMaster.Where(x => x.TableId.Contains(Value)).ToArray();
+                    break;
+                case "Description":
+                    ordMaster = ordMaster.Where(x => x.Description.Contains(Value)).ToArray();
+                    break;
+                case "WaiterName":
+                    ordMaster = ordMaster.Where(x => x.WaiterName.Contains(Value)).ToArray();
+                    break;
+            }
+
+        }
+        else
+        {
+            ordMaster = await Http.GetJsonAsync<OrderMasters[]>("/api/OrderMasters/");
+        }
+    }
+
+
+    //--------------- Detail Grid CRUD
+
+
+
+    protected async Task getOrderDetails(int ordID)
+    {
+        showAddMaster = false;
+        showAddDetail = false;
+        Messages = "";
+        if (orderIDs != ordID)
+        {
+            Imagename = "Images/expand.png";
+            showDetailStatus = 1;
+
+        }
+        else
+        {
+
+
+            if (showDetailStatus == 0)
+            {
+                Imagename = "Images/expand.png";
+                showDetailStatus = 1;
+            }
+            else
+            {
+                Imagename = "Images/toggle.png";
+                showDetailStatus = 0;
+            }
+
+        }
+        orderIDs = ordID;
+        ordDetail = await Http.GetJsonAsync<OrderDetails[]>("/api/OrderDetails/" + Convert.ToInt32(ordID));
+
+    }
+    //to Add New Order Detail
+
+
+    protected async Task AddNewOrderDetails(int orderMasterNO)
+    {
+        ordsD = new OrderDetails();
+
+        ordsD.OrderNo = orderMasterNO;
+        Messages = "";
+
+
+        showAddDetail = true;
+        showAddMaster = false;
+
+    }
+
+    //Save New or update Order Master
+
+    protected async Task SaveOrderDetails()
+    {
+        if (ordsD.OrderDetailNo == 0)
+
+        {
+            await Http.SendJsonAsync(HttpMethod.Post, "/api/OrderDetails/", ordsD);
+
+        }
+        else
+        {
+            await Http.SendJsonAsync(HttpMethod.Put, "/api/OrderDetails/" + ordsD.OrderDetailNo, ordsD);
+        }
+
+        ordDetail = await Http.GetJsonAsync<OrderDetails[]>("/api/OrderDetails/" + Convert.ToInt32(ordsD.OrderNo));
+        ordsD = new OrderDetails();
+        showAddDetail = false;
+        showAddMaster = false;
+        Messages = "Order Detail Saved to Databse !";
+    }
+
+
+
+
+    //Edit Order Master
+
+
+    protected async Task EditOrderDetails(int OrderDetailNos)
+    {
+
+        ordsD = await Http.GetJsonAsync<OrderDetails>("/api/OrderDetails1/" + Convert.ToInt32(OrderDetailNos));
+        showAddDetail = true;
+        showAddMaster = false;
+    }
+
+    //Delete Order Master
+    protected async Task DeleteOrderDetails(int OrderDetailNos)
+    {
+        var ordVale = ordsD.OrderNo;
+        // ids = studentID.ToString();
+        await Http.DeleteAsync("/api/OrderDetails/" + Convert.ToInt32(OrderDetailNos));
+
+        // await Http.DeleteAsync("/api/StudentMasters/Delete/" + Convert.ToInt32(studentID));
+
+        ordDetail = await Http.GetJsonAsync<OrderDetails[]>("/api/OrderDetails/" + Convert.ToInt32(ordVale));
+        Imagename = "Images/toggle.png";
+        showDetailStatus = 0;
+        Messages = "Order Detail Deleted from Database !";
+    }
+
+    void closeMessage()
+    {
+        Messages = "";
+    }
+}

@@ -1,0 +1,47 @@
+@model MVC5Demo.Models.Person
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Person</legend>
+
+	<dl>
+		<dt>
+			@Html.DisplayNameFor(model => model.Fullname)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Fullname)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Profession)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Profession)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Age)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Age)
+		</dd>
+
+	</dl>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}

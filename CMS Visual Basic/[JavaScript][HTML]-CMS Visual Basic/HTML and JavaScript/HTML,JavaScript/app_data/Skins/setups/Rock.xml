@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin setup -->
+<variables>
+	<!-- Inside variables to define elements to load -->
+	<add key="ImageTopLeft" value=""/>
+	<add key="Logo" value="resources/images/logos/rock.png"/>
+	<add key="BannerAccommodations" value=""/>
+	<add key="BannerServices" value=""/>
+	<add key="Favicon" value="resources/images/favicons/rock.ico"/>
+	<add key="bgsound" value=""/>
+  <add key="SoundOnlyAtStartSession" value="true"/>
+ 	<add key="FolderIcons" value="48"/>
+ 	<add key="ButtonsWithIcons" value="false"/>
+  <!-- Optional variables for replace in CSS file -->
+	<add key="BackgroundColorPage" value="#ffffff"/>
+	<add key="BackgroundImage" value="resources/images/backgrounds/papir.jpg"/>
+ 	<add key="BackgroundRepeat" value="repeat"/>
+  <add key="FontColor" value="#000000"/>
+	<add key="FontFamily" value="Comic Sans MS"/>
+	<add key="FontSize" value="1em"/>
+
+	<!-- START Font personalizations (need style fonts.child.css) -->
+	<add key="Font1" value="HVD_Poster_Clean"/>
+	<add key="Font2" value="The_quick_monkey"/>
+	<add key="ButtonsFontSize" value="1.4em"/>
+	<add key="MenuFontSize" value="1.6em"/>
+	<!-- END Font personalizations -->
+
+	<add key="BackgroundImageBox" value="resources/images/backgrounds/background.jpg"/>
+ 	<add key="BackgroundColorBox" value="#ffffff"/>
+ 	<add key="BorderColorBox" value="#8f8f8f"/>
+ 	<add key="BackgroundColorButton" value="#f2f2f2"/>
+	
+	<add key="PointListMenu" value="resources/images/ListStyleImage/bass.png"/>
+	
+	<add key="ColorLink" value="#8d1621"/>
+	<add key="ColorVisitedLink" value="#b31d2c"/>
+
+	<add key="ColorDark" value="#666666"/>
+	<add key="ColorBright" value="#fcfcfc"/>
+
+	<add key="Pattern1" value="resources/images/backgrounds/background.jpg"/>
+
+	<add key="ParRowColor" value="#edfcea"/><!-- Back Ground color for par box and box menu-->
+	<add key="OddRowColor" value="#fbebeb"/><!-- Back Ground color for unpair box -->
+	<add key="QuoteColor" value="#ffffff"/><!-- Back Ground color for quote -->
+
+	<!-- Border of screen -->
+	<add key="BodyMargin" value="10px"/>
+	<add key="BodyBorderWidth" value="0px"/>
+	<add key="BodyMarginInside" value="0px"/>
+
+  <!-- Rounded element -->
+  <add key="RoundedButton" value="4px"/>
+  <add key="RoundedMenu" value="4px"/>
+  
+  <!-- shadow -->
+  <add key="shadow" value="5px 5px 15px #000000"/>
+  
+  	<!-- Menu -->
+	<add key="BorderMenu" value="2px outset"/>
+
+
+
+
+</variables>

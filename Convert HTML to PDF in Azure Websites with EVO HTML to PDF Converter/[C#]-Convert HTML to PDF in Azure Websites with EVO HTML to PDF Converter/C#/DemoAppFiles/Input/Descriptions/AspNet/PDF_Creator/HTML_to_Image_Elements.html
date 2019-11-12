@@ -1,0 +1,40 @@
+﻿<b>EVO HTML to PDF Converter</b> allows you to convert a HTML page to an image in a PDF document by adding a HTML to Image Element  at a given location in the PDF document. You can add multiple HTML to Image Elements in the same PDF document.<br />
+<br />
+The options you can set in this demo are:<br />
+<br />
+<b class="subtitle">HTML Page to Convert</b>
+<br />
+<ul>
+    <li>
+        <b>HTML Page URL or Local File to Convert</b>. The URL of the HTML page to convert must be accessible from the computer where the converter runs.
+            If the page requires authentication or if you are using a proxy server to access Internet then you have to set the converter properties accordingly
+            as described in documentation
+    </li>
+</ul>
+<b class="subtitle">HTML Viewer Options</b>
+<br />
+<ul>
+    <li>
+        <b>HTML Viewer Width</b>. This option is the equivalent in converter of the browser window width and represents the preferred width in which to render the HTML content. 
+            The actual HTML content width can be larger in case the HTML page cannot be entirely displayed in the given viewer width. The HTML content can be further scaled to fit the PDF page 
+            based on the converter scaling options set in your application. The HTML content size is expressed in pixels and the PDF page size is in expressed in points, 1 point being 1/72 inches.
+            The converter is using a 96 DPI resolution to transform pixels to points with the following formula: Points = Pixels/96 * 72
+    </li>
+    <li>
+        <b>HTML Viewer Height</b>. This option is the equivalent in converter of the browser window height and can be used to limit the conversion to the top part of the HTML page. If this property is
+            not set the entire page will be converted
+    </li>
+    <li>
+        <b>Clip HTML View Option</b>. You can set this option to force the HTML content width to be exactly HtmlViewerWidth pixels. If this option is false then actual HTML content width 
+            can be larger than HtmlViewerWidth pixels in case the HTML page cannot be entirely displayed in the given viewer width. By default this option is false and the HTML content is not clipped
+    </li>
+</ul>
+<b class="subtitle">HTML Content Options</b>
+<br />
+<ul>
+    <li>
+        <b>HTML Content Destination in PDF.</b> The HTML content destination is given by the X and Y coordinates where to start rendering in first PDF page and by the destination rectangle width and height. 
+            All the values are expressed in points. 1 point is 1/72 inches. If you don't set any destination rectangle then by default the converter will start rendering in the top left corner of the first page, will
+            try to use the entire PDF page width for rendering and will auto determine the destination rectangle height such that the entire HTML content is visible
+    </li>
+</ul>

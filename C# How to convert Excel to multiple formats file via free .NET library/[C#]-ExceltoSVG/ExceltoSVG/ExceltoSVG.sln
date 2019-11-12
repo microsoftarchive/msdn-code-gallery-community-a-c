@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceltoSVG", "ExceltoSVG\ExceltoSVG.csproj", "{9082B68C-E50B-4195-8013-0BB921C448BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceltoCSV", "ExceltoCSV\ExceltoCSV.csproj", "{97D75ADA-F5C5-449F-BBB1-4D80C06A1B23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XLStoXLSM", "XLStoXLSM\XLStoXLSM.csproj", "{9F17A4EE-628E-48ED-AD3A-7CDE457E0D65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceltoOds", "ExceltoOds\ExceltoOds.csproj", "{A7A7AED0-D08B-4D5D-AB63-7E20553EA156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceltoEMF", "ExceltoEMF\ExceltoEMF.csproj", "{1CAC0B43-065E-4E18-8D3C-D063A11F1E6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9082B68C-E50B-4195-8013-0BB921C448BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9082B68C-E50B-4195-8013-0BB921C448BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9082B68C-E50B-4195-8013-0BB921C448BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9082B68C-E50B-4195-8013-0BB921C448BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D75ADA-F5C5-449F-BBB1-4D80C06A1B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D75ADA-F5C5-449F-BBB1-4D80C06A1B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D75ADA-F5C5-449F-BBB1-4D80C06A1B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D75ADA-F5C5-449F-BBB1-4D80C06A1B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F17A4EE-628E-48ED-AD3A-7CDE457E0D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F17A4EE-628E-48ED-AD3A-7CDE457E0D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F17A4EE-628E-48ED-AD3A-7CDE457E0D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F17A4EE-628E-48ED-AD3A-7CDE457E0D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A7AED0-D08B-4D5D-AB63-7E20553EA156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A7AED0-D08B-4D5D-AB63-7E20553EA156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A7AED0-D08B-4D5D-AB63-7E20553EA156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A7AED0-D08B-4D5D-AB63-7E20553EA156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CAC0B43-065E-4E18-8D3C-D063A11F1E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CAC0B43-065E-4E18-8D3C-D063A11F1E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CAC0B43-065E-4E18-8D3C-D063A11F1E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CAC0B43-065E-4E18-8D3C-D063A11F1E6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+
+Install-Package Microsoft.EntityFrameworkCore.Tools
+
+
+Scaffold-DbContext "Server= SQLServerName;Database=OrderManagement;user id=SQLID;password=SQLPWD;Trusted_Connection=True;MultipleActiveResultSets=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Tables OrderMasters ,OrderDetails

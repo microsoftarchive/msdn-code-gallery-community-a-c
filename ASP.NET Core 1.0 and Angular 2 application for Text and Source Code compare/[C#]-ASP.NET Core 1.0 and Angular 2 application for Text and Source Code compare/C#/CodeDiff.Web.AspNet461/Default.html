@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link href="Content/bootstrap.css" rel="stylesheet"/>
+    <link href="Styles/default.css" rel="stylesheet" />
+</head>
+<body>
+<div ng-app="main" ng-controller="defaultController as default" style="margin-top: 5px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="source-version-1">Source Version 1:</label>
+                <textarea class="form-control" rows="5"
+                          id="source-version-1" ng-model="default.codeForCompare.version1"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="source-version-2">Source Version 2:</label>
+                <textarea class="form-control" rows="5"
+                          id="source-version-2" ng-model="default.codeForCompare.version2"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-centered text-center">
+                <button type="button" class="btn btn-default" style="margin-top: 5px"
+                        ng-click="default.compare()">
+                    Compare
+                </button>
+            </div>
+        </div>
+        <div>
+            <div class="col-md-6" ng-bind-html="default.textDiffHtmlVisualizationResult.version1DiffHtml">
+            </div>
+            <div class="col-md-6" ng-bind-html="default.textDiffHtmlVisualizationResult.version2DiffHtml">
+            </div>
+        </div>
+    </div>
+    <div loading-indicator class="loading-indicator"></div>
+</div>
+<script src="Scripts/jquery-1.9.1.js"></script>
+<script src="Scripts/bootstrap.js"></script>
+<script src="Scripts/angular.js"></script>
+<script src="Scripts/angular-sanitize.js"></script>
+<script src="Application/modules/main.module.js"></script>
+<script src="Application/common/loading-indicator.directive.js"></script>
+<script src="Application/services/source-controle.service.js"></script>
+<script src="Application/default/default.controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+	<FontFamily x:Key="TitleFontFamilyKey">Segoe UI Light, Meiryo</FontFamily>
+	<system:Double x:Key="TitleFontSizeKey">24.0</system:Double>
+
+	<FontFamily x:Key="AccentFontFamilyKey">Segoe UI Light, Meiryo</FontFamily>
+	<system:Double x:Key="AccentFontSizeKey">18.0</system:Double>
+
+	<FontFamily x:Key="NormalFontFamilyKey">Segoe UI, Meiryo UI</FontFamily>
+	<system:Double x:Key="NormalFontSizeKey">14.0</system:Double>
+
+</ResourceDictionary>

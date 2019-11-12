@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcRestApi", "MvcRestApi\MvcRestApi.csproj", "{024DAB04-489C-46FD-8EFD-8657C7EE1166}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1D3C9C4A-ADCF-4050-A674-187BF792173E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvpRestApiLib", "MvpRestApiLib\MvpRestApiLib.csproj", "{FB23CC9C-805D-45CD-A7CB-401CC8B1911D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{024DAB04-489C-46FD-8EFD-8657C7EE1166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024DAB04-489C-46FD-8EFD-8657C7EE1166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024DAB04-489C-46FD-8EFD-8657C7EE1166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024DAB04-489C-46FD-8EFD-8657C7EE1166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB23CC9C-805D-45CD-A7CB-401CC8B1911D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB23CC9C-805D-45CD-A7CB-401CC8B1911D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB23CC9C-805D-45CD-A7CB-401CC8B1911D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB23CC9C-805D-45CD-A7CB-401CC8B1911D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

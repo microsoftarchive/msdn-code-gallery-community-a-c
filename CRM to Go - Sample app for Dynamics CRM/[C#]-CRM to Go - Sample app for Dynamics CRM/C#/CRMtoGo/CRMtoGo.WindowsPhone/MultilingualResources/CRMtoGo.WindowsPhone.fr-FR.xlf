@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="fr-FR" original="CRMtoGo.WindowsPhone_Multilingual.prilog.xml" tool-id="MultilingualAppToolkit" product-name="CRMtoGo.WindowsPhone" product-version="1.0.0.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1250.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resources">
+        <trans-unit id="Resources\WrongPrecision" translate="yes" xml:space="preserve">
+          <source>Precision needs to be less than {0}.</source>
+          <target state="new">Precision needs to be less than {0}.</target>
+        </trans-unit>
+        <trans-unit id="Resources\NotValidForMobile" translate="yes" xml:space="preserve">
+          <source>{0} is not available for mobile.</source>
+          <target state="new">{0} is not available for mobile.</target>
+        </trans-unit>
+        <trans-unit id="Resources\RequiredField" translate="yes" xml:space="preserve">
+          <source>Field {0} is required.</source>
+          <target state="new">Field {0} is required.</target>
+        </trans-unit>
+        <trans-unit id="Resources\WrongFormat" translate="yes" xml:space="preserve">
+          <source>Format is wrong.</source>
+          <target state="new">Format is wrong.</target>
+        </trans-unit>
+        <trans-unit id="Resources\WrongFormatMoreLess" translate="yes" xml:space="preserve">
+          <source>Value needs to be more than {0} or less than {1}.</source>
+          <target state="new">Value needs to be more than {0} or less than {1}.</target>
+        </trans-unit>
+        <trans-unit id="Resources\WrongUrlFormat" translate="yes" xml:space="preserve">
+          <source>Url Format is wrong</source>
+          <target state="new">Url Format is wrong</target>
+        </trans-unit>
+        <trans-unit id="Resources\WrongEmailFormat" translate="yes" xml:space="preserve">
+          <source>Email Format is wrong</source>
+          <target state="new">Email Format is wrong</target>
+        </trans-unit>
+        <trans-unit id="Resources\WrongPhoneFormat" translate="yes" xml:space="preserve">
+          <source>Phone Format is wrong</source>
+          <target state="new">Phone Format is wrong</target>
+        </trans-unit>
+        <trans-unit id="Resources\btnAdd\Content" translate="yes" xml:space="preserve">
+          <source>Click To Add More</source>
+          <target state="new">Click To Add More</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConfirmDownloadAttachment" translate="yes" xml:space="preserve">
+          <source>The attachment size is {0} bytes, do you want to download?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">La taille de la pièce jointe est de {0} octet(s), voulez-vous télécharger ?</target>
+        </trans-unit>
+        <trans-unit id="Resources\Yes" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="translated" state-qualifier="tm-suggestion">Oui</target>
+        </trans-unit>
+        <trans-unit id="Resources\txtSearch\PlaceholderText" translate="yes" xml:space="preserve">
+          <source>enter keyword</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Entrez le mot clé</target>
+        </trans-unit>
+        <trans-unit id="Resources\Save" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="translated" state-qualifier="tm-suggestion">Save</target>
+        </trans-unit>
+        <trans-unit id="Resources\Open" translate="yes" xml:space="preserve">
+          <source>Open</source>
+          <target state="translated" state-qualifier="tm-suggestion">Ouvrir</target>
+        </trans-unit>
+        <trans-unit id="Resources\No" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="translated" state-qualifier="tm-suggestion">Non</target>
+        </trans-unit>
+        <trans-unit id="Resources\lblSettings3\Text" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated" state-qualifier="tm-suggestion">Paramètres</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConfirmTimeZone" translate="yes" xml:space="preserve">
+          <source>Device Timezone has been changed. Do you want to update CRM UserSettings to match TimeZone?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le fuseau horaire du périphérique a été modifié. Vous souhaitez mettre à jour les paramètres CRM UserSettings pour faire correspondre le fuseau horaire ?</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConfirmOpenSave" translate="yes" xml:space="preserve">
+          <source>Do you want to open or save the file?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Souhaitez-vous ouvrir ou enregistrer le fichier?</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConfirmDeleteNote" translate="yes" xml:space="preserve">
+          <source>Do you want to delete the note(s)?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Souhaitez-vous supprimer la ou les notes?</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConfirmDelete" translate="yes" xml:space="preserve">
+          <source>Do you want to delete the record(s)?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voulez-vous supprimer le ou les enregistrements?</target>
+        </trans-unit>
+        <trans-unit id="Resources\abSave\Label" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="translated" state-qualifier="tm-suggestion">Enregistrer</target>
+        </trans-unit>
+        <trans-unit id="Resources\txtMessage\Text" translate="yes" xml:space="preserve">
+          <source>Resuming/Downloading metadata.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Téléchargement et reprise des métadonnées.</target>
+        </trans-unit>
+        <trans-unit id="Resources\piRelatedView\Header" translate="yes" xml:space="preserve">
+          <source>related</source>
+          <target state="translated" state-qualifier="tm-suggestion">en liaison</target>
+        </trans-unit>
+        <trans-unit id="Resources\piRecord\Header" translate="yes" xml:space="preserve">
+          <source>record</source>
+          <target state="translated" state-qualifier="tm-suggestion">enregistrement</target>
+        </trans-unit>
+        <trans-unit id="Resources\piNotes\Header" translate="yes" xml:space="preserve">
+          <source>notes</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">notes</target>
+        </trans-unit>
+        <trans-unit id="Resources\lblSignInPage2\Text" translate="yes" xml:space="preserve">
+          <source>Your company's CRM web address</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Adresse web CRM de votre société</target>
+        </trans-unit>
+        <trans-unit id="Resources\lblSignInPage1\Text" translate="yes" xml:space="preserve">
+          <source>Getting Started</source>
+          <target state="translated" state-qualifier="tm-suggestion">Mise en route</target>
+        </trans-unit>
+        <trans-unit id="Resources\lblSettings2\Text" translate="yes" xml:space="preserve">
+          <source>Records per View</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Enregistrements par vue</target>
+        </trans-unit>
+        <trans-unit id="Resources\lblSettings1\Text" translate="yes" xml:space="preserve">
+          <source>TimeZone</source>
+          <target state="translated" state-qualifier="tm-suggestion">Fuseau horaire</target>
+        </trans-unit>
+        <trans-unit id="Resources\lblSearch\Text" translate="yes" xml:space="preserve">
+          <source>Search</source>
+          <target state="translated" state-qualifier="tm-suggestion">Rechercher</target>
+        </trans-unit>
+        <trans-unit id="Resources\lblNote2\Text" translate="yes" xml:space="preserve">
+          <source>Body: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Corps: </target>
+        </trans-unit>
+        <trans-unit id="Resources\lblNote1\Text" translate="yes" xml:space="preserve">
+          <source>Subject: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Objet: </target>
+        </trans-unit>
+        <trans-unit id="Resources\lblLookIn\Text" translate="yes" xml:space="preserve">
+          <source>Look In</source>
+          <target state="translated" state-qualifier="tm-suggestion">Regarder dans</target>
+        </trans-unit>
+        <trans-unit id="Resources\lblLookFor\Text" translate="yes" xml:space="preserve">
+          <source>Look For</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rechercher</target>
+        </trans-unit>
+        <trans-unit id="Resources\Entities\Header" translate="yes" xml:space="preserve">
+          <source>Entities</source>
+          <target state="translated" state-qualifier="tm-suggestion">Entités</target>
+        </trans-unit>
+        <trans-unit id="Resources\btnSignOut\Content" translate="yes" xml:space="preserve">
+          <source>Sign Out</source>
+          <target state="translated" state-qualifier="tm-suggestion">Fermer la session</target>
+        </trans-unit>
+        <trans-unit id="Resources\btnSignIn\Content" translate="yes" xml:space="preserve">
+          <source>Sign In</source>
+          <target state="translated" state-qualifier="tm-suggestion">Connexion</target>
+        </trans-unit>
+        <trans-unit id="Resources\btnReconfigure\Content" translate="yes" xml:space="preserve">
+          <source>Reconfigure</source>
+          <target state="translated" state-qualifier="tm-suggestion">Reconfigurer</target>
+        </trans-unit>
+        <trans-unit id="Resources\btnClearCache\Content" translate="yes" xml:space="preserve">
+          <source>Clear Cache</source>
+          <target state="translated" state-qualifier="tm-suggestion">Vider le cache</target>
+        </trans-unit>
+        <trans-unit id="Resources\btnAttach\Content" translate="yes" xml:space="preserve">
+          <source>Attach</source>
+          <target state="translated" state-qualifier="tm-suggestion">Ajouter</target>
+        </trans-unit>
+        <trans-unit id="Resources\abSettings\Label" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated" state-qualifier="tm-suggestion">Paramètres</target>
+        </trans-unit>
+        <trans-unit id="Resources\abSend\Label" translate="yes" xml:space="preserve">
+          <source>Send</source>
+          <target state="translated" state-qualifier="tm-suggestion">Envoi</target>
+        </trans-unit>
+        <trans-unit id="Resources\abSelect\Label" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated" state-qualifier="tm-suggestion">Sélectionner</target>
+        </trans-unit>
+        <trans-unit id="Resources\abRelatedDelete\Label" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated" state-qualifier="tm-suggestion">Supprimer</target>
+        </trans-unit>
+        <trans-unit id="Resources\abRelatedAdd\Label" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated" state-qualifier="tm-suggestion">Ajouter</target>
+        </trans-unit>
+        <trans-unit id="Resources\abNoteSelect\Label" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated" state-qualifier="tm-suggestion">Sélectionner</target>
+        </trans-unit>
+        <trans-unit id="Resources\abNoteSave\Label" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="translated" state-qualifier="tm-suggestion">Save</target>
+        </trans-unit>
+        <trans-unit id="Resources\abNoteDelete\Label" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated" state-qualifier="tm-suggestion">Supprimer</target>
+        </trans-unit>
+        <trans-unit id="Resources\abNoteCancel\Label" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated" state-qualifier="tm-suggestion">Annuler</target>
+        </trans-unit>
+        <trans-unit id="Resources\abNoteAdd\Label" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated" state-qualifier="tm-suggestion">Ajouter</target>
+        </trans-unit>
+        <trans-unit id="Resources\abEdit\Label" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated" state-qualifier="tm-suggestion">Edition</target>
+        </trans-unit>
+        <trans-unit id="Resources\abDelete\Label" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated" state-qualifier="tm-suggestion">Supprimer</target>
+        </trans-unit>
+        <trans-unit id="Resources\abCancel\Label" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated" state-qualifier="tm-suggestion">Annuler</target>
+        </trans-unit>
+        <trans-unit id="Resources\abAttach\Label" translate="yes" xml:space="preserve">
+          <source>Attach</source>
+          <target state="translated" state-qualifier="tm-suggestion">Lier</target>
+        </trans-unit>
+        <trans-unit id="Resources\abAddExisting\Label" translate="yes" xml:space="preserve">
+          <source>Add Existing</source>
+          <target state="translated" state-qualifier="tm-suggestion">Ajouter un élément existant</target>
+        </trans-unit>
+        <trans-unit id="Resources\abAdd\Label" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated" state-qualifier="tm-suggestion">Ajouter</target>
+        </trans-unit>
+        <trans-unit id="Resources\abAccept\Label" translate="yes" xml:space="preserve">
+          <source>Accept</source>
+          <target state="translated" state-qualifier="tm-suggestion">Accepter</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin configuration -->
+<skin>
+	<add key="Style" value="default"/>
+	<add key="Style" value="buttons streak soft.child"/>
+	<add key="Style" value="menu semitrasparent.child"/>
+	<add key="Style" value="zoom buttons.child"/>
+	<add key="Style" value="zoom menu.child"/>
+	<add key="Setup" value="fish"/>
+</skin>

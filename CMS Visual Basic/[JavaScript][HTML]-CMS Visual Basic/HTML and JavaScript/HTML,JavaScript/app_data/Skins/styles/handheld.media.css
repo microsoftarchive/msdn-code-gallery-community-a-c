@@ -1,0 +1,88 @@
+@-o-viewport
+{
+  width:device-width;
+}
+@-ms-viewport
+{
+  width:device-width;
+}
+
+td,th
+{
+	display:inline-table !important;
+	border-style:none;
+	border-bottom:1px dashed;
+	width:100% !important;
+}
+
+tr
+{
+	border:2px solid;
+}
+
+.BoxElement
+{
+	margin:0px !important;
+}
+
+.RSS
+{
+	border-style:none;
+}
+
+.TopLeft > *, .TopRight > *, .WebSiteTitle, .ToolsBar
+{
+	display:block !important;
+	margin:inherit !important;
+	width:inherit !important;
+}
+
+.BarTop *
+{
+  position:static !important;
+}
+
+.Button, input[type='submit'], input[type='reset'], input[type='button']
+{
+	float:none;
+	display:block;
+}
+
+.VerticalText
+{
+	writing-mode:tb-rl;
+	-webkit-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-o-transform:rotate(0deg);
+    transform:rotate(0deg);
+}
+
+.OnHandheld400Px
+{
+    width:400px;
+    overflow:auto;
+}
+
+.BarRight
+{
+	display:none!important;
+}
+
+.Wrapper > *,.Container > *
+{
+    clear:both !important;
+    float:none !important;
+	margin:0px 0px 0px 0px !important;
+	padding:1px 1px 1px 1px !important;
+    width:inherit !important;
+}
+
+*
+{
+    position:relative !important;
+}
+
+body
+{
+    margin:inherit !important;
+}

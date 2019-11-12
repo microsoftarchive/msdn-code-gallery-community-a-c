@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{66ba5e09-4b88-42e5-ac11-ec939111ec22}"
+       Name="ApproverMngr"
+       DisplayName="Approval Manager"
+       StaticName="ApproverMngr"
+       Type="User"
+       UserSelectionMode="PeopleOnly"
+       ShowField="ImnName"
+       Description="The Supervisor or Manager who will be tasked to Approve this Request"
+       Required="TRUE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp">
+  </Field>
+</Elements>

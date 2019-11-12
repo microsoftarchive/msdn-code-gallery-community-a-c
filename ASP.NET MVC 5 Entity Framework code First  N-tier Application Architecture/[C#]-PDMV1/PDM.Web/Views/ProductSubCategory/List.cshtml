@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PDM.Model.ProductSubCategory>
+
+@if (Model.Count() == 0)
+{
+    <tr><td>No records found</td></tr>
+}
+else
+{
+    foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.Name)</td>
+            <td>@Html.DisplayFor(m =>item.CategoryName)</td>
+            <td>
+                <a>
+                    <span class="glyphicon glyphicon-th-list" id="details-Subcategory" data-id="@item.ProductSubCategoryID"></span>
+                </a>
+            </td>
+            <td>
+                <a>
+                    <span class="glyphicon glyphicon-edit" id="edit-Subcategory" data-id="@item.ProductSubCategoryID"></span>
+                </a>
+            </td>
+            <td>
+                <a>
+                    <span class="glyphicon glyphicon-remove" id="delete-Subcategory" data-id="@item.ProductSubCategoryID"></span>
+                </a>
+            </td>
+        </tr>
+    }
+}

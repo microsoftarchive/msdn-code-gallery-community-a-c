@@ -1,0 +1,67 @@
+﻿@inject ASPNETCORERoleManagement.Services.MenuMasterService menus
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Admin - About Us Page </h2>
+<h2>Welcome to Admin About Us Page</h2>
+<br />
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a   class="navbar-brand" href="#">SHANU</a>
+        </div>
+        <div class="navbar-collapse collapse">
+           
+                <ul class="nav navbar-nav">
+
+
+                    @if (User.Identity.IsAuthenticated)
+                {
+                    var UserRoles = "";
+                    if (@User.IsInRole("Admin"))
+                    {
+                        UserRoles = "Admin";
+                    }
+                    else
+                    {
+                        UserRoles = "Manager";
+                    }
+
+                    @if (menus.GetMenuMaster(@UserRoles).Any())
+                {
+                    @if (menus.GetMenuMaster(@UserRoles).Any())
+                {
+                    @foreach (var menuNames in menus.GetMenuMaster(@UserRoles).Where(n => n.Parent_MenuID == "*"))
+                {
+                    <li class="dropdown">
+                        <a href=@menuNames.MenuURL>@menuNames.MenuName</a>
+
+                        @foreach (var subMenu in menus.GetMenuMaster(@UserRoles).Where(n => n.Parent_MenuID == @menuNames.MenuID))
+    {
+                    <ul >
+                        <li>
+                            <a asp-area="" asp-controller=@subMenu.MenuURL asp-action=@subMenu.MenuFileName>@subMenu.MenuName</a>
+                        </li>
+                    </ul>
+}
+
+                    </li>
+                  
+
+            }
+            }
+            }
+            }
+                </ul>
+           
+        </div>
+    </div>
+</div>

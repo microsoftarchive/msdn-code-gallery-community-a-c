@@ -1,0 +1,21 @@
+
+<table style="width: 100%" class="table">
+    <tr>
+        <td style="width: 80%">
+            <div data-bind="visible: DisableFirstPageButton" style="float: left;">First </div>
+            <div data-bind="visible: EnableFirstPageButton" style="float: left; "><a style="cursor: pointer; text-decoration: underline; color: black" data-bind="click: function () { FirstPage() }">First </a></div>
+            <div style="float: left;">&nbsp;|&nbsp;</div>
+            <div data-bind="visible: DisableNextPageButton" style="float: left; ">Next </div>
+            <div data-bind="visible: EnableNextPageButton" style="float: left; "><a style="cursor: pointer; text-decoration: underline; color: black" data-bind="click: function () { NextPage() }">Next</a></div>
+            <div style="float: left;">&nbsp;|&nbsp;</div>
+            <div data-bind="visible: DisablePrevPageButton" style="float: left; ">Prev </div>
+            <div data-bind="visible: EnablePrevPageButton" style="float: left; "><a style="cursor: pointer; text-decoration: underline; color: black" data-bind="click: function () { PrevPage() }">Prev </a></div>
+            <div style="float: left;">&nbsp;|&nbsp;</div>
+            <div data-bind="visible: DisableLastPageButton" style="float: left; ">Last </div>
+            <div data-bind="visible: EnableLastPageButton" style="float: left;"><a style="cursor: pointer; text-decoration: underline; color: black" data-bind="click: function () { LastPage() }">Last </a></div>
+        </td>
+        <td style="text-align:right">
+            Page Size:&nbsp;<span data-bind="text: PageSize"></span>&nbsp;rows
+        </td>
+    </tr>
+</table>

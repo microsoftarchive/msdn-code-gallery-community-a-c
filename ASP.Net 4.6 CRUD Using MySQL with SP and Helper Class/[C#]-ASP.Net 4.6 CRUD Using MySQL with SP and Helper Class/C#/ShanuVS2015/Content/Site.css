@@ -1,0 +1,119 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+
+
+
+/* ---------------------------검색테이블--------------------------- */
+.search_ne
+{
+    border-top:1px solid #C7C7C7;
+    border-bottom:0px solid #C7C7C7 !important;
+    border-right:1px solid #C7C7C7;
+    padding:3px 9px 2px 9px;
+}
+.search td
+{
+    border-top:1px solid #C7C7C7;
+    border-bottom:1px solid #C7C7C7;
+    border-right:1px solid #C7C7C7;
+    padding:3px 9px 2px 9px;
+}
+.search input
+{
+    padding:2px;
+    }
+.search_th
+{
+    border-top:1px solid #b8cfe5;
+    border-bottom:1px solid #b8cfe5;
+    border-right:1px solid #C7C7C7;
+    border-left:1px solid #C7C7C7;
+    background:#E7EFF7;
+    padding:3px 9px 2px 9px;
+}
+.search_es
+{
+    border-top:1px solid #b8cfe5;
+    border-bottom:1px solid #b8cfe5;
+    border-right:1px solid #C7C7C7;
+    border-left:1px solid #C7C7C7;
+    background:#E7EFF7;
+    padding:3px 9px 2px 9px;
+    background-position:top right;
+    background-repeat:no-repeat;
+    background-image:url('../images/Icon/icEssential.gif');
+}
+.search_bl
+{
+    border-top:1px solid #b8cfe5;
+    border-bottom:1px solid #b8cfe5;
+    border-right:1px solid #C7C7C7;
+    border-left:1px solid #C7C7C7;
+    background:#E7EFF7;
+    padding:3px 9px 2px 9px;
+    background-position:top right;
+    background-repeat:no-repeat;
+    background-image:url('../images/Icon/icEssential_blue.gif');
+}
+.searchbtn
+{
+    background:#ebebeb;
+   
+}
+
+/* -----------------------------타이틀----------------------------- */
+.title
+{
+    border-bottom:3px solid #3273d5;
+}
+.title_bar
+{
+    border-bottom:1px solid #3273d5;
+}
+.title_btn
+{
+    text-align:right;
+    vertical-align:bottom;
+}
+.title_popup_btn
+{
+    text-align:right;
+    vertical-align:bottom;
+    padding-bottom:3px;
+}

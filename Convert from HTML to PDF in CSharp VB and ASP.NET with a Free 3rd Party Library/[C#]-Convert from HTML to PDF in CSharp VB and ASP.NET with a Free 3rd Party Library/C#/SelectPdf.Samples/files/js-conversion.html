@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test document for Select.Pdf Sample</title>
+    </head>
+    <body>
+        <h1>Select.Pdf for .NET - Start Conversion from Javascript</h1>
+        <p>
+            This is a sample page that will demonstrate how a html to pdf conversion can be triggered from a javascript call using Select.Pdf Library for .NET.
+            <br />
+            The page increments a timer until it reaches 3 and then it calls the conversion from javascript. 
+            If the conversion is manually started from javascript, the timer below should be 3 in pdf. If the conversion is automatically started when the page loads, the timer below should be 1 in pdf.
+        </p>
+        <p>
+            Library version: <span id="idVersion"></span><br />
+            Timer: <span id="idTimer"></span><br />
+        </p>
+
+        <script type="text/javascript" src="jquery.js"> </script>
+        <script type="text/javascript">
+            var timer = 0;
+
+            function incrementTimer() {
+                timer = timer + 1;
+
+                if (typeof (selectpdf) == "object") {
+                    $("*#idVersion").html(selectpdf.version);
+                }
+                else {
+                    $("*#idVersion").html("Not in converter.");
+                }
+                $("*#idTimer").text(timer);
+
+                if (timer == 3) {
+                    // 3 seconds elapsed - start conversion
+                    if (typeof (selectpdf) == "object") {
+                        selectpdf.start();
+                    }
+                }
+                else {
+                    // wait another second
+                    setTimeout("incrementTimer()", 1000);
+                }
+
+            }
+
+            $(document).ready(function () {
+                incrementTimer();
+            });
+        </script>
+    </body>
+</html>

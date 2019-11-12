@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"  
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <col:ArrayList x:Key="Genders">
+        <sys:String>Any</sys:String>
+        <sys:String>Male</sys:String>
+        <sys:String>Female</sys:String>
+    </col:ArrayList>
+    <col:ArrayList x:Key="Ages">
+        <sys:Int32>0</sys:Int32>
+        <sys:Int32>20</sys:Int32>
+        <sys:Int32>30</sys:Int32>
+        <sys:Int32>40</sys:Int32>
+        <sys:Int32>50</sys:Int32>
+    </col:ArrayList>
+    <col:ArrayList x:Key="Letters">
+        <sys:String>Any</sys:String>
+        <sys:String>A</sys:String>
+        <sys:String>B</sys:String>
+        <sys:String>C</sys:String>
+        <sys:String>D</sys:String>
+        <sys:String>E</sys:String>
+        <sys:String>F</sys:String>
+        <sys:String>G</sys:String>
+        <sys:String>H</sys:String>
+        <sys:String>I</sys:String>
+        <sys:String>J</sys:String>
+        <sys:String>K</sys:String>
+        <sys:String>L</sys:String>
+        <sys:String>M</sys:String>
+        <sys:String>N</sys:String>
+        <sys:String>O</sys:String>
+        <sys:String>P</sys:String>
+        <sys:String>Q</sys:String>
+        <sys:String>R</sys:String>
+        <sys:String>S</sys:String>
+        <sys:String>T</sys:String>
+        <sys:String>U</sys:String>
+        <sys:String>V</sys:String>
+        <sys:String>W</sys:String>
+        <sys:String>X</sys:String>
+        <sys:String>Y</sys:String>
+        <sys:String>Z</sys:String>
+    </col:ArrayList>
+</ResourceDictionary>

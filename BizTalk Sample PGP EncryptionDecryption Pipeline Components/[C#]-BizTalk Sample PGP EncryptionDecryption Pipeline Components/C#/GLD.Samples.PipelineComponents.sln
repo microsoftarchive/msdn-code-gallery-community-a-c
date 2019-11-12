@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLD.Samples.PipelineComponents", "GLD.Samples.PipelineComponent\GLD.Samples.PipelineComponents.csproj", "{FF8004C5-C899-44FE-B8B2-A22418D7DABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLD.Samples.Pipelines", "GLD.Samples.Pipelines\GLD.Samples.Pipelines.btproj", "{BF0262FF-42C9-454F-BC13-92F65F741D3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF8004C5-C899-44FE-B8B2-A22418D7DABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8004C5-C899-44FE-B8B2-A22418D7DABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8004C5-C899-44FE-B8B2-A22418D7DABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8004C5-C899-44FE-B8B2-A22418D7DABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0262FF-42C9-454F-BC13-92F65F741D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0262FF-42C9-454F-BC13-92F65F741D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0262FF-42C9-454F-BC13-92F65F741D3B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BF0262FF-42C9-454F-BC13-92F65F741D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0262FF-42C9-454F-BC13-92F65F741D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0262FF-42C9-454F-BC13-92F65F741D3B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

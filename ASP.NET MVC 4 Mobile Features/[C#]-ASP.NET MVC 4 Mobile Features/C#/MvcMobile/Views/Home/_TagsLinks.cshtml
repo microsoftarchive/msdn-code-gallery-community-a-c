@@ -1,0 +1,7 @@
+﻿@using MvcMobile.Models
+@model Session
+
+@foreach (var tag in Model.Tags.OrderBy(x => x)) {
+    @Html.ActionLink(tag, "SessionsByTag", new { tag })
+    <text> </text>
+}

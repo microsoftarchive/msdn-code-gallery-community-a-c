@@ -1,0 +1,40 @@
+﻿<a href="#/AddEmployee" class="btn btn-primary btn-xs" >Add New Employee</a>
+<br /><br />
+<div class="table-responsive">
+    <table id="mytable" class="table table-bordred table-striped">
+        <thead>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Salary</th>
+        <th>DOB</th>
+        <!--<th>Department</th>-->
+        <th>Edit</th>
+        <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in ListOfEmployee">
+                <td>{{item.EmployeeID}}</td>
+                <td>{{item.FirstName}}</td>
+                <td>{{item.LastName}}</td>
+                <td>{{item.Address}}</td>
+                <td>{{item.Salary}}</td>
+                <td>{{item.DOB}}</td>
+                <!--<td>{{item.DepartmentName}}</td>-->
+                <td><a class="btn btn-primary btn-xs" href="#/EditEmployee/{{item.EmployeeID}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                <td><a class="btn btn-danger btn-xs" href="#/DeleteEmployee/{{item.EmployeeID}}"><span class="glyphicon glyphicon-trash"></span></a></td>
+            </tr>
+        </tbody>
+    </table>
+    <!--<div class="clearfix"></div>
+    <ul class="pagination pull-right">
+        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+    </ul>-->
+</div>

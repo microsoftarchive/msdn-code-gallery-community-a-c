@@ -1,0 +1,129 @@
+﻿@model CRUD_APi.Models.CustomerViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<div id="loader" style="text-align: center; display: none; margin-bottom: 20px;">
+    <img alt="Loading" src="@Url.Content("~/Content/loader.gif")" /> Loading...
+</div>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "CustomerForm", @class = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Edit Customer</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.CustID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @Html.HiddenFor(model => model.CustEmail)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustContact, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustContact, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustContact, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" id="SubmitForm" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var id = @ViewContext.RouteData.Values["id"];
+        //======================Load Data================//
+        $.ajax({
+            url: '/api/Customer/GetCustomer/' + id,
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                BindCustomer(data);
+            },
+            error: function (error) {
+                debugger;
+                alert('Error Loading..');
+            }
+        });
+
+        //======================Bind Data================//
+
+        function BindCustomer(Customer) {
+            //alert(Customer.CustID);
+            document.getElementById("CustID").value = Customer.CustID;
+            document.getElementById("CustName").value = Customer.CustName;
+            document.getElementById("CustEmail").value = Customer.CustEmail;
+            document.getElementById("CustAddress").value = Customer.CustAddress;
+            document.getElementById("CustContact").value = Customer.CustContact;
+        }
+    });
+
+    $("#SubmitForm").click(function (e) {
+        e.preventDefault();
+        $("#loader").show();
+
+        var model_data = {};
+        model_data.CustID = $("#CustID").val();
+        model_data.CustName = $("#CustName").val();
+        model_data.CustEmail = $("#CustEmail").val();
+        model_data.CustAddress = $("#CustAddress").val();
+        model_data.CustContact = $("#CustContact").val();
+
+        if (model_data.CustEmail != '') {
+
+            $.ajax({
+                url: '/api/Customer/Edit',
+                async: false,
+                type: "POST",
+                data: JSON.stringify(model_data),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    //alert('Record Successfully Saved!');
+                    $("#loader").hide();
+                    window.location.href = '/Customer';
+                },
+                error: function (data) {
+                    alert('Error!!');
+                }
+            });
+        }
+        else {
+            return;
+        }
+    });
+
+</script>

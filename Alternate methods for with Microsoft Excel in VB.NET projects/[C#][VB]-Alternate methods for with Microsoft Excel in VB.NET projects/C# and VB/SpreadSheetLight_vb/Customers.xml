@@ -1,0 +1,542 @@
+﻿<Customers>
+  <Customer>
+    <CustomerIdentifier>1</CustomerIdentifier>
+    <CompanyName>Alfreds Futterkiste</CompanyName>
+    <ContactName>Maria Anders</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>2</CustomerIdentifier>
+    <CompanyName>Ana Trujillo Emparedados y helados</CompanyName>
+    <ContactName>Ana Trujillo</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>3</CustomerIdentifier>
+    <CompanyName>Antonio Moreno Taquería</CompanyName>
+    <ContactName>Antonio Moreno</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>4</CustomerIdentifier>
+    <CompanyName>Around the Horn</CompanyName>
+    <ContactName>Thomas Hardy</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>5</CustomerIdentifier>
+    <CompanyName>Berglunds snabbköp</CompanyName>
+    <ContactName>Christina Berglund</ContactName>
+    <ContactTitle>Order Administrator</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>6</CustomerIdentifier>
+    <CompanyName>Blauer See Delikatessen</CompanyName>
+    <ContactName>Hanna Moos</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>7</CustomerIdentifier>
+    <CompanyName>Blondesddsl père et fils</CompanyName>
+    <ContactName>Frédérique Citeaux</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>8</CustomerIdentifier>
+    <CompanyName>Bólido Comidas preparadas</CompanyName>
+    <ContactName>Martín Sommer</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>9</CustomerIdentifier>
+    <CompanyName>Bon app'</CompanyName>
+    <ContactName>Laurence Lebihan</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>10</CustomerIdentifier>
+    <CompanyName>B's Beverages</CompanyName>
+    <ContactName>Victoria Ashworth</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>11</CustomerIdentifier>
+    <CompanyName>Cactus Comidas para llevar</CompanyName>
+    <ContactName>Patricio Simpson</ContactName>
+    <ContactTitle>Sales Agent</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>12</CustomerIdentifier>
+    <CompanyName>Centro comercial Moctezuma</CompanyName>
+    <ContactName>Francisco Chang</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>13</CustomerIdentifier>
+    <CompanyName>Chop-suey Chinese</CompanyName>
+    <ContactName>Yang Wang</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>14</CustomerIdentifier>
+    <CompanyName>Consolidated Holdings</CompanyName>
+    <ContactName>Elizabeth Brown</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>15</CustomerIdentifier>
+    <CompanyName>Drachenblut Delikatessen</CompanyName>
+    <ContactName>Sven Ottlieb</ContactName>
+    <ContactTitle>Order Administrator</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>16</CustomerIdentifier>
+    <CompanyName>Du monde entier</CompanyName>
+    <ContactName>Janine Labrune</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>17</CustomerIdentifier>
+    <CompanyName>Eastern Connection</CompanyName>
+    <ContactName>Ann Devon</ContactName>
+    <ContactTitle>Sales Agent</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>18</CustomerIdentifier>
+    <CompanyName>Ernst Handel</CompanyName>
+    <ContactName>Roland Mendel</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>19</CustomerIdentifier>
+    <CompanyName>FISSA Fabrica Inter. Salchichas S.A.</CompanyName>
+    <ContactName>Diego Roel</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>20</CustomerIdentifier>
+    <CompanyName>Folies gourmandes</CompanyName>
+    <ContactName>Martine Rancé</ContactName>
+    <ContactTitle>Assistant Sales Agent</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>21</CustomerIdentifier>
+    <CompanyName>Folk och fä HB</CompanyName>
+    <ContactName>Maria Larsson</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>22</CustomerIdentifier>
+    <CompanyName>Frankenversand</CompanyName>
+    <ContactName>Peter Franken</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>23</CustomerIdentifier>
+    <CompanyName>France restauration</CompanyName>
+    <ContactName>Carine Schmitt</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>24</CustomerIdentifier>
+    <CompanyName>Franchi S.p.A.</CompanyName>
+    <ContactName>Paolo Accorti</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>25</CustomerIdentifier>
+    <CompanyName>Furia Bacalhau e Frutos do Mar</CompanyName>
+    <ContactName>Lino Rodriguez</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>26</CustomerIdentifier>
+    <CompanyName>Galería del gastrónomo</CompanyName>
+    <ContactName>Eduardo Saavedra</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>27</CustomerIdentifier>
+    <CompanyName>Godos Cocina Típica</CompanyName>
+    <ContactName>José Pedro Freyre</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>28</CustomerIdentifier>
+    <CompanyName>Königlich Essen</CompanyName>
+    <ContactName>Philip Cramer</ContactName>
+    <ContactTitle>Sales Associate</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>29</CustomerIdentifier>
+    <CompanyName>La corne d'abondance</CompanyName>
+    <ContactName>Daniel Tonini</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>30</CustomerIdentifier>
+    <CompanyName>La maison d'Asie</CompanyName>
+    <ContactName>Annette Roulet</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>31</CustomerIdentifier>
+    <CompanyName>Lehmanns Marktstand</CompanyName>
+    <ContactName>Renate Messner</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>32</CustomerIdentifier>
+    <CompanyName>Magazzini Alimentari Riuniti</CompanyName>
+    <ContactName>Giovanni Rovelli</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>33</CustomerIdentifier>
+    <CompanyName>Maison Dewey</CompanyName>
+    <ContactName>Catherine Dewey</ContactName>
+    <ContactTitle>Sales Agent</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>34</CustomerIdentifier>
+    <CompanyName>Morgenstern Gesundkost</CompanyName>
+    <ContactName>Alexander Feuer</ContactName>
+    <ContactTitle>Marketing Assistant</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>35</CustomerIdentifier>
+    <CompanyName>North/South</CompanyName>
+    <ContactName>Simon Crowther</ContactName>
+    <ContactTitle>Sales Associate</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>36</CustomerIdentifier>
+    <CompanyName>Océano Atlántico Ltda.</CompanyName>
+    <ContactName>Yvonne Moncada</ContactName>
+    <ContactTitle>Sales Agent</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>37</CustomerIdentifier>
+    <CompanyName>Ottilies Käseladen</CompanyName>
+    <ContactName>Henriette Pfalzheim</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>38</CustomerIdentifier>
+    <CompanyName>Paris spécialités</CompanyName>
+    <ContactName>Marie Bertrand</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>39</CustomerIdentifier>
+    <CompanyName>Pericles Comidas clásicas</CompanyName>
+    <ContactName>Guillermo Fernández</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>40</CustomerIdentifier>
+    <CompanyName>Piccolo und mehr</CompanyName>
+    <ContactName>Georg Pipps</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>41</CustomerIdentifier>
+    <CompanyName>Princesa Isabel Vinhos</CompanyName>
+    <ContactName>Isabel de Castro</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>42</CustomerIdentifier>
+    <CompanyName>QUICK Stop</CompanyName>
+    <ContactName>Horst Kloss</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>43</CustomerIdentifier>
+    <CompanyName>Rancho grande</CompanyName>
+    <ContactName>Sergio Gutiérrez</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>44</CustomerIdentifier>
+    <CompanyName>Reggiani Caseifici</CompanyName>
+    <ContactName>Maurizio Moroni</ContactName>
+    <ContactTitle>Sales Associate</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>45</CustomerIdentifier>
+    <CompanyName>Richter Supermarkt</CompanyName>
+    <ContactName>Michael Holz</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>46</CustomerIdentifier>
+    <CompanyName>Romero y tomillo</CompanyName>
+    <ContactName>Alejandra Camino</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>47</CustomerIdentifier>
+    <CompanyName>Santé Gourmet</CompanyName>
+    <ContactName>Jonas Bergulfsen</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>48</CustomerIdentifier>
+    <CompanyName>Seven Seas Imports</CompanyName>
+    <ContactName>Hari Kumar</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>49</CustomerIdentifier>
+    <CompanyName>Simons bistro</CompanyName>
+    <ContactName>Jytte Petersen</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>50</CustomerIdentifier>
+    <CompanyName>Spécialités du monde</CompanyName>
+    <ContactName>Dominique Perrier</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>51</CustomerIdentifier>
+    <CompanyName>Suprêmes délices</CompanyName>
+    <ContactName>Pascale Cartrain</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>52</CustomerIdentifier>
+    <CompanyName>Toms Spezialitäten</CompanyName>
+    <ContactName>Karin Josephs</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>53</CustomerIdentifier>
+    <CompanyName>Tortuga Restaurante</CompanyName>
+    <ContactName>Miguel Angel Paolino</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>54</CustomerIdentifier>
+    <CompanyName>Vaffeljernet</CompanyName>
+    <ContactName>Palle Ibsen</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>55</CustomerIdentifier>
+    <CompanyName>Victuailles en stock</CompanyName>
+    <ContactName>Mary Saveley</ContactName>
+    <ContactTitle>Sales Agent</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>56</CustomerIdentifier>
+    <CompanyName>Vins et alcools Chevalier</CompanyName>
+    <ContactName>Paul Henriot</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>57</CustomerIdentifier>
+    <CompanyName>Die Wandernde Kuh</CompanyName>
+    <ContactName>Rita Müller</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>58</CustomerIdentifier>
+    <CompanyName>Wartian Herkku</CompanyName>
+    <ContactName>Pirkko Koskitalo</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>59</CustomerIdentifier>
+    <CompanyName>Wilman Kala</CompanyName>
+    <ContactName>Matti Karttunen</ContactName>
+    <ContactTitle>Owner/Marketing Assistant</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>60</CustomerIdentifier>
+    <CompanyName>Wolski  Zajazd</CompanyName>
+    <ContactName>Zbyszek Piestrzeniewicz</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>61</CustomerIdentifier>
+    <CompanyName>Old World Delicatessen</CompanyName>
+    <ContactName>Rene Phillips</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>62</CustomerIdentifier>
+    <CompanyName>Bottom-Dollar Markets</CompanyName>
+    <ContactName>Elizabeth Lincoln</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>63</CustomerIdentifier>
+    <CompanyName>Laughing Bacchus Wine Cellars</CompanyName>
+    <ContactName>Yoshi Tannamuri</ContactName>
+    <ContactTitle>Marketing Assistant</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>64</CustomerIdentifier>
+    <CompanyName>Let's Stop N Shop</CompanyName>
+    <ContactName>Jaime Yorres</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>65</CustomerIdentifier>
+    <CompanyName>Hungry Owl All-Night Grocers</CompanyName>
+    <ContactName>Patricia McKenna</ContactName>
+    <ContactTitle>Sales Associate</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>66</CustomerIdentifier>
+    <CompanyName>GROSELLA-Restaurante</CompanyName>
+    <ContactName>Manuel Pereira</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>67</CustomerIdentifier>
+    <CompanyName>Save-a-lot Markets</CompanyName>
+    <ContactName>Jose Pavarotti</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>68</CustomerIdentifier>
+    <CompanyName>Island Trading</CompanyName>
+    <ContactName>Helen Bennett</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>69</CustomerIdentifier>
+    <CompanyName>LILA-Supermercado</CompanyName>
+    <ContactName>Carlos González</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>70</CustomerIdentifier>
+    <CompanyName>The Cracker Box</CompanyName>
+    <ContactName>Liu Wong</ContactName>
+    <ContactTitle>Marketing Assistant</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>71</CustomerIdentifier>
+    <CompanyName>Rattlesnake Canyon Grocery</CompanyName>
+    <ContactName>Paula Wilson</ContactName>
+    <ContactTitle>Assistant Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>72</CustomerIdentifier>
+    <CompanyName>LINO-Delicateses</CompanyName>
+    <ContactName>Felipe Izquierdo</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>73</CustomerIdentifier>
+    <CompanyName>Great Lakes Food Market</CompanyName>
+    <ContactName>Howard Snyder</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>74</CustomerIdentifier>
+    <CompanyName>Hungry Coyote Import Store</CompanyName>
+    <ContactName>Yoshi Latimer</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>75</CustomerIdentifier>
+    <CompanyName>Lonesome Pine Restaurant</CompanyName>
+    <ContactName>Fran Wilson</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>76</CustomerIdentifier>
+    <CompanyName>The Big Cheese</CompanyName>
+    <ContactName>Liz Nixon</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>77</CustomerIdentifier>
+    <CompanyName>Mère Paillarde</CompanyName>
+    <ContactName>Jean Fresnière</ContactName>
+    <ContactTitle>Marketing Assistant</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>78</CustomerIdentifier>
+    <CompanyName>Hanari Carnes</CompanyName>
+    <ContactName>Mario Pontes</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>79</CustomerIdentifier>
+    <CompanyName>Que Delícia</CompanyName>
+    <ContactName>Bernardo Batista</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>80</CustomerIdentifier>
+    <CompanyName>Ricardo Adocicados</CompanyName>
+    <ContactName>Janete Limeira</ContactName>
+    <ContactTitle>Assistant Sales Agent</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>81</CustomerIdentifier>
+    <CompanyName>Comércio Mineiro</CompanyName>
+    <ContactName>Pedro Afonso</ContactName>
+    <ContactTitle>Sales Associate</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>82</CustomerIdentifier>
+    <CompanyName>Familia Arquibaldo</CompanyName>
+    <ContactName>Aria Cruz</ContactName>
+    <ContactTitle>Marketing Assistant</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>83</CustomerIdentifier>
+    <CompanyName>Gourmet Lanchonetes</CompanyName>
+    <ContactName>André Fonseca</ContactName>
+    <ContactTitle>Sales Associate</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>84</CustomerIdentifier>
+    <CompanyName>Queen Cozinha</CompanyName>
+    <ContactName>Lúcia Carvalho</ContactName>
+    <ContactTitle>Marketing Assistant</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>85</CustomerIdentifier>
+    <CompanyName>Tradição Hipermercados</CompanyName>
+    <ContactName>Anabela Domingues</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>86</CustomerIdentifier>
+    <CompanyName>Wellington Importadora</CompanyName>
+    <ContactName>Paula Parente</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>87</CustomerIdentifier>
+    <CompanyName>HILARION-Abastos</CompanyName>
+    <ContactName>Carlos Hernández</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>88</CustomerIdentifier>
+    <CompanyName>Lazy K Kountry Store</CompanyName>
+    <ContactName>John Steel</ContactName>
+    <ContactTitle>Marketing Manager</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>89</CustomerIdentifier>
+    <CompanyName>Trail's Head Gourmet Provisioners</CompanyName>
+    <ContactName>Helvetius Nagy</ContactName>
+    <ContactTitle>Sales Associate</ContactTitle>
+  </Customer>
+  <Customer>
+    <CustomerIdentifier>90</CustomerIdentifier>
+    <CompanyName>White Clover Markets</CompanyName>
+    <ContactName>Karl Jablonski</ContactName>
+    <ContactTitle>Owner</ContactTitle>
+  </Customer>
+</Customers>

@@ -1,0 +1,51 @@
+﻿<Window x:Class="SplashScreen.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+   xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+   Title="SplashWindow"  ShowInTaskbar="False" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent" dx:ThemeManager.ThemeName="TouchlineDark" Height="231.617" Width="462.361">
+    <Grid>
+        <Border  CornerRadius="0"   BorderBrush="LightGray"
+            BorderThickness="1"
+            SnapsToDevicePixels="True"
+            Margin="0 0 10 10"
+            Background="#101010 "
+            Padding="10">
+            <Border.Effect>
+                <DropShadowEffect
+                    Color="Gray"
+                    BlurRadius="10" />
+            </Border.Effect>
+            <StackPanel>
+                <Label
+                    Content="Trust us, Win the technology! "
+                    Foreground="White"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Margin="0 10 0 10" />
+                <Image
+                    Width="308" Height="80">
+                    <Image.Source>
+                        <BitmapImage
+                            UriSource="Image\WPF-Logo.PNG" />
+                    </Image.Source>
+                </Image>
+                <Label
+                    x:Name="lblProgress"
+                    Content="Loading."
+                    Foreground="White"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="0 10 0 10" />
+                <ProgressBar
+                    Height="20"
+                    HorizontalAlignment="Stretch"
+                    IsIndeterminate="True" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

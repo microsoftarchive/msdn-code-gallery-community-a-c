@@ -1,0 +1,62 @@
+﻿@model GridAjaxCRUDMVC.Models.AdvancedSearchViewModel
+@{
+    Layout = null;
+}
+
+<div class="modal fade" id="advancedSearchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Advanced Search</h4>
+            </div>
+            @using (Html.BeginForm("Get", "Asset", FormMethod.Get, new { id = "frmAdvancedSearch", @class = "form-horizontal", role = "form" }))
+            {
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <hr />
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FacilitySite, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                <div class="dropdown">
+                                    @Html.DropDownListFor(model => model.FacilitySite, Model.FacilitySiteList, "Any", new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Building, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                <div class="dropdown">
+                                    @Html.DropDownListFor(model => model.Building, Model.BuildingList, "Any", new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Manufacturer, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                <div class="dropdown">
+                                    @Html.DropDownListFor(model => model.Manufacturer, Model.ManufacturerList, "Any", new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                <div class="dropdown">
+                                    @Html.DropDownListFor(model => model.Status, Model.StatusList, "Both", new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnPerformAdvancedSearch" type="button" class="btn btn-default btn-success" data-dismiss="modal">Search</button>
+                    <button id="btnCancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

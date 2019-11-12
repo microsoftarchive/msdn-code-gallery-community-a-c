@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="CRMtoGo.Pages.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CRMtoGo.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+   
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="CRM to Go" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock x:Uid="lblSettings3" Text="settings" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <StackPanel>
+                <TextBlock x:Uid="lblSettings1" Text="TimeZone" Style="{ThemeResource TitleTextBlockStyle}"/>
+                <ComboBox x:Name="cbTimeZones" SelectionChanged="cbTimeZones_SelectionChanged" />
+                <TextBlock x:Uid="lblSettings2" Text="Records per View" Style="{ThemeResource TitleTextBlockStyle}"/>
+                <ComboBox x:Name="cbRecordsPerView" SelectionChanged="cbRecordsPerView_SelectionChanged">
+                    <TextBlock Text="25"/>
+                    <TextBlock Text="50"/>
+                    <TextBlock Text="75"/>
+                    <TextBlock Text="100"/>
+                    <TextBlock Text="250"/>
+                </ComboBox>
+                <Button x:Name="btnSignOut" x:Uid="btnSignOut" Content="Sign Out" Click="btnSignOut_Click"/>
+                <Button x:Name="btnReconfigure" x:Uid="btnReconfigure" Content="Reconfigure" Click="btnReconfigure_Click" />
+                <Button x:Name="btnClearCache" x:Uid="btnClearCache" Content="Clear Cache" Click="btnClearCache_Click" />
+            </StackPanel>
+        </Grid>
+        <ProgressRing Grid.RowSpan="2" x:Name="progressRing" />
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="abAccept" x:Uid="abAccept" Icon="Accept" Label="Accept" IsEnabled="False" Click="abAccept_Click"/>
+            <AppBarButton x:Name="abCancel" x:Uid="abCancel" Icon="Cancel" Label="Cancel" Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

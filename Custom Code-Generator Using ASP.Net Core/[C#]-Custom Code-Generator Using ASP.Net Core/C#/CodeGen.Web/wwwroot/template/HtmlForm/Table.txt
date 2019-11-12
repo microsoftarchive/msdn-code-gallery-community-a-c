@@ -1,0 +1,8 @@
+﻿<table style="width:100%" class="table table-striped">
+<tr>
+    #TableHeader
+</tr>
+<tr #Loop>
+    #TableData
+</tr>
+</table>

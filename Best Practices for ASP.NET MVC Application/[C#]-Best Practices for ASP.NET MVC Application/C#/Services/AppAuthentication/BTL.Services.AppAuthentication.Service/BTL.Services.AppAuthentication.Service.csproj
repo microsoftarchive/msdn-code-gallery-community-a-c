@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFD5920A-D9F4-4ACE-9E10-476EF4093027}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BTL.Services.AppAuthentication.Service</RootNamespace>
+    <AssemblyName>BTL.Services.AppAuthentication.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\packages\Autofac.2.6.1.841\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Wcf">
+      <HintPath>..\..\..\packages\Autofac.Wcf.2.6.1.841\lib\NET40\Autofac.Integration.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=2.1.267.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL" />
+    <Reference Include="DotNetOpenAuth">
+      <HintPath>..\..\..\packages\DotNetOpenAuth-4.0.1.12097\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.ApplicationBlock">
+      <HintPath>..\..\..\packages\DotNetOpenAuth-4.0.1.12097\DotNetOpenAuth.ApplicationBlock.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.4.5.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppAuthenticationModule.cs" />
+    <Compile Include="AppAuthenticationService.cs" />
+    <Compile Include="AutoMapperConfiguration.cs" />
+    <Compile Include="ExAutofacServiceHostFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BTL.Domain\BTL.Domain.csproj">
+      <Project>{4C4C811F-DC3D-4536-A251-636ADFDC1198}</Project>
+      <Name>BTL.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\BTL.Infrastructure\BTL.Infrastructure.csproj">
+      <Project>{194DBE47-73D0-4E18-BE85-E4ED94108A33}</Project>
+      <Name>BTL.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AppSecurity\BTL.Services.AppSecurity.Service\BTL.Services.AppSecurity.Service.csproj">
+      <Project>{7801476B-B1D0-42EA-8E31-6D3BB1F119BE}</Project>
+      <Name>BTL.Services.AppSecurity.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BTL.Services.AppAuthentication.Contract\BTL.Services.AppAuthentication.Contract.csproj">
+      <Project>{9967DD14-C675-48B5-BF4E-1F377AC36391}</Project>
+      <Name>BTL.Services.AppAuthentication.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BTL.Services.AppAuthentication.Messages\BTL.Services.AppAuthentication.Messages.csproj">
+      <Project>{EF21019D-0AF5-4C17-B513-DC527EC2A329}</Project>
+      <Name>BTL.Services.AppAuthentication.Messages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

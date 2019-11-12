@@ -1,0 +1,6 @@
+﻿Start: 9:54:02 AM
+After readDir: 9:54:02 AM
+Loaded: 9:54:02 AM
+Start: 9:55:36 AM
+After readDir: 9:55:36 AM
+Loaded: 9:55:36 AM

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<SPDisposeCheckSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AssembliesToAnalyze>
+    <ProjectAssemblyInfo>
+      <AssemblyPath>D:\Ravicode\CustomHitCounterWebPart\CustomHitCounterWebPart\obj\Debug\CustomHitCounterWebPart.dll</AssemblyPath>
+      <ProjectUniqueName>CustomHitCounterWebPart\CustomHitCounterWebPart.csproj</ProjectUniqueName>
+    </ProjectAssemblyInfo>
+  </AssembliesToAnalyze>
+  <IsOn>false</IsOn>
+  <Debug>false</Debug>
+  <V1>false</V1>
+  <ShowUndocumented>false</ShowUndocumented>
+  <OnlyUndocumented>false</OnlyUndocumented>
+  <TreatProblemsAs>Errors</TreatProblemsAs>
+  <PathToSPDisposeCheck>C:\Program Files (x86)\Microsoft\Sharepoint Dispose Check\SPDisposeCheck.exe</PathToSPDisposeCheck>
+  <ExecuteAfterBuild>true</ExecuteAfterBuild>
+</SPDisposeCheckSettings>

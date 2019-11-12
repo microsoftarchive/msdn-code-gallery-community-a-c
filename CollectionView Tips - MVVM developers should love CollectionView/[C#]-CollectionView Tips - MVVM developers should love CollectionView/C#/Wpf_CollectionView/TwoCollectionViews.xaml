@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="Wpf_CollectionView.TwoCollectionViews"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:support="clr-namespace:Support"
+             mc:Ignorable="d"  Height="560" Width="900"
+            >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dgLevels"  AutoGenerateColumns="False"
+                          ItemsSource="{Binding LevelsPeopleView}"
+                  Grid.Column="0" Grid.Row="1"
+                  EnableRowVirtualization="True"
+                  HeadersVisibility="Column"
+                  SelectedItem="{Binding CurrentLevel}"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  >
+            <DataGrid.Resources>
+                <Style x:Key="NoFocusStyle" TargetType="{x:Type DataGridCell}">
+                    <Setter Property="Focusable" Value="False"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding OrganizationLevel}"  Header="Lvl" CellStyle="{StaticResource NoFocusStyle}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="dg" AutoGenerateColumns="False"
+                  ItemsSource="{Binding PeopleView}"
+                  Grid.Column="1" Grid.Row="1"
+                  IsSynchronizedWithCurrentItem="True"
+                  EnableRowVirtualization="True"
+                  HeadersVisibility="Column"
+                  >
+            <DataGrid.Resources>
+                <Style x:Key="NoTabStopStyle" TargetType="{x:Type DataGridCell}">
+                    <Setter Property="KeyboardNavigation.IsTabStop" Value="False"/>
+                </Style>
+            </DataGrid.Resources>
+            <i:Interaction.Behaviors>
+                <support:ScrollDataGridRowIntoView />
+            </i:Interaction.Behaviors>
+            <DataGrid.RowStyle> 
+               <!--Because this is to be attached via a style the datagridrow behavior must be an attached behavior--> 
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected" Value="true"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding OrganizationLevel}"  Header="Lvl" CellStyle="{StaticResource NoTabStopStyle}" />
+                <DataGridTextColumn Binding="{Binding JobTitle}"  Header="Title" />
+                <DataGridTextColumn Binding="{Binding FirstName}"  Header="First Name" />
+                <DataGridTextColumn Binding="{Binding MiddleName}"  Header=" " />
+                <DataGridTextColumn Binding="{Binding LastName}"  Header="Last Name" />
+                <DataGridTextColumn Binding="{Binding Gender}"  Header="M/F" />
+                <!--<DataGridTextColumn Binding="{Binding LoginId}"  Header="Login" />-->
+                <DataGridTextColumn Binding="{Binding HireDate, StringFormat='{}{0:dd/MM/yyyy}'}"  Header="Hired" />
+                <DataGridTextColumn Binding="{Binding BirthDate, StringFormat='{}{0:dd/MM/yyyy}'}"  Header="Born" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

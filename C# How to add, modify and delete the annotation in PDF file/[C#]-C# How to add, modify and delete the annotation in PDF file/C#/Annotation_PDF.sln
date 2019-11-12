@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Annotation_PDF", "Annotation_PDF\Annotation_PDF.csproj", "{0E042062-AC95-4EA7-A8A7-30BD07F4B818}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyAnnotation_PDF", "ModifyAnnotation_PDF\ModifyAnnotation_PDF.csproj", "{AFD29A24-D7D7-4767-8793-2FB2667C85C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeleteAnnotation_PDF", "DeleteAnnotation_PDF\DeleteAnnotation_PDF.csproj", "{F1517D5C-02EB-4A28-998E-605D2A0DFF49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E042062-AC95-4EA7-A8A7-30BD07F4B818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E042062-AC95-4EA7-A8A7-30BD07F4B818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E042062-AC95-4EA7-A8A7-30BD07F4B818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E042062-AC95-4EA7-A8A7-30BD07F4B818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFD29A24-D7D7-4767-8793-2FB2667C85C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD29A24-D7D7-4767-8793-2FB2667C85C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD29A24-D7D7-4767-8793-2FB2667C85C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD29A24-D7D7-4767-8793-2FB2667C85C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1517D5C-02EB-4A28-998E-605D2A0DFF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1517D5C-02EB-4A28-998E-605D2A0DFF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1517D5C-02EB-4A28-998E-605D2A0DFF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1517D5C-02EB-4A28-998E-605D2A0DFF49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

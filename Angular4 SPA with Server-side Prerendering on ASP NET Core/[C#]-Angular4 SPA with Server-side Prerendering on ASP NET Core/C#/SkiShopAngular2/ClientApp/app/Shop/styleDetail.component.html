@@ -1,0 +1,49 @@
+﻿<div *ngIf="style && sizes" class="container-fluid row">
+    <div class="col-1"></div>
+    <div class="col-4 mt-3">
+        <img src="{{style.imageBig}}" style="width: 100%"/>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-6 mt-4">
+        <h5 class="text-muted">{{style.brandName | uppercase}}</h5>
+        <h4>{{style.styleName}} - {{style.gender}}</h4>
+        <h5 [clearance-class]="style.priceCurrent"
+            [price-regular]="style.priceRegular"></h5>
+        
+        <div class="btn-group mt-3" style="flex-flow: wrap">
+            <button *ngFor="let size of sizes"
+                    [(ngModel)]="pickedItem.size" btnRadio="{{size}}"
+                    [class]="getClasses(size, style.sizes, style.quantities)"
+                    >
+                {{size}}
+            </button>
+        </div>
+        <div *ngIf="pickedItem.size === 'None'" style="color: red">
+            <strong>Pleae pick an available size </strong>
+        </div>
+        
+        <div class="mt-4">
+            <label>Quantity:</label>
+            <div class="row">
+                <div class="col-6">
+                    <input type="number" class="form-control"
+                           min="1" max="99" [(ngModel)]="pickedItem.quantity" />
+                </div>
+            </div>
+        </div>
+        <div>
+            <h6 *ngIf="ifTooMuch" style="color: red">
+                Your cart quantity will be more than stock level.
+            </h6>
+        </div>
+        <h6 *ngIf="ifInteger" style="color: red">
+            Please input an integer.
+        </h6>
+        
+        <button (click)="addToCart(style, pickedItem.size, pickedItem.quantity)" 
+                class="btn btn-primary btn-lg mt-5">
+            <span class="fa fa-shopping-cart"></span>	&nbsp;
+            ADD TO CART
+        </button>
+    </div>
+</div>

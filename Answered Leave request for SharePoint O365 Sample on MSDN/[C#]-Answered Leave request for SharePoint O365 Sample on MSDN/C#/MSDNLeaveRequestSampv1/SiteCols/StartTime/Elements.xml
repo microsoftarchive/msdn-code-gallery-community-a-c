@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{474ad9e5-92e4-4f86-8365-69a5cd1ccae4}"
+       Name="StartTime"
+       DisplayName="Start Time"
+       StaticName="StartTime"
+       Description="When will you be taking time off. First date actually not in office?"
+       Type="DateTime"
+       Required="TRUE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp">
+  </Field>
+</Elements>

@@ -1,0 +1,349 @@
+﻿<h1>{{myName}} ASP.NET Core , Angular2 Shopping Cart using   Web API and EF 1.0.1    </h1>
+<hr style="height: 1px;color: #123455;background-color: #d55500;border: none;color: #d55500;" />
+ 
+
+<p *ngIf="!ShoppingDetails"><em>Loading Student Details please Wait ! ...</em></p>
+ <!--<pre>{{ ShoppingDetails | json }}</pre>--> 
+
+ 
+<table id="tblContainer" style='width: 99%;table-layout:fixed;'>
+    <tr *ngIf="AddItemsTable">
+        <td>
+            <table style="background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2"
+                   cellspacing="2">
+                <tr style="height: 30px;  color:#ff0000 ;border: solid 1px #659EC7;">
+                    <td width="40px">&nbsp;</td>
+                    <td>
+                        <h2> <strong>Add Items to Cart</strong></h2>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td width="40px">&nbsp;</td>
+                    <td>
+                        <table>
+                            <tr>
+                              
+                                <td>
+
+                                    <img src="{{Imagename}}" width="150" height="150" />
+
+                                </td>
+                                <td width="30"></td>
+                                <td valign="top">
+                                    <table style="color:#9F000F;font-size:large" cellpadding="4" cellspacing="6">
+
+                                        <tr>
+                                            <td>
+                                                <b>Item code </b>
+                                            </td>
+
+                                            <td>
+                                                : {{ItemID}}
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>   Item Name</b>
+                                            </td>
+
+                                            <td>
+                                                : {{ItemName}}
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b> Price  </b>
+                                            </td>
+
+                                            <td>
+                                                : {{ItemPrice}}
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b> Description </b>
+
+                                            </td>
+                                            <td>
+                                                : {{Descrip}}
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td align="center" colspan="2">
+                                                <table>
+
+                                                    <tr>
+                                                        <td>
+                                                            <button (click)=showCart() style="background-color:#4c792d;color:#FFFFFF;font-size:large;width:200px">
+                                                                Add to Cart
+                                                            </button> 
+                                                            
+
+                                                        </td>
+                                                        <td rowspan="2"><img src="{{cartImageUrl}}" /></td>
+                                                    </tr>
+
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td><hr style="height: 1px;color: #123455;background-color: #d55500;border: none;color: #d55500;" /></td>
+    </tr>
+    <tr *ngIf="CartDetailsTable">
+        <td>
+            
+            <table width="100%">
+                <tr>
+                    <td>
+                        <table style="background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 100%;table-layout:fixed;" cellpadding="2"
+                               cellspacing="2">
+                            <tr style="height: 30px;  color:#123455 ;border: solid 1px #659EC7;">
+                                <td width="40px">&nbsp;</td>
+                                <td width="60%">
+                                    <h1> My Recent Orders Items <strong style="color:#0094ff"> ({{totalItem}})</strong></h1> 
+                                </td>
+                                <td align="right">
+                                    <button (click)=showItems() style="background-color:#0094ff;color:#FFFFFF;font-size:large;width:300px;height:50px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;">
+                                        Add More Items
+                                    </button>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="background-color:#FFFFFF; border:solid 2px #6D7B8D;padding: 5px;width: 100%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                            <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                <td width="30" align="center">No</td>
+                                <td width="80" align="center">
+                                    <b>Image</b>
+                                </td>
+                                <td width="90" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Item Code</b>
+                                </td>
+                                <td width="140" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Item Name</b>
+                                </td>
+                                <td width="160" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Decription</b>
+                                </td>
+                                <td width="90" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Price</b>
+                                </td>
+                                <td width="90" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Quantity</b>
+                                </td>
+                                <td width="90" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Total Price</b>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                            <tbody *ngFor="let detail of cartDetails ; let i = index">
+
+                                <tr>
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;" align="center">
+                                        {{i+1}}
+
+                                    </td>
+                                    <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F" *ngIf!="getImagename(detail.CImage_Name)">
+                                            <img src="{{ImageUrl}}" style="height:56px;width:56px">
+                                        </span>
+                                    </td>
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            {{detail.CItem_ID}}
+                                        </span>
+                                    </td>
+
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            {{detail.CItem_Name}}
+                                        </span>
+                                    </td>
+
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            {{detail.CDescription}}
+                                        </span>
+                                    </td>
+
+                                    <td align="right" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            {{detail.CItem_Price  | number}}
+                                        </span>
+                                    </td>
+
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;" align="right">
+                                        <span style="color:#9F000F">
+                                            {{detail.CQty}}
+                                        </span>
+                                    </td>
+
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;" align="right">
+                                        <span style="color:#9F000F">
+                                            {{detail.CTotalPrice*detail.CQty  | number}}
+                                        </span>
+                                    </td>
+
+                                    <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                                  <button (click)=removeFromCart(i) style="background-color:#e11919;color:#FFFFFF;font-size:large;width:220px;height:40px;">
+                                            Remove Item from Cart
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tr>
+                                <td colspan="5" height="40" align="right" > <strong>Total </strong></td>
+                                <td align="right" height="40"><strong>Price: {{ totalPrice | number}}</strong></td>
+                                <td align="right" height="40"><strong>Qty : {{ totalQty | number}}</strong></td>
+                                <td align="right" height="40"><strong>Sum: {{ GrandtotalPrice | number}}</strong></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+            </table>
+        </td>
+    </tr>
+  
+    <tr *ngIf="showDetailsTable">
+
+        <td>
+            <table width="100%" style="background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 100%;table-layout:fixed;" cellpadding="2"
+                               cellspacing="2">
+                <tr>
+                    <td>
+                        <table style="background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 100%;table-layout:fixed;" cellpadding="2"
+                               cellspacing="2">
+                            <tr style="height: 30px;  color:#134018 ;border: solid 1px #659EC7;">
+                                <td width="40px">&nbsp;</td>
+                                <td width="60%">
+                                    <h2> <strong>Item Details</strong></h2>
+                                </td>
+                                <td align="right">
+                                    <button (click)=showShoppingItems() style="background-color:#d55500;color:#FFFFFF;font-size:large;width:300px;height:50px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;">
+                                        Show My Cart Items
+                                    </button>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td>
+
+                        <table style="background-color:#FFFFFF; border: solid 2px #6D7B8D; padding: 5px;width: 100%;table-layout:fixed;" cellpadding="2" cellspacing="2" *ngIf="ShoppingDetails">
+
+
+                            <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                <td width="40" align="center">
+                                    <b>Image</b>
+                                </td>
+
+                                <td width="40" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Item Code</b>
+                                </td>
+
+                                <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Item Name</b>
+                                </td>
+
+                                <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Decription</b>
+                                </td>
+
+                                <td width="40" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>Price</b>
+                                </td>
+
+                                <td width="90" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                    <b>User Name</b>
+                                </td>
+
+                            </tr>
+                            <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                <td width="40" align="center">
+                                    Filter By ->
+                                </td>
+
+                                <td width="200" colspan="5" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+
+                                    Item Name :
+
+
+                                    <input type="text" (ngModel)="ItemName" (keyup)="getShoppingDetails(myInput.value)" #myInput style="background-color:#fefcfc;color:#334668;font-size:large;
+                                                   border-color:#a2aabe;border-style:dashed;border-width:2px;" />
+                                </td>
+
+                            </tr>
+
+                            <tbody *ngFor="let detail of ShoppingDetails">
+                                <tr>
+                                    <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F" *ngIf!="getImagename(detail.image_Name)">
+                                            <img src="{{ImageUrl}}" style="height:56px;width:56px" (click)=showToCart(detail.item_ID,detail.item_Name,detail.item_Price,detail.image_Name,detail.description,detail.addedBy)>
+                                        </span>
+
+                                    </td>
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            {{detail.item_ID}}
+                                        </span>
+                                    </td>
+
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            {{detail.item_Name}}
+                                        </span>
+                                    </td>
+
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            {{detail.description}}
+                                        </span>
+                                    </td>
+
+                                    <td align="right" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            {{detail.item_Price}}
+                                        </span>
+                                    </td>
+
+
+                                    <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                        <span style="color:#9F000F">
+                                            {{detail.addedBy}}
+                                        </span>
+                                    </td>
+                                </tr>
+                        </table>
+                    </td>
+                    </tr>
+                </table>
+              </td>   
+             </tr>
+           </table>

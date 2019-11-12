@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    <script type="text/javascript">
+        function ContactsViewModel() {
+            var self = this;
+            self.loaded = ko.observable(false);
+            self.contacts = ko.observableArray([]);
+
+            self.createContactFromForm = function (formElement) {
+                // If valid, post the serialized form data to the web api
+                $(formElement).validate();
+                if ($(formElement).valid()) {
+                    $.post("api/contacts", $(formElement).serialize(), "json")
+                        .done(function (newContact) { self.contacts.push(newContact); });
+                }
+            }
+            self.removeContact = function (contact) {
+                // First remove from the server, then from the UI
+                $.ajax({ type: "DELETE", url: contact.Self})
+                    .done(function () { self.contacts.remove(contact); });
+            }
+
+            // Load the initial state
+            $.getJSON("api/contacts", self.contacts)
+                .done(function () { self.loaded(true); });
+        }
+
+        ko.applyBindings(new ContactsViewModel());
+    </script>
+}
+
+<div id="container">
+<img id="loader" src="images/ajax-loader.gif" data-bind="visible: !loaded()" />
+
+
+<ul id="contacts" data-bind="visible: loaded, foreach: contacts">
+    <li class="ui-widget-content ui-corner-all">
+        <h1 data-bind="text: Name" class="ui-widget-header"></h1>
+        <div><span data-bind="text: Address || 'Address?'"></span></div>
+        <div>
+            <span data-bind="text: City || 'City?'"></span>,
+            <span data-bind="text: State || 'State?'"></span>
+            <span data-bind="text: Zip || 'Zip?'"></span>
+        </div>
+        <div>
+            <a data-bind="visible: Email, 
+                          text: Email, 
+                          attr: { href: 'mailto:' + Email }"></a>
+            <span data-bind="visible: !Email">Email?</span>
+        </div>
+        <div>
+            <a data-bind="visible: Twitter,
+                          text: '@@' + Twitter,
+                          attr: { href: 'http://twitter.com/' + Twitter }"></a>
+            <span data-bind="visible: !$data.Twitter">Twitter?</span>
+        </div>
+        <p><a data-bind="attr: { href: Self + '.png'}" class="viewImage ui-state-default ui-corner-all" target="_blank">Image</a>
+           <a href="#" data-bind="click: $root.removeContact" class="removeContact ui-state-default ui-corner-all">Remove</a></p>
+    </li>
+</ul>
+</div>
+
+@Html.Partial("AddContact")
+
+
+

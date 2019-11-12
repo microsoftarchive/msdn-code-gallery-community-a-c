@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home ListView</title>
+	<script src="nav_home.js"></script>
+</head>
+<body>
+
+	<div class="divContainer" style="vertical-align: top;">
+
+		<header aria-label="Header content" role="banner">
+			<div class="win-h3">ListView Example</div>
+			<hr class='styleHr' />
+		</header>
+
+		<section aria-label="Main content" role="main">
+
+			<!-- Simple template for the ListView instantiation  -->
+			<div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+				<div class="smallListIconTextItem">
+
+					<div class="smallListIconTextItem-Detail">
+						<div>Planet: <span data-win-bind="textContent: planet"></span></div>
+						<div>Equatorial radius: <span data-win-bind="textContent: radius"></span> Km</div>
+						<img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
+					</div>
+
+				</div>
+			</div>
+
+			<div id="listView" class="win-selectionstylefilled" data-win-control="WinJS.UI.ListView"></div>
+
+		</section>
+
+	</div>
+
+</body>
+</html>

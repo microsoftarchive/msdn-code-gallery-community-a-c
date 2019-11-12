@@ -1,0 +1,23 @@
+
+
+{
+  "customer": {
+    "FirstName": "Scott",
+    "LastName": "Tiger",
+    "Email": null,
+    "Address": "MainStreet 25",
+    "City": "Amsterdam"
+  },
+  "item": {
+    "Category": "Computers",
+    "Brand": "Microsoft",
+    "ProductType": "Tablets",
+    "Article": "Surface Pro 5 - 256GB - i7 - 8GB",
+    "Amount": 1
+  }
+}
+
+
+
+
+

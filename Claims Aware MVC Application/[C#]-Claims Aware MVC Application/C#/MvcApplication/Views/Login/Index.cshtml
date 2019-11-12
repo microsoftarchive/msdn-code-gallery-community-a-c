@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Login Page";
+    ViewBag.FormAction = "SignIn";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                This page builds a sign in message that is sent to the Local STS using WS-Federation
+                that will return the user to the page they originally requested after authentication
+                is successful. For a more complete explanation of how the sample works, please refer 
+                to the readme.html file in the VS solution or to the sample’s <a href="http://code.msdn.microsoft.com/Claims-Aware-MVC-523e079b">online description</a>.
+            </p>
+        </div>
+    </section>
+}
+<p>
+    Click the log in button below to access the page you requested.
+</p>
+
+@using (Html.BeginForm((string)ViewBag.FormAction, "Login", new { ReturnUrl = Request.QueryString["ReturnUrl"] }))
+{
+    @Html.ValidationSummary(true, "Log in was unsuccessful. Please correct the errors and try again.")
+    <fieldset>
+        <legend>Log in Form</legend>
+        <input type="submit" value="Log in" />
+    </fieldset>
+}

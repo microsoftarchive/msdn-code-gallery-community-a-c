@@ -1,0 +1,50 @@
+﻿@model IList<WebApplication1.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="clearfix">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
+<div class="container">
+    <div class="table-responsive">
+        @Html.ActionLink("New Customer", "Insert", "Home")
+        <hr />
+        <div id="dataTable"></div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+
+</div>
+
+@section JavaScript{
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script type="text/javascript">
+        $(function () {
+            // Reference the hub.
+            var hubNotif = $.connection.customerHub;
+
+            // Start the connection.
+            $.connection.hub.start().done(function () {
+                getAll();
+            });
+
+            // Notify while anyChanges.
+            hubNotif.client.updatedData = function () {
+                getAll();
+            };
+        });
+
+        function getAll() {
+            var model = $('#dataTable');
+            $.ajax({
+                url: '/home/GetAllData',
+                contentType: 'application/html ; charset:utf-8',
+                type: 'GET',
+                dataType: 'html'
+            })
+                .success(function (result) { model.empty().append(result); })
+                //.error(function (e) { alert(e); });
+        }
+    </script>
+}

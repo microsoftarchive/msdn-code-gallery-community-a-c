@@ -1,0 +1,32 @@
+﻿@model WebApplication1.Models.Customer
+@{
+    ViewBag.Title = "Update";
+}
+
+<link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="clearfix">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email ID</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @using (Html.BeginForm("Update", "Home", FormMethod.Post))
+                    {
+                        <td>@Html.TextBoxFor(m => m.CustName)</td>
+                        <td>@Html.TextBoxFor(m => m.CustEmail)</td>
+                        <td><input type="submit" value="Update" class="btn btn-primary" /></td>
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

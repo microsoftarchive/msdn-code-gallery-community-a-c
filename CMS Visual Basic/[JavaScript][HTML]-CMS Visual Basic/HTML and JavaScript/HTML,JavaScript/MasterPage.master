@@ -1,0 +1,38 @@
+<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPageModel" %><!DOCTYPE html>
+<html id="html" runat="server">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="HandheldFriendly" content="true" />
+    <link id="FavIcon" rel="icon" runat="server" />
+	<link id="StyleSheet" rel="stylesheet" href="css.aspx" type="text/css" media="screen"	runat="server" />
+	<link id="StyleSheetHandheld" rel="stylesheet" href="css.aspx" type="text/css" media="handheld"	runat="server" />
+	<link id="StyleSheetPrint" rel="stylesheet" href="css.aspx" type="text/css" media="print" runat="server" />
+	<link id="StyleSheetMobile" rel="stylesheet" href="css.aspx" type="text/css" media="all and (min-device-width: 0in) and (max-device-width: 7in)" runat="server" />
+</head>
+<body>
+	<form id="form1" runat="server">
+	<div id="Container" runat="server" class="Container">
+		<header id="BarTop" runat="server" class="BarTop">
+			<span id="TopLeft" style="float: left" runat="server" class="TopLeft"></span>
+			<nav id="TopRight" style="float: right" runat="server" class="TopRight"></nav>
+			<nav id="ToolsBar" style="clear: both" runat="server" class="ToolsBar"></nav>
+		</header>
+		<div id="Wrapper" class="Wrapper">
+			<aside id="BarLeft" runat="server" class="BarLeft"></aside>
+			<aside id="BarRight" runat="server" class="BarRight"></aside>
+			<div class="Content">
+				<asp:PlaceHolder ID="NavigationScheme" runat="server"></asp:PlaceHolder>
+				<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+				</asp:ContentPlaceHolder>
+			</div>
+			<footer class="Footer">
+				<asp:PlaceHolder ID="BottomPlaceHolder" runat="server" EnableViewState="False"></asp:PlaceHolder>
+				<asp:Panel ID="BarBottom" runat="server">
+				</asp:Panel>
+			</footer>
+		</div>
+	</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,1 @@
+﻿marmol_rojo.jpg,0,gris.jpg,DeepPink,5,4,DarkRed,1,HotPink,250,Monotype Corsiva,150,Magenta,LightPink,,

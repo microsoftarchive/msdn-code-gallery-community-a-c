@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin configuration -->
+<skin>
+  <add key="Style" value="default"/>
+  <add key="Style" value="Gradient Vertical.child"/>
+  <add key="Style" value="row with background.child"/>
+	<add key="Style" value="fonts button and title.child"/>
+	<add key="Style" value="menu semitrasparent.child"/>
+	<add key="Style" value="rotate buttons shadow.child"/>
+	<add key="Style" value="shift menu shadow.child"/>
+	<add key="Style" value="buttons ice.child"/>
+	<add key="Style" value="font slim.child"/>
+  <add key="Style" value="hr Striped.child"/>
+  <add key="Setup" value="Christmas"/> 
+</skin>

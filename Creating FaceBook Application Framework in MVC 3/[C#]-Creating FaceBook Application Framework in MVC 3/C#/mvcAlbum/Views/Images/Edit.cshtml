@@ -1,0 +1,76 @@
+﻿@model mvcAlbum.Models.Image
+
+@{     
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm("Edit","Image",FormMethod.Post, new { enctype = "multipart/form-data" }))  {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Image</legend>
+
+        @Html.HiddenFor(model => model.ImageID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ManufactureID, "Manufactures")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ManufactureID", String.Empty)
+            @Html.ValidationMessageFor(model => model.ManufactureID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SupplierID, "Suppliers")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("SupplierID", String.Empty)
+            @Html.ValidationMessageFor(model => model.SupplierID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CategoryID, "Categorys")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CategoryID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CategoryID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ImageName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ImageName)
+            @Html.ValidationMessageFor(model => model.ImageName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.photo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.photo)
+            @Html.ValidationMessageFor(model => model.photo)
+        </div>
+       
+        <p>
+            <input type="file" name="file" />
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

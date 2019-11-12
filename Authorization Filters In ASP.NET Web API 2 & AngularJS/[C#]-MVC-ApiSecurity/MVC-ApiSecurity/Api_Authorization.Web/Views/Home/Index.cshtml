@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "Api Authorization";
+}
+
+<div class="row" ng-controller="userCtrl">
+    <div class="col-sm-12" ng-controller="tokenCtrl">
+        <h2>
+            {{message}}. <span class="pull-right" ng-if="loggedflag">
+                Welcome <b>{{loggeduser}}</b>,
+                <a href="" ng-click="accountManager.logout()">Logout</a>!
+            </span>
+        </h2>
+
+        <span ng-if="!loggedflag">
+            To view all customer please
+            <a href="/Account">Login</a>!
+        </span>
+
+        <div ng-controller="customerCtrl">
+            <p ng-if="loggedflag">
+                Token based authorization for api call!
+                <a href="" ng-click="customerManager._get()">Get Customer </a> ||
+                New Customer
+                <a href="" ng-click="customerManager._clear()" data-toggle="modal" data-target="#customerModal">+Add Now</a>
+            </p>
+            <p ng-style="resultStyle">{{authresult}}</p>
+            <p ng-style="resultStyle">{{modalresult}}</p>
+            <hr />
+            <div ng-hide="customers.length" class="warning">No records found!!</div>
+            <div ng-show="customers.length">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Tel</th>
+                            <th>Ooption</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="cust in customers">
+                            <td>{{cust.CustomerName}}</td>
+                            <td>{{cust.Tel}}</td>
+                            <td>
+                                <span class="label label-warning label-mini">
+                                    <a ng-href="#customerModal" data-toggle="modal" class="bs-tooltip" title="Edit Info" ng-click="customerManager._getbyId(cust)">
+                                        <i class="icon-pencil"></i> Edit
+                                    </a>
+                                </span>
+                                <span class="label label-danger label-mini">
+                                    <a href="" class="bs-tooltip" title="Delete" ng-click="customerManager._delete(cust)">
+                                        <i class="icon-trash"></i> Delete
+                                    </a>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Modal -->
+            <div id="customerModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">{{modalmessage}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form name="custFrm" id="custFrm" action="" novalidate>
+                                <div class="form-group col-sm-12">
+                                    <label class="col-sm-4">Customer Name</label>
+                                    <input type="text" name="UserLogin" ng-model="customerName" />
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <label class="col-sm-4">Tel</label>
+                                    <input type="text" name="UserLogin" ng-model="customerTel" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" ng-if="custId == 0" ng-click="customerManager._save()" value="Save" class="btn btn-info" />
+                            <input type="button" ng-if="custId > 0" ng-click="customerManager._update()" value="Update" class="btn btn-info" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section AngularScript{
+    @*Controller*@
+    <script src="~/ScriptsNg/Controller/UserController.js"></script>
+    <script src="~/ScriptsNg/Controller/TokenController.js"></script>
+    <script src="~/ScriptsNg/Controller/CustomerController.js"></script>
+
+    @*Services*@
+    <script src="~/ScriptsNg/Services/CrudService.js"></script>
+}

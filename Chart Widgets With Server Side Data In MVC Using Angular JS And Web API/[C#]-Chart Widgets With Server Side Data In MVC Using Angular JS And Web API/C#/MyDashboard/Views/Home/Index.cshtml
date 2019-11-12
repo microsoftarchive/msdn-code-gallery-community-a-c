@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .widget {
+        width: 30%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 3px;
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        cursor: move;
+        display: inline-block;
+        float:left;
+    }   
+</style>
+
+<div ng-app="WidgetsApp">
+    <div ng-controller="WidgetsController">
+        <div id="widgetPie" class="widget">Placeholder for chart</div>
+        <div id="widgetspline" class="widget">Placeholder for chart</div>
+        <div id="widgetBar" class="widget">Placeholder for chart</div>
+        <div id="widgetLine" class="widget">Placeholder for chart</div>         
+        <div id="widgetScatter" class="widget">Placeholder for chart</div> 
+        <div id="widgetColumn" class="widget">Placeholder for chart</div>      
+    </div>   
+</div>
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/jquery-ui-1.11.4.min.js"></script>
+<script src="~/scripts/angular.min.js"></script>
+<script src="~/scripts/angular-aria.js"></script>
+<script src="~/scripts/angular-route.js"></script>
+<script src="~/scripts/Widgets/app.js"></script>
+<script src="~/scripts/Widgets/controller.js"></script>
+<script src="~/scripts/Widgets/factory.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>

@@ -1,0 +1,130 @@
+﻿@model IEnumerable<CRUD_APi.Models.CustomerViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All Customer</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+<div id="DataList"></div>
+<div id="loader" style="text-align: center; display: none; margin-bottom: 20px;">
+    <img alt="Loading" src="@Url.Content("~/Content/loader.gif")" /> Loading...
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+
+<script type="text/javascript">
+
+    var inProgress = false;
+    $(document).ready(function () {
+
+        //======================Default Load================//
+        inProgress = true;
+        $("#loader").show();
+        $.ajax({
+            url: '/api/Customer/GetCustomers?pageSize=5',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                BindCustomers(data);
+                $("#loader").hide();
+                inProgress = false;
+            },
+            error: function (error) {
+                debugger;
+                alert('Error Loading..');
+                $("#loader").hide();
+                inProgress = false;
+            }
+        });
+
+        //======================UL SCroll Load================//
+        var page = 1;
+        var _inCallback = false;
+
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+                if (page > -1 && !_inCallback) {
+                    _inCallback = true;
+                    page++;
+                    $("#loader").show();
+                    $.ajax({
+                        url: '/api/Customer/GetCustomerScroll?pageNumber=' + page + '&pageSize=' + 5,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data != '') {
+                                BindCustomers(data);
+                            }
+                            else {
+                                page = -1;
+                            }
+                            $("#loader").hide();
+                            _inCallback = false;
+                        },
+                        error: function (error) {
+                            debugger;
+                            alert('Error Loading..');
+                            $("#loader").hide();
+                            inProgress = false;
+                        }
+                    });
+                }
+            }
+        });
+
+        //======================Bind Data================//
+
+        function BindCustomers(Customers) {
+            //$('#DataList').empty();
+            $.each(Customers, function (index, Customer) {
+                $('#DataList').append(
+                   "<hr>" +
+                   "<h4>" + Customer.CustName + "</h4>" +
+                   "<p>" + Customer.CustEmail + "</br>" +
+                   "" + Customer.CustAddress + "</br>" +
+                   "" + Customer.CustContact + "</p>" +
+                   "<a href='/Customer/Edit/" + Customer.CustID + "'>Edit</a>" + " | " +
+                   "<a id='" + Customer.CustID + "' href='#' onClick='generateUrl(this)'>Delete</a>"
+                 );
+            });
+        }
+    });
+
+    //======================Delete Data================//
+
+    function generateUrl(e) {
+
+        var CustomerId = e.id;
+        var check = confirm('You are about to delete Customer ID ' + CustomerId + ' permanently.Are you sure you want to delete this record?');
+        if (check == true) {
+
+            $.ajax({
+                url: '/api/Customer/Delete?id=' + CustomerId,
+                async: true,
+                processData: false,
+                cache: false,
+                type: "DELETE",
+                success: function (data) {
+                    $("#" + CustomerId).parent().parent().remove();
+                    window.location.href = '/Customer';
+                    $("#loader").hide();
+                },
+                error: function (data) {
+                    alert('Error!!');
+                }
+            });
+        }
+        else {
+            return false;
+        }
+    }
+
+</script>

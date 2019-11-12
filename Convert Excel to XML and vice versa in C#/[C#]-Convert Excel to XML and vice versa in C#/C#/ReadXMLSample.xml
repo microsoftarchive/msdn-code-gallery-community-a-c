@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>phoenix</LastAuthor>
+  <Created>2007-08-15T07:09:49Z</Created>
+  <LastSaved>2007-08-15T07:06:07Z</LastSaved>
+  <Version>11.5606</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10830</WindowHeight>
+  <WindowWidth>17055</WindowWidth>
+  <WindowTopX>360</WindowTopX>
+  <WindowTopY>75</WindowTopY>
+  <AcceptLabelsInFormulas/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s23">
+   <Font x:Family="Swiss"/>
+   <NumberFormat/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="country" ss:RefersTo="=country!R1C1:R19C5"/>
+ </Names>
+ <Worksheet ss:Name="country">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="19" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="12">
+   <Column ss:Index="4" ss:Width="48.75"/>
+   <Column ss:Width="56.25"/>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Name</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Capital</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Continent</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Area</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Population</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Argentina</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Buenos Aires</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">2777815</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">32300003</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Bolivia</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">La Paz</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">1098575</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">7300000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Brazil</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Brasilia</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">8511196</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">150400000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Canada</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Ottawa</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">North America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">9976147</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">26500000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Chile</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Santiago</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">756943</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">13200000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Colombia</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Bagota</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">1138907</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">33000000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Cuba</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Havana</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">North America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">114524</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">10600000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Ecuador</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Quito</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">455502</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">10600000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">El Salvador</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">San Salvador</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">North America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">20865</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">5300000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Guyana</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Georgetown</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">214969</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">800000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Jamaica</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Kingston</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">North America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">11424</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">2500000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Mexico</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Mexico City</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">North America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">1967180</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">88600000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Nicaragua</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Managua</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">North America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">139000</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">3900000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Paraguay</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Asuncion</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">406576</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">4660000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Peru</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Lima</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">1285215</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">21600000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">United States of America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Washington</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">North America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">9363130</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">249200000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Uruguay</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Montevideo</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">176140</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">3002000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+   <Row ss:Height="12.75">
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Venezuela</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">Caracas</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String" x:Ticked="1">South America</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">912047</Data><NamedCell
+      ss:Name="country"/></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">19700000</Data><NamedCell
+      ss:Name="country"/></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Data="&amp;A"/>
+    <Footer x:Data="Page &amp;P"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>1200</HorizontalResolution>
+    <VerticalResolution>1200</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>5</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,186 @@
+<div align="center">
+    <h1> ASP.NET Core,Angular o5 CRUD for Invetory Management Priority based Reorder Level System, WEB API and EF   </h1>
+</div>
+<div class="column">
+    <h2>Created by : {{myName}}</h2>
+    
+</div>
+<hr style="height: 1px;color: #123455;background-color: #d55500;border: none;color: #d55500;" />
+<p *ngIf="!Inventory"><em>Loading Inventory Details please Wait ! ...</em></p>
+<table id="tblContainer" style='width: 99%;table-layout:fixed;'>
+    <tr>
+        <td>
+            <table style="background-color:#FFFFFF; border: dashed 3px #FFFFFF; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2"
+                   cellspacing="2">
+                <tr style="height: 30px;  color:#123455 ;border: solid 1px #659EC7;">
+                    <td width="40px">&nbsp;</td>
+                    <td width="50%">
+                        <h1> Add New Inventory Information <strong style="color:#0094ff"> </strong></h1>
+
+                    </td>
+                    <td align="right">
+                        <button (click)=AddInventory() style="background-color:#f83500;color:#FFFFFF;font-size:large;width:260px;height:50px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;">
+                            Add New Inventory Info
+                        </button>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <hr style="height: 1px;color: #123455;background-color: #d55500;border: none;color: #d55500;" />
+        </td>
+    </tr>
+    <tr *ngIf="AddTable">
+        <td >
+            <table>
+                <tr>
+                    <td>
+                        <table style="background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding :5px;width :99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                            <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                <td width="40">
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <h2>Insert/Edit Inventory Details : </h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100">
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <table style="color:#9F000F;font-size:large; padding :5px;" cellpadding="12" cellspacing="16">
+                                        <tr>
+                                            <td><b>Inventory ID: </b> </td>
+                                            <td>
+                                                <input type="number" #InventoryID (ngModel)="sInventoryID" value="{{sInventoryID}}" style="background-color:tan" readonly>
+                                            </td>
+                                            <td width="20">&nbsp;</td>
+                                            <td><b>Item Name: </b> </td>
+                                            <td>
+                                                <input type="text" #ItemName (ngModel)="sItemName" value="{{sItemName}}" required>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Stock Quantity: </b> </td>
+                                            <td>
+                                                <input type="number" #StockQty (ngModel)="sStockQty" value="{{sStockQty}}" min="50" required>
+                                            </td>
+                                            <td width="20">&nbsp;</td>
+                                            <td><b>Reorder Quantity: </b> </td>
+                                            <td>
+                                                <input type="number" #ReorderQty (ngModel)="sReorderQty" value="{{sReorderQty}}" min="50" required>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Priority Status: </b> </td>
+                                            <td>
+                                                <input type="checkbox" #PriorityStatus (ngModel)="sPriorityStatus" value="{{sPriorityStatus}}" [checked]="sPriorityStatus"
+                                                       (change)="sPriorityStatus = !sPriorityStatus" >
+                                                <!--<input type="text" #chkName (ngModel)="schkName" value="{{schkName}}">-->
+                                            </td>
+                                            <td width="20">&nbsp;</td>
+                                            <td align="right" colspan="2">
+                                                <button (click)=addInventoryDetails(InventoryID.value,ItemName.value,StockQty.value,ReorderQty.value,PriorityStatus.value) style="background-color:#428d28;color:#FFFFFF;font-size:large;width:220px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;">
+                                                    Save
+                                                </button>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <button (click)=closeEdits() style="background-color:#334668;color:#FFFFFF;font-size:large;width:180px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;">
+                                                    Close
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr style="height: 1px;color: #123455;background-color: #d55500;border: none;color: #d55500;" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+            <table class='table' style="background-color:#FFFFFF; border:2px #6D7B8D; padding:5px;width:99%;table-layout:fixed;" cellpadding="2" cellspacing="2" *ngIf="Inventory">
+                <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                    <td width="70" align="center">Edit</td>
+                    <td width="70" align="center">Delete</td>
+                    <td width="70" align="center">Inventory ID</td>
+                    <td width="120" align="center">Item Name</td>
+                    <td width="120" align="center">StockQty</td>
+                    <td width="120" align="center">ReorderQty</td>
+                    <td width="120" align="center">Priority Status</td>
+                    <td width="120" align="center">Required Priority Status</td>
+                </tr>
+                <tbody *ngFor="let INVY  of Inventory">
+                    <tr>
+                        <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                            <span style="color:#9F000F">
+
+                                <button (click)=editInventoryDetails(INVY.inventoryID,INVY.itemName,INVY.stockQty,INVY.reorderQty,INVY.priorityStatus)
+                                        style="background-color:#0d254f;color:#FFFFFF;font-size:large;width:80px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;">
+                                    Edit
+                                </button>
+                                <!-- <img src="{{imgEdit}}"  style="height:32px;width:32px" (click)=editStudentsDetails(StudentMasters.stdID,StudentMasters.stdName,StudentMasters.email,StudentMasters.phone,StudentMasters.address)>-->
+                            </span>
+                        </td>
+                        <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                            <span style="color:#9F000F">
+                                <button (click)=deleteinventoryDetails(INVY.inventoryID)
+                                        style="background-color:#0d254f;color:#FFFFFF;font-size:large;width:80px;
+                              border-color:#a2aabe;border-style:dashed;border-width:2px;">
+                                    Delete
+                                </button>
+                                <!-- <img src="{{imgDelete}}" style="height:32px;width:32px" (click)=deleteStudentsDetails(StudentMasters.stdID)>-->
+                            </span>
+                        </td>
+                        <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                            <span style="color:#9F000F">{{INVY.inventoryID}}</span>
+                        </td>
+                        <td align="left" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                            <span style="color:#9F000F">{{INVY.itemName}}</span>
+                        </td>
+
+                        <td align="right" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                            <span style="color:#9F000F">{{INVY.stockQty}}</span>
+                        </td>
+
+                        <td align="right" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                            <span style="color:#9F000F">{{INVY.reorderQty}}</span>
+                        </td>
+
+                        <td align="center" [ngStyle]="INVY.priorityStatus==1 && {'background-color': 'green'}  || INVY.priorityStatus==0 && {'background-color': 'red'} " style="height:42px;width:42px">
+                            <!--<span style="color:#FFFFFF">{{INVY.priorityStatus}}</span>-->  
+                            <div  [ngStyle]="INVY.priorityStatus==1 && {'background-image': 'url(' + imgchk + ')'}  || INVY.priorityStatus==0 && {'background-image': 'url(' + imgunChk + ')'} " style="background-repeat: no-repeat;height:38px;width:38px" >
+                                 
+                            </div>
+                             
+                        </td>
+
+                        <td align="left" [ngStyle]="INVY.stockQty>INVY.reorderQty+50 && {'background-color': '#0094ff'}  || INVY.stockQty<=INVY.reorderQty+50  && {'background-color': '#e5e800'} " style="border: solid 1px #ffffff; padding: 5px;table-layout:fixed;">
+                            <!--<span style="color:#FFFFFF">{{INVY.priorityStatus}}</span>-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table> 

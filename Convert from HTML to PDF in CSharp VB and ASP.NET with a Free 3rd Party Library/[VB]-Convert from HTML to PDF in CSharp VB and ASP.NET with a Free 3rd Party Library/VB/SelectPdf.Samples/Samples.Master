@@ -1,0 +1,118 @@
+﻿<%@ Master Language="vb" AutoEventWireup="true" CodeBehind="Samples.master.vb" Inherits="SelectPdf.Samples.SelectPdf.Samples.Samples" %>
+<!DOCTYPE HTML>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+<script src="files/html5.js" type="text/javascript"></script>
+<![endif]-->
+    <link id="tfg_style-css" href="files/tfg_style.css" rel="stylesheet" type="text/css" media="all">
+    <link id="twentytwelve-fonts-css" href="files/css.css" rel="stylesheet" type="text/css" media="all">
+    <link id="twentytwelve-style-css" href="files/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='files/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+    <script src="files/jquery.js" type="text/javascript"></script>
+    <script src="files/jquery-migrate.min.js" type="text/javascript"></script>
+    <link href="https://plus.google.com/+SelectPdfPage" rel="author">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style id="twentytwelve-header-css" type="text/css">
+        .site-header h1 a,
+        .site-header h2
+        {
+            color: #454545;
+        }
+    </style>
+
+    <style id="custom-background-css" type="text/css">
+        body.custom-background
+        {
+            background-color: #f9ffff;
+        }
+    </style>
+</head>
+<body class="single single-post single-format-standard custom-background custom-font-enabled single-author">
+    <div class="hfeed site" id="page">
+        <header class="site-header" id="masthead"
+            role="banner">
+            <div class="float-left">
+                <a title="Select.Pdf for .NET Library Samples" href="~/" runat="server"><img width="319" height="101" class="header-image" alt="Select.Pdf for .NET Library Samples" src="files/logo.png"></a>
+            </div>
+            <nav class="main-navigation" id="site-navigation" role="navigation">
+                <button class="menu-toggle">Menu</button>
+                <a title="Skip to content" class="assistive-text"
+                    href="#content">Skip to content</a>
+                <div class="menu-menu-1-container">
+                    <ul class="nav-menu" id="menu-menu-1">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-8" id="menu-item-1"><a href="http://selectpdf.com" runat="server">SelectPdf.com</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-8" id="menu-item-2"><a href="~/" runat="server">Samples</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- #site-navigation -->
+        </header>
+        <!-- #masthead -->
+
+        <div class="wrapper" id="main">
+            <div class="site-content" id="primary">
+                <form id="mainForm" runat="server">
+                <div id="content" role="main">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <br />
+                    <asp:Literal ID="LitCode" runat="server"></asp:Literal>
+                </div>
+                </form>
+                <!-- #content -->
+            </div>
+            <!-- #primary -->
+            <div class="widget-area" id="secondary" role="complementary">
+                <aside class="widget widget_recent_entries">
+                    <h3 class="widget-title">Html to Pdf Converter</h3>
+                    <ul>
+                        <li><a href="html-to-pdf-converter.aspx" title="Select.Pdf Library for .NET - Html to Pdf Converter">Getting Started</a></li>
+                        <li><a href="convert-url-to-pdf.aspx" title="Select.Pdf Library for .NET - Convert from url to pdf">Convert Url to Pdf</a></li>
+                        <li><a href="convert-html-code-to-pdf.aspx" title="Select.Pdf Library for .NET - Convert from html code to pdf">Convert Html Code to Pdf</a></li>
+                        <li><a href="pdf-converter-properties.aspx" title="Select.Pdf Library for .NET - Setting Document Properties with Html to Pdf Converter">Pdf Document Properties</a></li>
+                        <li><a href="pdf-converter-viewer-preferences.aspx" title="Select.Pdf Library for .NET - Setting Pdf Viewer Preferences for the Html to Pdf Converter">Pdf Viewer Preferences</a></li>
+                        <li><a href="pdf-converter-security.aspx" title="Select.Pdf Library for .NET - Setting Pdf Document Security with the Html to Pdf Converter">Pdf Security Settings</a></li>
+                        <li><a href="conversion-delay.aspx" title="Select.Pdf Library for .NET - Conversion Delay with Html to Pdf Converter">Conversion Delay</a></li>
+                        <li><a href="html-to-pdf-headers-and-footers.aspx" title="Select.Pdf Library for .NET - Pdf Headers and Footers with Html to Pdf Converter">Headers and Footers</a></li>
+                        <li><a href="page-breaks.aspx" title="Select.Pdf Library for .NET - Control Page Breaks with Html to Pdf Converter">Page Breaks</a></li>
+                        <li><a href="automatic-bookmarks.aspx" title="Select.Pdf Library for .NET - Automatic Bookmarks with Html to Pdf Converter">Automatic Bookmarks</a></li>
+                        <li><a href="http-headers.aspx" title="Select.Pdf Library for .NET - Set HTTP Headers with Html to Pdf Converter">HTTP Headers</a></li>
+                        <li><a href="http-cookies.aspx" title="Select.Pdf Library for .NET - Set HTTP Cookies with Html to Pdf Converter">HTTP Cookies</a></li>
+                        <li><a href="http-post-request.aspx" title="Select.Pdf Library for .NET - Set parameters with a POST request with Html to Pdf Converter">HTTP POST Request</a></li>
+                        <li><a href="media-types.aspx" title="Select.Pdf Library for .NET - Use media types with Html to Pdf Converter">Media Types</a></li>
+                        <li><a href="html-to-pdf-converter-links.aspx" title="Select.Pdf Library for .NET - Pdf Internal and External Links - Html to Pdf Converter">Internal and External Links</a></li>
+                        <li><a href="convert-current-page-to-pdf.aspx" title="Select.Pdf Library for .NET - Convert Current WebPage to Pdf">Current WebPage to Pdf in Asp.Net</a></li>
+                        <li><a href="convert-and-email.aspx" title="Select.Pdf Library for .NET - Convert WebPage to Pdf and Email as Attachment">Convert to Pdf and Email as Attachment</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- #secondary -->
+        </div>
+        <!-- #main .wrapper -->
+        <footer id="colophon" role="contentinfo">
+            <div class="site-info">
+                &copy; SelectPdf - <a title="Contact us" href="http://selectpdf.com/contact">Contact us</a> | <a title="Blog" href="http://selectpdf.com/blog">Blog</a> | <a href="http://selectpdf.com/pdf-library-for-net/">PDF Library for .NET</a>
+            </div>
+            <!-- .site-info -->
+        </footer>
+        <!-- #colophon -->
+    </div>
+    <!-- #page -->
+    <script src="files/navigation.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@*Drag And Drop Widget With Server Side Data In MVC Using Angular JS And Web API*@</h2>
+<style>
+    .widget {
+        width: 50%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 3px;
+        min-width: 50%;
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        cursor: move;
+        position: relative;
+    }
+
+    .parentHolder {
+        height: 100%;
+        width: 100%;
+        min-height: 500px;
+        min-width: 500px;
+        border: 1px solid #CC3;
+        position: relative;
+    }
+</style>
+
+
+<div ng-app="WidgetsApp">
+    <div ng-controller="WidgetsController">
+        <div class="parentHolder" ng-drop="true" ng-drop-success="onDropComplete($index, $data,$event)">
+            <div id="widget1" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+            <div id="widget2" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+            <div id="widget3" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+            <div id="widget4" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+            <div id="widget5" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+            <div id="widget6" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+            <div id="widget7" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+            <div id="widget8" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+            <div id="widget9" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+            <div id="widget0" ng-drag-success="onDragSuccess($data,$event)" class="widget" ng-drag="true">Placeholder for chart</div>
+        </div>
+    </div>
+</div>
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/jquery-ui-1.11.4.min.js"></script>
+<script src="~/scripts/angular.min.js"></script>
+@*<script src="~/scripts/draganddrop.js"></script>*@
+<script src="~/scripts/ngDraggable.js"></script>
+
+<script src="~/scripts/angular-aria.js"></script>
+<script src="~/scripts/angular-route.js"></script>
+<script src="~/scripts/Widgets/app.js"></script>
+<script src="~/scripts/Widgets/controller.js"></script>
+<script src="~/scripts/Widgets/factory.js"></script>
+@*<script src="~/scripts/angular-dragdrop.min.js"></script>*@
+<script src="https://code.highcharts.com/highcharts.js"></script>

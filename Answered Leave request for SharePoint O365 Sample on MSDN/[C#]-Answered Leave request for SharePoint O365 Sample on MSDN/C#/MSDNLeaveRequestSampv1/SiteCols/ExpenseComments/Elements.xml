@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{aba92cb3-04e6-4f51-b4d7-83b343394c54}"
+       Name="ExpenseComments"
+       DisplayName="Expense Comments"
+       StaticName="ExpenseComments"
+       Description="Place any notes or comments about whether you will need a voucher or need to be reimbursed etc. that will assist us in making this decision"
+       Type="Note"
+       RichText="TRUE"
+       RichTextMode="Compatible"
+       NumLines="6"
+       Required="FALSE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp">
+  </Field>
+</Elements>

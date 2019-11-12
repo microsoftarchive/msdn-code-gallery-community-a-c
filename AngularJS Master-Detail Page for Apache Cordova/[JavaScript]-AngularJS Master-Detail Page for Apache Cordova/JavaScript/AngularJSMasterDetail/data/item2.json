@@ -1,0 +1,10 @@
+﻿{
+    "additionalInfo": "Details... TBD TBD TBD",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ",
+    "id": "item2",
+    "name": "Item 2!!",
+    "images": [
+        "images/image1-50x25.png",
+        "images/image2-400x200.png"
+    ]
+}

@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2AD3ACB9-AE01-4AA2-8B82-A06137109700}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication</RootNamespace>
+    <AssemblyName>WebApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CalendarController.cs" />
+    <Compile Include="Controllers\ChartsController.cs" />
+    <Compile Include="Controllers\DocumentationController.cs" />
+    <Compile Include="Controllers\ElementsController.cs" />
+    <Compile Include="Controllers\ExamplesController.cs" />
+    <Compile Include="Controllers\FormsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MailboxController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TablesController.cs" />
+    <Compile Include="Controllers\WidgetsController.cs" />
+    <Compile Include="Extensions\ClaimsExtensions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminLTE\bootstrap\css\bootstrap.css" />
+    <Content Include="AdminLTE\bootstrap\css\bootstrap.min.css" />
+    <Content Include="AdminLTE\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="AdminLTE\bootstrap\js\bootstrap.js" />
+    <Content Include="AdminLTE\bootstrap\js\bootstrap.min.js" />
+    <Content Include="AdminLTE\dist\css\admin-lte.css" />
+    <Content Include="AdminLTE\dist\css\admin-lte.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-black-light.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-black-light.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-black.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-black.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-blue-light.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-blue-light.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-blue.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-blue.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-green-light.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-green-light.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-green.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-green.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-purple-light.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-purple-light.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-purple.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-purple.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-red-light.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-red-light.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-red.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-red.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-yellow-light.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-yellow-light.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-yellow.css" />
+    <Content Include="AdminLTE\dist\css\skins\skin-yellow.min.css" />
+    <Content Include="AdminLTE\dist\css\skins\_all-skins.css" />
+    <Content Include="AdminLTE\dist\css\skins\_all-skins.min.css" />
+    <Content Include="AdminLTE\dist\img\avatar.png" />
+    <Content Include="AdminLTE\dist\img\avatar04.png" />
+    <Content Include="AdminLTE\dist\img\avatar2.png" />
+    <Content Include="AdminLTE\dist\img\avatar3.png" />
+    <Content Include="AdminLTE\dist\img\avatar5.png" />
+    <Content Include="AdminLTE\dist\img\boxed-bg.jpg" />
+    <Content Include="AdminLTE\dist\img\boxed-bg.png" />
+    <Content Include="AdminLTE\dist\img\default-50x50.gif" />
+    <Content Include="AdminLTE\dist\img\icons.png" />
+    <Content Include="AdminLTE\dist\img\photo1.png" />
+    <Content Include="AdminLTE\dist\img\photo2.png" />
+    <Content Include="AdminLTE\dist\img\photo3.jpg" />
+    <Content Include="AdminLTE\dist\img\photo4.jpg" />
+    <Content Include="AdminLTE\dist\img\user.svg" />
+    <Content Include="AdminLTE\dist\js\app.js" />
+    <Content Include="AdminLTE\dist\js\app.min.js" />
+    <Content Include="AdminLTE\documentation\css\style.css" />
+    <Content Include="AdminLTE\documentation\js\docs.js" />
+    <Content Include="AdminLTE\plugins\bootstrap-slider\css\slider.css" />
+    <Content Include="AdminLTE\plugins\bootstrap-slider\js\bootstrap-slider.js" />
+    <Content Include="AdminLTE\plugins\bootstrap-wysihtml5\css\bootstrap3-wysihtml5.css" />
+    <Content Include="AdminLTE\plugins\bootstrap-wysihtml5\css\bootstrap3-wysihtml5.min.css" />
+    <Content Include="AdminLTE\plugins\bootstrap-wysihtml5\js\bootstrap3-wysihtml5.all.js" />
+    <Content Include="AdminLTE\plugins\bootstrap-wysihtml5\js\bootstrap3-wysihtml5.all.min.js" />
+    <Content Include="AdminLTE\plugins\chartjs\js\chart.js" />
+    <Content Include="AdminLTE\plugins\chartjs\js\chart.min.js" />
+    <Content Include="AdminLTE\plugins\ckeditor\js\ckeditor.js" />
+    <Content Include="AdminLTE\plugins\colorpicker\css\bootstrap-colorpicker.css" />
+    <Content Include="AdminLTE\plugins\colorpicker\css\bootstrap-colorpicker.min.css" />
+    <Content Include="AdminLTE\plugins\colorpicker\img\alpha-horizontal.png" />
+    <Content Include="AdminLTE\plugins\colorpicker\img\alpha.png" />
+    <Content Include="AdminLTE\plugins\colorpicker\img\hue-horizontal.png" />
+    <Content Include="AdminLTE\plugins\colorpicker\img\hue.png" />
+    <Content Include="AdminLTE\plugins\colorpicker\img\saturation.png" />
+    <Content Include="AdminLTE\plugins\colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="AdminLTE\plugins\colorpicker\js\bootstrap-colorpicker.min.js" />
+    <Content Include="AdminLTE\plugins\datatables\css\dataTables.bootstrap.css" />
+    <Content Include="AdminLTE\plugins\datatables\css\jquery.dataTables.css" />
+    <Content Include="AdminLTE\plugins\datatables\css\jquery.dataTables.min.css" />
+    <Content Include="AdminLTE\plugins\datatables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="AdminLTE\plugins\datatables\images\sort_asc.png" />
+    <Content Include="AdminLTE\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="AdminLTE\plugins\datatables\images\sort_both.png" />
+    <Content Include="AdminLTE\plugins\datatables\images\sort_desc.png" />
+    <Content Include="AdminLTE\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="AdminLTE\plugins\datatables\js\dataTables.bootstrap.js" />
+    <Content Include="AdminLTE\plugins\datatables\js\dataTables.bootstrap.min.js" />
+    <Content Include="AdminLTE\plugins\datatables\js\jquery.dataTables.js" />
+    <Content Include="AdminLTE\plugins\datatables\js\jquery.dataTables.min.js" />
+    <Content Include="AdminLTE\plugins\datepicker\css\datepicker3.css" />
+    <Content Include="AdminLTE\plugins\datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\css\daterangepicker-bs3.css" />
+    <Content Include="AdminLTE\plugins\daterangepicker\js\daterangepicker.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\js\moment.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\js\moment.min.js" />
+    <Content Include="AdminLTE\plugins\fastclick\js\fastclick.js" />
+    <Content Include="AdminLTE\plugins\fastclick\js\fastclick.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\excanvas.js" />
+    <Content Include="AdminLTE\plugins\flot\js\excanvas.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.colorhelpers.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.colorhelpers.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.canvas.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.canvas.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.categories.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.categories.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.crosshair.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.crosshair.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.errorbars.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.errorbars.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.fillbetween.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.fillbetween.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.image.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.image.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.navigate.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.navigate.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.pie.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.pie.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.resize.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.resize.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.selection.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.selection.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.stack.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.stack.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.symbol.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.symbol.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.threshold.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.threshold.min.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.time.js" />
+    <Content Include="AdminLTE\plugins\flot\js\jquery.flot.time.min.js" />
+    <Content Include="AdminLTE\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="AdminLTE\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="AdminLTE\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="AdminLTE\plugins\fullcalendar\css\fullcalendar.css" />
+    <Content Include="AdminLTE\plugins\fullcalendar\css\fullcalendar.min.css" />
+    <Content Include="AdminLTE\plugins\fullcalendar\js\fullcalendar.js" />
+    <Content Include="AdminLTE\plugins\fullcalendar\js\fullcalendar.min.js" />
+    <Content Include="AdminLTE\plugins\icheck\css\all.css" />
+    <Content Include="AdminLTE\plugins\icheck\js\icheck.js" />
+    <Content Include="AdminLTE\plugins\icheck\js\icheck.min.js" />
+    <Content Include="AdminLTE\plugins\input-mask\js\jquery.inputmask.date.extensions.js" />
+    <Content Include="AdminLTE\plugins\input-mask\js\jquery.inputmask.extensions.js" />
+    <Content Include="AdminLTE\plugins\input-mask\js\jquery.inputmask.js" />
+    <Content Include="AdminLTE\plugins\input-mask\js\jquery.inputmask.numeric.extensions.js" />
+    <Content Include="AdminLTE\plugins\input-mask\js\jquery.inputmask.phone.extensions.js" />
+    <Content Include="AdminLTE\plugins\input-mask\js\jquery.inputmask.regex.extensions.js" />
+    <Content Include="AdminLTE\plugins\ionicons\css\ionicons.css" />
+    <Content Include="AdminLTE\plugins\ionicons\css\ionicons.min.css" />
+    <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.svg" />
+    <Content Include="AdminLTE\plugins\ionslider\css\ion.rangeSlider.css" />
+    <Content Include="AdminLTE\plugins\ionslider\css\ion.rangeSlider.skinFlat.css" />
+    <Content Include="AdminLTE\plugins\ionslider\css\ion.rangeSlider.skinNice.css" />
+    <Content Include="AdminLTE\plugins\ionslider\img\sprite-skin-flat.png" />
+    <Content Include="AdminLTE\plugins\ionslider\img\sprite-skin-nice.png" />
+    <Content Include="AdminLTE\plugins\ionslider\js\ion.rangeSlider.min.js" />
+    <Content Include="AdminLTE\plugins\jquery-ui\js\jquery-ui.js" />
+    <Content Include="AdminLTE\plugins\jquery-ui\js\jquery-ui.min.js" />
+    <None Include="AdminLTE\plugins\jquery-validate\js\jquery.validate-vsdoc.js" />
+    <Content Include="AdminLTE\plugins\jquery-validate\js\jquery.validate.js" />
+    <Content Include="AdminLTE\plugins\jquery-validate\js\jquery.validate.min.js" />
+    <Content Include="AdminLTE\plugins\jquery-validate\js\jquery.validate.unobtrusive.js" />
+    <Content Include="AdminLTE\plugins\jquery-validate\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="AdminLTE\plugins\jquery\js\jQuery-2.1.4.min.js" />
+    <Content Include="AdminLTE\plugins\jvectormap\css\jquery-jvectormap-1.2.2.css" />
+    <Content Include="AdminLTE\plugins\jvectormap\js\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="AdminLTE\plugins\jvectormap\js\jquery-jvectormap-usa-en.js" />
+    <Content Include="AdminLTE\plugins\jvectormap\js\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="AdminLTE\plugins\knob\js\jquery.knob.js" />
+    <Content Include="AdminLTE\plugins\momentjs\js\moment.min.js" />
+    <Content Include="AdminLTE\plugins\morris\css\morris.css" />
+    <Content Include="AdminLTE\plugins\morris\js\morris.js" />
+    <Content Include="AdminLTE\plugins\morris\js\morris.min.js" />
+    <Content Include="AdminLTE\plugins\pace\css\pace.css" />
+    <Content Include="AdminLTE\plugins\pace\css\pace.min.css" />
+    <Content Include="AdminLTE\plugins\pace\js\pace.js" />
+    <Content Include="AdminLTE\plugins\pace\js\pace.min.js" />
+    <Content Include="AdminLTE\plugins\raphael\js\raphael-min.js" />
+    <Content Include="AdminLTE\plugins\select2\css\select2.css" />
+    <Content Include="AdminLTE\plugins\select2\css\select2.min.css" />
+    <Content Include="AdminLTE\plugins\select2\js\select2.full.js" />
+    <Content Include="AdminLTE\plugins\select2\js\select2.full.min.js" />
+    <Content Include="AdminLTE\plugins\select2\js\select2.js" />
+    <Content Include="AdminLTE\plugins\select2\js\select2.min.js" />
+    <Content Include="AdminLTE\plugins\slimscroll\js\jquery.slimscroll.js" />
+    <Content Include="AdminLTE\plugins\slimscroll\js\jquery.slimscroll.min.js" />
+    <Content Include="AdminLTE\plugins\sparkline\js\jquery.sparkline.js" />
+    <Content Include="AdminLTE\plugins\sparkline\js\jquery.sparkline.min.js" />
+    <Content Include="AdminLTE\plugins\timepicker\css\bootstrap-timepicker.css" />
+    <Content Include="AdminLTE\plugins\timepicker\css\bootstrap-timepicker.min.css" />
+    <Content Include="AdminLTE\plugins\timepicker\js\bootstrap-timepicker.js" />
+    <Content Include="AdminLTE\plugins\timepicker\js\bootstrap-timepicker.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\Account\Login.js" />
+    <Content Include="Scripts\Account\Register.js" />
+    <Content Include="Scripts\Calendar\Calendar-menu.js" />
+    <Content Include="Scripts\Calendar\Calendar.js" />
+    <Content Include="Scripts\Charts\ChartsJs-menu.js" />
+    <Content Include="Scripts\Charts\ChartsJs.js" />
+    <Content Include="Scripts\Charts\Flot.js" />
+    <Content Include="Scripts\Charts\Inline-menu.js" />
+    <Content Include="Scripts\Charts\Inline.js" />
+    <Content Include="Scripts\Charts\Morris-menu.js" />
+    <Content Include="Scripts\Charts\Morris.js" />
+    <Content Include="Scripts\Documentation\Documentation-menu.js" />
+    <Content Include="Scripts\Elements\Buttons-menu.js" />
+    <Content Include="Scripts\Elements\General-menu.js" />
+    <Content Include="Scripts\Elements\Icons-menu.js" />
+    <Content Include="Scripts\Elements\Modals-menu.js" />
+    <Content Include="Scripts\Elements\Sliders-menu.js" />
+    <Content Include="Scripts\Elements\Sliders.js" />
+    <Content Include="Scripts\Elements\Timeline-menu.js" />
+    <Content Include="Scripts\Examples\Blank-menu.js" />
+    <Content Include="Scripts\Examples\Invoice-menu.js" />
+    <Content Include="Scripts\Examples\Lockscreen-menu.js" />
+    <Content Include="Scripts\Examples\Login-menu.js" />
+    <Content Include="Scripts\Examples\Login.js" />
+    <Content Include="Scripts\Examples\P404-menu.js" />
+    <Content Include="Scripts\Examples\P500-menu.js" />
+    <Content Include="Scripts\Examples\Pace-menu.js" />
+    <Content Include="Scripts\Examples\Pace.js" />
+    <Content Include="Scripts\Examples\ProfileEx-menu.js" />
+    <Content Include="Scripts\Examples\Register-menu.js" />
+    <Content Include="Scripts\Examples\Register.js" />
+    <Content Include="Scripts\Forms\Advanced-menu.js" />
+    <Content Include="Scripts\Forms\Advanced.js" />
+    <Content Include="Scripts\Forms\Editors-menu.js" />
+    <Content Include="Scripts\Forms\Editors.js" />
+    <Content Include="Scripts\Forms\General-menu.js" />
+    <Content Include="Scripts\Home\DashboardV1-menu.js" />
+    <Content Include="Scripts\Home\DashboardV1.js" />
+    <Content Include="Scripts\Home\DashboardV2-menu.js" />
+    <Content Include="Scripts\Home\DashboardV2.js" />
+    <Content Include="Scripts\Mailbox\Compose-menu.js" />
+    <Content Include="Scripts\Mailbox\Compose.js" />
+    <Content Include="Scripts\Mailbox\Inbox-menu.js" />
+    <Content Include="Scripts\Mailbox\Inbox.js" />
+    <Content Include="Scripts\Mailbox\Read-menu.js" />
+    <Content Include="Scripts\Shared\_Layout.js" />
+    <Content Include="Scripts\Tables\Data-menu.js" />
+    <Content Include="Scripts\Tables\Data.js" />
+    <Content Include="Scripts\Tables\Simple-menu.js" />
+    <Content Include="Scripts\Widgets\Widgets-menu.js" />
+    <Content Include="Styles\Elements\General.css" />
+    <Content Include="Styles\Elements\Icons.css" />
+    <Content Include="Styles\Elements\Modals.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Calendar\Index.cshtml" />
+    <Content Include="Views\Charts\ChartJs.cshtml" />
+    <Content Include="Views\Charts\Flot.cshtml" />
+    <Content Include="Views\Charts\Inline.cshtml" />
+    <Content Include="Views\Charts\Morris.cshtml" />
+    <Content Include="Views\Documentation\Index.cshtml" />
+    <Content Include="Views\Elements\Buttons.cshtml" />
+    <Content Include="Views\Elements\General.cshtml" />
+    <Content Include="Views\Elements\Icons.cshtml" />
+    <Content Include="Views\Elements\Modals.cshtml" />
+    <Content Include="Views\Elements\Sliders.cshtml" />
+    <Content Include="Views\Elements\Timeline.cshtml" />
+    <Content Include="Views\Examples\Blank.cshtml" />
+    <Content Include="Views\Examples\Invoice.cshtml" />
+    <Content Include="Views\Examples\InvoicePrint.cshtml" />
+    <Content Include="Views\Examples\Lockscreen.cshtml" />
+    <Content Include="Views\Examples\Login.cshtml" />
+    <Content Include="Views\Examples\P404.cshtml" />
+    <Content Include="Views\Examples\P500.cshtml" />
+    <Content Include="Views\Examples\Pace.cshtml" />
+    <Content Include="Views\Examples\ProfileEx.cshtml" />
+    <Content Include="Views\Examples\Register.cshtml" />
+    <Content Include="Views\Forms\Advanced.cshtml" />
+    <Content Include="Views\Forms\Editors.cshtml" />
+    <Content Include="Views\Forms\General.cshtml" />
+    <Content Include="Views\Mailbox\Compose.cshtml" />
+    <Content Include="Views\Mailbox\Inbox.cshtml" />
+    <Content Include="Views\Mailbox\Read.cshtml" />
+    <Content Include="Views\Tables\Data.cshtml" />
+    <Content Include="Views\Tables\Simple.cshtml" />
+    <Content Include="Views\Widgets\Index.cshtml" />
+    <Content Include="Views\Home\DashboardV1.cshtml" />
+    <Content Include="Views\Home\DashboardV2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="AdminLTE\bootstrap\css\bootstrap.css.map" />
+    <Content Include="AdminLTE\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="AdminLTE\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="AdminLTE\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="AdminLTE\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="AdminLTE\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="AdminLTE\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="AdminLTE\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="AdminLTE\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="AdminLTE\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.eot" />
+    <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.ttf" />
+    <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.woff" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Charts\Flot-menu.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18459</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18459/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

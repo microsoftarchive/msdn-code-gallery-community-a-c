@@ -1,0 +1,114 @@
+﻿@model PagedList.IPagedList<mvcAlbum.Models.Image>
+
+@{
+    ViewBag.Title = "List of Images";
+}
+
+<h2>List of Images</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create") 
+</p>
+
+@using (Html.BeginForm()) 
+{ 
+    <p> 
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)  
+        <input type="submit" value="Search" /></p> 
+}
+<table>
+    <tr>
+        <th>
+          @Html.ActionLink("ID", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter }) 
+        </th>
+
+        <th>
+            @Html.ActionLink("Image Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter }) 
+
+        </th>
+        <th>
+            Description
+        </th>
+
+        <th>
+            @Html.ActionLink("Category", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter }) 
+        </th>
+        <th>
+            Country
+        </th>
+        <th>
+            photo
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    //string imageName = (Server.MapPath("~/uploads")+ "\\" + item.ImageID + ".jpg";
+    //string imageName = string.Format("{0}\\{1}", Server.MapPath("~/uploads"), item.ImageID +".jpg"); 
+
+    string imageName = "/uploads/" + item.ImageID + ".jpg"; 
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageID)
+        </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.ImageName)
+        </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.Description)
+         </td>
+        <td>
+         @Html.DisplayFor(modelItem => item.Categorys.Name)
+        </td>
+        <td>
+        
+           <a href="@Url.Content(@imageName)">    <img src="@Url.Content(@imageName)" alt="" width="75" height = "50"/></a>
+
+        
+
+
+
+          
+         
+
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ImageID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ImageID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ImageID })
+        </td>
+    </tr>
+}
+
+</table>
+<div> 
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) 
+    of @Model.PageCount 
+      
+    @if (Model.HasPreviousPage) 
+    { 
+        @Html.ActionLink("<<", "Index", new { page = 1, sortOrder = ViewBag.CurrentSort, currentFilter=ViewBag.CurrentFilter  }) 
+        @Html.Raw(" "); 
+        @Html.ActionLink("< Prev", "Index", new { page = Model.PageNumber - 1, sortOrder = ViewBag.CurrentSort, currentFilter=ViewBag.CurrentFilter  }) 
+    } 
+    else 
+    { 
+        @:<< 
+        @Html.Raw(" "); 
+        @:< Prev 
+    } 
+      
+    @if (Model.HasNextPage) 
+    { 
+        @Html.ActionLink("Next >", "Index", new { page = Model.PageNumber + 1, sortOrder = ViewBag.CurrentSort, currentFilter=ViewBag.CurrentFilter  }) 
+        @Html.Raw(" "); 
+        @Html.ActionLink(">>", "Index", new { page = Model.PageCount, sortOrder = ViewBag.CurrentSort, currentFilter=ViewBag.CurrentFilter  }) 
+    } 
+    else 
+    { 
+        @:Next > 
+        @Html.Raw(" ") 
+        @:>> 
+    } 
+</div>

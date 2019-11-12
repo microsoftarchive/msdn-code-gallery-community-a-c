@@ -1,0 +1,1 @@
+﻿using System.Collections.Generic;namespace AspNetCoreDemo.Services{    public class CountriesService    {        public List<string> GetCountries()        {            return new List<string>() { "Portugal", "Spain", "France" };        }    }}

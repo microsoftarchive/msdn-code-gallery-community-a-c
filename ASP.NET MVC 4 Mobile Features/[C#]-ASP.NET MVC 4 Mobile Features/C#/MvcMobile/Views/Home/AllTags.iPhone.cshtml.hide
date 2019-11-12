@@ -1,0 +1,13 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "All tags";
+}
+
+<h2>Tags (iPhone)</h2>
+
+<ul>
+    @foreach(var tag in Model) {
+        <li>@Html.ActionLink(tag, "SessionsByTag", new { tag })</li>
+    }
+</ul>

@@ -1,0 +1,69 @@
+﻿<Window x:Name="talk2" x:Class="talk2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="talk2 v0.6" Height="600" Width="530" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ToolTip="talk2me" Background="#FF3A589B" Activated="talk2load">
+    <Grid Width="519" Background="#FFD9AA75">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Talk 2" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Foreground="#FF437DCC" Panel.ZIndex="99" Height="27" Background="{x:Null}" BorderBrush="#FF437DCC" Width="40"/>
+        <Button x:Name="btnSend" Content="send" HorizontalAlignment="Left" Margin="371,161,0,0" VerticalAlignment="Top" Width="47" Height="115" Background="#FF3A589B" Foreground="White" Click="btnSend_Click" IsEnabled="False"/>
+        <Label Content="Type your message here&#xD;&#xA;" HorizontalAlignment="Left" Margin="196,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.427,-0.652" Width="144" Height="27" Foreground="#FFEEEEFF"/>
+        <CheckBox x:Name="save_chat_check" Content="save chat" HorizontalAlignment="Left" Margin="78,161,0,0" VerticalAlignment="Top" Background="#FFEEEEFF" Foreground="#FFEEEEFF" BorderThickness="2" Width="76"/>
+        <TextBox x:Name="id_in" HorizontalAlignment="Left" Height="23" Margin="386,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" Panel.ZIndex="99" BorderBrush="#FFA06E49" Background="#FFD9AA75" Padding="4,2,0,0" Text="Raymond"/>
+        <Button x:Name="login_btn" Content="login" HorizontalAlignment="Left" Margin="348,79,0,0" VerticalAlignment="Top" Width="45" Height="20" Panel.ZIndex="99" Background="#FF3A589B" Foreground="White" Click="loginBtnClicked"/>
+        <DockPanel HorizontalAlignment="Left" Height="121" LastChildFill="False" VerticalAlignment="Top" Width="519">
+            <DockPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA06E49" Offset="0"/>
+                    <GradientStop Color="#FF4E302E" Offset="1"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
+        </DockPanel>
+        <PasswordBox x:Name="pass_in" HorizontalAlignment="Left" Margin="386,44,0,0" VerticalAlignment="Top" Width="85" Panel.ZIndex="99" Height="23" BorderBrush="#FFA06E49" Background="#FFD9AA75" Padding="4,2,0,0" Password="pass"/>
+        <TextBlock x:Name="status" HorizontalAlignment="Left" Margin="132,502,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" Width="249" Text="logged out" Height="26" Foreground="#FFEEEEEE" Padding="0,3,0,0">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF82573F" Offset="0.013"/>
+                    <GradientStop Color="#FFD9AA75" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Label Content="User" HorizontalAlignment="Left" Margin="347,8,0,0" VerticalAlignment="Top" Height="23"/>
+        <Label Content="Pass" HorizontalAlignment="Left" Margin="348,42,0,0" VerticalAlignment="Top"/>
+        <Label Content="myIP" HorizontalAlignment="Left" Margin="46,8,0,0" VerticalAlignment="Top" Width="36" Foreground="#FFFFEAD2"/>
+        <Border x:Name="access_blocker" BorderThickness="1" HorizontalAlignment="Left" Height="188" Margin="0,121,0,0" VerticalAlignment="Top" Width="519" Panel.ZIndex="-1" Background="#FF4E302E" BorderBrush="#FF4E302E">
+            <TextBlock TextWrapping="Wrap" Margin="43,66,48,74" TextAlignment="Center"><Run Foreground="#FFBB8E5B" Text="Login to "/><Run Foreground="#FFFFE2CB" FontWeight="Bold" FontSize="22" Text="start "/><Run Foreground="#FFBB8E5B" Text="Talking"/></TextBlock>
+        </Border>
+        <TextBox x:Name="txtLocalIp" HorizontalAlignment="Left" Height="22" Margin="87,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" BorderBrush="#FFA06E49" Padding="4,2" IsEnabled="False" FontSize="10" Background="#FFD9AA75"/>
+        <TextBlock x:Name="ip_address_out" HorizontalAlignment="Left" Margin="156,281,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="27" Width="170" Foreground="#FFFFE2CB" TextAlignment="Center" Visibility="Hidden"/>
+        <Label Content="Mayron" HorizontalAlignment="Left" Margin="450,525,0,0" VerticalAlignment="Top" Foreground="#FFEEEEFF" FontFamily="Calibri" FontSize="13" BorderBrush="#FF956645" BorderThickness="1" Background="#FF9B3A3A" Height="21" Padding="5,2"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="115" Margin="163,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Background="#FFD9AA75" BorderBrush="#FF5F381B" KeyDown="isUserTyping" KeyUp="sendMessage"/>
+        <Label Content="uIP&#xD;&#xA;" HorizontalAlignment="Left" Margin="190,8,0,0" VerticalAlignment="Top" Width="31" Height="26" Foreground="#FFFFEAD2" RenderTransformOrigin="0.548,0.423"/>
+        <TextBox x:Name="txtFriendsIp" HorizontalAlignment="Left" Height="22" Margin="221,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" BorderBrush="#FFA06E49" Padding="4,2" IsEnabled="False" FontSize="10" Background="#FFD9AA75"/>
+        <Label Content="myPort" HorizontalAlignment="Left" Margin="30,42,0,0" VerticalAlignment="Top" Width="52" Foreground="#FFFFEAD2"/>
+        <TextBox x:Name="txtLocalPort" HorizontalAlignment="Left" Height="23" Margin="87,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" BorderBrush="#FFA06E49" Padding="4,2" IsEnabled="False" Background="#FFD9AA75"/>
+        <TextBox x:Name="txtFriendsPort" HorizontalAlignment="Left" Height="23" Margin="221,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" BorderBrush="#FFA06E49" Padding="4,2" IsEnabled="False" Background="#FFD9AA75"/>
+        <Label Content="uPort" HorizontalAlignment="Left" Margin="176,42,0,0" VerticalAlignment="Top" Width="45" Foreground="#FFFFEAD2"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="127" Margin="46,346,0,0" VerticalAlignment="Top" Width="425" Foreground="White" BorderBrush="#FFD9AA75" ToolTip="chat history" Padding="15,10">
+            <ListBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA06E49"/>
+                    <GradientStop Color="#FFD9AA75" Offset="1"/>
+                    <GradientStop Color="#FFA06E49" Offset="0.447"/>
+                </LinearGradientBrush>
+            </ListBox.Background>
+        </ListBox>
+        <Label x:Name="idTag" Content="Label" HorizontalAlignment="Left" Margin="386,11,0,0" VerticalAlignment="Top" Width="85" Height="28"/>
+        <Label x:Name="passTag" Content="Label" HorizontalAlignment="Left" Margin="386,44,0,0" VerticalAlignment="Top" Height="23" Width="74"/>
+        <Button x:Name="btnStart" Content="Connect" HorizontalAlignment="Left" Margin="87,79,0,0" VerticalAlignment="Top" Width="213" BorderBrush="#FF437DCC" Background="#FF4FA7FF" IsEnabled="False" Click="btnStart_Click"/>
+        <Button x:Name="logout_btn" Content="logout" HorizontalAlignment="Left" Margin="426,79,0,0" VerticalAlignment="Top" Width="45" Height="20" Panel.ZIndex="99" Background="#FF9B3A3A" Foreground="White" Click="logoutBtnClicked" BorderBrush="#FF9B3A3A" IsEnabled="False"/>
+        <GridSplitter HorizontalAlignment="Left" Height="121" Margin="321,0,0,0" VerticalAlignment="Top" Width="5" Background="#FF4E302E"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="17" Margin="46,320,0,0" VerticalAlignment="Top" Width="425" Background="#FFEEEEFF" BorderBrush="#FFA06E49" Foreground="#FF3A589B"/>
+        <Button Content="chat history" HorizontalAlignment="Left" Margin="78,256,0,0" VerticalAlignment="Top" Width="76" Background="#FF437DCC" Foreground="#FFEEEEFF" Click="open_chat_history" BorderThickness="0,1"/>
+
+    </Grid>
+</Window>

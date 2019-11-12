@@ -1,0 +1,59 @@
+﻿<div  id="edit" aria-labelledby="edit" aria-hidden="true">   
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" id="edit-form">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="edit-modal-label">Update Employee</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="edit-firstname" class="col-sm-2 control-label">Firstname</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-firstname" name="firstname" placeholder="Firstname" ng-model="FirstName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-lastname" class="col-sm-2 control-label">LastName</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-lastname" name="lastName" placeholder="LastName" ng-model="LastName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-address" class="col-sm-2 control-label">Address</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-address" name="address" placeholder="Address" ng-model="Address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-salary" class="col-sm-2 control-label">Salary</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-salary" name="mobile" placeholder="Salary" ng-model="Salary">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-dob" class="col-sm-2 control-label">DOB</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-dob" name="mobile" placeholder="DOB" ng-model="DOB">
+                        </div>
+                    </div>
+                    <!--<div class="form-group" ng-controller="DepartmentController">
+                        <label for="edit-department" class="col-sm-2 control-label">Department</label>
+                        <div class="col-sm-10">
+
+                            <select class="form-control" id="add-department" ng-model="DepartmentID">
+                                <option  ng-repeat="option in DepartmentList" value="{{option.DepartmentID}}">{{option.DepartmentName}}</option>
+                            </select>
+                        </div>
+                    </div>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"  ng-click="Close()">Close</button>
+                    <button type="submit" class="btn btn-primary" ng-click="Update()">Update</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

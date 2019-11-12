@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="ButtonCommand.View.AzurePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ButtonCommand.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#0072C6">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Microsoft Azure" Margin="25" FontSize="22" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Image Source="ms-appx:///Assets/Azure.png" Margin="50" Stretch="Uniform" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Margin="20" Text="Microsoft Azure is an open, flexible, enterprise - grade cloud computing platform. Move faster, do more, and save money with IaaS + PaaS. Microsoft Azure is a growing collection of integrated cloud services — analytics, computing, database, mobile, networking, storage, and web — for moving faster, achieving more, and saving money. " Foreground="White" TextWrapping="Wrap"/>
+            <Button Command="{Binding BackToWelcomePageCommand, Mode=TwoWay}" Content="Back To Welcome Page" Padding="10" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>

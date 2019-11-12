@@ -1,0 +1,51 @@
+﻿@model System.Collections.IDictionary
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="pull-left">
+				<h1>
+					PDF Viewer demo
+				</h1>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+    </div>
+	<hr />
+	
+	<div class="row">
+		<div class="col-md-1">
+			
+			<a href="javascript:;" 
+			   class="btn btn-info btn-sm btn-change-page" data-page-offset="-1">&larr; Prev Page</a>
+	
+		</div>
+		<div class="col-md-10 text-center">
+			<img id="pageImg" src="@Url.Action("GetPdfPageImage", "PdfViewer")?page=1" data-page="1" style="max-width:100%;border:1px solid silver;"/>
+		</div>
+		<div class="col-md-1">
+			<a href="javascript:;"
+			   class="btn btn-info btn-sm btn-change-page" data-page-offset="1">Next Page &rarr;</a>
+		</div>
+	</div>	
+	
+	<script type="text/javascript">
+		$(function () {
+			var renderUrl = "@Url.Action("GetPdfPageImage", "PdfViewer")";
+			var $pageImg = $('#pageImg');
+
+			$pageImg.bind("load", function () {
+				$pageImg.css('opacity', 1.0);
+			});
+
+			$('.btn-change-page').click(function () {
+				var offset = parseInt($(this).data('page-offset'));
+				var currentPage = parseInt($pageImg.data('page'));
+				var newPage = currentPage + offset;
+
+				$pageImg.css('opacity', 0.3);
+				$pageImg.attr('src', renderUrl + "?page=" + newPage);
+
+				$pageImg.data('page', newPage);
+			});
+		})
+	</script>

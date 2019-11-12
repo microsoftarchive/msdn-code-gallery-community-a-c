@@ -1,0 +1,31 @@
+# Script to call a web service from Powershell
+# log file name,location to save the log details
+$Logfile = "E:\DevTeam\Madhu\PS\LogFile.txt"
+function LogWrite
+{
+   Param ([string]$logstring)
+
+   Add-content -Path $Logfile -value $logstring
+}
+$LogStartDT = "Log started on {0}" -f (Get-Date)
+LogWrite "-----------------------------------------------------------------------------"
+LogWrite "$LogStartDT"
+
+$Input = Get-Content "E:\DevTeam\Madhu\PS\TaxRequestTrigger.xml"
+# write request into log file
+LogWrite "Request "
+LogWrite "------------------"
+LogWrite "$Input"
+$URI1 = "https://abc.com/TaxCal/TaxService.svc"
+
+$proxy = New-WebServiceProxy -Uri $URI1
+[xml]$resp= $proxy.CalculateTax($Input)
+# write response into log file
+LogWrite "Response "
+LogWrite "------------------"
+LogWrite $resp.OuterXml
+LogWrite "-----------------------------------------------------------------------------"
+
+
+
+

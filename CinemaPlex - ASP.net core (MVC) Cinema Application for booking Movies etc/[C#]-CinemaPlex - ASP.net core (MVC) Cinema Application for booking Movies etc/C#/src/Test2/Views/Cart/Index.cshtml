@@ -1,0 +1,108 @@
+@model IEnumerable<CinemaPlex.Models.CartModel>
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Http;
+@using Newtonsoft.Json;
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    CartModel CartData;
+}
+
+<h1>Shopping Cart</h1>
+
+<div class="shopping-cart">
+
+    <div class="column-labels">
+        <label class="product-image">Image</label>
+        <label class="product-details">Product</label>
+        <label class="product-price">Price</label>
+        <label class="product-quantity">Location</label>
+        <label class="product-removal">Remove</label>
+        <label class="product-line-price">Total</label>
+    </div>
+    @{
+        try
+        {
+            var Cart = Context.Session.GetString("cart");
+            if (Cart != null)
+            {
+                CartData = JsonConvert.DeserializeObject<CartModel>(Cart);
+                if (CartData.cartResults.Count > 0)
+                {
+                    int movieCostAdult = 35;
+                    int movieCostStudent = 20;
+                    int totalCostAdult = CartData.cartResults.Count * movieCostAdult;
+                    int totalCostStudent = CartData.cartResults.Count * movieCostStudent;
+
+                    @foreach (var result in CartData.cartResults)
+                    {
+                        var sessionDetails = Program.data.getSession(result.sessionId);
+                        var movieDetails = Program.data.getMovie(sessionDetails.MovieID);
+                        var cinemaDetails = Program.data.getCinema(sessionDetails.CineplexID);
+
+                        <div class="product" id="@result.sessionId">
+                            <div class="product-image">
+                                <img src="@movieDetails.MovieLogo">
+                            </div>
+                            <div class="product-details">
+                                <div class="product-title">@Html.ActionLink(movieDetails.Title, "Details", "Movies", new { id = movieDetails.MovieId }) - @sessionDetails.TimeRunning</div>
+                                <p class="product-description">
+                                    @if (movieDetails.Description.Length > 400)
+                                    {
+                                        <span>@movieDetails.Description.Substring(0, 400) ...</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@movieDetails.Description</span>
+                                    }
+                                </p>
+                            </div>
+                            <div class="product-price">@movieCostAdult.00</div>
+                            <div class="product-location">
+                                @Html.ActionLink(cinemaDetails.Location, "Details", "Cinemas", new { id = cinemaDetails.CineplexID })
+                            </div>
+                            <div class="product-quantity">
+                                @if(result.seatIds != null)
+                                {
+                                    <span>You have selected seats..</span>
+                                }
+                                else
+                                {
+                                    <a href="/Cart/Booking/@result.sessionId">Select seats</a>
+                                }
+                            </div>
+                            <div class="product-removal">
+                                <button class="remove-product">
+                                    Remove
+                                </button>
+                            </div>
+                            <div class="product-line-price">35.00</div>
+                        </div>
+                    }
+                    <div class="totals">
+                        <div class="totals-item">
+                            <label>Subtotal</label>
+                            <div class="totals-value" id="cart-subtotal">@totalCostAdult.00</div>
+                        </div>
+                    </div>
+
+                    <button class="checkout" id="checkout">Checkout</button>
+                }
+                else
+                {
+                    <p>You have not added any movies to your cart, please add some from here: <a href="/Sessions">Movie Sessions</a>.</p>
+                }
+            }
+            else
+            {
+                <p>You have not added any movies to your cart, please add some from here: <a href="/Sessions">Movie Sessions</a>.</p>
+            }
+        }
+        catch (Exception ex)
+        {
+            <p>CinemaPlex has run into an issue, please contact an administrator with the following error or try again
+               @ex.Message</p>
+        }
+    }
+</div>
+

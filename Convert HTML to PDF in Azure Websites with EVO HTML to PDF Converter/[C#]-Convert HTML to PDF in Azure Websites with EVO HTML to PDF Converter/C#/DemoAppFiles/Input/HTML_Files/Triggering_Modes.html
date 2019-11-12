@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversion Triggering Modes</title>
+    <script type="text/javascript">
+        var counter = 0;
+        function count() {
+            // Display the current counter value
+            document.getElementById("counterDiv").innerHTML = counter;
+
+            if (counter == 5) {
+                // Trigger conversion when counter reached a value
+                counterDiv.style.color = "green";
+                if (typeof evoPdfConverter != "undefined") {
+                    evoPdfConverter.startConversion();
+                }
+            }
+            else {
+                // Increment counter
+                counter++;
+
+                // After 1 second and call count() again
+                setTimeout("count()", 1000);
+            }
+        }
+    </script>
+</head>
+<body onload="count()" style="font-family: 'Times New Roman'; font-size: 14px">
+    The <span style="color: green"><b>count()</b></span> function is called immediately after the HTML page was loaded as a handler of the <span style="color: blue"><b>onload event</b></span> of the body element. The 
+    <span style="color: green"><b>count()</b></span> function increments the counter and schedules a new call to the same function to occur after 1 second if the counter did not reach the value 5 yet.<br />
+    <ul>
+        <li>If the selected triggering mode is <span style="background-color: aliceblue"><b>Auto</b></span> then the execution of the initial call to <span style="color: green">count()</span> will end and the conversion to PDF will start immediately
+        </li>
+        <li>If the selected triggering mode is <span style="background-color: aliceblue"><b>Delayed</b></span> then the <span style="color: green">count()</span> will be invoked once a second during the delay interval and after that the conversion to PDF will start
+        </li>
+        <li>If the selected triggering mode is <span style="background-color: aliceblue"><b>Manual</b></span> then the <span style="color: green">count()</span> will be invoked once a second until the counter reached the value 5. When the counter reached this value the 
+    <span style="background-color: whitesmoke"><b>evoPdfConverter.startConversion()</b></span> function is called to trigger the conversion to PDF
+        </li>
+    </ul>
+    <br />
+    <b style="font-size: 20px">Counter value:</b><br />
+    <div style="font-size: 30px; color: red; float: left" id="counterDiv">0 </div>
+    <span style="font-size: 30px; color: black; float: left">&nbsp; of</span>
+    <span style="font-size: 30px; color: green; float: left">&nbsp; 5</span>
+    <br />
+    <br />
+    <br />
+    <span style="color: navy">
+        <script type="text/javascript">
+            if (typeof evoPdfInfo != "undefined") {
+                document.write("Created by " + evoPdfInfo.getVersion());
+            }
+        </script>
+    </span>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body
+{
+		padding-left:35px !important;
+}
+
+p: first-letter
+{
+	font-size: 150%;
+}
+
+.Button
+{
+	border: 0px !important;
+}
+
+
+.Menu, .Exchange, .Weather
+{
+	background-repeat: no-repeat;
+	padding-top:45px;
+}
+
+.m0
+{
+	background-color: transparent !important;
+	font-style:italic;
+	text-align:center;
+}
+
+.m3
+{
+	font-style:oblique;
+}

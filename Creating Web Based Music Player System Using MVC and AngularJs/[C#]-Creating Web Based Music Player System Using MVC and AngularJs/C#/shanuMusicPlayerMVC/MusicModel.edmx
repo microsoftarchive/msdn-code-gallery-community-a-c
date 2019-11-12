@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="musicPlayerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AlbumMaster">
+          <Key>
+            <PropertyRef Name="AlbumID" />
+          </Key>
+          <Property Name="AlbumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AlbumName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ImageName" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MusicPlayerMaster">
+          <Key>
+            <PropertyRef Name="MusicID" />
+          </Key>
+          <Property Name="MusicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SingerName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AlbumName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="MusicFileName" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Function Name="USP_Album_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AlbumName" Type="varchar" Mode="In" />
+          <Parameter Name="ImageName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_AlbumMaster_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AlbumName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_MusicAlbum_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="musicID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_MusicAlbum_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SingerName" Type="varchar" Mode="In" />
+          <Parameter Name="AlbumName" Type="varchar" Mode="In" />
+          <Parameter Name="MusicFileName" Type="varchar" Mode="In" />
+          <Parameter Name="Description" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_MusicAlbum_SelectALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AlbumName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_MusicAlbum_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="musicID" Type="varchar" Mode="In" />
+          <Parameter Name="SingerName" Type="varchar" Mode="In" />
+          <Parameter Name="AlbumName" Type="varchar" Mode="In" />
+          <Parameter Name="MusicFileName" Type="varchar" Mode="In" />
+          <Parameter Name="Description" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="musicPlayerDBModelStoreContainer">
+          <EntitySet Name="AlbumMaster" EntityType="Self.AlbumMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MusicPlayerMaster" EntityType="Self.MusicPlayerMaster" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="musicPlayerDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AlbumMaster">
+          <Key>
+            <PropertyRef Name="AlbumID" />
+          </Key>
+          <Property Name="AlbumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AlbumName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImageName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MusicPlayerMaster">
+          <Key>
+            <PropertyRef Name="MusicID" />
+          </Key>
+          <Property Name="MusicID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SingerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AlbumName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MusicFileName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MusicPlayerDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AlbumMasters" EntityType="Self.AlbumMaster" />
+          <EntitySet Name="MusicPlayerMasters" EntityType="Self.MusicPlayerMaster" />
+          <FunctionImport Name="USP_Album_Insert" ReturnType="Collection(String)">
+            <Parameter Name="AlbumName" Mode="In" Type="String" />
+            <Parameter Name="ImageName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_AlbumMaster_Select" ReturnType="Collection(musicPlayerDBModel.USP_AlbumMaster_Select_Result)">
+            <Parameter Name="AlbumName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_MusicAlbum_Delete" ReturnType="Collection(String)">
+            <Parameter Name="musicID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_MusicAlbum_Insert" ReturnType="Collection(String)">
+            <Parameter Name="SingerName" Mode="In" Type="String" />
+            <Parameter Name="AlbumName" Mode="In" Type="String" />
+            <Parameter Name="MusicFileName" Mode="In" Type="String" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_MusicAlbum_SelectALL" ReturnType="Collection(musicPlayerDBModel.USP_MusicAlbum_SelectALL_Result)">
+            <Parameter Name="AlbumName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_MusicAlbum_Update" ReturnType="Collection(String)">
+            <Parameter Name="musicID" Mode="In" Type="String" />
+            <Parameter Name="SingerName" Mode="In" Type="String" />
+            <Parameter Name="AlbumName" Mode="In" Type="String" />
+            <Parameter Name="MusicFileName" Mode="In" Type="String" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="USP_AlbumMaster_Select_Result">
+          <Property Type="Int32" Name="AlbumID" Nullable="false" />
+          <Property Type="String" Name="AlbumName" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="ImageName" Nullable="false" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="USP_MusicAlbum_SelectALL_Result">
+          <Property Type="Int32" Name="MusicID" Nullable="false" />
+          <Property Type="String" Name="SingerName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="AlbumName" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="MusicFileName" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="musicPlayerDBModelStoreContainer" CdmEntityContainer="MusicPlayerDBEntities">
+          <EntitySetMapping Name="AlbumMasters">
+            <EntityTypeMapping TypeName="musicPlayerDBModel.AlbumMaster">
+              <MappingFragment StoreEntitySet="AlbumMaster">
+                <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+                <ScalarProperty Name="AlbumName" ColumnName="AlbumName" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MusicPlayerMasters">
+            <EntityTypeMapping TypeName="musicPlayerDBModel.MusicPlayerMaster">
+              <MappingFragment StoreEntitySet="MusicPlayerMaster">
+                <ScalarProperty Name="MusicID" ColumnName="MusicID" />
+                <ScalarProperty Name="SingerName" ColumnName="SingerName" />
+                <ScalarProperty Name="AlbumName" ColumnName="AlbumName" />
+                <ScalarProperty Name="MusicFileName" ColumnName="MusicFileName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="USP_Album_Insert" FunctionName="musicPlayerDBModel.Store.USP_Album_Insert" />
+          <FunctionImportMapping FunctionImportName="USP_AlbumMaster_Select" FunctionName="musicPlayerDBModel.Store.USP_AlbumMaster_Select">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="musicPlayerDBModel.USP_AlbumMaster_Select_Result">
+                <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+                <ScalarProperty Name="AlbumName" ColumnName="AlbumName" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_MusicAlbum_Delete" FunctionName="musicPlayerDBModel.Store.USP_MusicAlbum_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_MusicAlbum_Insert" FunctionName="musicPlayerDBModel.Store.USP_MusicAlbum_Insert" />
+          <FunctionImportMapping FunctionImportName="USP_MusicAlbum_SelectALL" FunctionName="musicPlayerDBModel.Store.USP_MusicAlbum_SelectALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="musicPlayerDBModel.USP_MusicAlbum_SelectALL_Result">
+                <ScalarProperty Name="MusicID" ColumnName="MusicID" />
+                <ScalarProperty Name="SingerName" ColumnName="SingerName" />
+                <ScalarProperty Name="AlbumName" ColumnName="AlbumName" />
+                <ScalarProperty Name="MusicFileName" ColumnName="MusicFileName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_MusicAlbum_Update" FunctionName="musicPlayerDBModel.Store.USP_MusicAlbum_Update" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

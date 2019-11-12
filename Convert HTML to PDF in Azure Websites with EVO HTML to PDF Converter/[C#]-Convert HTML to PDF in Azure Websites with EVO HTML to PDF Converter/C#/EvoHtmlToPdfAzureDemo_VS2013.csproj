@@ -1,0 +1,1063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B0865A6-54EC-4E2D-953A-C17159AA8796}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EvoHtmlToPdfDemo</RootNamespace>
+    <AssemblyName>EvoHtmlToPdfAzureDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EvoHtmlToPdfClient, Version=6.12.0.0, Culture=neutral, PublicKeyToken=e1fcbb86597de299, processorArchitecture=MSIL">
+      <HintPath>packages\EvoHtmlToPdf_Azure_Client.6.12.0\lib\net40\EvoHtmlToPdfClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="DemoAppFiles\Input\Attach_Files\Attachment_File.txt" />
+    <Content Include="DemoAppFiles\Input\Attach_Files\Attachment_File_Icon.txt" />
+    <Content Include="DemoAppFiles\Input\Attach_Files\Attachment_Stream.txt" />
+    <Content Include="DemoAppFiles\Input\Attach_Files\Attachment_Stream_Icon.txt" />
+    <Content Include="DemoAppFiles\Input\Certificates\evopdf.pfx" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_Image\HTML_to_Image.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_Image\HTML_to_SVG.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Bookmarks\Auto_Create.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Bookmarks\Select_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Bookmarks\Select_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Convert_Current_Page.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Convert_Page_in_Same_Session.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Flash_Extensions\HTML_Flash_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Fonts_Embedding\Embed_Fonts_in_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Getting_Started.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Headers_and_Footers\Header_Footer_In_External_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Headers_and_Footers\Header_Footer_on_Merged_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Headers_and_Footers\HTML_in_Header_Footer.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Headers_and_Footers\Page_Numbers_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTML5_Features\SVG_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTML5_Features\Web_Fonts_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTML_Content_Scaling.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTML_Elements_Location\Select_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTML_Elements_Location\Select_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTML_Elements_Visibility\Select_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTML_Elements_Visibility\Select_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTML_to_Image_Elements\Add_HTML_to_Image.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTML_to_PDF_Elements\Add_HTML_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTTP_GET_and_POST\GET_and_POST_HTTP_Methods.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTTP_Headers_Cookies\Add_Cookies.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\HTTP_Headers_Cookies\Add_HTTP_Headers.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Images_Quality\Replace_with_Higher_Quality.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Images_Quality\Scaling_JPEG_Compression.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Internal_Links\Convert_Internal_Links_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Internal_Links\Define_Custom_Internal_Links.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Links_Attach\Create_Links_Atach.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Media_Types\Screen_Print_Media_Type.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Merge_Existing_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Merge_Multiple_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Page_Breaks\Avoid_Images_Break.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_in_CSS.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_in_CSS.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Partially_Convert_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Actions\Execute_JavaScript_Button.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Actions\Execute_JavaScript_Open.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Actions\Go_To_Page_Open_Action.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Color_Spaces\Create_GrayScale_CMYK.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Forms\Auto_Create_PDF_Forms.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Forms\Define_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Security\Digital_Signatures.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Security\PDF_Permissions.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Standards\Create_PDF_A_and_PDF_X.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Viewer\Set_Initial_Zoom_Level.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Viewer\Set_Viewer_Preferences.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Repeat_Table_Header_Footer.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Table_of_Contents\Auto_Create.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Table_of_Contents\Define_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Text_Notes\Create_Text_Notes.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Triggering_Modes\Triggering_Modes.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\URI_Links\Convert_URI_Links_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\URI_Links\Define_Custom_URI_Links.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\Watermarks_Stamps\Add_Watermarks_Stamps.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Bookmarks.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Create_PDF_Documents.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\File_Attachments.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Graphic_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Headers_and_Footers\Header_Footer_In_External_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Headers_and_Footers\HTML_in_Header_Footer.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Headers_and_Footers\Page_Numbers_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\HTML_to_Image_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\HTML_to_PDF_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Image_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Internal_Links.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\PDF_Actions\Execute_JavaScript_Button.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\PDF_Actions\Execute_JavaScript_Open.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\PDF_Actions\Go_To_Page_Open_Action.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\PDF_Forms.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\PDF_Security\Digital_Signatures.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\PDF_Security\PDF_Permissions.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\PDF_Viewer\Set_Initial_Zoom_Level.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\PDF_Viewer\Set_Viewer_Preferences.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Text_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\Text_Notes.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Creator\URI_Links.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Editor\Merge_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\PDF_Editor\Stamp_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_Image\HTML_to_Image.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_Image\HTML_to_SVG.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Bookmarks\Auto_Create.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Bookmarks\Select_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Bookmarks\Select_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Convert_Current_Page.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Convert_Page_in_Same_Session.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Flash_Extensions\HTML_Flash_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Fonts_Embedding\Embed_Fonts_in_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Getting_Started.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Headers_and_Footers\Header_Footer_Auto_Resize.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Headers_and_Footers\Header_Footer_Change.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Headers_and_Footers\Header_Footer_In_External_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Headers_and_Footers\Header_Footer_on_Merged_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Headers_and_Footers\HTML_in_Header_Footer.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Headers_and_Footers\Page_Numbers_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTML5_Features\SVG_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTML5_Features\Web_Fonts_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTML_Content_Scaling.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTML_Elements_Location\Select_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTML_Elements_Location\Select_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTML_Elements_Visibility\Select_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTML_Elements_Visibility\Select_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTML_to_Image_Elements\Add_HTML_to_Image.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTML_to_PDF_Elements\Add_HTML_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTTP_GET_and_POST\GET_and_POST_HTTP_Methods.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTTP_Headers_Cookies\Add_Cookies.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\HTTP_Headers_Cookies\Add_HTTP_Headers.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Images_Quality\Replace_with_Higher_Quality.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Images_Quality\Scaling_JPEG_Compression.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Internal_Links\Convert_Internal_Links_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Internal_Links\Define_Custom_Internal_Links.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Links_Attach\Create_Links_Atach.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Media_Types\Screen_Print_Media_Type.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Merge_Existing_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Merge_Multiple_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Page_Breaks\Avoid_Images_Break.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_in_CSS.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_in_API.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_in_CSS.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Partially_Convert_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Actions\Execute_JavaScript_Button.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Actions\Execute_JavaScript_Open.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Actions\Go_To_Page_Open_Action.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Color_Spaces\Create_GrayScale_CMYK.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Forms\Auto_Create_PDF_Forms.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Forms\Define_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Pages_Back\Add_Elements_in_Back.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Pages_Back\Add_Elements_in_Front.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Security\Digital_Signatures.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Security\PDF_Permissions.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Standards\Create_PDF_A_and_PDF_X.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Viewer\Set_Initial_Zoom_Level.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\PDF_Viewer\Set_Viewer_Preferences.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Repeat_Table_Header_Footer.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Table_of_Contents\Auto_Create.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Table_of_Contents\Define_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Text_Notes\Create_Text_Notes.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Triggering_Modes\Triggering_Modes.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\URI_Links\Convert_URI_Links_to_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\URI_Links\Define_Custom_URI_Links.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\HTML_to_PDF\Watermarks_Stamps\Add_Watermarks_Stamps.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Bookmarks.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Create_PDF_Documents.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\File_Attachments.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\File_Links.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Graphic_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Headers_and_Footers\Header_Footer_Auto_Resize.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Headers_and_Footers\Header_Footer_Change.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Headers_and_Footers\Header_Footer_In_External_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Headers_and_Footers\HTML_in_Header_Footer.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Headers_and_Footers\Page_Numbers_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\HTML_to_Image_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\HTML_to_PDF_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Image_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Internal_Links.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\PDF_Actions\Execute_JavaScript_Button.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\PDF_Actions\Execute_JavaScript_Open.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\PDF_Actions\Go_To_Page_Open_Action.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\PDF_Forms.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\PDF_Security\Digital_Signatures.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\PDF_Security\PDF_Permissions.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\PDF_Viewer\Set_Initial_Zoom_Level.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\PDF_Viewer\Set_Viewer_Preferences.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Text_Elements.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\Text_Notes.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Creator\URI_Links.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Editor\Fill_PDF_Forms.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Editor\Merge_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Editor\Split_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Descriptions\AspNet\PDF_Editor\Stamp_PDF.html" />
+    <Content Include="DemoAppFiles\Input\Fonts\OpenTypePostScript.otf" />
+    <Content Include="DemoAppFiles\Input\Fonts\OpenTypeTrueType.otf" />
+    <Content Include="DemoAppFiles\Input\Fonts\TrueType.ttf" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Button_JavaScript_Actions.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Custom_Internal_Links.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Custom_URI_Links.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Digital_Signatures.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\File_Attachments.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\File_Links_and_Attachments.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Flash_Examples.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Footer_Alt_HTML.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Footer_HTML.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Header_Alt_HTML.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Header_HTML.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Hierarchical_Bookmarks.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\HTML_Elements_Info.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\HTML_Elements_to_Hide.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\HTML_Form.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Img\logo.jpg" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Img\wheels_trans.png" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Media_Type_Rules.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Page_Breaks_Inside_Avoid_Using_API.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Page_Breaks_Inside_Avoid_Using_CSS.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Page_Break_Before_and_After_Using_API.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Page_Break_Before_and_After_Using_CSS.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Page_Numbers_in_HTML.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Repeat_HTML_Header_Footer.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Replace_Images.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Select_HTML_Form_Fields.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\SVG_Examples.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Table_of_Contents.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Text_Notes.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Triggering_Modes.html" />
+    <Content Include="DemoAppFiles\Input\HTML_Files\Watermark_Stamp.html" />
+    <Content Include="DemoAppFiles\Input\Images\background.jpg" />
+    <Content Include="DemoAppFiles\Input\Images\box.jpg" />
+    <Content Include="DemoAppFiles\Input\Images\compass.png" />
+    <Content Include="DemoAppFiles\Input\Images\landscape.jpg" />
+    <Content Include="DemoAppFiles\Input\Images\logo.jpg" />
+    <Content Include="DemoAppFiles\Input\Images\logo_trans.png" />
+    <Content Include="DemoAppFiles\Input\Images\picture_large.jpg" />
+    <Content Include="DemoAppFiles\Input\Images\picture_small.jpg" />
+    <Content Include="DemoAppFiles\Input\Images\picture_smaller.jpg" />
+    <Content Include="DemoAppFiles\Input\Images\rose.png" />
+    <Content Include="DemoAppFiles\Input\Images\transparent.png" />
+    <Content Include="DemoAppFiles\Input\Linked_Files\Linked_External_File.txt" />
+    <Content Include="DemoAppFiles\Input\PDF_Files\Fill_PDF_Forms.pdf" />
+    <Content Include="DemoAppFiles\Input\PDF_Files\Merge_After_Conversion.pdf" />
+    <Content Include="DemoAppFiles\Input\PDF_Files\Merge_Before_Conversion.pdf" />
+    <Content Include="DemoAppFiles\Input\PDF_Files\PDF_Document.pdf" />
+    <Content Include="DemoAppFiles\Input\Text_Files\Large_Text_File.txt" />
+    <Content Include="DemoAppFiles\Input\Text_Files\Text_File.txt" />
+    <Content Include="HTML_to_Image\HTML_to_Image.aspx" />
+    <Content Include="HTML_to_Image\HTML_to_SVG.aspx" />
+    <Content Include="HTML_to_PDF\Bookmarks\Auto_Create_Bookmarks.aspx" />
+    <Content Include="HTML_to_PDF\Bookmarks\Select_in_API_HTML_Elements_to_Bookmark.aspx" />
+    <Content Include="HTML_to_PDF\Bookmarks\Select_in_HTML_Elements_to_Bookmark.aspx" />
+    <Content Include="HTML_to_PDF\Convert_Current_Page.aspx" />
+    <Content Include="HTML_to_PDF\Convert_Page_in_Same_Session.aspx" />
+    <Content Include="HTML_to_PDF\Display_Session_Variables.aspx" />
+    <Content Include="HTML_to_PDF\File_Links_Attachments\Create_File_Links_and_Atachments.aspx" />
+    <Content Include="HTML_to_PDF\Flash_and_Extensions\Convert_HTML_with_Flash_to_PDF.aspx" />
+    <Content Include="HTML_to_PDF\Fonts_Embedding\Embed_Fonts_in_PDF.aspx" />
+    <Content Include="HTML_to_PDF\Getting_Started.aspx" />
+    <Content Include="HTML_to_PDF\Headers_and_Footers\Header_Footer_In_External_PDF.aspx" />
+    <Content Include="HTML_to_PDF\Headers_and_Footers\Header_Footer_on_Merged_HTML.aspx" />
+    <Content Include="HTML_to_PDF\Headers_and_Footers\HTML_in_Header_Footer.aspx" />
+    <Content Include="HTML_to_PDF\Headers_and_Footers\Page_Numbers_in_HTML.aspx" />
+    <Content Include="HTML_to_PDF\HTML5_Features\SVG_to_PDF.aspx" />
+    <Content Include="HTML_to_PDF\HTML5_Features\Web_Fonts_to_PDF.aspx" />
+    <Content Include="HTML_to_PDF\HTML_Content_Scaling.aspx" />
+    <Content Include="HTML_to_PDF\HTML_Elements_Location\Select_in_API_Elements_to_Retrieve.aspx" />
+    <Content Include="HTML_to_PDF\HTML_Elements_Location\Select_in_HTML_Elements_to_Retrieve.aspx" />
+    <Content Include="HTML_to_PDF\HTML_Elements_Visibility\Select_in_API_Elements_to_Hide.aspx" />
+    <Content Include="HTML_to_PDF\HTML_Elements_Visibility\Select_in_HTML_Elements_to_Hide.aspx" />
+    <Content Include="HTML_to_PDF\HTML_to_Image_Elements\Add_HTML_to_Image_Elements_to_PDF.aspx" />
+    <Content Include="HTML_to_PDF\HTML_to_PDF_Elements\Add_HTML_to_PDF_Elements_to_PDF.aspx" />
+    <Content Include="HTML_to_PDF\HTTP_GET_and_POST\GET_and_POST_HTTP_Methods.aspx" />
+    <Content Include="HTML_to_PDF\HTTP_Headers_and_Cookies\Add_Cookies_to_Request.aspx" />
+    <Content Include="HTML_to_PDF\HTTP_Headers_and_Cookies\Add_HTTP_Headers_to_Request.aspx" />
+    <Content Include="HTML_to_PDF\Images_Quality\Images_Scaling_and JPEG_Compression.aspx" />
+    <Content Include="HTML_to_PDF\Images_Quality\Replace_with_Higher_Quality_Images.aspx" />
+    <Content Include="HTML_to_PDF\Internal_Links\Convert_Internal_Links_to_PDF.aspx" />
+    <Content Include="HTML_to_PDF\Internal_Links\Define_Custom_Internal_Links.aspx" />
+    <Content Include="HTML_to_PDF\Media_Types\Select_Screen_or_Print_Media_Type.aspx" />
+    <Content Include="HTML_to_PDF\Merge_Multiple_HTML.aspx" />
+    <Content Include="HTML_to_PDF\Merge_With_Existing_PDF.aspx" />
+    <Content Include="HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_Inside_HTML_Elements_Using_API.aspx" />
+    <Content Include="HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_Inside_HTML_Elements_Using_CSS.aspx" />
+    <Content Include="HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_Inside_Images_Using_API.aspx" />
+    <Content Include="HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_Before_After_Using_API.aspx" />
+    <Content Include="HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_Before_After_Using_CSS.aspx" />
+    <Content Include="HTML_to_PDF\Partially_Convert_HTML.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Actions\Execute_JavaScript_Button_Clicked.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Actions\Execute_JavaScript_Open_Action.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Actions\Go_To_Page_Open_Action.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Color_Spaces\Create_GrayScale_CMYK.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Forms\Auto_Create_PDF_Forms.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Forms\Define_in_HTML_PDF_Form_Fields.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Security\Digital_Signatures.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Security\PDF_Permissions_and_Password.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Standards\Create_PDF_A_and_PDF_X_Description.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Viewer_Preferences\Set_Initial_Zoom_Level.aspx" />
+    <Content Include="HTML_to_PDF\PDF_Viewer_Preferences\Set_Viewer_Preferences.aspx" />
+    <Content Include="HTML_to_PDF\Repeat_HTML_Table_Header_Footer.aspx" />
+    <Content Include="HTML_to_PDF\Table_of_Contents\Auto_Create_Table_of_Contents.aspx" />
+    <Content Include="HTML_to_PDF\Table_of_Contents\Define_in_HTML_Table_of_Contents_Items.aspx" />
+    <Content Include="HTML_to_PDF\Text_Notes\Create_Text_Notes.aspx" />
+    <Content Include="HTML_to_PDF\Triggering_Modes\Conversion_Triggering_Modes.aspx" />
+    <Content Include="HTML_to_PDF\URI_Links\Convert_URI_Links_to_PDF.aspx" />
+    <Content Include="HTML_to_PDF\URI_Links\Define_Custom_URI_Links.aspx" />
+    <Content Include="HTML_to_PDF\Watermarks_Stamps\Add_Watermarks_Stamps.aspx" />
+    <Content Include="img\CollapseAll.bmp" />
+    <Content Include="img\evo.ico" />
+    <Content Include="img\evologo-100-trans.png" />
+    <Content Include="img\evologo-100.jpg" />
+    <Content Include="img\evologo-250.png" />
+    <Content Include="img\ExpandAll.bmp" />
+    <Content Include="img\logo.jpg" />
+    <Content Include="img\pdficon-20.png" />
+    <Content Include="PDF_Creator\Bookmarks.aspx" />
+    <Content Include="PDF_Creator\Create_PDF_Documents.aspx" />
+    <Content Include="PDF_Creator\File_Attachments.aspx" />
+    <Content Include="PDF_Creator\Graphic_Elements.aspx" />
+    <Content Include="PDF_Creator\Headers_and_Footers\Header_Footer_In_External_PDF.aspx" />
+    <Content Include="PDF_Creator\Headers_and_Footers\HTML_in_Header_Footer.aspx" />
+    <Content Include="PDF_Creator\Headers_and_Footers\Page_Numbers_in_HTML.aspx" />
+    <Content Include="PDF_Creator\HTML_to_Image_Elements.aspx" />
+    <Content Include="PDF_Creator\HTML_to_PDF_Elements.aspx" />
+    <Content Include="PDF_Creator\Image_Elements.aspx" />
+    <Content Include="PDF_Creator\Internal_Links.aspx" />
+    <Content Include="PDF_Creator\PDF_Actions\Execute_JavaScript_Button_Clicked.aspx" />
+    <Content Include="PDF_Creator\PDF_Actions\Execute_JavaScript_Open_Action.aspx" />
+    <Content Include="PDF_Creator\PDF_Actions\Go_To_Page_Open_Action.aspx" />
+    <Content Include="PDF_Creator\PDF_Forms.aspx" />
+    <Content Include="PDF_Creator\PDF_Security\Digital_Signatures.aspx" />
+    <Content Include="PDF_Creator\PDF_Security\PDF_Permissions_and_Password.aspx" />
+    <Content Include="PDF_Creator\PDF_Viewer_Preferences\Set_Initial_Zoom_Level.aspx" />
+    <Content Include="PDF_Creator\PDF_Viewer_Preferences\Set_Viewer_Preferences.aspx" />
+    <Content Include="PDF_Creator\Text_Elements.aspx" />
+    <Content Include="PDF_Creator\Text_Notes.aspx" />
+    <Content Include="PDF_Creator\URI_Links.aspx" />
+    <Content Include="PDF_Editor\Merge_PDF.aspx" />
+    <Content Include="PDF_Editor\Stamp_PDF.aspx" />
+    <Content Include="styles\styles.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_Image\HTML_to_Image.aspx.cs">
+      <DependentUpon>HTML_to_Image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_Image\HTML_to_Image.aspx.designer.cs">
+      <DependentUpon>HTML_to_Image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_Image\HTML_to_SVG.aspx.cs">
+      <DependentUpon>HTML_to_SVG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_Image\HTML_to_SVG.aspx.designer.cs">
+      <DependentUpon>HTML_to_SVG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Bookmarks\Auto_Create_Bookmarks.aspx.cs">
+      <DependentUpon>Auto_Create_Bookmarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Bookmarks\Auto_Create_Bookmarks.aspx.designer.cs">
+      <DependentUpon>Auto_Create_Bookmarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Bookmarks\Select_in_API_HTML_Elements_to_Bookmark.aspx.cs">
+      <DependentUpon>Select_in_API_HTML_Elements_to_Bookmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Bookmarks\Select_in_API_HTML_Elements_to_Bookmark.aspx.designer.cs">
+      <DependentUpon>Select_in_API_HTML_Elements_to_Bookmark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Bookmarks\Select_in_HTML_Elements_to_Bookmark.aspx.cs">
+      <DependentUpon>Select_in_HTML_Elements_to_Bookmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Bookmarks\Select_in_HTML_Elements_to_Bookmark.aspx.designer.cs">
+      <DependentUpon>Select_in_HTML_Elements_to_Bookmark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Convert_Current_Page.aspx.cs">
+      <DependentUpon>Convert_Current_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Convert_Current_Page.aspx.designer.cs">
+      <DependentUpon>Convert_Current_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Convert_Page_in_Same_Session.aspx.cs">
+      <DependentUpon>Convert_Page_in_Same_Session.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Convert_Page_in_Same_Session.aspx.designer.cs">
+      <DependentUpon>Convert_Page_in_Same_Session.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Display_Session_Variables.aspx.cs">
+      <DependentUpon>Display_Session_Variables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Display_Session_Variables.aspx.designer.cs">
+      <DependentUpon>Display_Session_Variables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\File_Links_Attachments\Create_File_Links_and_Atachments.aspx.cs">
+      <DependentUpon>Create_File_Links_and_Atachments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\File_Links_Attachments\Create_File_Links_and_Atachments.aspx.designer.cs">
+      <DependentUpon>Create_File_Links_and_Atachments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Flash_and_Extensions\Convert_HTML_with_Flash_to_PDF.aspx.cs">
+      <DependentUpon>Convert_HTML_with_Flash_to_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Flash_and_Extensions\Convert_HTML_with_Flash_to_PDF.aspx.designer.cs">
+      <DependentUpon>Convert_HTML_with_Flash_to_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Fonts_Embedding\Embed_Fonts_in_PDF.aspx.cs">
+      <DependentUpon>Embed_Fonts_in_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Fonts_Embedding\Embed_Fonts_in_PDF.aspx.designer.cs">
+      <DependentUpon>Embed_Fonts_in_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Getting_Started.aspx.cs">
+      <DependentUpon>Getting_Started.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Getting_Started.aspx.designer.cs">
+      <DependentUpon>Getting_Started.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Headers_and_Footers\Header_Footer_In_External_PDF.aspx.cs">
+      <DependentUpon>Header_Footer_In_External_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Headers_and_Footers\Header_Footer_In_External_PDF.aspx.designer.cs">
+      <DependentUpon>Header_Footer_In_External_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Headers_and_Footers\Header_Footer_on_Merged_HTML.aspx.cs">
+      <DependentUpon>Header_Footer_on_Merged_HTML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Headers_and_Footers\Header_Footer_on_Merged_HTML.aspx.designer.cs">
+      <DependentUpon>Header_Footer_on_Merged_HTML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Headers_and_Footers\HTML_in_Header_Footer.aspx.cs">
+      <DependentUpon>HTML_in_Header_Footer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Headers_and_Footers\HTML_in_Header_Footer.aspx.designer.cs">
+      <DependentUpon>HTML_in_Header_Footer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Headers_and_Footers\Page_Numbers_in_HTML.aspx.cs">
+      <DependentUpon>Page_Numbers_in_HTML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Headers_and_Footers\Page_Numbers_in_HTML.aspx.designer.cs">
+      <DependentUpon>Page_Numbers_in_HTML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML5_Features\SVG_to_PDF.aspx.cs">
+      <DependentUpon>SVG_to_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML5_Features\SVG_to_PDF.aspx.designer.cs">
+      <DependentUpon>SVG_to_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML5_Features\Web_Fonts_to_PDF.aspx.cs">
+      <DependentUpon>Web_Fonts_to_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML5_Features\Web_Fonts_to_PDF.aspx.designer.cs">
+      <DependentUpon>Web_Fonts_to_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Content_Scaling.aspx.cs">
+      <DependentUpon>HTML_Content_Scaling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Content_Scaling.aspx.designer.cs">
+      <DependentUpon>HTML_Content_Scaling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Elements_Location\Select_in_API_Elements_to_Retrieve.aspx.cs">
+      <DependentUpon>Select_in_API_Elements_to_Retrieve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Elements_Location\Select_in_API_Elements_to_Retrieve.aspx.designer.cs">
+      <DependentUpon>Select_in_API_Elements_to_Retrieve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Elements_Location\Select_in_HTML_Elements_to_Retrieve.aspx.cs">
+      <DependentUpon>Select_in_HTML_Elements_to_Retrieve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Elements_Location\Select_in_HTML_Elements_to_Retrieve.aspx.designer.cs">
+      <DependentUpon>Select_in_HTML_Elements_to_Retrieve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Elements_Visibility\Select_in_API_Elements_to_Hide.aspx.cs">
+      <DependentUpon>Select_in_API_Elements_to_Hide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Elements_Visibility\Select_in_API_Elements_to_Hide.aspx.designer.cs">
+      <DependentUpon>Select_in_API_Elements_to_Hide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Elements_Visibility\Select_in_HTML_Elements_to_Hide.aspx.cs">
+      <DependentUpon>Select_in_HTML_Elements_to_Hide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_Elements_Visibility\Select_in_HTML_Elements_to_Hide.aspx.designer.cs">
+      <DependentUpon>Select_in_HTML_Elements_to_Hide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_to_Image_Elements\Add_HTML_to_Image_Elements_to_PDF.aspx.cs">
+      <DependentUpon>Add_HTML_to_Image_Elements_to_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_to_Image_Elements\Add_HTML_to_Image_Elements_to_PDF.aspx.designer.cs">
+      <DependentUpon>Add_HTML_to_Image_Elements_to_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_to_PDF_Elements\Add_HTML_to_PDF_Elements_to_PDF.aspx.cs">
+      <DependentUpon>Add_HTML_to_PDF_Elements_to_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTML_to_PDF_Elements\Add_HTML_to_PDF_Elements_to_PDF.aspx.designer.cs">
+      <DependentUpon>Add_HTML_to_PDF_Elements_to_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTTP_GET_and_POST\GET_and_POST_HTTP_Methods.aspx.cs">
+      <DependentUpon>GET_and_POST_HTTP_Methods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTTP_GET_and_POST\GET_and_POST_HTTP_Methods.aspx.designer.cs">
+      <DependentUpon>GET_and_POST_HTTP_Methods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTTP_Headers_and_Cookies\Add_Cookies_to_Request.aspx.cs">
+      <DependentUpon>Add_Cookies_to_Request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTTP_Headers_and_Cookies\Add_Cookies_to_Request.aspx.designer.cs">
+      <DependentUpon>Add_Cookies_to_Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTTP_Headers_and_Cookies\Add_HTTP_Headers_to_Request.aspx.cs">
+      <DependentUpon>Add_HTTP_Headers_to_Request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\HTTP_Headers_and_Cookies\Add_HTTP_Headers_to_Request.aspx.designer.cs">
+      <DependentUpon>Add_HTTP_Headers_to_Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Images_Quality\Images_Scaling_and JPEG_Compression.aspx.cs">
+      <DependentUpon>Images_Scaling_and JPEG_Compression.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Images_Quality\Images_Scaling_and JPEG_Compression.aspx.designer.cs">
+      <DependentUpon>Images_Scaling_and JPEG_Compression.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Images_Quality\Replace_with_Higher_Quality_Images.aspx.cs">
+      <DependentUpon>Replace_with_Higher_Quality_Images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Images_Quality\Replace_with_Higher_Quality_Images.aspx.designer.cs">
+      <DependentUpon>Replace_with_Higher_Quality_Images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Internal_Links\Convert_Internal_Links_to_PDF.aspx.cs">
+      <DependentUpon>Convert_Internal_Links_to_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Internal_Links\Convert_Internal_Links_to_PDF.aspx.designer.cs">
+      <DependentUpon>Convert_Internal_Links_to_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Internal_Links\Define_Custom_Internal_Links.aspx.cs">
+      <DependentUpon>Define_Custom_Internal_Links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Internal_Links\Define_Custom_Internal_Links.aspx.designer.cs">
+      <DependentUpon>Define_Custom_Internal_Links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Media_Types\Select_Screen_or_Print_Media_Type.aspx.cs">
+      <DependentUpon>Select_Screen_or_Print_Media_Type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Media_Types\Select_Screen_or_Print_Media_Type.aspx.designer.cs">
+      <DependentUpon>Select_Screen_or_Print_Media_Type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Merge_Multiple_HTML.aspx.cs">
+      <DependentUpon>Merge_Multiple_HTML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Merge_Multiple_HTML.aspx.designer.cs">
+      <DependentUpon>Merge_Multiple_HTML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Merge_With_Existing_PDF.aspx.cs">
+      <DependentUpon>Merge_With_Existing_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Merge_With_Existing_PDF.aspx.designer.cs">
+      <DependentUpon>Merge_With_Existing_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_Inside_HTML_Elements_Using_API.aspx.cs">
+      <DependentUpon>Avoid_Page_Breaks_Inside_HTML_Elements_Using_API.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_Inside_HTML_Elements_Using_API.aspx.designer.cs">
+      <DependentUpon>Avoid_Page_Breaks_Inside_HTML_Elements_Using_API.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_Inside_HTML_Elements_Using_CSS.aspx.cs">
+      <DependentUpon>Avoid_Page_Breaks_Inside_HTML_Elements_Using_CSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_Inside_HTML_Elements_Using_CSS.aspx.designer.cs">
+      <DependentUpon>Avoid_Page_Breaks_Inside_HTML_Elements_Using_CSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_Inside_Images_Using_API.aspx.cs">
+      <DependentUpon>Avoid_Page_Breaks_Inside_Images_Using_API.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Avoid_Page_Breaks_Inside_Images_Using_API.aspx.designer.cs">
+      <DependentUpon>Avoid_Page_Breaks_Inside_Images_Using_API.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_Before_After_Using_API.aspx.cs">
+      <DependentUpon>Insert_Page_Breaks_Before_After_Using_API.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_Before_After_Using_API.aspx.designer.cs">
+      <DependentUpon>Insert_Page_Breaks_Before_After_Using_API.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_Before_After_Using_CSS.aspx.cs">
+      <DependentUpon>Insert_Page_Breaks_Before_After_Using_CSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Page_Breaks\Insert_Page_Breaks_Before_After_Using_CSS.aspx.designer.cs">
+      <DependentUpon>Insert_Page_Breaks_Before_After_Using_CSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Partially_Convert_HTML.aspx.cs">
+      <DependentUpon>Partially_Convert_HTML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Partially_Convert_HTML.aspx.designer.cs">
+      <DependentUpon>Partially_Convert_HTML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Actions\Execute_JavaScript_Button_Clicked.aspx.cs">
+      <DependentUpon>Execute_JavaScript_Button_Clicked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Actions\Execute_JavaScript_Button_Clicked.aspx.designer.cs">
+      <DependentUpon>Execute_JavaScript_Button_Clicked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Actions\Execute_JavaScript_Open_Action.aspx.cs">
+      <DependentUpon>Execute_JavaScript_Open_Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Actions\Execute_JavaScript_Open_Action.aspx.designer.cs">
+      <DependentUpon>Execute_JavaScript_Open_Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Actions\Go_To_Page_Open_Action.aspx.cs">
+      <DependentUpon>Go_To_Page_Open_Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Actions\Go_To_Page_Open_Action.aspx.designer.cs">
+      <DependentUpon>Go_To_Page_Open_Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Color_Spaces\Create_GrayScale_CMYK.aspx.cs">
+      <DependentUpon>Create_GrayScale_CMYK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Color_Spaces\Create_GrayScale_CMYK.aspx.designer.cs">
+      <DependentUpon>Create_GrayScale_CMYK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Forms\Auto_Create_PDF_Forms.aspx.cs">
+      <DependentUpon>Auto_Create_PDF_Forms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Forms\Auto_Create_PDF_Forms.aspx.designer.cs">
+      <DependentUpon>Auto_Create_PDF_Forms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Forms\Define_in_HTML_PDF_Form_Fields.aspx.cs">
+      <DependentUpon>Define_in_HTML_PDF_Form_Fields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Forms\Define_in_HTML_PDF_Form_Fields.aspx.designer.cs">
+      <DependentUpon>Define_in_HTML_PDF_Form_Fields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Security\Digital_Signatures.aspx.cs">
+      <DependentUpon>Digital_Signatures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Security\Digital_Signatures.aspx.designer.cs">
+      <DependentUpon>Digital_Signatures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Security\PDF_Permissions_and_Password.aspx.cs">
+      <DependentUpon>PDF_Permissions_and_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Security\PDF_Permissions_and_Password.aspx.designer.cs">
+      <DependentUpon>PDF_Permissions_and_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Standards\Create_PDF_A_and_PDF_X_Description.aspx.cs">
+      <DependentUpon>Create_PDF_A_and_PDF_X_Description.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Standards\Create_PDF_A_and_PDF_X_Description.aspx.designer.cs">
+      <DependentUpon>Create_PDF_A_and_PDF_X_Description.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Viewer_Preferences\Set_Initial_Zoom_Level.aspx.cs">
+      <DependentUpon>Set_Initial_Zoom_Level.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Viewer_Preferences\Set_Initial_Zoom_Level.aspx.designer.cs">
+      <DependentUpon>Set_Initial_Zoom_Level.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Viewer_Preferences\Set_Viewer_Preferences.aspx.cs">
+      <DependentUpon>Set_Viewer_Preferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\PDF_Viewer_Preferences\Set_Viewer_Preferences.aspx.designer.cs">
+      <DependentUpon>Set_Viewer_Preferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Repeat_HTML_Table_Header_Footer.aspx.cs">
+      <DependentUpon>Repeat_HTML_Table_Header_Footer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Repeat_HTML_Table_Header_Footer.aspx.designer.cs">
+      <DependentUpon>Repeat_HTML_Table_Header_Footer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Table_of_Contents\Auto_Create_Table_of_Contents.aspx.cs">
+      <DependentUpon>Auto_Create_Table_of_Contents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Table_of_Contents\Auto_Create_Table_of_Contents.aspx.designer.cs">
+      <DependentUpon>Auto_Create_Table_of_Contents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Table_of_Contents\Define_in_HTML_Table_of_Contents_Items.aspx.cs">
+      <DependentUpon>Define_in_HTML_Table_of_Contents_Items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Table_of_Contents\Define_in_HTML_Table_of_Contents_Items.aspx.designer.cs">
+      <DependentUpon>Define_in_HTML_Table_of_Contents_Items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Text_Notes\Create_Text_Notes.aspx.cs">
+      <DependentUpon>Create_Text_Notes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Text_Notes\Create_Text_Notes.aspx.designer.cs">
+      <DependentUpon>Create_Text_Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Triggering_Modes\Conversion_Triggering_Modes.aspx.cs">
+      <DependentUpon>Conversion_Triggering_Modes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Triggering_Modes\Conversion_Triggering_Modes.aspx.designer.cs">
+      <DependentUpon>Conversion_Triggering_Modes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\URI_Links\Convert_URI_Links_to_PDF.aspx.cs">
+      <DependentUpon>Convert_URI_Links_to_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\URI_Links\Convert_URI_Links_to_PDF.aspx.designer.cs">
+      <DependentUpon>Convert_URI_Links_to_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\URI_Links\Define_Custom_URI_Links.aspx.cs">
+      <DependentUpon>Define_Custom_URI_Links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\URI_Links\Define_Custom_URI_Links.aspx.designer.cs">
+      <DependentUpon>Define_Custom_URI_Links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Watermarks_Stamps\Add_Watermarks_Stamps.aspx.cs">
+      <DependentUpon>Add_Watermarks_Stamps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTML_to_PDF\Watermarks_Stamps\Add_Watermarks_Stamps.aspx.designer.cs">
+      <DependentUpon>Add_Watermarks_Stamps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Bookmarks.aspx.cs">
+      <DependentUpon>Bookmarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Bookmarks.aspx.designer.cs">
+      <DependentUpon>Bookmarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Create_PDF_Documents.aspx.cs">
+      <DependentUpon>Create_PDF_Documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Create_PDF_Documents.aspx.designer.cs">
+      <DependentUpon>Create_PDF_Documents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\File_Attachments.aspx.cs">
+      <DependentUpon>File_Attachments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\File_Attachments.aspx.designer.cs">
+      <DependentUpon>File_Attachments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Graphic_Elements.aspx.cs">
+      <DependentUpon>Graphic_Elements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Graphic_Elements.aspx.designer.cs">
+      <DependentUpon>Graphic_Elements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Headers_and_Footers\Header_Footer_In_External_PDF.aspx.cs">
+      <DependentUpon>Header_Footer_In_External_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Headers_and_Footers\Header_Footer_In_External_PDF.aspx.designer.cs">
+      <DependentUpon>Header_Footer_In_External_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Headers_and_Footers\HTML_in_Header_Footer.aspx.cs">
+      <DependentUpon>HTML_in_Header_Footer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Headers_and_Footers\HTML_in_Header_Footer.aspx.designer.cs">
+      <DependentUpon>HTML_in_Header_Footer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Headers_and_Footers\Page_Numbers_in_HTML.aspx.cs">
+      <DependentUpon>Page_Numbers_in_HTML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Headers_and_Footers\Page_Numbers_in_HTML.aspx.designer.cs">
+      <DependentUpon>Page_Numbers_in_HTML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\HTML_to_Image_Elements.aspx.cs">
+      <DependentUpon>HTML_to_Image_Elements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\HTML_to_Image_Elements.aspx.designer.cs">
+      <DependentUpon>HTML_to_Image_Elements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\HTML_to_PDF_Elements.aspx.cs">
+      <DependentUpon>HTML_to_PDF_Elements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\HTML_to_PDF_Elements.aspx.designer.cs">
+      <DependentUpon>HTML_to_PDF_Elements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Image_Elements.aspx.cs">
+      <DependentUpon>Image_Elements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Image_Elements.aspx.designer.cs">
+      <DependentUpon>Image_Elements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Internal_Links.aspx.cs">
+      <DependentUpon>Internal_Links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Internal_Links.aspx.designer.cs">
+      <DependentUpon>Internal_Links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Actions\Execute_JavaScript_Button_Clicked.aspx.cs">
+      <DependentUpon>Execute_JavaScript_Button_Clicked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Actions\Execute_JavaScript_Button_Clicked.aspx.designer.cs">
+      <DependentUpon>Execute_JavaScript_Button_Clicked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Actions\Execute_JavaScript_Open_Action.aspx.cs">
+      <DependentUpon>Execute_JavaScript_Open_Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Actions\Execute_JavaScript_Open_Action.aspx.designer.cs">
+      <DependentUpon>Execute_JavaScript_Open_Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Actions\Go_To_Page_Open_Action.aspx.cs">
+      <DependentUpon>Go_To_Page_Open_Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Actions\Go_To_Page_Open_Action.aspx.designer.cs">
+      <DependentUpon>Go_To_Page_Open_Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Forms.aspx.cs">
+      <DependentUpon>PDF_Forms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Forms.aspx.designer.cs">
+      <DependentUpon>PDF_Forms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Security\Digital_Signatures.aspx.cs">
+      <DependentUpon>Digital_Signatures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Security\Digital_Signatures.aspx.designer.cs">
+      <DependentUpon>Digital_Signatures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Security\PDF_Permissions_and_Password.aspx.cs">
+      <DependentUpon>PDF_Permissions_and_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Security\PDF_Permissions_and_Password.aspx.designer.cs">
+      <DependentUpon>PDF_Permissions_and_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Viewer_Preferences\Set_Initial_Zoom_Level.aspx.cs">
+      <DependentUpon>Set_Initial_Zoom_Level.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Viewer_Preferences\Set_Initial_Zoom_Level.aspx.designer.cs">
+      <DependentUpon>Set_Initial_Zoom_Level.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Viewer_Preferences\Set_Viewer_Preferences.aspx.cs">
+      <DependentUpon>Set_Viewer_Preferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\PDF_Viewer_Preferences\Set_Viewer_Preferences.aspx.designer.cs">
+      <DependentUpon>Set_Viewer_Preferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Text_Elements.aspx.cs">
+      <DependentUpon>Text_Elements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Text_Elements.aspx.designer.cs">
+      <DependentUpon>Text_Elements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\Text_Notes.aspx.cs">
+      <DependentUpon>Text_Notes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\Text_Notes.aspx.designer.cs">
+      <DependentUpon>Text_Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator\URI_Links.aspx.cs">
+      <DependentUpon>URI_Links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator\URI_Links.aspx.designer.cs">
+      <DependentUpon>URI_Links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Editor\Merge_PDF.aspx.cs">
+      <DependentUpon>Merge_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Editor\Merge_PDF.aspx.designer.cs">
+      <DependentUpon>Merge_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Editor\Stamp_PDF.aspx.cs">
+      <DependentUpon>Stamp_PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Editor\Stamp_PDF.aspx.designer.cs">
+      <DependentUpon>Stamp_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DemoAppFiles\Input\Code_Samples\CSharp\AspNet\HTML_to_PDF\PDF_Pages_Back\" />
+    <Folder Include="DemoAppFiles\Output\HTML_to_Image\" />
+    <Folder Include="DemoAppFiles\Output\HTML_to_PDF\" />
+    <Folder Include="DemoAppFiles\Output\PDF_Creator\" />
+    <Folder Include="DemoAppFiles\Output\PDF_Editor\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65011</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65020/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

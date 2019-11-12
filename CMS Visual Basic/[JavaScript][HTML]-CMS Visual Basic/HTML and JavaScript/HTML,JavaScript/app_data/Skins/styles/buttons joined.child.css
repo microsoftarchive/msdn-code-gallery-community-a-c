@@ -1,0 +1,5 @@
+.Button, input[type='submit'], input[type='reset'], input[type='button'], .m0
+{
+  margin: 0px;
+	padding: 10px;
+}

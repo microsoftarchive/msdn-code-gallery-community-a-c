@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Win10WebAPIClient.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Win10WebAPIClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBlock FontSize="30" HorizontalAlignment="Center" FontWeight="Bold">Windows 10 client for ASP.NET Web API</TextBlock>
+                <TextBlock HorizontalAlignment="Center" FontStyle="Italic">This application would guide you through different stages of performing CRUDs in ASP.NET 5's Web API.</TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Margin="10, 0, 10, 0">
+                <TextBlock FontSize="23" FontWeight="Bold">Create User</TextBlock>
+                <TextBlock Margin="0, 10, 0, 0">Creating a new user is as simple as adding a new record to the currently active data source of ours. <Run FontWeight="Bold">C = create in CRUD</Run>.</TextBlock>
+                <Button Margin="0, 10, 0, 0" Click="Button_Click">Create</Button>
+                <TextBlock FontSize="23" FontWeight="Bold">Read User</TextBlock>
+                <TextBlock Margin="0, 10, 0, 0">Reading or viewing a user is similar to extracting a record and viewing its different aspects. <Run FontWeight="Bold">R = read in CRUD</Run>.</TextBlock>
+                <Button Margin="0, 10, 0, 0" Click="Button_Click">Read</Button>
+                <TextBlock FontSize="23" FontWeight="Bold">Update User</TextBlock>
+                <TextBlock Margin="0, 10, 0, 0">Updating a user is similar to editting a record. You update fields based on an identifier. <Run FontStyle="Italic">In our case that identifier is an </Run><Run FontFamily="Consolas" FontStyle="Italic"> ID </Run> <Run FontStyle="Italic"> field.</Run><Run FontWeight="Bold">U = update in CRUD</Run>.</TextBlock>
+                <Button Margin="0, 10, 0, 0" Click="Button_Click">Update</Button>
+                <TextBlock FontSize="23" FontWeight="Bold">Delete User</TextBlock>
+                <TextBlock Margin="0, 10, 0, 0">Deleting the user is just to remove that record permanently.<Run FontWeight="Bold">D = delete in CRUD</Run>.</TextBlock>
+                <Button Margin="0, 10, 0, 0" Click="Button_Click">Delete</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

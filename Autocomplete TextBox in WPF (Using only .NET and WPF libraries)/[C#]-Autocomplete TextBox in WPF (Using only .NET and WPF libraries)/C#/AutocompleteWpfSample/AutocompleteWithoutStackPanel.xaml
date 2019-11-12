@@ -1,0 +1,12 @@
+﻿<Window x:Class="AutocompleteWpfSample.AutocompleteWithoutStackPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AutocompleteWithoutStackPanel" Height="300" Width="300"
+        FontSize="13">
+    <Grid>
+        <TextBlock Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center">
+            Autocomplete in <Span FontWeight="Bold">WPF</Span> without <Span FontFamily="Consolas" Foreground="LightBlue">StackPanel</Span>
+        </TextBlock>
+        <TextBox Name="textBox" KeyUp="textBox_KeyUp" Width="200" Height="25" Padding="2, 3, 2, 3" />
+    </Grid>
+</Window>

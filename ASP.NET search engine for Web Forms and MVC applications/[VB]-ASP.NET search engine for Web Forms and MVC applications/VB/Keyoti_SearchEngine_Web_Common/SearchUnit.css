@@ -1,0 +1,564 @@
+.sew_previewResultContent
+{
+	display:none; 
+	overflow: auto; 
+	height: 150px; 
+	border: 1px solid #dddddd; 
+	background-color:#efefef;
+    padding:4px;
+    margin:2px;
+ }
+        
+    
+
+.sew_results { FLOAT: right; COLOR: #888888; padding-right:5px;}
+.sew_suggestion { FLOAT: left }
+
+.sew_ac_results {
+	padding: 0px;
+	border: 1px solid WindowFrame;
+	background-color: Window;
+	overflow: hidden;
+	Z-INDEX: 999;
+}
+
+.sew_ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.sew_ac_results iframe {
+	display:none;/*IE5*/
+	display/**/:block;/*IE5*/
+	position:absolute;
+	top:0;
+	border: none;
+	left:0;
+	z-index:-1;
+	/*filter:mask(); causes iframe to be black*/
+	width:3000px;
+	height:3000px;
+}
+
+.sew_ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	font: menu;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.sew_ac_loading {
+/*	background : Window url('./indicator.gif') right center no-repeat;*/
+}
+
+.sew_ac_over, .sew_ac_over .sew_suggestion, .sew_ac_over .sew_results {
+	background-color: Highlight;
+	color: HighlightText;
+}
+
+
+.sew_ajax_loader {
+           /* border:     1px solid red;*/
+            margin-bottom: -2000px;
+            display:    none;
+            position:   absolute;
+            z-index:    1000;
+            text-align:center;
+            top:        250px;
+            left:       0;
+            height:     0px;
+            width:      0px;
+            /*background: rgba( 255, 255, 255, .75 ) */
+                        /*url('scripts/ajax-result-loader.gif') 
+                        50% 50% 
+                        no-repeat;*/
+        }
+
+        .sew_ajax_loader_backer
+        {
+            margin-bottom: -2000px;
+            /*border:     1px solid red;*/
+            display:    none;
+            position:   absolute;
+            z-index:    1000;
+            text-align: center;
+            top:        0;
+            left:       0;
+            height:     500px;
+            width:      0px;
+         /*   background: rgba( 255, 255, 255, .66 ) ;*/
+        }
+
+        .sew_ajax_error {
+            border: 5px solid #DDD;
+            display:    none;
+            position:   absolute;
+            z-index:    1000;
+            text-align:left;
+            top:        40%;
+            left:       40%;
+            height:     300px;
+            width:      70%;
+            background: rgba( 255, 255, 255, 1 ) ;
+                       
+        }
+
+        .sew_ajax_error_footer
+        {
+            text-align:center;
+        }
+
+        .sew_errorBody
+        {
+            height:200px;
+            
+        }
+
+        .sew_errorTitle
+        {
+            display:block;
+            border-bottom: 1px solid #BBB;
+            margin:2px;
+            padding:4px;
+            background-color:#EEE;
+            font-weight:900;
+        }
+        .sew_errorBody
+        {
+            padding:5px;
+            font-size:smaller;
+        }
+
+        
+        .sew_watermark
+        {
+            color:#888;
+            
+        }
+        
+        /* Anytime the body has the loading class, our
+           modal element will be visible */
+        #sew_searchResultControl.loading .sew_ajax_loader, #sew_searchResultControl.loading .sew_ajax_loader_backer {
+            display: inline-block;
+        }
+
+        #sew_searchResultControl.error .sew_ajax_error {
+            display: inline-block;
+        }
+
+        #sew_searchResultControl
+        {
+            /*border: 1px solid grey;*/
+            height:500px;
+            max-width: 100%;
+            overflow-y:auto;
+            position:relative;/*by making this relative the loader and error boxes are absolute RELATIVE TO THIS*/
+        }
+
+        .sew_header
+        {
+            background-color: #CCD7EC;
+            margin: 5px;
+            padding:4px;
+            border-left:1px solid gray;
+            border-right:1px solid gray;
+            border-top:1px solid gray;
+            text-align: left;
+        }
+
+        #sew_didYouMean
+        {
+                        padding:10px;
+        }
+
+        .sew_footer
+        {
+            background-color: #CCD7EC;
+            margin: 5px;
+            padding:4px;
+            border-left:1px solid gray;
+            border-right:1px solid gray;
+            border-bottom:1px solid gray;
+            text-align: left;
+        }
+        .sew_footer #previousPageLink
+        {
+            display:inline-block;
+            width: 80px;
+            text-align: center;
+        }
+        .sew_footer #nextPageLink
+        {
+            display:inline-block;
+            width: 80px;
+            text-align: center;
+        }
+        .sew_footer #pageLinksBlock
+        {
+            display:inline-block;
+            width: 150px;
+            text-align: center;
+        }
+
+        .sew_resultItem
+        {
+            margin: 20px;
+        }
+        .sew_resultItemLink
+        {
+            display:block;
+        }
+        .sew_resultItemSummary
+        {
+            display:block;
+            float:left;
+            padding-left:12px;
+        }
+        .sew_previewResultWrapper
+        {
+            display:block;
+            float:right;
+        }
+        .sew_previewResultWrapper img
+        {
+            display:block;
+            float:right;
+        }
+        .sew_previewResultContent
+        {
+            display:none;
+          /*  width:800px;*/
+        }
+        .sew_resultItemURL
+        {
+            display:block;
+            font-size:.75em;
+            color: green;
+        }
+        .sew_location
+        {
+            display:block;
+            font-size:.75em;
+        }
+
+        .sew_locationOption, .sew_contentOption
+        {
+            display:inline;
+        }
+
+.sew_locationOption label
+{
+    display:block;
+}
+
+.sew_contentOption label
+{
+    display:block;
+}
+
+        #sew_locationChooserControl, #sew_contentChooserControl
+        {
+            display:inline;
+            font-size:.75em;
+            visibility: hidden;
+        }
+
+        .sew_resultHighlight, .sew_previewHighlight
+        {
+            background-color: #ff8;
+        }
+
+        .sew_keywordHitMap
+        {
+            font-size:smaller;
+        }
+
+.sew_searchCloudItem
+{
+    padding-right:5px;
+    display: inline-block;
+}
+    .sew_searchCloudItem a
+    {
+        text-decoration:none;
+    }
+
+/* Main Style Sheet for jQuery UI date picker */
+#ui-datepicker-div, .ui-datepicker-inline {
+	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 0;
+	margin: 0;
+	background: #ddd;
+	width: 185px;
+}
+#ui-datepicker-div {
+	display: none;
+	border: 1px solid #777;
+	z-index: 100; /*must have*/
+}
+.ui-datepicker-inline {
+	float: left;
+	display: block;
+	border: 0;
+}
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-dialog {
+	padding: 5px !important;
+	border: 4px ridge #ddd !important;
+}
+.ui-datepicker-disabled {
+	position: absolute;
+	z-index: 100;
+	background-color: white;
+	opacity: 0.5;
+}
+button.ui-datepicker-trigger {
+	width: 25px;
+}
+img.ui-datepicker-trigger {
+	margin: 2px;
+	vertical-align: middle;
+}
+.ui-datepicker-prompt {
+	float: left;
+	padding: 2px;
+	background: #ddd;
+	color: #000;
+}
+* html .ui-datepicker-prompt {
+	width: 185px;
+}
+.ui-datepicker-control, .ui-datepicker-links, .ui-datepicker-header, .ui-datepicker {
+	clear: both;
+	float: left;
+	width: 100%;
+	color: #000;
+}
+.ui-datepicker-control {
+	background: #400;
+	padding: 2px 0px;
+}
+.ui-datepicker-links {
+	background: #000;
+	padding: 2px 0px;
+}
+.ui-datepicker-control, .ui-datepicker-links {
+	font-weight: bold;
+	font-size: 80%;
+}
+.ui-datepicker-links label { /* disabled links */
+	padding: 2px 5px;
+	color: #888;
+}
+ .ui-datepicker-prev {
+	float: left;
+	width: 34%;
+        font-size: 1.5em;
+    font-weight:bold;
+    vertical-align:middle;
+}
+.ui-datepicker-clear {
+	float: left;
+	width: 34%;
+
+}
+.ui-datepicker-rtl .ui-datepicker-clear, .ui-datepicker-rtl .ui-datepicker-prev {
+	float: right;
+	text-align: right;
+}
+.ui-datepicker-current {
+	float: left;
+	width: 30%;
+	text-align: center;
+    vertical-align:middle;
+    line-height: 2em;
+}
+.ui-datepicker-next {
+	float: right;
+	width: 34%;
+	text-align: right;
+    font-size: 1.5em;
+    font-weight:bold;
+    vertical-align:middle;
+}
+
+.ui-datepicker-close {
+	float: right;
+	width: 34%;
+	text-align: right;
+
+}
+.ui-datepicker-rtl .ui-datepicker-close, .ui-datepicker-rtl .ui-datepicker-next {
+	float: left;
+	text-align: left;
+        
+}
+.ui-datepicker-header {
+	padding: 1px 0 3px;
+	/*background: #777;*/
+	text-align: center;
+	font-weight: bold;
+	/*height: 1.3em;*/
+    background: #f0f0f0;
+	background: -moz-linear-gradient(top,  #f0f0f0 0%, #EEE 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#EEE));
+	background: -webkit-linear-gradient(top,  #f0f0f0 0%,#EEE 100%);
+	background: -o-linear-gradient(top,  #f0f0f0 0%,#EEE 100%);
+	background: -ms-linear-gradient(top,  #f0f0f0 0%,#EEE 100%);
+	background: linear-gradient(top,  #f0f0f0 0%,#EEE 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#EEE',GradientType=0 );
+}
+.ui-datepicker-header select {
+	background: transparent;
+	color: #000;
+    border: none;
+	font-weight: bold;
+    font-family: 'Segoe UI', Arial, Verdana;
+    font-size: .99em;
+   /* height:30px;*/
+   
+}
+.ui-datepicker {
+	background: #ccc;
+	text-align: center;
+	font-size: 100%;
+}
+.ui-datepicker a {
+	display: block;
+	width: 100%;
+}
+.ui-datepicker-title-row {
+	background: #FDFDFD;
+}
+.ui-datepicker-days-row {
+	/*background: #eee;*/
+	color: #666;
+    background: #f3f3f3;
+	background: -moz-linear-gradient(top,  #f3f3f3 0%, #dedede 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#dedede));
+	background: -webkit-linear-gradient(top,  #f3f3f3 0%,#dedede 100%);
+	background: -o-linear-gradient(top,  #f3f3f3 0%,#dedede 100%);
+	background: -ms-linear-gradient(top,  #f3f3f3 0%,#dedede 100%);
+	background: linear-gradient(top,  #f3f3f3 0%,#dedede 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#dedede',GradientType=0 );
+}
+.ui-datepicker-week-col {
+	background: #777;
+	color: #fff;
+}
+.ui-datepicker-days-cell {
+	color: #000;
+	border: 2px solid #FFF;
+    padding-right:2px;
+    margin:5px;
+}
+.ui-datepicker-days-cell a{
+	display: block;
+    border:1px solid #bbb;
+
+}
+.ui-datepicker-week-end-cell {
+background: #f3f3f3;
+	background: -moz-linear-gradient(top,  #f3f3f3 0%, #dedede 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#dedede));
+	background: -webkit-linear-gradient(top,  #f3f3f3 0%,#dedede 100%);
+	background: -o-linear-gradient(top,  #f3f3f3 0%,#dedede 100%);
+	background: -ms-linear-gradient(top,  #f3f3f3 0%,#dedede 100%);
+	background: linear-gradient(top,  #f3f3f3 0%,#dedede 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#dedede',GradientType=0 );
+}
+.ui-datepicker-title-row .ui-datepicker-week-end-cell {
+	background: #FFF;
+}
+
+.ui-datepicker-days-cell-over  {
+	background: #ccc;
+	
+}
+.ui-datepicker-days-cell-over a {
+	/*background: #fff;
+	border: 1px solid #777;*/
+    border:1px solid #777;
+}
+.ui-datepicker-unselectable {
+	color: #888;
+}
+.ui-datepicker-today {
+	background: #fcc !important;
+}
+.ui-datepicker-current-day {
+	background: #999 !important;
+}
+.ui-datepicker-status {
+	background: #ddd;
+	width: 100%;
+	font-size: 80%;
+	text-align: center;
+}
+
+/* ________ Datepicker Links _______
+
+** Reset link properties and then override them with !important */
+#ui-datepicker-div a, .ui-datepicker-inline a {
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	background: none;
+	color: #000;
+}
+.ui-datepicker-inline .ui-datepicker-links a {
+	padding: 0 5px !important;
+}
+.ui-datepicker-control a, .ui-datepicker-links a {
+	padding: 2px 5px !important;
+	color: #eee !important;
+}
+.ui-datepicker-title-row a {
+	color: #eee !important;
+}
+.ui-datepicker-control a:hover {
+	background: #fdd !important;
+	color: #333 !important;
+}
+.ui-datepicker-links a:hover, .ui-datepicker-title-row a:hover {
+	background: #ddd !important;
+	color: #333 !important;
+}
+
+/* ___________ MULTIPLE MONTHS _________*/
+
+.ui-datepicker-multi .ui-datepicker {
+	border: 1px solid #777;
+}
+.ui-datepicker-one-month {
+	float: left;
+	width: 185px;
+}
+.ui-datepicker-new-row {
+	clear: left;
+}
+
+/* ___________ IE6 IFRAME FIX ________ */
+
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
+

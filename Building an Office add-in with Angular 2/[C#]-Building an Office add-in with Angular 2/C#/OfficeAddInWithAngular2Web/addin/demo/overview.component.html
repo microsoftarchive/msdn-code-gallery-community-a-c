@@ -1,0 +1,21 @@
+﻿<div class="ms-Grid">
+    <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12">
+            <h2 class="ms-font-xxl">{{title}}</h2>
+        </div>
+    </div>
+    <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12">
+            <p>{{description}}</p>
+        </div>
+    </div>
+    <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12">
+            <ul class="ms-List">
+                <li *ngFor="let detail of details">
+                    <a class="ms-link" [routerLink]="[detail.route]">{{detail.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

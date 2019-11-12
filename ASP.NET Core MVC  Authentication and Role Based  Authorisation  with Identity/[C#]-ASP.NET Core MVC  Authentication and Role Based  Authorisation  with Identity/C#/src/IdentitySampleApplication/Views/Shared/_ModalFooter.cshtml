@@ -1,0 +1,10 @@
+﻿@model IdentitySampleApplication.Models.ModalFooter
+
+<div class="modal-footer">
+    <button data-dismiss="modal" id="@Model.CancelButtonID" class="btn btn-default" type="button">@Model.CancelButtonText</button>
+    @if (!Model.OnlyCancelButton)
+    {
+        <button class="btn btn-success" id="@Model.SubmitButtonID" type="submit">            
+               @Model.SubmitButtonText</button>
+    }
+</div>

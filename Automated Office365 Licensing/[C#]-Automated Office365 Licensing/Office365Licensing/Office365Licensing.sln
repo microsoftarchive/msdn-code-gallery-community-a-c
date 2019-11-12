@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Office365Licensing", "Office365Licensing\Office365Licensing.csproj", "{C35AF4D3-C014-43F6-B4D0-3171A8473B1B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://itexchange.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Office365Licensing\\Office365Licensing.csproj
+		SccProjectName1 = Office365Licensing
+		SccLocalPath1 = Office365Licensing
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C35AF4D3-C014-43F6-B4D0-3171A8473B1B}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{C35AF4D3-C014-43F6-B4D0-3171A8473B1B}.Debug|Any CPU.Build.0 = Debug|x64
+		{C35AF4D3-C014-43F6-B4D0-3171A8473B1B}.Debug|x64.ActiveCfg = Debug|x64
+		{C35AF4D3-C014-43F6-B4D0-3171A8473B1B}.Debug|x64.Build.0 = Debug|x64
+		{C35AF4D3-C014-43F6-B4D0-3171A8473B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C35AF4D3-C014-43F6-B4D0-3171A8473B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C35AF4D3-C014-43F6-B4D0-3171A8473B1B}.Release|x64.ActiveCfg = Release|x64
+		{C35AF4D3-C014-43F6-B4D0-3171A8473B1B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

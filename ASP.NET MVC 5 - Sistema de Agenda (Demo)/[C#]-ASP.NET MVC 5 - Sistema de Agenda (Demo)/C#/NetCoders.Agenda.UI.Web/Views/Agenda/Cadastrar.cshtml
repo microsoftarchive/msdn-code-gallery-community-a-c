@@ -1,0 +1,57 @@
+﻿@model NetCoders.Agenda.UI.Web.Models.AgendaVM
+@{
+    ViewBag.Title = "Cadastrar";
+    Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
+}
+
+<div>
+    @if (TempData["erro"] != null)
+    {
+        @Html.Partial("_PartialMsgErro");
+    }
+</div>
+
+@using (Html.BeginForm("Inserir", "Agenda", FormMethod.Post, new { @class = "form-horizontal", @role = "form" }))
+{
+    <fieldset>
+        <legend>Lançar novo evento</legend>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Agenda.Titulo, new { @class = "col-sm-2 control-label", @for = "titulo" })
+            <div class="col-sm-6">
+                @Html.ValidationMessageFor(m => m.Agenda.Titulo)
+                @Html.TextBoxFor(m => m.Agenda.Titulo, new { @class = "form-control", @id = "titulo", @placeholder = "Informe titulo..." })
+            </div>
+
+            @Html.LabelFor(m => m.Agenda.Data, new { @class = "col-sm-2 control-label", @for = "data" })
+            <div class="col-sm-2">
+                @Html.ValidationMessageFor(m => m.Agenda.Data)
+                @Html.TextBoxFor(m => m.Agenda.Data, new { @class = "form-control", @id = "data", @placeholder = "00/00/0000" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Agenda.DescricaoSimples, new { @class = "col-sm-2 control-label", @for = "descricaoSimples" })
+            <div class="col-sm-10">
+                @Html.ValidationMessageFor(m => m.Agenda.DescricaoSimples)
+                @Html.TextBoxFor(m => m.Agenda.DescricaoSimples, new { @class = "form-control", @id = "descricaoSimples", @placeholder = "Informe descrição simples..." })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Agenda.DescricaoCompleta, new { @class = "col-sm-2 control-label", @for = "descricaoCompleta" })
+            <div class="col-sm-10">
+                @Html.ValidationMessageFor(m => m.Agenda.DescricaoCompleta)
+                @Html.TextAreaFor(m => m.Agenda.DescricaoCompleta, new { @class = "form-control", @id = "descricaoCompleta", @placeholder = "Informe descrição completa..." })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">Adicionar Evento</button>
+                @Html.ActionLink("Cancelar", "Listar", "Agenda", new { @class = "btn btn-danger" })
+            </div>
+        </div>
+    </fieldset>
+
+}

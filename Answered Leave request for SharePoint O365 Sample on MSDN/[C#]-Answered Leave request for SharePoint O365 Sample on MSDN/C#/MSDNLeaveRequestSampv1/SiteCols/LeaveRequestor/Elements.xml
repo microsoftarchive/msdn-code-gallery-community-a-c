@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{784b6ef3-9605-4229-a292-8ee8cdb19092}"
+       Name="LeaveRequestor"
+       DisplayName="Leave Requestor"
+       StaticName="LeaveRequestor"
+       Type="User"
+       UserSelectionMode="PeopleOnly"
+       ShowField="ImnName"
+       Description="The person who will be taking this time off work"
+       Required="TRUE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp">
+  </Field>
+</Elements>

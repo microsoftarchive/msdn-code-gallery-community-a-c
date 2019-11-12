@@ -1,0 +1,135 @@
+.crayon-theme-classic {
+	background: rgb(253, 253, 253) !important; border: 1px solid rgb(153, 153, 153) !important; text-shadow: none !important;
+}
+.crayon-theme-classic-inline {
+	background: rgb(250, 250, 250) !important; border: 1px solid rgb(221, 221, 221) !important;
+}
+.crayon-theme-classic .crayon-table .crayon-nums {
+	background: rgb(223, 239, 255) !important; color: rgb(84, 153, 222) !important;
+}
+.crayon-theme-classic *::selection {
+	background: none !important;
+}
+.crayon-theme-classic .crayon-code *::selection {
+	background: rgb(221, 238, 255) !important; color: rgb(49, 107, 165) !important;
+}
+.crayon-theme-classic .crayon-striped-line {
+	background: rgb(247, 247, 247) !important;
+}
+.crayon-theme-classic .crayon-striped-num {
+	background: rgb(200, 225, 250) !important; color: rgb(49, 124, 197) !important;
+}
+.crayon-theme-classic .crayon-marked-line {
+	background: rgb(255, 254, 226) !important; border-width: 1px !important; border-color: rgb(233, 229, 121) !important;
+}
+.crayon-theme-classic .crayon-marked-num {
+	background: rgb(179, 211, 244) !important; border-width: 1px !important; border-color: rgb(89, 153, 217) !important; color: rgb(21, 97, 172) !important;
+}
+.crayon-theme-classic .crayon-striped-line.crayon-marked-line {
+	background: rgb(250, 248, 209) !important;
+}
+.crayon-theme-classic .crayon-striped-num.crayon-marked-num {
+	background: rgb(158, 197, 236) !important; color: rgb(16, 83, 149) !important;
+}
+.crayon-theme-classic .crayon-top.crayon-marked-line {
+	border-top-style: solid !important;
+}
+.crayon-theme-classic .crayon-top.crayon-marked-num {
+	border-top-style: solid !important;
+}
+.crayon-theme-classic .crayon-bottom.crayon-marked-line {
+	border-bottom-style: solid !important;
+}
+.crayon-theme-classic .crayon-bottom.crayon-marked-num {
+	border-bottom-style: solid !important;
+}
+.crayon-theme-classic .crayon-info {
+	background: rgb(250, 249, 215) !important; color: rgb(126, 125, 52); border-bottom-color: rgb(177, 175, 94) !important; border-bottom-width: 1px !important; border-bottom-style: solid !important;
+}
+.crayon-theme-classic .crayon-toolbar {
+	background: rgb(221, 221, 221) !important; border-bottom-color: rgb(187, 187, 187) !important; border-bottom-width: 1px !important; border-bottom-style: solid !important;
+}
+.crayon-theme-classic .crayon-toolbar > div {
+	float: left !important;
+}
+.crayon-theme-classic .crayon-toolbar .crayon-tools {
+	float: right !important;
+}
+.crayon-theme-classic .crayon-title {
+	color: rgb(51, 51, 51) !important;
+}
+.crayon-theme-classic .crayon-language {
+	color: rgb(153, 153, 153) !important;
+}
+.crayon-theme-classic .crayon-button {
+	background-color: rgb(221, 221, 221);
+}
+.crayon-theme-classic .crayon-button:hover {
+	color: rgb(102, 102, 102); background-color: rgb(238, 238, 238);
+}
+.crayon-theme-classic .crayon-pressed.crayon-button:hover {
+	color: rgb(102, 102, 102); background-color: rgb(238, 238, 238);
+}
+.crayon-theme-classic .crayon-pressed.crayon-button {
+	color: rgb(255, 255, 255); background-color: rgb(188, 188, 188);
+}
+.crayon-theme-classic .crayon-pressed.crayon-button:active {
+	color: rgb(255, 255, 255); background-color: rgb(188, 188, 188);
+}
+.crayon-theme-classic .crayon-button:active {
+	color: rgb(255, 255, 255); background-color: rgb(188, 188, 188);
+}
+.crayon-theme-classic .crayon-pre .crayon-c {
+	color: rgb(255, 128, 0) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-s {
+	color: rgb(0, 128, 0) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-p {
+	color: rgb(184, 92, 0) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-ta {
+	color: rgb(255, 0, 0) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-k {
+	color: rgb(128, 0, 128) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-st {
+	color: rgb(128, 0, 128) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-r {
+	color: rgb(128, 0, 128) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-t {
+	color: rgb(128, 0, 128) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-m {
+	color: rgb(128, 0, 128) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-i {
+	color: rgb(0, 0, 0) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-e {
+	color: rgb(0, 78, 208) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-v {
+	color: rgb(0, 45, 122) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-cn {
+	color: rgb(206, 0, 0) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-o {
+	color: rgb(0, 111, 224) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-sy {
+	color: rgb(51, 51, 51) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-n {
+	color: rgb(102, 102, 102) !important; font-style: italic;
+}
+.crayon-theme-classic .crayon-pre .crayon-f {
+	color: rgb(153, 153, 153) !important;
+}
+.crayon-theme-classic .crayon-pre .crayon-h {
+	color: rgb(0, 111, 224) !important;
+}

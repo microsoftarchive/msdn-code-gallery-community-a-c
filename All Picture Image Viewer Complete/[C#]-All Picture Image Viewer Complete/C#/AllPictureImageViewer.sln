@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllPictureImageViewer", "AllPictureImageViewer\AllPictureImageViewer.csproj", "{7338CF6B-F0D2-4255-8FC1-F929C649C5E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUserControl", "MyUserControl\MyUserControl.csproj", "{6C14FFD7-4A4A-425A-9092-63D0FA64CA0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7338CF6B-F0D2-4255-8FC1-F929C649C5E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7338CF6B-F0D2-4255-8FC1-F929C649C5E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7338CF6B-F0D2-4255-8FC1-F929C649C5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7338CF6B-F0D2-4255-8FC1-F929C649C5E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C14FFD7-4A4A-425A-9092-63D0FA64CA0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C14FFD7-4A4A-425A-9092-63D0FA64CA0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C14FFD7-4A4A-425A-9092-63D0FA64CA0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C14FFD7-4A4A-425A-9092-63D0FA64CA0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://anotherpart.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AllPictureImageViewer\\AllPictureImageViewer.csproj
+		SccProjectName1 = AllPictureImageViewer
+		SccLocalPath1 = AllPictureImageViewer
+		SccProjectUniqueName2 = MyUserControl\\MyUserControl.csproj
+		SccProjectName2 = MyUserControl
+		SccLocalPath2 = MyUserControl
+	EndGlobalSection
+EndGlobal

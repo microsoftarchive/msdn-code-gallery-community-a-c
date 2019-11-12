@@ -1,0 +1,37 @@
+﻿<section id="dashboard-view" class="mainbar">
+    <div class="col-md-4">
+        <div class="widget worange">
+            <div data-cc-widget-header title="Add user" allow-collapse="true">
+
+            </div>
+            <div class="widget-content text-center text-info">
+                <strong class="success">{{message}}</strong>
+                <table class="table table-condensed table-striped">
+
+                    <tr>
+                        <th>First Name</th>
+                        <th><input type="text" ng-model="user.firstname" /></th>
+                    </tr>
+                    <tr>
+                        <th>Last Name</th>
+                        <th><input type="text" ng-model="user.lastname" /></th>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <th><input type="text" ng-model="user.age" /></th>
+                    </tr>
+                    <tr>
+                        <th>Location</th>
+                        <th><input type="text" ng-model="user.location" /></th>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2"><button class="btn btn-primary" type="submit" data-ng-click="save()">Save</button><button class="btn btn-primary" type="reset">Cancel</button></th>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        </div>
+</section>
+

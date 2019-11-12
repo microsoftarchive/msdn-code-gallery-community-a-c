@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "http://json-schema.org/schemas/2014-11-01/apiapp.json#",
+  "id": "AzureStorageQueueConnector",
+  "namespace": "microsoft.com",
+  "gateway": "2015-01-14",
+  "version": "1.0.0",
+  "title": "Azure Storage Queue Connector",
+  "summary": "A Sample Azure Storage Queue Connector.",
+  "author": "Sameer Chabungbam",
+  "endpoints": {
+    "apiDefinition": "/swagger/docs/v1",
+    "status": null
+  }
+}

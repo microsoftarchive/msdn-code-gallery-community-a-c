@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Type Rules</title>
+    <style type="text/css">
+        /* Set the body text family and font size both for screen and print*/
+        body
+        {
+            width: 1000px;
+            margin: 10px;
+            font-family: 'Times New Roman';
+            font-size: 18px;
+        }
+
+        /* Set the title text font size and weight both for screen and print*/
+        .title
+        {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        @media screen
+        {
+            /* Set a background color only when the HTML page is displayed on screen*/
+            body
+            {
+                background-color: aliceblue;
+            }
+
+            /* Use blue to write the text on screen*/
+            p
+            {
+                color: darkblue;
+            }
+        }
+
+        @media print
+        {
+            /* Hide images when priting*/
+            img
+            {
+                display: none;
+            }
+
+            /* Use black to write the text on screen*/
+            p
+            {
+                color: black;
+            }
+        }
+
+
+        @media screen,print
+        {
+            /* Set the paragraph text family and font size both for screen and print*/
+            p
+            {
+                font-family: 'Times New Roman';
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <span class="title">Media Type Rules</span><br />
+    <br />
+    This document have different styles when it is displayed on the screen and when it is printed.
+    You can instruct the converter to use the style you want setting its <i>MediaType</i> property.<br />
+    <br />
+    <b>The image below is visible only when the selected media type is 'screen' and is hidden when the selected media type is 'print'</b>:<br />
+    <br />
+    <img alt="Logo Image" src="img/logo.jpg" />
+    <br />
+    <br />
+    <b>The text below will be dark blue when the selected media type is 'screen' and black when the selected media type is 'print':</b>
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+        ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure 
+        dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla 
+        facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit 
+        augue duis dolore te feugait nulla facilisi.
+    </p>
+</body>
+</html>

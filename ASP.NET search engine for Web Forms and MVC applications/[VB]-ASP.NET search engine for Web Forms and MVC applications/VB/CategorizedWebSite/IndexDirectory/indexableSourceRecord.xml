@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DataSources>
+  <LastUsedID>1</LastUsedID>
+  <DataSource ID="1" type="Website" location="http://localhost:15041/CategorizedWebSite/default.htm" query="" uniqueColumn="" resultURL="" ExtensionData="" />
+</DataSources>

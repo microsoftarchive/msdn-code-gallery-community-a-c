@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Skin setup -->
+<variables>
+	<!-- Inside variables to define elements to load -->
+	<add key="ImageTopLeft" value="resources/images/logos/mir.png"/>
+	<add key="Logo" value=""/>
+	<add key="BannerAccommodations" value="resources/images/banners/accommodations_it.gif"/>
+	<add key="BannerServices" value=""/>
+	<add key="Favicon" value="resources/images/favicons/favicon4.ico"/>
+  	<add key="FolderIcons" value="48"/>
+	<add key="bgsound" value=""/>
+  	<add key="SoundOnlyAtStartSession" value="true"/>
+  	<add key="ButtonsWithIcons" value="false"/>
+	<!-- Optional variables for replace in CSS file -->
+	<add key="BackgroundColorPage" value="#ffffff"/>
+	<add key="BackgroundImage" value="resources/images/backgrounds/vanimblue.gif"/>
+	<add key="BackgroundRepeat" value="repeat-x"/>
+	<add key="FontColor" value="#000000"/>
+	<add key="FontFamily" value="arial"/>
+	<add key="FontSize" value="1em"/>
+
+	
+	<add key="BackgroundImageBox" value=""/>
+  	<add key="BackgroundColorBox" value="#ffffff"/>
+  	<add key="BorderColorBox" value="#de4019"/>
+  	<add key="BackgroundColorButton" value="#1f31f2"/>
+	
+	<add key="PointListMenu" value="resources/images/ListStyleImage/Blue.png"/>
+	
+	<add key="ColorLink" value="#0a0f4d"/>
+	<add key="ColorVisitedLink" value="#090e40"/>
+
+	<add key="ColorDark" value="#ffe20d"/>
+	<add key="ColorBright" value="#de4019"/>
+
+	<add key="Pattern1" value=""/>
+
+	<add key="ParRowColor" value="#e9ebfc"/><!-- Back Ground color for par box and box menu-->
+	<add key="OddRowColor" value="#e9fbfb"/><!-- Back Ground color for unpair box -->
+	<add key="QuoteColor" value="#ffffff"/><!-- Back Ground color for quote -->
+
+	<!-- Border of screen -->
+	<add key="BodyMargin" value="10px"/>
+	<add key="BodyBorderWidth" value="0px"/>
+	<add key="BodyMarginInside" value="0px"/>
+
+  <!-- Rounded element -->
+  <add key="RoundedButton" value="8px"/>
+  <add key="RoundedMenu" value="16px"/>
+  
+  <!-- shadow -->
+  <add key="shadow" value="5px 5px 15px #000000"/>
+  
+  	<!-- Menu -->
+		<add key="BorderMenu" value="2px outset"/>
+
+
+
+</variables>

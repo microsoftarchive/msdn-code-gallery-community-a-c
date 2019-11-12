@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+ <b>ng-Controller</b><br />
+    <div ng-app="angularBasic" ng-controller="InrToDollar">
+        Currency in INR:
+        <input type="number" ng-model="curinr" />
+        <br />
+        Currency in Dollar:  <input type="number" ng-model="curdollar" />
+    </div>
+    <script>
+        var my = angular.module('angularBasic', []);
+        my.controller('InrToDollar', function ($scope) {
+            $scope.curdollar = $scope.curinr * 62.27;
+        });
+    </script>
+    <br />
+<script src="~/Script/angular.min.js"></script>

@@ -1,0 +1,19 @@
+﻿
+<p>
+    Document Viewer supports wide range of document formats. Once the document is converted to a special
+    web-friendly format on first-view (done automatically in the background and the result is cached),
+    subsequent views will be instant. Document Viewer is very fast because it does not load the whole
+    document at once, it smartly loads only the pages you are currently viewing.
+</p>
+<p>
+    A document is loaded by simply setting DocumentViewer.Document property.
+    This is usually the path to the document to load.
+    Both physical (eg. c:\document.docx) and virtual (eg. /document.docx or ~/document.docx) paths are supported.
+</p>
+<p>
+    If a custom document handler is provided via DocumentViewer.DocumentHandlerType property, then
+    the value set in DocumentViewer.Document property will be passed to that handler which should open 
+    and return a readable stream according to this file identifier.
+    So it can be any string value that your IDocumentHandler implementation understands.
+    With a custom document handler, you can load documents from database, network, cloud storage etc.
+</p>

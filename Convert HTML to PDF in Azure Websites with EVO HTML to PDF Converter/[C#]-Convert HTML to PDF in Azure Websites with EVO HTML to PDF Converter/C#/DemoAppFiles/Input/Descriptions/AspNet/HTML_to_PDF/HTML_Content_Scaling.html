@@ -1,0 +1,83 @@
+﻿<b>EVO HTML to PDF Converter</b> allows you to set various options to control the HTML content scaling in PDF pages. The most important options controlling the HTML content scaling
+    are enumerated below, grouped in a few categories.<br />
+<br />
+<b class="subtitle">HTML Page to Convert</b>
+<br />
+<ul>
+    <li>
+        <b>HTML Page URL or Local File to Convert</b>. The URL of the HTML page to convert must be accessible from the computer where the converter runs.
+            If the page requires authentication or if you are using a proxy server to access Internet then you have to set the converter properties accordingly
+            as described in documentation
+    </li>
+</ul>
+<b class="subtitle">HTML Viewer Options</b>
+<br />
+<ul>
+    <li>
+        <b>HTML Viewer Width</b>. This option is the equivalent in converter of the browser window width and represents the preferred width in which to render the HTML content. 
+            The actual HTML content width can be larger in case the HTML page cannot be entirely displayed in the given viewer width. The HTML content can be further scaled to fit the PDF page 
+            based on the converter scaling options set in your application. The HTML content size is expressed in pixels and the PDF page size is in expressed in points, 1 point being 1/72 inches.
+            The converter is using a 96 DPI resolution to transform pixels to points with the following formula: Points = Pixels/96 * 72
+    </li>
+    <li>
+        <b>HTML Viewer Height</b>. This option is the equivalent in converter of the browser window height and can be used to limit the conversion to the top part of the HTML page. If this property is
+            not set the entire page will be converted
+    </li>
+    <li>
+        <b>Clip HTML Content Width</b>. You can set this option to force the HTML content width to be exactly HtmlViewerWidth pixels. If this option is false then actual HTML content width 
+            can be larger than HtmlViewerWidth pixels in case the HTML page cannot be entirely displayed in the given viewer width. By default this option is false and the HTML content is not clipped
+    </li>
+</ul>
+<b class="subtitle">PDF Page Options</b>
+<br />
+<ul>
+    <li>
+        <b>PDF Page Size</b>. You can set the page size of the generated PDF document to a standard size like A4, Letter, Legal, etc. or you can set custom PDF page size giving the width
+            and height in points. 1 point is 1/72 inches. By default the PDF page size is A4
+    </li>
+    <li>
+        <b>PDF Page Orientation</b>. You can set the page orientation of the generated PDF document to Portrait or to Landscape. By default the page orientation is Portrait
+    </li>
+    <li>
+        <b>PDF Page Margins</b>. You can individually set the left, right, top and bottom page margins of the generated PDF document. The margins are expressed in points.
+            1 point is 1/72 inches. By default the PDF page margins are all 0 points
+    </li>
+</ul>
+<b class="subtitle">HTML Content Options</b>
+<br />
+<ul>
+    <li>
+        <b>HTML Content Destination in PDF.</b> The HTML content destination is given by the X and Y coordinates where to start rendering in first PDF page and by the destination rectangle width and height. 
+            All the values are expressed in points. 1 point is 1/72 inches. If you don't set any destination rectangle then by default the converter will start rendering in the top left corner of the first page, will
+            try to use the entire PDF page width for rendering and will auto determine the destination rectangle height such that the entire HTML content is visible
+    </li>
+    <li>
+        <b>HTML Content Top and Bottom Spacing.</b> Using these options you can set a top and a bottom padding for the HTML content. This can be useful for example when you want to introduce a spacing between the PDF page 
+            header or footer and the main content
+    </li>
+</ul>
+<b class="subtitle">Scaling Options</b>
+<br />
+<ul>
+    <li>
+        <b>Fit Width Option</b>. Use this option to instruct the converter to fit the HTML content width in PDF page width or in the given destination rectangle width. By default this option is true and the HTML content 
+            can be resized to fit the PDF page width
+    </li>
+    <li>
+        <b>Stretch to Fit Width Option</b>. Use this option to enable the HTML content stretching when its width is smaller than PDF page width. 
+            It has effect only when Fit Width option is true. By default this option is false and the HTML content is not stretched
+    </li>
+    <li>
+        <b>Auto Size PDF Page Option</b>. Use this option to automatically dimension the PDF page to display the HTML content unscaled.
+            It has effect only when the Fit Width option is false. By default this option is true and the PDF page is automatically dimensioned when Fit Width option is false
+    </li>
+    <li>
+        <b>Fit Height Option</b>. Use this option to fit the HTML content height in PDF page height or in the given destination rectangle height. If both Fit Width and Fit Height are true then the HTML content 
+            will resized if necessary to fit both width and height preserving the aspect ratio at the same time. By default this option is false and the HTML content 
+            is not resized to fit the PDF page height
+    </li>
+    <li>
+        <b>Single PDF Page Option</b>. Use this option to render the whole HTML content into a single PDF page. The PDF page size is limited to 14400 points.
+            By default this options is false
+    </li>
+</ul>

@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Error</h2>
+
+<div>
+    <h4>Completed Checkout</h4>
+    <hr />
+    <p>Thanks for ordering with us, your booking id is: @ViewData["CartId"]</p>
+</div>
+<div>
+    <a asp-action="Index">Back to Home</a>
+</div>

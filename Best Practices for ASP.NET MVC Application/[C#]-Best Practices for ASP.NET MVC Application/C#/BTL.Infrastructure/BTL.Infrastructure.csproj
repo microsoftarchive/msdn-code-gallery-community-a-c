@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{194DBE47-73D0-4E18-BE85-E4ED94108A33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BTL.Infrastructure</RootNamespace>
+    <AssemblyName>BTL.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.2.6.1.841\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\packages\Autofac.2.6.1.841\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Wcf">
+      <HintPath>..\packages\Autofac.Wcf.2.6.1.841\lib\NET40\Autofac.Integration.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Web">
+      <HintPath>..\packages\Autofac.Web.2.6.1.841\lib\NET40\Autofac.Integration.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.1.267\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Couchbase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=81137140da4e57ef, processorArchitecture=MSIL">
+      <HintPath>..\packages\CouchbaseNetClient.1.0.1\lib\net35\Couchbase.dll</HintPath>
+    </Reference>
+    <Reference Include="Enyim.Caching, Version=2.12.0.0, Culture=neutral, PublicKeyToken=81137140da4e57ef, processorArchitecture=MSIL">
+      <HintPath>..\packages\CouchbaseNetClient.1.0.1\lib\net35\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autofac\ExAutofacServiceHostFactory.cs" />
+    <Compile Include="Cache\CacheProvider.cs" />
+    <Compile Include="Cache\CouchBase\ExCouchbaseMemCached.cs" />
+    <Compile Include="Wcf\ServiceChannelFactory.cs" />
+    <Compile Include="Wcf\ServiceFacadeBase.cs" />
+    <None Include="Cache\EnyimMemcached\ExEnyimMemCached.cs__" />
+    <Compile Include="Cache\ICacheProvider.cs" />
+    <Compile Include="Cache\IExCache.cs" />
+    <Compile Include="Configuration\ExConfigurationManager.cs" />
+    <Compile Include="Configuration\IExConfigurationManager.cs" />
+    <Compile Include="Configuration\ISectionConfiguration.cs" />
+    <Compile Include="Configuration\SectionConfiguration.cs" />
+    <Compile Include="Configuration\SectionConfigurationElement.cs" />
+    <Compile Include="Configuration\SectionElementCollection.cs" />
+    <Compile Include="Dci\DciContext.cs" />
+    <Compile Include="Dci\IDciContext.cs" />
+    <Compile Include="Dci\IDciParameter.cs" />
+    <Compile Include="Dci\IDciRole.cs" />
+    <Compile Include="Dci\NullDciParameter.cs" />
+    <Compile Include="Disposable.cs" />
+    <Compile Include="Encryptions\Encryptor.cs" />
+    <Compile Include="Encryptions\IEncryptor.cs" />
+    <Compile Include="Events\DomainEvents.cs" />
+    <Compile Include="Events\IDomainEvent.cs" />
+    <Compile Include="Events\IHandler.cs" />
+    <Compile Include="Extensions\AutoMapperExtension.cs" />
+    <Compile Include="Extensions\ContainerExtension.cs" />
+    <Compile Include="Extensions\ConvertionExtension.cs" />
+    <Compile Include="Extensions\HttpRequestBaseExtension.cs" />
+    <Compile Include="Extensions\ObjectExtension.cs" />
+    <Compile Include="Extensions\SectionConfigurationExtension.cs" />
+    <Compile Include="Guard.cs" />
+    <Compile Include="Helpers\AssemblyHelper.cs" />
+    <Compile Include="HttpModuleBase.cs" />
+    <Compile Include="IdGenerator.cs" />
+    <Compile Include="InfrastructureModule.cs" />
+    <Compile Include="ISetting.cs" />
+    <Compile Include="ObjectFactory.cs" />
+    <Compile Include="Plugins\IModule.cs" />
+    <Compile Include="Plugins\PluginManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

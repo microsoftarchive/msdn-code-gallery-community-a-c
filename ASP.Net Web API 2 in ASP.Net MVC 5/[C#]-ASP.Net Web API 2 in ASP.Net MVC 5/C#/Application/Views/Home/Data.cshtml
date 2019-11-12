@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Data";
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://localhost:10689/api/students",
+            type: "Get",
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    $("<tr><td>" +  data[i].Name + "</td><td>" + data[i].Course + "</td><td>" + data[i].City + "</td></tr>").appendTo("#students");
+                }
+            },
+            error: function (msg) { alert(msg); }
+        });
+    });
+</script>
+
+<h2>Index</h2>
+
+<div id="body">
+    <section class="content-wrapper main-content">
+        <table id="students" class="table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayName("Name")</th>
+
+                    <th>@Html.DisplayName("Course")</th>
+
+                    <th>@Html.DisplayName("City")</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+</div>  

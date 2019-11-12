@@ -1,0 +1,2505 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Groupdocs.Viewer</name>
+    </assembly>
+    <members>
+        <member name="M:Groupdocs.Web.UI.Core.CoreHandler.UpdateViewingServiceIfInstanceIdSpecified(System.String,System.Boolean)">
+            <summary>
+            Updates '_viewingService' field in this instance of the 'BaseHandler' class, if specified <paramref name="instanceId"/> parameter 
+            is valid
+            </summary>
+            <param name="instanceId"></param>
+            <param name="updateViewingServiceForcibly">If 'true', current '_viewingService' will be updated even if <paramref name="instanceId"/> parameter 
+            is not specified or is invalid. If 'false', current '_viewingService' will be updated only when <paramref name="instanceId"/> parameter 
+            is specified and is valid.</param>
+            <returns>'true', if '_viewingService' field was updated; otherwise 'false'</returns>
+        </member>
+        <member name="T:Groupdocs.Web.UI.EventHandling.BeforeOpeningDocumentEvent">
+            <summary>
+            This event is raised before a document is being opened.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.EventHandling.IDocumentProcessingEvent">
+            <summary>
+            Represents an event which is raised when processing a document.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.EventHandling.IDocumentProcessingEvent.DocumentPath">
+            <summary>
+            The path of a document being processed.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.EventHandling.BeforeOpeningDocumentEvent.DocumentPath">
+            <summary>
+            Contains the path of a document which is being opened.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.EventHandling.DocumentOpenedEvent">
+            <summary>
+            This event is raised after a document was opened.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.EventHandling.DocumentOpenedEvent.DocumentPath">
+            <summary>
+            Contains the path of a document which is opened.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.EventHandling.DocumentOpeningErrorEvent">
+            <summary>
+            This event is raised when an error occurred while opening a document.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.EventHandling.IExceptionEvent">
+            <summary>
+            Represents an event raised when an exception occurred in the control.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.EventHandling.IExceptionEvent.Exception">
+            <summary>
+            The exception.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.EventHandling.DocumentOpeningErrorEvent.DocumentPath">
+            <summary>
+            Contains the path of a document which is opened.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.IStorageProvider">
+            <summary>
+            Represents a storage provider which allows to work with some file storage.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.AddFile(System.String,System.IO.Stream)">
+            <summary>
+            Adds file contents to the storage.
+            </summary>
+            <param name="path">The relative path in the storage to a file to be created.</param>
+            <param name="content">File contents.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.AddFile(System.String,System.String)">
+            <summary>
+            Adds file contents to the storage.
+            </summary>
+            <param name="path">The relative path in the storage to a file to be created.</param>
+            <param name="localPath">The absolute path to a file to read data from.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.DeleteFile(System.String)">
+            <summary>
+            Deletes a file.
+            </summary>
+            <param name="path">The relative path in the storage to a file to be deleted.</param>
+            <returns>true if the operation succeeded, false otherwise.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.FileExists(System.String)">
+            <summary>
+            Checks if a file exists.
+            </summary>
+            <param name="path">The relative path in the storage to a file.</param>
+            <returns>true if a specified file exists, false otherwise.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.GetFile(System.String)">
+            <summary>
+            Returns file contents.
+            </summary>
+            <param name="path">The relative path in the storage to a file.</param>
+            <returns>File contents.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.MapFilePath(System.String)">
+            <summary>
+            Gets the full path to a file.
+            </summary>
+            <param name="path">The relative path in the storage to a file.</param>
+            <returns>The full path to a file</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.GetFileName(System.String)">
+            <summary>
+            Gets the file name from a path.
+            </summary>
+            <param name="path">The relative path in the storage to a file.</param>
+            <returns>The file name.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.GetFileVirtualPath(System.String)">
+            <summary>
+            Gets the provider-specific virtual path of a file.
+            </summary>
+            <param name="path">The relative path to a file in the storage.</param>
+            <returns>The virtual path of a file.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.GetFileDateTime(System.String)">
+            <summary>
+            Gets the UTC date and time of the last modification of a file.
+            </summary>
+            <param name="path">The relative path to a file in the storage.</param>
+            <returns>The UTC date and time.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.CopyFile(System.String,System.String)">
+            <summary>
+            Copies a file.
+            </summary>
+            <param name="fromPath">The path of a source file.</param>
+            <param name="toPath">The path of a destination file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.MoveFile(System.String,System.String)">
+            <summary>
+            Moves a file.
+            </summary>
+            <param name="fromPath">The path of a source file.</param>
+            <param name="toPath">The path of a destination file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.CreateFolder(System.String)">
+            <summary>
+            Creates a folder.
+            </summary>
+            <param name="path">The relative path to a folder in the storage.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.DeleteFolder(System.String)">
+            <summary>
+            Deletes a folder.
+            </summary>
+            <param name="path">The relative path to a folder in the storage.</param>
+            <returns>true if the operation succeeded, false otherwise.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.FolderExists(System.String)">
+            <summary>
+            Checks if a folder exists.
+            </summary>
+            <param name="path">The relative path to a folder in the storage.</param>
+            <returns>true if a specified folder exists, false otherwise.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.CopyFolder(System.String,System.String,System.Boolean)">
+            <summary>
+            Copies a folder.
+            </summary>
+            <param name="fromPath">The relative path to a source folder in the storage.</param>
+            <param name="toPath">The relative path to a destination folder in the storage.</param>
+            <param name="deep">If true, all the subdirectories are copied. 
+            Otherwise, only file system entities in the directry itself are copied.</param>
+            <returns>true if the operation succeeded, false otherwise.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.MoveFolder(System.String,System.String,System.Boolean)">
+            <summary>
+            Moves a folder.
+            </summary>
+            <param name="fromPath">The relative path to a source folder in the storage.</param>
+            <param name="toPath">The relative path to a destination folder in the storage.</param>
+            <param name="deep">If true, all the subdirectories are copied. 
+            Otherwise, only file system entities in the directry itself are moved.</param>
+            <returns>true if the operation succeeded, false otherwise.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.IStorageProvider.ListEntities(System.String)">
+            <summary>
+            Lists all the entities in a folder.
+            </summary>
+            <param name="path">The relative path to a folder in the storage.</param>
+            <returns>A list of files and folders.</returns>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Handlers.RotatePageHandler.IsReusable">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.EventHandling.IEventSubscriber">
+            <summary>
+            Defines a method which must be implemented by event subscribers.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.EventHandling.IEventSubscriber.HandleEvent(Groupdocs.Web.UI.EventHandling.IEvent)">
+            <summary>
+            Called when an event is raised.
+            </summary>
+            <param name="eventDescription">An event object.</param>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.DefaultLocale">
+            <summary>
+            Default locale
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.enUS">
+            <summary>
+            English (United States)
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.esES">
+            <summary>
+            Spanish
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.ptPT">
+            <summary>
+            Portuguese
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.nbNO">
+            <summary>
+            Norwegian
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.plPL">
+            <summary>
+            Polish
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.ruRU">
+            <summary>
+            Russian
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.arAE">
+            <summary>
+            Arabic
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.itIT">
+            <summary>
+            Italian	
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.zhCN">
+            <summary>
+            Chinese Traditional
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.zhTW">
+            <summary>
+            Chinese Taiwan
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedLocales.trTR">
+            <summary>
+            Turkish (Turkey)
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.SupportedStorageProvider">
+            <summary>
+            Contains the supported storage providers.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedStorageProvider.Local">
+            <summary>
+            The local file system storage provider.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedStorageProvider.AmazonS3">
+            <summary>
+            The Amazon S3 storage provider.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedStorageProvider.Azure">
+            <summary>
+            The Windows Azure storage provider.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.SupportedStorageProvider.Default">
+            <summary>
+            The default storage provider. It's equal to Local.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Handlers.ReorderPageHandler.#ctor">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WCF.NullableParamsWebHttpBehavior.GetQueryStringConverter(System.ServiceModel.Description.OperationDescription)">
+            <summary>
+            Gets the query string converter.
+            </summary>
+            <param name="operationDescription">The service <see cref="T:System.ServiceModel.Description.OperationDescription"/>.</param>
+            <returns>A <see cref="T:System.ServiceModel.Dispatcher.QueryStringConverter"/> instance.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WCF.NullableQueryStringConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether the specified type can be converted to and from a string representation.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> to convert.</param>
+            <returns>A value that specifies whether the type can be converted.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WCF.NullableQueryStringConverter.ConvertStringToValue(System.String,System.Type)">
+            <summary>
+            Converts a query string parameter to the specified type.
+            </summary>
+            <param name="parameter">The string form of the parameter and value.</param>
+            <param name="parameterType">The <see cref="T:System.Type"/> to convert the parameter to.</param>
+            <returns>A value that specifies whether the type can be converted.</returns>
+        </member>
+        <member name="T:Groupdocs.Web.UI.WinForms.IPdfTextSelector">
+            <summary>
+            PdfTextSelector Interface
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WinForms.IPdfTextSelector.Start">
+            <summary>
+            Reset start position of selection
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WinForms.IPdfTextSelector.Select(System.Drawing.Point,System.Drawing.Rectangle,System.Int32,System.Double,System.Double)">
+            <summary>
+            Calculate selecting
+            </summary>
+            <param name="endPoint"></param>
+            <param name="mouseRectangle"></param>
+            <param name="pageNumber"></param>
+            <param name="heightScale"></param>
+            <param name="widthScale"></param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WinForms.IPdfTextSelector.GetRectanglesToSelect(System.Drawing.Point,System.Drawing.Rectangle,System.Int32,System.Double,System.Double)">
+            <summary>
+            Calculate and return Rectangles to select
+            </summary>
+            <param name="endPoint"></param>
+            <param name="mouseRectangle"></param>
+            <param name="pageNumber"></param>
+            <param name="heightScale"></param>
+            <param name="widthScale"></param>
+            <returns>List of System.Drawing.Rectangles</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WinForms.IPdfTextSelector.GetRectanglesToSelect">
+            <summary>
+            Return Rectangles to select
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WinForms.IPdfTextSelector.UpdateRectsToSelect(System.Double,System.Double)">
+            <summary>
+            Update selection accordingly new scale
+            </summary>
+            <param name="widthScale"></param>
+            <param name="heightScale"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WinForms.IPdfTextSelector.GetSelectedText">
+            <summary>
+            Return selected text
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.WinForms.IPdfTextSelector.Reset">
+            <summary>
+            Reset internal data
+            </summary>
+        </member>
+        <member name="T:Groupdocs.WinForms.UI.ViewerUserControl">
+            <summary>
+            Implements Viewer user control for .NET WinForms.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.WinForms.UI.ViewerUserControl.StorePageImagesInCache(System.Boolean)">
+            <summary>
+            If true, page images are cached to a disk. Otherwise, page images are generated dynamically.
+            The default value is false.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.WinForms.UI.ViewerUserControl.Subscribe``1(Groupdocs.Web.UI.EventHandling.IEventSubscriber)">
+            <summary>
+            Subscribes a subscriber to an event raised by this instance of Viewer.
+            </summary>
+            <param name="subscriber">An instance of the IEventSubscriber interface</param>
+            <typeparam name="T">An event type,</typeparam>
+        </member>
+        <member name="F:Groupdocs.WinForms.UI.ViewerUserControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.WinForms.UI.ViewerUserControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Groupdocs.WinForms.UI.ViewerUserControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.Handlers.GetDocumentPageHtmlHandler._urlsCreator">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Handlers.GetFontHandler.IsReusable">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Handlers.GetResourceForHtmlHandler.IsReusable">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Properties.Resources.arrow_left">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Properties.Resources.arrow_right">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Properties.Resources.PrintButton">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Properties.Resources.printPreview">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Properties.Resources.PrintSetupButton">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:Aspose.License.Hackers.RsaSignatureVerifier">
+            <summary>
+            Performs RSA digital signature verification.
+            </summary>
+        </member>
+        <member name="T:Aspose.License.Hackers.SmartComparator1">
+            <summary>
+            One of the comparators used for complication of byte buffers comparison.
+            </summary>
+        </member>
+        <member name="M:Aspose.License.Hackers.SmartComparator1.AddBuffer1(System.IO.MemoryStream,System.Byte[],System.Int32)">
+            <summary>
+            The first buffer to compare should be passed here.
+            </summary>
+            <param name="dummyParam1"></param>
+            <param name="buffer1">The buffer.</param>
+            <param name="dummyParam2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Aspose.License.Hackers.SmartComparator2">
+            <summary>
+            One of the comparators used for complication of byte buffers comparison.
+            </summary>
+        </member>
+        <member name="M:Aspose.License.Hackers.SmartComparator2.#ctor(Aspose.License.Hackers.SmartComparator1,System.Byte[],System.Boolean,System.Boolean)">
+            <summary>
+            The second buffer to compare must be passed here.
+            </summary>
+            <param name="dummyParam1"></param>
+            <param name="buffer2">The buffer.</param>
+            <param name="dummyParam2"></param>
+            <param name="dummyParam3"></param>
+        </member>
+        <member name="M:Aspose.License.Hackers.SmartComparator2.AddComparator1(System.Int32[],Aspose.License.Hackers.SmartComparator1)">
+            <summary>
+            The first comparator must be added here.
+            </summary>
+            <param name="dummyParam1"></param>
+            <param name="comparator1">The comparator.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aspose.License.Hackers.SmartComparator2.PerformComparison1(System.Boolean)">
+            <summary>
+            Performs comparison of the second half of the buffers.
+            </summary>
+            <param name="dummyParam1"></param>
+        </member>
+        <member name="M:Aspose.License.Hackers.SmartComparator2.PassControlToComparator3(System.String,System.Boolean)">
+            <summary>
+            Passes control to the comparator 3.
+            </summary>
+            <param name="dummyParam1"></param>
+            <param name="isDummy">Must be false to really pass control.</param>
+        </member>
+        <member name="T:Aspose.License.Hackers.SmartComparator3">
+            <summary>
+            One of the comparators used for complication of byte buffers comparison.
+            </summary>
+        </member>
+        <member name="M:Aspose.License.Hackers.SmartComparator3.#ctor(Aspose.License.Hackers.SmartComparator2)">
+            <summary>
+            Comparator 2 should be passed here.
+            </summary>
+            <param name="comparator2">Comparator 2.</param>
+        </member>
+        <member name="T:Aspose.License.Hackers.VerificationSupervisor">
+            <summary>
+            Contains flags set by the meaningful comparer methods. This is necessary to ensure
+            that crackers have not cut out the entry point of the verification algorithm located
+            in LicenseCore.VerifySignature() and all the methods have been called. The flags should
+            be set by 3 comparer methods subsequently, each method must check if the previous method
+            has been invoked. 
+            
+            Also see SignatureInvalidFlag in this class.
+            </summary>
+        </member>
+        <member name="M:Aspose.License.Hackers.VerificationSupervisor.Clear">
+            <summary>
+            Made accessible so license unit tests can reset the static state properly.
+            </summary>
+        </member>
+        <member name="M:Aspose.License.Hackers.VerificationSupervisor.EnsureIfAllMethodsInvoked">
+            <summary>
+            Returns 0x100 if all methods have been invoked properly, returns 0x1000 otherwise.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Aspose.License.Hackers.VerificationSupervisor.SignatureInvalidFlag">
+            <summary>
+            If EnsureIfAllMethodsInvoked says that verification methods were called and 
+            SignatureInvalidFlag is zero, then the  signature was verified and it was correct.
+            
+            This is set to greater than zero if signature verification failed at some stage.
+            </summary>
+        </member>
+        <member name="P:Aspose.License.Hackers.VerificationSupervisor.MethodCalledFlag1">
+            <summary>
+            Used for checking if methods 1 and 2 were invoked. Initial value = 0x30. Method 1
+            must check it and if it is 0x30, set it to 0xff, otherwise leave intact.
+            Method 2 then must check it and if it is 0xff, set it to 0x80, otherwise leave intact.
+            </summary>
+        </member>
+        <member name="P:Aspose.License.Hackers.VerificationSupervisor.MethodCalledFlag2">
+            <summary>
+            Used for checking if method 3 was invoked. Initial value = true. Method 3 must
+            set it to false.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.EditionType">
+            <summary>
+            Specifies the edition type of the license.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.LicenseState">
+            <summary>
+            Represents possible license states.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.LicenseState.Evaluation">
+            <summary>
+            The license is Evaluation
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.LicenseState.Licensed">
+            <summary>
+            The license is a proper valid license.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.License">
+            <summary>
+            Provides methods to license the component.
+            </summary>
+            <example>
+            In this example, an attempt will be made to find a license file named MyLicense.lic
+            in the folder that contains 
+            
+            <ms>
+            the component, in the folder that contains the calling assembly,
+            in the folder of the entry assembly and then in the embedded resources of the calling assembly.
+            <code>
+            [C#]
+            
+            License license = new License();
+            license.SetLicense("MyLicense.lic");
+            
+            
+            [Visual Basic]
+            
+            Dim license As license = New license
+            License.SetLicense("MyLicense.lic")
+            </code>
+            </ms>
+            
+            <java>
+            the component jar file:
+            <code>
+            License license = new License();
+            license.setLicense("MyLicense.lic");
+            </code>
+            </java>
+            
+            </example>
+        </member>
+        <member name="M:Groupdocs.Web.UI.License.#ctor">
+            <summary>
+            Initializes a new instance of this class.
+            </summary>
+            <example>
+            In this example, an attempt will be made to find a license file named MyLicense.lic
+            in the folder that contains 
+            
+            <ms>
+            the component, in the folder that contains the calling assembly,
+            in the folder of the entry assembly and then in the embedded resources of the calling assembly.
+            <code>
+            [C#]
+            
+            License license = new License();
+            license.SetLicense("MyLicense.lic");
+            
+            
+            [Visual Basic]
+            
+            Dim license As license = New license
+            License.SetLicense("MyLicense.lic")
+            </code>
+            </ms>
+            
+            <java>
+            the component jar file:
+            <code>
+            License license = new License();
+            license.setLicense("MyLicense.lic");
+            </code>
+            </java>
+            
+            </example>
+        </member>
+        <member name="M:Groupdocs.Web.UI.License.SetLicense(System.String,System.String)">
+            <summary>
+            Licenses the component.
+            </summary>
+            <remarks>
+            <p>Tries to find the license in the following locations:</p>
+            <p>1. Explicit path.</p>
+            
+            <ms>
+            <p>2. The folder that contains the Aspose component assembly.</p>
+            <p>3. The folder that contains the client's calling assembly.</p>
+            <p>4. The folder that contains the entry (startup) assembly.</p>
+            <p>5. An embedded resource in the client's calling assembly.</p>
+            
+            <p><b>Note:</b>On the .NET Compact Framework, tries to find the license only in these locations:</p>
+            <p>1. Explicit path.</p>
+            <p>2. An embedded resource in the client's calling assembly.</p>
+            </ms>
+            
+            <java>
+            <p>2. The folder that contains the Aspose component JAR file.</p>
+            <p>3. The folder that contains the client's calling JAR file.</p>
+            </java>
+            </remarks>
+            <example>
+            In this example, an attempt will be made to find a license file named MyLicense.lic
+            in the folder that contains 
+            
+            <ms>
+            the component, in the folder that contains the calling assembly,
+            in the folder of the entry assembly and then in the embedded resources of the calling assembly.
+            <code>
+            [C#]
+            
+            License license = new License();
+            license.SetLicense("MyLicense.lic");
+            
+            
+            [Visual Basic]
+            
+            Dim license As License = New License
+            license.SetLicense("MyLicense.lic")
+            </code>
+            </ms>
+            
+            <java>
+            the component jar file:
+            <code>
+            License license = new License();
+            license.setLicense("MyLicense.lic");
+            </code>
+            </java>
+            
+            <param name="licenseName">Can be a full or short file name<ms> or name of an embedded resource</ms>.
+            Use an empty string to switch to evaluation mode.</param>
+            </example>
+        </member>
+        <member name="M:Groupdocs.Web.UI.License.SetLicense(System.IO.Stream,System.String)">
+            <summary>
+            Licenses the component.
+            </summary>
+            <param name="stream">A stream that contains the license.</param>
+            <remarks>
+            <p>Use this method to load a license from a stream.</p>
+            </remarks>
+            <example>
+            <code>
+            <ms>
+            [C#]
+            
+            License license = new License();
+            license.SetLicense(myStream);
+            
+            
+            [Visual Basic]
+            
+            Dim license as License = new License
+            license.SetLicense(myStream)
+            </ms>
+            <java>
+            License license = new License();
+            license.setLicense(myStream);
+            </java>
+            </code>
+            </example>
+            <javaName>void setLicense(java.io.InputStream stream)</javaName>
+        </member>
+        <member name="T:Groupdocs.Web.UI.LicenseCore">
+            <summary>
+            The actual code of the license class is put into an internal class and made into long functions to 
+            make it harder for the crackers to find anything meaningful after the dlls were cracked in November 2005.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.LicenseCore.AsposeDot">
+            <summary>
+            Used in the product mapping to build full product name.
+            This is to avoid other developers accidentally damaging this code when doing global rename.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.SetLicenseCore(System.IO.Stream,System.String)">
+            <summary>
+            Note, this function was manually tuned (made complex) so it does not decompile in Reflector.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.GetLicenseState">
+            <summary>
+            Call this from your component code to check if running evaluation version or not.
+            </summary>
+            <example>
+            <code>
+            if (Aspose.Words.LicenseCore.GetLicenseState() == LicenseState.Evaluation)
+            	InjectWatermark();
+            </code>
+            </example>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.CheckEdition(Groupdocs.Web.UI.EditionType,System.String)">
+            <summary>
+            Note, this function was manually tuned (made complex) so it does not decompile in Reflector.
+            
+            Call this when the user attempts to use a feature that is limited by edition type.
+            Throws a message explaining the license limitation to the user.
+            </summary>
+            <remarks>
+            Most of Aspose products are supposed to have just one edition type.
+            Only complex products might have two edition types.
+            When using two edition types, make sure it is easy for the client to select edition type they need.
+            </remarks>
+            <param name="wantEditionType">Specify edition type that is required to access your feature.</param>
+            <param name="message">Message that explains what feature the user is trying to access.</param>
+            <example>
+            For example, adding an image to the document requires Enterprise edition.
+            <code>
+            Licensing2004.CheckEdition(EditionType.Enterprise, "You tried to add an image to the document.");
+            //Proceed inserting the image.
+            </code>
+            </example>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.LoadLicense(System.Xml.XmlDocument)">
+            <summary>
+            Verifies the signature on the XML file and loads it into the license files, but does not check them.
+            Made internal only for unit testing, do not call directly otherwise.
+            
+            Note, this function was manually tuned (made complex) so it does not decompile in Reflector.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.MapOldProductName(System.String)">
+            <summary>
+            In January 2006 product names such as Aspose Word, Aspose Excel etc had to be changed. 
+            This function maps these product names so old licenses can be used in new products.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.LoadLicense(System.String)">
+            <summary>
+            See above. Use for unit testing only.
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.VerifySignature(System.Xml.XmlNode,System.Xml.XmlNode)">
+            <summary>
+            Verifies that content of the data element has not been tampered with. Safe to pass nulls.
+            
+            Note there is no direct action taken inside this method if the signature is invalid.
+            If the signature is invalid, the VerificationSupervisor.SignatureInvalidFlag is set to greater 
+            than zero and you need to examine it somewhere later in your code. This is to confuse hackers.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.ProbeLicense(System.String,System.Reflection.Assembly)">
+            <summary>
+            Tries to find the license in several locations:
+            1. Explicit path.
+            2. The folder of this assembly.
+            3. The folder of the client's calling assembly.
+            4. The folder of the entry assembly (does not apply for the .NET Compact Framework).
+            5. An embedded resource in the client's calling assembly.
+            </summary>
+            <param name="licenseName">This can be full or short file name or name of an embedded resource.</param>
+            <param name="callingAssembly">Client's calling assembly. Used to find license in embedded resource.</param>
+            <returns>Returns a stream that contains the license or throws.</returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.GetAssemblyPath(System.Reflection.Assembly)">
+            <summary>
+            Returns assembly path correctly even if the assembly is shadow-copied.
+            Uses CodeBase instead of Location for that.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.GetResourceByPartialName(System.Reflection.Assembly,System.String)">
+            <summary>
+            The resource names can get prefixed with customer's namespace, so I do a partial name search.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.GetStringValue(System.Xml.XmlElement,System.String)">
+            <summary>
+            Returns text from the child element of a specified parent element or empty string if the element was not found.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.GetDateValue(System.Xml.XmlElement,System.String)">
+            <summary>
+            Gets date value from the specified XML element. Returns DateTime.MaxValue if the element is missing.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.GetElementByName(System.Xml.XmlElement,System.String)">
+            <summary>
+            Xml helper function. Gets the first child element with the given name or null.
+            I'm using this instead of XPath because XPath is not available on the .NET Compact Framework.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.LicenseCore.LoadBlackList(System.String)">
+            <summary>
+            Loads and verifies black list from resource called Aspose.License.BlackList.xml which must be present.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.LicenseCore.gBlackListCache">
+            <summary>
+            The key is a string blacklisted license serial number. The value is null.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.LicenseCore.gProductNameMap">
+            <summary>
+            Maps old product names into new.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.LicenseCore.Products">
+            <summary>
+            Gets Aspose product names this license is for. 
+            You need to specify value that matches the value specified in AssemblyProduct attribute.
+            This is used to check that the license is suitable for this product.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.LicenseCore.EditionType">
+            <summary>
+            Gets edition type.
+            You can use this to enable/disable some features depending on the edition type.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.LicenseCore.SerialNumber">
+            <summary>
+            Unique license number. Used to black list stolen licenses.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.LicenseCore.SubscriptionExpiry">
+            <summary>
+            Gets the last date of the subscription.
+            This is to be checked against custom attribute on the assembly that contains the relase date.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.LicenseCore.LicenseExpiry">
+            <summary>
+            This is for temporary licenses.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.LicenseCore.ProductNameMapping">
+            <summary>
+            Maps old product name into new.
+            </summary>
+        </member>
+        <member name="T:Aspose.Crypto.Pkcs1">
+            <summary>
+            Provides different Public-Key Cryptography Standards methods.
+            </summary>
+        </member>
+        <member name="T:Aspose.Crypto.Rsa">
+            <summary>
+            Performs RSA encryption.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.StreamDefinition">
+            <summary>
+            Represents one document in a form of stream with its type as the filename extension
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.EnableRightClickMenu(System.Boolean)">
+            <summary>
+            Specifies if the right mouse button menu is enabled in browser
+            </summary>
+            <param name="enable">If set to false, disables the right mouse button menu in browser.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.TargetElementSelector(System.String)">
+            <summary>
+            A jQuery selector of an element inside which the Viewer instance will be created
+            </summary>
+            <param name="targetElementSelector">A jQuery selector</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.FilePath(System.String)">
+            <summary>
+            Specifies the path of a file which should be opened initially
+            </summary>
+            <param name="filePath">he path of a file which should be opened initially
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Url(System.String)">
+            <summary>
+            Specifies a URL pointing to a remote document to be opened initially
+            </summary>
+            <param name="url">A URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Url(System.String,System.String)">
+            <summary>
+            Specifies a URL pointing to a remote document to be opened initially. This document will be saved locally under specified filename.
+            </summary>
+            <param name="url">A URL</param>
+            <param name="filename">Filename for the remote document. Should be valid.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Url(System.String,System.String,System.String,System.String)">
+            <summary>
+            Specifies a URL pointing to a remote document to be opened initially, along with the credentials, required for Windows Authentication
+            </summary>
+            <param name="url">A URL</param>
+            <param name="userName">Username. Mandatory parameter.</param>
+            <param name="password">Password. Mandatory parameter.</param>
+            <param name="domain">Domain. Can be omitted (null or empty string).</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Url(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Specifies a URL pointing to a remote document to be opened initially, along with the credentials, required for Windows Authentication. 
+            This document will be saved locally under specified filename.
+            </summary>
+            <param name="url">A URL</param>
+            <param name="filename">Filename for the remote document. Should be valid.</param>
+            <param name="userName">Username. Mandatory parameter.</param>
+            <param name="password">Password. Mandatory parameter.</param>
+            <param name="domain">Domain. Can be omitted (null or empty string).</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Stream(System.IO.Stream,System.String,System.String,System.String,System.Boolean,System.Func{System.IO.Stream})">
+            <summary>
+            Specifies a .NET stream containing a document to be opened initially
+            </summary>
+            <param name="stream">A stream</param>
+            <param name="fileName">The name of a file on disk where the stream will be saved to
+            </param>
+            <param name="fileExtension">A document file extension (“pdf”, “docx”, etc.) could be provided 
+            as the fileExtension parameter to override the Viewer’s document type recognition mechanism</param>
+            <param name="fileDisplayName">Allows to specify a name which will be 
+            displayed when a user presses the  Download and Print buttons
+            </param>
+            <param name="useCachedStreamContentsIfPossible">Specifies if cached contents of a stream should be used or the stream should be read on every call of Stream
+            </param>
+            <param name="streamCreator">A delegate which 
+            returns a stream when called. If the stream contents are cached, the delegate won't be called
+            </param>
+            <returns>
+            </returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Streams(System.Collections.Generic.IEnumerable{Groupdocs.Web.UI.StreamDefinition},System.String)">
+            <summary>
+            Specifies a collection of streams containing documents to be viewed as a single document produced by concatenation of the documents
+            </summary>
+            <param name="streams">A collection of streams containing documents</param>
+            <param name="fileNameForCaching">The name of the resulting file created by concatenation of input files.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Quality(System.Int32)">
+            <summary>
+            Sets the quality of JPEG page images for the image-based engine; the higher the number, the better the quality
+            </summary>
+            <param name="quality">A quality (0..100)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowThumbnails(System.Boolean)">
+            <summary>
+            Specifies whether Viewer should show the thumbnails panel
+            </summary>
+            <param name="showThumbnails">
+            If true, Viewer shows thumbnails; otherwise not
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.OpenThumbnails(System.Boolean)">
+            <summary>
+            Specifies the initial thumbnails widget state: open or closed
+            </summary>
+            <param name="openThumbnails">If true then the thumbnails panel is open; otherwise not</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Zoom(System.Int32)">
+            <summary>
+            Sets the initial document zoom level
+            </summary>
+            <param name="zoom">An initial zoom level (1 – 100)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ZoomToFitWidth(System.Boolean,System.Boolean)">
+            <summary>
+            Specifies whether the initial zoom is calculated to fit the width of the Viewer instance
+            </summary>
+            <param name="zoomToFitWidth">
+            If true, images are zoomed to fit width
+            </param>
+            <param name="onlyShrinkLargePages">
+            If true, large images are zoomed out while small images are left as-is
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ZoomToFitHeight(System.Boolean)">
+            <summary>
+            Specifies whether the initial zoom is calculated to fit the height of the Viewer instance
+            </summary>
+            <param name="zoomToFitHeight">If true, documents are zoomed to fit height</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Width(System.Int32)">
+            <summary>
+            Sets the width of the Viewer instance
+            </summary>
+            <param name="width">A width in pixels</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Height(System.Int32)">
+            <summary>
+            Sets the height of the Viewer instance
+            </summary>
+            <param name="height">A height in pixels</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.BackgroundColor(System.String)">
+            <summary>
+            Sets the background CSS color of the top toolbar and the Thumbnails button (“yellow”, ”#00ff00”, “rgb(255,0,255)“)
+            </summary>
+            <param name="color">A color</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowFolderBrowser(System.Boolean)">
+            <summary>
+            Shows or hides the folder browser button
+            </summary>
+            <param name="show">If true then the button is shown; otherwise, the button is hidden</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowPrint(System.Boolean)">
+            <summary>
+            Shows or hides the print button
+            </summary>
+            <param name="show">If true then the button is shown; if false, the button is hidden</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowDownload(System.Boolean)">
+            <summary>
+            Shows or hides the download button
+            </summary>
+            <param name="show">If true then the button is shown; if false, the button is hidden</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowZoom(System.Boolean)">
+            <summary>
+            Shows or hides the zoom toolbar
+            </summary>
+            <param name="show"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowPaging(System.Boolean)">
+            <summary>
+            Shows or hides the paging toolbar
+            </summary>
+            <param name="show">If true then the toolbar is shown; if false, the toolbar is hidden</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowViewerStyleControl(System.Boolean)">
+            <summary>
+            Shows or hides the viewer type button
+            </summary>
+            <param name="show">If true then the button is shown; if false, the button is hidden</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowSearch(System.Boolean)">
+            <summary>
+            Shows or hides the search toolbar
+            </summary>
+            <param name="show">If true then the toolbar is shown; if false, the toolbar is hidden</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.PreloadPagesCount(System.Nullable{System.Int32},System.Boolean,System.Boolean)">
+            <summary>
+            Specifies the number of pages to be Loaded, processed and cached when first opening a document (all pages processing is the default).
+            </summary>
+            <param name="count">The number of pages</param>
+            <param name="loadPagesOnBrowserSide">If true, pages are loaded on the browser side when a document is opened; otherwise pages are not loaded.</param>
+            <param name="convertWordDocumentsCompletely">Specifies if Word documents should always be processed completely to improve the performance</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ViewerStyle(Groupdocs.Web.UI.ViewerMode)">
+            <summary>
+            Specifies the initial Viewer style: the page scroll or page flip style
+            </summary>
+            <param name="style"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Layout(Groupdocs.Web.UI.ViewerMode)">
+            <summary>
+            Specifies the initial Viewer layout: the page scroll or page flip style
+            </summary>
+            <param name="layout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.SupportTextSelection(System.Boolean)">
+            <summary>
+            Specifies if the Viewer supports selecting text using the mouse in the image-based mode
+            </summary>
+            <param name="supportTextSelection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Locale(System.String)">
+            <summary>
+            Specifies the language of the user interface elements
+            </summary>
+            <param name="locale">A locale</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Locale(Groupdocs.Web.UI.SupportedLocales)">
+            <summary>
+            Specifies the language of the user interface elements
+            </summary>
+            <param name="locale">A locale</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.UsePdfPrinting(System.Boolean)">
+            <summary>
+            Specifies whether to open a PDF document in a new tab when printing or print documents as HTML in the current window
+            </summary>
+            <param name="use">
+            If true, opens a PDF document in a new tab when printing; if false, prints documents as HTML in the current window (default)
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ToolbarButtonsBoxShadowStyle(System.String,System.String)">
+            <summary>
+            Specifies box shadow styles for the toolbar buttons
+            </summary>
+            <param name="toolbarButtonsBoxShadowStyle">A box shadow style</param>
+            <param name="toolbarButtonsBoxShadowHoverStyle">A box shadow style when the mouse cursor is hovering over</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ThumbnailsContainerBackgroundColor(System.String)">
+            <summary>
+            Specifies the background color of the thumbnails container
+            </summary>
+            <param name="color">A color</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ThumbnailsContainerBorderRightColor(System.String)">
+            <summary>
+            Specifies the right border color of the thumbnails container
+            </summary>
+            <param name="color">A color</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ToolbarBorderBottomColor(System.String)">
+            <summary>
+            Specifies the bottom border color of the thumbnails container
+            </summary>
+            <param name="color">A color</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ToolbarInputFieldBorderColor(System.String)">
+            <summary>
+            Specifies the color of the toolbar input field borders
+            </summary>
+            <param name="color">A color</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ToolbarButtonBorderColor(System.String,System.String)">
+            <summary>
+            Specifies the color of the toolbar button borders
+            </summary>
+            <param name="color">A color</param>
+            <param name="hoverColor">A color to be used on mouse hover</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ThumbnailsContainerWidth(System.Int32)">
+            <summary>
+            Specifies the width of the thumbnails panel
+            </summary>
+            <param name="width">The width of the panel</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowDownloadErrorsInPopup(System.Boolean)">
+            <summary>
+            Specifies if file download errors will be shown in a popup window instead of redirecting the browser to a page with the error description. Currently this feature does not work when the Viewer is used in a cross-domain manner.
+            </summary>
+            <param name="show">If true, errors are shown in a popup; otherwise, the redirection occurs</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowImageWidth(System.Boolean)">
+            <summary>
+            Specifies if an alert is shown in the browser with the width of the document pages when the application is loading.
+            </summary>
+            <param name="show">If true, the width is shown; otherwise, not</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowHeader(System.Boolean)">
+            <summary>
+            Specifies whether to show the header with the toolbar controls. If false, one can create custom controls and control the Viewer by calling its methods to navigate pages, zoom in or out, and so on.
+            </summary>
+            <param name="show">If true, the header is shown; otherwise, not</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.MinimumImageWidth(System.Int32)">
+            <summary>
+            Specifies if the Viewer will load page images for each zoom level or only when the image width exceeds the specified value
+            If set, the Viewer loads page images with the specified width from the server when starting. 
+            It will not load page images from the server again after zooming if the current page image size 
+            is smaller than the value specified and if the original (not scaled) page image size is smaller 
+            than the value specified. 
+            It means that in most cases the Viewer will load page images only once and will not reload them after zooming in/out.
+            </summary>
+            <param name="minimumImageWidth">A minimum width for which page images will be loaded from the server</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.EnableStandardErrorHandling(System.Boolean)">
+            <summary>
+            Specifies whether the standard error window will be shown on errors. 
+            One can attach his own error handlers to a Viewer instance.
+            </summary>
+            <param name="enable">If false, the standard error window will not be shown on errors</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.UseHtmlBasedEngine(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Specifies whether to convert documents to a set of page images or to an HTML representation
+            </summary>
+            <param name="use">If true, the Viewer control will 
+            convert the pages of documents to HTML and show them in browser; if false, 
+            the Viewer control will convert the pages of documents to JPEG images and show them in browser.
+            </param>
+            <param name="usePngImagesForHtmlBasedEngine">If true, 
+            the Viewer will generate page backgrounds of PDF documents as PNG images 
+            (it is useful for Inernet Explorer 8 which does not support SVG images), 
+            otherwise it will generate SVG images which reference PNG images
+            </param>
+            <param name="useHtmlThumbnails">
+            If true, Viewer shares the HTML representation of pages with the thumbnails. 
+            It significantly reduces server resource usage when the thumbnails are enabled 
+            but moderately slows down the rendering in browser. 
+            If false, Viewer generates images from document pages for thumbnails.
+            It significantly increases server resource usage when the thumbnails are enabled 
+            but makes the rendering in browser moderately faster.
+            </param>
+            <param name="embedImagesIntoHtmlForWordFiles">If true, SVG, PNG and other images are included into generated HTML as Base64;
+            otherwise images are stored as separate files.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.DownloadPdfFileIfPossible(System.Boolean)">
+            <summary>
+            Specifies whether documents are downloaded in their original formats or in the PDF format when the download button is pressed
+            </summary>
+            <param name="downloadPdfFile">If true, the Viewer control downloads a PDF version of a document when a user clicks the Download button;
+            otherwise, the original document is downloaded
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.SearchForSeparateWords(System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="searchForSeparateWords">if the searchForSeparateWords parameter is true, 
+            the Viewer will search for any of the words specified in the search text box. 
+            If false, the Viewer control will search for exact matches of a whole phrase specified in the search text box.
+            </param>
+            <param name="treatPhrasesInDoubleQuotesAsExactPhrases">If the treatPhrasesInDoubleQuotesAsExactPhrases parameter 
+            is true, then if a search phrase is in double quotes, 
+            the Viewer will find a match only if words in a current document are 
+            in the same order as they are in the search phrase and each word is equal to each word of the search phrase
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.PreventTouchEventsBubbling(System.Boolean)">
+            <summary>
+            Specifies whether the Viewer should prevent touch events generated by the jQuery UI Touch Punch library
+            from bubbling to parent controls which allows to use scrolling on touch screen devices.
+            </summary>
+            <param name="preventTouchEventsBubbling">
+            if true, the Viewer will prevent touch events generated by the jQuery UI Touch Punch library 
+            from bubbling to parent controls
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.UseInnerThumbnails(System.Boolean)">
+            <summary>
+            Specifies if the thumbnails are shown beside the document area or over the document area
+            </summary>
+            <param name="use">If true, the thumbnails are shown beside the document area. If false, the thumbnails are shown over the document area.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.Watermark(System.String,System.Nullable{System.Drawing.Color},Groupdocs.Web.UI.WatermarkPosition,System.Single,System.Boolean)">
+            <summary>
+            Allows to draw a text watermark on every page of a document.
+            </summary>
+            <param name="watermarkText">Specifies the text of a watermark</param>
+            <param name="watermarkColor">Specifies the color.</param>
+            <param name="watermarkPosition">Specifies the position.</param>
+            <param name="watermarkWidthInPercents">Specifies the size of watermaks as a percent of a page width</param>
+            <param name="printWithWatermark">Specifies if watermarks are present on printed pages</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.SupportPageReordering(System.Boolean)">
+            <summary>
+            Specifies whther the reordering of pages by dragging thumbnails should be supported.
+            Only the image-based engine supports this feature. 
+            Only the PDF representation of a document is affected. 
+            The PDF representation can be downloaded if DownloadPdfFileIfPossible is set
+            </summary>
+            <param name="support">If true, the Viewer supports reordering of pages.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.SearchHighlightColor(System.String,System.String)">
+            <summary>
+            Specifies the color of search hits.
+            </summary>
+            <param name="color">The background color of search hits.</param>
+            <param name="currentSearchHighlightColor">The background color of a current search hit</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.LoadAllPagesOnSearch(System.Boolean)">
+            <summary>
+            Specifies whether to load all pages of a document when searching for text
+            </summary>
+            <param name="load">If true, Viewer loads all pages of a document when searching for text
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ShowOnePageInRow(System.Boolean)">
+            <summary>
+            Specifies whether to show one page or multiple pages in a row
+            </summary>
+            <param name="showOnePageInRow">If true, only one page is shown in one row. Otherwise there can be multiple pages placed at the same vertical position.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.IgnoreDocumentAbsence(System.Boolean)">
+            <summary>
+            Specifies whether Viewer should take data from the cache, ignoring the ansence of a document
+            </summary>
+            <param name="ignoreDocumentAbsence">
+            If true, Viewer takes data from the cache, ignoring the ansence of a document
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.SupportPageRotation(System.Boolean)">
+            <summary>
+            Enables page rotation
+            </summary>
+            <param name="supportPageRotation">If true, Viewer supports the rotation of pages; otherwise not</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.UseRtl(System.Boolean)">
+            <summary>
+            Right-to-left controls.
+            </summary>
+            <param name="use">If true, controls use RTL; otherwise not.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.UseAccentInsensitiveSearch(System.Boolean)">
+            <summary>
+            Specifies if the search neglects accent marks in letters.
+            </summary>
+            <param name="use">If true, the search is accent insensitive; otherwise it is accent sensitive.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.UseVirtualScrolling(System.Boolean)">
+            <summary>
+            Only those pages are present in the browser DOM tree, which are currently visible.
+            Improves the speed of scrolling in a browser for large documents.
+            </summary>
+            <param name="use">If true, the virtual scrolling is enabled; otherwise it is disabled.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.SupportListOfContentControls(System.Boolean)">
+            <summary>
+            Allows to show content controls with their headers when viewing similar to what MS Word shows.
+            Currently only the HTML engine supports this feature.
+            The SupportListOfContentControls option must be set before opening 
+            a document for the content control descriptions to be generated.
+            </summary>
+            <param name="support">If true, the content controls support is enabled; otherwise it is disabled.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.ClientHelperBase.ViewerInstanceId(System.String)">
+            <summary>
+            Specifies the Viewer InstanceId, which will be used for this particular widget
+            </summary>
+            <param name="instanceId">InstanceId value. If value is NULL or invalid, it will be ignored, and basic root storage path will be used.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Groupdocs.Web.UI.ClientHelper">
+            <summary>
+            Creates Viewer initialization code
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.ClientScriptLoaderHelper">
+            <summary>
+            Creates code which loads the libraries which are necessary for Viewer to run.
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.Constants.InstanceIdContainerKey">
+            <summary>
+            String key, which points to the container (Dictionary) with all Viewer InstanceIDs
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.Constants.InstanceIdRequestKey">
+            <summary>
+            String key, which identifies the 'instanceId' value in the HTTP-request data
+            </summary>
+            <remarks>'instanceIdToken' value is used, because 'instanceId' is already present in the JS widget and has another meaning and responsibility</remarks>
+        </member>
+        <member name="T:Groupdocs.Web.UI.DocumentCache">
+            <summary>
+            Contains methods for manipulating the cache of generated pages
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.#ctor(System.String,System.String,System.String)">
+            <summary>
+            A constructor for work with a local storage
+            </summary>
+            <param name="licensePath">The path to a license</param>
+            <param name="rootStoragePath">The path to a root storage</param>
+            <param name="workingDirectoryPath">The path to a working direcory which is used to generate page files from documents</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.#ctor(System.String,Groupdocs.Web.UI.IStorageProvider,Groupdocs.Web.UI.IStorageProvider)">
+            <summary>
+            A constructor for work with a local storage
+            </summary>
+            <param name="licensePath">The path to a license</param>
+            <param name="storageProvider">An implementation of the IFileStorage interface used to access documents.</param>
+            <param name="tempStorageProvider">An implementation of the IFileStorage interface used to access Viewer temporary files (page representations, document descriptions).</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.#ctor(System.String,Groupdocs.Web.UI.SupportedStorageProvider,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            A constructor for work with a remote storage
+            </summary>
+            <param name="licensePath">The path to a license</param>
+            <param name="storageProvider">A supported storage provider</param>
+            <param name="serviceHost">The address of a storage host</param>
+            <param name="apiKey">An API key for a storage account</param>
+            <param name="apiSecretKey">An API secret key for a storage account</param>
+            <param name="bucketName">The name of a bucket of a storage containing documents</param>
+            <param name="cacheBucketName">The name of a bucket used for storing generated page files on the storage. If it is null then bucketName is used</param>
+            <param name="rootStoragePath">
+            The path to a root storage directory; it is the same path that is used in a call to Viewer.SetRootStoragePath().
+            </param>
+            <param name="workingDirectoryPath">
+            If specified then Viewer holds in it data downloaded from the remote storage, which improves the performance. If not specified then Viewer holds data downloaded from the remote storage in the “temp” subdirectory of rootStoragePath to improve the performance.
+            </param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.SetLicensePath(System.String)">
+            <summary>
+            Sets the path to a license for this istance of Viewer.
+            </summary>
+            <param name="licensePath">The path to a license file.</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.GenerateImages(System.String,System.Action{System.String,System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Generates page images and stores them in the cache to increase the performance of the Viewer.
+            </summary>
+            <param name="documentPath">
+            The relative path to a document
+            </param>
+            <param name="progressCallback">
+            A method which will be called when cache generation is progressing. It receives 2 parameters: the cache generation stage and generation progress so far.
+            </param>
+            <param name="width">
+            The width of generated images. If it is not set, only full sized images will be generated. The last stage of page images generation which is the resizing of the full sized images will not be executed.
+            </param>
+            <param name="quality">
+            The quality of generated images (1 - 100).
+            </param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.GenerateImages(System.IO.Stream,System.String,System.String,System.Boolean,System.Func{System.IO.Stream},System.Action{System.String,System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Generates page images and stores them in the cache to increase the performance of the Viewer.
+            </summary>
+            <param name="stream">A stream</param>
+            <param name="streamFileName">The name of a file on disk where the stream will be saved to
+            </param>
+            <param name="fileExtension">A document file extension (“pdf”, “docx”, etc.) must be provided.</param>
+            <param name="useCachedStreamContentsIfPossible">Specifies if cached contents of a stream should be used or the stream should be read on every call of this method.
+            </param>
+            <param name="streamCreator">A delegate which 
+            returns a stream when called. If the stream contents are cached, the delegate is not called
+            </param>
+            <param name="progressCallback">
+            A method which is called when cache generation is progressing. It receives 2 parameters: the cache generation stage and generation progress so far.
+            </param>
+            <param name="width">
+            The width of generated images. If it is not set, only full sized images will be generated. The last stage of page images generation which is the resizing of the full sized images will not be executed.
+            </param>
+            <param name="quality">
+            The quality of generated images (1 - 100).
+            </param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.GenerateHtml(System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Generates pages in the HTML format and stores them in the cache to increase the performance of the Viewer.
+            </summary>
+            <param name="documentPath">
+            The relative path to a document.
+            </param>
+            <param name="baseUrl">
+            A URL which will be added as a prefix to all resource URLs in generated HTML files.
+            </param>
+            <param name="usePngImagesForHtmlBasedEngine">
+             If true, the method will generate page backgrounds of PDF documents as PNG images (it is useful for Inernet Explorer 8 which does not support SVG images), otherwise it will generate SVG images which reference PNG images.
+            </param>
+            <param name="useHttpHandlers">If true, the method will generate html with urls which are aimed to Http Handlers></param>
+            <param name="embedImagesIntoHtmlForWordFiles">If true, SVG, PNG and other images are included into generated HTML as Base64;
+            otherwise images are stored as separate files.
+            </param>
+            <param name="supportListOfContentControls">Allows to show content controls with their headers when viewing similar to what MS Word shows.
+            </param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.GenerateHtml(System.IO.Stream,System.String,System.String,System.Boolean,System.Func{System.IO.Stream},System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Generates pages in the HTML format and stores them in the cache to increase the performance of the Viewer.
+            </summary>
+            <param name="stream">A stream</param>
+            <param name="streamFileName">The name of a file on disk where the stream will be saved to
+            </param>
+            <param name="fileExtension">A document file extension (“pdf”, “docx”, etc.) must be provided.</param>
+            <param name="useCachedStreamContentsIfPossible">Specifies if cached contents of a stream should be used or the stream should be read on every call of this method.
+            </param>
+            <param name="streamCreator">A delegate which 
+            returns a stream when called. If the stream contents are cached, the delegate is not called
+            </param>
+            <param name="baseUrl">
+            A URL which will be added as a prefix to all resource URLs in generated HTML files.
+            </param>
+            <param name="usePngImagesForHtmlBasedEngine">
+             If true, the method will generate page backgrounds of PDF documents as PNG images (it is useful for Inernet Explorer 8 which does not support SVG images), otherwise it will generate SVG images which reference PNG images.
+            </param>
+            <param name="useHttpHandlers">If true, the method will generate html with urls which are aimed to Http Handlers></param>
+            <param name="embedImagesIntoHtmlForWordFiles">If true, SVG, PNG and other images are included into generated HTML as Base64;
+            otherwise images are stored as separate files.
+            </param>
+            <param name="supportListOfContentControls">Allows to show content controls with their headers when viewing similar to what MS Word shows.
+            </param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.GetPageCount(System.String)">
+            <summary>
+            Returns the number of pages of a document.
+            </summary>
+            <param name="documentPath">The relative path to a document</param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.GetPageCount(System.IO.Stream,System.String,System.String,System.Boolean,System.Func{System.IO.Stream},System.String,System.Boolean)">
+            <summary>
+            Returns the number of pages of a document.
+            </summary>
+            <param name="stream">A stream</param>
+            <param name="streamFileName">The name of a file on disk where the stream will be saved to
+            </param>
+            <param name="fileExtension">A document file extension (“pdf”, “docx”, etc.) must be provided.</param>
+            <param name="useCachedStreamContentsIfPossible">Specifies if cached contents of a stream should be used or the stream should be read on every call of this method.
+            </param>
+            <param name="streamCreator">A delegate which 
+            returns a stream when called. If the stream contents are cached, the delegate is not called
+            </param>
+            <param name="baseUrl">
+            A URL which will be added as a prefix to all resource URLs in generated HTML files.
+            </param>
+            <param name="usePngImagesForHtmlBasedEngine">
+             If true, the method will generate page backgrounds of PDF documents as PNG images (it is useful for Inernet Explorer 8 which does not support SVG images), otherwise it will generate SVG images which reference PNG images.
+            </param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.GeneratePdfVersion(System.String,System.String,System.Nullable{System.Int32},Groupdocs.Web.UI.WatermarkPosition,System.Single)">
+            <summary>
+            Generates a PDF version of a specified document with embedded watermark (if specified) 
+            and stores it in the cache to increase the performance of the Viewer.
+            </summary>
+            <param name="documentPath">The relative path to a document.</param>
+            <param name="watermarkText">Text of the watermark, which should be added to the PDF version. Can be omitted.</param>
+            <param name="watermarkColor">Color of the watermark text. Can be omitted.</param>
+            <param name="watermarkPosition">Position of the watermark. Can be omitted.</param>
+            <param name="watermarkWidth">Width of the watermark. Can be omitted.</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.DocumentCache.RemoveOldEntries(System.TimeSpan,System.String)">
+            <summary>
+            Removes old cache entries.
+            </summary>
+            <param name="olderThan">
+            delete folders older than this value.
+            </param>
+            <param name="logFilePath">
+            If it's set to a log file path, the class will write all the exceptions, which occurred during removal, to the log file.
+            If the logFilePath parameter is not set, all the exceptions will be thrown and one can handle them as one sees fit.
+            </param>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Handlers.CrossOriginHandler.IsReusable">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Handlers.CssHandler.IsReusable">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Handlers.EmbeddedImageHandler.IsReusable">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.Handlers.GetDocumentPageImageHandler._context">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Handlers.GetFileHandler.IsReusable">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.Handlers.GetImageUrlsHandler._urlsCreator">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.Handlers.GetPdf2JavaScriptHandler._viewingService">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Handlers.GetPdfWithPrintDialogHandler.IsReusable">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.Handlers.GetPrintableHtmlHandler._urlsCreator">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.Handlers.LoadFileBrowserTreeDataHandler">
+            <summary>
+            Returns information about all files and folders, which can be opened via "Document Browser" button on toolbar, in a form of JSON
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Handlers.LoadFileBrowserTreeDataHandler.#ctor">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Handlers.ScriptHandler.IsReusable">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="F:Groupdocs.Web.UI.Handlers.ViewDocumentHandler._urlsCreator">
+            <summary>
+            You will need to configure this handler in the web.config file of your 
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Helper.ValidateInstanceId(System.String)">
+            <summary>
+            Validates InstanceId value. Returns NULL if it is valid, otherwise Exception with description
+            </summary>
+            <param name="instanceId">InstanceId value</param>
+            <returns></returns>
+        </member>
+        <member name="T:Groupdocs.Web.UI.Localization.LocalizedStrings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.AcceptAll">
+            <summary>
+              Looks up a localized string similar to Accept All.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ago">
+            <summary>
+              Looks up a localized string similar to ago.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Agreed">
+            <summary>
+              Looks up a localized string similar to Agreed.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ApplyAll">
+            <summary>
+              Looks up a localized string similar to Apply All.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Approved">
+            <summary>
+              Looks up a localized string similar to Approved.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.AreaAnnotation">
+            <summary>
+              Looks up a localized string similar to Area Annotation.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.AreYourSureThatYouWantToApplyAllActions">
+            <summary>
+              Looks up a localized string similar to Are your sure that you want to apply all actions that you selected?.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.AreYourSureThatYouWantToTeturnAllChangesToIntialState">
+            <summary>
+              Looks up a localized string similar to Are your sure that you want to return all changes to initial state?.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.BookMode">
+            <summary>
+              Looks up a localized string similar to Double Page Flip.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Category">
+            <summary>
+              Looks up a localized string similar to Category.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Changes">
+            <summary>
+              Looks up a localized string similar to Changes.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.CommentsForAnnotation">
+            <summary>
+              Looks up a localized string similar to Comments for Annotation.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Compare">
+            <summary>
+              Looks up a localized string similar to Compare.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ComparedTo">
+            <summary>
+              Looks up a localized string similar to Compared to.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Confirmation">
+            <summary>
+              Looks up a localized string similar to Confirmation.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ContentChanges">
+            <summary>
+              Looks up a localized string similar to Content Changes.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.CoverThenTwoPagesInRow">
+            <summary>
+              Looks up a localized string similar to Cover then Two Pages in Row.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.day">
+            <summary>
+              Looks up a localized string similar to day.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.days">
+            <summary>
+              Looks up a localized string similar to days.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.DeleteAnnotation">
+            <summary>
+              Looks up a localized string similar to Delete Annotation.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Disagreed">
+            <summary>
+              Looks up a localized string similar to Disagreed.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.DistanceTool">
+            <summary>
+              Looks up a localized string similar to Distance Tool.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.DOCWithChangesTrack">
+            <summary>
+              Looks up a localized string similar to DOC with Changes Track.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.DOCWithComments">
+            <summary>
+              Looks up a localized string similar to DOC with Comments.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Download">
+            <summary>
+              Looks up a localized string similar to Download.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Edit">
+            <summary>
+              Looks up a localized string similar to Edit.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Export">
+            <summary>
+              Looks up a localized string similar to Export.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ExportingTheDocument">
+            <summary>
+              Looks up a localized string similar to Exporting the Document.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.FileName">
+            <summary>
+              Looks up a localized string similar to File Name.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.FirstPage">
+            <summary>
+              Looks up a localized string similar to First Page.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.FitHeight">
+            <summary>
+              Looks up a localized string similar to Fit Height.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.FitWidth">
+            <summary>
+              Looks up a localized string similar to Fit Width.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.hour">
+            <summary>
+              Looks up a localized string similar to hour.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.hours">
+            <summary>
+              Looks up a localized string similar to hours.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ImportAnnotations">
+            <summary>
+              Looks up a localized string similar to Import annotations.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ImportingInternalDocumentAnnotations">
+            <summary>
+              Looks up a localized string similar to Importing internal document annotations.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.LastPage">
+            <summary>
+              Looks up a localized string similar to Last Page.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.lessThanAMinuteAgo">
+            <summary>
+              Looks up a localized string similar to less than a minute ago.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ListView">
+            <summary>
+              Looks up a localized string similar to List view.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.LoadingYourContent">
+            <summary>
+              Looks up a localized string similar to Loading your content....
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Manage">
+            <summary>
+              Looks up a localized string similar to Manage.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Message">
+            <summary>
+              Looks up a localized string similar to Message.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.minute">
+            <summary>
+              Looks up a localized string similar to minute.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.minutes">
+            <summary>
+              Looks up a localized string similar to minutes.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Modified">
+            <summary>
+              Looks up a localized string similar to Modified.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Next">
+            <summary>
+              Looks up a localized string similar to Next.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.NextPage">
+            <summary>
+              Looks up a localized string similar to Next Page.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.No">
+            <summary>
+              Looks up a localized string similar to No.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Of">
+            <summary>
+              Looks up a localized string similar to of.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.OnePageInRow">
+            <summary>
+              Looks up a localized string similar to One Page in Row.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.OpenFile">
+            <summary>
+              Looks up a localized string similar to Open File.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Options">
+            <summary>
+              Looks up a localized string similar to Options.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.OriginalDocument">
+            <summary>
+              Looks up a localized string similar to Original Document.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Page">
+            <summary>
+              Looks up a localized string similar to Page.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ParentFolder">
+            <summary>
+              Looks up a localized string similar to Parent Folder.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.PDFWithComments">
+            <summary>
+              Looks up a localized string similar to PDF With Comments.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.PDFWithoutComments">
+            <summary>
+              Looks up a localized string similar to PDF W/O Comments.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.PointAnnotation">
+            <summary>
+              Looks up a localized string similar to Point Annotation.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.PointerTool">
+            <summary>
+              Looks up a localized string similar to Pointer Tool.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.PolylineAnnotation">
+            <summary>
+              Looks up a localized string similar to Polyline Annotation.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.PoweredBy">
+            <summary>
+              Looks up a localized string similar to Powered By.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.PreparingPages">
+            <summary>
+              Looks up a localized string similar to Preparing the pages.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Previous">
+            <summary>
+              Looks up a localized string similar to Previous.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.PreviousPage">
+            <summary>
+              Looks up a localized string similar to Previous Page.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Print">
+            <summary>
+              Looks up a localized string similar to Print.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Printing">
+            <summary>
+              Looks up a localized string similar to Printing.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Redo">
+            <summary>
+              Looks up a localized string similar to Redo.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.RejectAll">
+            <summary>
+              Looks up a localized string similar to Reject All.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Reply">
+            <summary>
+              Looks up a localized string similar to Reply.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Reset">
+            <summary>
+              Looks up a localized string similar to Reset.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ResetAll">
+            <summary>
+              Looks up a localized string similar to Reset All.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ResourceRedactionTool">
+            <summary>
+              Looks up a localized string similar to Resource Redaction Tool.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.RotateClockwise">
+            <summary>
+              Looks up a localized string similar to Rotate Clockwise.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.RotateCounterClockwise">
+            <summary>
+              Looks up a localized string similar to Rotate Counter Clockwise.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ScrollView">
+            <summary>
+              Looks up a localized string similar to Scroll View.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Search">
+            <summary>
+              Looks up a localized string similar to Search.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.SearchBackward">
+            <summary>
+              Looks up a localized string similar to Search Backward.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.SearchForward">
+            <summary>
+              Looks up a localized string similar to Search Forward.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.SelectSource">
+            <summary>
+              Looks up a localized string similar to Select Source.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.SelectTarget">
+            <summary>
+              Looks up a localized string similar to Select Target.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.SelectTool">
+            <summary>
+              Looks up a localized string similar to Select Tool.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Send">
+            <summary>
+              Looks up a localized string similar to Send.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Size">
+            <summary>
+              Looks up a localized string similar to Size.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.StrikeoutText">
+            <summary>
+              Looks up a localized string similar to Strikeout Text.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.StyleChanges">
+            <summary>
+              Looks up a localized string similar to Style Changes.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Submit">
+            <summary>
+              Looks up a localized string similar to Submit.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Summary">
+            <summary>
+              Looks up a localized string similar to Summary.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.TextAnnotation">
+            <summary>
+              Looks up a localized string similar to Text Annotation.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.TextRedactionTool">
+            <summary>
+              Looks up a localized string similar to Text Redaction Tool.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.TextReplacementTool">
+            <summary>
+              Looks up a localized string similar to Text Replacement Tool.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Thumbs">
+            <summary>
+              Looks up a localized string similar to Thumbs.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Total">
+            <summary>
+              Looks up a localized string similar to Total.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.TwoPagesInRow">
+            <summary>
+              Looks up a localized string similar to Two Pages in Row.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.TypewriterTool">
+            <summary>
+              Looks up a localized string similar to Typewriter Tool.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.UnderlineTextTool">
+            <summary>
+              Looks up a localized string similar to Underline Text Tool.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Undo">
+            <summary>
+              Looks up a localized string similar to Undo.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.UnlicensedViewCountMessageTemplate">
+            <summary>
+              Looks up a localized string similar to An unlicensed version of {0} allows not more than {1} views per hour.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.UnlicensedViewer">
+            <summary>
+              Looks up a localized string similar to This viewer has been created using an unlicensed version of.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ViewMode">
+            <summary>
+              Looks up a localized string similar to View Mode.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.WatermarkTool">
+            <summary>
+              Looks up a localized string similar to Watermark Tool.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.week">
+            <summary>
+              Looks up a localized string similar to week.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.weeks">
+            <summary>
+              Looks up a localized string similar to weeks.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.Yes">
+            <summary>
+              Looks up a localized string similar to Yes.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ZoomIn">
+            <summary>
+              Looks up a localized string similar to Zoom In.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ZoomLevel">
+            <summary>
+              Looks up a localized string similar to Zoom Level.
+            </summary>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Localization.LocalizedStrings.ZoomOut">
+            <summary>
+              Looks up a localized string similar to Zoom Out.
+            </summary>
+        </member>
+        <member name="T:Groupdocs.Web.UI.Viewer">
+            <summary>
+            Viewer global settings
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.InitRoutes">
+            <summary>
+            Initializes the ASP.NET MVC routes used by Viewer.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.SetLicensePath(System.String)">
+            <summary>
+            Sets the path to a license file.
+            </summary>
+            <param name="licensePath"></param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.SetLicenseStream(System.IO.Stream)">
+            <summary>
+            Allows to specify a license as a stream.
+            </summary>
+            <param name="licenseStream">Specifies a stream containing the contents of a license file.</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.SetStorageProvider(Groupdocs.Web.UI.SupportedStorageProvider,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sets the storage provider used by Viewer.
+            </summary>
+            <param name="storageProvider">A storage provider.</param>
+            <param name="serviceHost">The URL of a host</param>
+            <param name="apiKey">An API key.</param>
+            <param name="apiSecretKey">A secret key.</param>
+            <param name="bucketName">The name of a bucket.</param>
+            <param name="cacheBucketName">The name of a bucket which holds the cache</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.SetStorageProvider(Groupdocs.Web.UI.IStorageProvider,Groupdocs.Web.UI.IStorageProvider)">
+            <summary>
+            Specifies custom storage providers used by Viewer to access files.
+            </summary>
+            <param name="storageProvider">An implementation of the IFileStorage interface used to access documents.</param>
+            <param name="tempStorageProvider">An implementation of the IFileStorage interface used to access Viewer temporary files (page representations, document descriptions).</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.SetRootStoragePath(System.String,System.String,System.Boolean)">
+            <summary>
+            Sets the path to a directory where you store your documents and the Viewer’s page cache
+            </summary>
+            <param name="rootStoragePath">The path to a directory which holds files to be shown</param>
+            <param name="workingDirectoryPath">The path to a directory which holds working files</param>
+            <param name="storePerRequest">If true, the root storage and working directory paths
+            are stored separately for each request. Otherwise, the paths are shared between requests.</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.SetRootStoragePath(System.String,System.String,System.String)">
+            <summary>
+            Sets the path to a directory where you store your documents and the Viewer’s page cache, which are connected with the specific InstanceID
+            </summary>
+            <param name="rootStoragePath">Root storage path - path to a directory which holds files to be shown</param>
+            <param name="workingDirectoryPath">Working directory path - path to a directory which holds working files. Can be omitted if NULL value is specified.</param>
+            <param name="instanceId">InstanceID, which represents and identifies specified root storage and working directory paths</param>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.SetLogFilePath(System.String)">
+            <summary>
+            Specifies the path to a log file where information about operatins and exceptions will be written to.
+            </summary>
+            <param name="logFilePath">A path.</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.EnableFileListRequestHandling(System.Boolean)">
+            <summary>
+            Disables the processing of the file list request for security reasons
+            </summary>
+            <param name="enable">If true, the processing of the file list request is enabled; otherwise it's disabled.</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.EnableDownloadRequestHandling(System.Boolean)">
+            <summary>
+            Disables the processing of document download requests for security reasons
+            </summary>
+            <param name="enable">
+            If true, the processing of the document download request is enabled; otherwise it's disabled.
+            </param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.EnablePrintRequestHandling(System.Boolean)">
+            <summary>
+            Disables the processing of document printing requests for security reasons
+            </summary>
+            <param name="enable">
+            If true, the processing of the document printing request is enabled; otherwise it's disabled.
+            </param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.ShowExceptionDetailsOnClient(System.Boolean)">
+            <summary>
+            Specifies whether exception details are shown in the browser.
+            </summary>
+            <param name="show">If true, exception details are shown; otherwise they are not.</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.SetBaseUrl(System.String)">
+            <summary>
+            Sets the base URL which will be used for referencing resources (images and fonts) by the HTML-based engine
+            </summary>
+            <param name="url"> A URL.</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.Subscribe``1(Groupdocs.Web.UI.EventHandling.IEventSubscriber)">
+            <summary>
+            Subscribes a subscriber to an event
+            </summary>
+            <param name="subscriber">An instance of the IEventSubscriber interface</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.StartService(System.String)">
+            <summary>
+            Starts the Viewer WCF service listening on a specfified base address.
+            </summary>
+            <param name="baseAddress">A base address (may include a port).</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.StartService(System.Uri)">
+            <summary>
+            Starts the Viewer WCF service listening on a specfified base address.
+            </summary>
+            <param name="baseUrl">A base address.</param>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.StopService">
+            <summary>
+            Stops the Viewer WCF service.
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.CreateViewerScriptLoadBlock(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Creates code which loads Groupdocs Viewer for .NET scripts and CSS within an ASP.NET MVC view
+            </summary>
+            <param name="htmlHelper">
+            An HtmlHelper (provided automatically by ASP.NET MVC)
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.CreateScriptLoadBlock">
+            <summary>
+            Creates code which loads Groupdocs Viewer for .NET scripts and CSS within an ASP.NET page
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.ViewerClientCode(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Creates Groupdocs Viewer for .NET initialization code within an ASP.NET MVC view
+            </summary>
+            <param name="htmlHelper">
+            An HtmlHelper (provided automatically by ASP.NET MVC)
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.Viewer.ClientCode">
+            <summary>
+            Creates Groupdocs Viewer for .NET initialization code within an ASP.NET page
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Groupdocs.Web.UI.Viewer.BaseUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Groupdocs.Web.UI.RootPathFinder.GetRootStoragePathForInstanceId(System.String)">
+            <summary>
+            Returns a root storage path for the specific InstanceId or NULL, if such InstanceId was not specified before
+            </summary>
+            <param name="instanceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Groupdocs.Web.UI.RootPathFinder.GetCachePathForInstanceId(System.String)">
+            <summary>
+            Returns a cache path (working directory) for the specific InstanceId or NULL, if such InstanceId was not specified before
+            </summary>
+            <param name="instanceId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

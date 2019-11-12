@@ -1,0 +1,14 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WpfCommonDataAccess" x:Class="WpfCommonDataAccess.DataOut"
+        Title="Choose TabItem and click &lt;CTRL&gt; S   for save DATA in CSV file" Height="300" Width="479" Topmost="True" Closing="Window_Closing" >
+
+    
+    
+    
+    <Grid x:Name="gridResult">
+        <local:userClock x:Name="userClk" HorizontalAlignment="Left" Height="100" Margin="74,44,0,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>

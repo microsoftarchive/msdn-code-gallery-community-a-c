@@ -1,0 +1,358 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="cbba58be-9a5d-42c5-90f0-40b644c5c365" LowerBound="1.1" HigherBound="113.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="AccessingAndChangeMessageValuesInOrchestration" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="5fb17ae4-c8e8-463e-aac2-c97227952071" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="e7cd39ad-3ad5-4c5b-b532-7a83688b8391" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="9e409137-96c2-4585-80f9-8161f0b5a796" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.20">
+                    <om:Property Name="Ref" Value="AccessingAndChangeMessageValuesInOrchestration.Schema1" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="8dc53375-5461-4602-8fb1-8022dd2cda9b" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_2" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="fedec118-5c36-4430-ac95-1aae87151e11" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="74d0d826-60ca-4948-9cf4-a5c9f7bd17ef" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.20">
+                    <om:Property Name="Ref" Value="AccessingAndChangeMessageValuesInOrchestration.Schema1" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="141f06e3-7092-457f-8dc8-fb29eab62891" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="112.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="BizTalk_Orchestration1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="8eae43cf-d952-493e-8c2c-3f3fc7e414c8" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="HelperClassLibrary.Person" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varPersonMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="7893ee21-7e0b-4a19-8859-b97d5ecf0d15" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="AccessingAndChangeMessageValuesInOrchestration.Schema1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgOutput4" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="9a738aaf-5505-4c12-af55-ad6885bd467a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="AccessingAndChangeMessageValuesInOrchestration.Schema1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgOutput3" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="94304fc7-3b2f-41b5-9d76-ebacb822fe1c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="AccessingAndChangeMessageValuesInOrchestration.Schema1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgOutput2" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="38a17e85-5764-4d83-b1cf-e9487ed4dc2a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="Type" Value="AccessingAndChangeMessageValuesInOrchestration.Schema1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgInput" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="12b22ae6-270a-45e2-9e8c-a167c534c618" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="Type" Value="AccessingAndChangeMessageValuesInOrchestration.Schema1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgOutput1" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="2f024f83-9754-4896-b6a5-8408df8971a3" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="3c00d6e2-6546-4eb7-81bc-3aa4dcc05875" ParentLink="ServiceBody_Statement" LowerBound="33.1" HigherBound="36.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_1" />
+                    <om:Property Name="MessageName" Value="msgInput" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="f4e20156-b9bd-46c8-8163-7324f85a8591" ParentLink="ServiceBody_Statement" LowerBound="36.1" HigherBound="51.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Using Promoted Properties Read/Write" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="61c5336e-2ca5-4420-82de-47820606a3e4" ParentLink="Construct_MessageRef" LowerBound="37.23" HigherBound="37.33">
+                        <om:Property Name="Ref" Value="msgOutput1" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="07230e03-9a26-4381-b5be-4e3e4aeab661" ParentLink="ComplexStatement_Statement" LowerBound="39.1" HigherBound="50.1">
+                        <om:Property Name="Expression" Value="msgOutput1 = msgInput;&#xD;&#xA;&#xD;&#xA;//Read &#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&#xD;&#xA;    &quot;Orchestration&quot;, &#xD;&#xA;    System.Convert.ToString(msgOutput1(AccessingAndChangeMessageValuesInOrchestration.PropertySchema.FirstName)), &#xD;&#xA;    System.Diagnostics.EventLogEntryType.Error);&#xD;&#xA;&#xD;&#xA;//SET (Write)&#xD;&#xA;msgOutput1(AccessingAndChangeMessageValuesInOrchestration.PropertySchema.FirstName) = &quot;Sandro&quot;;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="6bbffd91-547d-43bb-be76-a5132637d9c4" ParentLink="ServiceBody_Statement" LowerBound="51.1" HigherBound="53.1">
+                    <om:Property Name="PortName" Value="Port_2" />
+                    <om:Property Name="MessageName" Value="msgOutput1" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="fbd38c44-1fa1-4dbc-a2db-8dc898a257a0" ParentLink="ServiceBody_Statement" LowerBound="53.1" HigherBound="68.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Using Distinguished Fields Read/Write" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="a793ade0-c427-4e84-bb5d-0a7ee60926b9" ParentLink="Construct_MessageRef" LowerBound="54.23" HigherBound="54.33">
+                        <om:Property Name="Ref" Value="msgOutput2" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="a76ddd18-57f7-4589-871f-63e7639ee8c6" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="67.1">
+                        <om:Property Name="Expression" Value="msgOutput2 = msgInput;&#xD;&#xA;&#xD;&#xA;//Read &#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&#xD;&#xA;    &quot;Orchestration&quot;, &#xD;&#xA;    System.Convert.ToString(msgOutput2.LastName), &#xD;&#xA;    System.Diagnostics.EventLogEntryType.Error);&#xD;&#xA;&#xD;&#xA;//SET (Write)&#xD;&#xA;msgOutput2.LastName = &quot;Pereira&quot;;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="a8345a42-7215-4c32-adfb-b655e161785d" ParentLink="ServiceBody_Statement" LowerBound="68.1" HigherBound="70.1">
+                    <om:Property Name="PortName" Value="Port_2" />
+                    <om:Property Name="MessageName" Value="msgOutput2" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_2" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="8e4ed35d-7b97-486f-9120-d8f8f7d787d5" ParentLink="ServiceBody_Statement" LowerBound="70.1" HigherBound="85.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Using XPath Read/Write" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="7e363773-8473-477f-b5fa-e68b732c5ed3" ParentLink="Construct_MessageRef" LowerBound="71.23" HigherBound="71.33">
+                        <om:Property Name="Ref" Value="msgOutput3" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="b01d6bb4-7f0c-454c-aaee-64afa8cf7827" ParentLink="ComplexStatement_Statement" LowerBound="73.1" HigherBound="84.1">
+                        <om:Property Name="Expression" Value="msgOutput3 = msgInput;&#xD;&#xA;&#xD;&#xA;//Read&#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&#xD;&#xA;    &quot;Orchestration&quot;, &#xD;&#xA;    System.Convert.ToString(xpath(msgOutput3,&quot;string(/*[local-name()='Person' and namespace-uri()='http://AccessingAndChangeMessageValuesInOrchestration.Schema1']/*[local-name()='Age' and namespace-uri()=''])&quot;)), &#xD;&#xA;    System.Diagnostics.EventLogEntryType.Error);&#xD;&#xA;&#xD;&#xA;//SET (Write)&#xD;&#xA;xpath(msgOutput3,&quot;/*[local-name()='Person' and namespace-uri()='http://AccessingAndChangeMessageValuesInOrchestration.Schema1']/*[local-name()='Age' and namespace-uri()='']&quot;) = &quot;00&quot;;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="9670f6bb-965b-46b3-ac57-09fbf5ef4e5e" ParentLink="ServiceBody_Statement" LowerBound="85.1" HigherBound="87.1">
+                    <om:Property Name="PortName" Value="Port_2" />
+                    <om:Property Name="MessageName" Value="msgOutput3" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_3" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="843e8827-cd88-4ba7-b3ab-2b0af56687ea" ParentLink="ServiceBody_Statement" LowerBound="87.1" HigherBound="108.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Using C# Object Read/Write" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="23e59885-b6f9-42b7-80e3-2b30ee0d8f46" ParentLink="Construct_MessageRef" LowerBound="88.23" HigherBound="88.33">
+                        <om:Property Name="Ref" Value="msgOutput4" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="9422d376-004a-416d-b68d-7ee8f8b0ade0" ParentLink="ComplexStatement_Statement" LowerBound="90.1" HigherBound="107.1">
+                        <om:Property Name="Expression" Value="//CONVERT MESSAGE INTO C# OBJECT&#xD;&#xA;varPersonMsg = msgInput;&#xD;&#xA;&#xD;&#xA;//Read&#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&#xD;&#xA;    &quot;Orchestration&quot;, &#xD;&#xA;    varPersonMsg.FirstName + &quot; &quot; + varPersonMsg.LastName, &#xD;&#xA;    System.Diagnostics.EventLogEntryType.Error);&#xD;&#xA;&#xD;&#xA;//SET (Write)&#xD;&#xA;varPersonMsg.FirstName = &quot;Sandro&quot;;&#xD;&#xA;varPersonMsg.LastName = &quot;Pereira&quot;;&#xD;&#xA;varPersonMsg.Age = &quot;00&quot;;&#xD;&#xA;&#xD;&#xA;//CONVERT C# OBJECT INTO BIZTALK MESSAGE&#xD;&#xA;msgOutput4 = varPersonMsg;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="fa538d73-95f7-4741-ab54-24ac9b1c5952" ParentLink="ServiceBody_Statement" LowerBound="108.1" HigherBound="110.1">
+                    <om:Property Name="PortName" Value="Port_2" />
+                    <om:Property Name="MessageName" Value="msgOutput4" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_4" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="2a6d6f56-cbd9-4f32-b060-793c958c280c" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="AccessingAndChangeMessageValuesInOrchestration.PortType_1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="f8ef110d-1030-459f-b6da-c1f6d6a2fbc2" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="540219c8-b0f1-49bc-a2ec-77ec0873c9fb" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="28" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="AccessingAndChangeMessageValuesInOrchestration.PortType_2" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_2" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="8682d503-ec2e-4fe9-9840-e42fdabd082a" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module AccessingAndChangeMessageValuesInOrchestration
+{
+    internal porttype PortType_1
+    {
+        oneway Operation_1
+        {
+            Schema1
+        };
+    };
+    internal porttype PortType_2
+    {
+        oneway Operation_1
+        {
+            Schema1
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service BizTalk_Orchestration1
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_1 Port_1;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_2 Port_2;
+        message Schema1 msgOutput4;
+        message Schema1 msgOutput3;
+        message Schema1 msgOutput2;
+        message Schema1 msgInput;
+        message Schema1 msgOutput1;
+        HelperClassLibrary.Person varPersonMsg;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("3c00d6e2-6546-4eb7-81bc-3aa4dcc05875")]
+            activate receive (Port_1.Operation_1, msgInput);
+            varPersonMsg = new HelperClassLibrary.Person();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("f4e20156-b9bd-46c8-8163-7324f85a8591")]
+            construct msgOutput1
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("07230e03-9a26-4381-b5be-4e3e4aeab661")]
+                msgOutput1 = msgInput;
+                
+                //Read 
+                System.Diagnostics.EventLog.WriteEntry(
+                    "Orchestration", 
+                    System.Convert.ToString(msgOutput1(AccessingAndChangeMessageValuesInOrchestration.PropertySchema.FirstName)), 
+                    System.Diagnostics.EventLogEntryType.Error);
+                
+                //SET (Write)
+                msgOutput1(AccessingAndChangeMessageValuesInOrchestration.PropertySchema.FirstName) = "Sandro";
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6bbffd91-547d-43bb-be76-a5132637d9c4")]
+            send (Port_2.Operation_1, msgOutput1);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fbd38c44-1fa1-4dbc-a2db-8dc898a257a0")]
+            construct msgOutput2
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("a76ddd18-57f7-4589-871f-63e7639ee8c6")]
+                msgOutput2 = msgInput;
+                
+                //Read 
+                System.Diagnostics.EventLog.WriteEntry(
+                    "Orchestration", 
+                    System.Convert.ToString(msgOutput2.LastName), 
+                    System.Diagnostics.EventLogEntryType.Error);
+                
+                //SET (Write)
+                msgOutput2.LastName = "Pereira";
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a8345a42-7215-4c32-adfb-b655e161785d")]
+            send (Port_2.Operation_1, msgOutput2);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8e4ed35d-7b97-486f-9120-d8f8f7d787d5")]
+            construct msgOutput3
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b01d6bb4-7f0c-454c-aaee-64afa8cf7827")]
+                msgOutput3 = msgInput;
+                
+                //Read
+                System.Diagnostics.EventLog.WriteEntry(
+                    "Orchestration", 
+                    System.Convert.ToString(xpath(msgOutput3,"string(/*[local-name()='Person' and namespace-uri()='http://AccessingAndChangeMessageValuesInOrchestration.Schema1']/*[local-name()='Age' and namespace-uri()=''])")), 
+                    System.Diagnostics.EventLogEntryType.Error);
+                
+                //SET (Write)
+                xpath(msgOutput3,"/*[local-name()='Person' and namespace-uri()='http://AccessingAndChangeMessageValuesInOrchestration.Schema1']/*[local-name()='Age' and namespace-uri()='']") = "00";
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9670f6bb-965b-46b3-ac57-09fbf5ef4e5e")]
+            send (Port_2.Operation_1, msgOutput3);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("843e8827-cd88-4ba7-b3ab-2b0af56687ea")]
+            construct msgOutput4
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("9422d376-004a-416d-b68d-7ee8f8b0ade0")]
+                //CONVERT MESSAGE INTO C# OBJECT
+                varPersonMsg = msgInput;
+                
+                //Read
+                System.Diagnostics.EventLog.WriteEntry(
+                    "Orchestration", 
+                    varPersonMsg.FirstName + " " + varPersonMsg.LastName, 
+                    System.Diagnostics.EventLogEntryType.Error);
+                
+                //SET (Write)
+                varPersonMsg.FirstName = "Sandro";
+                varPersonMsg.LastName = "Pereira";
+                varPersonMsg.Age = "00";
+                
+                //CONVERT C# OBJECT INTO BIZTALK MESSAGE
+                msgOutput4 = varPersonMsg;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fa538d73-95f7-4741-ab54-24ac9b1c5952")]
+            send (Port_2.Operation_1, msgOutput4);
+        }
+    }
+}
+

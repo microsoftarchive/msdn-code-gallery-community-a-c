@@ -1,0 +1,274 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{301E27F4-35AD-4955-B7EA-75E2982E0320}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chess</RootNamespace>
+    <AssemblyName>Chess</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationIcon>ChessBinChess.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>D35C80C9BAE2A46FC5DFBB39248E10A5B0141E07</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Chess_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <PublishUrl>G:\Publish\ChessBin\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.chessbin.com/Software/ChessBin/Update/</InstallUrl>
+    <SupportUrl>http://www.chessbin.com</SupportUrl>
+    <ProductName>ChessBin</ProductName>
+    <PublisherName>ChessBin.com</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>0.0.4.4</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRules>-Microsoft.Design#CA1062;-Microsoft.Globalization#CA1303;-Microsoft.Reliability#CA2000;-Microsoft.Security#CA2100;-Microsoft.Usage#CA2209;-Microsoft.Usage#CA2215;-Microsoft.Usage#CA2202;-Microsoft.Usage#CA2241;-Microsoft.Design#CA1012;-Microsoft.Design#CA2210;-Microsoft.Design#CA1040;-Microsoft.Design#CA1005;-Microsoft.Design#CA1020;-Microsoft.Design#CA1021;-Microsoft.Design#CA1010;-Microsoft.Design#CA1011;-Microsoft.Design#CA1009;-Microsoft.Design#CA1050;-Microsoft.Design#CA1026;-Microsoft.Design#CA1019;-Microsoft.Design#CA1031;-Microsoft.Design#CA1047;-Microsoft.Design#CA1000;-Microsoft.Design#CA1048;-Microsoft.Design#CA1051;-Microsoft.Design#CA1002;-Microsoft.Design#CA1061;-Microsoft.Design#CA1006;-Microsoft.Design#CA1046;-Microsoft.Design#CA1045;-Microsoft.Design#CA1038;-Microsoft.Design#CA1008;-Microsoft.Design#CA1028;-Microsoft.Design#CA1004;-Microsoft.Design#CA1035;-Microsoft.Design#CA1063;-Microsoft.Design#CA1032;-Microsoft.Design#CA1023;-Microsoft.Design#CA1033;-Microsoft.Design#CA1039;-Microsoft.Design#CA1016;-Microsoft.Design#CA1014;-Microsoft.Design#CA1017;-Microsoft.Design#CA1018;-Microsoft.Design#CA1027;-Microsoft.Design#CA1059;-Microsoft.Design#CA1060;-Microsoft.Design#CA1034;-Microsoft.Design#CA1013;-Microsoft.Design#CA1036;-Microsoft.Design#CA1044;-Microsoft.Design#CA1041;-Microsoft.Design#CA1025;-Microsoft.Design#CA1052;-Microsoft.Design#CA1053;-Microsoft.Design#CA1057;-Microsoft.Design#CA1058;-Microsoft.Design#CA1001;-Microsoft.Design#CA1049;-Microsoft.Design#CA1054;-Microsoft.Design#CA1056;-Microsoft.Design#CA1055;-Microsoft.Design#CA1030;-Microsoft.Design#CA1003;-Microsoft.Design#CA1007;-Microsoft.Design#CA1043;-Microsoft.Design#CA1024;-Microsoft.Globalization#CA1301;-Microsoft.Globalization#CA1302;-Microsoft.Globalization#CA1306;-Microsoft.Globalization#CA1304;-Microsoft.Globalization#CA1305;-Microsoft.Globalization#CA2101;-Microsoft.Globalization#CA1300;-Microsoft.Globalization#CA1307;-Microsoft.Interoperability#CA1403;-Microsoft.Interoperability#CA1406;-Microsoft.Interoperability#CA1413;-Microsoft.Interoperability#CA1402;-Microsoft.Interoperability#CA1407;-Microsoft.Interoperability#CA1404;-Microsoft.Interoperability#CA1410;-Microsoft.Interoperability#CA1411;-Microsoft.Interoperability#CA1405;-Microsoft.Interoperability#CA1409;-Microsoft.Interoperability#CA1415;-Microsoft.Interoperability#CA1408;-Microsoft.Interoperability#CA1414;-Microsoft.Interoperability#CA1412;-Microsoft.Interoperability#CA1400;-Microsoft.Interoperability#CA1401;-Microsoft.Maintainability#CA1502;-Microsoft.Maintainability#CA1501;-Microsoft.Maintainability#CA1505;-Microsoft.Maintainability#CA1500;-Microsoft.Mobility#CA1600;-Microsoft.Mobility#CA1601;-Microsoft.Naming#CA1702;-Microsoft.Naming#CA1700;-Microsoft.Naming#CA1712;-Microsoft.Naming#CA1713;-Microsoft.Naming#CA1709;-Microsoft.Naming#CA1704;-Microsoft.Naming#CA1708;-Microsoft.Naming#CA1715;-Microsoft.Naming#CA1710;-Microsoft.Naming#CA1720;-Microsoft.Naming#CA1707;-Microsoft.Naming#CA1722;-Microsoft.Naming#CA1711;-Microsoft.Naming#CA1716;-Microsoft.Naming#CA1725;-Microsoft.Naming#CA1719;-Microsoft.Naming#CA1721;-Microsoft.Naming#CA1724;-Microsoft.Naming#CA1726;-Microsoft.Portability#CA1901;-Microsoft.Portability#CA1900;-Microsoft.Reliability#CA2002;-Microsoft.Reliability#CA2003;-Microsoft.Reliability#CA2004;-Microsoft.Reliability#CA2006;-Microsoft.Security#CA2116;-Microsoft.Security#CA2117;-Microsoft.Security#CA2105;-Microsoft.Security#CA2115;-Microsoft.Security#CA2104;-Microsoft.Security#CA2122;-Microsoft.Security#CA2114;-Microsoft.Security#CA2123;-Microsoft.Security#CA2111;-Microsoft.Security#CA2108;-Microsoft.Security#CA2107;-Microsoft.Security#CA2103;-Microsoft.Security#CA2118;-Microsoft.Security#CA2109;-Microsoft.Security#CA2119;-Microsoft.Security#CA2106;-Microsoft.Security#CA2112;-Microsoft.Security#CA2120;-Microsoft.Security#CA2121;-Microsoft.Security#CA2126;-Microsoft.Security#CA2124;-Microsoft.Usage#CA2236;-Microsoft.Usage#CA2227;-Microsoft.Usage#CA2213;-Microsoft.Usage#CA2216;-Microsoft.Usage#CA2214;-Microsoft.Usage#CA2222;-Microsoft.Usage#CA1806;-Microsoft.Usage#CA2217;-Microsoft.Usage#CA2212;-Microsoft.Usage#CA2219;-Microsoft.Usage#CA2201;-Microsoft.Usage#CA2228;-Microsoft.Usage#CA2221;-Microsoft.Usage#CA2220;-Microsoft.Usage#CA2240;-Microsoft.Usage#CA2229;-Microsoft.Usage#CA2238;-Microsoft.Usage#CA2207;-Microsoft.Usage#CA2208;-Microsoft.Usage#CA2235;-Microsoft.Usage#CA2237;-Microsoft.Usage#CA2232;-Microsoft.Usage#CA2223;-Microsoft.Usage#CA2211;-Microsoft.Usage#CA2233;-Microsoft.Usage#CA2225;-Microsoft.Usage#CA2226;-Microsoft.Usage#CA2231;-Microsoft.Usage#CA2224;-Microsoft.Usage#CA2218;-Microsoft.Usage#CA2234;-Microsoft.Usage#CA2239;-Microsoft.Usage#CA2200;-Microsoft.Usage#CA1801;-Microsoft.Usage#CA2205;-Microsoft.Usage#CA2230</CodeAnalysisRules>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ChessBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ChessBoard.Designer.cs">
+      <DependentUpon>ChessBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ChessBoard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChessBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Source\GraphicsBuffer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\BBishop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\WKnight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\WPawn.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\WQueen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\WRook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\WBishop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\WKing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\BRook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\BQueen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\BPawn.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\BKnight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic\BKing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\BECBishop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\BECKing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\BECKnight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\BECPawn.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\BECQueen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\BECRook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\WECBishop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\WECKing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\WECKnight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\WECPawn.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\WECQueen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnchancedClassic\WECRook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChessBinChess.ico" />
+    <None Include="Resources\Icons\ApolloChess.ico" />
+    <None Include="Resources\ClassicHiRes\PNG\BlackBishop.png" />
+    <None Include="Resources\ClassicHiRes\PNG\BlackKing.png" />
+    <None Include="Resources\ClassicHiRes\PNG\BlackKnight.png" />
+    <None Include="Resources\ClassicHiRes\PNG\BlackPawn.png" />
+    <None Include="Resources\ClassicHiRes\PNG\BlackQueen.png" />
+    <None Include="Resources\ClassicHiRes\PNG\BlackRook.png" />
+    <None Include="Resources\ClassicHiRes\PNG\WhiteBishop.png" />
+    <None Include="Resources\ClassicHiRes\PNG\WhiteKing.png" />
+    <None Include="Resources\ClassicHiRes\PNG\WhiteKnight.png" />
+    <None Include="Resources\ClassicHiRes\PNG\WhitePawn.png" />
+    <None Include="Resources\ClassicHiRes\PNG\WhiteQueen.png" />
+    <None Include="Resources\ClassicHiRes\PNG\WhiteRook.png" />
+    <None Include="Resources\ClassicHiRes\Small\BlackBishopSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\BlackKingSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\BlackKnightSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\BlackPawnSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\BlackQueenSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\BlackRookSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\WhiteBishopSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\WhiteKingSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\WhiteKnightSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\WhitePawnSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\WhiteQueenSmall.png" />
+    <None Include="Resources\ClassicHiRes\Small\WhiteRookSmall.png" />
+    <Content Include="Resources\Icons\ChessBinChess.ico" />
+    <None Include="Resources\PayPalP.png" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessAIEngine\ChessEngine.csproj">
+      <Project>{EE6601BE-F9B4-42B1-B491-1762CBD3CA25}</Project>
+      <Name>ChessEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

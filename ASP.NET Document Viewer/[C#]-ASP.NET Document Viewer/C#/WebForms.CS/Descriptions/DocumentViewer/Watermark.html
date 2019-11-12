@@ -1,0 +1,24 @@
+﻿
+
+<p>
+    You can add text or image watermarks to the document via <b>TextWatermark</b> and <b>ImageWatermark</b> classes.
+    You can customize the watermarks with wide range of options e.g. position, size, rotation, opacity, color.
+    Downloading as PDF will also include the same watermarks.
+</p>
+
+<p>
+    Watermarks can be applied to specific pages via <b>PageRange</b> property.
+    The range is specified as a string in the following forms or combination thereof:
+</p>
+<table>
+    <tr><td style="width: 100px;">5</td><td>single value</td></tr>
+    <tr><td>1,2,3,4,5</td><td>sequence of values</td></tr>
+    <tr><td>1-5</td><td>closed range</td></tr>
+    <tr><td>-5</td><td>open range (converted to a sequence from 1 to 5)</td></tr>
+    <tr><td>1-</td><td>open range (converted to a sequence from 1 to final page)</td></tr>
+    <tr><td>all</td><td>keyword representing all page numbers.</td></tr>
+    <tr><td>odd</td><td>keyword representing odd page numbers.</td></tr>
+    <tr><td>even</td><td>keyword representing even page numbers.</td></tr>
+</table>
+
+

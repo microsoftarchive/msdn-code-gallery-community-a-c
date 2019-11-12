@@ -1,0 +1,29 @@
+﻿<section>
+    <header>
+        <h2 class="page-title" data-bind="text: title"></h2>
+    </header>
+    <div data-bind="with: contact">
+        <div>
+            <label>Name:</label>
+            <input data-bind="value: name" placeholder="[name]" />
+        </div>
+        <div>
+            <label>Mobile:</label>
+            <input data-bind="value: mobile" placeholder="[mobile]" />
+        </div>
+
+        <div>
+            <label>Email:</label>
+            <input data-bind="value: email" placeholder="[email]" />
+        </div>
+    </div>
+    <div class="button-margin">
+        <button class="btn btn-info"
+            data-bind="click: cancel, enable: hasChanges">
+            Cancel</button>
+        <button class="btn btn-info"
+            data-bind="click: save, enable: canSave">
+            Save</button>
+
+    </div>
+</section>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Time Off Calendar" OnQuickLaunch="TRUE" TemplateType="10002" Url="Lists/TimeOffCalendar" Description="This Calendar hold all the Time Off Disposition for Requested Out of Office Personnel"></ListInstance>
+</Elements>

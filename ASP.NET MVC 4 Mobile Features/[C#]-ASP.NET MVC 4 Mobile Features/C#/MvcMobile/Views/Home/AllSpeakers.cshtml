@@ -1,0 +1,16 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "All speakers";
+  //  DisplayModes.RequireConsistentDisplayMode = false;
+}
+
+<h2>Speakers</h2>
+
+<ul>
+    @foreach (var speaker in Model) {
+        <li>@Html.ActionLink(speaker, "SessionsBySpeaker", new { speaker })</li>
+    }
+</ul>
+
+

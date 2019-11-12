@@ -1,0 +1,223 @@
+# Azure Library for Lucene.Net (Full Text Indexing for Azure)
+## Requires
+- Visual Studio 2010
+## License
+- MS-LPL
+## Technologies
+- Microsoft Azure
+- Lucene
+## Topics
+- Windows Azure and WCF
+## Updated
+- 10/10/2012
+## Description
+
+<h1><span id="ctl00_ctl00_Content_TabContentPanel_Content_wikiSourceLabel">&nbsp;</span></h1>
+<h1>&nbsp;THIS PROJECT HAS BEEN MOVED TO <a href="https://azuredirectory.codeplex.com/">
+https://azuredirectory.codeplex.com/</a></h1>
+<p>&nbsp;</p>
+<h4>Project description</h4>
+<p>This project allows you to create Lucene Indexes via a Lucene Directory object which uses Windows Azure BlobStorage for persistent storage.
+<br>
+<br>
+<br>
+</p>
+<h4>About</h4>
+<p>This project allows you to create Lucene Indexes via a Lucene Directory object which uses Windows Azure BlobStorage for persistent storage.
+<br>
+<br>
+</p>
+<h4>Background</h4>
+<h5>Lucene.NET</h5>
+<p>Lucene is a mature Java based open source full text indexing and search engine and property store.
+<br>
+Lucene.NET is a mature port of that to C#<br>
+Lucene provides:</p>
+<ul>
+<li>Super simple API for storing documents with arbitrary properties </li><li>Complete control over what is indexed and what is stored for retrieval </li><li>Robust control over where and how things are indexed, how much memory is used, etc.
+</li><li>Superfast and super rich query capabilities
+<ul>
+<li>Sorted results </li><li>Rich constraint semantics AND/OR/NOT etc. </li><li>Rich text semantics (phrase match, wildcard match, near, fuzzy match etc) </li><li>Text query syntax (example: Title:(dog AND cat) OR Body:Lucen* ) </li><li>Programmatic expressions </li><li>Ranked results with custom ranking algorithms </li></ul>
+</li></ul>
+<p>&nbsp;</p>
+<h5>AzureDirectory</h5>
+<p>AzureDirectory smartly uses local file storage to cache files as they are created and automatically pushes them to blobstorage as appropriate. Likewise, it smartly caches blob files back to the a client when they change. This provides with a nice blend of
+ just in time syncing of data local to indexers or searchers across multiple machines.<br>
+<br>
+With the flexibility that Lucene provides over data in memory versus storage and the just in time blob transfer that AzureDirectory provides you have great control over the composibility of where data is indexed and how it is consumed.<br>
+<br>
+To be more concrete: you can have 1..N worker roles adding documents to an index, and 1..N searcher webroles searching over the catalog in near real time.<br>
+<br>
+</p>
+<h4>Usage</h4>
+<p><br>
+To use you need to create a blobstorage account on <a class="externalLink" href="http://azure.com/">
+http://azure.com</a>.<br>
+<br>
+Create an App.Config or Web.Config and configure your accountinto:</p>
+<pre>	&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;<br>	&lt;configuration&gt;<br>	  &lt;appSettings&gt;<br>		&lt;!-- azure SETTINGS --&gt;<br>		&lt;add key=&quot;BlobStorageEndpoint&quot; value=&quot;http://YOURACCOUNT.blob.core.windows.net&quot;/&gt;<br>		&lt;add key=&quot;AccountName&quot; value=&quot;YOURACCOUNTNAME&quot;/&gt;<br>		&lt;add key=&quot;AccountSharedKey&quot; value=&quot;YOURACCOUNTKEY&quot;/&gt;<br>	  &lt;/appSettings&gt;<br>	&lt;/configuration&gt;<br></pre>
+<p><br>
+To add documents to a catalog is as simple as<br>
+<br>
+</p>
+<pre>            AzureDirectory azureDirectory = new AzureDirectory(&quot;TestCatalog&quot;);<br>            IndexWriter indexWriter = new IndexWriter(azureDirectory, new StandardAnalyzer(), true);<br>            Document doc = new Document();<br>            doc.Add(new Field(&quot;id&quot;, DateTime.Now.ToFileTimeUtc().ToString(), Field.Store.YES, Field.Index.TOKENIZED, Field.TermVector.NO));<br>            doc.Add(new Field(&quot;Title&quot;, &ldquo;this is my title&rdquo;, Field.Store.YES, Field.Index.TOKENIZED, Field.TermVector.NO));<br>            doc.Add(new Field(&quot;Body&quot;, &ldquo;This is my body&rdquo;, Field.Store.YES, Field.Index.TOKENIZED, Field.TermVector.NO));<br>            indexWriter.AddDocument(doc);<br>            indexWriter.Close();<br>}<br></pre>
+<p><br>
+And searching is as easy as:<br>
+<br>
+</p>
+<pre>            IndexSearcher searcher = new IndexSearcher(azureDirectory);                <br>            Lucene.Net.QueryParsers.QueryParser parser = QueryParser(&quot;Title&quot;, new StandardAnalyzer());<br>            Lucene.Net.Search.Query query = parser.Parse(&quot;Title:(Dog AND Cat)&quot;);<br> <br>            Hits hits = searcher.Search(query);<br>            for (int i = 0; i &lt; hits.Length(); i&#43;&#43;)<br>            {<br>                Document doc = hits.Doc(i);<br>                Console.WriteLine(doc.GetField(&quot;Title&quot;).StringValue());<br>            }<br></pre>
+<p>&nbsp;</p>
+<h4>Caching and Compression</h4>
+<p><br>
+AzureDirectory compresses blobs before sent to the blob storage. Blobs are automatically cached local to reduce roundtrips for blobs which haven't changed.
+<br>
+<br>
+By default AzureDirectory stores this local cache in a temporary folder. You can easily control where the local cache is stored by passing in a Directory object for whatever type and location of storage you want.<br>
+<br>
+This example stores the cache in a ram directory:</p>
+<pre>      AzureDirectory azureDirectory = new AzureDirectory(&quot;MyIndex&quot;, new RAMDirectory());<br></pre>
+<p><br>
+And this example stores in the file system in C:\myindex</p>
+<pre>      AzureDirectory azureDirectory = new AzureDirectory(&quot;MyIndex&quot;, new FSDirectory(@&quot;c:\myindex&quot;));<br></pre>
+<p><br>
+<br>
+<br>
+</p>
+<h4>Notes on settings</h4>
+<p><br>
+Just like a normal lucene index, calling optimize too often causes a lot of churn and not calling it enough causes too many segment files to be created, so call it &quot;just enough&quot; times. That will totally depend on your application and the nature of your pattern
+ of adding and updating items to determine (which is why lucene provides so many knobs to configure it's behavior).<br>
+<br>
+The default compound file support that Lucene uses is to reduce the number of files that are generated...this means it deletes and merges files regularly which causes churn on the blob storage. Calling indexWriter.SetCompoundFiles(false) will give better performance.
+<br>
+<br>
+We run it with a RAMDirectory for local cache and SetCompoundFiles(false); <br>
+<br>
+The version of Lucene.NET checked in as a binary is Version 2.3.1, but you can use any version of Lucene.NET you want by simply enlisting from the above open source site.<br>
+<br>
+</p>
+<h1>FAQ</h1>
+<p><span id="ctl00_ctl00_Content_TabContentPanel_Content_wikiSourceLabel">&nbsp;</span></p>
+<h3>How does this relate to Azure Tables?</h3>
+<p><br>
+Lucene doesn&rsquo;t have any concept of tables. Lucene builds its own property store on top of the Directory() storage abstraction which essentially is both query and storage so it replicates the functionality of tables. You have to question the benefit of
+ having tables in this case.<br>
+<br>
+With LinqToLucene you can have Linq and strongly typed objects just like table storage. Ultimately, Table storage is just an abstraction on top of blob storage, and so is Lucene (a table abstraction on top of blob storage).<br>
+<br>
+Stated another way, just about anything you can build on table storage you can build on lucene storage.<br>
+<br>
+If it is important that you have table storage as well as an Lucene index then any time you create a table entity you simply add that Entity to lucene as a document (either by a simply hand mapping or via reflection Linq To Lucene Annotations) as well. Queries
+ can then be against lucene, and properties retrieved from table storage or from Lucene.<br>
+<br>
+But if you think about it you are duplicating your data then and not really getting much benefit.
+<br>
+<br>
+There is 1 benefit to the table storage, and that is as an archive of the state of your data. If for some reason you need to rebuild your index you can simply reconstitute it from the table storage, but that&rsquo;s probably the only time you would use the
+ table storage then.<br>
+<br>
+</p>
+<h3>How does this perform?</h3>
+<p>Lucene is capable of complex searches over millions of records in sub second times depending on how it is configured.
+<br>
+see <a class="externalLink" href="http://lucene.apache.org/java/2_3_2/benchmarks.html">
+http://lucene.apache.org/java/2_3_2/benchmarks.html</a> for lots of details about Lucene in general.<br>
+<br>
+But really this is a totally open ended question. It depends on:</p>
+<ul>
+<li>the amount of data </li><li>the frequency of updates </li><li>the kind of schema </li><li>etc. </li></ul>
+<p>Like any flexible system you can configure it to be supremely performant or supremely unperformant.
+<br>
+<br>
+The key to getting good performance is for you to understand how Lucene works. <br>
+<br>
+Lucene performs efficient incremental indexing by always appending data into files called segments. Periodically it will merge smaller segments into larger segments (a merge). The important thing to know is that it will NEVER modify an old segment, but instead
+ will create new segments and then delete old segments when they are no longer in use.
+<br>
+<br>
+Lucene is built on top of an abstract storage class called a &quot;Directory&quot; object, and the Azure Library creates an implementation of that class called &quot;AzureDirectory&quot;. The directory contract basically provides:</p>
+<ul>
+<li>the ability to enumerate segments </li><li>the ability to delete segments </li><li>providing a stream for Writing a file </li><li>providing a stream for Reading a file </li><li>etc. </li></ul>
+<p><br>
+Existing Directory objects in Lucene are:</p>
+<ul>
+<li>RAMDirectory -- a in memory directory implementation </li><li>FSDirectory -- a disk backed directory implementation </li></ul>
+<p><br>
+The AzureDirectory class implements the Directory contract as a wrapper around another Directory class which it uses as a local cache.
+<br>
+<br>
+</p>
+<ul>
+<li>When Lucene asks to enumerate segments, AzureDirectory enumerates the segments in blob storage.
+</li><li>When Lucene asks to delete a segment, the AzureDirectory deletes the local cache segment and the blob in blob storage.
+</li><li>When Lucene asks to for a read stream for a segment (remember segments never change after being closed) AzureDirectory looks to see if it is in the local cache Directory, and if it is, simply returns the local cache stream for that segment. Otherwise it
+ fetches the segment from blobstorage, stores it in the local cache Directory and then returns the local cache steram for that segment.
+</li><li>When Lucene asks for a write stream for a segment it returns a wrapper around the stream in the local Directory cache, and on close it pushes the data up to a blob in blob storage.
+</li></ul>
+<p><br>
+The net result is that:</p>
+<ul>
+<li>all read operations will be performed against the local cache Directory object (which if it is a RAMDirectory is near instaneous).
+</li><li>Any time a segment is missing in the local cache you will incure the cost of downloading the segment once.
+</li><li>All Write operations are performed against the local cache Directory object until the segment is closed, at which point you incur the cost of uploading the segment.
+</li></ul>
+<p><br>
+The <strong>key</strong> piece to understand is that the amount of transactions you have to perform to blob storage depends on the Lucene settings which control how many segments you have before they are merged into a bigger segment (mergeFactor).
+<strong>Calling Optimize() is a really bad idea</strong> because it causes ALL SEGMENTS to be merged into ONE SEGMENT...essentially causing the entire index to have to be recreated, uploaded to blob storage and downloaded to all consumers.<br>
+<br>
+The other big factor is how often you create your searcher objects. When you create a Lucene Searcher object it essentially binds to the view of the index at that point in time. Regardless of how many updates are made to the index by other processes, the searcher
+ object will have a static view of the index in it's local cache Directory object. If you want to update the view of the searcher, you simply discard the old one and create a new one and again it will be up to date for the current state of the index.<br>
+<br>
+If you control those factors, you can have a super scalable fast system which can handle millions of records and thousands of queries per second no problem.<br>
+<br>
+</p>
+<h3>What is the best way to build an Azure application around this?</h3>
+<p>Of course that depends on your data flow, etc. but in general here is an example architecture that works well:<br>
+<br>
+The index can only be updated by one process at a time, so it makes sense to push all Add/Update/Delete operations through an indexing role. The obvious way to do that is to have an Azure queue which feeds a stream of objects to be indexed to a worker role
+ which maintains updating the index. <br>
+<br>
+On the search side, you can have a search WebRole which simply creates an AzureDirectory with a RAMDirectory pointed to the blob storage the indexing role is maintaining. As appropriate (say once a minute) the searcher webrole would create a new IndexSearcher
+ object around the index, and any changes will automatically be synced into the cache directory on the searcher webRole.<br>
+<br>
+To scale your search engine you can simply increase the instance count of the searcher webrole to handle the load.</p>
+<p>&nbsp;</p>
+<h2>Version History</h2>
+<div class="WikiContent" style="width:1670px"><span id="ctl00_ctl00_Content_TabContentPanel_Content_wikiSourceLabel">
+<div class="wikidoc"><span style="text-decoration:underline">Version 1.0.5</span></div>
+<ul>
+<li>
+<div class="wikidoc">&nbsp;Replaced existing of blob lock file with blob leases to prevent orphaned lock files from happening</div>
+</li></ul>
+<div class="wikidoc"><span style="text-decoration:underline">Version 1.0.4</span></div>
+<ul>
+<li>
+<div class="wikidoc">Replaced mutx with BlobMutexManager to solve local mutex permissions</div>
+</li></ul>
+<p><em>Thanks to Andy Hitchman for the bug fixes</em></p>
+<div class="wikidoc"><span style="text-decoration:underline">Version 1.0.3</span></div>
+<div class="wikidoc">
+<ul>
+<li>Added a call to persist the CachedLength and CachedLastModified metadata properties to the blob (not included in the content upload).
+</li><li>AzureDirectory.FileLength was using the actual blob length rather than the CachedLength property. The latest version of lucene checks the length after closing an index to verify that its correct and was throwing an exception for compressed blobs.
+</li><li>Non-compressed blobs were not being uploaded </li><li>Updated the AzureDirectory constructor to use a CloudStorageAccount rather than the StorageCredentialsAccountAndKey so its possible to use the Development store for testing
+</li><li>works with Lucene.NET 2.9.2 </li></ul>
+</div>
+<em>thanks to Joel Fillmore for the bug fixes</em><br>
+<br>
+<span style="text-decoration:underline">Version 1.0.2</span><br>
+<ul>
+<li>updated to use Azure SDK 1.2 </li></ul>
+<br>
+<span style="text-decoration:underline">Version 1.0.1</span><br>
+<ul>
+<li>rewritten to use V1.1 of Azure SDK and the azure storage client </li><li>released to MSDN Code Gallery under the MS-PL license. </li></ul>
+<br>
+<span style="text-decoration:underline">Version 1.0</span><br>
+<ul>
+<li>Initial release- written for V1.0 CTP of Azure using the sample storage lib </li><li>Released under restrictive MSR license on http://research.microsoft.com </li></ul>
+</span></div>
+<p>&nbsp;</p>
+<h4>Related</h4>
+<p>There is a LINQ to Lucene provider <a class="externalLink" href="http://linqtolucene.codeplex.com/Wiki/View.aspx?title=Project%20Documentation">
+http://linqtolucene.codeplex.com/Wiki/View.aspx?title=Project%20Documentation</a> on codeplex which allows you to define your schema as a strongly typed object and execute LINQ expressions against the index.</p>

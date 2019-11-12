@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <tenantinfo>
+    <tenantname>NAME.onMicrosoft.com</tenantname>
+    <tenantid>NAME.onmicrosoft.com</tenantid>
+  </tenantinfo>
+  <application>
+    <clientid>AppPrincipalID for AAD Application</clientid>
+    <clientsecret>ClientSecret for AAD Appliction</clientsecret>
+  </application>
+  <o365admincredentials>
+    <adminupn>UserPrincipalName of Admin Account</adminupn>
+    <adminpassword>PASSWORD</adminpassword>
+  </o365admincredentials>
+  <groupinfo>
+    <groupbased>false</groupbased>
+    <aadgroupobjectid>ObjectID of Group for GroupBased</aadgroupobjectid>
+  </groupinfo>
+  <license>
+    <skuid>SkuIdToEnable</skuid>
+    <enabledplans>
+      <enabledplanid>ServicePlanId1</enabledplanid>
+      <enabledplanid>ServicePlanId2</enabledplanid>
+      <enabledplanid>ServicePlanId3</enabledplanid>
+      <enabledplanid>ServicePlanId4</enabledplanid>
+      <enabledplanid>ServicePlanId5</enabledplanid>
+      <enabledplanid>ServicePlanId6</enabledplanid>
+    </enabledplans>
+    <skustoremove>
+      <removeskuid>SkuIdToRemove1</removeskuid>
+      <removeskuid>SkuIdToRemove2</removeskuid>
+      <removeskuid>SkuIdToRemove3</removeskuid>
+    </skustoremove>
+  </license>
+</config>

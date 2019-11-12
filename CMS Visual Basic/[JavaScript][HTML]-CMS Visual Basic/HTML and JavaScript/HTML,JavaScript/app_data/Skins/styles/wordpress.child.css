@@ -1,0 +1,29 @@
+.ImageTopLeft
+{
+	position:fixed;
+	left: 5%;
+	top: 5px;
+	z-index: -1;
+}
+
+.WebSiteTitle
+{
+  margin-left: 200px;
+	right:0px;
+}
+
+.Button, input[type='submit'], input[type='reset'], input[type='button'], .m0
+{
+  margin-right:0px;
+  margin-left:0px;
+  margin-bottom:0px;
+	padding:5px;
+	border-style:double;
+	border:0px;
+	margin-right:1px;
+	border-color: $BackgroundColorPage;
+ /* for IE */
+  filter:alpha(opacity=80);
+  /* CSS3 standard */
+  opacity:0.8;
+}

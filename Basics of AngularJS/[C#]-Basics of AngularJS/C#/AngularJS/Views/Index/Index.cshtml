@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<b>ng-app</b>
+<br />
+<div ng-app="angularBasic" ng-controller="InrToDollar">
+    <p>My name is : {{"Please make me upper case letter".toUpperCase()}}</p>
+    <p>Add me please: 2+2: {{ 2+2 }}</p>
+    <b>ng-init</b><br />
+    <div ng-init="myFavoriteWebsites=['http://www.c-sharpcorner.com/','http://www.codeproject.com/','http://sibeeshpassion.com/']">
+        My First fav website is : {{myFavoriteWebsites[0]}}
+        <br />
+        My Second fav website is : {{myFavoriteWebsites[1]}}
+        <br />
+        My Third fav website is : {{myFavoriteWebsites[2]}}
+    </div>
+    <br />
+    <b>ng-model</b><br />
+    Currency in INR:
+    <input type="number" ng-model="curinr" />
+    <br />
+    Currency in Dollar: {{curinr*62.27}}
+    <br />
+    <b>nd-repeat</b><br />
+    <div ng-init="myFavoriteWebsites=['http://www.c-sharpcorner.com/','http://www.codeproject.com/','http://sibeeshpassion.com/']">
+        <ul>
+            My favorite websites are:
+            <li ng-repeat="n in myFavoriteWebsites">{{n}}
+            </li>
+        </ul>
+    </div>
+    <b>ng-Controller</b><br />
+    <div >
+        Currency in INR:
+        <input type="number" ng-model="inrvalue" />
+        <br />
+        Currency in Dollar:  {{inrToDollar()}}
+    </div>
+   
+    <br />
+</div>
+<script src="~/Script/angular.min.js"></script>
+ <script>
+        var my = angular.module('angularBasic', []);
+        my.controller('InrToDollar', function ($scope) {
+            $scope.inrToDollar = function () {
+               return $scope.inrvalue * 62.27;
+            }
+        });
+</script>

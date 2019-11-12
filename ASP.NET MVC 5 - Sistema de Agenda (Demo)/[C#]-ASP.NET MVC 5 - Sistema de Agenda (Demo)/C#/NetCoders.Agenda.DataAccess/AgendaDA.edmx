@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AGENDAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_AG_AGENDA">
+          <Key>
+            <PropertyRef Name="ID_AGENDA" />
+          </Key>
+          <Property Name="ID_AGENDA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TT_AGENDA" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DS_SIMPLES" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="DS_COMPLETA" Type="varchar" MaxLength="1500" Nullable="false" />
+          <Property Name="DT_AGENDA" Type="date" Nullable="false" />
+          <Property Name="DT_INSERIDO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="AGENDAModelStoreContainer">
+          <EntitySet Name="T_AG_AGENDA" EntityType="Self.T_AG_AGENDA" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AGENDAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_AG_AGENDA">
+          <Key>
+            <PropertyRef Name="ID_AGENDA" />
+          </Key>
+          <Property Name="ID_AGENDA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TT_AGENDA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DS_SIMPLES" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DS_COMPLETA" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DT_AGENDA" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DT_INSERIDO" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="AGENDAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_AG_AGENDA" EntityType="Self.T_AG_AGENDA" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AGENDAModelStoreContainer" CdmEntityContainer="AGENDAEntities">
+          <EntitySetMapping Name="T_AG_AGENDA">
+            <EntityTypeMapping TypeName="AGENDAModel.T_AG_AGENDA">
+              <MappingFragment StoreEntitySet="T_AG_AGENDA">
+                <ScalarProperty Name="ID_AGENDA" ColumnName="ID_AGENDA" />
+                <ScalarProperty Name="TT_AGENDA" ColumnName="TT_AGENDA" />
+                <ScalarProperty Name="DS_SIMPLES" ColumnName="DS_SIMPLES" />
+                <ScalarProperty Name="DS_COMPLETA" ColumnName="DS_COMPLETA" />
+                <ScalarProperty Name="DT_AGENDA" ColumnName="DT_AGENDA" />
+                <ScalarProperty Name="DT_INSERIDO" ColumnName="DT_INSERIDO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

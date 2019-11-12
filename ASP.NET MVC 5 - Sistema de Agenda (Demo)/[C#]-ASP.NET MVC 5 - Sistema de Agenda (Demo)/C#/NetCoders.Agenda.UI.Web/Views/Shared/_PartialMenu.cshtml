@@ -1,0 +1,39 @@
+﻿<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Menu de Opções</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Agenda</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li>
+                @Html.ActionLink("Ver Agenda", "Listar", "Agenda")
+                @*<a href="#">Ver Agenda</a>*@
+            </li>
+            <li>
+                @Html.ActionLink("Novo Evento", "Cadastrar", "Agenda")
+                @*<a href="#">Novo Cadastro</a>*@
+            </li>
+        </ul>
+        @*<form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Faça sua busca...">
+            </div>
+            <button type="submit" class="btn btn-default">
+                <figure>
+                    <figcaption>
+                        Buscar
+                        <img src="~/Content/imagens/img-buscar.png" alt="Pesquisar" />
+                    </figcaption>
+                </figure>
+            </button>
+        </form>*@
+    </div><!-- /.navbar-collapse -->
+</nav>

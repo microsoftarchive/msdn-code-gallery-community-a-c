@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="8766DE62-AA70-4C86-98EF-819F448569BE" Publisher="CN=Microsoft" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Bing Maps C# Traffic Sample</DisplayName>
+    <PublisherDisplayName>Microsoft</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TrafficSample.App">
+      <VisualElements DisplayName="Bing Maps C# Traffic Sample" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="The Traffic sample demonstrates how easy it is to overlay a traffic layer on your map controlusing C#, XAML, and the Bing Maps SDK for Windows Store apps." ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="Assets\SplashScreen.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

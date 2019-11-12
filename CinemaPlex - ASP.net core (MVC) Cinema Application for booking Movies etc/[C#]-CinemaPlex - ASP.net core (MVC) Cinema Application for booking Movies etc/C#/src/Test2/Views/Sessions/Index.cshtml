@@ -1,0 +1,54 @@
+@model IEnumerable<SessionModel>
+
+@{
+    ViewData["Title"] = "Sessions";
+    MovieModel movieDetails;
+    CinemaModel cinemaDetails;
+}
+
+<h2>Movies</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Logo
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Cinema Location
+            </th>
+            <th>
+                Session Time
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Program.data.Sessions) {
+    movieDetails = Program.data.getMovie(item.MovieID);
+    cinemaDetails = Program.data.getCinema(item.CineplexID);
+        <tr>
+            <td>
+                @Html.ActionLink(movieDetails.Title, "Details", new { id = item.SessionID })
+            </td>
+            <td>
+                <img class="poster" src="@movieDetails.MovieLogo" alt="Image" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => movieDetails.Description)
+            </td>
+            <td>
+                @Html.ActionLink(cinemaDetails.Location, "Details", "Cinemas", new { id = cinemaDetails.CineplexID })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeRunning)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

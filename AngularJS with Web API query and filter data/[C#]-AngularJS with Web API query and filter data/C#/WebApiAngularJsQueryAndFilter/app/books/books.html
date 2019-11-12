@@ -1,0 +1,59 @@
+﻿<div class="row" ng-hide="vm.status.loaded">
+    <div class="col-md-12">
+        <div class="text-center">
+            <i class="fa fa-circle-o-notch fa-spin fa-5x"></i>
+            <h2>loading...</h2>
+        </div>
+    </div>
+</div>
+<div ng-show="vm.status.loaded">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>book search</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <book-filter available-filters="vm.options.selectableFilters" query="vm.query"></book-filter>
+            <!--debug only-->
+            <h3>query:</h3>
+            <pre>{{vm.query | json}}</pre>
+        </div>
+        <div class="col-md-offset-1 col-md-8">
+            <div class="row">
+                <div class="col-md-8">
+                    <book-search search-text="vm.query.searchText"></book-search>
+                </div>
+                <div class="col-md-4">
+                    <book-sort order-by-options="vm.options.orderByOptions" order-by="vm.query.orderBy"></book-sort>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <book-search-status books="vm.books" filters="vm.currentQuery.filters" search-status="vm.status"></book-search-status>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled">
+                        <li ng-repeat="book in vm.books">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>{{book.title}} <small>(<a href="" ng-click="vm.filterBy('classifications',book.classification.id)">{{book.classification.name | lowercase}})</a></small></h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>by <a href="" ng-click="vm.filterBy('authors', book.author.id)">{{book.author.name}}</a></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>published by <a href="" ng-click="vm.filterBy('publishers',book.publisher.id)">{{book.publisher.name}}</a></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

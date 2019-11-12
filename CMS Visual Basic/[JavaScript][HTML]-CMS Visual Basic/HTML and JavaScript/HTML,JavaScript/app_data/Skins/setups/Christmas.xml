@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Skin setup -->
+<variables>
+	<!-- Inside variables to define elements to load -->
+	<add key="ImageTopLeft" value=""/>
+	<add key="Logo" value="resources/images/logos/santa cap.png"/>
+	<add key="BannerAccommodations" value=""/>
+	<add key="BannerServices" value=""/>
+	<add key="Favicon" value="resources/images/favicons/christmas.ico"/>
+	<add key="bgsound" value=""/>
+	<add key="SoundOnlyAtStartSession" value="true"/>
+	<add key="FolderIcons" value="white colors 26"/>
+	<add key="ButtonsWithIcons" value="true"/>
+	<!-- Optional variables for replace in CSS file -->
+  <add key="BackgroundColorPage" value="#ffffff"/>
+  <add key="BackgroundImage" value="resources/images/backgrounds/christmas color.png"/>
+	<add key="BackgroundRepeat" value="repeat"/>
+	<add key="FontColor" value="#004f4e"/>
+	<add key="FontFamily" value="'Arial Narrow', sans-serif"/>
+	<add key="FontSize" value="1.0em"/>
+	
+	<!-- START Set Font (need style fonts button and "title.child.css") -->
+	<add key="FontTitle" value="Verdana"/>
+	<add key="FontButton" value="Verdana"/>
+	<add key="FontButtonSize" value="0.8em"/>
+	<add key="FontMenuSize" value="1.0em"/>
+	<!-- END Set Font -->
+
+  <!-- START "Gradient Vertical.child" -->
+  <add key="StartGradient" value="rgba(255,255,255,0.5)"/>
+  <add key="EndGradient" value="rgba(0,0,255,0.5)"/>
+  <!-- END -->
+
+  <add key="BackgroundImageBox" value="resources/images/backgrounds/gummy pattern.png"/>
+ 	<add key="BackgroundColorBox" value="#d1fffe"/>
+	<add key="BorderColorBox" value="#d1fffe"/>
+	<add key="BackgroundColorButton" value="#4bfaf8"/>
+
+	<add key="PointListMenu" value="resources/images/ListStyleImage/Christmas list style.png"/>
+
+	<add key="ColorLink" value="#000000"/>
+	<add key="ColorVisitedLink" value="#000000"/>
+
+	<add key="ColorDark" value="#ff0000"/>
+	<add key="ColorBright" value="#ffffff"/>
+
+	<add key="Pattern1" value=""/>
+
+	<add key="ParRowColor" value="#E0CFFF"/><!-- Back Ground color for par box and box menu-->
+	<add key="OddRowColor" value="#FFE0CF"/><!-- Back Ground color for unpair box -->
+	<add key="QuoteColor" value="#FFFFE0"/><!-- Back Ground color for quote -->
+
+	<!-- Border of screen -->
+	<add key="BodyMargin" value="10px"/>
+	<add key="BodyBorderWidth" value="0px"/>
+	<add key="BodyMarginInside" value="0px"/>
+
+	<!-- Rounded element -->
+	<!-- <add key="RoundedButton" value="32px"/> -->
+	<add key="RoundedMenu" value="8px"/>
+  
+	<!-- Shadow -->
+	<!-- <add key="Shadow" value="5px 5px 15px #000000"/> -->
+	<add key="Shadow" value="0 0 0"/>
+
+	<!-- Menu -->
+	<add key="BorderMenu" value="2px outset"/> 
+</variables>

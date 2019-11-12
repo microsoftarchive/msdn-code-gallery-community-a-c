@@ -1,0 +1,414 @@
+﻿
+<html data-ng-app="RESTClientModule">
+@{
+    ViewBag.Title = "Shanu - ShoppingCart";
+}
+
+<body data-ng-controller="AngularJs_ShoppingFController">
+
+    <img src="~/Images/blank.gif" alt="" width="1" height="10" />
+    <table width="99%" style=" border-bottom:3px solid #3273d5;">
+        <tr>
+
+            <td width=" 250">
+                <table width="99%">
+                    <tr>
+                        <td>
+                            Welcome Mr. {{'SHANU'}}
+
+                        </td>
+
+
+                    </tr>
+                </table>
+            </td>
+            <td class="style1" align="center">
+                <h3>Shanu - Shopping Cart using AngularJs, MVC and WCF   :)</h3>
+
+
+            </td>
+            <td align="right">
+                <div>
+                    Today Date is :
+                    {{date | date:'yyyy-MM-dd'}}
+                </div>
+
+            </td>
+        </tr>
+    </table>
+
+    <img src="~/Images/blank.gif" alt="" width="1" height="6" />
+    <table id="tblContainer" style='width: 99%;table-layout:fixed;'>
+          <tr ng-show="showItem">
+            <td>
+                <table style=" background-color:#FFFFFF; border: dashed 3px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" 
+cellspacing="2">
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td>
+                            <h3> Add Items to Cart</h3>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+
+                                        <img alt="" src="~/Images/{{Imagename}}" />
+
+                                    </td>
+                                    <td width="30"></td>
+                                    <td valign="top">
+                                        <table style="color:#9F000F;font-size:large" cellpadding="4" cellspacing="6">
+
+                                            <tr>
+                                                <td>
+                                                    <b>Item code </b>
+                                                </td>
+
+                                                <td>
+                                                    : {{Item_ID}}
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <b>   Item Name</b>
+                                                </td>
+
+                                                <td>
+                                                    : {{Item_Name}}
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <b> Price  </b>
+                                                </td>
+
+                                                <td>
+                                                    : {{Item_Price}}
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <b> Description </b>
+
+                                                </td>
+                                                <td>
+                                                    : {{Description}}
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2">
+                                                    <table>
+
+                                                        <tr>
+                                                            <td>
+                                                                <input type="button" id="btnAdd" style="background-color:#4c792d;color:#FFFFFF;font-size:large;width:200px" 
+value="Add to Cart" ng-click="showCart()" />
+
+                                                            </td>
+                                                            <td rowspan="2"><img src="~/Images/shopping_cart72.png" /></td>
+                                                        </tr>
+                                                      
+                                                    </table>
+
+
+                                                </td>
+
+
+                                            </tr>
+                                        </table>
+
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <img src="~/Images/blank.gif" alt="" width="1" height="4" />
+            </td>
+        </tr>
+
+        <tr ng-show="showDetails">
+
+            <td>
+                <table style=" background-color:#FFFFFF; border: solid 2px #6D7B8D; padding: 5px;width: 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+                    <tr>
+                        <td colspan="6" align="right">
+                            
+                                        <input type="button" value=" Click for My Shopping Cart Items " style="background-color:#334668;color:#FFFFFF;font-size:large;
+                                                   border-color:#a2aabe;border-style:dashed;border-width:2px;" ng-click="showMyCart()" />
+                                    
+                   
+                        </td>
+
+                    </tr>
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td width="40" align="center">
+                            <b>Image</b>
+                        </td>
+
+                        <td width="40" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'Item_ID'; reverse=!reverse">
+                            <b>Item Code</b>
+                        </td>
+
+                        <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'Item_Name'; reverse=!reverse">
+                            <b>Item Name</b>
+                        </td>
+
+                        <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'Description'; reverse=!reverse">
+                            <b>Decription</b>
+                        </td>
+
+                        <td width="40" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'Item_Price'; reverse=!reverse">
+                            <b>Price</b>
+                        </td>
+
+
+                        <td width="90" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;" ng-click="predicate = 'AddedBy'; reverse=!reverse">
+                            <b>User Name</b>
+                        </td>
+
+                    </tr>
+                    <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                        <td width="40" align="center">
+                            Filter By ->
+                        </td>
+
+                        <td width="40" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+
+                            <input ng-model="search.Item_ID" style="width:76px" placeholder="ItemCode...">
+                        </td>
+
+                        <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+                            <input ng-model="search.Item_Name" placeholder=" Name...">
+                        </td>
+
+                        <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+                            <input ng-model="search.Description" placeholder="Description...">
+                        </td>
+
+                        <td width="40" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;"></td>
+
+                       
+
+                        <td width="90" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;">
+                            <input ng-model="search.AddedBy">
+                        </td>
+
+                    </tr>
+
+                    <tbody data-ng-repeat="detail in getItemDetailsDisp | filter:search  | orderBy:predicate:reverse">
+                        <tr>
+                            <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    <img src="~/Images/{{detail.Image_Name}}" alt="{{detail.Item_Name}}" ng-click="showImage(detail.Image_Name,detail.Item_ID,detail.Item_Name,detail.Item_Price,detail.Description)" width="48px" height="48px">
+                                </span>
+
+                            </td>
+                            <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.Item_ID}}
+                                </span>
+
+                            </td>
+
+                            <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.Item_Name}}
+                                </span>
+
+                            </td>
+
+                            <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.Description}}
+                                </span>
+
+                            </td>
+
+                            <td align="right" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.Item_Price | number:0}}
+                                </span>
+
+                            </td>
+
+                           
+                            <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                <span style="color:#9F000F">
+                                    {{detail.AddedBy}}
+                                </span>
+
+                            </td>
+
+                           
+                        </tr>
+
+                </table>
+
+            </td>
+
+
+
+        </tr>
+        <tr ng-show ="showCartDetails">
+           
+            <td>
+                <table width="99%">
+                    <tr>
+                        <td align="right">
+                            <input type="button" value="Add More Items " style="background-color:#334668;color:#FFFFFF;font-size:large;width:200px;border-
+
+color:#a2aabe;border-style:dashed;border-width:2px;" ng-click="showItemDetails()" />
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <table style=" background-color:#FFFFFF; border: solid 2px #6D7B8D; padding: 5px;width: 100%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+
+                                <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+                                    <td width="40"></td>
+                                    <td width="60" align="center">
+                                        <b>Image</b>
+                                    </td>
+
+                                    <td width="60" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+
+                                        <b>Item Code</b>
+                                    </td>
+
+                                    <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                        <b>Item Name</b>
+                                    </td>
+
+                                    <td width="120" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                        <b>Decription</b>
+                                    </td>
+
+                                    <td width="110" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                        <b>Price</b>
+                                    </td>
+
+
+                                    <td width="100" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                        <b>Quantity</b>
+                                    </td>
+
+                                    <td width="110" align="center" style="border: solid 1px #FFFFFF; padding: 5px;table-layout:fixed;cursor: pointer;">
+                                        <b>Total Price</b>
+                                    </td>
+                                    <td></td>
+
+                                </tr>
+
+                                <tbody data-ng-repeat="cartItems in items ">
+
+                                    <tr>
+                                        <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">{{$index + 1}}</td>
+                                        <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">
+                                                <img src="~/Images/{{cartItems.Image_Names}}" alt="{{cartItems.Item_Names}}" width="48px" height="48px">
+                                            </span>
+
+                                        </td>
+                                        <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">
+                                                {{cartItems.Item_IDs}}
+                                            </span>
+
+                                        </td>
+
+                                        <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">
+                                                {{cartItems.Item_Names}}
+                                            </span>
+
+                                        </td>
+
+                                        <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">
+                                                {{cartItems.Descriptions}}
+                                            </span>
+
+                                        </td>
+
+                                        <td align="right" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <span style="color:#9F000F">
+                                                {{cartItems.Item_Prices | number:0}}
+                                            </span>
+
+                                        </td>
+
+                                        <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;" align="right">
+                                            <span style="color:#9F000F">
+                                                {{cartItems.ItemCounts}}
+                                            </span>
+
+                                        </td>
+
+                                        <td style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;" align="right">
+                                            <span style="color:#9F000F">
+                                                {{cartItems.Item_Prices*cartItems.ItemCounts | number:0}}
+                                            </span>
+
+                                        </td>
+                                        <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                                            <input type="button" id="btnRemove" style="background-color:#e11919;color:#FFFFFF;font-size:large;width:200px"
+                                                   value="Remove Item from Cart" ng-click="removeFromCart($index)" />
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tr>
+                                        <td colspan="5"></td>
+                                        <td align="right">Price: {{ totalPrice | number:0 }}</td>
+                                        <td align ="right">Qty : {{ totalQty }}</td>
+                                        <td align ="right">Sum: {{ GrandtotalPrice | number:0}}</td>
+                                        <td></td>
+                                    </tr>
+
+</table>
+
+                        </td>
+                    </tr>
+                  
+                </table>
+            </td>
+            </tr>
+
+
+
+</table>
+    <img src="~/Images/blank.gif" alt="" width="1" height="10" />
+
+
+</body>
+
+</html>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-animate.js"></script>
+<script src="~/Scripts/angular-animate.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+
+<script src="~/Scripts/angular-file-upload.js"></script>
+<script src="~/Scripts/angular-file-upload.min.js"></script>
+
+<script src="~/Scripts/shanuAngularScript/Modules.js"></script>
+
+<script src="~/Scripts/shanuAngularScript/Services.js"></script>
+
+<script src="~/Scripts/shanuAngularScript/shoppingController.js"></script>
+

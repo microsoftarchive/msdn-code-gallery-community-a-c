@@ -1,0 +1,68 @@
+﻿.column
+{
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin: 5px 0;
+}
+
+form ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li {
+    padding: 1px;
+    margin: 3px;
+}
+
+form input[type="text"] 
+{
+    width: 100%;
+}
+
+#addContact {
+    width: 300px;
+    float: left;
+    width:30%;
+}
+
+#container {
+    width: 70%;
+    float: left;
+}
+
+#contacts { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    float:left;
+
+}
+
+#contacts li { 
+    margin: 3px 3px 3px 0; 
+    padding: 1px; 
+    float: left;
+    width: 300px;
+    text-align: center;
+    background-image: none;
+    background-color: #F5F5F5;
+}
+
+#contacts li h1 
+{
+    padding: 0;
+    margin: 0;
+    background-image: none;
+    background-color: Orange;
+    color: White;
+    font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+}
+
+.removeContact, .viewImage
+{
+    padding: 3px;
+    text-decoration: none;
+}

@@ -1,0 +1,64 @@
+﻿@model consumewebapiusingrestsharp.Models.ServerData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ServerData</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InitialDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InitialDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EndDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrderNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsDirty)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsDirty)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Type)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RecordIdentifier)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RecordIdentifier)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

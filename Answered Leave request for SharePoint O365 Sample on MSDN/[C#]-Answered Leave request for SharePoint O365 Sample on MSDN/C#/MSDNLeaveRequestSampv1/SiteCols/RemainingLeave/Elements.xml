@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{325e5c52-4281-46b0-8316-409ec73667d9}"
+       Name="RemainingLeave"
+       DisplayName="Remaining Leave"
+       StaticName="RemainingLeave"
+       Type="Choice"
+       Description="Do you have Leave time remaining or will this be Unpaid Time Off?"
+       Required="TRUE"
+       Sealed="FALSE"
+       Group="1_FabianLeaveTravelApp"
+       FillInChoice="FALSE">
+        <CHOICES>
+          <CHOICE>TBD</CHOICE>          
+          <CHOICE>Yes</CHOICE>
+          <CHOICE>No</CHOICE>
+          <CHOICE>Unsure</CHOICE>
+        </CHOICES>
+        <Default>TBD</Default>
+  </Field>
+</Elements>

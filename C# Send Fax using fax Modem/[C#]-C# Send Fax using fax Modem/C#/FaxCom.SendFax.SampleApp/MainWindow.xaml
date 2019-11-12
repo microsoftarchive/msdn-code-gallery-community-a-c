@@ -1,0 +1,114 @@
+﻿<Window x:Class="FaxCom.SendFax.SampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:app="clr-namespace:FaxCom.SendFax.SampleApp"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="818"
+        Height="481">
+    <Grid>
+        <RichTextBox x:Name="faxStatusTextBox"
+                     Width="293"
+                     Height="Auto"
+                     Margin="10,15,0,51"
+                     HorizontalAlignment="Left"
+                     Background="#FFDEE4D3"
+                     FontFamily="Consolas"
+                     FontStyle="Italic"
+                     FontWeight="Bold"
+                     VerticalScrollBarVisibility="Auto">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TextChanged">
+                    <app:ScrollToBottomAction />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </RichTextBox>
+        <TextBox Name="recipientNameTextBox"
+                 Width="261"
+                 Height="23"
+                 Margin="439,250,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Text=""
+                 TextWrapping="Wrap" />
+        <TextBox Name="recipientNumberTextBox"
+                 Width="261"
+                 Height="23"
+                 Margin="439,289,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Text=""
+                 TextWrapping="Wrap" />
+        <Label Margin="339,250,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Recipient Name" />
+        <Label Margin="328,286,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Recipient Number" />
+        <Button Name="sendFaxButton"
+                Width="75"
+                Margin="602,402,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="SendFaxButton_OnClick"
+                Content="Send Fax" />
+        <Button Name="closeButton"
+                Width="75"
+                Margin="705,402,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="CloseButton_OnClick"
+                Content="Close" />
+        <TextBox Name="faxDocumentNameTextbox"
+                 Width="261"
+                 Height="23"
+                 Margin="439,212,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Text=""
+                 TextWrapping="Wrap" />
+        <Label Width="105" Margin="328,212,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Document Name" />
+        <TextBox Name="faxSubjectTextbox"
+                 Width="261"
+                 Height="23"
+                 Margin="439,174,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Text=""
+                 TextWrapping="Wrap" />
+        <Label Width="57" Margin="368,171,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Subject" />
+        <TextBox Name="filePathTextBox"
+                 Width="261"
+                 Height="23"
+                 Margin="439,137,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Text=""
+                 TextWrapping="Wrap" />
+        <Label Margin="357,134,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Pdf File Path" />
+        <Button Name="browseButton"
+                Width="75"
+                Margin="705,137,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="BrowseButton_OnClick"
+                Content="Browse" />
+        <TextBox Name="senderNameTextBox"
+                 Width="261"
+                 Height="23"
+                 Margin="439,80,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Text=""
+                 TextWrapping="Wrap" />
+        <TextBox Name="SenderCompanyTextBox"
+                 Width="261"
+                 Height="23"
+                 Margin="439,109,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Text=""
+                 TextWrapping="Wrap" />
+        <Label Margin="352,80,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Sender Name" />
+        <Label Margin="333,109,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Sender Company" />
+        <Label Content="Fax Information" HorizontalAlignment="Left" Margin="477,29,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+    </Grid>
+</Window>

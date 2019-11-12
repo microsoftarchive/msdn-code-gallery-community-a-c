@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link href="/css/default.css" rel="stylesheet" />
+
+    <!-- Reference To Bing Maps API -->
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+
+    <!-- Our Bing Maps JavaScript Code -->
+    <script src="/js/AnimatedMaps.js"></script>
+
+    <!-- Use script tag to register the Animation module -->
+    <script>Microsoft.Maps.registerModule('AnimationModule');</script>
+    <script type="text/javascript" src="/js/AnimationModule.js"></script>
+</head>
+<body onload="GetMap();">
+    <div id='myMap'></div>
+
+    <div class="sidePanel">
+        <input type="button" value="Clear Map" onclick="ClearMap();" /><br /><br />
+
+        <span>CSS Pushpin Animations</span><br />
+        <input type="button" value="Scale on Hover" onclick="ScalingPin();" /><br /><br />
+
+        <span>Pushpin Animations</span><br/>
+        <input type="button" value="Drop Pin" onclick="DropPin();" /><br />
+        <input type="button" value="Bounce Pin" onclick="BouncePin();" /><br />
+        <input type="button" value="Bounce 4 Pins After Each Other" onclick="Bounce4Pins();" /><br /><br />
+        
+        <span>Path Animations</span><br />
+        <input type="button" value="Move Pin Along Path" onclick="MovePinOnPath();" /><br />
+        <input type="button" value="Move Pin Along Geodesic Path" onclick="MovePinOnPath(true);" /><br />
+        <input type="button" value="Move Map Along Path" onclick="MoveMapOnPath();" /><br />
+        <input type="button" value="Move Map Along Geodesic Path" onclick="MoveMapOnPath(true);" /><br />
+        <input type="button" value="Draw Path" onclick="DrawPath();" /><br />
+        <input type="button" value="Draw Geodesic Path" onclick="DrawPath(true);" />
+    </div>
+</body>
+</html>

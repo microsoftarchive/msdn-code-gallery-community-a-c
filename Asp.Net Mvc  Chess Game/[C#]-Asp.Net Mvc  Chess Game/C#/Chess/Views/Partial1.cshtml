@@ -1,0 +1,451 @@
+﻿
+@*<style>
+    td.black
+{
+    background-color: black;
+}
+
+td.white
+{
+    background-color: white;
+}
+
+span
+{
+    z-index: 122;
+    opacity: 0.5;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+active
+{
+    border-color: green;
+}
+
+td
+{
+    border: 1px solid #999999 /*{borderColorHover}*/;
+    background: #dadada /*{bgColorHover}*/ url(images/ui-bg_glass_75_dadada_1x400.png) /*{bgImgUrlHover}*/ 50% /*{bgHoverXPos}*/ 50% /*{bgHoverYPos}*/ repeat-x /*{bgHoverRepeat}*/;
+    font-weight: normal /*{fwDefault}*/;
+    color: #212121 /*{fcHover}*/;
+    width: 100px;
+    height: 100px;
+}
+
+div.whitePawn
+{
+    background-position: -15px -110px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+div.blackPawn
+{
+    background-position: -15px -15px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 80px;
+}
+
+div.whiteRook
+{
+    background-position: -120px -110px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+div.blackRook
+{
+    background-position: -120px -15px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 80px;
+}
+
+div.whiteKnight
+{
+    background-position: -210px -110px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+div.BlackKnight
+{
+    background-position: -210px -15px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+div.whiteBishop
+{
+    background-position: -310px -110px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+div.blackBishop
+{
+    background-position: -310px -15px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+div.whiteKing
+{
+    background-position: -410px -110px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+div.blackKing
+{
+    background-position: -410px -15px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+div.whiteQueen
+{
+    background-position: -510px -110px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+div.blackQueen
+{
+    background-position: -510px -15px;
+    background-image: url('Content/pieces.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 65px;
+    height: 85px;
+    margin-top: 0px;
+}
+
+
+</style>*@
+
+
+
+
+
+
+
+
+@*            @foreach (var pieces in Model.pieces)
+            {                    
+                <td id="t2" class='white'><span>1</span>
+                    <div id=@i@pieces.name class=@pieces.color@pieces.name></div>
+                </td>                    
+            }*@
+
+
+@*            //else
+                //{ 
+                //<td id=t@_id class='@_color_dashboard' ><span>@_id</span></td>
+            //}*@
+
+
+
+
+
+
+
+@*@{    
+        var chessElement = new string[] { "rook", "knight", "bishop", "queen", "king", "pawn" };
+        var color = new string[] { "black", "white" };
+        var row = new string[] { "A", "B", "C", "D", "E", "F", "G", "H" };
+        var column = new string[] { "1", "2", "3", "4", "5", "6", "7", "8" };
+
+        for (int i = 0; i < column.Length; i++)
+        {
+            var _id = (row[i] + column[i]);
+            var _color = ((i % 2 == 0) ? "white" : "black");
+            
+        <tr>
+
+                        @for (int j = 0; j < row.Length; j++)
+            {
+                var _color_dashboard=(((i + j) % 2 == 0) ? "white" : "black");
+                
+                if (i == 6 || i == 1)
+                {
+                <td id=t@_id class='@_color_dashboard'><span>@_id</span>
+                    <div id=@_id class='@( (i % 2 != 0) ? "white" : "black")@chessElement[5]'></div>
+                </td>
+                }
+                else if (i == 7 || i == 0)
+                {                         
+                <td id=t@_id class='@_color_dashboard'><span>@_id</span>
+                    @switch (j)
+                    {
+                        case 0:<div id=@_id class='@_color@chessElement[0]'></div> break;
+                        case 1:<div id=@_id class='@_color@chessElement[1]'></div> break;
+                        case 2:<div id=@_id class='@_color@chessElement[2]'></div> break;
+                        case 3:<div id=@_id class='@_color@chessElement[3]'></div> break;
+                        case 4:<div id=@_id class='@_color@chessElement[4]'></div> break;
+                        case 5:<div id=@_id class='@_color@chessElement[2]'></div> break;
+                        case 6:<div id=@_id class='@_color@chessElement[1]'></div> break;
+                        case 7:<div id=@_id class='@_color@chessElement[0]'></div> break;
+                    }
+                </td>
+                }
+                else
+                {                              
+                <td id=t@_id class='@_color_dashboard' ><span>@_id</span></td>               
+                }
+            }
+
+
+
+
+
+
+        </tr>
+        } 
+    }*@
+
+@*    /*div
+    {
+        border: thick ridge black;
+        width: 50px;
+        height: 50px;
+        padding: 10px 0;
+    }*/*@
+
+@*    <tr>
+        <td class="black"><span>A8</span>
+            <div id="a8" class="whiteRook"></div>
+        </td>
+        <td class="white"><span>B8</span>
+            <div id="b8" class="whiteKnight"></div>
+        </td>
+        <td class="black"><span>C8</span>
+            <div id="c8" class="whiteBishop"></div>
+        </td>
+        <td class="white"><span>D8</span>
+            <div id="d8" class="whiteQueen"></div>
+        </td>
+        <td class="black"><span>E8</span>
+            <div id="e8" class="whiteKing"></div>
+        </td>
+        <td class="white"><span>F8</span>
+            <div id="f8" class="whiteBishop"></div>
+        </td>
+        <td class="black"><span>G8</span>
+            <div id="g8" class="whiteKnight"></div>
+        </td>
+        <td class="white"><span>H8</span>
+            <div id="h8" class="whiteRook"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="white"><span>A7</span>
+            <div id="a7" class="whitePawn"></div>
+        </td>
+        <td class="black"><span>B7</span>
+            <div id="b7" class="whitePawn"></div>
+        </td>
+        <td class="white"><span>C7</span>
+            <div id="c7" class="whitePawn"></div>
+        </td>
+        <td class="black"><span>D7</span>
+            <div id="d7" class="whitePawn"></div>
+        </td>
+        <td class="white"><span>E7</span>
+            <div id="e7" class="whitePawn"></div>
+        </td>
+        <td class="black"><span>F7</span>
+            <div id="f7" class="whitePawn"></div>
+        </td>
+        <td class="white"><span>G7</span>
+            <div id="g7" class="whitePawn"></div>
+        </td>
+        <td class="black"><span>H7</span>
+            <div id="h7" class="whitePawn"></div>
+        </td>
+    </tr>
+    <tr>
+        <td id="ta6" class="black"><span>A6</span></td>
+        <td id="tb6" class="white"><span>B6</span></td>
+        <td id="tc6" class="black"><span>C6</span></td>
+        <td id="td6" class="white"><span>D6</span></td>
+        <td id="te6" class="black"><span>E6</span></td>
+        <td id="tf6" class="white"><span>F6</span></td>
+        <td id="tg6" class="black"><span>G6</span></td>
+        <td id="th6" class="white"><span>H6</span></td>
+    </tr>
+    <tr>
+        <td id="ta5" class="white"><span>A5</span></td>
+        <td id="tb5" class="black"><span>B5</span></td>
+        <td id="tc5" class="white"><span>C5</span></td>
+        <td id="td5" class="black"><span>D5</span></td>
+        <td id="te5" class="white"><span>E5</span></td>
+        <td id="tf5" class="black"><span>F5</span></td>
+        <td id="tg5" class="white"><span>G5</span></td>
+        <td id="th5" class="black"><span>H5</span></td>
+    </tr>
+    <tr>
+        <td id="ta4" class="black"><span>A4</span></td>
+        <td id="tb4" class="white"><span>B4</span></td>
+        <td id="tv4" class="black"><span>C4</span></td>
+        <td id="td4" class="white"><span>D4</span></td>
+        <td id="te4" class="black"><span>E4</span></td>
+        <td id="tf4" class="white"><span>F4</span></td>
+        <td id="tg4" class="black"><span>G4</span></td>
+        <td id="th4" class="white"><span>H4</span></td>
+    </tr>
+    <tr>
+        <td id="ta3" class="white"><span>A3</span></td>
+        <td id="tb3" class="black"><span>B3</span></td>
+        <td id="tc3" class="white"><span>C3</span></td>
+        <td id="td3" class="black"><span>D3</span></td>
+        <td id="te3" class="white"><span>E3</span></td>
+        <td id="tf3" class="black"><span>F3</span></td>
+        <td id="tg3" class="white"><span>G3</span></td>
+        <td id="th3" class="black"><span>H3</span></td>
+    </tr>
+    <tr>
+        <td class="black"><span>A2</span>
+            <div id="a2" class="blackPawn"></div>
+        </td>
+        <td class="white"><span>B2</span>
+            <div id="b2" class="blackPawn"></div>
+        </td>
+        <td class="black"><span>C2</span>
+            <div id="c2" class="blackPawn"></div>
+        </td>
+        <td class="white"><span>D2</span>
+            <div id="d2" class="blackPawn"></div>
+        </td>
+        <td class="black"><span>E2</span>
+            <div id="e2" class="blackPawn"></div>
+        </td>
+        <td class="white"><span>F2</span>
+            <div id="f2" class="blackPawn"></div>
+        </td>
+        <td class="black"><span>G2</span>
+            <div id="g2" class="blackPawn"></div>
+        </td>
+        <td class="white"><span>H2</span>
+            <div id="h2" class="blackPawn"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="white"><span>A1</span>
+            <div id="a1" class="blackRook"></div>
+        </td>
+        <td class="black"><span>B1</span>
+            <div id="b1" class="blackKnight"></div>
+        </td>
+        <td class="white"><span>C1</span>
+            <div id="c1" class="blackBishop"></div>
+        </td>
+        <td class="black"><span>D1</span>
+            <div id="d1" class="blackQueen"></div>
+        </td>
+        <td class="white"><span>E1</span>
+            <div id="e1" class="blackKing"></div>
+        </td>
+        <td class="black"><span>F1</span>
+            <div id="f1" class="blackBishop"></div>
+        </td>
+        <td class="white"><span>G1</span>
+            <div id="g1" class="blackKnight"></div>
+        </td>
+        <td class="black"><span>H1</span>
+            <div id="h1" class="blackRook"></div>
+        </td>
+    </tr>*@
+
+
+@*    //function draggableOnDragStart(e) {
+    //  //  $("#" + e.target.id).css("background-color", "red");
+    //}
+
+
+
+    //function droptargetOnDragEnter(e) {
+    //    $("#" + e.dropTarget[0].id).css("border-color", "green");
+    //}
+
+    //function droptargetOnDragLeave(e) {
+    //    $("#" + e.dropTarget[0].id).css("border-color", "");
+    //}
+
+    //function droptargetOnDrop(e) {
+    //    $("#" + e.dropTarget[0].id).css("border-color", "");
+
+    //    $("#" + e.draggable.element[0].id).clone().appendTo($("#" + e.dropTarget[0].id));
+    //}
+
+    //function draggableOnDragEnd(e) {
+    //    //var draggable = $("#" + $(this)[0].currentTarget[0].id);
+
+    //    //if (!draggable.data("kendoDraggable").dropped) {
+    //    //    // drag ended outside of any droptarget
+    //    //    $("#" + e.dropTarget[0].id).text("Try again!");
+    //    //}
+
+    //    //draggable.removeClass("hollow");
+    //}
+
+    //$(document).ready(function () {
+
+    //    $("div").kendoDraggable({
+    //        hint: function () {
+    //            return $("#" + $(this)[0].currentTarget[0].id).clone();
+    //        },
+    //        dragstart: draggableOnDragStart,
+    //        dragend: draggableOnDragEnd
+    //    });
+
+    //    $("td").kendoDropTarget({
+    //        dragenter: droptargetOnDragEnter,
+    //        dragleave: droptargetOnDragLeave,
+    //        drop: droptargetOnDrop
+    //    });
+
+    //})*@

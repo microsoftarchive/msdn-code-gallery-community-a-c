@@ -1,0 +1,2645 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Sessions>
+  <Session>
+    <Title>Internet Explorer as a Web Application Platform</Title>
+    <Code>2-501</Code>
+    <Abstract>Internet Explorer is a fantastic platform for web applications. This session will provide a look at which HTML5, CSS3, and JavaScript features you can utilize today create amazing web sites, ensure your sites “just work” and how you can make your sites shine across desktop and mobile devices. Also, in this talk, the IE engineering team will have a discussion about how you can get closer to and interact with the IE team.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Josh Holmes (IE)</Speaker>
+    <Tag>HTML5</Tag>
+    <Tag>Internet Explorer 11</Tag>
+    <Tag>JavaScript</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-501</Url>
+  </Session>
+  <Session>
+    <Title>Practical Design for Windows Developers</Title>
+    <Code>2-502</Code>
+    <Abstract>Design leads Dave Crawford and Tom Eddings build, and help our top partners create, flagship apps that deliver the best user experience possible on Windows and Windows Phone. In this session they’ll be leaving their crayons behind and demonstrating four practical steps that developers can use to build a great looking app. They’ll roll their sleeves up and get stuck into some XAML to show you how to implement these steps to ensure you can do this with your own apps. They’ll finish up with a few bonus tips and tricks using real world examples to show you how you can add that extra bit of polish.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Tom Eddings</Speaker>
+    <Speaker>Dave Crawford (UK)</Speaker>
+    <Tag>Design</Tag>
+    <Tag>UX</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-502</Url>
+  </Session>
+  <Session>
+    <Title>Building Your First Windows Game with Unity</Title>
+    <Code>2-503</Code>
+    <Abstract>Looking to hit the ground running to develop awesome 2D games for Windows and Windows Phone? Watch this session to learn how to easily develop powerful games with one of the best things to hit gaming since pong started a gaming revolution. Join Unity and Microsoft for this exciting talk to show you not only how to develop with Unity, but also how to build and deploy to the Windows Store and Windows Phone store. </Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Adam Tuliper</Speaker>
+    <Speaker>Carl Calwaert (Unity 3D)</Speaker>
+    <Tag>Gaming</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-503</Url>
+  </Session>
+  <Session>
+    <Title>Maximizing Revenue for Phone, Tablet and PC Apps in the Windows Store</Title>
+    <Code>2-504</Code>
+    <Abstract>In this session we'll share Store trends to help make better app business decisions, as well as drill down on paid, in-app purchase, and advertising based apps in the Windows and Windows Phone store. We'll share tools and best practices to engage existing and new users, and share all the new capabilities that can help increase app revenue.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Bernardo Zamora</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows Store</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-504</Url>
+  </Session>
+  <Session>
+    <Title>What's New in WinJS: The Road Ahead</Title>
+    <Code>2-506</Code>
+    <Abstract>The Windows Library for JavaScript (WinJS) is the framework for making Windows-style user experiences that look, feel, and work great not only for Windows, but also now for Windows Phone and soon beyond.   This talk will provide an overview of the new capabilities, controls, and other features available to you in version 2.1.  We'll also cover how you can use WinJS alongside other popular js libraries to create your apps, and the frameworks future direction as we bring it to web apps more broadly.  This is a must-see session is for all developers interested in creating apps using HTML and JavaScript.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Paul Gusmorino</Speaker>
+    <Speaker>Nitin Sharma (WINDOWS)</Speaker>
+    <Tag>HTML5</Tag>
+    <Tag>Web</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>WinJS</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-506</Url>
+  </Session>
+  <Session>
+    <Title>Developing Apps using the Common XAML UI Framework</Title>
+    <Code>2-507</Code>
+    <Abstract>Come learn about the common XAML UI framework for Windows and Windows Phone.  This session will cover the common XAML APIs across Windows and Windows Phone, techniques and limitations when using common XAML to build experiences both Windows and Windows Phone as well as cover device-specific XAML APIs that enable device specific experiences.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Tim Heuer</Speaker>
+    <Tag>C#</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>XAML</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-507</Url>
+  </Session>
+  <Session>
+    <Title>HTML5 Platform from Web to Apps</Title>
+    <Code>3-508</Code>
+    <Abstract>In this session you we will cover the basics of writing a Windows Store app using HTML5, focusing on using community libraries and tools commonly used for web development.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>John Hazen (WINDOWS)</Speaker>
+    <Tag>HTML5</Tag>
+    <Tag>Web</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-508</Url>
+  </Session>
+  <Session>
+    <Title>The New Windows Phone Application Model</Title>
+    <Code>2-509</Code>
+    <Abstract>The new release of Windows Phone dramatically expands the ways in which developers can build applications and games, by adding several new programming models, and also expanding the application model to support a broader set of developer scenarios. Andrew will explore these in depth and give you the information you need to get started building applications that leverage these features today.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Andrew Clinick</Speaker>
+    <Speaker>Lei Xu</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>XAML</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-509</Url>
+  </Session>
+  <Session>
+    <Title>Innovations in High Performance 2D Graphics with DirectX Across Windows and Windows Phone</Title>
+    <Code>3-510</Code>
+    <Abstract>Great performance is a huge driver of satisfaction and user preference with apps. Direct2D powers high-performance, 2D graphics rendering in Windows and Windows Phone. In this session, you’ll learn how to use new Direct2D features and performance advancements to achieve optimal speed and efficiency in your apps using Direct2D code.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Dan McLachlan</Speaker>
+    <Tag>DirectX</Tag>
+    <Tag>Gaming</Tag>
+    <Tag>Graphics</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-510</Url>
+  </Session>
+  <Session>
+    <Title>Windows and the Internet of Things</Title>
+    <Code>2-511</Code>
+    <Abstract>Connected, smart devices have become pervasive. These "Things" already outnumber more traditional computing devices and are set to surpass the 100 billion devices mark within a few short years. In this session you'll learn about how technologies such as Windows Embedded, .NET Micro Framework, and Azure can be used to build cool devices and intelligent systems.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Steve Teixeira</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Device apps</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-511</Url>
+  </Session>
+  <Session>
+    <Title>Windows Phone and Windows: Store and Dev Center</Title>
+    <Code>2-512</Code>
+    <Abstract>Come learn about the latest improvements to the Windows and Windows Phone Dev Centers and Stores</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Mazhar Mohammed</Speaker>
+    <Speaker>Zac Woodall</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows Store</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-512</Url>
+  </Session>
+  <Session>
+    <Title>Windows Phone Enterprise Management</Title>
+    <Code>2-513</Code>
+    <Abstract>Windows Phone 8.1 will be easier to deploy in enterprises and Windows S14 update contains some critical enterprise improvements. This session provides everything you need to know about the new Windows Phone 8.1 enterprise features and MDM policies. We’ll also provide a quick overview of what’s new in S14.  To round out the session we’ll do a couple of Windows Phone demo to make the feature descriptions come alive.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Katharine Holdsworth</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-513</Url>
+  </Session>
+  <Session>
+    <Title>Kinect 101:  Introduction to Kinect for Windows</Title>
+    <Code>2-514</Code>
+    <Abstract>In this session, we will introduce fundamental concepts of Kinect, such as color, depth, and skeletal tracking. We will take a look at the forthcoming Kinect for Windows V2 sensor, and we will show how to get started with the current (freely available) Kinect for Windows SDK.</Abstract>
+    <Topic>Xbox and Kinect</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Chris White</Speaker>
+    <Tag>Kinect</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-514</Url>
+  </Session>
+  <Session>
+    <Title>Respecting Your Investments: How to Leverage Your Existing Code In a New Windows Runtime LOB App</Title>
+    <Code>2-515</Code>
+    <Abstract>Many businesses are finding they need new versions of their trusty LOB apps for their increasingly mobile workforce. However, these business also want to leverage the existing investments they have made to date. In this session, we will learn about changes in Windows 8.1 Update to allow businesses to build new mobile LOB applications without having to re-write their entire app from scratch.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Harry Pierson</Speaker>
+    <Tag>Desktop app</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-515</Url>
+  </Session>
+  <Session>
+    <Title>What about XAML UI and Controls?</Title>
+    <Code>2-516</Code>
+    <Abstract>Learn how to build beautiful XAML Phone UI using the standard built-in controls. This session will cover the major UI components, best practices and how to create fluid and standard looking UI. We’ll explore what’s new and different for existing Silverlight Phone developers that are writing their first XAML Phone App as well as how to ensure you get maximum reuse of UI when writing Universal Windows and Windows Phone apps.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Shawn Oster</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>XAML</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-516</Url>
+  </Session>
+  <Session>
+    <Title>What’s New with Windows Phone Silverlight Apps!</Title>
+    <Code>2-517</Code>
+    <Abstract>We’ve been doing a lot of work with new converged XAML app support on Windows Phone 8.1, but what about legacy Windows Phone Silverlight XAML based apps?  Come learn about all the new features we’ve enabled with Silverlight 8.1.  We’ll walk through creating new Silverlight 8.1 apps, upgrading existing Silverlight 8.0 apps and adding new features introduced in our converged XAML app framework.  There’s also some app model differences between Silverlight 8.0 and 8.1 apps as well as a few upgrade breaking changes to be aware of when moving your app forward.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Sam Jarawan</Speaker>
+    <Speaker>Harini Kannan</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>XAML</Tag>
+    <Tag>C#</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-517</Url>
+  </Session>
+  <Session>
+    <Title>Multitasking and Triggered Background Tasks for Windows Phone Apps</Title>
+    <Code>2-518</Code>
+    <Abstract>Windows Phone 8.1 introduces new mechanisms to allow applications to execute while not in the foreground. A converged Triggers and Background Tasks implementation allows tasks to launch on time, location, push, Bluetooth and system events. Learn how new resource policies affect how and when your application runs in the background and how to use these new feature from Windows XAML and Silverlight 8.1 applications.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Shawn Henry</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>C#</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-518</Url>
+  </Session>
+  <Session>
+    <Title>Building Great Bluetooth Apps for Windows Phone</Title>
+    <Code>2-519</Code>
+    <Abstract>Windows Phone 8.1 builds on the Bluetooth LE APIs for Windows 8.1 and has extended them to enable exciting new scenarios such as fitness and “find my keys”.  In this discussion, we’ll  highlight some of those scenarios and provide guidance on how to use new APIs for background agents and triggers.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Vijay Sarad</Speaker>
+    <Speaker>Jim Lyon</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Device apps</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-519</Url>
+  </Session>
+  <Session>
+    <Title>Contracts and Pickers: Building Apps that Work Together on Windows</Title>
+    <Code>2-520</Code>
+    <Abstract>With Windows Phone 8.1 we're bringing many of the Windows APIs that allow apps to talk to each other to the Phone! Your apps now have the ability to share photos, text, links and pretty much anything you want to built-in apps like Mail or Messaging and social networks like Facebook or Twitter. You can also open and save files to the SD card, Phone storage and OneDrive or other cloud storage services. These are just some of the things enabled by the new contracts in Windows Phone 8.1. Arun and John will dive into each of these contracts with demos on how to use them in your Windows Phone 8.1 apps as well as your existing Silverlight apps.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Arunjeet Singh (ARUN)</Speaker>
+    <Speaker>John Gallardo</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>XAML</Tag>
+    <Tag>C#</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-520</Url>
+  </Session>
+  <Session>
+    <Title>Notification Platform Development on Windows</Title>
+    <Code>2-521</Code>
+    <Abstract>Windows and Windows Phone have a converged notification platform and development model starting in Windows Phone 8.1.  Come learn what the converged platform means for your existing apps and how to take advantage of the new platform and great new features shared with Windows.  You’ll learn about WNS including push and local notifications and about the brand new Action Center and its associated programming model.  This session in conjunction with the Live Tiles session will give you everything you need to know about notifications for Windows Phone and Windows Store apps.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Thomas Fennel</Speaker>
+    <Speaker>Jorge Raastroem</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>XAML</Tag>
+    <Tag>C#</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-521</Url>
+  </Session>
+  <Session>
+    <Title>Dealing with Data: Storage, Roaming, and Backup on Windows and Windows Phone</Title>
+    <Code>2-522</Code>
+    <Abstract>There are very few applications that do not need to interact with data in some way. Whether you’re a game developer simply looking to track high scores or an enterprise developer who needs the ability to store, retrieve and manipulate large amounts of information in your line-of-business app, successfully managing data is critical to your success. In this session, Sean will cover how your app can store its own data and interact with user data stores like photos and music using Windows Runtime APIs. He will also discuss how you can use roaming to keep data in sync across multiple Windows devices. Finally, he will talk about the new backup and restore features coming to Windows Phone and how your app can participate.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Sean McKenna</Speaker>
+    <Speaker>Adam Wilson (WP)</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Data</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-522</Url>
+  </Session>
+  <Session>
+    <Title>Live Tiles Enhancements</Title>
+    <Code>2-523</Code>
+    <Abstract>Windows and Windows Phone have a converged Live Tiles platform and development model.  In Windows Phone 8.1 you’ll be able to do great new things with the Tiles Platform and this session is targeted at helping you understand several critical tiles topics.  Specifically, migrating your tiles from a Windows Phone 8.0 app to a Windows Phone 8.1 app and how to best take advantage of the new Tile Templates and scenarios available to you using the converged model on Windows Phone 8.1.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Matt Hidinger</Speaker>
+    <Speaker>Saral Shodhan</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-523</Url>
+  </Session>
+  <Session>
+    <Title>Deploying and Managing Enterprise Apps</Title>
+    <Code>2-524</Code>
+    <Abstract>Learn how companies can publish their Line of Business apps for deployment to Windows and Windows Phone, and then manage the lifecycles of those apps.  The two platforms haven’t yet converged on a single mechanism for doing this, and this session will help navigate the differences.  This session will provide overviews of each platform as well as what’s new for 8.1, including policy allowing only certain apps to run on Windows Phone, the ability to remotely install and uninstall apps from a Windows Phone, changes to sideloading and sideloaded apps in Windows 8.1, and more.  Also see how MDM vendors such as Windows Intune choose to abstract many of the differences and service both platforms in a unified way.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Cliff Strom</Speaker>
+    <Speaker>John Vintzel</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-524</Url>
+  </Session>
+  <Session>
+    <Title>Modern Camera and Imaging Apps in Windows and Windows Phone</Title>
+    <Code>2-525</Code>
+    <Abstract>Learn how to build XAML/C# camera and photos apps for Windows and Windows Phone 8.1. This session includes rich demos of the Windows.Media.Capture API and advanced image processing techniques, including HDR.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Jeff Day</Speaker>
+    <Speaker>Rene Schulte (Identity Mine)</Speaker>
+    <Tag>Device apps</Tag>
+    <Tag>Image Processing</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-525</Url>
+  </Session>
+  <Session>
+    <Title>Building Geo-Aware Apps with Maps and Geofencing</Title>
+    <Code>2-526</Code>
+    <Abstract>Do you want to enhance your phone app with maps - add data to customize your maps, provide routing, or traffic information? Do you want to make your app experience contextual to where the user is located, even when your app is not running? If that is the case, this session is for you.We will provide practical guidance on how to use mapping and geofencing APIs to make all this happen. Our new geofence-based triggers allow you to be notified of timely location-based actions without the worry of excessive battery drain. The geofencing APIs are common to Windows Phone and Windows 8.1, but we will talk about the platform specific differences.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Cristina del Amo Casado</Speaker>
+    <Speaker>Mike O'Malley</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-526</Url>
+  </Session>
+  <Session>
+    <Title>Building Video and Audio Streaming Apps</Title>
+    <Code>2-528</Code>
+    <Abstract>In this session, we will explore the anatomy of a media streaming app and discuss which Windows runtime APIs are best suited to meet the nuanced needs of your app. We will also share what we've learned from developers and the industry about where further investments are needed.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Gabe Frost</Speaker>
+    <Tag>Media</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-528</Url>
+  </Session>
+  <Session>
+    <Title>Sensors Platform Enhancements in Windows Phone</Title>
+    <Code>2-529</Code>
+    <Abstract>Come learn about the latest enhancements in the sensors platform in Windows Phone 8.1. Hear about the enhancements made in the platform to keep the developer experience seamless between Windows and Windows Phone.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Fred Bhesania</Speaker>
+    <Tag>Device apps</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-529</Url>
+  </Session>
+  <Session>
+    <Title>Integrating Your App into the Windows Phone Speech Experience</Title>
+    <Code>2-530</Code>
+    <Abstract>The Windows Phone Speech APIs help you integrate your app into Windows Phone's system-wide speech and natural language user experience. In this session we’ll demonstrate how you can extend the phone’s experience allowing users to launch YOUR APP by voice or text using free-form natural language commands. We will also look at how to enable voice-based conversational dialog interactions with users after your app has been launched, summarizing what’s different in the Windows Phone speech APIs.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Rob Chambers</Speaker>
+    <Speaker>F Avery Bishop</Speaker>
+    <Speaker>Monica South</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-530</Url>
+  </Session>
+  <Session>
+    <Title>New Security Features for Windows Phone</Title>
+    <Code>2-531</Code>
+    <Abstract>This release of Windows Phone fills several gaps in the security feature lists and packs a surprise. This session will walk you trough these new features with sample code and demos. Please attend for a comprehensive view of the Windows Phone security programming model.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Geir Olsen</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-531</Url>
+  </Session>
+  <Session>
+    <Title>Bringing Kinect into Your Windows Store App</Title>
+    <Code>2-532</Code>
+    <Abstract>In this session we will go deep into the new K4W V2 APIs. We’ll look at how to bring Kinect’s capabilities into both desktop and modern Windows 8 store apps.</Abstract>
+    <Topic>Xbox and Kinect</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Kevin Kennedy</Speaker>
+    <Tag>Kinect</Tag>
+    <Tag>Windows Store</Tag>
+    <Tag>Windows Store apps</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>2004</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-532</Url>
+  </Session>
+  <Session>
+    <Title>New Integration Opportunities with Wallet on Windows Phone</Title>
+    <Code>2-533</Code>
+    <Abstract>This talk is especially for you if your business has membership cards, coupons, tickets or deals. We’ll be talking about new features for the Wallet that make it easy to get your content onto Windows Phone, even if you don’t have an app. There are new branding opportunities, support for relevant card alerts at the right time and place as well as ability to keep the card current through updates from the cloud.  There is an end-to-end experience around travel, from buying a ticket, to checking-in, to getting the boarding pass.  Wallet has added cross-platform capabilities such as support for iOS Passes and travel-specific actions in Gmail.  There is a new tool you can use to create wallet cards quickly. Come see how you can use our lightweight platform to engage your customers on the next release of Windows Phone. Note: NFC functionality has been decoupled so that apps can now support NFC payments inside their own experiences. It will not be covered in this talk.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Amy Rambhia</Speaker>
+    <Speaker>Brian Cross</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-533</Url>
+  </Session>
+  <Session>
+    <Title>3D Printing with Windows</Title>
+    <Code>2-534</Code>
+    <Abstract>Microsoft announced native 3d Printing support with Windows 8.1 last year at Build. Hear about the progress we have made, new things we are working on, and how you can take advantage of 3d printing with Windows in your apps and devices.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Kris Iverson</Speaker>
+    <Speaker>Steve Olsson</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Printing</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-534</Url>
+  </Session>
+  <Session>
+    <Title>Windows Desktop Development Platform Advancements</Title>
+    <Code>2-535</Code>
+    <Abstract>Delight users of your desktop apps by taking advantages of touch/pen/mouse/touchpad input, high DPI displays, and rich animations. In this talk for Win32 developers, we cover desktop platform advances in Windows 8.1 Update.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Steve Wright</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-535</Url>
+  </Session>
+  <Session>
+    <Title>Simplifying Hardware Development for Windows Platforms</Title>
+    <Code>2-536</Code>
+    <Abstract>Ever wished you could onboard parts like an accelerometer to Windows? This talk covers how Microsoft partnered with vendors like Intel to create easy onboarding opportunities for your off-SOC hardware. We will show you how you can easily obtain and use these off-the-shelf, low cost systems for Windows development. We will  provide a walk-through of how you can easily get started with Windows hardware development using a board from unboxing, through development and testing your driver. We will include information about hardware availability and will highlight the free development tools and resources that will be made available for building parts and software for Windows.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Peter Wieland</Speaker>
+    <Speaker>Viraf Gandhi</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Device apps</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-536</Url>
+  </Session>
+  <Session>
+    <Title>Navigation Model for Windows XAML Applications</Title>
+    <Code>2-537</Code>
+    <Abstract>The XAML Application Framework initially introduced with Windows 8.0 is now available on Windows Phone 8.1. This session will cover an overview of Navigation Model for XAML Applications including In-App and App-to-App navigation, similarities and differences between Windows and Phone and UX Guidance for Back Button and Fast Application Resume.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Roberth Karman</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>XAML</Tag>
+    <Tag>C#</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-537</Url>
+  </Session>
+  <Session>
+    <Title>Building Awesome Experiences with Facebook</Title>
+    <Code>2-538</Code>
+    <Abstract>In this session, we will walk through integrating Facebook with an app that spans cloud and client. We will discuss patterns and practices to log in, register, query and share to the Facebook social graph across web and client experiences using different SDKs and technologies including ASP.NET MVC, azure, universal apps for Windows and Windows Phone, Facebook Login and Facebook Open Graph. Let’s get social.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Taqi Jaffri</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-538</Url>
+  </Session>
+  <Session>
+    <Title>Tips and Tricks for Designing a Great Accessibility Experience for Your App</Title>
+    <Code>2-539</Code>
+    <Abstract>Making your app usable by everyone--including people with disabilities--is the right thing to do, will reach a broader customer base, and ensures that you comply with legal requirements.  In this session we will discuss how people with certain disabilities interact with apps and demonstrate tips and tricks for making a XAML application usable by those with visual and mobility impairments.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Doug Kirschner</Speaker>
+    <Tag>Accessibility</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-539</Url>
+  </Session>
+  <Session>
+    <Title>Building a Converged Phone and PC App using HTML and JavaScript</Title>
+    <Code>2-540</Code>
+    <Abstract>An exciting part of Windows Phone 8.1 is that you can now start building applications natively in HTML and JavaScript. Come watch Ryan and Josh walk through building an application for both Windows and Windows Phone using HTML, JavaScript and the WinJS library. Along the way you'll learn about how Visual Studio Universal projects help you easily share code between your applications and also help you build differentiated experiences.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Josh Williams (WINDOWS)</Speaker>
+    <Speaker>Ryan J. Salva</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>WinJS</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>HTML5</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-540</Url>
+  </Session>
+  <Session>
+    <Title>From 4 to 40 inches: Developing Windows Applications across Multiple Form Factors</Title>
+    <Code>3-541</Code>
+    <Abstract>Windows applications can run on phones, tablets, PCs and beyond. Designing and building your application to take advantage of different screen sizes and resolutions is critical to making beautiful, engaging applications that your customers will love across all their devices.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Peter Torr</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>UX</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-541</Url>
+  </Session>
+  <Session>
+    <Title>Managing Resource Constraints on Windows Phone</Title>
+    <Code>3-542</Code>
+    <Abstract>Anyone can build a simple app, but a complex app requires more thought. Building a serious app on a device with significant memory and CPU constraints can pose some interesting technical challenges. You also have choices about the breadth of markets you want to address with your app. In this session, we'll look at your choices, and how you can work within the resource constraints to build compelling, resilient apps. We'll also deep-dive into the platform Resource Manager, examine what's new in Windows Phone 8.1, and explain the rationale behind the resource management policies.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Andrew Whitechapel</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Performance</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-542</Url>
+  </Session>
+  <Session>
+    <Title>Apps without Borders - Winning Globally with the Windows Platform</Title>
+    <Code>2-543</Code>
+    <Abstract>The Windows platform allows the creation of great apps across hundreds of markets.  Your app should just work regardless of your customer's language and regional preferences.  This session will empower you to address real global issues, understand the actual cost of not globalizing, selecting opportunities by markets, using globalization APIs, selecting services for a global market, debugging localization using Pseudo, setting the translation quality  bar, selecting translation services, and global app publishing considerations.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Cameron Lerum</Speaker>
+    <Tag>Localization</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-543</Url>
+  </Session>
+  <Session>
+    <Title>The Story of Bing Apps: Delight Across Multiple Form Factors</Title>
+    <Code>2-544</Code>
+    <Abstract>Delivering delightful user experiences across form factors is what Bing Apps do best. This session showcases cool Cortana scenarios and sheds light on the challenges around developing apps for varying screen sizes and screen resolutions.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Sandhya Vankamamidi</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-544</Url>
+  </Session>
+  <Session>
+    <Title>Quality and Performance for XAML Apps</Title>
+    <Code>3-545</Code>
+    <Abstract>Come learn about best practices for developing high quality apps using the common XAML UI framework for Windows and Windows Phone. This session will cover practical tips and tricks for optimizing performance and demonstrate new tools and techniques for testing and profiling XAML applications.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Stefan Wick</Speaker>
+    <Tag>Performance</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-545</Url>
+  </Session>
+  <Session>
+    <Title>Windows Platform: SDL Best Practices</Title>
+    <Code>2-546</Code>
+    <Abstract>Essential best practices for developers, distilled from 10 years of the Microsoft Security Development Lifecycle. This talk will briefly summarize the SDL and its history, then quickly move into the most effective and practical ways for developers to drive security improvements into their code. Best practices will be illustrated by specific examples from the Windows platform and current developer tools.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Michael Fanning (TWC)</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Testing</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-546</Url>
+  </Session>
+  <Session>
+    <Title>Wrap a Mobile API around your Enterprise and take Data Offline with NoSQL on Windows Phones and Tablets</Title>
+    <Code>2-547</Code>
+    <Abstract>Enterprise mobility is a top priority for Chief Information Officers who must empower employees and reach customers by moving data from backend systems out to apps on mobile devices.  This data must flow over inefficient wireless data networks, be consumable by any mobile device, and scale to support millions of users while delivering exceptional performance.  Since wireless coverage is inconsistent, apps must store this data offline so users can be productive in the absence of connectivity. Join Rob and learn how to build fast and scalable REST + JSON APIs using the ASP.NET Web API while employing techniques such as data sharding and in-memory caching.  On the device, learn how your apps can work with offline data via in-memory NoSQL tables that use LINQ to support the same CRUD operations as relational databases.  You’ll walk away from this session with the ability to deliver flexible server solutions that work on-premise or in Azure and device solutions that work with Windows Phones and Tablets</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Rob Tiffany</Speaker>
+    <Tag>Line-of-business</Tag>
+    <Tag>Data</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-547</Url>
+  </Session>
+  <Session>
+    <Title>Sequencers, Synthesizers, and Software, Oh My! Building Great Music Creation Apps for Windows Store</Title>
+    <Code>3-548</Code>
+    <Abstract>People love expressing themselves by creating music on their mobile devices. This talk will briefly discuss why creative apps are important and how you can build the best music creation apps on Windows. We will show several of the top music creation apps today using new Windows features, how you can use these new features, and what Microsoft is doing in the future to make the experience even better. </Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Jason Olson</Speaker>
+    <Speaker>Pete Brown (DPE)</Speaker>
+    <Tag>C#</Tag>
+    <Tag>C/C++</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>XAML</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-548</Url>
+  </Session>
+  <Session>
+    <Title>Strategies for World Domination: Design Research Advice for Developers</Title>
+    <Code>2-549</Code>
+    <Abstract>It's a game of territories, attacks and fortifications out there. Knowing your competitors, your customers, and your strategies to address their needs is a critial path to success. We have some ideas to help you navigate these dangerous waters.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Amy Alberts</Speaker>
+    <Tag>UX</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-549</Url>
+  </Session>
+  <Session>
+    <Title>Windows Runtime for Windows Phone Developers</Title>
+    <Code>2-550</Code>
+    <Abstract>The Windows Runtime now provides the foundation for both Windows and Windows Phone apps, providing developers with thousands of API’s to build innovative experiences. In this session we’ll explore the Windows Runtime from the perspective of a Windows Phone developer. We’ll compare and contrast Windows Phone Silverlight apps with those written using the Windows Runtime.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Doug Holland</Speaker>
+    <Speaker>Jerry Nixon (DPE)</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>XAML</Tag>
+    <Tag>C#</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-550</Url>
+  </Session>
+  <Session>
+    <Title>Creating Personal Experiences: A Panel Discussion</Title>
+    <Code>2-551</Code>
+    <Abstract>Whether you’re pushing creative boundaries or refining an existing app, delivering personal and valuable experiences to people who use your app is critical to your app’s success. Discuss insights, best practices, and considerations with designers and user researchers. Audience participants are encouraged to share experiences.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Lora Heiny</Speaker>
+    <Speaker>Mary-Lynne Williams</Speaker>
+    <Speaker>Corrina Black</Speaker>
+    <Speaker>Lori Kratzer</Speaker>
+    <Speaker>Amy Alberts</Speaker>
+    <Speaker>Tom Eddings</Speaker>
+    <Speaker>Dave Crawford (UK)</Speaker>
+    <Tag>UX</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/03/2014 12:00pm - 12:40pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-551</Url>
+  </Session>
+  <Session>
+    <Title>Website and Web App Platform Leadership Team: A Panel Discussion</Title>
+    <Code>2-552</Code>
+    <Abstract>Join us for an open discussion with this panel of experts from the Internet Explorer team to talk about the latest releases, future roadmap, industry trends, or anything else related to developing web sites and apps! You will have an opportunity to ask questions of the panel.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Sam George</Speaker>
+    <Speaker>Charles Morris</Speaker>
+    <Speaker>Tobin Titus</Speaker>
+    <Speaker>John Hazen (WINDOWS)</Speaker>
+    <Speaker>Kevin Hill</Speaker>
+    <Speaker>Andy Sterland</Speaker>
+    <Speaker>Frank Olivier</Speaker>
+    <Speaker>Jorge Peraza</Speaker>
+    <Speaker>Jacob Rossi</Speaker>
+    <Speaker>Paul Gusmorino</Speaker>
+    <Speaker>Josh Holmes (IE)</Speaker>
+    <Tag>HTML5</Tag>
+    <Tag>JavaScript</Tag>
+    <Tag>Web</Tag>
+    <Tag>Web Sites</Tag>
+    <Tag>WebView</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>WinJS</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-552</Url>
+  </Session>
+  <Session>
+    <Title>XAML Platform Leadership Team: A Panel Discussion</Title>
+    <Code>2-553</Code>
+    <Abstract>Come meet the XAML teams, and ask your questions about XAML development in modern UI apps. This is an open Q/A with the people who build the products. This session is primarily about XAML on Windows Store and Windows Phone apps. There is an additional panel for Desktop apps.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Joe Stegman</Speaker>
+    <Speaker>Pete Brown (DPE)</Speaker>
+    <Speaker>Tim Heuer</Speaker>
+    <Speaker>Dan Taylor (DEVDIV)</Speaker>
+    <Speaker>Sam Jarawan</Speaker>
+    <Speaker>Shawn Oster</Speaker>
+    <Speaker>Mike Harsh</Speaker>
+    <Tag>XAML</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-553</Url>
+  </Session>
+  <Session>
+    <Title>Animations in Windows Phone XAML Apps</Title>
+    <Code>3-554</Code>
+    <Abstract>In this talk we will discuss the features available to modern app developers to make beautiful, responsive apps with motion and animations. We will discuss the common principles for adding signature animations and deep dive in to animations that have been added to the library for Windows Phone applications. We will also briefly look at how to create custom storyboards.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Kunal Deep Singh</Speaker>
+    <Speaker>Rohan Thakkar</Speaker>
+    <Tag>XAML</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>C#</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-554</Url>
+  </Session>
+  <Session>
+    <Title>The New Video Editing APIs for Windows Phone: Windows.Media.Editing</Title>
+    <Code>2-555</Code>
+    <Abstract>Creating applications that edit video is now possible on a Windows Phone. From simple trimming of a single video clip to complex editing of a composition containing multiple clips and a background soundtrack, the new Windows.Media.Editing APIs give application developers on the Windows Phone Blue a powerful tool to quickly build a dedicated video editing application or add editing as a feature to another application.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>John Serna</Speaker>
+    <Speaker>Jeff McGlynn</Speaker>
+    <Tag>Media</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-555</Url>
+  </Session>
+  <Session>
+    <Title>High-Performance Web Platform: Real-World Problems and Solutions</Title>
+    <Code>4-556</Code>
+    <Abstract>See how to tackle real-world web platform performance problems in modern websites and web applications. This session starts with a foundational understanding of the web platform and then shifts to a fast-paced, demo-packed set of problem/solution pairs built from industry-standard performance guidance. Learn how modifications to your HTML, CSS, and JavaScript can significantly improve how your code takes advantage of device resources and improves your user experience.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>400 - Expert</Level>
+    <Speaker>Tobin Titus</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Web Sites</Tag>
+    <Tag>Web</Tag>
+    <Tag>HTML5</Tag>
+    <Tag>JavaScript</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/4-556</Url>
+  </Session>
+  <Session>
+    <Title>How to Analyze Performance Issues in Your Windows and Windows Phone Apps</Title>
+    <Code>4-557</Code>
+    <Abstract>You’re invested in differentiating your Windows or Windows Phone app through delivering a great experience. This talk will cover the key tools and concepts needed to analyze performance issues that get in the way of that great experience. We’ll talk about how to capture traces on Windows and Windows Phone, view your app’s usage of CPU in the framework, dig into stacks, dig into the app frameworks, and look at a how to diagnose a few common problems with the tools. This talk is focused only on the converged platforms - WWA and XAML – and does not cover Windows Phone Silverlight.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>400 - Expert</Level>
+    <Speaker>Lalithra Fernando</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Performance</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/4-557</Url>
+  </Session>
+  <Session>
+    <Title>Cutting Edge Graphics in HTML</Title>
+    <Code>3-558</Code>
+    <Abstract>Come learn about the latest WebGL, canvas, and other graphics support recently added to Internet Explorer.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Frank Olivier</Speaker>
+    <Speaker>Ben Constable</Speaker>
+    <Speaker>David Catuhe</Speaker>
+    <Tag>Gaming</Tag>
+    <Tag>Graphics</Tag>
+    <Tag>HTML5</Tag>
+    <Tag>JavaScript</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>WebView</Tag>
+    <Tag>Web Sites</Tag>
+    <Tag>Web</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-558</Url>
+  </Session>
+  <Session>
+    <Title>Better App Compat with Enterprise Mode for Internet Explorer 11</Title>
+    <Code>2-559</Code>
+    <Abstract>Enterprise Mode for Internet Explorer 11 will provide improved Internet Explorer 8 compatibility, and tools to manage which web apps use it.  This session is a deep-dive on deploying and managing Enterprise Mode, as an interim solution until legacy web apps can be upgraded to modern standards.  By decreasing the dependency on older browsers, Microsoft is helping customers stay up to date with the latest software, services, and devices. </Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Fred Pullen</Speaker>
+    <Speaker>Nicole Berdy</Speaker>
+    <Tag>HTML5</Tag>
+    <Tag>JavaScript</Tag>
+    <Tag>WinJS</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Web</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-559</Url>
+  </Session>
+  <Session>
+    <Title>Blending the Web with Platform Capabilities</Title>
+    <Code>2-560</Code>
+    <Abstract>You’ve already built an awesome website and now want to know how leverage Windows 8 functionality but still develop your app primarily on the web.  This session will focus on the different ways you can use Hybrid technologies and still integrate with Windows 8 features.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Kevin Hill</Speaker>
+    <Speaker>Jeff Burtoft</Speaker>
+    <Tag>HTML5</Tag>
+    <Tag>JavaScript</Tag>
+    <Tag>Web</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>WinJS</Tag>
+    <Tag>WebView</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-560</Url>
+  </Session>
+  <Session>
+    <Title>Windows Phone and Windows: Dev Center and App Submission Deep Dive</Title>
+    <Code>2-561</Code>
+    <Abstract>Come learn what's new in Windows Phone Dev Center and Windows Dev Center. Learn about the updated app submission experience.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Abhijat Kanade</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Store</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-561</Url>
+  </Session>
+  <Session>
+    <Title>Windows Store, Dev Center, Monetization and Ads: A Panel Discussion</Title>
+    <Code>2-562</Code>
+    <Abstract>This panel offers a unique opportunity to learn about what is the vision of the Store, how the Store and Dev Center operate, what are we planning for Advertising, what are some common successful practices, and you will have the opportunity to ask questions to the Store leadership team.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Bernardo Zamora</Speaker>
+    <Speaker>Todd Brix</Speaker>
+    <Speaker>Keith Senzel</Speaker>
+    <Speaker>Mazhar Mohammed</Speaker>
+    <Speaker>Ashish Babbar</Speaker>
+    <Speaker>Arvind Ladha</Speaker>
+    <Speaker>Vijay Rajagopalan</Speaker>
+    <Speaker>Nir Froimovici</Speaker>
+    <Speaker>Joanna Thornton-Smith</Speaker>
+    <Speaker>Zac Woodall</Speaker>
+    <Speaker>Abhijat Kanade</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows Store</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-562</Url>
+  </Session>
+  <Session>
+    <Title>Windows Desktop Development: A Panel Discussion</Title>
+    <Code>2-563</Code>
+    <Abstract>Come talk desktop development with the product teams. Meet members of the teams and ask your desktop development questions about C++, WPF, .NET and more.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Joe Stegman</Speaker>
+    <Speaker>Pete Brown (DPE)</Speaker>
+    <Speaker>Habib Heydarian</Speaker>
+    <Speaker>Dan Taylor (DEVDIV)</Speaker>
+    <Speaker>Hamid Mahmood</Speaker>
+    <Speaker>Steve Wright</Speaker>
+    <Speaker>Tarek Madkour</Speaker>
+    <Speaker>Tim Heuer</Speaker>
+    <Speaker>Ayman Shoukry</Speaker>
+    <Speaker>Jerome Holman</Speaker>
+    <Speaker>Chipalo Street</Speaker>
+    <Tag>.NET</Tag>
+    <Tag>C#</Tag>
+    <Tag>C/C++</Tag>
+    <Tag>Desktop app</Tag>
+    <Tag>Windows 8</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>XAML</Tag>
+    <Date>04/03/2014 12:00pm - 12:40pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-563</Url>
+  </Session>
+  <Session>
+    <Title>Direct3D 12 API Preview</Title>
+    <Code>3-564</Code>
+    <Abstract>Come learn how future changes to Direct3D will enable next generation games to run faster than ever before! In this session we will discuss future improvements in Direct3D that will allow developers an unprecedented level of hardware control and reduced CPU rendering overhead across a broad ecosystem of hardware. If you use cutting-edge 3D graphics in your games, middleware, or engines and want to efficiently build rich and immersive visuals, you don't want to miss this talk.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Max McMullen</Speaker>
+    <Tag>C/C++</Tag>
+    <Tag>Graphics</Tag>
+    <Tag>Gaming</Tag>
+    <Tag>DirectX</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-564</Url>
+  </Session>
+  <Session>
+    <Title>App Studio for Windows and Windows Phone: Pre Launch Preview</Title>
+    <Code>2-565</Code>
+    <Abstract>Attendees will be given an early preview of and access code to Windows App Studio, the new release of Windows Phone App Studio Beta, which will now support the creation of both Windows Phone and Windows Apps.  Learn about the tool and take it for a spin yourself.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Bryan Tomlinson</Speaker>
+    <Speaker>Ricardo Minguez Pablos (RIDO)</Speaker>
+    <Speaker>Luis Javier Sánchez Martín</Speaker>
+    <Speaker>Ethel García Simon Matachana</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-565</Url>
+  </Session>
+  <Session>
+    <Title>User Data Management in Windows Phone</Title>
+    <Code>2-566</Code>
+    <Abstract>User data is at the core of developing personal experiences on a smart phone. In this session, Tony will discuss new APIs to manage user data available in 8.1. He will address extended read access with Windows Runtime APIs, system UI tools to efficiently get tasks completed, and opportunities to integrate the data that your platform knows deep into the core Windows Phone experiences. The specific data types that fall into these themes are Contacts, Appointments, Email, and Online Media. Among other scenarios, the session will cover attaching arbitrary files to emails and writing appointments into the user’s calendar.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Tony Pendolino</Speaker>
+    <Speaker>Wes Peter</Speaker>
+    <Tag>Data</Tag>
+    <Tag>Contracts</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-566</Url>
+  </Session>
+  <Session>
+    <Title>Build Connected Productivity Apps</Title>
+    <Code>2-567</Code>
+    <Abstract>This session will detail the new advanced extensibility and development options within the Office platform, including Office and SharePoint.  The details of the various APIs and customization options will be discussed, as well as the evolution of the platform to one that is open to all types of developers.  The various roadmap items of where the platform is headed will ​also be discussed.</Abstract>
+    <Topic>Office</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Brian Jones (OFFICE)</Speaker>
+    <Tag>Office</Tag>
+    <Tag>SharePoint</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-567</Url>
+  </Session>
+  <Session>
+    <Title>Office Power Hour - New Developer APIs and Features for Apps for Office</Title>
+    <Code>3-568</Code>
+    <Abstract>Deep Dive into the new features and APIs in the Cloud App Model for Apps for Office</Abstract>
+    <Topic>Office</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Rolando Jimenez Salgado</Speaker>
+    <Tag>Office</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-568</Url>
+  </Session>
+  <Session>
+    <Title>SharePoint Power Hour - New Developer APIs and Features for Apps for SharePoint</Title>
+    <Code>3-569</Code>
+    <Abstract>Deep Dive into the new features and APIs in the Cloud App Model for Apps for SharePoint</Abstract>
+    <Topic>Office</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Rob Howard (SHAREPOINT)</Speaker>
+    <Tag>SharePoint</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-569</Url>
+  </Session>
+  <Session>
+    <Title>SharePoint 2013 Apps with AngularJS</Title>
+    <Code>2-570</Code>
+    <Abstract>
+      This session will be a deep dive journey into using the Model View View Model (MVVM) pattern for UI development platforms supporting event-driven programming and 3rd party AngularJS library to create a SharePoint 2013 Hosted App.
+
+      Jeremy Thake will walk you through the journey he took to build a SharePoint App for the Office store which required a real world separation of view layer to allow a GUI Web developer to control the look and feel whilst he coded up the Model and Business Logic.
+
+      The session will include how Bootstrap UI was used to speed up the GUI framework, out of the box People Pickers in an inline editing form and much more! If you’ve been following Jeremy Thake’s blog on this topic, this session will bring it all together and much more!
+    </Abstract>
+    <Topic>Office</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Jeremy Thake </Speaker>
+    <Tag>SharePoint</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-570</Url>
+  </Session>
+  <Session>
+    <Title>Building Enterprise Social Apps with Yammer</Title>
+    <Code>3-571</Code>
+    <Abstract>The foundation of any great app is a growing and engaged user base, and in the Enterprise, it can be hard to reach out to new users and keep them engaged in your app. With Open Graph in Yammer, you can make your app the center of conversations in companies. In this session you will see how to build Windows 8 and Windows Phone 8 Apps that work with the Yammer Platform. We’ll cover Yammer’s support of Open Graph, and we’ll drill into building connected modern apps for Windows 8 and Windows Phone 8. You’ll take away ideas and some really easy snips of code to quickly add a conversation element into your app allowing you to reach new audiences in the Enterprise.</Abstract>
+    <Topic>Office</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Jose Juarez Comboni</Speaker>
+    <Tag>Yammer</Tag>
+    <Tag>Office</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-571</Url>
+  </Session>
+  <Session>
+    <Title>Captivate Consumers with the OneNote API</Title>
+    <Code>3-572</Code>
+    <Abstract>
+      Note-taking and digital memories are a hot app category.  Come learn how the new OneNote API can help you reach millions of OneNote users by integrating your app, website or device.
+      We'll show the breadth of OneNote's reach and ease of coding with demos of integration on Windows and beyond.
+    </Abstract>
+    <Topic>Office</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Gareth Jones</Speaker>
+    <Tag>Office</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-572</Url>
+  </Session>
+  <Session>
+    <Title>Developing Office 365 Cloud Business Apps</Title>
+    <Code>3-573</Code>
+    <Abstract>Office 365 is an ideal business app platform providing a core set of services expected in today’s business apps like collaboration, presence and integrated workflows, and a central location for installing, discovering and managing the apps. Office 365 makes these business apps available where users already spend their time – in SharePoint and Office. Visual Studio 2013 streamlines the way developers build modern business applications for Office 365 and SharePoint 2013 with the Office 365 Cloud Business App project. In this demo-heavy session, you’ll see how developers can build social, touch-centric, cross-platform Office 365 business applications that run well on all modern devices.</Abstract>
+    <Topic>Office</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Beth Massi</Speaker>
+    <Tag>Cloud</Tag>
+    <Tag>Office</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-573</Url>
+  </Session>
+  <Session>
+    <Title>Apps for Outlook Power Hour</Title>
+    <Code>3-574</Code>
+    <Abstract>Provide apps to use while composing messages and appointments in Outlook, easily access attachments or entire mail item, save messages and appointments to SharePoint and more! Since Apps for Outlook debuted a year ago, we’ve added many new features. Learn about building apps that appear in message and appointment compose forms, how to access the body, attachments and other properties in a simple way without requiring admin install, how to connect a mail app to SharePoint and many other topics. In this talk we’ll cover the concepts, possible scenarios and go through demos showing the code and a working app.</Abstract>
+    <Topic>Office</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Andrew Salamatov</Speaker>
+    <Tag>Office</Tag>
+    <Tag>Outlook</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-574</Url>
+  </Session>
+  <Session>
+    <Title>Getting Started with Visual Studio Online</Title>
+    <Code>2-575</Code>
+    <Abstract>Visual Studio Online (www.visualstudio.com) brings together Microsoft Visual Studio, Team Foundation Server, and Microsoft Azure into an easy-to-consume cloud-hosted solution for application lifecycle management.  In this demo-heavy session, we will start from scratch and quickly build a solution to manage our code base, inviting friends to collaborate, planning and tracking our backlog, building our project in the cloud, and load testing our solution using the cloud-based load testing capabilities. You will also learn the similarities and differences between Visual Studio Online and the on-premises offering of Team Foundation Server, to help you decide when to use each.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Aaron Bjork</Speaker>
+    <Tag>Application Lifecycle Management</Tag>
+    <Tag>Visual Studio Online</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-575</Url>
+  </Session>
+  <Session>
+    <Title>TypeScript</Title>
+    <Code>3-576</Code>
+    <Abstract>
+      JavaScript has grown from a webpage toy to being used in large-scale deployments both on the server and in the browser. This rapid growth has outpaced the growth of the language itself, which lacks features that allow teams to communicate requirements and build applications safely. This session will be a guided tour of TypeScript, showing how the language and toolset makes it easier to write cross-platform, large-scale JavaScript applications.
+    </Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Anders Hejlsberg</Speaker>
+    <Tag>TypeScript</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-576</Url>
+  </Session>
+  <Session>
+    <Title>The Future of C#</Title>
+    <Code>2-577</Code>
+    <Abstract>Project Roslyn is a complete renewal of the C# and Visual Basic compilers, exposing them as full fidelity APIs for everyone to use, and providing a great foundation for evolving the tool experience and the languages themselves. How can you make use of Roslyn, and what new language features do we have in store? Come and see!</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Mads Torgersen</Speaker>
+    <Speaker>Dustin Campbell</Speaker>
+    <Tag>.NET</Tag>
+    <Tag>C#</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-577</Url>
+  </Session>
+  <Session>
+    <Title>Diagnosing Issues in Windows Phone XAML Apps Using Visual Studio</Title>
+    <Code>3-578</Code>
+    <Abstract>Come to this demo driven session to learn how to use the latest diagnostic tools in Visual Studio 2013 to make your Windows Phone XAML apps reliable, fast, and efficient. You will learn how to make the most of existing capabilities in the debugger as well as new debugging features for diagnosing correctness issues. You will also see the Visual Studio Performance and Diagnostics hub in action with its performance analysis tools for diagnosing CPU usage, memory usage, and energy consumption. The techniques covered in this session apply equally well for Windows Store apps as well as Windows Phone apps, so all your device development needs will be covered.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Dan Taylor</Speaker>
+    <Tag>Visual Studio</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>XAML</Tag>
+    <Tag>Performance</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-578</Url>
+  </Session>
+  <Session>
+    <Title>Diagnosing Issues with Windows Phone JavaScript Apps Using Visual Studio</Title>
+    <Code>3-579</Code>
+    <Abstract>
+      There have been a number of exciting improvements in the range of diagnostics and performance tools in Visual Studio for Windows Store apps, and now for Phone Store apps too. Come see the team demonstrate diagnostics against WebViews, Phone apps, and the range of improvements in memory, power and performance tools.
+    </Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Andy Sterland</Speaker>
+    <Tag>JavaScript</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-579</Url>
+  </Session>
+  <Session>
+    <Title>Internet Explorer 11’s Developer Tools, F12, Just Got Nicer (Again)</Title>
+    <Code>3-580</Code>
+    <Abstract>At Build 2013, you saw how the F12 debugging tools in Internet Explorer were rebooted to better serve the needs of today's web developers. The story gets even better this year. Skip over exceptions thrown by third-party libraries to only debug your own code. Using TypeScript? No problem. The F12 tools now allow you to debug your TypeScript natively without dropping into JavaScript. Join us for this and more.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Andy Sterland</Speaker>
+    <Tag>JavaScript</Tag>
+    <Tag>TypeScript</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-580</Url>
+  </Session>
+  <Session>
+    <Title>Diagnosing Issues with Cloud Applications Hosted in Azure Using Visual Studio</Title>
+    <Code>3-581</Code>
+    <Abstract>Visual Studio provides a variety of tools to debug and troubleshoot Azure applications running as Azure Web Sites, Cloud Services or on Virtual Machines (IaaS). In this session we will walk you through the different options available for those compute containers and how to use them to effectively troubleshoot your applications.  </Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Boris Scholl</Speaker>
+    <Tag>Visual Studio</Tag>
+    <Tag>Windows Azure</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-581</Url>
+  </Session>
+  <Session>
+    <Title>Tips and Tricks in Visual Studio 2013</Title>
+    <Code>2-582</Code>
+    <Abstract>You’ll leave this session with tons of tips and tricks to increase your personal performance inside Visual Studio. We'll cover Code Navigation, Solution Explorer, searching, must have add-ons and much more to help you make Visual Studio work the way you work.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Cathy Sullivan</Speaker>
+    <Tag>Visual Studio</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-582</Url>
+  </Session>
+  <Session>
+    <Title>Building a Large Scale JavaScript Application in TypeScript</Title>
+    <Code>3-583</Code>
+    <Abstract>How can you survive a project that uses JavaScript massively on both the client and the server using Node.js? The project is about online development components, such as the TypeScript playground (http://www.typescriptlang.org/Playground/) or Visual Studio Online “Monaco," that enables users to edit Azure web sites online. We had an existing large JavaScript code base and we wanted to give TypeScript a try. Today the project is one of the largest TypeScript code bases inside Microsoft with more than 200k lines of TypeScript in production. In this talk I will give a quick introduction into TypeScript and then take a deep look at how TypeScript and other technologies were used to successfully scale up a very large JavaScript project.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Erich Gamma</Speaker>
+    <Tag>TypeScript</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-583</Url>
+  </Session>
+  <Session>
+    <Title>Continuous Delivery and Continuous Integration with Visual Studio Online and Microsoft Azure</Title>
+    <Code>3-584</Code>
+    <Abstract>
+      Visual Studio Online provides a compelling solution for building your code in the cloud and automatically deploying your solution to Azure. In this session we will dive deep into how this works for three common types of applications - .NET, Node.js, and PHP.
+    </Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Chris Patterson</Speaker>
+    <Tag>.NET</Tag>
+    <Tag>Node.js</Tag>
+    <Tag>Visual Studio Online</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>2004</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-584</Url>
+  </Session>
+  <Session>
+    <Title>What's New for Azure Developers in Visual Studio and Azure SDK</Title>
+    <Code>2-585</Code>
+    <Abstract>In this demo-packed session, you'll learn about how to take advantage of new features designed to improve creating, managing, and deploying Microsoft Azure applications. You’ll learn about new features like .NET Mobile Services, creating virtual machines, remote debugging improvements, and improved PowerShell integration.  </Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Dan Fernandez</Speaker>
+    <Speaker>Paul Yuknewicz</Speaker>
+    <Tag>Visual Studio</Tag>
+    <Tag>Windows Azure</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-585</Url>
+  </Session>
+  <Session>
+    <Title>Strategies for Developing Cross-Device Applications with Visual Studio 2013</Title>
+    <Code>2-586</Code>
+    <Abstract>
+      This session will cover the strategic decisions you have to make as a developer when targeting multiples devices in your application. We will explore the tools and technologies that you have available in Visual Studio 2013 for both web and native applications that target Windows, iOS and Android devices, as well as best practices to reuse code and skills across them.
+    </Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>David Carmona Salas (DPE)</Speaker>
+    <Tag>Android</Tag>
+    <Tag>iOS</Tag>
+    <Tag>.NET</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>Windows Phone Apps</Tag>
+    <Tag>Windows Store apps</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-586</Url>
+  </Session>
+  <Session>
+    <Title>Native Code Performance on Modern CPUs: A Changing Landscape</Title>
+    <Code>4-587</Code>
+    <Abstract>Modern CPUs are fast. Really fast. New instructions, wider vector registers, and more powerful CPUs promise faster code. But reasoning about performance is not as it seems on the surface. This talk will dive deep into how advancements in the latest chips force some rethinking of native code performance, from the point of view of a compiler developer. The performance landscape is changing. Come see what that means.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>400 - Expert</Level>
+    <Speaker>Eric Brumer</Speaker>
+    <Tag>C/C++</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/4-587</Url>
+  </Session>
+  <Session>
+    <Title>The Present and Future of .NET in a World of Devices and Services</Title>
+    <Code>2-588</Code>
+    <Abstract>Come see an end-to-end view of the .NET platform in the new world of devices powered by cloud services. In this session you will see the present and the future of .NET in key areas such as the runtime, compiler and language foundation as well as the latest innovations for creating native applications in Windows, Azure services and cross-device experiences.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Jay Schmelzer</Speaker>
+    <Tag>.NET</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-588</Url>
+  </Session>
+  <Session>
+    <Title>The Next Generation of .NET for Building Applications</Title>
+    <Code>3-589</Code>
+    <Abstract>This deep-dive session will present new advances in .NET for building applications. Learn how features such as cloud compilation, a new Just-In-Time compiler (JIT) and parallel processing enable you to build applications that are faster and consume less memory.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Habib Heydarian</Speaker>
+    <Tag>.NET</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-589</Url>
+  </Session>
+  <Session>
+    <Title>Deep Dive into Git with Team Foundation Server</Title>
+    <Code>3-590</Code>
+    <Abstract>Support for Git was added into Visual Studio 2013 and Team Foundation Server 2013. In this session you will learn more about why you might want to use Git for your next project, what makes DVCS a powerful model for software development and when you might want to choose Git over TFVC for version control. We will learn about the fundamentals of a repository and how to successfully collaborate using Git in your Team Foundation Server or Visual Studio Online account.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Martin Woodward</Speaker>
+    <Speaker>Edward Thomson</Speaker>
+    <Tag>Application Lifecycle Management</Tag>
+    <Tag>Team Foundation Server</Tag>
+    <Tag>Visual Studio</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>2022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-590</Url>
+  </Session>
+  <Session>
+    <Title>Using Visual Studio to Build XAML Converged Apps</Title>
+    <Code>3-591</Code>
+    <Abstract>In this session, we will show some of the new features in Visual Studio 2013 for building a converged Windows and Windows Phone XAML application. We will explore the concept of shared projects, support for Windows Runtime (WinRT) types and XAML in portable class libraries, and the end-to-end developer experience for building a converged app. We will highlight some of the key enhancements we have made to the code and XAML authoring experiences in Visual Studio and Blend for converged apps.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Navit Saxena</Speaker>
+    <Tag>XAML</Tag>
+    <Tag>Windows Store apps</Tag>
+    <Tag>Windows Phone Apps</Tag>
+    <Tag>Visual Studio</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-591</Url>
+  </Session>
+  <Session>
+    <Title>Make Data-Driven, High-Impact Improvements to an Application with Application Insights</Title>
+    <Code>3-592</Code>
+    <Abstract>Application Insights delivers the holy grail of EASILY determining how customers are using your product, what their experience is, the environments your customers are using, and ensuring your applications are successful meeting your business needs. This data is provided by the usage telemetry capabilities of Application Insights. In this session you will also discover how easy it is to add this to your existing applications through a simple “right click” option in Visual Studio. Demos will include enabling usage telemetry with Application Insights from Windows Phone apps, Windows Store apps, Web applications, as well as custom logging, custom events and dashboard creation. </Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Andrew Bragdon</Speaker>
+    <Speaker>Bret Grinslade</Speaker>
+    <Tag>Application Lifecycle Management</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>Web</Tag>
+    <Tag>Application Insights</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-592</Url>
+  </Session>
+  <Session>
+    <Title>Automated Testing of XAML-Based Apps for Windows and Windows Phone</Title>
+    <Code>3-593</Code>
+    <Abstract>Do you want to create automated tests for your apps? With Visual Studio 2013 Update 2 you can now create automated tests for your XAML-based Windows and Windows Phone apps. Starting from unit tests to functional end-to-end scenario tests using coded UI tests, you can now perform all of your testing from the integrated Test Explorer in Visual Studio. The testing framework is extensible and developers can customize it to meet the specialized needs of their application. In this session, we will show you how to build comprehensive test suites for your apps by leveraging these Visual Studio capabilities that will help you ship a great quality app.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Prachi Bora</Speaker>
+    <Tag>Testing</Tag>
+    <Tag>Windows Phone Apps</Tag>
+    <Tag>Windows Store apps</Tag>
+    <Tag>XAML</Tag>
+    <Tag>Visual Studio</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-593</Url>
+  </Session>
+  <Session>
+    <Title>DirectX Graphics Development with Visual Studio 2013</Title>
+    <Code>3-594</Code>
+    <Abstract>
+      Whether you are using DirectX to create games or an interactive UI for Windows apps, having the right tools will make your job easier. Visual Studio provides a rich set of graphics tools for writing shaders, working with graphics assets including images and 3D models, and diagnosing DirectX graphics issues. These tools were first introduced in Visual Studio 2012 and now have been taken further in Visual Studio 2013. In this talk we will take a tour of the DirectX graphics tools and technologies in Visual Studio 2013.
+    </Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Rong Lu</Speaker>
+    <Tag>DirectX</Tag>
+    <Tag>Visual Studio</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-594</Url>
+  </Session>
+  <Session>
+    <Title>Using the Cloud-Based Load Testing Service and Application Insights to Find Scale and Performance Bottlenecks in Your Applications</Title>
+    <Code>3-595</Code>
+    <Abstract>Do you find it painful to set up infrastructure to run performance and load tests? Do you think load testing is an expensive affair? Do you have a need for testing your service with a large burst load just before your big launch? Do you want to get a 360 degree of the performance and availability of your application when tested under load conditions? In this session, see how you can use the cloud-based load testing service provided by Visual Studio Online in conjunction with the monitoring and analytics capabilities of Application Insights to quickly run load tests and fix performance bottlenecks.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Charles Sterling</Speaker>
+    <Tag>Application Lifecycle Management</Tag>
+    <Tag>Testing</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>Application Insights</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>2004</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-595</Url>
+  </Session>
+  <Session>
+    <Title>Rapidly Detect Application Outages with Application Insights</Title>
+    <Code>3-596</Code>
+    <Abstract>
+      Cloud hosting and geo distribution takes the challenge of the problems that cause the "works at my desk" phenomenon to a whole new level. In this session we will show you how Application Insights can tell you proactively whether your application is available and performing from around the world – usually before your customers even realize there was an issue.
+    </Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Vlad Joanovic</Speaker>
+    <Tag>Application Lifecycle Management</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>Application Insights</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-596</Url>
+  </Session>
+  <Session>
+    <Title>Gain Early Warning of Performance Issues and Failures, and Pinpoint the Cause with Application Insights</Title>
+    <Code>3-597</Code>
+    <Abstract>Application Insights solves the age old dilemma of not collecting enough information to be actionable vs. collecting so much information as to negatively impact your application. It does this through the integration of monitoring and development tools.  This session will show how to quickly identify performance issues and bottlenecks in your applications through Application Insights and the power of the Microsoft Monitoring Agent.  In this session we will show how Application Insights can monitor event data, analyze it for categories of issues, link to the line of source of the issue, monitor memory usage for leak detection and output memory snapshots and  IntelliTrace logs that can be analyzed using Visual Studio 2013.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Vlad Joanovic</Speaker>
+    <Speaker>Bret Grinslade</Speaker>
+    <Tag>Application Lifecycle Management</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>Application Insights</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-597</Url>
+  </Session>
+  <Session>
+    <Title>Building Native Client and Mobile Apps using Azure Active Directory for Sign In</Title>
+    <Code>3-598</Code>
+    <Abstract>Business applications on Windows and on mobile devices need to be able to sign-in business users. The Active Directory Authentication Library (ADAL) makes this possible on Windows, iOS and Android devices. In this session, join us for a deep dive in how to build a native client application that calls a web API secured with Azure Active Directory.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Vittorio Bertocci</Speaker>
+    <Speaker>Brandon Werner</Speaker>
+    <Tag>Azure</Tag>
+    <Tag>Identity</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-598</Url>
+  </Session>
+  <Session>
+    <Title>Building Enterprise and SaaS Web Apps and Web APIs using Azure Active Directory for Sign In</Title>
+    <Code>3-599</Code>
+    <Abstract>Cloud-based applications have unique challenges when it comes to identity management. In this session, join us for a deep dive in how to build web applications and web APIs on a variety of platforms using Azure Active Directory for user sign-in and resource authorization.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Vittorio Bertocci</Speaker>
+    <Tag>Azure</Tag>
+    <Tag>Identity</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-599</Url>
+  </Session>
+  <Session>
+    <Title>The New Authentication Model for Web, Mobile, and Cloud Applications</Title>
+    <Code>2-601</Code>
+    <Abstract>Today's new applications - cloud or on-premises - include a spectrum of mobile clients, server to server communication, and web APIs, in addition to the traditional website. LDAP, Kerberos, and SAML aren’t enough to address the scenarios introduced by modern apps. Through OAuth 2.0 and OpenID Connect, Microsoft’s next generation authentication platform – including Active Directory Federation Services and Azure Active Directory – addresses these requirements. This session will discuss the protocols, libraries and tools that apply in this new world.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Stuart Kwan</Speaker>
+    <Speaker>Lucas Adams</Speaker>
+    <Tag>Azure</Tag>
+    <Tag>Identity</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-601</Url>
+  </Session>
+  <Session>
+    <Title>What's New for ASP.NET and Web in Visual Studio 2013 Update 2 and Beyond</Title>
+    <Code>3-602</Code>
+    <Abstract>The web marches on, and so does Visual Studio and ASP.NET, with a renewed commitment to making a great IDE for web developers of all kinds. Join Scott and Scott for this dive into VS2013 Update 2 and beyond. We’ll see new features in ASP.NET, new ideas in front end web development, as well as a peek into ASP.NET’s future.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Scott Hunter</Speaker>
+    <Speaker>Scott Hanselman</Speaker>
+    <Tag>ASP.NET</Tag>
+    <Tag>Azure</Tag>
+    <Tag>Web</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-602</Url>
+  </Session>
+  <Session>
+    <Title>Building Web APIs for Mobile Apps Using ASP.NET Web API 2.1</Title>
+    <Code>3-603</Code>
+    <Abstract>To build a great connected application you need powerful backend services. In this session we’ll learn how to use ASP.NET Web API 2.1 to support connection applications for Windows Phone, Windows Store and more!</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Daniel Roth</Speaker>
+    <Tag>ASP.NET</Tag>
+    <Tag>Azure</Tag>
+    <Tag>Web API</Tag>
+    <Tag>Web</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-603</Url>
+  </Session>
+  <Session>
+    <Title>Building Modern Web Applications with Visual Studio and Web Essentials</Title>
+    <Code>3-604</Code>
+    <Abstract>Modern web applications use modern development techniques, and we’ve got new tools within Visual Studio and Web Essentials to support you. We’ll take a look at AngularJS, Bootstrap and other popular libraries and frameworks and see how we can leverage these new tools for an even better and more powerful experience. Join Mads as he takes you through useful demos, background and insights about the future of Visual Studio web tooling.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Mads Kristensen</Speaker>
+    <Tag>HTML5</Tag>
+    <Tag>JavaScript</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>Web</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-604</Url>
+  </Session>
+  <Session>
+    <Title>Deep Dive: Improving Performance in Your ASP.NET App</Title>
+    <Code>3-605</Code>
+    <Abstract>Join us in this deep dive as we explore common anti-patterns and gotchas in your ASP.NET apps. We’ll demonstrate how to detect potential problem areas, and we’ll offer clear ways to improve your application’s reliability and performance.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Levi Broderick</Speaker>
+    <Tag>ASP.NET</Tag>
+    <Tag>Web</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-605</Url>
+  </Session>
+  <Session>
+    <Title>The Future of Azure DevOps: Managing the Development and Lifecycle of Cloud Applications</Title>
+    <Code>2-609</Code>
+    <Abstract>We are excited to share the new, Microsoft Azure Portal Preview – reimagined, redesigned, and remade around you.  Join us for this journey into the future of DevOps, integrating Visual Studio Online and Azure into single, seamless experience that allows you to get real work done fast.  We’ll look at how to connect your source code to Azure for continuous deployment to Websites and SQL databases, manage your builds and tests, track work items, and more.  We will also touch on future directions.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Michael Flanakin</Speaker>
+    <Speaker>Bradley Millington</Speaker>
+    <Tag>Application Lifecycle Management</Tag>
+    <Tag>Visual Studio Online</Tag>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>3rd Floor Ballroom</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-609</Url>
+  </Session>
+  <Session>
+    <Title>Azure Resource Group Model: Modern Management for Modern Cloud</Title>
+    <Code>2-607</Code>
+    <Abstract>Do you want to look at your entire application as a unit, create a template for your app and deploy it automatically to your dev-test environment, make sure dependencies across your resources are managed automatically, how about  or group resources the any way you like by tagging them?  If you answered yes to any of these, then let us introduce you to a modern cloud management solution for Azure.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Gautam Thapar</Speaker>
+    <Speaker>Nathan Totten</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-607</Url>
+  </Session>
+  <Session>
+    <Title>The Future of Azure DevOps: Deploying, Managing and Monitoring Your Cloud Applications</Title>
+    <Code>2-608</Code>
+    <Abstract>Heard about the new Microsoft Azure Portal, saw a keynote demo and got curious?! If this was you, you want to be here with us! In this session, we’ll introduce you to the new Microsoft Azure Portal and its capabilities and do a deep dive on building, managing and monitoring cloud applications on our new cloud management platform using the new Microsoft Azure Portal. Come take the journey with us and hear about the futures of this new platform.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Chandrika Shankarnarayan</Speaker>
+    <Speaker>Adam Abdelhamed</Speaker>
+    <Speaker>Stephen Siciliano</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>3rd Floor Ballroom</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-608</Url>
+  </Session>
+  <Session>
+    <Title>Building End-To-End Video Experiences with Azure Media Services</Title>
+    <Code>3-610</Code>
+    <Abstract>Azure Media Services is a platform-as-a-service that enables you to build a customizable media workflow. you could uUpload, encode, encrypt, package and deliver video content to multiple platforms and devices. In this session you will see how to consume various services using the Media Services client SDK. We will focus on some new features, such as secure delivery options, live streaming, and etc.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Mingfei Yan</Speaker>
+    <Speaker>Mariano Converti (Southworks SRL)</Speaker>
+    <Tag>Media</Tag>
+    <Tag>Azure</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-610</Url>
+  </Session>
+  <Session>
+    <Title>Azure Media Services: An Around-the-World Tour of Customer Use Cases</Title>
+    <Code>2-611</Code>
+    <Abstract>Azure Media Services is a powerful and extensible platform that enables media and entertainment companies with high quality on demand and live broadcast video content to reach all of today’s digital devices through the cloud. In this session, you will see a variety of real-world examples of the Azure Media Services solutions built and deployed by our global customers and partners - from content providers like Disney, Blinkbox, and The CW Television Network to broadcasters like NBC and their recent live streaming of the 2014 Winter Olympics Games in Sochi, Sunday Night Football, and National Hockey League games. If you’re keen to see how Azure has now gone “Prime Time” in the global media space, this is one session you won’t want to miss!</Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Martin Wahl</Speaker>
+    <Speaker>Chris Witmayer, Pedro Bandeira, ZON (pedro.l.bandeira@zonoptimus.pt)</Speaker>
+    <Tag>Media</Tag>
+    <Tag>Azure</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-611</Url>
+  </Session>
+  <Session>
+    <Title>Leveraging Hadoop 2 in Azure HDInsight</Title>
+    <Code>3-612</Code>
+    <Abstract>Azure HDInsight brings the power of Hadoop for big data analytics on all data in Azure.  The service has been updated to deploy clusters running Hadoop 2.  In this session you will learn about the improvements across all the Hadoop components, including Pig, Hive and Oozie, as well as fundamental enhancements to core Hadoop and the ability to leverage YARN to deploy arbitrary distributed applications onto your HDInsight cluster.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Matt Winkler (SQL)</Speaker>
+    <Tag>Azure</Tag>
+    <Tag>Data</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-612</Url>
+  </Session>
+  <Session>
+    <Title>Integrating HDInsight with your Azure Apps</Title>
+    <Code>3-613</Code>
+    <Abstract>HDInsight is allows you to harness the power of Hadoop to put powerful big data analytics and machine learning at your fingertips. Learn how to provision, program and manage an HDInsight cluster using familiar tools, including the Azure command line tools, Visual Studio and a variety of open source projects such as Pig, Hive, Mahout and Scalding. Integrate HDInsight with other Azure services in order to build smarter applications by capitalizing on the value of the data they generate</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Matt Winkler (SQL)</Speaker>
+    <Tag>Azure</Tag>
+    <Tag>Data</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-613</Url>
+  </Session>
+  <Session>
+    <Title>What’s New in IaaS for Developers</Title>
+    <Code>3-614</Code>
+    <Abstract>Learn about the newest capabilities tied in with the existing capabilities for easy deployment and usage of Azure IaaS.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Corey Sanders</Speaker>
+    <Speaker>Jeffrey Snover</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-614</Url>
+  </Session>
+  <Session>
+    <Title>Avoiding Cloud Fail: Learning from the Mistakes of Azure with Mark Russinovich</Title>
+    <Code>3-615</Code>
+    <Abstract>Mark will cover the lessons on what we’ve learned in Azure to help developers avoid making the same mistakes and build great apps using IaaS, PaaS or both. This will include some Azure internals information as well.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Mark Russinovich</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>3rd Floor Ballroom</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-615</Url>
+  </Session>
+  <Session>
+    <Title>Mobile Push Notifications to Any Client with Azure Notification Hubs</Title>
+    <Code>2-616</Code>
+    <Abstract>Mobile Push Notifications are essential for any mobile app, whether it targets your customers or employees. Azure Notification Hubs is a cross-platform push notification service you need to deliver push notifications at scale to iOS, OSX, Android, Chrome, Windows , Windows Phone, or Kindle Fire clients. Learn how to achieve simultaneous broadcast to millions of devices in minutes. Hear how to achieve rich audience segmentation while engaging your users with push. Learn how to use Notification Hubs for rich personalization and localization scenarios, how to add geo-segmentation, and more!</Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Elio Damaggio</Speaker>
+    <Tag>Mobile Services</Tag>
+    <Tag>Windows Azure</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-616</Url>
+  </Session>
+  <Session>
+    <Title>What’s New in Azure Networking</Title>
+    <Code>2-617</Code>
+    <Abstract>This session provides an overview of all the networking capabilities in Azure. The session will provide a brief overview of the current feature set in Azure and will announce new capabilities introduced in the platform in 2014.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Jonathan Tuliani</Speaker>
+    <Speaker>Ganesh Srinivasan</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-617</Url>
+  </Session>
+  <Session>
+    <Title>Extending Your On-Premises Network into Azure Securely</Title>
+    <Code>3-618</Code>
+    <Abstract>This session covers several new features in the hybrid networking world. We plan to cover ExpressRoute in depth and provide a comparison of the feature sets it offers compared to virtual network.This session covers several new features in the hybrid networking world. We plan to cover ExpressRoute in depth and provide a comparison of the feature sets it offers compared to virtual network.We will be talking about how ExpressRoute truly enables Enterprise customers to consume Azure.From a developer perspective, Point-to-Point support will mean they can securely connect to their Azure infrastructure from anywhere for development, testing and monitoring.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Ganesh Srinivasan</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-618</Url>
+  </Session>
+  <Session>
+    <Title>Running Java and Oracle Applications on Azure</Title>
+    <Code>3-619</Code>
+    <Abstract>In this session we’ll look at some of the options for running Java on Azure.  We’ll look at the Azure plugin for Eclipse and how it enables creation, development, testing, and deployment of applications as well as some of the more advanced configuration options.  We’ll also review how you can run official Oracle virtual machines including WebLogic and Oracle Database.  You’ll leave understanding all of your options for running Java inside of Microsoft’s cloud.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Chris Risner</Speaker>
+    <Speaker>Brian Benz (MS OPEN TECH)</Speaker>
+    <Tag>Web</Tag>
+    <Tag>Azure</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-619</Url>
+  </Session>
+  <Session>
+    <Title>Scheduling Jobs in the Cloud with the Azure Scheduler Service</Title>
+    <Code>3-620</Code>
+    <Abstract>The Scheduler service will allow you to create jobs that can either invoke an http endpoint or send a message to a storage, queue on a simple recurrence or a complex schedule. It is the same service that is powering the Azure Mobile scheduled scripts feature but more generalized. Come to this session to understand it's concepts and features and how customer early adopters have used scheduler in their services.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Kevin Lam</Speaker>
+    <Speaker>Brad Olenick</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-620</Url>
+  </Session>
+  <Session>
+    <Title>Automation Everywhere with New SDKs, Tools, and Services in Azure</Title>
+    <Code>3-621</Code>
+    <Abstract>Many cloud applications need to support the ability to automate the creation, deployment, monitoring, and maintenance of its components. The Azure Management Libraries and Azure PowerShell Cmdlets allow this type of automation by providing convenient client wrappers around the Azure management REST APIs. This session will introduce Azure Management Libraries and the Azure PowerShell Cmdlets, and demonstrate how they can be used to dynamically create Web Sites, databases, virtual machines, storage accounts, and any other asset available in the Azure platform. If you’re looking for ways to automate your dev/test environment creation and destruction or you’re thinking of implementing a SaaS-based application in the cloud, this session will introduce you to the latest arsenal in the Azure SDK and how you can use it automate everything.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Brady Gaster</Speaker>
+    <Speaker>Joe Levy</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-621</Url>
+  </Session>
+  <Session>
+    <Title>Building  Cross-Platform Line of Business Apps with Mobile Services</Title>
+    <Code>3-622</Code>
+    <Abstract>Line of Business Apps need an API in the cloud that authenticates employees, supports occasionally connected apps, performs other mobile app specific functions like push notifications, and talks to existing enterprise systems on premise. Azure Mobile Services allows you to quickly build and host such an API, connect it to your mobile app, and integrate with your existing services on premise. Line of Business apps also need to run on multiple mobile platforms. Xamarin is a framework that allows you to create native iOS, Android, Mac and Windows apps experiences in C# by writing the app logic once. Come and see a live demonstration of Mobile Services, Xamarin, and Visual Studio together making it faster and easier than ever to build cross platform, occasionally connected, enterprise mobile apps.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Chris Risner</Speaker>
+    <Speaker>Donna Malayeri</Speaker>
+    <Tag>Mobile Services</Tag>
+    <Tag>Azure</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-622</Url>
+  </Session>
+  <Session>
+    <Title>Powerful Mobile Apps with Mobile Services and ASP.NET Web API</Title>
+    <Code>3-623</Code>
+    <Abstract>Whether you’re building iOS, Android, or Windows Phone apps, you need an API in the cloud. Come and see how ASP.NET Web API, Visual Studio and Mobile Services come together as a great way to build, run, debug, and host your APIs. Learn how the new .NET support in Mobile Services augments your Web API with mobile capabilities such as auth, push notifications, client libraries, and offline connectivity. Hear how Mobile Services provides turn-key access to heterogeneous data sources, whether it is SQL or Table Storage, or Mongo, whether it is in the cloud or on-prem. Publish your API, and Mobile Services will take the burden of managing and monitoring your API from your shoulders.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Yavor Georgiev</Speaker>
+    <Speaker>Kirill Gavrylyuk</Speaker>
+    <Tag>Mobile Services</Tag>
+    <Tag>Web API</Tag>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>2004</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-623</Url>
+  </Session>
+  <Session>
+    <Title>Deep Dive into Hidden Gems, Tips and Tricks for Azure Web Sites</Title>
+    <Code>3-624</Code>
+    <Abstract>A great developer experience has been a cornerstone of Azure Web Sites. Azure Web Sites has a lot of hidden treasures to offer for those in-the-know. For example, opening a remote console shell, live streaming your site trace from the command line or Visual Studio and much more. This session is your chance to deep dive into the developer experience with the leading experts on the features.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>David Ebbo</Speaker>
+    <Tag>Azure</Tag>
+    <Tag>Web</Tag>
+    <Tag>Web Sites</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-624</Url>
+  </Session>
+  <Session>
+    <Title>What’s New with Azure Web Sites</Title>
+    <Code>3-625</Code>
+    <Abstract>Azure Web Sites has been developing at a rapid pace, and since last BUILD, dozens of new features have been added. This presentation will discuss the most important and sought-after new abilities, and how they make developing web sites and applications on Azure Web Sites better than ever.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Nir Mashkowski</Speaker>
+    <Speaker>Chris Compy</Speaker>
+    <Tag>Azure</Tag>
+    <Tag>Web Sites</Tag>
+    <Tag>Web</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>3rd Floor Ballroom</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-625</Url>
+  </Session>
+  <Session>
+    <Title>Azure Web Sites: Architecting Massive-Scale Ready-For-Business Web Apps</Title>
+    <Code>3-626</Code>
+    <Abstract>Developing multi-tiered applications in the cloud world and integrating with Azure Active Directory (AAD) offers great benefits, as it allows flexible scaling as the business and usage grows. This session will discuss planning web apps with scaling and growth in mind, as well as strategies and techniques for hybrid to on-premises solutions.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Yochay Kiriaty</Speaker>
+    <Tag>Azure</Tag>
+    <Tag>Web Sites</Tag>
+    <Tag>Web</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-626</Url>
+  </Session>
+  <Session>
+    <Title>Azure Fabric Controller Internals: Building and Updating High-Availability Apps</Title>
+    <Code>3-627</Code>
+    <Abstract>Azure allows easily setting up and managing highly available and highly scalable applications. In this session, the Fabric Controller team will remove the mystery from internal Azure mechanisms, answering questions such as: How are customer services updated without downtime? Which updateability parameters can I tune to maximize performance and uptime?        Which types of hardware failures exist and how can I configure a service to make sure those are transparent? How does Azure update its infrastructure and how does this impact my service? How does Azure compute resource allocation happen? How can Azure customers build automation to implement custom update workflows?</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Igal Figlin</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-627</Url>
+  </Session>
+  <Session>
+    <Title>Microsoft Azure Storage –  What's New, Best Practices and Patterns</Title>
+    <Code>3-628</Code>
+    <Abstract>Azure Storage is a highly scalable, available and durable cloud storage system that stores over 20 trillion objects and serves on average over 2 million request per second. It provides abstractions like NoSQL Tables, Blobs, Queues etc. all built on top of the same framework. This demo heavy talk focuses on the best practices that has enabled customers to build resilient scalable services on storage in addition to summarizing some core architectural choices we have made.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Jai Haridas</Speaker>
+    <Speaker>Serdar Ozler</Speaker>
+    <Tag>Azure</Tag>
+    <Tag>Storage</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>2004</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-628</Url>
+  </Session>
+  <Session>
+    <Title>SQL Server in Memory OLTP for Database Developers</Title>
+    <Code>3-629</Code>
+    <Abstract>SQL Server 2014 introduces in-memory technology for optimizing OLTP workloads. In this session we focus on the new concepts for database developers. We discuss the new memory-optimized tables and the new memory-optimized hash and non-clustered indexes. You will also learn how to access memory-optimized tables using interpreted Transact-SQL, and how to optimize data access using the new natively compiled stored procedures. Finally, you will learn how to work with the new lock-free transaction semantics for in-memory OLTP</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Kevin Liu</Speaker>
+    <Tag>Data</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-629</Url>
+  </Session>
+  <Session>
+    <Title>Azure SQL Database: Under the Hood</Title>
+    <Code>3-630</Code>
+    <Abstract>In this session we will cover Azure SQL Database in-depth from a developer and sys-ops perspective.  The session will show how to develop Azure applications backed by Azure SQL Database in terms of developing for optimal performance via best-practice database tuning. We will also cover general development best practices and database partitioning (sharding).</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Tobias Ternstrom</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>2004</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-630</Url>
+  </Session>
+  <Session>
+    <Title>Using Node.js and Python in Visual Studio and on Azure</Title>
+    <Code>3-631</Code>
+    <Abstract>Node.js and Python are two popular languages with a diverse set of usage scenarios.  Microsoft now fully supports both inside Visual Studio and on Azure.  In this talk we'll do a quick overview of the two technologies, usage scenarios, edit/REPL/debug/profiling features in VS as well as deploying websites to the cloud.  No prior experience with either technology is required.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Dino Viehland</Speaker>
+    <Speaker>Shahrokh Mortazavi</Speaker>
+    <Tag>Node.js</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>Windows Azure</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-631</Url>
+  </Session>
+  <Session>
+    <Title>Designing and Implementing Hybrid Cloud Solutions for Architects</Title>
+    <Code>3-632</Code>
+    <Abstract>One of the biggest advantages of Microsoft's Cloud Platform is choice! It enables you creating solutions composed of services running in your own data centers as well as the public cloud in many different ways. In this session you will learn about the different options, their advantages and disadvantages for designing and implementing such Hybrid Cloud solutions with Azure. The session includes practical examples demonstrating some of those options in action based on practical, real-world solutions and services.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Mario Szpuszta</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-632</Url>
+  </Session>
+  <Session>
+    <Title>Building Big: Lessons Learned from Azure Customers</Title>
+    <Code>3-633</Code>
+    <Abstract>Millions of requests per hour. Global coverage. Rapid feature deployments. Zero down time. These are the requirements of Azure’s top customers. Focusing on scalability, availability and manageability, this session will discuss and demonstrate architectural and coding practices from live Azure customers and give you repeatable patterns to accelerate your own development.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Chris Clayton</Speaker>
+    <Speaker>Mark Simms</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/02/2014 4:00pm - 5:00pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-633</Url>
+  </Session>
+  <Session>
+    <Title>Connecting the World: Building Services for Connected Devices on Azure</Title>
+    <Code>3-634</Code>
+    <Abstract>From cars, to thermostats, through media players and embedded controllers, devices are being connected to the Internet at a furious pace.  To share information, publish telemetry, provide global visibility, or just to have someone to talk to, cloud services need to connect devices and information at a massive scale.  This session will discuss and demonstrate and coding practices from live Azure customers, with a focus on scalability and availability in an occasionally connected world.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Chris Clayton</Speaker>
+    <Speaker>Mark Simms</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-634</Url>
+  </Session>
+  <Session>
+    <Title>Internet of Things with Azure Service Bus</Title>
+    <Code>3-635</Code>
+    <Abstract>The advent of the Internet of things and connected devices present numerous integration and messaging challenges you can tackle with Service Bus.  In this session, I'll demonstrate how to use queues and topics to enable a variety of M2M scenarios--everything from command/control to telemetry.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Todd Holmquist-Sutherland</Speaker>
+    <Speaker>Paolo Salvatori</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-635</Url>
+  </Session>
+  <Session>
+    <Title>Messaging at Scale with Azure Service Bus Queues and Topics</Title>
+    <Code>3-636</Code>
+    <Abstract>Azure Service Bus allows you to de-couple and communicate between services and applications using Queues and Topics (Pub Sub). Scenarios enabled include building hybrid applications, intra-application and in-application communication, with broad reach from client and server platforms (Windows Server/Linux). In this session, see how customers are using Service Bus to scale their solutions with messaging patterns. We will also demonstrate best practices to increase throughput, availability and business continuity using new capabilities such as Partitioned Queues and Paired Namespaces.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Abhishek Lal</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>2004</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-636</Url>
+  </Session>
+  <Session>
+    <Title>Extending Xbox Experiences to Devices</Title>
+    <Code>2-637</Code>
+    <Abstract>Xbox SmartGlass is a cross-platform (Windows 8, Windows Phone, iOS, and Android) application and API that allows you to extend your Xbox One experience to tablets and phone devices.  Attend this session to learn more about SmartGlass and the new SmartGlass Native SDK that allows Xbox partners to integrate their SmartGlass experience into their native phone, tablet, or PC client apps.</Abstract>
+    <Topic>Xbox and Kinect</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Alain Maillot</Speaker>
+    <Tag>Windows Store</Tag>
+    <Tag>Windows Store apps</Tag>
+    <Tag>Xbox</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-637</Url>
+  </Session>
+  <Session>
+    <Title>Understanding Customer Patterns: Instrumenting an App for Telemetry and Analytics</Title>
+    <Code>2-638</Code>
+    <Abstract>Without telemetry, your app is flying blind! While the Windows Stores provides ratings, reviews, download/purchase history, and crash dumps, telemetry and analytics reveal what your customers are really doing within you app. This answers many questions about how engaged customers are with various app features, the success of your monetization strategies, where you should focus future investments (quality, performance, and feature updates), and how well your app is serving your business goals. In this session we'll explore best practices for instrumenting an app to collect the telemetry you need and using available third party analytics services that consolidate the data and provide actionable insights.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Kraig Brockschmidt</Speaker>
+    <Speaker>Tim Laverty</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Analytics</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>2009</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-638</Url>
+  </Session>
+  <Session>
+    <Title>Driving User Engagement With Your Windows Apps</Title>
+    <Code>2-639</Code>
+    <Abstract>Gone are the days when getting users to download your app was the end game.  Today’s successful app must engage (and re-engage) users so that they spend time in the app and keep coming back.  In this session, we’ll talk about several ways that the Windows platform can help you build and maintain user engagement, and we will discuss approaches to creating incentives for your current users to spread the word about your app and help you attract new users.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Jim Cox</Speaker>
+    <Speaker>Ashwin Kamath</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>UX</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-639</Url>
+  </Session>
+  <Session>
+    <Title>App Packaging and Deployment for Windows Devices</Title>
+    <Code>2-640</Code>
+    <Abstract>Windows app packaging and deployment just got even better, come learn how!  In this session you’ll learn about the newest packaging, deployment and storage features available in Windows Phone and Windows 8.1 Update. You’ll leave with an understanding of what these features mean for your Windows Phone SilverLight apps and Windows XAML Windows Store apps using C#/VB/C++ and XAML as well as how to leverage them to benefit your end-users.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Barclay Hill</Speaker>
+    <Speaker>Jason Salameh</Speaker>
+    <Tag>Windows Store</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-640</Url>
+  </Session>
+  <Session>
+    <Title>Using Orleans to Build Halo 4’s Distributed Cloud Services in Azure</Title>
+    <Code>3-641</Code>
+    <Abstract>This talk will detail how the Halo 4 team at 343 Industries used the Orleans technology from Microsoft Research to build the cloud services that power the Halo 4 blockbuster title. Attendees will learn about the paradigm shift that the team went through to think about building cloud-native services using Orleans and how that transition resulted in their ability to rapidly design services that are simpler to maintain and evolve as well as being easier to conceptualize. Participants will leave this talk understanding how to use Orleans to build highly-concurrent, stateful services that scale-by-default. Participants will also learn how the virtual actor concept makes it easier to reason about and achieve fault-tolerance in the cloud.</Abstract>
+    <Topic>Research</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Hoop Somuah</Speaker>
+    <Speaker>Sergey Bykov</Speaker>
+    <Tag>.NET</Tag>
+    <Tag>C#</Tag>
+    <Tag>Cloud</Tag>
+    <Tag>Cloud Services</Tag>
+    <Tag>Research</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-641</Url>
+  </Session>
+  <Session>
+    <Title>Thinking for Programmers</Title>
+    <Code>3-642</Code>
+    <Abstract>Leslie Lamport inventor of Paxos and developer of LaTeX introduces techniques and tools that help programmers think above the code level to determine what applications and services should do and ensure that they do it.  Depending on the task, the appropriate tools can range from simple prose to formal, tool-checked models written in TLA+ or PlusCal.</Abstract>
+    <Topic>Research</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Leslie Lamport</Speaker>
+    <Tag>Research</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-642</Url>
+  </Session>
+  <Session>
+    <Title>Developing Neural Networks Using Visual Studio</Title>
+    <Code>3-643</Code>
+    <Abstract>A neural network is an artificial intelligence technique that is based on biological synapses and neurons. Neural networks can be used to solve difficult or impossible problems such as predicting which team will win the Super Bowl or whether a company's stock price will go up or down. In a short and informal session, Dr. James McCaffrey, from Microsoft Research in Redmond, WA, will describe exactly what neural networks are, explain the types of problems that can be solved using neural networks, and demonstrate how to create neural networks from scratch using Visual Studio. You will leave this session with an in-depth understanding of neural networks and get some early information about a related, soon-to-be-released Microsoft product.</Abstract>
+    <Topic>Research</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>James McCaffrey</Speaker>
+    <Tag>.NET</Tag>
+    <Tag>Visual Studio</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>3018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-643</Url>
+  </Session>
+  <Session>
+    <Title>Building a Single Page Application with ASP.NET and AngularJS</Title>
+    <Code>3-644</Code>
+    <Abstract>In this breakout session, we’ll see how to power an AngularJS Single Page Application using both ASP.NET Web API and SignalR for back-end data services. You’ll learn how to get started building web applications with AngularJS, how to leverage HTML5 features like local storage and pushState, providing efficient server resources via HTTP and web sockets (sing SignalR), important routing configuration concerns, testing and deployment.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Jon Galloway</Speaker>
+    <Speaker>David Catuhe</Speaker>
+    <Tag>ASP.NET</Tag>
+    <Tag>HTML5</Tag>
+    <Tag>JavaScript</Tag>
+    <Tag>jQuery</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-644</Url>
+  </Session>
+  <Session>
+    <Title>Using Big Data to Advance Your Cloud Service and Device Solutions</Title>
+    <Code>2-645</Code>
+    <Abstract>As more powerful devices and sensors are connected to the cloud, developers have the opportunity to leverage big data in the development and operations of their cloud + device solutions. In this session, we’ll explain how you can start using big data analytics to integrate continuous user feedback into your development process, deliver advanced personalized services, and discover new opportunities in the Internet of Things. We will also walk through the steps of incorporating big data tools such as HDInsight, Hive and Storm/Kafka into a typical cloud service.</Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Wenming Ye</Speaker>
+    <Tag>Analytics</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-645</Url>
+  </Session>
+  <Session>
+    <Title>Building Azure Web Sites with Visual Studio Online “Monaco”</Title>
+    <Code>2-646</Code>
+    <Abstract>Visual Studio Online “Monaco” is a new development experience for building Azure Websites. It provides a lightweight, code focused environment, accessible from any modern browser. In this talk, you will learn how to use Monaco for quickly making edits to a live site, all the way to developing Node, PHP, TypeScript, and ASP.NET applications, all in the browser. Along the way we’ll discuss different SCC management strategies and how you can use Monaco as a complement to the desktop IDE. </Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Chris Dias</Speaker>
+    <Tag>Visual Studio Online</Tag>
+    <Tag>Azure</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-646</Url>
+  </Session>
+  <Session>
+    <Title>Building Xbox One Apps using HTML and JavaScript</Title>
+    <Code>2-647</Code>
+    <Abstract>Xbox One provides developers an HTML5/JavaScript/CSS3 programming model for building apps that look great using the same WinJS controls that exist on Windows.  How was this accomplished?  Attend this session to learn how WinJS is extended to provide support for controller, gesture, and voice in addition to adapting the existing controls to look great at a 10' user experience.  By attending this session you will come away with an understanding of the UI programming model and capabilities available to developers building apps for Xbox One and how this programming model relates to Windows.</Abstract>
+    <Topic>Xbox and Kinect</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Gersh Payzer</Speaker>
+    <Tag>JavaScript</Tag>
+    <Tag>WinJS</Tag>
+    <Tag>Xbox</Tag>
+    <Date>04/02/2014 2:30pm - 3:30pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-647</Url>
+  </Session>
+  <Session>
+    <Title>Leveraging Windows Features to Build Xbox One App Experiences</Title>
+    <Code>3-648</Code>
+    <Abstract>Windows powers the App platform on Xbox One but how different or similar is the Xbox One app platform to Windows? How is Windows adapted to provide an amazing 10’ experience on Xbox Live?  This session will cover how many of the great features you love on Windows are utilized on Xbox One to drive the experience and delight end-users.</Abstract>
+    <Topic>Xbox and Kinect</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Rob Cameron</Speaker>
+    <Tag>JavaScript</Tag>
+    <Tag>WinJS</Tag>
+    <Tag>Xbox</Tag>
+    <Date>04/03/2014 1:00pm - 2:00pm</Date>
+    <Room>2004</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-648</Url>
+  </Session>
+  <Session>
+    <Title>Building Windows, Windows Phone, and Xbox One Apps with HTML/JS/CSS and C++</Title>
+    <Code>2-649</Code>
+    <Abstract>WinJS offers a very flexible and productive programming model for UI.   C++ offers the most power and flexibility when it comes to developing Windows Runtime components.  Put WinJS and C++ together and you have a highly productive toolset to build engaging applications for Windows, Windows Phone, and Xbox One.  In this session, the speaker will take you through the steps to run the same code on all three platforms.  Attend this session to learn how to build a flexible UI that is easily adaptable to the 1ft, 2ft, and 10ft user experience.</Abstract>
+    <Topic>Xbox and Kinect</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Nikola Metulev</Speaker>
+    <Tag>HTML5</Tag>
+    <Tag>JavaScript</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows Store</Tag>
+    <Tag>WinJS</Tag>
+    <Tag>Xbox</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-649</Url>
+  </Session>
+  <Session>
+    <Title>Designing the Ultimate 10’ Experience</Title>
+    <Code>2-650</Code>
+    <Abstract>What’s overscan? What is the minimum font size used for TV? How do I design the ultimate 10’ experience? These and many other questions will be answered by a Senior Design Manager for the Xbox One Platform. Attend this session to learn how to design Modern UI applications for TV.</Abstract>
+    <Topic>Xbox and Kinect</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Eddie Mays</Speaker>
+    <Tag>Design</Tag>
+    <Tag>Design Language</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Store apps</Tag>
+    <Tag>Xbox</Tag>
+    <Date>04/04/2014 9:00am - 10:00am</Date>
+    <Room>3014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-650</Url>
+  </Session>
+  <Session>
+    <Title>Understanding the Xbox One Game Platform Built on Windows</Title>
+    <Code>2-651</Code>
+    <Abstract>This session goes into the architecture of Xbox One, explains the different operating system(s) and their relation to Windows 8 (hint: it’s running Windows 8!), and outlines strategies for developers who want to take advantage of hardcore to-the-metal features of DirectX, whether running on Xbox One or Windows.</Abstract>
+    <Topic>Xbox and Kinect</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Frank Savage</Speaker>
+    <Tag>C/C++</Tag>
+    <Tag>DirectX</Tag>
+    <Tag>Gaming</Tag>
+    <Tag>Windows Store</Tag>
+    <Tag>Xbox</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>Hall 1A</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-651</Url>
+  </Session>
+  <Session>
+    <Title>Xbox Music API – Music for Every App</Title>
+    <Code>2-652</Code>
+    <Abstract>Xbox Music delivers all the music you love, on all your devices. Now, with your help, we can enable users to not only listen to their music on every app they love but also discover new and innovative ways to interact with music. The new Xbox Music APIs make it easy for any app publisher to connect an app or website to be powered by music. The Xbox Music API provides access to RESTful web services for building beautiful experiences using rich artist and album metadata across Windows, Windows Phone, Xbox, iOS, and Android. In addition to providing access to a catalogue of over 38M songs, at //build we will be showcasing our beta developer program which will enable app developers to build scenarios that take the use of music beyond simple listening, and will showcase examples of how participation allows you to use music as part of games and much more. Of course, as an app publisher you have the opportunity to participate in our Xbox Music affiliate program and get paid with some of the highest referral payouts in the industry. Come listen and help unlock a creative new world of apps powered by music!</Abstract>
+    <Topic>Xbox and Kinect</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Bryan Nealer</Speaker>
+    <Tag>Media</Tag>
+    <Tag>Windows Store</Tag>
+    <Tag>Xbox</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-652</Url>
+  </Session>
+  <Session>
+    <Title>Go Mobile with C# and Xamarin</Title>
+    <Code>3-653</Code>
+    <Abstract>The mobile revolution has seen an onslaught of new requirements for modern developers. Apps have to be fast, they have to be everywhere, but they also have to be native - all features that are accounted for in the foundations of .NET.  The unique combination of great tools, great language features, and a runtime that excels at surfacing native APIs has brought about a C# Renaissance.  This talk will explore how today's mobile landscape plays to the strengths of C#, and will explore the possibilities unlocked by the proliferation of .NET as the best platform for all devices.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Miguel de Icaza</Speaker>
+    <Tag>.NET</Tag>
+    <Tag>Android</Tag>
+    <Tag>C#</Tag>
+    <Tag>iOS</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>Hall 1B</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-653</Url>
+  </Session>
+  <Session>
+    <Title>Creating Engaging Windows Store Apps with the Bing Platform</Title>
+    <Code>2-654</Code>
+    <Abstract>Geoff Innis, Bing Maps Technical Specialist, will provide insight into how Bing as a platform can empower developers to deliver more intuitive user experiences and bring awareness of the physical world into their Windows Store applications. The session will include a brief overview of the Bing APIs and tools available to Windows and Windows Phone developers, live demos / code walkthroughs of Bing-powered Windows Store apps, and a review of technical assets that have been compiled to jumpstart Windows Store app development with Bing.</Abstract>
+    <Topic>Bing</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Geoffrey Innis</Speaker>
+    <Tag>Bing Platform</Tag>
+    <Tag>Windows Store apps</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-654</Url>
+  </Session>
+  <Session>
+    <Title>Promote Your App in Search Results</Title>
+    <Code>2-655</Code>
+    <Abstract>How do you get more people to discover and install your app?  How do you get more repeat engagement?  How can you do this for free?  Come learn how to boost discoverability and engagement of your Windows or Windows Phone app by linking it to your web search results.  In this session, we'll explain how the new Bing app linking feature works and walk you through, step-by-step, how to do this with your app.  In order to use this feature, your app will need to have a web presence – either a website about your app or webpages that match content in your app.</Abstract>
+    <Topic>Bing</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Evan Lew</Speaker>
+    <Speaker>Eric Aleshire</Speaker>
+    <Tag>Bing Platform</Tag>
+    <Tag>Web</Tag>
+    <Tag>Web Sites</Tag>
+    <Tag>Windows 8</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows Phone Apps</Tag>
+    <Tag>Windows Store</Tag>
+    <Tag>Windows Store apps</Tag>
+    <Date>04/04/2014 10:30am - 11:30am</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-655</Url>
+  </Session>
+  <Session>
+    <Title>Take Your Solution Worldwide from the Start with Bing Translator</Title>
+    <Code>2-656</Code>
+    <Abstract>Take your app from a single market to worldwide with Bing Translator. In this session you will discover how the Bing Translator Control, the Translator API and the Multilingual App Toolkit give developers easy access to cross-platform enterprise grade, scalable and customizable automatic translation between more than 40 languages. The Translator API is a Microsoft cloud-based service, that allows you to extend the reach and audience for your Windows app and services  through the use of automatic translation. The Multilingual App Toolkit easily localizes your App into many markets. The Translator API fully supports Windows Store Apps to easily  localize your app and to offer translation features to the app. The session will include an overview of Translator and the technical resources and tools available to Windows developers, live demos / code walkthroughs, and participants will receive a special offer to jumpstart your app.</Abstract>
+    <Topic>Bing</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Chris Wendt</Speaker>
+    <Speaker>Jan Nelson</Speaker>
+    <Tag>Cloud Services</Tag>
+    <Tag>Localization</Tag>
+    <Tag>Visual Studio</Tag>
+    <Tag>Web API</Tag>
+    <Tag>Windows 8</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Store</Tag>
+    <Tag>Windows Store apps</Tag>
+    <Date>04/02/2014 5:30pm - 6:30pm</Date>
+    <Room>3024</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-656</Url>
+  </Session>
+  <Session>
+    <Title>Avoiding Windows Store App Failures</Title>
+    <Code>3-657</Code>
+    <Abstract>You've developed and tested a Windows Store app that is of high quality and runs without a glitch in your environment. But you have a lingering doubt that some of your users are experiencing instabilities and the user reviews are starting to mention this as well. Fortunately, Microsoft gathers reliability information from your customers' systems when your Windows Store app crashes or hangs. Windows developers analyze and categorize this data and make it available to you as a Windows Store App developer. In this session, you'll learn what the most frequent reliability bugs are. Additionally, we'll tell you how you can get to this data and use it effectively to fix bugs in your Windows Store app.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>300 - Advanced</Level>
+    <Speaker>Andrew Richards</Speaker>
+    <Speaker>Maarten Van De Bospoort</Speaker>
+    <Tag>Windows Store</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Date>04/04/2014 12:30pm - 1:30pm</Date>
+    <Room>2014</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/3-657</Url>
+  </Session>
+  <Session>
+    <Title>Puppet and Azure: Bringing DevOps to the Enterprise</Title>
+    <Code>2-658</Code>
+    <Abstract>Making sense of the broad array of available DevOps tools, practices and services is a daunting task. However, no matter where you start from you will quickly come across Puppet. In this session you will learn, through practical examples, about Puppet and many other open source DevOps tools for Azure. We’ll show you how the availability of Puppet Enterprise in the Azure Gallery enables you to easily bring DevOps agility to your cloud applications. </Abstract>
+    <Topic>Azure</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Snesha Foss (MS OPEN TECH)</Speaker>
+    <Speaker>Bryon Surace</Speaker>
+    <Speaker>Nigel Kersten, CTO, Puppet Labs (nigel@puppetlabs.com)</Speaker>
+    <Tag>Azure</Tag>
+    <Date>04/03/2014 4:00pm - 5:00pm</Date>
+    <Room>3022</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-658</Url>
+  </Session>
+  <Session>
+    <Title>Extend your WIndows Apps with Nokia SDKs</Title>
+    <Code>2-659</Code>
+    <Abstract>Consumers are excited about Windows Phones and Nokia builds the best Windows Phones out there. Nokia is also making its investments into areas like imaging and sensors available to developers through additional APIs and SDKs that build on top of Windows Phone. This talk focuses on what’s new with the Imaging SDK, sensors and hardware.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Lucian Tomuta, Chief Engineer, Nokia (lucian.tomuta@nokia.com)</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Image Processing</Tag>
+    <Tag>Device apps</Tag>
+    <Date>04/03/2014 5:30pm - 6:30pm</Date>
+    <Room>2001</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-659</Url>
+  </Session>
+  <Session>
+    <Title>IT’S A TRAP! 3 Remarkably Common UI Traps and How to Avoid Them in Your Designs</Title>
+    <Code>2-660</Code>
+    <Abstract>This talk describes three common (and poorly understood) UI design traps that can cause significant pain and frustration to users. Traps are introduced using several real-world examples, along with the psychological principles underpinning them. Guidance is provided on how to detect and prevent them in your designs. The examples shared in this talk come from an award-winning heuristic evaluation tool: UI Tenets + Traps, a proprietary heuristic evaluation tool that distills nearly 100 years of UI research and best practices.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Steve Herbst</Speaker>
+    <Speaker>Michael Medlock</Speaker>
+    <Tag>Windows Phone</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>UX</Tag>
+    <Date>04/04/2014 2:00pm - 3:00pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-660</Url>
+  </Session>
+  <Session>
+    <Title>Modern C++: What You Need to Know</Title>
+    <Code>2-661</Code>
+    <Abstract>This talk will give an update on recent progress and near-future directions for C++, both at Microsoft and across the industry. This is a great introduction to the current state of the language, including a glimpse into the future of general purpose, performance-intensive, power-friendly, powerful native programming.</Abstract>
+    <Topic>Dev Tools</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Herb Sutter</Speaker>
+    <Tag>C/C++</Tag>
+    <Date>04/03/2014 2:30pm - 3:30pm</Date>
+    <Room>2005</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-661</Url>
+  </Session>
+  <Session>
+    <Title>Building Games for Windows</Title>
+    <Code>2-662</Code>
+    <Abstract>This session will provide a demo rich overview of the options for developers building gaming applications for the Windows Platform. Attendees should leave having a clear understanding of the capabilities within Windows to optimize games and the numerous frameworks which are supported to build games for the platform.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Jaime Rodriguez</Speaker>
+    <Speaker>Mark Paley</Speaker>
+    <Tag>Gaming</Tag>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>DirectX</Tag>
+    <Date>04/02/2014 1:00pm - 2:00pm</Date>
+    <Room>2018</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/2-662</Url>
+  </Session>
+  <Session>
+    <Title>Cortana Contextual Awareness</Title>
+    <Code>9-2663</Code>
+    <Abstract>How developers of flight provider companies can implement schema.org email mark-up to power Cortana experiences.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Melissa Lim</Speaker>
+    <Speaker>Varsha Mahadevan</Speaker>
+    <Tag>Bing Platform</Tag>
+    <Tag>HTML5</Tag>
+    <Tag>Windows Phone</Tag>
+    <Date>04/04/2014 12:00am - 1:00am</Date>
+    <Room>TBD</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-2663</Url>
+  </Session>
+  <Session>
+    <Title>Improve App Monetization and Discoverability with Microsoft Advertising</Title>
+    <Code>9-2664</Code>
+    <Abstract>Want to boost monetization on your Windows 8.1 and Windows Phone apps?  Microsoft Advertising has released new Advertising SDKs to increase monetization for developers.  If you’re focused on getting new downloads for your app, discoverability is key.  Microsoft Advertising has new capabilities that lets Windows Phone developers promote their app with advertising.  Walk away armed with knowledge on how you can make more money, get more users and gain more insights.</Abstract>
+    <Topic>Windows Client and Phone</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Trevor Yeats</Speaker>
+    <Tag>Windows 8.1</Tag>
+    <Tag>Windows Phone</Tag>
+    <Tag>XAML</Tag>
+    <Date>04/04/2014 12:00am - 1:00am</Date>
+    <Room>TBD</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-2664</Url>
+  </Session>
+  <Session>
+    <Title>What’s New for Windows and Windows Phone Developers</Title>
+    <Code>9-001</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Kevin Gallo</Speaker>
+    <Date>04/02/2014 11:31am - 12:00pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-001</Url>
+  </Session>
+  <Session>
+    <Title>Developing for Windows Phone and Windows</Title>
+    <Code>9-002</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>David Treadwell</Speaker>
+    <Date>04/02/2014 12:00pm - 12:20pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-002</Url>
+  </Session>
+  <Session>
+    <Title>Experience at the Intersection of Design and Development</Title>
+    <Code>9-003</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Date>04/02/2014 12:20pm - 1:00pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-003</Url>
+  </Session>
+  <Session>
+    <Title>Windows Graphics and DirectX 12</Title>
+    <Code>9-004</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Ales Holecek</Speaker>
+    <Date>04/02/2014 2:00pm - 2:30pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-004</Url>
+  </Session>
+  <Session>
+    <Title>XML, WPF and other Fairy Tales not Designing for screen izes</Title>
+    <Code>9-005</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Tim Heuer</Speaker>
+    <Date>04/02/2014 3:30pm - 4:00pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-005</Url>
+  </Session>
+  <Session>
+    <Title>Win 8.1 UI Design and Development</Title>
+    <Code>9-007</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Chris Anderson (WINDOWS)</Speaker>
+    <Speaker>Tim Heuer</Speaker>
+    <Date>04/02/2014 5:00pm - 5:30pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-007</Url>
+  </Session>
+  <Session>
+    <Title>Visual Studio and .NET Overview</Title>
+    <Code>9-008</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Brian Keller (DPE)</Speaker>
+    <Speaker>S. Somasegar</Speaker>
+    <Date>04/03/2014 11:30am - 11:50am</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-008</Url>
+  </Session>
+  <Session>
+    <Title>Enabling Designers and Developers to Make Great Apps</Title>
+    <Code>9-009</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Steven Guggenheimer</Speaker>
+    <Date>04/03/2014 11:50am - 12:10pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-009</Url>
+  </Session>
+  <Session>
+    <Title>Anders Hejlsberg Live Q/A</Title>
+    <Code>9-010</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Anders Hejlsberg</Speaker>
+    <Date>04/03/2014 12:10pm - 1:00pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-010</Url>
+  </Session>
+  <Session>
+    <Title>Cloud Cover Live – Ask the Gu!</Title>
+    <Code>9-011</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Scott Guthrie</Speaker>
+    <Speaker>Anil Reddy</Speaker>
+    <Speaker>Cory Fowler</Speaker>
+    <Speaker>Nick Harris</Speaker>
+    <Date>04/03/2014 2:00pm - 2:30pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-011</Url>
+  </Session>
+  <Session>
+    <Title>Enabling DevOps with Azure and Visual Studio Online</Title>
+    <Code>9-012</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Brian Keller (DPE)</Speaker>
+    <Speaker>Jonah Sterling</Speaker>
+    <Speaker>Vishal Joshi</Speaker>
+    <Date>04/03/2014 3:30pm - 4:00pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-012</Url>
+  </Session>
+  <Session>
+    <Title>.NET Community and Open Source</Title>
+    <Code>9-013</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Dan Fernandez</Speaker>
+    <Speaker>Gianugo Rabellino (MS OPEN TECH)</Speaker>
+    <Speaker>Jay Schmelzer</Speaker>
+    <Speaker>Miguel de Icaza</Speaker>
+    <Date>04/03/2014 5:00pm - 5:30pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-013</Url>
+  </Session>
+  <Session>
+    <Title>Optimizing .NET for Modern Hardware</Title>
+    <Code>9-014</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Habib Heydarian</Speaker>
+    <Speaker>Shawn Farkas</Speaker>
+    <Date>04/04/2014 10:00am - 10:30am</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-014</Url>
+  </Session>
+  <Session>
+    <Title>Optimizing C++ for Modern Hardware</Title>
+    <Code>9-015</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Eric Brumer</Speaker>
+    <Speaker>Tarek Madkour</Speaker>
+    <Date>04/04/2014 11:30am - 12:00pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-015</Url>
+  </Session>
+  <Session>
+    <Title>What’s New with Azure </Title>
+    <Code>9-016</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Dan Fernandez</Speaker>
+    <Speaker>Paul Yuknewicz</Speaker>
+    <Date>04/04/2014 12:00pm - 12:30pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-016</Url>
+  </Session>
+  <Session>
+    <Title>WinJS Architecture and Design</Title>
+    <Code>9-017</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Chris Anderson (WINDOWS)</Speaker>
+    <Date>04/04/2014 1:30pm - 2:00pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-017</Url>
+  </Session>
+  <Session>
+    <Title>How the Bing Platform Powers Cortana</Title>
+    <Code>9-018</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Savas Parastatidis</Speaker>
+    <Speaker>Mike Andrews</Speaker>
+    <Speaker>Mike Calcagno</Speaker>
+    <Date>04/04/2014 3:00pm - 3:30pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-018</Url>
+  </Session>
+  <Session>
+    <Title>What’s New for Web Developers</Title>
+    <Code>9-019</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Dan Fernandez</Speaker>
+    <Speaker>Mads Kristensen</Speaker>
+    <Date>04/04/2014 3:30pm - 4:00pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-019</Url>
+  </Session>
+  <Session>
+    <Title>What’s New for C# Developers</Title>
+    <Code>9-020</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Mads Torgersen</Speaker>
+    <Speaker>Dustin Campbell</Speaker>
+    <Date>04/04/2014 4:00pm - 4:30pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-020</Url>
+  </Session>
+  <Session>
+    <Title>Closing Ceremony </Title>
+    <Code>9-021</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>C9 Live</Topic>
+    <Level>200 - Intermediate</Level>
+    <Speaker>Charles Torre</Speaker>
+    <Speaker>Dan Fernandez</Speaker>
+    <Speaker>Larry Larsen</Speaker>
+    <Speaker>Brian Keller (DPE)</Speaker>
+    <Date>04/04/2014 4:30pm - 4:45pm</Date>
+    <Room>C9 Stage</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/9-021</Url>
+  </Session>
+  <Session>
+    <Title>Keynote #1</Title>
+    <Code>KEY01</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>Keynote</Topic>
+    <Level>200 - Intermediate</Level>
+    <Date>04/02/2014 8:30am - 11:30am</Date>
+    <Room>3rd Floor Ballroom</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/KEY01</Url>
+  </Session>
+  <Session>
+    <Title>Keynote #2</Title>
+    <Code>KEY02</Code>
+    <Abstract>
+    </Abstract>
+    <Topic>Keynote</Topic>
+    <Level>200 - Intermediate</Level>
+    <Date>04/03/2014 8:30am - 11:30am</Date>
+    <Room>3rd Floor Ballroom</Room>
+    <Url>http://channel9.msdn.com/Events/Build/2014/KEY02</Url>
+  </Session>
+</Sessions>
