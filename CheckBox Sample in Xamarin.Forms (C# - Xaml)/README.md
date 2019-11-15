@@ -13,7 +13,7 @@
 
 <p><span style="font-family:verdana,sans-serif; font-size:small"><strong>Introduction:</strong></span></p>
 <p><span style="font-family:verdana,sans-serif; font-size:small">In Xamarin.Forms, there is no default CheckBox control available and we need to create our own custom CheckBox control. This article can explain you about to create CheckBox control and it's properties.&nbsp;&nbsp;</span></p>
-<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://4.bp.blogspot.com/-sKARcJADcY0/WqOPpdVBUPI/AAAAAAAADeo/T9rI0-oixVwLQt0jIPY6iiJjq47qb_w4gCLcBGAs/s1600/check_mark_ok_box_cell_phone-128.png"><img src=":-check_mark_ok_box_cell_phone-128.png" border="0" alt="" width="320" height="320"></a></span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://4.bp.blogspot.com/-sKARcJADcY0/WqOPpdVBUPI/AAAAAAAADeo/T9rI0-oixVwLQt0jIPY6iiJjq47qb_w4gCLcBGAs/s1600/check_mark_ok_box_cell_phone-128.png"><img src="https://4.bp.blogspot.com/-sKARcJADcY0/WqOPpdVBUPI/AAAAAAAADeo/T9rI0-oixVwLQt0jIPY6iiJjq47qb_w4gCLcBGAs/s320/check_mark_ok_box_cell_phone-128.png" border="0" alt="" width="320" height="320"></a></span></p>
 <div></div>
 <p class="separator">&nbsp;</p>
 <p class="separator"><span style="font-size:small; color:#ff0000">You can also read this article from my original blog from
@@ -51,13 +51,13 @@ here</a>.</span></p>
 </li><li><span style="font-family:verdana,sans-serif; font-size:small">On the File menu, select New Solution.</span>
 </li><li><span style="font-family:verdana,sans-serif; font-size:small">The New Project dialog appears. The left pane of the dialog lets you select the type of templates to display. In the left pane, expand&nbsp;<strong>Multiplatform&nbsp;</strong>&gt;&nbsp;<strong>App&nbsp;</strong>&gt;&nbsp;<strong>Xamarin.Forms</strong>&nbsp;&gt;&nbsp;<strong>Forms
  App&nbsp;</strong>and click on&nbsp;<strong>Next</strong>.
-<p class="separator"><a href="https://1.bp.blogspot.com/-G5KjrAxLlBY/WqNvoiY_mKI/AAAAAAAADdI/doBPbrs-LCoemZyvQDe6JYqag3ihJZGjQCLcBGAs/s1600/1.NewProject.png"><img src=":-1.newproject.png" border="0" alt="" width="640" height="464"></a></p>
+<p class="separator"><a href="https://1.bp.blogspot.com/-G5KjrAxLlBY/WqNvoiY_mKI/AAAAAAAADdI/doBPbrs-LCoemZyvQDe6JYqag3ihJZGjQCLcBGAs/s1600/1.NewProject.png"><img src="https://1.bp.blogspot.com/-G5KjrAxLlBY/WqNvoiY_mKI/AAAAAAAADdI/doBPbrs-LCoemZyvQDe6JYqag3ihJZGjQCLcBGAs/s640/1.NewProject.png" border="0" alt="" width="640" height="464"></a></p>
 </span></li><li>
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small">Enter your App Name (Ex:&nbsp;CheckBoxSample). Select&nbsp;<strong>Target Platforms&nbsp;</strong>to Android &amp; iOS and click on&nbsp;<strong>Next</strong>&nbsp;button.</span></p>
-<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="https://4.bp.blogspot.com/-hVo-D5CyJW8/WqNwi_jJ-HI/AAAAAAAADdU/O5Thk_gNR444DsmRAIemU7pHUlqweB4PQCLcBGAs/s1600/2.NewProjectName.png"><img src=":-2.newprojectname.png" border="0" alt="" width="640" height="464"></a></span></p>
+<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="https://4.bp.blogspot.com/-hVo-D5CyJW8/WqNwi_jJ-HI/AAAAAAAADdU/O5Thk_gNR444DsmRAIemU7pHUlqweB4PQCLcBGAs/s1600/2.NewProjectName.png"><img src="https://4.bp.blogspot.com/-hVo-D5CyJW8/WqNwi_jJ-HI/AAAAAAAADdU/O5Thk_gNR444DsmRAIemU7pHUlqweB4PQCLcBGAs/s640/2.NewProjectName.png" border="0" alt="" width="640" height="464"></a></span></p>
 </li><li>
 <p class="separator"><span style="font-size:small">You can choose your project location like below and&nbsp;<strong>Create</strong>&nbsp;new project.</span></p>
-<p class="separator"><span style="font-size:small"><a href="https://2.bp.blogspot.com/-KNo7Pk4Db7Y/WqNxQuum2RI/AAAAAAAADdc/ov4ewh7urZEtFePzKcycLxLxiXPUDC2FgCLcBGAs/s1600/3.NewProjectPath.png"><img src=":-3.newprojectpath.png" border="0" alt="" width="640" height="464"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="https://2.bp.blogspot.com/-KNo7Pk4Db7Y/WqNxQuum2RI/AAAAAAAADdc/ov4ewh7urZEtFePzKcycLxLxiXPUDC2FgCLcBGAs/s1600/3.NewProjectPath.png"><img src="https://2.bp.blogspot.com/-KNo7Pk4Db7Y/WqNxQuum2RI/AAAAAAAADdc/ov4ewh7urZEtFePzKcycLxLxiXPUDC2FgCLcBGAs/s640/3.NewProjectPath.png" border="0" alt="" width="640" height="464"></a></span></p>
 <p>&nbsp;</p>
 </li></ul>
 <span style="font-size:small"><span style="font-family:Verdana,sans-serif">
@@ -77,7 +77,7 @@ here</a>.</span></p>
 <div>
 <p><span style="font-family:verdana,sans-serif; font-size:small">We are following default MVVM design pattern. And here we will place custom controls in Controls folder. So right click on your project name CheckBoxSample =&gt; Add =&gt; New Folder name is &quot;Controls&quot;.
  After that right click on your newly created the folder =&gt; Add =&gt; New File =&gt; Forms =&gt; Forms ContentView Xaml and name it CheckBox.</span></p>
-<p><a href="https://1.bp.blogspot.com/-7lZMt_wOD74/WqN143IdNiI/AAAAAAAADdo/vywxnxqRaq8dQwplMBPCc1VEGATWrXkpQCLcBGAs/s1600/5.AddContentView.png" style="font-size:small"><img src=":-5.addcontentview.png" border="0" alt="" width="640" height="486"></a></p>
+<p><a href="https://1.bp.blogspot.com/-7lZMt_wOD74/WqN143IdNiI/AAAAAAAADdo/vywxnxqRaq8dQwplMBPCc1VEGATWrXkpQCLcBGAs/s1600/5.AddContentView.png" style="font-size:small"><img src="https://1.bp.blogspot.com/-7lZMt_wOD74/WqN143IdNiI/AAAAAAAADdo/vywxnxqRaq8dQwplMBPCc1VEGATWrXkpQCLcBGAs/s640/5.AddContentView.png" border="0" alt="" width="640" height="486"></a></p>
 <p class="separator"><strong style="font-size:small">Step 2: Add UI to CheckBox</strong></p>
 <p><span style="font-family:verdana,sans-serif; font-size:small">&nbsp;</span><span style="font-size:small">In general, CheckBox control required major four elements.</span></p>
 </div>
@@ -344,7 +344,7 @@ here</a>.</span></p>
 <div><span style="font-family:verdana,sans-serif; font-size:small"><span style="font-family:verdana,sans-serif">
 <p class="separator">Now we are ready to our own CheckBox control. Before to use it, let's create one ContentPage in Views folder.</p>
 <p class="separator">To create page, right click on Views folder =&gt; Add =&gt;New File =&gt; Forms =&gt; Forms ContentPage Xaml and name it HomePage like below.</p>
-<p class="separator"><a href="https://4.bp.blogspot.com/-W7g7bcypS9Y/WqODBnCUfPI/AAAAAAAADd4/1-bCiiBFxq4nARkDMwReTKFmQ1ry2k-iwCLcBGAs/s1600/4.AddContentPage.png"><img src=":-4.addcontentpage.png" border="0" alt="" width="640" height="488"></a></p>
+<p class="separator"><a href="https://4.bp.blogspot.com/-W7g7bcypS9Y/WqODBnCUfPI/AAAAAAAADd4/1-bCiiBFxq4nARkDMwReTKFmQ1ry2k-iwCLcBGAs/s1600/4.AddContentPage.png"><img src="https://4.bp.blogspot.com/-W7g7bcypS9Y/WqODBnCUfPI/AAAAAAAADd4/1-bCiiBFxq4nARkDMwReTKFmQ1ry2k-iwCLcBGAs/s640/4.AddContentPage.png" border="0" alt="" width="640" height="488"></a></p>
 <p class="separator">To use CheckBox in our xaml page. First we need declare namespace of CheckBox.</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -504,7 +504,7 @@ here</a>.</span></p>
 </div>
 </div>
 <p>&nbsp;</p>
-<p class="separator"><a href="https://3.bp.blogspot.com/-NVw_aRkLeHg/WqOGzbHL_TI/AAAAAAAADeE/fbKhuRn9W4kN8i9uUEIjLwHPuxupoqdjgCLcBGAs/s1600/Country.png"><img src=":-country.png" border="0" alt="" width="640" height="490"></a></p>
+<p class="separator"><a href="https://3.bp.blogspot.com/-NVw_aRkLeHg/WqOGzbHL_TI/AAAAAAAADeE/fbKhuRn9W4kN8i9uUEIjLwHPuxupoqdjgCLcBGAs/s1600/Country.png"><img src="https://3.bp.blogspot.com/-NVw_aRkLeHg/WqOGzbHL_TI/AAAAAAAADeE/fbKhuRn9W4kN8i9uUEIjLwHPuxupoqdjgCLcBGAs/s640/Country.png" border="0" alt="" width="640" height="490"></a></p>
 <p class="separator">Now open Country class and add below properties.</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -675,9 +675,9 @@ here</a>.</span></p>
 </div>
 <p>&nbsp;</p>
 </span><span style="font-family:verdana,sans-serif">
-<p class="separator"><a href="https://2.bp.blogspot.com/-a57wXxPZCV8/WqOJzBYpyOI/AAAAAAAADeQ/jY8gYkfY5vEtQFKs62dAVq9gceEYyX6yACLcBGAs/s1600/7.%2BAndroid.png"><img src=":-7.%2bandroid.png" border="0" alt="" width="241" height="400"></a></p>
+<p class="separator"><a href="https://2.bp.blogspot.com/-a57wXxPZCV8/WqOJzBYpyOI/AAAAAAAADeQ/jY8gYkfY5vEtQFKs62dAVq9gceEYyX6yACLcBGAs/s1600/7.%2BAndroid.png"><img src="https://2.bp.blogspot.com/-a57wXxPZCV8/WqOJzBYpyOI/AAAAAAAADeQ/jY8gYkfY5vEtQFKs62dAVq9gceEYyX6yACLcBGAs/s400/7.%2BAndroid.png" border="0" alt="" width="241" height="400"></a></p>
 <p class="separator"><strong><span style="text-decoration:underline"><span style="font-family:verdana,sans-serif">Demo Screens from iOS:</span></span></strong></p>
-<p class="separator"><a href="https://3.bp.blogspot.com/-nuFIxqLjJgI/WqOJ_Uvg3iI/AAAAAAAADeU/Dptn1r0shAMamQ62naJDEn4MT2CCCMxUgCLcBGAs/s1600/6.iOS.png"><img src=":-6.ios.png" border="0" alt="" width="231" height="400"></a></p>
+<p class="separator"><a href="https://3.bp.blogspot.com/-nuFIxqLjJgI/WqOJ_Uvg3iI/AAAAAAAADeU/Dptn1r0shAMamQ62naJDEn4MT2CCCMxUgCLcBGAs/s1600/6.iOS.png"><img src="https://3.bp.blogspot.com/-nuFIxqLjJgI/WqOJ_Uvg3iI/AAAAAAAADeU/Dptn1r0shAMamQ62naJDEn4MT2CCCMxUgCLcBGAs/s400/6.iOS.png" border="0" alt="" width="231" height="400"></a></p>
 <p class="separator"><a href="https://3.bp.blogspot.com/-nuFIxqLjJgI/WqOJ_Uvg3iI/AAAAAAAADeU/Dptn1r0shAMamQ62naJDEn4MT2CCCMxUgCLcBGAs/s1600/6.iOS.png"></a><strong>FeedBack Note:</strong>&nbsp;Please share your thoughts, what you think about this post, Is
  this post really helpful for you? Otherwise, it would be very happy, if you have any thoughts for to implement this requirement in any other way? I always welcome if you drop comments on this post and it would be impressive.</p>
 <p class="separator">Follow me always at&nbsp;<a href="https://twitter.com/Subramanyam_B">@Subramanyam_B</a></p>

@@ -34,9 +34,9 @@
 <p>I hope, you have installed the lasted version of Visual Studio with&nbsp;<em>.</em><em>Net Core SDK 2.0</em>, so open Visual Studio and Go to File&nbsp;<span>Menu</span>&nbsp;&gt; choose&nbsp;<span>New</span>&nbsp;&gt; select&nbsp;<span>Project</span>. It
  will open &ldquo;New Project&rdquo; windows. From the New Project windows, you have to choose&nbsp;<span>.Net Core</span>&nbsp;from the left panel and then from the center panel choose &ldquo;Asp.Net Core Web Application&rdquo; and provide the suitable name
  like &ldquo;RazorPagesExample&rdquo; and click to OK.</p>
-<p><img src="-280120180859razorpages.png" alt="Razor Page"></p>
+<p><img src="http://www.mukeshkumar.net/Upload/Images/280120180859RazorPages.png" alt="Razor Page"></p>
 <p>After clicking OK button, it will pop up with a new window from where we can choose the template for Razor Page.</p>
-<p><img src="-280120180900razorpages.png" alt="Razor Page Web Application"></p>
+<p><img src="http://www.mukeshkumar.net/Upload/Images/280120180900RazorPages.png" alt="Razor Page Web Application"></p>
 <p>From here, you have to choose &ldquo;Web Application&rdquo; to create Razor Page application and click to OK. It will take minutes or seconds to configure your project and finally, we have the project ready for demonstration.</p>
 <p><span>STEP 2: Create Database and Table</span></p>
 <p>Open SSMS [SQL Server Management Studio] and create new database name called it &ldquo;TestDB&rdquo; and inside that, you have to create one table that is called &ldquo;Product&rdquo; using following SQL scripts. Now we have a database and its corresponding

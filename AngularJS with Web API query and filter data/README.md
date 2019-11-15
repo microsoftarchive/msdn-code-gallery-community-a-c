@@ -24,7 +24,7 @@
 <h1>Introduction</h1>
 <p>This sample shows how to provide full query functionality (search, sort and filter) in an AngularJS and Web API application. The query state is maintained in the URL which allows for linking to and bookmarking specific searches. The query options are dynamic
  and provided by the web API.&nbsp;</p>
-<p><img id="138323" src="138323-overview.png" alt="" width="630" height="425">&nbsp;</p>
+<p><img id="138323" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-3cc87725/image/file/138323/1/overview.png" alt="" width="630" height="425">&nbsp;</p>
 <p><span>Please note that all code snippets in this description are partial and only contain the relevant lines of code. To view the full code, which is annotated, please download the sample.
 </span></p>
 <p><span>The approach taken in this sample has been to make the code as clear as possible to highlight the overall concept. In a real world scenario another design may preferable.</span></p>
@@ -42,10 +42,10 @@
 <h2>Web API</h2>
 <p>The <strong>BooksController</strong>&nbsp;provides two POST actions <strong>QueryOptions</strong> and
 <strong>Search</strong>. The first accepts a list of properties to filter by (filters) and returns all the query options available as well as a blank query (see the JSON below).</p>
-<p><img id="138332" src="138332-queryoptionsresultjson.jpg" alt="" width="312" height="624"></p>
+<p><img id="138332" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-3cc87725/image/file/138332/1/queryoptionsresultjson.jpg" alt="" width="312" height="624"></p>
 <p>&nbsp;</p>
 <p>The second <strong>search</strong> action accepts a 'filled' json query in the same format as the one provided in the queryOptions response.</p>
-<p><img id="138333" src="138333-searchquery.jpg" alt="" width="218" height="156"></p>
+<p><img id="138333" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-3cc87725/image/file/138333/1/searchquery.jpg" alt="" width="218" height="156"></p>
 <p>The query options are then used to build a query, execute it and return the results.</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -102,7 +102,7 @@
 <div class="endscriptcode">&nbsp;</div>
 <h2>AngularJS</h2>
 <p><span>The client application is a simple, single module SPA under the&nbsp;</span><strong>app</strong><span>&nbsp;folder under the project root.</span></p>
-<p><img id="138338" src="138338-spatree.jpg" alt="" width="261" height="348"></p>
+<p><img id="138338" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-3cc87725/image/file/138338/1/spatree.jpg" alt="" width="261" height="348"></p>
 <p>For the most part the code to be concerned with is under the books folder. One important exception is configuring the route to the books view in
 <strong>app.js</strong>. When adding the route it is important to set&nbsp;<strong>reloadOnSearch</strong>&nbsp;to false in order to stop the
 <strong>BooksController </strong>reloading every time the URL is updated.&nbsp;</p>

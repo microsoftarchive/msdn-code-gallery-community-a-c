@@ -32,7 +32,7 @@
 </li><li><span style="font-size:small">After the download completes, you will be prompted to install.</span>
 </li><li><span style="font-size:small">After the installation completes, you might be prompted to restart Visual Studio.</span>
 </li></ol>
-<p><img src="-webapi_selfhost03.png?cdn_id=2012-10-31-001" alt=""></p>
+<p><img src="http://i3.asp.net/media/3202344/webapi_selfhost03.png?cdn_id=2012-10-31-001" alt=""></p>
 <h2 id="InstallClientLib">Install the Web API Client Libraries</h2>
 <p><span style="font-size:small">After NuGet Package Manager is installed, add the Web API Client Libraries package to your project.</span></p>
 <ol>
@@ -43,7 +43,7 @@
 </li><li><span style="font-size:small">Select the ASP.NET Web API Self Host package and click&nbsp;<strong>Install</strong>.</span>
 </li><li><span style="font-size:small">After the package installs, click&nbsp;<strong>Close</strong>&nbsp;to close the dialog.</span>
 </li></ol>
-<p><img src="-httpclient09.png?cdn_id=2012-10-31-001" alt=""></p>
+<p><img src="http://i3.asp.net/media/3699427/httpclient09.png?cdn_id=2012-10-31-001" alt=""></p>
 <p><em>&nbsp;&nbsp;</em></p>
 <h2>Asynchronous Calls</h2>
 <p><span style="font-size:small"><strong>HttpClient</strong>&nbsp;is designed to be non-blocking. Potentially long-running operations are implemented as asynchonrous methods, such as&nbsp;<strong>GetAsync</strong>&nbsp;and&nbsp;<strong>PostAsync</strong>. These

@@ -13,7 +13,7 @@
 - 05/02/2011
 ## Description
 
-<p><img src="21438-gg983481.julie_lerman_headshot(en-us%2cmsdn.10).jpg" alt="" width="100" height="150" style="float:left; padding-right:5px; padding-bottom:10px">Recently I&rsquo;ve
+<p><img src="http://i2.code.msdn.microsoft.com/composing-wpf-datagrid-4a041877/image/file/21438/1/gg983481.julie_lerman_headshot(en-us%2cmsdn.10).jpg" alt="" width="100" height="150" style="float:left; padding-right:5px; padding-bottom:10px">Recently I&rsquo;ve
  been doing some work in Windows Presentation Foundation (WPF) for a client. Although I&rsquo;m a big believer in using third-party tools, I sometimes avoid them in order to find out what challenges lay in wait for developers who, for one reason or another,
  stick to using only those tools that are part of the Visual Studio installation.</p>
 <p>So I crossed my fingers and jumped into the WPF DataGrid. There were some user-experience issues that took me days to solve, even with the aid of Web searches and suggestions in online forums. Breaking my DataGrid columns into pairs of complementary templates
@@ -68,10 +68,10 @@
 <p>&nbsp;</p>
 <p>I discovered this problem because, coincidentally, a date column was the first column in my row. I was depending on it to trigger the row&rsquo;s edit mode.</p>
 <p><strong>Figure 1</strong>&nbsp;shows a new row where the date in the first editable column has been entered.&nbsp;</p>
-<p><img title="Entering a Date Value into a New Row Placeholder" src="-gg983481.lerman_figure1_hires(en-us,msdn.10).jpg" alt="image: Entering a Date Value into a New Row Placeholder"></p>
+<p><img title="Entering a Date Value into a New Row Placeholder" src="http://i.msdn.microsoft.com/gg983481.Lerman_Figure1_hires(en-us,MSDN.10).jpg" alt="image: Entering a Date Value into a New Row Placeholder"></p>
 <p>Figure 1&nbsp;<strong>Entering a Date Value into a New Row Placeholder</strong></p>
 <p>But after editing the value in the next column, the previous edit value has been lost, as you can see in<strong>Figure 2</strong>.</p>
-<p><img title="Date Value Is Lost After the Value of the Task Column in the New Row Is Modified" src="-gg983481.lerman_figure2_hires(en-us,msdn.10).jpg" alt="image: Date Value Is Lost After the Value of the Task Column in the New Row Is Modified"></p>
+<p><img title="Date Value Is Lost After the Value of the Task Column in the New Row Is Modified" src="http://i.msdn.microsoft.com/gg983481.Lerman_Figure2_hires(en-us,MSDN.10).jpg" alt="image: Date Value Is Lost After the Value of the Task Column in the New Row Is Modified"></p>
 <p>Figure 2&nbsp;<strong>Date Value Is Lost After the Value of the Task Column in the New Row Is Modified</strong></p>
 <p>The key value in the first column has become 0 and the date that was just entered has changed to 1/1/0001. Editing the Task column finally triggered the DataGrid to add a new entity in the source. The ID value becomes an integer&mdash;default, 0&mdash;and
  the date value becomes the .NET default minimum date, 1/1/0001. If I had a default date specified for this class, the user&rsquo;s entered date would have changed to the class default rather than the .NET default. Notice that the date in the Date Performed
@@ -110,7 +110,7 @@
 <div class="endscriptcode">Notice that I no longer need to specify UpdateSourceTrigger. I&rsquo;ve made the same changes to the DatePerformed column.</div>
 <p>&nbsp;</p>
 <p>Now the date columns start out as simple text until you enter the cell and it switches to the DatePicker, as you can see in&nbsp;<strong>Figure 3</strong>.</p>
-<p><img title="DateScheduled Column Using Both a TextBlock and a DatePicker" src="-gg983481.lerman_figure3_hires(en-us,msdn.10).jpg" alt="image: DateScheduled Column Using Both a TextBlock and a DatePicker"></p>
+<p><img title="DateScheduled Column Using Both a TextBlock and a DatePicker" src="http://i.msdn.microsoft.com/gg983481.Lerman_Figure3_hires(en-us,MSDN.10).jpg" alt="image: DateScheduled Column Using Both a TextBlock and a DatePicker"></p>
 <p>Figure 3&nbsp;<strong>DateScheduled Column Using Both a TextBlock and a DatePicker</strong></p>
 <p>In the rows above the new row, you don&rsquo;t have the DatePicker calendar icon.</p>
 <p>But it&rsquo;s still not quite right. We&rsquo;re still getting the default .NET value as we begin editing the row. Now you can benefit from defining a default in the underlying class. I&rsquo;ve modified the constructor of the ScheduleItem class to initialize
@@ -352,7 +352,7 @@
  at thedatafarm.com/blog and is the author of the highly acclaimed book, &ldquo;Programming Entity Framework&rdquo; (O&rsquo;Reilly Media, 2010). Follow her on Twitter at&nbsp;<a id="ctl00_MTContentSelector1_mainContentContainer_ctl14" href="http://twitter.com/julielerman">twitter.com/julielerman</a>.</em></p>
 <p><em>Thanks to the following technical expert for reviewing this article:&nbsp;<strong>Varsha Mahadevan</strong></em></p>
 <hr>
-<p><a href="http://msdn.microsoft.com/en-us/magazine/gg749836.aspx" target="_blank"><img src="21437-gg749836.cover_lrg(en-us%2cmsdn.10).png" alt="" width="178" height="239" style="float:left; padding-right:5px"></a></p>
+<p><a href="http://msdn.microsoft.com/en-us/magazine/gg749836.aspx" target="_blank"><img src="http://i2.code.msdn.microsoft.com/composing-wpf-datagrid-4a041877/image/file/21437/1/gg749836.cover_lrg(en-us%2cmsdn.10).png" alt="" width="178" height="239" style="float:left; padding-right:5px"></a></p>
 <p>&nbsp;</p>
 <h1>MSDN Magazine : April 2011 Issue</h1>
 <h3>Windows Azure</h3>
@@ -365,7 +365,7 @@
 <p>&nbsp;</p>
 <hr style="clear:both">
 <p>&nbsp;</p>
-<p><img src="21431-smalllogo.png" alt="" width="197" height="84" style="float:right"></p>
+<p><img src="http://code.msdn.microsoft.com/site/view/file/21431/1/smalllogo.png" alt="" width="197" height="84" style="float:right"></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p><em><strong><br>

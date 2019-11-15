@@ -75,21 +75,21 @@
 <div class="quickStart-Cont">
 <div class="QS-step">
 <h3 class="quickStart-Step">Load/Create a project and add a page or webform.</h3>
-<img src=":-create-app.png" alt="Create your MVC web project"></div>
+<img src="https://keyoti.com/products/search/dotNetWeb/tutorials/searchunit-quick-start-guide/create-app.png" alt="Create your MVC web project"></div>
 <div class="QS-step">
 <h3 class="quickStart-Step">Create a new folder to store the index files;</h3>
 <p>Open the project folder in File Explorer</p>
 <p>Create a new folder called 'Keyoti_Search_Index'</p>
-<img src=":-open-file-explorer.png" alt="Open in File Explorer">&nbsp;<br>
-<img src=":-add-search-index-folder.png" alt="Create a new folder for the index"></div>
+<img src="https://keyoti.com/products/search/dotNetWeb/tutorials/searchunit-quick-start-guide/open-file-explorer.png" alt="Open in File Explorer">&nbsp;<br>
+<img src="https://keyoti.com/products/search/dotNetWeb/tutorials/searchunit-quick-start-guide/add-search-index-folder.png" alt="Create a new folder for the index"></div>
 <div class="QS-step">
 <h3>Open the Index Manager Tool from the Start Menu and enter the path to your index directory.</h3>
 <p>The Index Manager Tool can be found under the Start Menu;</p>
 <div class="QS-code">Start Menu -&gt; All Programs -&gt; SearchUnit -&gt; Index Manager Tool</div>
-<img src=":-open-index-manager-tool.png" alt="Open the index manager tool"></div>
+<img src="https://keyoti.com/products/search/dotNetWeb/tutorials/searchunit-quick-start-guide/open-index-manager-tool.png" alt="Open the index manager tool"></div>
 <div class="QS-step">
 <h3>Select 'Import New Source', enter the start URL &amp; click 'Import'.</h3>
-<img src=":-import-sources.png" alt="Select Import New Source"><img src=":-import-website-source.png" alt="Import a Website Source">
+<img src="https://keyoti.com/products/search/dotNetWeb/tutorials/searchunit-quick-start-guide/import-sources.png" alt="Select Import New Source"><img src="https://keyoti.com/products/search/dotNetWeb/tutorials/searchunit-quick-start-guide/import-website-source.png" alt="Import a Website Source">
 <p>If an error reports the page cannot be read, please check the URL or consult the user guide for help.</p>
 <p>Once the import is complete close the Import window, select 'Optimize' and click 'Start Optimize'.</p>
 </div>
@@ -98,7 +98,7 @@
 <p>Open the SearchUnit install folder (via Start Menu or File Explorer).</p>
 <p>Copy the&nbsp;<strong>Keyoti_SearchEngine_Web_Common</strong>&nbsp;folder.</p>
 <p>Paste to your application's Solution Explorer.</p>
-<img src=":-copy-searchunit-scripts.png" alt="Copy scripts folder to your project."></div>
+<img src="https://keyoti.com/products/search/dotNetWeb/tutorials/searchunit-quick-start-guide/copy-searchunit-scripts.png" alt="Copy scripts folder to your project."></div>
 <div class="QS-step">
 <h3>Add the SearchUnit JS and CSS tags to the head of your page.</h3>
 <p>To automatically add the tags, drag SearchUnit.js and SearchUnit.css from the Solution Explorer on to the page source. Alternatively copy and paste the tags as below to the head of your page.</p>
@@ -117,7 +117,7 @@
 <div class="QS-step">
 <h3>Run the web application (hit F5) and try a search!</h3>
 <p>Here a search was done for 'themselves'.</p>
-<img src=":-search-results.png" alt="Search results page">
+<img src="https://keyoti.com/products/search/dotNetWeb/tutorials/searchunit-quick-start-guide/search-results.png" alt="Search results page">
 <h4>Go further!</h4>
 <p>Now you're ready to explore more features in SearchUnit, please take a look at the 'Features' page in the help for more information on all that SearchUnit can do.</p>
 </div>

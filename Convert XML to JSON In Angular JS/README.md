@@ -173,7 +173,7 @@
 <p><span style="font-size:small">The x2js.xml_str2json(cnv) will return the json object and we return aftCnv from the function transformResponse. Sounds good? Once we are done everything, we are just write the JSON object in the browser console, so that we
  can see the object.</span></p>
 <p><strong><span style="font-size:small">Output</span></strong></p>
-<div class="wp-caption x_alignnone" id="attachment_10904"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Convert_XML_to_JSON_In_Angular_JS-e1446550586662.png"><img class="size-full x_wp-image-10904" src="-convert_xml_to_json_in_angular_js-e1446550586662.png" alt="Convert XML To JSON In Angular JS" width="650" height="379"></a>
+<div class="wp-caption x_alignnone" id="attachment_10904"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Convert_XML_to_JSON_In_Angular_JS-e1446550586662.png"><img class="size-full x_wp-image-10904" src="http://sibeeshpassion.com/wp-content/uploads/2015/11/Convert_XML_to_JSON_In_Angular_JS-e1446550586662.png" alt="Convert XML To JSON In Angular JS" width="650" height="379"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Convert XML To JSON In Angular JS</span></p>
 </div>

@@ -60,7 +60,7 @@
 </em></p>
 <p><em>You can include <em><strong>code snippets,&nbsp;</strong></em><strong>images</strong>,
 <strong>videos</strong></em></p>
-<p><em><img id="136903" src="136903-product.png" alt="" width="600" height="294">. &nbsp;&nbsp;</em></p>
+<p><em><img id="136903" src="https://i1.code.msdn.s-msft.com/vstudio/aspnet-mvc-5-entity-23dad50e/image/file/136903/1/product.png" alt="" width="600" height="294">. &nbsp;&nbsp;</em></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">

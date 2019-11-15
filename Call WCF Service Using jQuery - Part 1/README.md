@@ -187,7 +187,7 @@ public&nbsp;class&nbsp;ProductService&nbsp;
 <p>&nbsp;</p>
 <h1>Test Output Here :&nbsp;<span style="font-size:small"><a class="title" title="Test Here" href="http://www.wcfdemo.somee.com/" target="_blank">http://www.wcfdemo.somee.com/</a></span></h1>
 <h1>Output Image</h1>
-<p><img id="143329" src="143329-2015-10-07_1223.png" alt="" width="592" height="402"></p>
+<p><img id="143329" src="https://i1.code.msdn.s-msft.com/call-wcf-service-using-5cb8ea71/image/file/143329/1/2015-10-07_1223.png" alt="" width="592" height="402"></p>
 <p>&nbsp;</p>
 <p><strong><span style="font-size:small"><br>
 </span></strong></p>
@@ -412,7 +412,7 @@ public&nbsp;class&nbsp;ProductService&nbsp;
 <br style="outline:none 0px">
 You can also test the output&nbsp;<a title="Click Here" href="http://www.wcfdemo.somee.com/" style="outline:none 0px; text-decoration:none; color:#0000ff">here</a><br style="outline:none 0px">
 <br style="outline:none 0px">
-<img src="-output.jpg" alt="output" style="outline:none 0px; border-style:none; border-width:initial"></strong></div>
+<img src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/8af675/wcf-service-using-jquery/Images/output.jpg" alt="output" style="outline:none 0px; border-style:none; border-width:initial"></strong></div>
 </div>
 <p style="outline:none 0px">&nbsp;</p>
 </div>
@@ -421,7 +421,7 @@ You can also test the output&nbsp;<a title="Click Here" href="http://www.wcfdemo
 <div class="clear" style="outline:none 0px; clear:both; overflow:hidden; height:0px">
 </div>
 <div class="auther_bio" style="outline:none 0px; border-top-width:1px; border-top-style:dashed; border-top-color:#dee2e7; overflow:hidden; padding:18px 0px; width:676px">
-<a id="ctl00_AboutAuthor1_AuthorImageAnchor" class="image" href="http://www.c-sharpcorner.com/authors/kunal-patel12" style="outline:none 0px; text-decoration:none; display:block; float:left; margin-right:20px; overflow:hidden"><img id="ctl00_AboutAuthor1_AuthorImage" src="-8af67520140415010943.jpg" alt="Kunal Patel" style="outline:none 0px; border-style:none; border-width:initial; height:100px; width:100px"></a>
+<a id="ctl00_AboutAuthor1_AuthorImageAnchor" class="image" href="http://www.c-sharpcorner.com/authors/kunal-patel12" style="outline:none 0px; text-decoration:none; display:block; float:left; margin-right:20px; overflow:hidden"><img id="ctl00_AboutAuthor1_AuthorImage" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/8af67520140415010943.jpg" alt="Kunal Patel" style="outline:none 0px; border-style:none; border-width:initial; height:100px; width:100px"></a>
 <div class="autherDetail" style="outline:none 0px"><a id="ctl00_AboutAuthor1_AuthorName" class="userName" href="http://www.c-sharpcorner.com/authors/kunal-patel12" style="outline:none 0px; text-decoration:none; color:#ff6600; font-family:BebasNeueRegular; font-size:26px; padding:0px">Kunal
  Patel</a>
 <p id="ctl00_AboutAuthor1_Description" class="description" style="outline:none 0px; color:#525252; line-height:22px; margin:6px 0px 10px">
@@ -490,7 +490,7 @@ COMMENTS</h2>
 <div id="RootComments" style="outline:none 0px">
 <div class="pulsecomment" id="comment_89813" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/kunal-patel12" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Kunal Patel" src="-8af67520140415010943.jpg.ashx?width=60&height=60" alt="Kunal Patel" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/kunal-patel12" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Kunal Patel" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/8af67520140415010943.jpg.ashx?width=60&height=60" alt="Kunal Patel" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Thanks everyone.</div>
@@ -513,7 +513,7 @@ Thanks everyone.</div>
 </div>
 <div class="pulsecomment x_x_x_x_x_x_BackgroundWhite" id="comment_89814" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/aqib-shehzad" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Aqib Shehzad" src="-70dbe620150912012708.jpg.ashx?width=60&height=60" alt="Aqib Shehzad" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/aqib-shehzad" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Aqib Shehzad" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/70dbe620150912012708.jpg.ashx?width=60&height=60" alt="Aqib Shehzad" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Good article</div>
@@ -536,7 +536,7 @@ Good article</div>
 </div>
 <div class="pulsecomment" id="comment_89815" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/surya-pratap-singh4" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Surya Pratap Singh" src="-ffeb9520150701095817.jpg.ashx?width=60&height=60" alt="Surya Pratap Singh" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/surya-pratap-singh4" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Surya Pratap Singh" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/ffeb9520150701095817.jpg.ashx?width=60&height=60" alt="Surya Pratap Singh" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Gud one...\</div>
@@ -559,7 +559,7 @@ Gud one...\</div>
 </div>
 <div class="pulsecomment x_x_x_x_x_x_BackgroundWhite" id="comment_89817" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/manas-mohapatra" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Manas Mohapatra" src="-manas120150620051826.jpg.ashx?width=60&height=60" alt="Manas Mohapatra" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/manas-mohapatra" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Manas Mohapatra" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/manas120150620051826.jpg.ashx?width=60&height=60" alt="Manas Mohapatra" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Good Share man...</div>
@@ -582,7 +582,7 @@ Good Share man...</div>
 </div>
 <div class="pulsecomment" id="comment_89819" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/humayun-kabir-mamun" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Humayun Kabir Mamun" src="-hkmamun20141021123051.jpg.ashx?width=60&height=60" alt="Humayun Kabir Mamun" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/humayun-kabir-mamun" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Humayun Kabir Mamun" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/hkmamun20141021123051.jpg.ashx?width=60&height=60" alt="Humayun Kabir Mamun" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Nice...</div>
@@ -605,7 +605,7 @@ Nice...</div>
 </div>
 <div class="pulsecomment x_x_x_x_x_x_BackgroundWhite" id="comment_89826" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/nilesh-jadav" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Nilesh Jadav" src="-00946420150428103406.jpg.ashx?width=60&height=60" alt="Nilesh Jadav" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/nilesh-jadav" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Nilesh Jadav" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/00946420150428103406.jpg.ashx?width=60&height=60" alt="Nilesh Jadav" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Nice share sir</div>
@@ -628,7 +628,7 @@ Nice share sir</div>
 </div>
 <div class="pulsecomment" id="comment_89834" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/kunal-patel12" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Kunal Patel" src="-8af67520140415010943.jpg.ashx?width=60&height=60" alt="Kunal Patel" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/kunal-patel12" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Kunal Patel" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/8af67520140415010943.jpg.ashx?width=60&height=60" alt="Kunal Patel" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Thanks.</div>
@@ -651,7 +651,7 @@ Thanks.</div>
 </div>
 <div class="pulsecomment x_x_x_x_x_x_BackgroundWhite" id="comment_89840" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/harshad-pansuriya" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Harshad Pansuriya" src="-fe635420150914082644.jpg.ashx?width=60&height=60" alt="Harshad Pansuriya" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/harshad-pansuriya" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Harshad Pansuriya" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/fe635420150914082644.jpg.ashx?width=60&height=60" alt="Harshad Pansuriya" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Nice One</div>
@@ -674,7 +674,7 @@ Nice One</div>
 </div>
 <div class="pulsecomment" id="comment_89933" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/santhakumar-munuswamy" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Santhakumar Munuswamy" src="-f2823e20150612020708.jpg.ashx?width=60&height=60" alt="Santhakumar Munuswamy" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/santhakumar-munuswamy" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Santhakumar Munuswamy" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/f2823e20150612020708.jpg.ashx?width=60&height=60" alt="Santhakumar Munuswamy" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Nice Article. Thanks for sharing us</div>
@@ -697,7 +697,7 @@ Nice Article. Thanks for sharing us</div>
 </div>
 <div class="pulsecomment x_x_x_x_x_x_BackgroundWhite" id="comment_90010" style="outline:none 0px; float:left; padding:9px 5px; width:674px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<a href="http://www.c-sharpcorner.com/authors/karthikeyan-k14" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Karthikeyan K" src="-88d8c020150818065856.jpg.ashx?width=60&height=60" alt="Karthikeyan K" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
+<a href="http://www.c-sharpcorner.com/authors/karthikeyan-k14" style="outline:none 0px; text-decoration:none; display:block; width:60px; height:60px"><img title="Karthikeyan K" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/88d8c020150818065856.jpg.ashx?width=60&height=60" alt="Karthikeyan K" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></a></div>
 <div class="commentcontent" style="outline:none 0px; float:left; max-width:586px">
 <div class="commentDescription" style="outline:none 0px; line-height:20px; color:#8b8b8b; margin-bottom:6px">
 Good one sir...Thanks for sharing</div>
@@ -721,7 +721,7 @@ Good one sir...Thanks for sharing</div>
 </div>
 <div class="pulsecomment x_x_x_x_x_x_borderNone" id="RootPostComment" style="outline:none 0px; float:left; padding:9px 5px; width:674px; min-height:42px">
 <div class="image x_x_x_x_x_x_level0" style="outline:none 0px; width:75px; float:left; margin:0px; overflow:hidden">
-<img src="-8af67520140415010943.jpg" alt="" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></div>
+<img src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/AuthorImage/8af67520140415010943.jpg" alt="" style="outline:none 0px; border-style:none; border-width:initial; display:block; width:60px; height:60px"></div>
 <div class="commentcontentPost" id="ctl00_Comments1_PanelPostComment" style="outline:none 0px; overflow:inherit; max-width:586px; float:left">
 <div class="mentions-input-box" style="outline:none 0px; font-family:pt_sansregular">
 <div class="mentions" style="outline:none 0px; bottom:0px; color:#ffffff; left:1px; overflow:hidden; padding:5px; right:0px; top:1px; white-space:pre-wrap; word-wrap:break-word">
@@ -754,7 +754,7 @@ COMMENT USING</h2>
 SPONSORED BY</h2>
 <div class="adBox" id="ctl00_RightBar_ArticleDetailRightBar1_PremiumSponsorTextAd1_SponsorAdWithImage" style="outline:none 0px; width:326px; height:auto; float:left; padding:8px 0px 10px 10px">
 <div class="adImage" style="outline:none 0px; float:left; top:0px; left:0px; width:100px; height:110px">
-<a id="ctl00_RightBar_ArticleDetailRightBar1_PremiumSponsorTextAd1_HrefSponsorLinkImage" rel="nofollow" href="http://www.c-sharpcorner.com/AdRedirector.aspx?AdId=89&target=http://www.e-iceblue.com/Introduce/free-doc-component.html?aff_id=64" target="_blank" style="outline:none 0px; text-decoration:none"><img id="ctl00_RightBar_ArticleDetailRightBar1_PremiumSponsorTextAd1_imgSponsor" class="image90" src="-002549am.jpg" alt="" width="75" height="90" style="outline:none 0px; width:88px; height:88px; display:block; padding:5px; border:1px solid #d7d7d7!important"></a></div>
+<a id="ctl00_RightBar_ArticleDetailRightBar1_PremiumSponsorTextAd1_HrefSponsorLinkImage" rel="nofollow" href="http://www.c-sharpcorner.com/AdRedirector.aspx?AdId=89&target=http://www.e-iceblue.com/Introduce/free-doc-component.html?aff_id=64" target="_blank" style="outline:none 0px; text-decoration:none"><img id="ctl00_RightBar_ArticleDetailRightBar1_PremiumSponsorTextAd1_imgSponsor" class="image90" src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/ScriptAdImage/002549AM.jpg" alt="" width="75" height="90" style="outline:none 0px; width:88px; height:88px; display:block; padding:5px; border:1px solid #d7d7d7!important"></a></div>
 <div class="adRight" style="outline:none 0px; margin-left:5px; float:left; width:221px; height:auto">
 <a id="ctl00_RightBar_ArticleDetailRightBar1_PremiumSponsorTextAd1_HrefSponsorLink" class="MemberoftheMonth" href="http://www.c-sharpcorner.com/AdRedirector.aspx?AdId=89&target=http://www.e-iceblue.com/Introduce/free-doc-component.html?aff_id=64" target="_blank" style="outline:none 0px; text-decoration:none; color:#333333; font-size:20px">Spire.Doc
  - Free .NET Word API</a>
@@ -765,7 +765,7 @@ Use Spire.Doc to create, read, write, print, and convert word documents to OpenX
 </div>
 <div class="clear" style="outline:none 0px; clear:both; overflow:hidden; height:0px">
 </div>
-<div style="outline:none 0px; width:336px; margin:10px 0px"><a id="ctl00_RightBar_ArticleDetailRightBar1_NewsArticleAd1_AdRotatorArticle" href="http://www.c-sharpcorner.com/AdRedirector.aspx?BannerId=728&target=http://www.infragistics.com/products/jquery?utm_source=c-sharpcorner.com&utm_medium=Banner&utm_content=jQuery%20338x280&utm_campaign=c-sharpcorner.com%20jQuery%20Banner" target="_blank" style="outline:none 0px; text-decoration:none"><img src="-sample_apps_338x280_2.jpg" alt="Infragistics jQuery Controls" style="outline:none 0px; border-style:none; border-width:initial"></a></div>
+<div style="outline:none 0px; width:336px; margin:10px 0px"><a id="ctl00_RightBar_ArticleDetailRightBar1_NewsArticleAd1_AdRotatorArticle" href="http://www.c-sharpcorner.com/AdRedirector.aspx?BannerId=728&target=http://www.infragistics.com/products/jquery?utm_source=c-sharpcorner.com&utm_medium=Banner&utm_content=jQuery%20338x280&utm_campaign=c-sharpcorner.com%20jQuery%20Banner" target="_blank" style="outline:none 0px; text-decoration:none"><img src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/Banners/85/Sample_apps_338x280_2.jpg" alt="Infragistics jQuery Controls" style="outline:none 0px; border-style:none; border-width:initial"></a></div>
 <h2 class="headerControls" style="outline:none 0px; margin:0px; padding:0px; height:30px; line-height:30px; font-size:20px; font-family:BebasNeueRegular; color:#727272; font-weight:normal; text-transform:uppercase; clear:both">
 TRENDING UP<a id="ctl00_RightBar_ArticleDetailRightBar1_TrendingUp1_RssEnabledImageButton" class="headerRss" href="http://www.c-sharpcorner.com/RSS/TopArticles.aspx" target="_blank" style="outline:none 0px; text-decoration:none; margin-top:5px; width:16px; height:20px; display:block; text-indent:-9999px; float:right"></a></h2>
 <div class="rightBox" style="outline:none 0px; float:left; margin-bottom:10px; padding:0px 0px 5px; width:336px">
@@ -829,7 +829,7 @@ TRENDING UP<a id="ctl00_RightBar_ArticleDetailRightBar1_TrendingUp1_RssEnabledIm
 </div>
 <div class="clear" style="outline:none 0px; clear:both; overflow:hidden; height:0px">
 </div>
-<div style="outline:none 0px; width:336px; margin-bottom:10px"><a id="ctl00_RightBar_ArticleDetailRightBar1_NewsArticleAdMiddle1_AdRotatorArticle" href="http://www.c-sharpcorner.com/AdRedirector.aspx?BannerId=728&target=http://www.infragistics.com/products/jquery?utm_source=c-sharpcorner.com&utm_medium=Banner&utm_content=jQuery%20338x280&utm_campaign=c-sharpcorner.com%20jQuery%20Banner" target="_blank" style="outline:none 0px; text-decoration:none"><img src="-sample_apps_338x280_2.jpg" alt="Infragistics jQuery Controls" style="outline:none 0px; border-style:none; border-width:initial"></a></div>
+<div style="outline:none 0px; width:336px; margin-bottom:10px"><a id="ctl00_RightBar_ArticleDetailRightBar1_NewsArticleAdMiddle1_AdRotatorArticle" href="http://www.c-sharpcorner.com/AdRedirector.aspx?BannerId=728&target=http://www.infragistics.com/products/jquery?utm_source=c-sharpcorner.com&utm_medium=Banner&utm_content=jQuery%20338x280&utm_campaign=c-sharpcorner.com%20jQuery%20Banner" target="_blank" style="outline:none 0px; text-decoration:none"><img src="http://cscorner.dotnetheaven.netdna-cdn.com/UploadFile/Banners/85/Sample_apps_338x280_2.jpg" alt="Infragistics jQuery Controls" style="outline:none 0px; border-style:none; border-width:initial"></a></div>
 <div class="clear" style="outline:none 0px; clear:both; overflow:hidden; height:0px">
 </div>
 </div>

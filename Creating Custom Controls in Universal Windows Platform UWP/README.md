@@ -37,7 +37,7 @@
 </span></p>
 <h3><span>Step 3:</span></h3>
 <p><span>Now in ProfileDesign Control we have to design the Rectangle, Image Control and two text Blocks for name and age respectively.</span></p>
-<p><img id="145461" src="145461-3.png" alt="" width="751" height="451"></p>
+<p><img id="145461" src="https://i1.code.msdn.s-msft.com/creating-custom-controls-a031a7ea/image/file/145461/1/3.png" alt="" width="751" height="451"></p>
 <p>&nbsp;</p>
 <h3><span>Step 4:</span></h3>
 <p><span>Now we have to define the dependency propertied of these controls so that we can use these for data binding later. Open your class ProfileDesign.Xaml.Cs you will get by expanding ProfileDesign.Xaml. For creating dependcy properties write propdp,press
@@ -53,15 +53,15 @@
 <h3><span>Step 5 :</span></h3>
 <p><span>Now binding the controls. Select the Image control form objects and timeline, in Properties Source, create databinding, databinding name, Element Name. Select User Control and in Path the name of property in our case ProfileImage. Respective properties
  for others controls as shown in inmages.</span></p>
-<p><img id="145462" src="145462-6.png" alt="" width="751" height="451"></p>
+<p><img id="145462" src="https://i1.code.msdn.s-msft.com/creating-custom-controls-a031a7ea/image/file/145462/1/6.png" alt="" width="751" height="451"></p>
 <p>&nbsp;</p>
 <p><img id="145425" src="145425-7.png" alt="" width="438" height="492"></p>
 <p>&nbsp;</p>
-<p><img id="145463" src="145463-8.png" alt="" width="751" height="451"></p>
+<p><img id="145463" src="https://i1.code.msdn.s-msft.com/creating-custom-controls-a031a7ea/image/file/145463/1/8.png" alt="" width="751" height="451"></p>
 <p>&nbsp;</p>
 <p><img id="145427" src="145427-9.png" alt="" width="439" height="493"></p>
 <p>&nbsp;</p>
-<p><img id="145478" src="145478-10.png" alt="" width="751" height="450"></p>
+<p><img id="145478" src="https://i1.code.msdn.s-msft.com/creating-custom-controls-a031a7ea/image/file/145478/1/10.png" alt="" width="751" height="450"></p>
 <p>&nbsp;</p>
 <p><img id="145429" src="145429-11.png" alt="" width="438" height="495"></p>
 <p>&nbsp;</p>
@@ -69,19 +69,19 @@
 <p><strong><span>Then Build the solution Ctrl&#43;Shift&#43;B.</span></strong></p>
 <h3><span>Step 6:</span></h3>
 <p><span>As Builded, go to the MainPage.xaml. In Assets let see, is my control available there?</span></p>
-<p><span><img id="145479" src="145479-13.png" alt="" width="751" height="451"><br>
+<p><span><img id="145479" src="https://i1.code.msdn.s-msft.com/creating-custom-controls-a031a7ea/image/file/145479/1/13.png" alt="" width="751" height="451"><br>
 </span></p>
 <p>&nbsp;</p>
 <p><span>Now just drag and drop on main page. Go to properties. Remember all of the properties of our custom control except the brush are in the miscellaneous tab.</span></p>
 <p><span>I have added the six ProfileDesign Controls in Main Page at miscellaneous tab click on Profile Image add the image. Student Name and Student Age.</span></p>
-<p><span><img id="145450" src="145450-14.png" alt="" width="751" height="451"><br>
+<p><span><img id="145450" src="https://i1.code.msdn.s-msft.com/creating-custom-controls-a031a7ea/image/file/145450/1/14.png" alt="" width="751" height="451"><br>
 </span></p>
 <p>&nbsp;</p>
-<p><img id="145458" src="145458-15.png" alt="" width="751" height="451"></p>
+<p><img id="145458" src="https://i1.code.msdn.s-msft.com/creating-custom-controls-a031a7ea/image/file/145458/1/15.png" alt="" width="751" height="451"></p>
 <p><span>Now go to the brush tab, Overlay Brush and chose your color.</span></p>
-<p><img id="145459" src="145459-16.png" alt="" width="751" height="450"></p>
+<p><img id="145459" src="https://i1.code.msdn.s-msft.com/creating-custom-controls-a031a7ea/image/file/145459/1/16.png" alt="" width="751" height="450"></p>
 <p><span>So there is your custom control. After that I have design five new profile of my fellows just in one minutes. Simple drag and drop the ProfileDesign Control from and Update the contents.</span></p>
-<p><img id="145460" src="145460-17.png" alt="" width="751" height="451"></p>
+<p><img id="145460" src="https://i1.code.msdn.s-msft.com/creating-custom-controls-a031a7ea/image/file/145460/1/17.png" alt="" width="751" height="451"></p>
 <p><span>You can do anything with your custom controls such as, styling, data binding, animation.</span></p>
 <p><span>Below is the link of hands on work code.Keep learning...!!<br>
 <br>

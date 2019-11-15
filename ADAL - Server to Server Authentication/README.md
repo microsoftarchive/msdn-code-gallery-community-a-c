@@ -20,7 +20,7 @@ Daemon-CertificateCredential-DotNet</a>.</span></h1>
 Active Directory Authentication Library (ADAL) package</strong> to secure service calls from a server side process or a device (for ex. A sensor)&nbsp; to an MVC4 Web API REST service. The caller processes is simulated in the sample solution by a console application.
  The below free body diagram captures the scenario we are implementing at a high level:</span></p>
 <p><br>
-<img id="95985" src="95985-capture.png" alt="" width="642" height="336"></p>
+<img id="95985" src="http://i1.code.msdn.s-msft.com/aal-server-to-server-9aafccc1/image/file/95985/1/capture.png" alt="" width="642" height="336"></p>
 <p><span style="font-size:small">Furthermore, it demonstrates how to authenticate calls to a Web API REST service by leveraging
 </span><span style="font-size:small">the <strong>JSON Web Token Handler for Microsoft .Net Framework 4.5 (JWT handler).</strong></span></p>
 <p>&nbsp;</p>
@@ -109,7 +109,7 @@ Add</strong> button on </span><span style="font-size:small">the Windows Azure Ma
 <br>
 </p>
 <p style="padding-left:30px"><span style="font-size:small"><span style="font-family:Times New Roman">&nbsp;</span></span></p>
-<p class="MsoNormal" style="margin:0in 0in 8pt; line-height:normal"><span style="font-size:small"><span style="line-height:107%; font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;">&nbsp;<img id="95989" src="95989-s2s2.png" alt="" width="594" height="436">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 8pt; line-height:normal"><span style="font-size:small"><span style="line-height:107%; font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;">&nbsp;<img id="95989" src="http://i1.code.msdn.s-msft.com/aal-server-to-server-9aafccc1/image/file/95989/1/s2s2.png" alt="" width="594" height="436">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
 <p class="MsoNormal" style="margin:0in 0in 8pt; line-height:normal"><span style="font-size:small"><span style="line-height:107%; font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;">&nbsp;</span></span>&nbsp;</p>
 <p><br>
 <span style="font-size:small">The options offered are straightforward:</span></p>
@@ -136,7 +136,7 @@ APPLICATION AND/OR WEB API&rdquo;</strong>.</span> </li></ul>
 </span></p>
 <p>&nbsp;</p>
 <p><br>
-<img id="95991" src="95991-s2s3.png" alt="" width="668" height="460"></p>
+<img id="95991" src="http://i1.code.msdn.s-msft.com/aal-server-to-server-9aafccc1/image/file/95991/1/s2s3.png" alt="" width="668" height="460"></p>
 <p><br>
 <br>
 </p>
@@ -180,7 +180,7 @@ APPLICATION AND/OR WEB API&rdquo;</strong>.</span> </li></ul>
 </ol>
 <p style="padding-left:30px"><span style="font-size:small">7. The </span><span style="font-size:small">options offered allow you to set access your app needs to Azure AD:</span></p>
 <ol>
-<img id="95992" src="95992-s2s4.png" alt="" width="608" height="454"></ol>
+<img id="95992" src="http://i1.code.msdn.s-msft.com/aal-server-to-server-9aafccc1/image/file/95992/1/s2s4.png" alt="" width="608" height="454"></ol>
 <p class="MsoNormal" style="margin:0in 0in 8pt; line-height:normal"><span style="font-size:small"><span style="line-height:107%; font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
 <p><br>
 <br>

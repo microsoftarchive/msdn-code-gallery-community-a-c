@@ -27,29 +27,29 @@
 <p><strong><span style="font-size:small">Background</span></strong></p>
 <p><span style="font-size:small">For the past few days I am experiment few things in Angular JS. Here we are going to see a demo of how to use Angular JS autocomplete in MVC with Web API to fetch the data from database. Once we are done, this is how our applications
  output will be.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11394"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_.png"><img class="size-full x_x_wp-image-11394" src="-angular_js_autocomplete_in_mvc_with_web_api_output_.png" alt="Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_" width="425" height="266"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11394"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_.png"><img class="size-full x_x_wp-image-11394" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_.png" alt="Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_" width="425" height="266"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_</span></p>
 </div>
-<div class="wp-caption x_x_alignnone" id="attachment_11395"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_.png"><img class="size-full x_x_wp-image-11395" src="-angular_js_autocomplete_in_mvc_with_web_api_output_with_filter_.png" alt="Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_" width="427" height="361"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11395"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_.png"><img class="size-full x_x_wp-image-11395" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_.png" alt="Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_" width="427" height="361"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_</span></p>
 </div>
 <p><strong><span style="font-size:small">Create a MVC application</span></strong></p>
 <p><span style="font-size:small">Click File-&gt; New-&gt; Project then select MVC application. From the following pop up we will select the template as empty and select the core references and folders for MVC.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11405"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png"><img class="size-full x_x_wp-image-11405" src="-empty-template-with-mvc-and-web-api-folders-e1458711950206.png" alt="Empty Template With MVC And Web API Folders" width="650" height="484"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11405"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png"><img class="size-full x_x_wp-image-11405" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png" alt="Empty Template With MVC And Web API Folders" width="650" height="484"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Empty Template With MVC And Web API Folders</span></p>
 </div>
 <p><span style="font-size:small">Once you click OK, a project with MVC like folder structure with core references will be created for you.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11362"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png"><img class="size-full x_x_wp-image-11362" src="-folder-structure-and-references-for-empty-mvc-project.png" alt="Folder Structure And References For Empty MVC Project" width="267" height="367"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11362"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png"><img class="size-full x_x_wp-image-11362" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png" alt="Folder Structure And References For Empty MVC Project" width="267" height="367"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Folder Structure And References For Empty MVC Project</span></p>
 </div>
 <p><span style="font-size:small">Before going to start the coding part, make sure that all the required extensions/references are installed. Below are the required things to start with.</span></p>
 </li><li><span style="font-size:small">Angular JS</span> </li><li><span style="font-size:small">jQuery</span>
 <p><span style="font-size:small">You can all the items mentioned above from NuGet. Right click on your project name and select Manage NuGet packages.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11407"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Manage-NuGet-Package-Window-e1458712083925.png"><img class="size-large x_x_wp-image-11407" src="-manage-nuget-package-window-1024x407.png" alt="Manage NuGet Package Window" width="634" height="252"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11407"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Manage-NuGet-Package-Window-e1458712083925.png"><img class="size-large x_x_wp-image-11407" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Manage-NuGet-Package-Window-1024x407.png" alt="Manage NuGet Package Window" width="634" height="252"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Manage NuGet Package Window</span></p>
 </div>
@@ -333,19 +333,19 @@ GO</pre>
 <p><strong><span style="font-size:small">Create Entity Data Model</span></strong></p>
 <p><span style="font-size:small">Right click on your model folder and click new, select ADO.NET Entity Data Model. Follow the steps given. Once you have done the processes, you can see the edmx file and other files in your model folder. Here I gave&nbsp;<em>Dashboard</em>&nbsp;for
  our Entity data model name. Now you can see a file with edmx extension have been created. If you open that file, you can see as below.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11400"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Entity-Data-Model-Product-Table.png"><img class="size-full x_x_wp-image-11400" src="-entity-data-model-product-table.png" alt="Entity Data Model Product Table" width="264" height="663"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11400"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Entity-Data-Model-Product-Table.png"><img class="size-full x_x_wp-image-11400" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Entity-Data-Model-Product-Table.png" alt="Entity Data Model Product Table" width="264" height="663"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Entity Data Model Product Table</span></p>
 </div>
 <p><span style="font-size:small">Now will create our Web API controller.</span></p>
 <p><strong><span style="font-size:small">Create Web API Controller</span></strong></p>
 <p><span style="font-size:small">To create a Web API controller, just right click on your controller folder and click Add -&gt; Controller -&gt; Select Web API 2 controller with actions, using Entity Framework.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11401"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png"><img class="size-full x_x_wp-image-11401" src="-web-api-2-controller-with-actions-using-entity-framework-e1458709497551.png" alt="Web API 2 Controller With Actions Using Entity Framework" width="650" height="448"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11401"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png"><img class="size-full x_x_wp-image-11401" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png" alt="Web API 2 Controller With Actions Using Entity Framework" width="650" height="448"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web API 2 Controller With Actions Using Entity Framework</span></p>
 </div>
 <p><span style="font-size:small">Now select&nbsp;<em>Product (AngularJSAutocompleteInMVCWithWebAPI.Models)</em>&nbsp;as our Model class and<em>TrialsDBEntities (AngularJSAutocompleteInMVCWithWebAPI.Models)</em>&nbsp;as data context class.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11402"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Model-Class-And-Data-Context-Class.png"><img class="size-full x_x_wp-image-11402" src="-model-class-and-data-context-class.png" alt="Model Class And Data Context Class" width="625" height="267"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11402"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Model-Class-And-Data-Context-Class.png"><img class="size-full x_x_wp-image-11402" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Model-Class-And-Data-Context-Class.png" alt="Model Class And Data Context Class" width="625" height="267"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Model Class And Data Context Class</span></p>
 </div>
@@ -527,7 +527,7 @@ namespace&nbsp;AngularJSAutocompleteInMVCWithWebAPI.Controllers&nbsp;
 </div>
 <p><span style="font-size:small">So the coding part to fetch the data from database is ready, now we need to check whether our Web API is ready for action!. To check that, you just need to run the URL&nbsp;<em>http://localhost:9038/api/products</em>. Here<em>products</em>&nbsp;is
  our Web API controller name. I hope you get the data as a result.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11403"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-Result-e1458710180875.png"><img class="size-full x_x_wp-image-11403" src="-web-api-result-e1458710180875.png" alt="Web API Result" width="650" height="588"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11403"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-Result-e1458710180875.png"><img class="size-full x_x_wp-image-11403" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-Result-e1458710180875.png" alt="Web API Result" width="650" height="588"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web API Result</span></p>
 </div>
@@ -708,7 +708,7 @@ namespace&nbsp;AngularJSAutocompleteInMVCWithWebAPI.Controllers&nbsp;
 <p><span style="font-size:small">Now we need a view right?</span></p>
 <p><strong><span style="font-size:small">Creating a view</span></strong></p>
 <p><span style="font-size:small">To create a view, just right click on your controller name -&gt; Add View -&gt; Add.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11366"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Creating-a-view.png"><img class="size-full x_x_wp-image-11366" src="-creating-a-view.png" alt="Creating a view" width="625" height="398"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11366"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Creating-a-view.png"><img class="size-full x_x_wp-image-11366" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Creating-a-view.png" alt="Creating a view" width="625" height="398"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Creating a view</span></p>
 </div>
@@ -817,11 +817,11 @@ namespace&nbsp;AngularJSAutocompleteInMVCWithWebAPI.Controllers&nbsp;
 </div>
 <p><span style="font-size:small">Now run your page again, I am sure you will get the output as follows.</span></p>
 <p><span style="font-size:small">Output</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11394"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_.png"><img class="size-full x_x_wp-image-11394" src="-angular_js_autocomplete_in_mvc_with_web_api_output_.png" alt="Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_" width="425" height="266"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11394"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_.png"><img class="size-full x_x_wp-image-11394" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_.png" alt="Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_" width="425" height="266"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_</span></p>
 </div>
-<div class="wp-caption x_x_alignnone" id="attachment_11395"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_.png"><img class="size-full x_x_wp-image-11395" src="-angular_js_autocomplete_in_mvc_with_web_api_output_with_filter_.png" alt="Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_" width="427" height="361"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11395"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_.png"><img class="size-full x_x_wp-image-11395" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_.png" alt="Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_" width="427" height="361"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Angular_JS_Autocomplete_In_MVC_With_Web_API_Output_With_Filter_</span></p>
 </div>

@@ -63,24 +63,24 @@ moonmile solutions 増田 智明</a></p>
 </div>
 </div>
 <p>JavaScript は、script タグの間に書きます。ここでは、document オブジェクトの write メソッドを使ってメッセージを出力し、for ループを使って 0 から 9 までを表示させています。</p>
-<p><img src="19146-image001.jpg" alt="図 1" width="600" height="499"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19146/1/image001.jpg" alt="図 1" width="600" height="499"></p>
 <p>図 1</p>
 <p>ASP.NET の記述を使っても同じ表示になるのですが、見かけ上は同じでも ASP.NET の記述と JavaScript では大きく動作が違ってきます。ASP.NET ではサーバー サイドで HTML タグを生成して出力していますが、JavaScript の場合はブラウザー上で HTML を生成しています。これは、後で Ajax を利用したときに違ってきます。</p>
 <p>従来、JavaScript のコーディングでは、オブジェクトが持つメソッドの記述はリファレンスを参照しながら、メモ帳などのテキスト エディターを使ってコーディングすることが多かったかもしれません。しかし、Visual Studio 2010 を使うと、C# や Visual Basic をコーディングするときと同様に JavaScript でもインテリセンス機能が使えます。</p>
 <p>このソース コードでは document オブジェクトの後にピリオドをタイピングしたときに、インテリセンス機能により、下の図のようにオブジェクトのメソッドやプロパティのリストが表示されます。</p>
-<p><img src="19147-image002.gif" border="1" alt="図 2" width="457" height="317"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19147/1/image002.gif" border="1" alt="図 2" width="457" height="317"></p>
 <p>図 2</p>
 <p>この機能を使えば、単純なテキスト エディターを使ってコーディングするよりも素早くプログラムが仕上げられます。</p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
 <hr>
 <h2 id="03">3. 外部 JavaScript ファイルを使う</h2>
 <p>ASP.NET MVC で外部の JavaScript ファイルを読み込む時は、script タグの src 属性を使います。JavaScript はどこのフォルダーに置いてもよいのですが、jQuery などと一緒の Scripts フォルダーに置くとよいでしょう。</p>
-<p><img src="19148-image003.gif" border="1" alt="図 3" width="281" height="379"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19148/1/image003.gif" border="1" alt="図 3" width="281" height="379"></p>
 <p>図 3</p>
 <p>Visual Studio 2010 では、src 属性でファイルを指定するときに「URL の選択」をクリックすると、スクリプト ファイルを指定するプロジェクトの項目の選択ダイアログ ボックスが開きます。このダイアログで 読み込む JavaScript ファイルを指定するとフォルダー指定の間違いが少なくなります。</p>
-<p><img src="19149-image004.gif" border="1" alt="図 4" width="400" height="321"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19149/1/image004.gif" border="1" alt="図 4" width="400" height="321"></p>
 <p>図 4</p>
-<p><img src="19150-image005.gif" alt="図 5" width="600" height="475"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19150/1/image005.gif" alt="図 5" width="600" height="475"></p>
 <p>図 5</p>
 <p>サンプルのコードは、先のインラインで記述した JavaScript と同じ結果になります。</p>
 <div class="scriptcode">
@@ -128,11 +128,11 @@ document.write(<span class="js__string">&quot;&lt;/ul&gt;&quot;</span>);&nbsp;
 </div>
 </div>
 <p>Visual Studio 2010 でデバッグ実行をすると、この JavaScript のファイル内でブレークポイントを指定できます。例えば、document.write メソッドの呼び出しでブレークポイントを設定すると、次の図のように実行が停止します。</p>
-<p><img src="19151-image006.jpg" border="1" alt="図 6" width="473" height="218"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19151/1/image006.jpg" border="1" alt="図 6" width="473" height="218"></p>
 <p>図 6</p>
 <p>C# や Visual Basic でデバッグしていると同じようにイミディエイト ウィンドウで変数を参照したり、ウォッチ ウィンドウでオブジェクトの内容を変更したりできるので、非常に強力なデバッグができます。</p>
 <p>JavaScript をインラインで記述した場合には、ブレークポイントで止まらない時があるので、その時は実行時のソリューション エクスプローラーの「スクリプト ドキュメント」から、現在表示しているページを選択して、ブレークポイントを設定しておきます。そうして、再び指定のページを表示するとブレークポイントを設定した箇所でデバッグ実行が停止します。</p>
-<p><img src="19152-image007.gif" alt="図 7" width="326" height="277"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19152/1/image007.gif" alt="図 7" width="326" height="277"></p>
 <p>図 7</p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
 <hr>
@@ -195,11 +195,11 @@ document.write(<span class="js__string">&quot;&lt;/ul&gt;&quot;</span>);&nbsp;
 </div>
 </div>
 <p>あらかじめ time という ID の div タグを設定しておき、これを「$('#time')」で参照します。ここでピリオドをタイピングすると、次の図のようにインテリセンス機能が働きます。</p>
-<p><img src="19153-image008.gif" border="1" alt="図 8" width="566" height="351"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19153/1/image008.gif" border="1" alt="図 8" width="566" height="351"></p>
 <p>図 8</p>
 <p>jQuery で定義されているメソッドが C# や Visual Basic と同じようにインテリセンスで表示されます。これによって、JavaScript でのコーディングが非常に楽になります。</p>
 <p>実行した結果が次の図です。</p>
-<p><img src="19154-image009.jpg" alt="図 9" width="600" height="499"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19154/1/image009.jpg" alt="図 9" width="600" height="499"></p>
 <p>図 9</p>
 <p>この他にも jQuery では、コントロールのドラッグ アンド ドロップなどの jQuery UI や、Ajax の機能であるサーバーとの非同期通信の機能もあります。これらの情報は「jQuery」や「jQuery UI」などで検索されると色々な情報が得られるので、ぜひ活用してみてください。</p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
@@ -324,7 +324,7 @@ document.write(<span class="js__string">&quot;&lt;/ul&gt;&quot;</span>);&nbsp;
 </div>
 <p>Request オブジェクトの IsAjaxRequest メソッドを使うと、Ajax による非同期呼出しかどうかの判別ができます。Ajax からの呼び出しの時は、Content クラスを使って現在時刻を返しています。</p>
 <p>これを実行すると次の図になります。</p>
-<p><img src="19155-image010.jpg" alt="図 10" width="600" height="430"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19155/1/image010.jpg" alt="図 10" width="600" height="430"></p>
 <p>図 10</p>
 <p>「日付を取得」のリンクをクリックしたときには画面遷移はしません。「日時」のところの span タグにコントローラーの GetDateTime メソッドの結果が反映されます。</p>
 <p>この方法は、単純な文字列や数値を返すときに利用できます。次に示す Ajax.BeginForm メソッドと合わせて利用すると、ユーザー登録時の重複チェックや、郵便番号から住所を返すなどの Ajax 処理を作成することができます。</p>
@@ -450,14 +450,14 @@ document.write(<span class="js__string">&quot;&lt;/ul&gt;&quot;</span>);&nbsp;
 </div>
 </div>
 <p>このテンプレートはビューの追加ダイアログから作成します。モデルを利用するテンプレートを作る場合は、図のように「部分ビュー (.ascx) を作成する」にチェックを入れます。</p>
-<p><img src="19156-image011.gif" alt="図 11"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19156/1/image011.gif" alt="図 11"></p>
 <p>図 11</p>
 <p>商品 ID を入力して、送信ボタンをクリックすると画面遷移をせずに商品の詳細情報が表示されます。このサンプルでは、あらかじめ<a href="http://ec.nikkeibp.co.jp/item/books/P94380.html" target="_blank">「ひと目でわかる ASP.NET MVC アプリケーション開発入門」</a>のサンプル データベースをインストールした後、LINQ to Entities を作成して表示させています。</p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
 <hr>
 <h2 id="07">7. Ajax 処理をまとめてみると</h2>
 <p>Ajax でテンプレートを表示する仕組みを図で説明します。</p>
-<p><img src="19157-image012.gif" alt="図 12" width="600" height="317"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-6a7b270b/image/file/19157/1/image012.gif" alt="図 12" width="600" height="317"></p>
 <p>図 12</p>
 <ol>
 <li>ブラウザー上で、Ajax による非同期呼出しを行います。これは、通常の ASP.NET MVC のコントローラーのアクション メソッドを呼び出す時と同じ動作になります。
@@ -473,8 +473,8 @@ document.write(<span class="js__string">&quot;&lt;/ul&gt;&quot;</span>);&nbsp;
 <table>
 <tbody>
 <tr>
-<td><a href="http://code.msdn.microsoft.com/"><img title="Code Recipe" src="-ff950935.coderecipe_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
-<td><a href="http://msdn.microsoft.com/ja-jp/asp.net/" target="_blank"><img title="ASP.NET デベロッパーセンター" src="-ff950935.asp_net_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://code.msdn.microsoft.com/"><img title="Code Recipe" src="http://i.msdn.microsoft.com/ff950935.coderecipe_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/asp.net/" target="_blank"><img title="ASP.NET デベロッパーセンター" src="http://i.msdn.microsoft.com/ff950935.ASP_NET_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
 <td>
 <ul>
 <li>もっと他のコンテンツを見る &gt;&gt; <a href="http://msdn.microsoft.com/ja-jp/asp.net/gg490787" target="_blank">
@@ -485,4 +485,4 @@ ASP.NET デベロッパーセンターへ</a> </li></ul>
 </tr>
 </tbody>
 </table>
-<p style="margin-top:20px"><a href="#top"><img src="-top.gif" border="0" alt="">ページのトップへ</a></p>
+<p style="margin-top:20px"><a href="#top"><img src="http://www.microsoft.com/japan/msdn/nodehomes/graphics/top.gif" border="0" alt="">ページのトップへ</a></p>

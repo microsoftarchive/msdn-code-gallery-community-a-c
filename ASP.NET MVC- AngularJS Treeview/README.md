@@ -25,9 +25,9 @@
 <ol>
 <li>angular-treeview: the treeview directive. </li><li>tree-id : each tree&rsquo;s unique id. </li><li>tree-model : the tree model on $scope. </li><li>node-id : each node&rsquo;s id. </li><li>node-label : each node&rsquo;s label. </li><li>node-children: each node&rsquo;s children. </li></ol>
 <p>Let&rsquo;s get started with visual studio, create a new MVC project to experiment.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/06/Spa_1.png"><img class="alignnone size-full x_x_wp-image-2998" src="-spa_1.png" alt="Spa_1" width="635" height="99"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/06/Spa_1.png"><img class="alignnone size-full x_x_wp-image-2998" src="http://shashangka.com/wp-content/uploads/2016/06/Spa_1.png" alt="Spa_1" width="635" height="99"></a></p>
 <p>Install AngularJS and reference them to Layout page.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/06/tr_2.png"><img class="alignnone size-full x_x_wp-image-3021" src="-tr_2.png" alt="tr_2" width="791" height="173"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/06/tr_2.png"><img class="alignnone size-full x_x_wp-image-3021" src="http://shashangka.com/wp-content/uploads/2016/06/tr_2.png" alt="tr_2" width="791" height="173"></a></p>
 <p>Let&rsquo;s create a method to get all data from server with api.</p>
 <div class="crayon-syntax x_x_crayon-theme-classic x_x_crayon-font-monaco x_x_crayon-os-pc x_x_print-yes x_x_notranslate" id="crayon-577a8faac3356401006725">
 <div class="crayon-main">
@@ -212,7 +212,7 @@
 </table>
 </div>
 </div>
-<p>Check the JSON result<a href="http://shashangka.com/wp-content/uploads/2016/06/tr_3.png"><img class="alignnone wp-image-3022 x_x_size-full" src="-tr_3.png" alt="tr_3" width="1343" height="63"></a></p>
+<p>Check the JSON result<a href="http://shashangka.com/wp-content/uploads/2016/06/tr_3.png"><img class="alignnone wp-image-3022 x_x_size-full" src="http://shashangka.com/wp-content/uploads/2016/06/tr_3.png" alt="tr_3" width="1343" height="63"></a></p>
 <p>Here you can see our server is responding with data. Now let&rsquo;s bind this data to our UI to represent the tree.</p>
 <p><strong>Angular Controller:</strong></p>
 <div class="crayon-syntax x_x_crayon-theme-classic x_x_crayon-font-monaco x_x_crayon-os-pc x_x_print-yes x_x_notranslate" id="crayon-577a8faac336d826975159">
@@ -378,4 +378,4 @@
 </table>
 </div>
 </div>
-<p><strong>Out Put:</strong><a href="http://shashangka.com/wp-content/uploads/2016/06/tr_4.png"><img class="alignnone size-full x_x_wp-image-3025" src="-tr_4.png" alt="tr_4" width="669" height="351"></a></p>
+<p><strong>Out Put:</strong><a href="http://shashangka.com/wp-content/uploads/2016/06/tr_4.png"><img class="alignnone size-full x_x_wp-image-3025" src="http://shashangka.com/wp-content/uploads/2016/06/tr_4.png" alt="tr_4" width="669" height="351"></a></p>

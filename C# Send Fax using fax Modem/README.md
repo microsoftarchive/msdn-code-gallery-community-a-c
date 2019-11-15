@@ -183,31 +183,31 @@
 <h1><span>&nbsp;</span></h1>
 <p><span>You need to ensure&nbsp;4 tings on your PC.</span></p>
 <p><span>1. A Faxmodem with line. to check the modem status you can follow</span></p>
-<p><span><img id="166405" src="166405-3.png" alt="" width="681" height="508"></span></p>
+<p><span><img id="166405" src="https://i1.code.msdn.s-msft.com/c-send-fax-using-fax-modem-357aca81/image/file/166405/1/3.png" alt="" width="681" height="508"></span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><span>2. Phone and Modem area code<img id="166406" src="166406-4.png" alt="" width="809" height="522"></span></p>
+<p><span>2. Phone and Modem area code<img id="166406" src="https://i1.code.msdn.s-msft.com/c-send-fax-using-fax-modem-357aca81/image/file/166406/1/4.png" alt="" width="809" height="522"></span></p>
 <p><strong>&nbsp;</strong><em>&nbsp;</em></p>
 <p>&nbsp;</p>
 <p><span>3. Windows fax and scan service on.</span></p>
 <p>&nbsp;</p>
-<p><span><img id="166408" src="166408-5.png" alt="" width="418" height="407"><br>
+<p><span><img id="166408" src="https://i1.code.msdn.s-msft.com/c-send-fax-using-fax-modem-357aca81/image/file/166408/1/5.png" alt="" width="418" height="407"><br>
 </span></p>
 <p><strong>&nbsp;</strong><em>&nbsp;</em></p>
 <p>&nbsp;</p>
 <p><span>4. Free&nbsp;adobe reader <a href="https://get.adobe.com/reader/"><span>https://get.adobe.com/reader/</span></a></span></p>
 <p>&nbsp;</p>
 <p><strong>After completing these 4 steps if you run the application you will see modem information</strong></p>
-<p><strong>&nbsp;<img id="166430" src="166430-f1.png" alt="" width="812" height="467"></strong><em>
+<p><strong>&nbsp;<img id="166430" src="https://i1.code.msdn.s-msft.com/c-send-fax-using-fax-modem-357aca81/image/file/166430/1/f1.png" alt="" width="812" height="467"></strong><em>
 </em></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>After giving the fax information when you will click send fax button it will dial the fax number, sending fax and complete the send fax.</p>
-<p><img id="166431" src="166431-f2.png" alt="" width="1294" height="765"></p>
+<p><img id="166431" src="https://i1.code.msdn.s-msft.com/c-send-fax-using-fax-modem-357aca81/image/file/166431/1/f2.png" alt="" width="1294" height="765"></p>
 <p>&nbsp;</p>
-<p><img id="166432" src="166432-f3.png" alt="" width="1245" height="835"></p>
+<p><img id="166432" src="https://i1.code.msdn.s-msft.com/c-send-fax-using-fax-modem-357aca81/image/file/166432/1/f3.png" alt="" width="1245" height="835"></p>
 <p>&nbsp;</p>
-<p><img id="166433" src="166433-f4.png" alt=""></p>
+<p><img id="166433" src="https://i1.code.msdn.s-msft.com/c-send-fax-using-fax-modem-357aca81/image/file/166433/1/f4.png" alt=""></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

@@ -26,7 +26,7 @@
 <ol>
 <li>Let&rsquo;s begin converting numeric value into words. Before writing code, let's analyze how can we convert numeric values to words. For this, let&rsquo;s take a 4 digit number (4568).<br>
 <br>
-<img src="-image011.jpg" alt=""><br>
+<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/convert-numeric-value-into-words-currency-in-c-sharp/Images/image011.jpg" alt=""><br>
 <br>
 Now, we can start with ones. First, I am going to write a function for ones. This function should accept the numeric string and should return a converted word function, as shown below.
 <div class="scriptcode">
@@ -389,10 +389,10 @@ In this function, I am checking a negative symbol and if the number contains a n
 Here, I am giving Indian currency format like if the number contains a decimal, then I am attaching &ldquo;Paisa&rdquo; to word string, which can be changed based on your country.</p>
 <p><strong>Examples<br>
 <br>
-<img src="-image001.png" alt="" style="font-weight:normal"><br>
+<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/convert-numeric-value-into-words-currency-in-c-sharp/Images/image001.png" alt="" style="font-weight:normal"><br>
 <br>
-<img src="-image002.jpg" alt="" style="font-weight:normal"><br>
+<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/convert-numeric-value-into-words-currency-in-c-sharp/Images/image002.jpg" alt="" style="font-weight:normal"><br>
 <br>
-<img src="-image003.jpg" alt="" style="font-weight:normal"><br>
+<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/convert-numeric-value-into-words-currency-in-c-sharp/Images/image003.jpg" alt="" style="font-weight:normal"><br>
 <br>
-<img src="-image004.jpg" alt="" style="font-weight:normal"></strong></p>
+<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/convert-numeric-value-into-words-currency-in-c-sharp/Images/image004.jpg" alt="" style="font-weight:normal"></strong></p>

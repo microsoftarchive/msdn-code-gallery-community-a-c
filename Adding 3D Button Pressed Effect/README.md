@@ -21,7 +21,7 @@
 <h1>Introduction</h1>
 <p>This sample is in response to a <a href="http://social.msdn.microsoft.com/Forums/en/wpf/thread/04dce23e-37a2-4ff0-bdc6-5c61020d15e8">
 request for the best way to encapsulate a &quot;3d pressed&quot; effect</a> for a button on the WPF forums.</p>
-<p><img id="65677" src="65677-toggleshadow.png" alt="" width="396" height="199" style="margin-right:auto; margin-left:auto; display:block">&nbsp;</p>
+<p><img id="65677" src="http://i1.code.msdn.s-msft.com/adding-3d-button-pressed-7f16ab26/image/file/65677/1/toggleshadow.png" alt="" width="396" height="199" style="margin-right:auto; margin-left:auto; display:block">&nbsp;</p>
 <p>&nbsp;</p>
 <h1><span>Building the Sample</span></h1>
 <p>Just download, unzip, open and run!</p>
@@ -120,4 +120,4 @@ forum question</a> where the poster wanted to encapsulate the &quot;3D pressed&q
 <div class="endscriptcode">Blend will automatically create the animation and record your changes like shadow depth and TranslateTransform.</div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

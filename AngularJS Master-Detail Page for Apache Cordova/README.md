@@ -83,8 +83,8 @@ The first time you build the app in VS, a PowerShell script referenced in the .j
 </strong>(<a href="http://msdn.microsoft.com/library/dn771545.aspx">http://msdn.microsoft.com/library/dn771545.aspx</a>).
 </li></ol>
 <p>The following screenshot shows the sample app running in the Ripple Emulator (Nexus [Galaxy]), in landscape orientation.</p>
-<p><img id="126309" src="126309-angularjs-master-detail-android.png" alt="" width="612" height="323"></p>
+<p><img id="126309" src="http://i1.code.msdn.s-msft.com/windowsapps/angularjs-detail-sample-7a409e5e/image/file/126309/1/angularjs-master-detail-android.png" alt="" width="612" height="323"></p>
 <p>&nbsp;</p>
 <p>The next screenshot shows the sample app running in portrait mode (Nexus [Galaxy]).</p>
 <p>&nbsp;</p>
-<p><img id="126310" src="126310-angularjs-master-detail-android-landscape.png" alt="" width="319" height="613"></p>
+<p><img id="126310" src="http://i1.code.msdn.s-msft.com/windowsapps/angularjs-detail-sample-7a409e5e/image/file/126310/1/angularjs-master-detail-android-landscape.png" alt="" width="319" height="613"></p>

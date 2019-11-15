@@ -33,7 +33,7 @@ Before proceeding&nbsp;with the samples,&nbsp;<strong>You have to upload the Jav
 <li>Create a&nbsp;<strong>Custom&nbsp;</strong>list </li><li>Add <strong>Link </strong>column to the list </li><li>Create new view that contains the&nbsp;<strong><strong>Link&nbsp;</strong></strong>field
 </li><li>Edit the&nbsp;<strong>List View</strong>&nbsp;page&nbsp; </li><li>Go to List view&nbsp;<strong>web-part properties&nbsp;</strong>and add the JSLink file (~sitecollection/Style Library/JSLink-Samples/HideEmptyColumn.js) to&nbsp;<strong>JS link property</strong>&nbsp;under the&nbsp;<strong>Miscellaneous&nbsp;</strong>Tab.
  &nbsp;
-<p><img id="125690" src="125690-hide%20empty%20column.png" alt="" width="234" height="434" style="border:1px solid black"></p>
+<p><img id="125690" src="http://i1.code.msdn.s-msft.com/office/client-side-rendering-code-2625e5e3/image/file/125690/1/hide%20empty%20column.png" alt="" width="234" height="434" style="border:1px solid black"></p>
 </li><li>Click&nbsp;<strong>Apply&nbsp;</strong>button then&nbsp;<strong>Stop&nbsp;</strong>page editing.
 </li></ol>
 <p>&nbsp;</p>

@@ -50,7 +50,7 @@
 </span><br>
 <span style="font-size:16px"><em>Right click -&gt; Add -&gt; New Item.. -&gt; Click &quot;Code&quot; inside the Installed Category -&gt; Select json file.&nbsp;<br>
 </em></span><br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/1033.ConfigPage.jpg"><img src=":-1033.configpage.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/1033.ConfigPage.jpg"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/1033.ConfigPage.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
 <span style="font-size:10px">Picture Source By :&nbsp;https://rajeeshmenoth.wordpress.com/<br>
 </span></div>
 <h1>appsettings.json</h1>
@@ -187,7 +187,7 @@ Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory logge
 <div><br>
 We have added all packages and libraries but we are getting the &quot;File Not Found&quot; Exception. This is not a big deal! We can resolve this Internal Server Error in two ways.<br>
 <br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/6763.Possible_2D00_Error.png"><img src=":-6763.possible_2d00_error.png" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/6763.Possible_2D00_Error.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/6763.Possible_2D00_Error.png" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 <h2>Fixing Error 1 :</h2>
 <br>
@@ -356,7 +356,7 @@ ConfigurationBuilder()&nbsp; </code></span></div>
 </div>
 <h1>Output</h1>
 <div><br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/2656.DotnetCore_2D00_Output.jpg"><img src=":-2656.dotnetcore_2d00_output.jpg" alt="" style="border-width:0px; border-style:solid"></a></div>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/2656.DotnetCore_2D00_Output.jpg"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/2656.DotnetCore_2D00_Output.jpg" alt="" style="border-width:0px; border-style:solid"></a></div>
 <h1>Conclusion</h1>
 <div><span style="font-size:16px"><br>
 We learned about adding a configuration source in ASP.NET Core 1.0 and I hope you liked this article. Please share your valuable suggestions and feedback.<br>

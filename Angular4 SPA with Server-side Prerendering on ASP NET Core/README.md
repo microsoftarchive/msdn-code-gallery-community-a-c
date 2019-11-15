@@ -55,23 +55,23 @@
 <p><img id="173507" src="173507-1_pm_2.jpg" alt="" width="616" height="390">&nbsp;</p>
 <h1><object width="350" height="300" data="data:application/x-silverlight-2," type="application/x-silverlight-2"> <param name="source" value="/Content/Common/videoplayer.xap" /> <param name="initParams" value="deferredLoad=false,duration=0,m=https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/173510/1/skishopangular2_2.wmv,autostart=false,autohide=true,showembed=true"
  /> <param name="background" value="#00FFFFFF" /> <param name="minRuntimeVersion" value="3.0.40624.0" /> <param name="enableHtmlAccess" value="true" /> <param name="src" value="https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/173510/1/skishopangular2_2.wmv"
- /> <param name="id" value="173510" /> <param name="name" value="SkiShopAngular2_2.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="-?linkid=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
+ /> <param name="id" value="173510" /> <param name="name" value="SkiShopAngular2_2.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
  </object> <br>
 <a id="https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/173510/1/skishopangular2_2.wmv" href="https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/173510/1/skishopangular2_2.wmv">Download video</a></h1>
 <p>Or go to</p>
 <p><a href="https://www.youtube.com/watch?v=hfR-ymvgVvY" target="_blank">https://www.youtube.com/watch?v=hfR-ymvgVvY</a></p>
 <p>&nbsp;</p>
-<p><img id="173511" src="173511-1.gif" alt="" width="605" height="378"></p>
+<p><img id="173511" src="https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/173511/1/1.gif" alt="" width="605" height="378"></p>
 <p>&nbsp;</p>
-<p><img id="173512" src="173512-2.gif" alt=""></p>
+<p><img id="173512" src="https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/173512/1/2.gif" alt=""></p>
 <p>&nbsp;</p>
-<p><img id="173513" src="173513-3.gif" alt="" width="605" height="378"></p>
+<p><img id="173513" src="https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/173513/1/3.gif" alt="" width="605" height="378"></p>
 <p>&nbsp;</p>
-<p><img id="173514" src="173514-4.gif" alt="" width="605" height="378"></p>
+<p><img id="173514" src="https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/173514/1/4.gif" alt="" width="605" height="378"></p>
 <p>&nbsp;</p>
-<p><img id="173515" src="173515-5.gif" alt="" width="605" height="378"></p>
+<p><img id="173515" src="https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/173515/1/5.gif" alt="" width="605" height="378"></p>
 <p>&nbsp;</p>
-<p><img id="174577" src="174577-homepage_2.jpg" alt="" width="632" height="399"></p>
+<p><img id="174577" src="https://i1.code.msdn.s-msft.com/angular4-spa-with-server-4964df03/image/file/174577/1/homepage_2.jpg" alt="" width="632" height="399"></p>
 <h1>Sample Codes</h1>
 <p>clearance.attrdirective.ts</p>
 <p>&nbsp;</p>

@@ -38,7 +38,7 @@ Before proceeding&nbsp;with the samples,&nbsp;<strong>You have to upload the Jav
 </li><li>Edit the New and Endit <strong>List Forms and views&nbsp;</strong>pages&nbsp;
 </li><li>Go to List view&nbsp;<strong>web-part properties&nbsp;</strong>and add the JSLink file (~sitecollection/Style Library/JSLink-Samples/HideEmptyColumn.js) to&nbsp;<strong>JS link property</strong>&nbsp;under the&nbsp;<strong>Miscellaneous&nbsp;</strong>Tab.
  &nbsp;
-<p><img id="125703" src="125703-sharepoint%20form%20-%20inner%20repeater%20jslink.png" alt="" width="290" height="547" style="border:1px solid black"></p>
+<p><img id="125703" src="http://i1.code.msdn.s-msft.com/office/client-side-rendering-code-56649801/image/file/125703/1/sharepoint%20form%20-%20inner%20repeater%20jslink.png" alt="" width="290" height="547" style="border:1px solid black"></p>
 </li><li>Click&nbsp;<strong>Apply&nbsp;</strong>button then&nbsp;<strong>Stop&nbsp;</strong>page editing.
 </li></ol>
 <p>&nbsp;</p>

@@ -525,7 +525,7 @@ namespace&nbsp;ASPNETCOREWEBAPI.Controllers&nbsp;&nbsp;&nbsp;
 <div class="main responsive_marginTop" style="outline:0px; width:1024px; float:left; margin-top:15px; min-height:430px; z-index:0; height:auto!important">
 <div class="leftCntr" style="outline:0px; width:676px; float:left">
 <div class="PaddingLeft5" id="div2" style="outline:0px; color:#333333; float:left; width:676px; line-height:21px">
-<div style="outline:0px">&nbsp;<img src="-5.png" alt="" width="560" height="377" style="outline:0px; max-width:100%"></div>
+<div style="outline:0px">&nbsp;<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/asp-net-core-web-api-and-repository-class/Images/5.PNG" alt="" width="560" height="377" style="outline:0px; max-width:100%"></div>
 <div style="outline:0px">&nbsp;Give your controller name as &ldquo;StudentController.cs&rdquo;
 <p style="outline:0px"><span style="outline:0px">By default, our Controller class will be like this</span>&nbsp;</p>
 </div>
@@ -981,11 +981,11 @@ namespace&nbsp;ASPNETCOREWEBAPI.Controllers&nbsp;&nbsp;&nbsp;
 <p style="outline:0px"><span style="outline:0px; font-size:9.5pt; font-family:Consolas">When we run the application by default we can see the values controller result as values</span></p>
 <p style="outline:0px"><span style="outline:0px; font-size:9.5pt; font-family:Consolas">http://localhost:64764/api/values</span></p>
 </div>
-<div style="outline:0px">&nbsp;<img src="-7_1.png" alt="" style="outline:0px; max-width:100%"></div>
+<div style="outline:0px">&nbsp;<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/asp-net-core-web-api-and-repository-class/Images/7_1.PNG" alt="" style="outline:0px; max-width:100%"></div>
 <div style="outline:0px">&nbsp;<span style="outline:0px; font-family:Consolas; font-size:9.5pt">Change the Values with our newly created controller name as student &ldquo;</span><a href="http://localhost:64764/api/student" target="_blank" style="outline:0px; text-decoration:none; font-family:Consolas; font-size:9.5pt">http://localhost:64764/api/student</a><span style="outline:0px; font-family:Consolas; font-size:9.5pt">&nbsp;&ldquo;.</span>
 <p style="outline:0px"><span style="outline:0px; font-size:9.5pt; font-family:Consolas">Here now we can see all our added student information has been displayed as JSON result.</span></p>
 </div>
-<div style="outline:0px">&nbsp;<img src="-7.png" alt="" width="560" height="124" style="outline:0px; max-width:100%"></div>
+<div style="outline:0px">&nbsp;<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/asp-net-core-web-api-and-repository-class/Images/7.PNG" alt="" width="560" height="124" style="outline:0px; max-width:100%"></div>
 <div style="outline:0px">&nbsp;</div>
 <div style="outline:0px">&nbsp;<strong style="outline:0px">Conclusion:</strong></div>
 <div style="outline:0px">This will be series of article in this first series we have seen in details about our first ASP.NET Core, WEB API and Repository Class for Get method. In next series, we will see how to bind this result in our MVC View.</div>
@@ -1008,9 +1008,9 @@ namespace&nbsp;ASPNETCOREWEBAPI.Controllers&nbsp;&nbsp;&nbsp;
 <div class="clear" style="outline:0px; clear:both"></div>
 <div id="AboutAuthorBox" style="outline:0px">
 <div class="auther_bio" style="outline:0px; border-top:1px dashed #dee2e7; overflow:hidden; padding:18px 0px; width:676px">
-<a id="ctl00_AuthorImageAnchor" class="image" href="http://www.c-sharpcorner.com/members/syed-shanu" style="outline:0px; text-decoration:none; display:block; float:left; margin-right:20px; overflow:hidden"><img id="ctl00_AuthorImage" src="-asmabegam20160707040512.jpg.ashx?width=100&height=100" alt="Syed Shanu" style="outline:0px; height:100px; width:100px"></a>
+<a id="ctl00_AuthorImageAnchor" class="image" href="http://www.c-sharpcorner.com/members/syed-shanu" style="outline:0px; text-decoration:none; display:block; float:left; margin-right:20px; overflow:hidden"><img id="ctl00_AuthorImage" src="http://www.c-sharpcorner.com/UploadFile/AuthorImage/asmabegam20160707040512.jpg.ashx?width=100&height=100" alt="Syed Shanu" style="outline:0px; height:100px; width:100px"></a>
 <div class="autherDetail" style="outline:0px; overflow:hidden"><a id="ctl00_AuthorName" class="userName" href="http://www.c-sharpcorner.com/members/syed-shanu" style="outline:0px; text-decoration:none; color:#ff6600; font-family:BebasNeueRegular; font-size:26px; padding:0px; margin-right:4px">Syed
- Shanu</a>&nbsp;<img id="TopAuthorImage" class="top-author" title="Top 100" src="-top_100.png" alt="" style="outline:0px; display:inline-block; vertical-align:bottom">
+ Shanu</a>&nbsp;<img id="TopAuthorImage" class="top-author" title="Top 100" src="http://www.c-sharpcorner.com/images/top_100.png" alt="" style="outline:0px; display:inline-block; vertical-align:bottom">
 <p id="ctl00_Description" class="description" style="outline:0px; color:#525252; font-size:14px; line-height:22px; margin:6px 0px 10px">
 Microsoft MVP | CSharp Corner MVP | Code Project MVP | Author | Blogger and always happy to Share what he knows to others.For any queries you can contact him to his facebook id.</p>
 <div class="description" id="ctl00_PersonalBlogContainer" style="outline:0px; color:#525252; font-size:14px; line-height:22px; margin:6px 0px 10px">

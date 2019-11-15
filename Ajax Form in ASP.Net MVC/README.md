@@ -33,9 +33,9 @@
 </li><li><span style="font-size:small">Build the solution, which automatically installs the missing NuGet packages.</span>
 </li><li><span style="font-size:small">Run the application.</span> </li><li><span style="font-size:small">Click on &ldquo;Add User&rdquo; button and fill up requested data in form and click on submit button which shows on listing page.</span>
 </li></ol>
-<p><img id="157094" src="157094-1.png" alt="" width="594" height="290"></p>
+<p><img id="157094" src="https://i1.code.msdn.s-msft.com/ajax-form-in-aspnet-mvc-fddd0818/image/file/157094/1/1.png" alt="" width="594" height="290"></p>
 <p><span style="font-size:small">Figure 1:&nbsp;Add User UI Form</span></p>
-<p><span style="font-size:small"><img id="157095" src="157095-2.png" alt="" width="601" height="212"></span></p>
+<p><span style="font-size:small"><img id="157095" src="https://i1.code.msdn.s-msft.com/ajax-form-in-aspnet-mvc-fddd0818/image/file/157095/1/2.png" alt="" width="601" height="212"></span></p>
 <p><span style="font-size:small">Figure 2:&nbsp;Landing Page Screen</span></p>
 <h1>Source Code Overview</h1>
 <p><span style="font-size:small">Most of folders and files are used as per ASP.NET MVC conventions.</span></p>

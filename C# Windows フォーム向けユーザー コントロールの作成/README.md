@@ -70,9 +70,9 @@ DefaultValueAttribute</a> を設定し、既定値を設定することが可能
 </li><li>
 <p>次にこのコントロールをホストする Windows フォーム アプリケーションプロジェクトを &quot;CodeRecipe_UserControl_CS&quot; と名前を付けて作成します。なお、Windows フォーム アプリケーションの作成方法については
 <a href="http://code.msdn.microsoft.com/C-Windows-dc42087f">[C#] Windows フォームによるクライアント アプリケーション開発</a>を参照してください。</p>
-<p><img src="18614-image004.jpg" alt="図 4" width="570" height="347"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/windowsform-howto-673d73e2/image/file/18614/1/image004.jpg" alt="図 4" width="570" height="347"></p>
 </li><li>Form1 のデザイナー画面を開き、Label, DateTimePicker, そして先ほど作成した UserControl1 コントロールを追加します。
-<p><img src="18615-image005.jpg" alt="図 5" width="570" height="338"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/windowsform-howto-673d73e2/image/file/18615/1/image005.jpg" alt="図 5" width="570" height="338"></p>
 </li><li>
 <p>Form1 の [設定] ボタンのクリック ハンドラーでは UserControl1.BirthDate プロパティに値を設定します。</p>
 <div class="scriptcode">
@@ -105,8 +105,8 @@ DefaultValueAttribute</a> を設定し、既定値を設定することが可能
 <table>
 <tbody>
 <tr>
-<td><a href="http://msdn.microsoft.com/ja-jp/samplecode.recipe"><img src="-ff950935.coderecipe_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
-<td><a href="http://msdn.microsoft.com/ja-jp/windows/" target="_blank"><img src="-ff950935.windows_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Windows デベロッパー センター" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/samplecode.recipe"><img src="http://i.msdn.microsoft.com/ff950935.coderecipe_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/windows/" target="_blank"><img src="http://i.msdn.microsoft.com/ff950935.windows_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Windows デベロッパー センター" width="180" height="70" style="margin-top:3px"></a></td>
 <td>
 <ul>
 <li>もっと他のコンテンツを見る &gt;&gt; <a href="http://msdn.microsoft.com/ja-jp/ff363212" target="_blank">
@@ -117,4 +117,4 @@ Windows デベロッパー センターへ</a> </li></ul>
 </tr>
 </tbody>
 </table>
-<p style="margin-top:20px"><a href="#top"><img src="-top.gif" border="0" alt="">ページのトップへ</a></p>
+<p style="margin-top:20px"><a href="#top"><img src="http://www.microsoft.com/japan/msdn/nodehomes/graphics/top.gif" border="0" alt="">ページのトップへ</a></p>

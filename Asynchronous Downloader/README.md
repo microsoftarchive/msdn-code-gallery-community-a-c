@@ -20,7 +20,7 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;<span style="font-size:medium"><strong>Asynchronous Downloader:</strong></span></p>
-<p><img id="107856" src="107856-async2.gif" alt="" width="999" height="273"></p>
+<p><img id="107856" src="http://i1.code.msdn.s-msft.com/asynchronous-downloader-61955c78/image/file/107856/1/async2.gif" alt="" width="999" height="273"></p>
 <div class="scriptcode">
 <p><strong style="font-size:10px"><span style="font-size:small">Introduction:</span></strong></p>
 <p><span style="font-size:small">Asynchronous downloader is an application that can synchronous download multiple files showing all the download statistics.&nbsp;<span>This example shows how to&nbsp;</span><strong>download files</strong><span>&nbsp;from web&nbsp;</span><strong>to

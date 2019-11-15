@@ -26,8 +26,8 @@ YOUR_BING_MAPS_KEY</strong>. If you don't have a Bing Maps key, you can get one 
 https://azure.microsoft.com/en-us/marketplace/partners/bingmaps/mapapis/</a></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p>Here is a couple of screenshots of this application with routes between locations in different countries:</p>
-<p><img alt="" id="146042" src="146042-london_paris.png" width="889" height="672" style="width:612px; height:691px"></p>
-<p><img alt="" id="146043" src="146043-amsterdam_rome.png" width="984" height="742" style="width:658px; height:442px"></p>
+<p><img alt="" id="146042" src="https://i1.code.msdn.s-msft.com/calculate-route-distances-331716cf/image/file/146042/1/london_paris.png" width="889" height="672" style="width:612px; height:691px"></p>
+<p><img alt="" id="146043" src="https://i1.code.msdn.s-msft.com/calculate-route-distances-331716cf/image/file/146043/1/amsterdam_rome.png" width="984" height="742" style="width:658px; height:442px"></p>
 <p>One thing I noticed that makes sense when you think about it. There are situations where if you sum up all the distances for each country, they will be less than the total distance. This happens when countries have a gap between them (i.e. UK and France
  where the gap is the English channel). In these cases the gaps have no country boundaries and thus don&rsquo;t get calculated. There are a couple of ways to handle this. The first is to leave things as they are, the second is to sum up the distances inside
  of countries and then subtract this from the total to calculate this distance. Another option is to determine where these gaps are then split the distance and add it to the distances for the adjacent countries.</p>

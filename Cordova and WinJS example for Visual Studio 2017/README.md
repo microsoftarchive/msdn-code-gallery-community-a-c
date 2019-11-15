@@ -41,7 +41,7 @@ It can be useful in the first app experiment with Apache <strong></strong><em></
 <li><span>Download the .zip sample and extract it.</span> </li><li><span>In Visual Studio 2017, open the .sln file in the extracted zip.</span> </li><li><span>Choose a deployment target as Android or Windows-x86 and press F5.</span>
 </li></ol>
 <p>Here is a screenshot of the app's home page&nbsp;running on a LG G5 device in emulator.</p>
-<p><img id="146860" alt="" src="146860-cordovawinjsexample.png" width="420" height="809"><br>
+<p><img id="146860" alt="" src="https://i1.code.msdn.s-msft.com/cordova-and-winjs-example-e3a9a4b0/image/file/146860/1/cordovawinjsexample.png" width="420" height="809"><br>
 <br>
 </p>
 <p><span class="hps">Notes</span><span>:<br>

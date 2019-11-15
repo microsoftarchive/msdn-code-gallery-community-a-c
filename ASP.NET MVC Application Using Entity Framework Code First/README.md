@@ -57,9 +57,9 @@ EF 5 MVC 4 VS 2012 tutorial series</a>.</p>
 <h1>Running the Sample</h1>
 <p>To run the sample, hit F5 or choose the Debug | Start Debugging menu command. You will see the home page which includes a menu bar. (In a narrow browser window you'll have to click the symbol at the top right of the page in order to see the menu.)</p>
 <p>From this page you can select any of the tabs to perform various actions such as display a list of students, add new students, display a list of instructors, and so forth.</p>
-<p><img src="109835-studentpagingsearch.png" id="109835" alt="" width="606" height="623"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/aspnet-mvc-application-b01a9fe8/image/file/109835/1/studentpagingsearch.png" id="109835" alt="" width="606" height="623"></p>
 <p>&nbsp;</p>
-<p><img src="109836-instructoreditwithcourses.png" id="109836" alt="" width="604" height="750"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/aspnet-mvc-application-b01a9fe8/image/file/109836/1/instructoreditwithcourses.png" id="109836" alt="" width="604" height="750"></p>
 <h1>Source Code Overview</h1>
 <p>The <em>ContosoUniversity</em> folder includes the following folders and files</p>
 <ul>

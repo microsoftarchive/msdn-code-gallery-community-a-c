@@ -22,6 +22,6 @@
 <p><span style="font-size:small">One last thing, the default value was set to Now which I saw as an issue if the DataGridView using these classes allows user's to add new rows. In this case you would see in the 'add row' today's date but by changing the default
  to DBNull.Value nothing appears in the last row.</span></p>
 <p><span style="font-size:small"><img id="104125" src="104125-screenshot.png" alt="" width="420" height="379"></span></p>
-<p><img id="104130" src="104130-screenshot2.png" alt="" width="420" height="379"><img id="104131" src="104131-screenshot3.png" alt="" width="704" height="534"></p>
+<p><img id="104130" src="http://i1.code.msdn.s-msft.com/custom-calendar-column-for-0c8c8c96/image/file/104130/1/screenshot2.png" alt="" width="420" height="379"><img id="104131" src="http://i1.code.msdn.s-msft.com/custom-calendar-column-for-0c8c8c96/image/file/104131/1/screenshot3.png" alt="" width="704" height="534"></p>
 <p><span style="font-size:small">See also <a href="http://code.msdn.microsoft.com/Show-and-edit-date-only-35444290">
 Show and edit date only and time only in a DataGridView</a>.</span></p>

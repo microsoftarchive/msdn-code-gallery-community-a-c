@@ -45,17 +45,17 @@
 <p>Create an empty solution as below. This will help us to add more Projects later.</p>
 <p>&nbsp;</p>
 <p><img alt=""></p>
-<p><img id="126691" src="126691-1.png" alt="" width="704" height="429"></p>
+<p><img id="126691" src="https://i1.code.msdn.s-msft.com/basic-introduction-to-data-244734a4/image/file/126691/1/1.png" alt="" width="704" height="429"></p>
 <p><strong>Step2</strong></p>
 <p>Next create a class library project to hold Employee class as below to the Solution .</p>
-<p><img id="126692" src="126692-2.png" alt=""></p>
+<p><img id="126692" src="https://i1.code.msdn.s-msft.com/basic-introduction-to-data-244734a4/image/file/126692/1/2.png" alt=""></p>
 <p><img alt=""></p>
 <p>&nbsp;</p>
 <p>Add a class named <strong>Employee.cs</strong> and add reference to <strong><em><a class="libraryLink" href="https://msdn.microsoft.com/en-US/library/System.ComponentModel.DataAnnotations.aspx" target="_blank" title="Auto generated link to System.ComponentModel.DataAnnotations">System.ComponentModel.DataAnnotations</a>
 </em></strong>assembly to utilize the Data Annotation feature as below.</p>
 <p>&nbsp;</p>
 <p><img alt=""></p>
-<p><img id="126693" src="126693-3.png" alt="" width="1344" height="603"></p>
+<p><img id="126693" src="https://i1.code.msdn.s-msft.com/basic-introduction-to-data-244734a4/image/file/126693/1/3.png" alt="" width="1344" height="603"></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p><strong>Step3</strong></p>
@@ -73,7 +73,7 @@
 </div>
 </div>
 <div class="endscriptcode">&nbsp;<img alt=""></div>
-<p><img id="126694" src="126694-4.png" alt="" width="880" height="393"></p>
+<p><img id="126694" src="https://i1.code.msdn.s-msft.com/basic-introduction-to-data-244734a4/image/file/126694/1/4.png" alt="" width="880" height="393"></p>
 <p>&nbsp;</p>
 <p><strong><em>&nbsp;</em></strong></p>
 <div class="endscriptcode"><strong><em><br>
@@ -119,7 +119,7 @@
 </div>
 <div class="endscriptcode"><img alt=""></div>
 <div class="endscriptcode"></div>
-<p><img id="126695" src="126695-5.png" alt="" width="981" height="537"></p>
+<p><img id="126695" src="https://i1.code.msdn.s-msft.com/basic-introduction-to-data-244734a4/image/file/126695/1/5.png" alt="" width="981" height="537"></p>
 <p><strong>Step5 </strong></p>
 <p><strong>Testing the Employee class Data Validation using a Console Application.</strong></p>
 <p>Create a new Console Application project and add reference to <strong><em>Employee</em></strong> class library and
@@ -127,7 +127,7 @@
 <p>Our Solution explorer looks as below.</p>
 <p>&nbsp;</p>
 <p><img alt=""></p>
-<p><img id="126696" src="126696-6.png" alt="" width="350" height="315"></p>
+<p><img id="126696" src="https://i1.code.msdn.s-msft.com/basic-introduction-to-data-244734a4/image/file/126696/1/6.png" alt="" width="350" height="315"></p>
 <p>&nbsp;</p>
 <p><strong>Step6</strong></p>
 <p>To allow the usage of types in <strong><em><a class="libraryLink" href="https://msdn.microsoft.com/en-US/library/System.ComponentModel.DataAnnotations.aspx" target="_blank" title="Auto generated link to System.ComponentModel.DataAnnotations">System.ComponentModel.DataAnnotations</a>
@@ -194,5 +194,5 @@
 <p>Now we can see the validation details as below in the Console Window displaying Validation errors based on the Data Annotation attributes added to Employee class.</p>
 <p><img alt=""></p>
 <p>&nbsp;</p>
-<p><img id="126697" src="126697-7.png" alt="" width="787" height="265"></p>
+<p><img id="126697" src="https://i1.code.msdn.s-msft.com/basic-introduction-to-data-244734a4/image/file/126697/1/7.png" alt="" width="787" height="265"></p>
 <p>Here the advantage of using Data Annotation attributes is that now if we want to reuse the Employee class in an ASP.Net MVC application or Windows Forms Application we can still use the same validation without writing any extra piece of Validation code.</p>

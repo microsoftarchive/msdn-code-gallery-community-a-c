@@ -32,7 +32,7 @@ If you are searching for a solution to convert PDF documents into Word-format in
 <p><em><br>
 Only the .Net platform and nothing else, 32 and 64-bit support, Medium Trust level, converting of all types of PDF documents, works under Windows, Mac, Linux and a lot of other nuances</em><em>.</em></p>
 <p><strong style="font-size:2em">Main Functions</strong></p>
-<p><strong><img id="147487" src="147487-pdf%20to%20word.png" alt=""><br>
+<p><strong><img id="147487" src="https://i1.code.msdn.s-msft.com/convert-pdf-file-to-word-80c4c480/image/file/147487/1/pdf%20to%20word.png" alt=""><br>
 </strong></p>
 <h1><span>How to do it:</span></h1>
 <p><em>So, here we'll show you in details how to convert a PDF document to Word-DOC in C#.</em></p>

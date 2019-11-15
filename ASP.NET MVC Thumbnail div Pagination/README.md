@@ -20,9 +20,9 @@ follow this</a> and try to make it for asp.net MVC.</p>
 <p><em>This will load all the &nbsp;Thumbnail &nbsp;item on load, But what i do during loading i create a batch for list. The batch value is parameterize. so that you can define how many details item you want to show on each tab.</em></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img id="178451" src="178451-s1.png" alt="" width="636" height="468"></p>
+<p><img id="178451" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-thumbnail-e9cf1a65/image/file/178451/1/s1.png" alt="" width="636" height="468"></p>
 <p>&nbsp;</p>
-<p><img id="178452" src="178452-d2.png" alt="" width="617" height="444"></p>
+<p><img id="178452" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-thumbnail-e9cf1a65/image/file/178452/1/d2.png" alt="" width="617" height="444"></p>
 <p><em><br>
 </em></p>
 <p>&nbsp;</p>

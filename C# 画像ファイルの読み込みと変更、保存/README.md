@@ -19,7 +19,7 @@
 Bitmap</a> クラスを利用することで画像ファイルの作成やロード、変更、保存を行うことができます。既存の画像ファイルを Bitmap クラスで読み取る場合にはコンストラクタにてファイル名を指定します。Bitmap クラスでサポートしている形式は、BMP、GIF、EXIF、JPG、PNG、TIFF などになります。</p>
 <p>なお、コンソールアプリケーションは初期状態でSystem.Drawing.dll アセンブリがプロジェクトで参照されていないため、[ソリューション エクスプローラ] から [参照の追加] を実行し、アセンブリを予めプロジェクトに追加しておく必要があります。</p>
 <p><img id="131382" src="131382-52_cs_01.png" alt="" width="382" height="277"></p>
-<p><img id="131384" src="131384-52_cs_02.png" alt="" width="700" height="305"></p>
+<p><img id="131384" src="https://i1.code.msdn.s-msft.com/vs2013tips-ad1bed31/image/file/131384/1/52_cs_02.png" alt="" width="700" height="305"></p>
 <p>Bitmap クラスでは読み込んだ画像オブジェクトに対し、<a href="http://msdn.microsoft.com/ja-jp/library/system.drawing.bitmap.setpixel.aspx" target="_blank">SetPixel</a> メソッドを使用することで画像オブジェクトの特定のピクセルを変更することができます。</p>
 <p>例として、&rdquo;C:\Images\sample.jpg&rdquo; という画像ファイルを読み込み、ピクセルを変更させた後、&rdquo;C:\Images\sampleNew.jpg&rdquo; と新しい画像ファイルを保存するコードは下記のようになります。</p>
 <p>&nbsp;</p>

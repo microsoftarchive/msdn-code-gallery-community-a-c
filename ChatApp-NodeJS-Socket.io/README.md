@@ -56,7 +56,7 @@
  It is much more easier than ever. Here we are also going to create a chat application. A basic knowledge of Node JS, MongoDB, JavaScript, JQuery is more than enough to create this project. So, please be with me. Let&rsquo;s just skip the talking and start
  developing.</p>
 <h3>At the end of this download, you can see a chat applciation as preceding</h3>
-<div class="wp-caption x_alignnone" id="attachment_12598"><a href="http://sibeeshpassion.com/wp-content/uploads/2017/12/Socket.io-Output-e1512388473997.png"><img class="size-full x_wp-image-12598" src="-socket.io-output-e1512388473997.png" alt="Socket.io Output" width="634" height="596"></a>
+<div class="wp-caption x_alignnone" id="attachment_12598"><a href="http://sibeeshpassion.com/wp-content/uploads/2017/12/Socket.io-Output-e1512388473997.png"><img class="size-full x_wp-image-12598" src="http://sibeeshpassion.com/wp-content/uploads/2017/12/Socket.io-Output-e1512388473997.png" alt="Socket.io Output" width="634" height="596"></a>
 <p class="wp-caption-text">Socket.io Output</p>
 </div>
 <p>Please make sure that you are getting the chats in the second instance when you send it from the first instance of the browser and vice versa.</p>

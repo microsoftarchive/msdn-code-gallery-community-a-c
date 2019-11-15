@@ -40,9 +40,9 @@
 <h1>Introduction</h1>
 <p><span style="font-size:small"><em>&nbsp; Have you ever wanted to change the colors of a ProgressBar to match your applications colors only to find that the only way is to turn off visual styles which makes all of your controls look bad. If so then try adding
  a ProgressBarEx to your app or to your Toolbox. Here is an image of the demo project form that shows some of the looks you can make using the ProgressBarEx control.</em></span></p>
-<p><span style="font-size:small"><em><img id="136605" src="136605-progressbarex%20demo%20form.png" alt="" width="460" height="301"></em></span></p>
+<p><span style="font-size:small"><em><img id="136605" src="https://i1.code.msdn.s-msft.com/custom-colored-progressbar-a68b61de/image/file/136605/1/progressbarex%20demo%20form.png" alt="" width="460" height="301"></em></span></p>
 <p>&nbsp;</p>
-<p><span style="font-size:small"><em><img id="136606" src="136606-progressbarex%20example.gif" alt="" width="208" height="35"></em></span></p>
+<p><span style="font-size:small"><em><img id="136606" src="https://i1.code.msdn.s-msft.com/custom-colored-progressbar-a68b61de/image/file/136606/1/progressbarex%20example.gif" alt="" width="208" height="35"></em></span></p>
 <h1><strong>Update<em>&nbsp;</em></strong></h1>
 <p><strong><span style="font-size:small">Updated on 4/18/15</span><em>&nbsp;</em></strong></p>
 <p><span style="font-size:small">Added 3 new properties (</span><span style="font-size:small">RoundedCorners, ProgressDirection, and GradientColor) to allow you to have squared or rounded corners, show progress horizontally or vertically, and to change the

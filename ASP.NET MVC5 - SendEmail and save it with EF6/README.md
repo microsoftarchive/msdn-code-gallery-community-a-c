@@ -28,7 +28,7 @@
 <p class="Instructions">Give a name to the project (in this case I call him MVC5)</p>
 <p class="Instructions">Select Template MVC</p>
 <p class="Instructions">&nbsp;</p>
-<p class="Instructions"><img id="144481" src="144481-1.png" alt="" width="600" height="400"></p>
+<p class="Instructions"><img id="144481" src="https://code.msdn.microsoft.com/site/view/file/144481/1/1.PNG" alt="" width="600" height="400"></p>
 <p class="Instructions">&nbsp;</p>
 <h1>STEP2 - &nbsp;Create class Email</h1>
 <p>Add new class to the project (this class represents a table, and the properties the colums of that table)</p>
@@ -74,12 +74,12 @@
 <h1>STEP3 - &nbsp;Create controller with views using Entity Framework</h1>
 <p>Add new Scaffolded to the project (new item existent on MVC5)</p>
 <p>&nbsp;</p>
-<p><img id="106308" src="106308-mvc53.jpg" alt="" width="519" height="247"></p>
+<p><img id="106308" src="https://code.msdn.microsoft.com/site/view/file/106308/1/MVC53.jpg" alt="" width="519" height="247"></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;Choose option MVC5 Controller with views using Entity Framework</p>
 <p>&nbsp;</p>
-<p><img id="144482" src="144482-2.png" alt="" width="600" height="400"></p>
+<p><img id="144482" src="https://code.msdn.microsoft.com/site/view/file/144482/1/2.PNG" alt="" width="600" height="400"></p>
 <p>Click Add</p>
 <p>If you receive an error, it may be because you did not build the project in the previous section. If so, try building the project, and then add the scaffolded item again.</p>
 <p>After the code generation process is complete, you will see a new controller and views in your project.</p>

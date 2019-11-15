@@ -18,7 +18,7 @@
 </li><li>Parse switches with options &quot;/Y-&quot; </li><li>Throw exceptions with unknown switches or invalid values </li></ul>
 <div>
 <h3 class="endscriptcode">Install From NuGet</h3>
-<h3 class="endscriptcode"><em>&nbsp;<img src="25293-cmdlineicon.png" alt="" width="99" height="85">&nbsp;</em></h3>
+<h3 class="endscriptcode"><em>&nbsp;<img src="http://i1.code.msdn.s-msft.com/command-line-parser-library-a8ba828a/image/file/25293/1/cmdlineicon.png" alt="" width="99" height="85">&nbsp;</em></h3>
 <p>The easiest way to add this to your project is with <a href="http://nuget.org">
 NuGet</a></p>
 <pre style="font-family:Consolas; font-size:12px; color:black; background:none repeat scroll 0% 0% white">PM&gt;&nbsp;install-package&nbsp;<a href="http://nuget.org/List/Packages/CmdLine">cmdline</a>
@@ -90,7 +90,7 @@ Then you parse the command line which will be interpreted based on the CommandLi
 </div>
 <div class="endscriptcode">&nbsp;</div>
 The help text will be correctly formatted for width allowing you to show the help text on the command line or in a mesage box.</div>
-<h1><span>&nbsp;<img src="41740-simplecopy.png" alt="" width="742" height="325"></span></h1>
+<h1><span>&nbsp;<img src="http://i1.code.msdn.s-msft.com/command-line-parser-library-a8ba828a/image/file/41740/1/simplecopy.png" alt="" width="742" height="325"></span></h1>
 <h3>Tokenize Mode</h3>
 <div>In Tokenize mode, the class simply Tokenizes the command line and allows you to do what you want with the token collection</div>
 <div>In this example, given the command</div>

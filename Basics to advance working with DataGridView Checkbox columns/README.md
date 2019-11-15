@@ -22,11 +22,11 @@
 <p><strong style="font-size:small"><span style="color:#ff0000">2/2014</span></strong><span style="font-size:small">, began including C# projects (at the current time only one) but more to follow.</span></p>
 <p><span style="font-size:small"><strong>8/2016</strong>, <a href="https://1drv.ms/u/s!AtGAgKKpqdWjh2bj5Jm5GP8KwXII">
 added a C# project</a> on Microsoft OneDrive that shows how to sum all checked rows via a decimal cell and handled null values.</span></p>
-<p><span style="font-size:small"><img id="157987" src="157987-52.jpg" alt="" width="376" height="269"><br>
+<p><span style="font-size:small"><img id="157987" src="https://i1.code.msdn.s-msft.com/bascis-to-advance-working-7b757af3/image/file/157987/1/52.jpg" alt="" width="376" height="269"><br>
 </span></p>
 <p><span style="font-size:small"><br>
 Screen shot of one of the project done in C and VB<br>
-<img id="109051" src="109051-vc.png" alt="" width="646" height="265"></span></p>
+<img id="109051" src="http://i1.code.msdn.s-msft.com/bascis-to-advance-working-7b757af3/image/file/109051/1/vc.png" alt="" width="646" height="265"></span></p>
 <p><span style="font-size:small">There are several reasons for using a checkbox in a DataGridView from marking a row of data to process (perhaps export data in a selective manner or delete rows) or to keep track of roles or rights i.e. is the user an administrator,
  do they have rights to do specific operations in your application etc.</span></p>
 <p><span style="font-size:small">Let me get something out of the way now rather than later, when you are not bound to a data source and are allowing users to add new rows we can get into trouble (code is from project NoDataSource in the attached solution) when
@@ -131,7 +131,7 @@ we obtain data from MS-Access and work with filtering data in a DataGridView in 
 </span></p>
 <p><span style="font-size:small"><strong>Project DualCheckBox_DataGridView</strong> and
 <strong>project TripleCheckBox_DataGridView</strong> show how to allow only one checked cell per row.</span></p>
-<p><span style="font-size:small"><img id="95501" src="95501-am_t.jpg" alt="" width="373" height="326"></span></p>
+<p><span style="font-size:small"><img id="95501" src="http://i1.code.msdn.s-msft.com/bascis-to-advance-working-7b757af3/image/file/95501/1/am_t.jpg" alt="" width="373" height="326"></span></p>
 <p><span style="font-size:small"><strong>Project DynamicUpdateCheckBoxColumn</strong> comes closer to working with the DataGridView cell data than other projects in the solution. Here I wanted to show mixing it up with CheckBox, text and dates with only two
  columns</span></p>
 <p><img id="95500" src="95500-am_2.jpg" alt="" width="470" height="408"></p>

@@ -46,7 +46,7 @@
 <p>&nbsp;<img id="68590" src="68590-mtas-subscribers-index-page.png" alt="" width="568" height="532"></p>
 <p><img id="68591" src="68591-mtas-message-index-page.png" alt="" width="597" height="560"></p>
 <p>The front-end also enables users to subscribe to lists and unsubscribe from lists by using web pages and a Web API service method.&nbsp; The back-end&nbsp;has two worker roles, one to schedule emails and one to send them.</p>
-<p><img id="72768" src="72768-mtas-worker-roles-a-and-b.png" alt="" width="590" height="543">&nbsp;</p>
+<p><img id="72768" src="http://i1.code.msdn.s-msft.com/windows-azure-multi-tier-eadceb36/image/file/72768/1/mtas-worker-roles-a-and-b.png" alt="" width="590" height="543">&nbsp;</p>
 <p>The application uses Windows Azure Storage tables to store email lists, subscribers, and messages to be sent to email lists.&nbsp; It uses queues to coordinate work between the two worker roles and between the web role and the worker role that sends emails.&nbsp;
  It enables administrators to upload the body of a message in HTML and plain text files, and it stores these files in blob storage.&nbsp;</p>
 <h1>More Information</h1>

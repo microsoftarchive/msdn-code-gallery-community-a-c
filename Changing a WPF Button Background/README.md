@@ -20,7 +20,7 @@
 <h1>Introduction</h1>
 <div>If you want to change the background of a button, you will notice that the standard button loses it's background colour when the button is focussed, or the mouse pointer is over or clicking the button.</div>
 <div></div>
-<div><img id="64806" src="64806-buttonbackground.png" alt="" width="544" height="369" style="margin-right:auto; margin-left:auto; display:block"></div>
+<div><img id="64806" src="http://i1.code.msdn.s-msft.com/changing-a-wpf-button-212386c6/image/file/64806/1/buttonbackground.png" alt="" width="544" height="369" style="margin-right:auto; margin-left:auto; display:block"></div>
 <div></div>
 <div>This is a question that keeps coming up on the MSDN forums.</div>
 <div>This sample shows the reasons for this, and how to overcome the problem.</div>

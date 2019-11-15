@@ -41,7 +41,7 @@
 <li><em>50%</em> </li><li>100% </li><li>150% </li><li>200% </li><li>250% </li><li>... </li><li>400% </li></ul>
 <p><span style="font-size:20px; font-weight:bold">Rotate And Flip Control</span></p>
 <p><em>You will learn how to Rotate And Flip The Picture</em></p>
-<p><em><img src="41815-flip%20horizontal.jpg" alt="" width="244" height="175"><img src="41816-flip%20vertical.jpg" alt="" width="240" height="175"></em></p>
+<p><em><img src="http://i1.code.msdn.s-msft.com/creating-your-own-windows-5b8c7fad/image/file/41815/1/flip%20horizontal.jpg" alt="" width="244" height="175"><img src="http://i1.code.msdn.s-msft.com/creating-your-own-windows-5b8c7fad/image/file/41816/1/flip%20vertical.jpg" alt="" width="240" height="175"></em></p>
 <ul>
 <li><em>Flip Horizontal<br>
 </em></li><li><em>Flip Vertical <br>
@@ -49,14 +49,14 @@
 </em></li></ul>
 <h1>Mask Or Unmask</h1>
 <p><em>You will learn how to Mask or Unmask a Picture.</em></p>
-<p><em><img src="41817-mask%20blue.jpg" alt="" width="210" height="150"><img src="41818-mask%20green.jpg" alt="" width="208" height="149"><img src="41819-mask%20red.jpg" alt="" width="208" height="149"></em></p>
+<p><em><img src="http://i1.code.msdn.s-msft.com/creating-your-own-windows-5b8c7fad/image/file/41817/1/mask%20blue.jpg" alt="" width="210" height="150"><img src="http://i1.code.msdn.s-msft.com/creating-your-own-windows-5b8c7fad/image/file/41818/1/mask%20green.jpg" alt="" width="208" height="149"><img src="http://i1.code.msdn.s-msft.com/creating-your-own-windows-5b8c7fad/image/file/41819/1/mask%20red.jpg" alt="" width="208" height="149"></em></p>
 <ul>
 <li><em>Blue Mask <br>
 </em></li><li><em>Green Mask <br>
 </em></li><li><em>Red Mask</em> </li></ul>
 <h1><span>Image Filters</span></h1>
 <p><em>You will learn about Image Filter For Your Photo Edit.</em></p>
-<p><em>&nbsp;</em><em><em>.<img src="41820-grayscale.jpg" alt="" width="337" height="242"></em></em></p>
+<p><em>&nbsp;</em><em><em>.<img src="http://i1.code.msdn.s-msft.com/creating-your-own-windows-5b8c7fad/image/file/41820/1/grayscale.jpg" alt="" width="337" height="242"></em></em></p>
 <ul>
 <li><em><em>Grayscale</em></em> </li><li><em>Invert</em> </li><li><em>Gamma</em> </li><li><em>Contrast</em> </li><li><em>Brightness</em> </li></ul>
 <p>&nbsp;</p>
@@ -65,7 +65,7 @@
 </span></p>
 <p>&nbsp;</p>
 <h1 style="text-align:center"><span>Free Wallpaper</span></h1>
-<p style="text-align:center"><span><img src="41821-free%20wallpapers.jpg" alt="" width="320" height="239"><br>
+<p style="text-align:center"><span><img src="http://i1.code.msdn.s-msft.com/creating-your-own-windows-5b8c7fad/image/file/41821/1/free%20wallpapers.jpg" alt="" width="320" height="239"><br>
 </span></p>
 <p><span><br>
 </span></p>

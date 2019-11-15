@@ -61,9 +61,9 @@ scan documents from TWAIN WIA scanners in JPEG or PDF formats for Windows Forms 
 <h1><span>Building the Sample</span></h1>
 <p>Download and unzip the sample project. Open it with Visual Studio 2013 or higher. Press F5 to run it.</p>
 <p>Alternatively, install from NuGet:</p>
-<p><img src="-nuget-blue.png" alt=""> <span class="code" style="font-size:medium">
+<p><img src="http://asprise.com/ocr/img/icon/nuget-blue.png" alt=""> <span class="code" style="font-size:medium">
 Install-Package asprise-scan-scanner-twain-wia-api</span></p>
-<p><img src="-demo-screen-dotnet.png" alt="" width="400"></p>
+<p><img src="http://asprise.com/scan2/img/demo-screen-dotnet.png" alt="" width="400"></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p>Suppose that we need to scan color US letter documents and save the result in JPEG files. The following code demonstrates how to use Asprise .NET Scanning API to achieve that:</p>
 <div class="scriptcode">
@@ -233,11 +233,11 @@ Console.WriteLine(<span class="cs__string">&quot;Documents&nbsp;scanned&nbsp;as&
 <div class="endscriptcode"></div>
 <h1>More Information</h1>
 <p style="font-size:15px; line-height:22px; margin-top:0px; color:#333333; font-family:proxima_nova_rgregular,&quot;Droid Sans&quot;,sans-serif; font-style:normal; font-weight:normal; letter-spacing:normal; orphans:2; text-align:start; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; background-color:#ffffff">
-<a href="http://asprise.com/c%23-vb.net-scanner-api/twain-wia-scan-pdf-library-overview.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="-icon-scan-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Learn
+<a href="http://asprise.com/c%23-vb.net-scanner-api/twain-wia-scan-pdf-library-overview.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="http://asprise.com/res/img/icon-scan-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Learn
  more about Asprise Scan C# VB.NET SDK for TWAIN WIA Scanners</a></p>
 <p style="font-size:15px; line-height:22px; margin-top:0px; color:#333333; font-family:proxima_nova_rgregular,&quot;Droid Sans&quot;,sans-serif; font-style:normal; font-weight:normal; letter-spacing:normal; orphans:2; text-align:start; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; background-color:#ffffff">
-<a href="http://asprise.com/c%23-vb.net-scanner-api/twain-wia-document-scan-library-sdk-samples-docs.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="-icon-book-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Access
+<a href="http://asprise.com/c%23-vb.net-scanner-api/twain-wia-document-scan-library-sdk-samples-docs.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="http://asprise.com/res/img/icon-book-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Access
  to Asprise Scan C# VB.NET Developer's Guide</a></p>
 <p style="font-size:15px; line-height:22px; color:#333333; font-family:proxima_nova_rgregular,&quot;Droid Sans&quot;,sans-serif; font-style:normal; font-weight:normal; letter-spacing:normal; orphans:2; text-align:start; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; background-color:#ffffff">
-<a href="http://asprise.com/scan2/docs/Help/index.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="-icon-code-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Browse API
+<a href="http://asprise.com/scan2/docs/Help/index.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="http://asprise.com/res/img/icon-code-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Browse API
  (MSDN style) online</a></p>

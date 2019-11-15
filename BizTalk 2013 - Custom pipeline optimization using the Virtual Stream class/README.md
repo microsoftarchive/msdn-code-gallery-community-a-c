@@ -18,7 +18,7 @@
 <h1>Introduction</h1>
 <p>Performance of pipelines in BizTalk can be enhanced by applying best practices listed in the
 <a href="http://msdn.microsoft.com/en-us/library/ee377071%28v=bts.70%29.aspx" target="_blank">
-Optimizing Pipeline Performance <img title="This link is external to TechNet Wiki. It will open in a new window." src="-10_5f00_external.png" border="0" alt="">
+Optimizing Pipeline Performance <img title="This link is external to TechNet Wiki. It will open in a new window." src="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-components-sitefiles/10_5F00_external.png" border="0" alt="">
 </a>article on MSDN. In case you are building a custom pipeline with custom pipeline component that this article is one you definelty need to read before you design, build and deploy your custom pipeline. When requirements drive you to build functionality for
  inbound messages in a custom pipeline you according to article leverage the <strong>
 VirtualStream</strong>, <strong>ReadOnlySeekableStream</strong>, and <strong>SeekAbleReadOnlyStream</strong> class found in the

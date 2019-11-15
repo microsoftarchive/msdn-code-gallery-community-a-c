@@ -18,7 +18,7 @@
 <p>Con l&rsquo;avvento del nuovo ASP.NET Identity, le Nostre applicazioni sono sempre pi&ugrave; legate all&rsquo;integrazione con i social network.</p>
 <p>A fronte di queste integrazioni, il nuovo membership fornito di default con ASP.NET MVC 4/5, &egrave; (volutamente) molto &ldquo;scarno&rdquo; e privo di molte funzionalit&agrave; utilizzate per la gestione custom degli account presenti sulla propria applicazione.</p>
 <p>Una delle funzionalit&agrave; &ldquo;mancanti&rdquo; &egrave; la possibilit&agrave; di inviare un&rsquo;Email di conferma a fronte della registrazione di un utente, per verificare che l&rsquo;indirizzo Email sia esistente.</p>
-<p><img id="110224" src="110224-aspnetmvc5register.jpg" alt="" width="493" height="398"></p>
+<p><img id="110224" src="http://i1.code.msdn.s-msft.com/aspnet-mvc-5-conferma-30d8b426/image/file/110224/1/aspnetmvc5register.jpg" alt="" width="493" height="398"></p>
 <ul>
 </ul>
 <h1>Description</h1>

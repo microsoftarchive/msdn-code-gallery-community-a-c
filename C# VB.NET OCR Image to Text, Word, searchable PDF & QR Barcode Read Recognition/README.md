@@ -99,7 +99,7 @@ C# VB.NET OCR and barcode recognition to&nbsp;convert images (in various formats
 <h1>Build the Sample</h1>
 <p>Download and unzip the sample project. Open it with Visual Studio 2013 or higher, Tools -&gt; NuGet Package Manager -&gt; Restore, then Press F5 to run it.</p>
 <p>Alternatively, install from NuGet directly:</p>
-<pre><img src="-nuget-blue.png" alt=""><strong><span class="code" style="font-size:medium">&nbsp;Install-Package asprise-ocr-api</span></strong></pre>
+<pre><img src="http://asprise.com/ocr/img/icon/nuget-blue.png" alt=""><strong><span class="code" style="font-size:medium">&nbsp;Install-Package asprise-ocr-api</span></strong></pre>
 <p><span>You can invoke the OCR demo Form by copying the following code to Program.cs (for C#):</span></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -123,7 +123,7 @@ C# VB.NET OCR and barcode recognition to&nbsp;convert images (in various formats
 <div class="endscriptcode"><img id="158460" src="158460-csharp-ui.png" alt="" height="300">&nbsp;</div>
 <div class="endscriptcode"><object width="180" height="100" data="data:application/x-silverlight-2," type="application/x-silverlight-2"> <param name="source" value="/Content/Common/videoplayer.xap" /> <param name="initParams" value="deferredLoad=false,duration=0,m=https://code.msdn.microsoft.com/site/view/file/158459/1/AspriseOcrDemo_WindowsMedia%20-%20HD%20720i_ConstrainedVBR.wmv,autostart=false,autohide=true,showembed=true"
  /> <param name="background" value="#00FFFFFF" /> <param name="minRuntimeVersion" value="3.0.40624.0" /> <param name="enableHtmlAccess" value="true" /> <param name="src" value="/site/view/file/158459/1/AspriseOcrDemo_WindowsMedia%20-%20HD%20720i_ConstrainedVBR.wmv"
- /> <param name="id" value="158459" /> <param name="name" value="AspriseOcrDemo_WindowsMedia - HD 720i_ConstrainedVBR.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="-?linkid=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
+ /> <param name="id" value="158459" /> <param name="name" value="AspriseOcrDemo_WindowsMedia - HD 720i_ConstrainedVBR.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
  </object> &nbsp;&nbsp;<a id="x_/site/view/file/158459/1/AspriseOcrDemo_WindowsMedia%20-%20HD%20720i_ConstrainedVBR.wmv" href="https://code.msdn.microsoft.com/site/view/file/158459/1/AspriseOcrDemo_WindowsMedia%20-%20HD%20720i_ConstrainedVBR.wmv">Download
  video</a>&nbsp;| <a href="https://www.youtube.com/watch?v=v17hhJHXNiA" target="_blank">
 View video on Youtube</a></div>
@@ -262,11 +262,11 @@ ocr.StopEngine();</pre>
 <div class="endscriptcode"></div>
 <h1>More Information</h1>
 <p style="font-size:15px; line-height:22px; margin-top:0px; color:#333333; font-family:proxima_nova_rgregular,&quot;Droid Sans&quot;,sans-serif; font-style:normal; font-weight:normal; letter-spacing:normal; orphans:2; text-align:start; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; background-color:#ffffff">
-<a href="http://asprise.com/royalty-free-library/c%23-sharp.net-ocr-api-overview.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="-icon-scan-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Learn
+<a href="http://asprise.com/royalty-free-library/c%23-sharp.net-ocr-api-overview.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="http://asprise.com/res/img/icon-scan-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Learn
  more about Asprise OCR and Barcode Recognition C# VB.NET API SDK</a></p>
 <p style="font-size:15px; line-height:22px; margin-top:0px; color:#333333; font-family:proxima_nova_rgregular,&quot;Droid Sans&quot;,sans-serif; font-style:normal; font-weight:normal; letter-spacing:normal; orphans:2; text-align:start; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; background-color:#ffffff">
-<a href="http://asprise.com/royalty-free-library/c%23-sharp.net-ocr-barcode-reader-sdk-samples-docs.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="-icon-book-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Access
+<a href="http://asprise.com/royalty-free-library/c%23-sharp.net-ocr-barcode-reader-sdk-samples-docs.html" target="_blank" style="text-decoration:none; color:#0066aa"><img src="http://asprise.com/res/img/icon-book-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Access
  to Asprise C# VB.NET OCR and Barcode Reading Developer's Guide</a></p>
 <p style="font-size:15px; line-height:22px; color:#333333; font-family:proxima_nova_rgregular,&quot;Droid Sans&quot;,sans-serif; font-style:normal; font-weight:normal; letter-spacing:normal; orphans:2; text-align:start; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; background-color:#ffffff">
-<a href="http://asprise.com/ocr/docs/Help/html/429a5bd5-3f62-f489-ede7-025e47709dab.htm" target="_blank" style="text-decoration:none; color:#0066aa"><img src="-icon-code-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Browse
+<a href="http://asprise.com/ocr/docs/Help/html/429a5bd5-3f62-f489-ede7-025e47709dab.htm" target="_blank" style="text-decoration:none; color:#0066aa"><img src="http://asprise.com/res/img/icon-code-32.png" alt="" width="28" align="middle" style="border:0px none; margin-right:8px">Browse
  API (MSDN style) online</a></p>

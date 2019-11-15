@@ -27,7 +27,7 @@
 - Update an Order<br>
 - Delete an order <br>
 <br>
-<img id="147209" src="147209-swagger.png" alt="" width="602" height="291"></em></p>
+<img id="147209" src="https://i1.code.msdn.s-msft.com/creating-a-real-life-crud-96cc034e/image/file/147209/1/swagger.png" alt="" width="602" height="291"></em></p>
 <h1><em>&nbsp;</em></h1>
 <h4>Create an Order</h4>
 <p>When an object is stored in DocumentDB is automatically a guid created for the object. This guid is sent back to client and can be used to retrieve the order.</p>

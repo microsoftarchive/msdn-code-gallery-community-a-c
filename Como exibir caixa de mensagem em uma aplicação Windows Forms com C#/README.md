@@ -51,7 +51,7 @@ Show </strong>&eacute; <strong>Mostrar</strong>, ou seja, &eacute; um m&eacute;t
 <p><span style="font-size:small">A caixa de mensagem possui 21 maneiras de ser constru&iacute;da utilizando o m&eacute;todo Show, ou seja, possui 21 construtores.
 </span></p>
 <p><span style="font-size:small">Para exibir as caixas de mensagem de aten&ccedil;&atilde;o, erro, informa&ccedil;&atilde;o e perguntas, &eacute; utilizado o construtor n&uacute;mero sete, conforme imagem a seguir.</span></p>
-<p><img id="96738" src="96738-construtorsete.png" alt="" width="793" height="106"></p>
+<p><img id="96738" src="http://i1.code.msdn.s-msft.com/como-exibir-caixa-de-d30dc26b/image/file/96738/1/construtorsete.png" alt="" width="793" height="106"></p>
 <p>Par&acirc;metros:</p>
 <p>1) O primeiro par&acirc;metro &eacute; o texto que ser&aacute; exibido na caixa de mensagem.</p>
 <p>2) O sergundo par&acirc;metro &eacute; o texto exibido no t&iacute;tulo da janela da caixa de mensagem.</p>
@@ -137,5 +137,5 @@ Show </strong>&eacute; <strong>Mostrar</strong>, ou seja, &eacute; um m&eacute;t
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&lt;object width=&quot;0&quot; height=&quot;0&quot; data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot;&gt; &lt;param name=&quot;id&quot; value=&quot;4b8bf81a-1baa-93b6-3ad9-2aa048bd85a8&quot; /&gt;<span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="-?linkid=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
+<p>&lt;object width=&quot;0&quot; height=&quot;0&quot; data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot;&gt; &lt;param name=&quot;id&quot; value=&quot;4b8bf81a-1baa-93b6-3ad9-2aa048bd85a8&quot; /&gt;<span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
  &lt;/object&gt; </p>

@@ -244,7 +244,7 @@ StylesUrl&nbsp;=&nbsp;<span class="cs__keyword">this</span>.Url.FullyQualifiedCo
 <div>Rather than ask the MVC developer to become an expert on WorkflowApplication, I created a helper class which accepts the Workflow type that you want to use as a template parameter.&nbsp; This allowed me to put in place a simple strongly typed API and hide
  the details of Workflow.&nbsp; For the Workflow, I&rsquo;ve created a StateMachine that does everything I need.&nbsp; Of course, you can make the workflow more complex if you want.&nbsp; I can imagine scenarios where a Human might have to approve membership
  or perhaps there is a membership fee that must be collected, any of these things can be provided for in the StateMachine.</div>
-<div><img src="57203-accountregistration.jpg" alt="" width="379" height="482"></div>
+<div><img src="http://i1.code.msdn.s-msft.com/aspnet-mvc4-workflow-c5daa4ab/image/file/57203/1/accountregistration.jpg" alt="" width="379" height="482"></div>
 <div></div>
 <div>And of course, I&rsquo;ve added support for Debug Tracing of the Workflow as it executes using Microsoft.Activities.Extensions.&nbsp; In the VS Debug window when the Workflow runs you will see nicely formatted trackiing information to help you.</div>
 <pre>41: Activity [1.34] &quot;SendMail&quot; scheduled child activity [1.90] &quot;Wait For Confirmation&quot;

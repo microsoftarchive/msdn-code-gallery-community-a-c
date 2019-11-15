@@ -32,7 +32,7 @@
 <p><span style="font-size:small">This application is developed to Bind and view the images in the grid along with their details. Here we can add the category name which specifies, under which the image and details to be bounded. In upload category, Specify
  the name and description Select the category under which you wish to upload the Image choose the file path and bind. Further view the image with its name and category in View category. Remove category will delete the entire category.</span></p>
 <p>&nbsp;</p>
-<p><img id="61331" src="61331-view.jpg" alt="" width="1024" height="768"></p>
+<p><img id="61331" src="http://i1.code.msdn.s-msft.com/bind-image-in-gridview-f88fc0f7/image/file/61331/1/view.jpg" alt="" width="1024" height="768"></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">

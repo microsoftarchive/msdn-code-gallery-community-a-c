@@ -12,7 +12,7 @@
 ## Description
 
 <p><strong><span style="font-size:large">目前下载量已经超过2K，为了纪念。如果你认为此代码有所帮助，请扫码赞赏，这是对我付出的认可，这也是我更新代码的动力。谢谢！</span></strong></p>
-<p><img id="223798" src="223798-%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20190708202914.png" alt="" width="691" height="691"></p>
+<p><img id="223798" src="https://i1.code.msdn.s-msft.com/windowsdesktop/c-9c21ed84/image/file/223798/1/%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20190708202914.png" alt="" width="691" height="691"></p>
 <p>&nbsp;</p>
 <p><span>C#开发的工业自动化控制类，大部分已经写完且验证过:</span></p>
 <p><span>一、EPSON Robot Remote TCP/IP Control: 用于对EPSON机械手进行远程以太网控制，建立以太网通讯后发送命令给爱普生机械手控制器，然后依照返回的命令处理相应结果;</span></p>

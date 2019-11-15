@@ -28,7 +28,7 @@
 <div><em>&nbsp;</em>&nbsp;</div>
 <div><em>This sample application generates an XLSX file with different conditional formatting features. Following is a screenshot of the output you will get after executing the sample application.<br>
 </em></div>
-<p><img id="114981" src="114981-conditional_formatting.png" alt="" width="820" height="437"></p>
+<p><img id="114981" src="http://i1.code.msdn.s-msft.com/applying-conditional-af9e0e4f/image/file/114981/1/conditional_formatting.png" alt="" width="820" height="437"></p>
 <p>&nbsp;</p>
 <p>Following method creates a new file using Workbook object and calls different methods to add different types of conditional formatting to the worksheet.</p>
 <div class="scriptcode">

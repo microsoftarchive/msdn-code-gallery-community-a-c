@@ -35,7 +35,7 @@
  The analog clock control also draws the major and minor segments for the clock. The major and minor segments can be hidden using properties &quot;ShowMajorSegments&quot; and &quot;ShowMinorSegments&quot;. Also, the second, minute, and hour hand can be hidden from the user as
  well.</p>
 <p>This is how the control looks.</p>
-<p><img id="92393" src="92393-capture.png" alt="" width="239" height="225"></p>
+<p><img id="92393" src="https://code.msdn.microsoft.com/site/view/file/92393/1/Capture.PNG" alt="" width="239" height="225"></p>
 <p>1. Create a new solution called ClockControl.</p>
 <p>2. Add a custom control class named ClockControl.</p>
 <p>2. Delete everything in ClockControl and add the following code in ClockControl.</p>

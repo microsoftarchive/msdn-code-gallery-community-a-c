@@ -64,7 +64,7 @@ using Spire.Doc.Documents;</span></span></span></span></span></span></p>
 </div>
 </div>
 <p><strong><span style="font-size:small">Sample Word file for test</span></strong></p>
-<p><strong><span style="font-size:small"><img id="129783" src="129783-3.png" alt=""></span></strong></p>
+<p><strong><span style="font-size:small"><img id="129783" src="https://i1.code.msdn.s-msft.com/convert-doc-to-xml-in-c-9dad2617/image/file/129783/1/3.png" alt=""></span></strong></p>
 <p>&nbsp;</p>
 <p><strong><span style="font-size:small">Result</span></strong></p>
 <p><strong><span style="font-size:small"><img id="129780" src="129780-2.png" alt="" width="679" height="362"><br>

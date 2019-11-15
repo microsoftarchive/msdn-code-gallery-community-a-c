@@ -31,24 +31,24 @@
  add as reference.</span></p>
 <p><strong><span style="font-size:small">Create a MVC application</span></strong></p>
 <p><span style="font-size:small">Click File-&gt; New-&gt; Project then select MVC application. From the following pop up we will select the template as empty and select the core references and folders for MVC.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11405"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png"><img class="size-full x_wp-image-11405" src="-empty-template-with-mvc-and-web-api-folders-e1458711950206.png" alt="Empty Template With MVC And Web API Folders" width="650" height="484"></a>
+<div class="wp-caption x_alignnone" id="attachment_11405"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png"><img class="size-full x_wp-image-11405" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png" alt="Empty Template With MVC And Web API Folders" width="650" height="484"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Empty Template With MVC And Web API Folders</span></p>
 </div>
 <p><span style="font-size:small">Once you click OK, a project with MVC like folder structure with core references will be created for you.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11362"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png"><img class="size-full x_wp-image-11362" src="-folder-structure-and-references-for-empty-mvc-project.png" alt="Folder Structure And References For Empty MVC Project" width="267" height="367"></a>
+<div class="wp-caption x_alignnone" id="attachment_11362"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png"><img class="size-full x_wp-image-11362" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png" alt="Folder Structure And References For Empty MVC Project" width="267" height="367"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Folder Structure And References For Empty MVC Project</span></p>
 </div>
 <p><span style="font-size:small">Once your application is ready, we can add the reference for&nbsp;<em><a class="libraryLink" href="https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx" target="_blank" title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a></em></span></p>
 <p><strong><span style="font-size:small">Add reference for <a class="libraryLink" href="https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx" target="_blank" title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a></span></strong></p>
 <p><span style="font-size:small">To add the reference, right click on References and click Add reference.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11411"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Add_References_.png"><img class="size-full x_wp-image-11411" src="-add_references_.png" alt="Add_References" width="482" height="316"></a>
+<div class="wp-caption x_alignnone" id="attachment_11411"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Add_References_.png"><img class="size-full x_wp-image-11411" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Add_References_.png" alt="Add_References" width="482" height="316"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Add_References</span></p>
 </div>
 <p><span style="font-size:small">Now click on the browse button, and search for&nbsp;<em><a class="libraryLink" href="https://msdn.microsoft.com/en-US/library/System.Runtime.Caching.aspx" target="_blank" title="Auto generated link to System.Runtime.Caching">System.Runtime.Caching</a></em></span></p>
-<div class="wp-caption x_alignnone" id="attachment_11412"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/References_Found_-e1458732611680.png"><img class="size-full x_wp-image-11412" src="-references_found_-e1458732611680.png" alt="References_Found_" width="650" height="373"></a>
+<div class="wp-caption x_alignnone" id="attachment_11412"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/References_Found_-e1458732611680.png"><img class="size-full x_wp-image-11412" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/References_Found_-e1458732611680.png" alt="References_Found_" width="650" height="373"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">References_Found_</span></p>
 </div>
@@ -271,7 +271,7 @@ GO</pre>
 <span style="font-size:small">Now will create our Web API controller.</span></p>
 <p><strong><span style="font-size:small">Create Web API Controller</span></strong></p>
 <p><span style="font-size:small">To create a Web API controller, just right click on your controller folder and click Add -&gt; Controller -&gt; Select Web API 2 controller with actions, using Entity Framework.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11401"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png"><img class="size-full x_wp-image-11401" src="-web-api-2-controller-with-actions-using-entity-framework-e1458709497551.png" alt="Web API 2 Controller With Actions Using Entity Framework" width="650" height="448"></a>
+<div class="wp-caption x_alignnone" id="attachment_11401"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png"><img class="size-full x_wp-image-11401" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png" alt="Web API 2 Controller With Actions Using Entity Framework" width="650" height="448"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web API 2 Controller With Actions Using Entity Framework</span></p>
 </div>
@@ -444,7 +444,7 @@ namespace&nbsp;CachingInWebAPI.Controllers&nbsp;
 </div>
 <p><span style="font-size:small">So the coding part to fetch the data from database is ready, now we need to check whether our Web API is ready for action!. To check that, you just need to run the URL&nbsp;<em>http://localhost:4832/api/tblTags</em>. Here<em>tblTags</em>&nbsp;is
  our Web API controller name. I hope you get the data as a result.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11413"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Result-e1458733092316.png"><img class="size-full x_wp-image-11413" src="-web_api_result-e1458733092316.png" alt="Web_API_Result" width="650" height="342"></a>
+<div class="wp-caption x_alignnone" id="attachment_11413"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Result-e1458733092316.png"><img class="size-full x_wp-image-11413" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Result-e1458733092316.png" alt="Web_API_Result" width="650" height="342"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web_API_Result</span></p>
 </div>
@@ -480,12 +480,12 @@ namespace&nbsp;CachingInWebAPI.Controllers&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">Next we will create an instance of&nbsp;<em>MemoryCache&nbsp;</em>class.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11415"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Tooltip_.png"><img class="size-full x_wp-image-11415" src="-memorycache_tooltip_.png" alt="MemoryCache_Tooltip_" width="654" height="102"></a>
+<div class="wp-caption x_alignnone" id="attachment_11415"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Tooltip_.png"><img class="size-full x_wp-image-11415" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Tooltip_.png" alt="MemoryCache_Tooltip_" width="654" height="102"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">MemoryCache_Tooltip_</span></p>
 </div>
 <p><span style="font-size:small">As you can see there are four possible settings we can set in&nbsp;<em>MemoryCache&nbsp;</em>class.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11416"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Settings-e1458734646751.png"><img class="size-full x_wp-image-11416" src="-memorycache_settings-e1458734646751.png" alt="MemoryCache_Settings" width="650" height="123"></a>
+<div class="wp-caption x_alignnone" id="attachment_11416"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Settings-e1458734646751.png"><img class="size-full x_wp-image-11416" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Settings-e1458734646751.png" alt="MemoryCache_Settings" width="650" height="123"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">MemoryCache_Settings</span></p>
 </div>
@@ -510,7 +510,7 @@ namespace&nbsp;CachingInWebAPI.Controllers&nbsp;
 <div class="endscriptcode"></div>
 </span>
 <p></p>
-<div class="wp-caption x_alignnone" id="attachment_11417"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Add-e1458734908183.png"><img class="size-full x_wp-image-11417" src="-memorycache_add-e1458734908183.png" alt="MemoryCache_Add" width="650" height="70"></a>
+<div class="wp-caption x_alignnone" id="attachment_11417"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Add-e1458734908183.png"><img class="size-full x_wp-image-11417" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Add-e1458734908183.png" alt="MemoryCache_Add" width="650" height="70"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">MemoryCache_Add</span></p>
 </div>
@@ -548,12 +548,12 @@ namespace&nbsp;CachingInWebAPI.Controllers&nbsp;
 </div>
 <p><span style="font-size:small">We will get the cache values in the variable res, remember this values will be there only for five minutes. You can always change that as per need. If the value is not null, we will just return it and do the manipulation and
  if it is null we will go ahead and fetch the data from database and add the value to cache. Now please run your API by running the URL&nbsp;<em>http://localhost:4832/api/tblTags</em>.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11418"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Cache_Value_Null.png"><img class="size-full x_wp-image-11418" src="-cache_value_null.png" alt="Cache_Value_Null" width="624" height="215"></a>
+<div class="wp-caption x_alignnone" id="attachment_11418"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Cache_Value_Null.png"><img class="size-full x_wp-image-11418" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Cache_Value_Null.png" alt="Cache_Value_Null" width="624" height="215"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Cache_Value_Null</span></p>
 </div>
 <p><span style="font-size:small">You can see that we are setting the value to memCache as the&nbsp;<em>memCache.Get(&ldquo;tag&rdquo;)</em>&nbsp;is null.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11419"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Cache_Value_Not_Null.png"><img class="size-full x_wp-image-11419" src="-cache_value_not_null.png" alt="Cache_Value_Not_Null" width="596" height="215"></a>
+<div class="wp-caption x_alignnone" id="attachment_11419"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Cache_Value_Not_Null.png"><img class="size-full x_wp-image-11419" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Cache_Value_Not_Null.png" alt="Cache_Value_Not_Null" width="596" height="215"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Cache_Value_Not_Null</span></p>
 </div>
@@ -585,7 +585,7 @@ namespace&nbsp;CachingInWebAPI.Controllers&nbsp;
 <div>
 <div class="syntaxhighlighter csharp" id="highlighter_388804"></div>
 </div>
-<div class="wp-caption x_alignnone" id="attachment_11420"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Remove-e1458737311814.png"><img class="size-full x_wp-image-11420" src="-memorycache_remove-e1458737311814.png" alt="MemoryCache_Remove" width="650" height="299"></a>
+<div class="wp-caption x_alignnone" id="attachment_11420"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Remove-e1458737311814.png"><img class="size-full x_wp-image-11420" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/MemoryCache_Remove-e1458737311814.png" alt="MemoryCache_Remove" width="650" height="299"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">MemoryCache_Remove</span></p>
 </div>

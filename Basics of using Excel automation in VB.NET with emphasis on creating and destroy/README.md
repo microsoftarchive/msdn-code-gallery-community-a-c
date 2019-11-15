@@ -23,13 +23,13 @@
 <p>&nbsp;</p>
 <div><span style="font-size:small">This is what you will see if the reference can't be found as per above, you need to remove this reference and add yours in</span></div>
 <p>&nbsp;</p>
-<div><img id="109034" src="109034-nf.png" alt="" width="783" height="92"></div>
+<div><img id="109034" src="http://i1.code.msdn.s-msft.com/basics-of-using-excel-4453945d/image/file/109034/1/nf.png" alt="" width="783" height="92"></div>
 <div><span style="font-size:small"><br>
 Note that all code has <span style="background-color:#ffff00">Option Strict On</span>.</span></div>
 <div><span style="font-size:small"><span style="color:#ff0000"><strong>&nbsp;</strong></span></span></div>
 <div><span style="font-size:small"><span style="color:#ff0000"><strong>UPDATE 2/18/2014</strong></span> added a C# solution with several examples, open a file, verify a sheet exist, open a file and collect sheet names and an example of reading cells. I will
  continue adding to this C# example as time permits. The main consideration here is that both the VB and C code both dispose of memory exactly the same way.</span></div>
-<div><span style="font-size:small">Screen shot from C first project</span><img id="108901" src="108901-c1.png" alt="" width="623" height="824"></div>
+<div><span style="font-size:small">Screen shot from C first project</span><img id="108901" src="http://i1.code.msdn.s-msft.com/basics-of-using-excel-4453945d/image/file/108901/1/c1.png" alt="" width="623" height="824"></div>
 <div><span style="font-size:20px; font-weight:bold">Description</span></div>
 <div><span style="font-family:Calibri; font-size:medium">The primary focus of this article is to show the very basics of working with Excel automation using early binding without the need to call the GC (Garbage Collector) to cleanup and properly dispose of
  objects used to work with Excel automation.<br>
@@ -58,7 +58,7 @@ Note that all code has <span style="background-color:#ffff00">Option Strict On</
  calls the GC. This was intentional in that there will be times when keeping to one period in a line of code will elude you so when this happens use the method shown to release this object.</span></div>
 <div><span style="line-height:115%; font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; font-size:medium">One more item, a class has been included to retrieve sheet names and name range names. This can be done in OleDb but OleDb sorts names a-z meaning if there is a requirement
  for natural ordering of sheet names in a control on your form OleDb will not work. The class uses early binding Excel automation yet if you wanted too OpenXML SDK offers the same functionality as my class but only works on Excel 2007 or higher.</span></div>
-<div><img id="108903" src="108903-v1.png" alt="" width="700" height="504">&nbsp;</div>
+<div><img id="108903" src="http://i1.code.msdn.s-msft.com/basics-of-using-excel-4453945d/image/file/108903/1/v1.png" alt="" width="700" height="504">&nbsp;</div>
 <h1><span>Source Code Files</span></h1>
 <div><span style="font-size:small">Everything source code wise is in the attached VS2010 project.</span>&nbsp;</div>
 <h1>More Information</h1>

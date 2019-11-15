@@ -113,7 +113,7 @@
 <div class="endscriptcode"><span style="font-size:10px"><br>
 </span></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><span style="font-size:10px"><img id="126667" src="126667-browserapicall.jpg" alt="" width="599" height="261"><br>
+<div class="endscriptcode"><span style="font-size:10px"><img id="126667" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-43e5de16/image/file/126667/1/browserapicall.jpg" alt="" width="599" height="261"><br>
 </span></div>
 <div class="endscriptcode"><span style="font-size:10px"><br>
 </span></div>
@@ -122,7 +122,7 @@
 <strong>clubQuery</strong>.</div>
 <h2>Client side (AngularJS)</h2>
 <p>The client application is in the <strong>app</strong>&nbsp;folder under the project root. It is a simple, single module SPA with two views to show the different approaches to paging.</p>
-<p><img id="126669" src="126669-appfolders.jpg" alt="" width="211" height="202"></p>
+<p><img id="126669" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-43e5de16/image/file/126669/1/appfolders.jpg" alt="" width="211" height="202"></p>
 <p>A resource service called <strong>clubClientSvc</strong>&nbsp;is used by both the examples. It&nbsp;maps to the Clubs controller. The 'query' method has been configured to match the club controller action which supports paging.</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -149,9 +149,9 @@
 </div>
 <h3>Simple paging</h3>
 <p>The simple paging approach provides a single list of items, which for this demo are football clubs to the user. If more clubs are available the user can query for the next page of items which are then added to the list.</p>
-<p><img id="126676" src="126676-simplescreen.jpg" alt="" width="600" height="400"></p>
+<p><img id="126676" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-43e5de16/image/file/126676/1/simplescreen.jpg" alt="" width="600" height="400"></p>
 <p>The structure is straightforward with a controller (simpleCtrl), view and a service (simpleClubSvc) to abstract the paging logic out of the controller.&nbsp;</p>
-<p><img id="126597" src="126597-simplefolders.jpg" alt="" width="177" height="110"></p>
+<p><img id="126597" src="http://i1.code.msdn.s-msft.com/angularjs-with-web-api-43e5de16/image/file/126597/1/simplefolders.jpg" alt="" width="177" height="110"></p>
 <p>The service exposes an array named <strong>clubs</strong>, which is the paged clubs list, a
 <strong>paging</strong> object of all the paging options and information and two functions
 <strong>load</strong> and <strong>clear</strong>.</p>
@@ -228,9 +228,9 @@ service.paging.info.moreAvailable&nbsp;=&nbsp;<span class="js__operator">functio
 </div>
 <h3>Full paging</h3>
 <p>The full paging approach gives the user a list of all the available pages which the user can then click on to view the clubs on that page. The page is loaded the first time it is clicked on.</p>
-<p><img id="126675" src="126675-fullscreen.jpg" alt="" width="600" height="400"></p>
+<p><img id="126675" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-43e5de16/image/file/126675/1/fullscreen.jpg" alt="" width="600" height="400"></p>
 <p><span>The overall approach is similar with the addition of a directive called&nbsp;</span><strong>pager</strong><span>&nbsp;which handles the page navigation layout and logic.</span></p>
-<p><img id="126598" src="126598-fullfolders.jpg" alt="" width="169" height="126"></p>
+<p><img id="126598" src="http://i1.code.msdn.s-msft.com/angularjs-with-web-api-43e5de16/image/file/126598/1/fullfolders.jpg" alt="" width="169" height="126"></p>
 <p>The fullClubSvc exposes an array <strong>pages</strong> along with a <strong>paging</strong>&nbsp;object containing the paging information and options.&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">

@@ -27,7 +27,7 @@
 <p>If you are gong to be deploying to Azure then please also have look at the companion sample
 <a href="https://code.msdn.microsoft.com/AngularJS-with-Web-API-c05b3511" target="_blank">
 here</a> which covers uploading to an Azure Container.</p>
-<p><img id="128420" src="128420-screenshot.png" alt="" width="600" height="400"></p>
+<p><img id="128420" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-22f62a6e/image/file/128420/1/screenshot.png" alt="" width="600" height="400"></p>
 <p>Please note that all code snippets in this description are partial and only contain the relevant lines of code. To view the full code please download the sample. Also the approach taken in this sample has been to make the code as clear as possible to highlight
  the overall concept. In a real world scenario another design may preferable.</p>
 <h2><span>Building the Sample</span></h2>
@@ -109,7 +109,7 @@ here</a> which covers uploading to an Azure Container.</p>
 <h3>AngularJS</h3>
 <p>The SPA is in the afolder called <strong>app</strong> under the project root. It is a basic, AngularJS application with a module called
 <strong>Photo</strong>.&nbsp;</p>
-<p><img id="128422" src="128422-appfolders.jpg" alt="" width="219" height="327"></p>
+<p><img id="128422" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-22f62a6e/image/file/128422/1/appfolders.jpg" alt="" width="219" height="327"></p>
 <p>&nbsp;</p>
 <p>Here is an overview of the components under the photo module and their purpose:&nbsp;</p>
 <ul>

@@ -236,5 +236,5 @@
 </div>
 <div class="endscriptcode"><span style="font-size:small">&nbsp;Screenshot:</span></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img id="106368" src="106368-capture.png" alt="" width="525" height="347"></div>
+<div class="endscriptcode"><img id="106368" src="http://i1.code.msdn.s-msft.com/capturing-ui-elements-in-dfd2dc66/image/file/106368/1/capture.png" alt="" width="525" height="347"></div>
 </h1>

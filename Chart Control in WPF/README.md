@@ -88,7 +88,7 @@
 </div>
 </div>
 <h3>1) Column Chart</h3>
-<p><img id="108864" src="108864-column%20chart.jpg" alt="" width="405" height="270"></p>
+<p><img id="108864" src="http://i1.code.msdn.s-msft.com/chart-control-in-wpf-c9727c28/image/file/108864/1/column%20chart.jpg" alt="" width="405" height="270"></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
 <div class="title"><span>XAML</span></div>
@@ -163,7 +163,7 @@
 <div class="endscriptcode">
 <h3>6) Bubble Chart</h3>
 </div>
-<p><img id="108865" src="108865-bubble.jpg" alt="" width="429" height="307"></p>
+<p><img id="108865" src="http://i1.code.msdn.s-msft.com/chart-control-in-wpf-c9727c28/image/file/108865/1/bubble.jpg" alt="" width="429" height="307"></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -179,7 +179,7 @@
 </div>
 <p>&nbsp;</p>
 <h3>7) Scatter Chart</h3>
-<p><img id="108866" src="108866-scatter.jpg" alt="" width="427" height="310"></p>
+<p><img id="108866" src="http://i1.code.msdn.s-msft.com/chart-control-in-wpf-c9727c28/image/file/108866/1/scatter.jpg" alt="" width="427" height="310"></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">

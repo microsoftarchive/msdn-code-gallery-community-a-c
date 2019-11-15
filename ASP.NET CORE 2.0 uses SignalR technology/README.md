@@ -18,7 +18,7 @@
 <h2><span><em>1-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Introduction</em></span></h2>
 <h2><span><em>2-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Environment to build</em></span></h2>
 <div class="slate-resizable-image-embed x_x_x_slate-image-embed__resize-full-width">
-<img src=":-aaia_wdgaaaaaqaaaaaaaamsaaaajdg1yzzin2q1lwuxymutngfhyy1hzjfmltawnze0ode4mmvjng.png" alt=""></div>
+<img src="https://media.licdn.com/mpr/mpr/AAIA_wDGAAAAAQAAAAAAAAmSAAAAJDg1YzZiN2Q1LWUxYmUtNGFhYy1hZjFmLTAwNzE0ODE4MmVjNg.png" alt=""></div>
 <h2>1-&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-decoration:underline">&nbsp;Introduction</span></h2>
 <p>The ASP.NET Core 1.x.x release does not include SignalR technology and development plans. Time has passed quickly, Microsoft has released a preview version of. NET Core 2.0 Preview 2, not far from the official version, the above also mentioned in the ASP.NET
  Core 2.0 SignalR will be as important components and MVC and other frameworks released together. Its development team also fulfilled the commitment to use TypeScript to rewrite its javascript client, the server side will be close to the ASP.NET Core development,

@@ -39,14 +39,14 @@
 <p>Without knowing out&nbsp; database table we could write code our own poco classes and properties that correspond to tables and columns and use them with the Entity Framework without an .edmx file.</p>
 <p>1.Create New ASP.Net WebApplication with MVC template.</p>
 <p>&nbsp;</p>
-<p><strong><span><img id="188591" src="188591-2018-02-13%20(1).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188591" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188591/1/2018-02-13%20(1).png" alt="" width="750" height="500"></span></strong></p>
 <p>&nbsp;</p>
-<p><img id="188593" src="188593-2018-02-13%20(2).png" alt="" width="750" height="500"></p>
+<p><img id="188593" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188593/1/2018-02-13%20(2).png" alt="" width="750" height="500"></p>
 <p>2.Click on Change Authentication and &nbsp;set as &ldquo;No Authentication&rdquo;</p>
 <p>3.Right Click Manage Nuget Package Manager and then browse&nbsp; Enity Framework and install the same.</p>
 <p>&nbsp;</p>
-<p><strong><span><img id="188595" src="188595-2018-02-13%20(4).png" alt="" width="750" height="500"></span></strong></p>
-<p><strong><span><img id="188596" src="188596-2018-02-13%20(5).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188595" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188595/1/2018-02-13%20(4).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188596" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188596/1/2018-02-13%20(5).png" alt="" width="750" height="500"></span></strong></p>
 <p>&nbsp;</p>
 <p>4.Right on the Model&nbsp; &gt; Add New Class name it as &ldquo;EmployeeDetails&rdquo;</p>
 <p><strong><span style="font-size:small">EmployeeDetails</span></strong></p>
@@ -138,15 +138,15 @@
 <p>9.Clean &amp; Rebuild your solution if you getting any error while adding controller</p>
 <p>10.CRUD operation code will be generated automatically with Views.</p>
 <h1><em style="font-size:10px">&nbsp;</em></h1>
-<p><strong><span><img id="188597" src="188597-2018-02-13%20(7).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188597" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188597/1/2018-02-13%20(7).png" alt="" width="750" height="500"></span></strong></p>
 <p>&nbsp;</p>
-<p><strong><span><img id="188598" src="188598-2018-02-13%20(8).png" alt="" width="750" height="500"></span></strong></p>
-<p><strong><span><img id="188599" src="188599-2018-02-13%20(12).png" alt="" width="750" height="500"></span></strong></p>
-<p><strong><span><img id="188600" src="188600-2018-02-13%20(13).png" alt="" width="750" height="500"></span></strong></p>
-<p><strong><span><img id="188601" src="188601-2018-02-13%20(14).png" alt="" width="750" height="500"></span></strong></p>
-<p><strong><span><img id="188601" src="188601-2018-02-13%20(14).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188598" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188598/1/2018-02-13%20(8).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188599" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188599/1/2018-02-13%20(12).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188600" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188600/1/2018-02-13%20(13).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188601" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188601/1/2018-02-13%20(14).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188601" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188601/1/2018-02-13%20(14).png" alt="" width="750" height="500"></span></strong></p>
 <p>&nbsp;</p>
-<p><strong><span><img id="188602" src="188602-2018-02-13%20(16).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span><img id="188602" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188602/1/2018-02-13%20(16).png" alt="" width="750" height="500"></span></strong></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -344,5 +344,5 @@
 <div class="endscriptcode">&nbsp;</div>
 <p><strong><span style="font-size:small">Screenshots&nbsp;</span></strong></p>
 <p>&nbsp;</p>
-<p><strong><span style="font-size:small"><img id="188594" src="188594-2018-02-13%20(3).png" alt="" width="750" height="500"></span></strong></p>
+<p><strong><span style="font-size:small"><img id="188594" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-crud-operation-4fe5c1bc/image/file/188594/1/2018-02-13%20(3).png" alt="" width="750" height="500"></span></strong></p>
 <p>&nbsp;</p>

@@ -12,7 +12,7 @@
 <p><a rel="noopener" href="https://facebook.github.io/react/" target="_blank">Reactjs</a> is one of the most popular front-end framework, it's also adopted by Facebook, Microsoft, Samsung and other several big companies.
 <br>
 Often happens to develop Web App with the support to different languages, so I decided to share my experience with Reactjs, in detail as you can see below I developed a simple react solution where is possible to change the language instantly:</p>
-<p><img class="alignnone size-full x_wp-image-433" src="-preview.gif" alt="Giuliano De Luca | Blog | react multi language app" width="700px"></p>
+<p><img class="alignnone size-full x_wp-image-433" src="http://www.delucagiuliano.com/wp-content/uploads/2017/07/Preview.gif" alt="Giuliano De Luca | Blog | react multi language app" width="700px"></p>
 <p>The solution is absolutely simple, I stored the translations in a .ts file (json format), because I used
 <a rel="noopener" href="https://www.typescriptlang.org/" target="_blank">Typescript</a>:</p>
 <p>&nbsp;</p>

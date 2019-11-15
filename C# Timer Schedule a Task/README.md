@@ -52,7 +52,7 @@ Code structure inside the timer:</p>
 <li>Making an object appear </li><li>Making an object move </li><li>Fire any event </li><li>Trigger functions </li></ul>
 <p>Timer counts automatically. When the timer counts down the amount of time set in the preferences, it executes whatever code is in it, then it automatically restarts and counts down again.</p>
 <h1><span>Output</span></h1>
-<h1><img id="170318" src="170318-output_scheduletimer.png" alt="" width="672" height="336"></h1>
+<h1><img id="170318" src="https://i1.code.msdn.s-msft.com/c-timer-schedule-a-task-93ebcf45/image/file/170318/1/output_scheduletimer.png" alt="" width="672" height="336"></h1>
 <h1>Technicalities</h1>
 <p>We looked at the Timer class from the <em><a class="libraryLink" href="https://msdn.microsoft.com/en-US/library/System.Timers.aspx" target="_blank" title="Auto generated link to System.Timers">System.Timers</a></em> namespace in .NET Framework. One point we may want to consider when working with timers is whether our problem can be solved more simply by using the Windows Scheduler to run a standard executable
  periodically. Here timer is used to fires off a program at a given time. We could also use timer in following cases:</p>

@@ -22,9 +22,9 @@ asp.net/web-api</a>&nbsp;site.</p>
  you. Your code manipulates the objects, and changes are persisted to a database.</p>
 <h2>About the Tutorial</h2>
 <p>In this tutorial, you will create a simple store application. There are two main parts to the application. Normal users can view products and create orders:</p>
-<p><img src="-webapi_ef01.png" alt=""></p>
+<p><img src="http://aspnet13.orcsweb.com/media/3663418/webapi_ef01.png" alt=""></p>
 <p>Administrators can create, delete, or edit products:</p>
-<p><img src="-webapi_ef02.png" alt=""></p>
+<p><img src="http://aspnet13.orcsweb.com/media/3663424/webapi_ef02.png" alt=""></p>
 <h2>Skills You&rsquo;ll Learn</h2>
 <p>Here&rsquo;s what you&rsquo;ll learn:</p>
 <ul>
@@ -39,6 +39,6 @@ asp.net/web-api</a>&nbsp;site.</p>
 <ul>
 <li>ASP.NET MVC generates the HTML pages for the client. </li><li>ASP.NET Web API exposes CRUD operations on the data (products and orders). </li><li>Entity Framework translates the C# models used by Web API into database entities.
 </li></ul>
-<p><img src="-webapi_ef03.png" alt=""></p>
+<p><img src="http://aspnet13.orcsweb.com/media/3663430/webapi_ef03.png" alt=""></p>
 <p>The following diagram shows how the domain objects are represented at various layers of the application: The database layer, the object model, and finally the wire format, which is used to transmit data to the client via HTTP.</p>
-<p><img src="-webapi_ef04.png" alt=""></p>
+<p><img src="http://aspnet13.orcsweb.com/media/3663436/webapi_ef04.png" alt=""></p>

@@ -30,7 +30,7 @@ BindingSource</a> which is the DataSource of our DataGridView. Finally we move t
 <p><span style="font-size:small">If the primary key is not setup properly than this method demostrated here will fail with or without an exception.</span></p>
 <ul>
 <li><span style="font-size:x-small">Primary Key = True</span> </li><li><span style="font-size:x-small">Allow Nulls = False</span> </li><li><span style="font-size:x-small">Identity = True</span> </li></ul>
-<p><img id="124572" src="124572-pk.png" alt="" width="352" height="97"></p>
+<p><img id="124572" src="http://i1.code.msdn.s-msft.com/adding-new-records-into-bff5eaaf/image/file/124572/1/pk.png" alt="" width="352" height="97"></p>
 <p><span style="font-size:small">For doing this in MS-Access we are not fortunate to use the same two SQL statements together&nbsp;as done here, see
 <a href="http://code.msdn.microsoft.com/Adding-new-records-into-53ce3eb1">Adding new records into Microsoft Access tables and display in a DataGridView</a> for how to do this in MS-Access.</span>&nbsp;&nbsp;&nbsp;</p>
 <p>&nbsp;</p>

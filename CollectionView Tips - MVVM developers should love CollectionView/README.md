@@ -826,6 +826,6 @@ Many WPF developers only turn to the CollectionView for grouping. &nbsp;Collecti
 <br>
 </p>
 <p><br>
-<img id="125965" src="125965-anithanks1.gif" alt="" width="471" height="156"><br>
+<img id="125965" src="http://i1.code.msdn.s-msft.com/collectionview-tips-mvvm-d6ebb4a7/image/file/125965/1/anithanks1.gif" alt="" width="471" height="156"><br>
 <br>
 </p>

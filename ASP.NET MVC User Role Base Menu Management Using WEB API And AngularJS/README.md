@@ -706,7 +706,7 @@ In the select method I have used&nbsp;<strong>$http.get</strong>&nbsp;to get the
 </div>
 </div>
 </div>
-<div class="endscriptcode">&nbsp;<img id="148025" src="148025-5.gif" alt="" width="560" height="400"></div>
+<div class="endscriptcode">&nbsp;<img id="148025" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-user-role-base-e874e7ea/image/file/148025/1/5.gif" alt="" width="560" height="400"></div>
 </div>
 <div class="endscriptcode"><strong><span>Insert new Menu Master</span></strong>
 <p><span>In the ADD/Edit menu Details button click we will make visible the MenuAdd table details where the Admin user can enter the new menu information. For a new Menu we will make the Menu ID as 0. In the New Menu save button click we will call the save
@@ -793,7 +793,7 @@ rror(<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__br
 </div>
 </div>
 </div>
-<div class="endscriptcode">&nbsp;<img id="148026" src="148026-6.gif" alt="" width="566" height="410"></div>
+<div class="endscriptcode">&nbsp;<img id="148026" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-user-role-base-e874e7ea/image/file/148026/1/6.gif" alt="" width="566" height="410"></div>
 </div>
 <div class="endscriptcode"><span>In the Save method I will check for the&nbsp;</span><span>MenuIdentity</span><span>. If the&nbsp;</span><span>MenuIdentitys</span><span>&nbsp;</span><span>is &ldquo;0&rdquo; then it will insert the new Menu Master. Here we
  will call the Insert Web API method and if the&nbsp;</span><span>MenuIdentitys</span><span>&nbsp;</span><span>is &gt; 0 then it means to update the Menu record then we will call the Update Web API method.</span></div>
@@ -879,28 +879,28 @@ rror(<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__br
  For displaying menu we select the menu visible status is only for &lsquo;Y&rsquo;. To Insert Web API Method we will pass all the Input parameters. In our Stored Procedure we will check whether the Menu ID for the Menu already exists. If the Menu ID does not
  exist in the database then we will insert the records and return the success message as &ldquo;inserted&rdquo; and if the Menu ID already exists then we will return the message as &ldquo;</span><strong>Exists</strong><span>&rdquo;.</span></div>
 </div>
-<div class="endscriptcode"><img id="148027" src="148027-7.gif" alt="" width="560" height="562"></div>
+<div class="endscriptcode"><img id="148027" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-user-role-base-e874e7ea/image/file/148027/1/7.gif" alt="" width="560" height="562"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"><span>Here we can see admin has created new Menu and selected User role for new menu as Employee and parentMenuID as &lsquo;*&rsquo; which means this newly created will be only visible to Employee Role users not even to Admin and
  Parent menu ID as &lsquo;*&rsquo; which is for display the menu as root menu Item. Here we have given the controller name as &lsquo;Message&rsquo;. Now we will create one new Controller as &ldquo;message&rdquo; and add a default index view for that controller
  with simple message display.</span>
 <p><span>Let us login to our MVC application as Employee user and see how the new created menu is displayed.</span></p>
 </div>
-<div class="endscriptcode"><img id="148028" src="148028-8.gif" alt="" width="560" height="370"></div>
+<div class="endscriptcode"><img id="148028" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-user-role-base-e874e7ea/image/file/148028/1/8.gif" alt="" width="560" height="370"></div>
 <div class="endscriptcode"></div>
 <p><strong>Update Menu Master</strong><strong>&nbsp;</strong></p>
 <p>Here again we logged in as Admin user for editing the newly created menu. Now we can see we can click on edit icon to edit the selected menu details. Now we will change the parent MenuID from &lsquo;*&rsquo; to display the menu as sub menu of Employee Dashboard.</p>
-<img id="148030" src="148030-9.gif" alt="" width="562" height="400"><br>
+<img id="148030" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-user-role-base-e874e7ea/image/file/148030/1/9.gif" alt="" width="562" height="400"><br>
 <p><span>Now again we login as Employee user and check for how the menu will be displayed as sub menu.</span></p>
-<p><img id="148031" src="148031-10.gif" alt="" width="560" height="304"></p>
+<p><img id="148031" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-user-role-base-e874e7ea/image/file/148031/1/10.gif" alt="" width="560" height="304"></p>
 <strong>Update Menu display status</strong>
 <p><span>Now let&rsquo;s see how to update the menu not to be visible for user. We login as Admin User and edit the Menu and uncheck the Menu Visible (Yes/No) checkbox and click save.</span></p>
-<p><img id="148032" src="148032-11.gif" alt="" width="560" height="400"></p>
+<p><img id="148032" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-user-role-base-e874e7ea/image/file/148032/1/11.gif" alt="" width="560" height="400"></p>
 <p><span>If Employee user logged in this Menu Visible set to &lsquo;N&rsquo; menu will not be displayed to him. Here we can see Employee role user is login and he/she can view only one menu and previously displayed &ldquo;message&rdquo; menu was been not displaying
  now.</span></p>
-<p><img id="148033" src="148033-12.gif" alt="" width="560" height="320"></p>
+<p><img id="148033" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-user-role-base-e874e7ea/image/file/148033/1/12.gif" alt="" width="560" height="320"></p>
 <p><strong><span>Delete Order Master Details</span></strong></p>
-<p><img id="148034" src="148034-13.gif" alt="" width="560" height="376"></p>
+<p><img id="148034" src="https://i1.code.msdn.s-msft.com/aspnet-mvc-user-role-base-e874e7ea/image/file/148034/1/13.gif" alt="" width="560" height="376"></p>
 <p><span>In the Delete button click, We will display the confirmation message to the user whether to delete the menu or not. If the user clicks the OK button we will pass the menuID to the delete method of the Web API to delete the record from the database.</span><span>&nbsp;</span></p>
 <p>&nbsp;</p>
 <div class="scriptcode">

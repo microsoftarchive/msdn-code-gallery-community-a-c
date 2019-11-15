@@ -28,7 +28,7 @@
 <h2>Introduction</h2>
 <p>This sample demonstrates how to create a file manager with AngularJS and Web API. It consists of an AngularJS single page application which allows a user to browse and delete images files in an Azure storage container&nbsp;as well as&nbsp;upload new files.
  It also shows how to create a Web API controller to support the required server side operations.</p>
-<p><img id="130179" src="130179-screenshot.png" alt="" width="600" height="400"></p>
+<p><img id="130179" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-c05b3511/image/file/130179/1/screenshot.png" alt="" width="600" height="400"></p>
 <p>Please note that all code snippets in this description are partial and only contain the relevant lines of code. To view the full code please download the sample. Also the approach taken in this sample has been to make the code as clear as possible to highlight
  the overall concept. In a real world scenario another design may preferable.</p>
 <h2><span>Building the Sample</span></h2>
@@ -211,7 +211,7 @@ here</a> to set up an account. After that&nbsp;uncomment the&nbsp;first connecti
 <h3>AngularJS</h3>
 <p>The SPA is in the afolder called <strong>app</strong> under the project root. It is a basic, AngularJS application with a module called
 <strong>Photo</strong>.&nbsp;</p>
-<p><img id="128422" src="128422-appfolders.jpg" alt="" width="219" height="327"></p>
+<p><img id="128422" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-22f62a6e/image/file/128422/1/appfolders.jpg" alt="" width="219" height="327"></p>
 <p>&nbsp;</p>
 <p>Here is an overview of the components under the photo module and their purpose:&nbsp;</p>
 <ul>

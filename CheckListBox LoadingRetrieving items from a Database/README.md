@@ -16,7 +16,7 @@
 <p><span style="font-size:small">This article shows the basics for loading/Retrieving items from a Database into a CheckedListBox.&nbsp;</span></p>
 <p><span style="font-size:small"><strong><span style="color:#ff0000">3/17/2014</span></strong> added a language extension method to locate items in a CheckedListBox when the items are populated with a string array either by Add or AddRange of the items property.
  Decided while I was at it add an example in C#. So there is a demo for both C# and VB.NET.<br>
-<img id="110715" src="110715-am.png" alt="" width="394" height="203"></span></p>
+<img id="110715" src="http://i1.code.msdn.s-msft.com/checklistbox-loadingretriev-70b0c202/image/file/110715/1/am.png" alt="" width="394" height="203"></span></p>
 <h1><span>Building the Sample</span></h1>
 <p><span style="font-size:small">There are no special requirement other than having VS2010</span></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
@@ -29,7 +29,7 @@
  should not be) then the alternate is updating the check state as the check state changes.</span></p>
 <p><span style="font-size:small">&nbsp;Caveats, while working with a CheckedListBox I would suggest setting the property CheckOnClick to False which is the default as setting this property to True means that a single click on an item will toggle the current
  state. In the demonstration project there is a label which shows via the selected value changed event the current items checked state.</span></p>
-<p><span style="font-size:small"><img id="76975" src="76975-figure1.jpg" alt="" width="411" height="355"></span></p>
+<p><span style="font-size:small"><img id="76975" src="http://i1.code.msdn.s-msft.com/checklistbox-loadingretriev-70b0c202/image/file/76975/1/figure1.jpg" alt="" width="411" height="355"></span></p>
 <p>&nbsp;</p>
 <p><span style="font-size:small"><strong>07/2013</strong>:&nbsp;The following will produce a list of checked items. Add a command button, add the code below.<br>
 <br>
@@ -190,7 +190,7 @@ public&nbsp;static&nbsp;IEnumerable&lt;string&gt;&nbsp;CheckedItemsList(<span cl
 </div>
 </div>
 <div class="endscriptcode">&nbsp;Example usage for CheckedItems which returns (Paul,Ringo) where each name in this case is a item and the resulting string in this case could be used for a where condition in a where SQL statement for a IN condition.<br>
-<img id="114901" src="114901-in.png" alt="" width="318" height="89"><br>
+<img id="114901" src="http://i1.code.msdn.s-msft.com/checklistbox-loadingretriev-70b0c202/image/file/114901/1/in.png" alt="" width="318" height="89"><br>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
 <div class="title"><span>C#</span></div>

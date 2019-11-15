@@ -30,19 +30,19 @@ Let's see this working in practice!</p>
 </span></h1>
 <p>Open VS 2017 and on the File menu click New Project. Then select the Visual C # -&gt; Web template and check ASP .NET Core Web Application (.NET Core).&nbsp;<br>
 <br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/2260.Image1.png"><img src=":-2260.image1.png" alt=" "></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/2260.Image1.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/2260.Image1.png" alt=" "></a><br>
 <br>
 Then enter the name AspNetCoreDemo and click OK.<br>
 <br>
 In the next window, choose the ASP .NET Core 2.0 version and mark the Web Application (Model-View-Controller) template without authentication and click the OK button:<br>
 <br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0451.Image2.png"><img src=":-0451.image2.png" alt=" "></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0451.Image2.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/0451.Image2.png" alt=" "></a><br>
 <br>
 <strong>&nbsp;</strong></p>
 <h1><strong><span style="font-size:small">STEP2 - Creating a new service in the application</span></strong></h1>
 <strong></strong>Let's define a very simple service just for testing in our application.<br>
 <br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/3250.Image3.png"><img src=":-3250.image3.png" alt=" "></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/3250.Image3.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/3250.Image3.png" alt=" "></a><br>
 <br>
 Create the Services folder in the project (Project -&gt; New Folder), and then add the CountriesService.cs file to this folder containing the following code:<br>
 <br>
@@ -133,5 +133,5 @@ Open the Startup.cs file and add the code below to this file that registers the 
 </div>
 <p>Executing the project, we will obtain the following result:<br>
 <br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0451.Image4.png"><img src=":-0451.image4.png" alt=" "></a></p>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0451.Image4.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/0451.Image4.png" alt=" "></a></p>
 <p>&nbsp;</p>

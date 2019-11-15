@@ -41,7 +41,7 @@ Keeping that in mind let&rsquo;s jump into the action.</div>
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh4.ggpht.com/-_wqAN3zWupc/UwcVEMaonGI/AAAAAAAACLg/7HcoQlnODGU/s1600-h/Picture1%25255B6%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture1" src="-picture1_thumb%25255b4%25255d.png?imgmax=800" border="0" alt="Picture1" width="590" height="365" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh4.ggpht.com/-_wqAN3zWupc/UwcVEMaonGI/AAAAAAAACLg/7HcoQlnODGU/s1600-h/Picture1%25255B6%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture1" src="http://lh3.ggpht.com/-lI-2mt5ElG4/UwcVFY1iqlI/AAAAAAAACLo/PxKqZKgs6NA/Picture1_thumb%25255B4%25255D.png?imgmax=800" border="0" alt="Picture1" width="590" height="365" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Create WCF Service Application</td>
@@ -79,7 +79,7 @@ Keeping that in mind let&rsquo;s jump into the action.</div>
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh6.ggpht.com/-Y4-QSZ-M0nw/UwcVGg6kcZI/AAAAAAAACLw/SaEcvV6JQa8/s1600-h/Picture2%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture2" src="-picture2_thumb%25255b2%25255d.png?imgmax=800" border="0" alt="Picture2" width="590" height="317" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh6.ggpht.com/-Y4-QSZ-M0nw/UwcVGg6kcZI/AAAAAAAACLw/SaEcvV6JQa8/s1600-h/Picture2%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture2" src="http://lh4.ggpht.com/-AU8aB3jV8Kw/UwcVHue-3oI/AAAAAAAACL4/13hLSSjWDcA/Picture2_thumb%25255B2%25255D.png?imgmax=800" border="0" alt="Picture2" width="590" height="317" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">WCF Service Up and Running</td>
@@ -99,7 +99,7 @@ Now coming back in to the action, I will now create a Class Library Project.</di
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh3.ggpht.com/-5GhVapRgbhE/UwcVIO1jBaI/AAAAAAAACL8/1RXcXZI4l2g/s1600-h/Picture3%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture3" src="-picture3_thumb%25255b2%25255d.png?imgmax=800" border="0" alt="Picture3" width="590" height="364" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh3.ggpht.com/-5GhVapRgbhE/UwcVIO1jBaI/AAAAAAAACL8/1RXcXZI4l2g/s1600-h/Picture3%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture3" src="http://lh3.ggpht.com/-fwurAvHwHL8/UwcVJSoO6EI/AAAAAAAACMI/pm5SdiWSSNI/Picture3_thumb%25255B2%25255D.png?imgmax=800" border="0" alt="Picture3" width="590" height="364" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Create Class Library</td>
@@ -112,7 +112,7 @@ Now coming back in to the action, I will now create a Class Library Project.</di
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh4.ggpht.com/-GEws0MPM5j0/UwcVJ71tWVI/AAAAAAAACMM/sEyxbnpth3w/s1600-h/Untitled4%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Untitled4" src="-untitled4_thumb%25255b2%25255d.png?imgmax=800" border="0" alt="Untitled4" width="506" height="363" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh4.ggpht.com/-GEws0MPM5j0/UwcVJ71tWVI/AAAAAAAACMM/sEyxbnpth3w/s1600-h/Untitled4%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Untitled4" src="http://lh4.ggpht.com/-ChTUzf9D5iE/UwcVKhS6c0I/AAAAAAAACMU/AAcEA_g7qOI/Untitled4_thumb%25255B2%25255D.png?imgmax=800" border="0" alt="Untitled4" width="506" height="363" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Add Service Reference</td>
@@ -124,7 +124,7 @@ Now coming back in to the action, I will now create a Class Library Project.</di
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh3.ggpht.com/-FIt8DcZscR4/UwcVLc1mgBI/AAAAAAAACMg/cxI0UWaKCUA/s1600-h/Picture5%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture5" src="-picture5_thumb%25255b3%25255d.png?imgmax=800" border="0" alt="Picture5" width="590" height="478" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh3.ggpht.com/-FIt8DcZscR4/UwcVLc1mgBI/AAAAAAAACMg/cxI0UWaKCUA/s1600-h/Picture5%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture5" src="http://lh5.ggpht.com/-XKHbr_0RGLQ/UwcVMZfsRtI/AAAAAAAACMo/PxuJFqD1Wc4/Picture5_thumb%25255B3%25255D.png?imgmax=800" border="0" alt="Picture5" width="590" height="478" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Advanced</td>
@@ -137,7 +137,7 @@ Now coming back in to the action, I will now create a Class Library Project.</di
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh4.ggpht.com/-V0-gR6tIdA0/UwcVNUOXYsI/AAAAAAAACMw/l7WUF4EqvE0/s1600-h/Picture6%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture6" src="-picture6_thumb%25255b3%25255d.png?imgmax=800" border="0" alt="Picture6" width="590" height="606" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh4.ggpht.com/-V0-gR6tIdA0/UwcVNUOXYsI/AAAAAAAACMw/l7WUF4EqvE0/s1600-h/Picture6%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture6" src="http://lh5.ggpht.com/-z7sjK9AUkEY/UwcVOn5TINI/AAAAAAAACM4/izpdtThWhf8/Picture6_thumb%25255B3%25255D.png?imgmax=800" border="0" alt="Picture6" width="590" height="606" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Add Web Reference</td>
@@ -151,7 +151,7 @@ Now coming back in to the action, I will now create a Class Library Project.</di
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh6.ggpht.com/-HEGl-n35ab4/UwcVXJoisbI/AAAAAAAACNA/EgJrG23HvAo/s1600-h/Picture7%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture7" src="-picture7_thumb%25255b3%25255d.png?imgmax=800" border="0" alt="Picture7" width="590" height="411" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh6.ggpht.com/-HEGl-n35ab4/UwcVXJoisbI/AAAAAAAACNA/EgJrG23HvAo/s1600-h/Picture7%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture7" src="http://lh4.ggpht.com/-UUPafPAApgk/UwcVYOTMfaI/AAAAAAAACNI/91NuKBB5kFg/Picture7_thumb%25255B3%25255D.png?imgmax=800" border="0" alt="Picture7" width="590" height="411" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Add Reference</td>
@@ -190,7 +190,7 @@ Now coming back in to the action, I will now create a Class Library Project.</di
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh6.ggpht.com/-IfKxJncsfqM/UwcVaSG5oWI/AAAAAAAACNQ/Ap7xXc6VDSM/s1600-h/Picture8%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture8" src="-picture8_thumb%25255b3%25255d.png?imgmax=800" border="0" alt="Picture8" width="590" height="365" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh6.ggpht.com/-IfKxJncsfqM/UwcVaSG5oWI/AAAAAAAACNQ/Ap7xXc6VDSM/s1600-h/Picture8%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture8" src="http://lh3.ggpht.com/-UudHCpzTYs0/UwcVbmQ5dCI/AAAAAAAACNY/xcoNarkqdCE/Picture8_thumb%25255B3%25255D.png?imgmax=800" border="0" alt="Picture8" width="590" height="365" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Create SQL Server Database Project</td>
@@ -203,7 +203,7 @@ Now coming back in to the action, I will now create a Class Library Project.</di
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh6.ggpht.com/-TxaEyykmf4Q/UwcVcTqVtWI/AAAAAAAACNg/kA1nanFeVGI/s1600-h/Untitled1%25255B6%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Untitled1" src="-untitled1_thumb%25255b4%25255d.png?imgmax=800" border="0" alt="Untitled1" width="590" height="521" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh6.ggpht.com/-TxaEyykmf4Q/UwcVcTqVtWI/AAAAAAAACNg/kA1nanFeVGI/s1600-h/Untitled1%25255B6%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Untitled1" src="http://lh3.ggpht.com/-X5jBAuEnhIo/UwcVdnpNu7I/AAAAAAAACNo/XCkXwBmG_ck/Untitled1_thumb%25255B4%25255D.png?imgmax=800" border="0" alt="Untitled1" width="590" height="521" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Add New Item</td>
@@ -216,7 +216,7 @@ Now coming back in to the action, I will now create a Class Library Project.</di
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh5.ggpht.com/-gc8KQqIbkI4/UwcVeEOxGlI/AAAAAAAACNw/yrWQvlmR7mY/s1600-h/Picture9%25255B10%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture9" src="-picture9_thumb%25255b6%25255d.png?imgmax=800" border="0" alt="Picture9" width="590" height="364" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh5.ggpht.com/-gc8KQqIbkI4/UwcVeEOxGlI/AAAAAAAACNw/yrWQvlmR7mY/s1600-h/Picture9%25255B10%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture9" src="http://lh4.ggpht.com/-MeO7loE729Y/UwcVfZfbAqI/AAAAAAAACN4/_vtGijMEjVc/Picture9_thumb%25255B6%25255D.png?imgmax=800" border="0" alt="Picture9" width="590" height="364" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Create SQL CLR C# Stored Procedure</td>
@@ -228,7 +228,7 @@ Now coming back in to the action, I will now create a Class Library Project.</di
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh3.ggpht.com/-XBvHvAK3BDs/UwcVfwLQFaI/AAAAAAAACOA/yAcs7RZmRUI/s1600-h/Picture10%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture10" src="-picture10_thumb%25255b2%25255d.png?imgmax=800" border="0" alt="Picture10" width="311" height="193" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh3.ggpht.com/-XBvHvAK3BDs/UwcVfwLQFaI/AAAAAAAACOA/yAcs7RZmRUI/s1600-h/Picture10%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture10" src="http://lh5.ggpht.com/-Guo83UoLvc0/UwcVghoj_-I/AAAAAAAACOI/Ua3koOHBleI/Picture10_thumb%25255B2%25255D.png?imgmax=800" border="0" alt="Picture10" width="311" height="193" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Reference Added</td>
@@ -320,7 +320,7 @@ For that I am running the following query.</div>
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh3.ggpht.com/-PqPyY2-LZPw/UwcVhIlTqZI/AAAAAAAACOQ/NVYVEqJ0RJA/s1600-h/Picture11%25255B17%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture11" src="-picture11_thumb%25255b9%25255d.png?imgmax=800" border="0" alt="Picture11" width="294" height="305" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
+<td style="text-align:center"><a href="http://lh3.ggpht.com/-PqPyY2-LZPw/UwcVhIlTqZI/AAAAAAAACOQ/NVYVEqJ0RJA/s1600-h/Picture11%25255B17%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture11" src="http://lh4.ggpht.com/-XQE8zkQs65Q/UwcViETISUI/AAAAAAAACOY/6LGv-4Ncdxk/Picture11_thumb%25255B9%25255D.png?imgmax=800" border="0" alt="Picture11" width="294" height="305" style="float:none; padding-top:0px; padding-left:0px; margin-left:auto; display:block; padding-right:0px; margin-right:auto; border-width:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Stored Procedure Created</td>
@@ -350,7 +350,7 @@ For that I am running the following query.</div>
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="text-align:center; margin-left:auto; margin-right:auto">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh5.ggpht.com/-MiDlADgGWsM/UwcVijjfujI/AAAAAAAACOc/lyZthu1bte4/s1600-h/Picture12%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture12" src="-picture12_thumb%25255b3%25255d.png?imgmax=800" alt="Picture12" width="129" height="25" style="float:none; margin-left:auto; display:block; margin-right:auto"></a></td>
+<td style="text-align:center"><a href="http://lh5.ggpht.com/-MiDlADgGWsM/UwcVijjfujI/AAAAAAAACOc/lyZthu1bte4/s1600-h/Picture12%25255B5%25255D.png" style="margin-left:auto; margin-right:auto"><img title="Picture12" src="http://lh3.ggpht.com/-hVb8HK_BevQ/UwcVjIA_MHI/AAAAAAAACOk/hgIIKauEeE8/Picture12_thumb%25255B3%25255D.png?imgmax=800" alt="Picture12" width="129" height="25" style="float:none; margin-left:auto; display:block; margin-right:auto"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Result</td>

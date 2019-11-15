@@ -106,7 +106,7 @@ client.GetStringAsync(_address).ContinueWith(&nbsp;
 </div>
 </div>
 <p>When you run the application you should see the result displayed:</p>
-<p><img id="63522" src="63522-self%20host%20web%20api.png" alt="" width="514" height="262">&nbsp;</p>
+<p><img id="63522" src="http://i1.code.msdn.s-msft.com/aspnet-web-api-self-host-30abca12/image/file/63522/1/self%20host%20web%20api.png" alt="" width="514" height="262">&nbsp;</p>
 <h1>More Information</h1>
 <div><a href="http://www.asp.net/web-api">ASP.NET Web API home page</a></div>
 <div><a href="http://www.asp.net/web-api/overview/hosting-aspnet-web-api/self-host-a-web-api">Tutorial: Self-host a Web API</a></div>

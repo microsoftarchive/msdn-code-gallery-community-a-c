@@ -42,7 +42,7 @@
 <div>This project covers everything you need to know about ComboBoxes and so much more! It covers populating data from many sources and types, as well as binding and generating list items with code-behind and MVVM style sources. This applies to any ItemsControl
  like ListBoxes and also DataGridComboBoxColumns.</div>
 <div></div>
-<div><img id="67001" src="67001-combos.png" alt="" width="613" height="273"></div>
+<div><img id="67001" src="http://i1.code.msdn.s-msft.com/best-combobox-tutorial-5cc27f82/image/file/67001/1/combos.png" alt="" width="613" height="273"></div>
 <div>&nbsp;</div>
 <h1><span>Building the Sample</span></h1>
 <div>Just download, unzip, open and run!</div>
@@ -393,4 +393,4 @@
 </div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

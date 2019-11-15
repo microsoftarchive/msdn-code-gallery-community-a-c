@@ -27,9 +27,9 @@
 <p lang="en-US"><strong>STEP 2 - Create ASP.NET MVC Web Application</strong></p>
 <p lang="en-US"><span lang="pt">Go to Visual Studio</span><span lang="en-US">&rsquo;</span><span lang="pt">s&nbsp;</span><span lang="en-US">File New Project</span><span lang="en-US">&nbsp;menu, expand the&nbsp;</span><span lang="en-US">Web</span><span lang="en-US">&nbsp;category,
  and pick&nbsp;</span><span lang="en-US">ASP.NET Web Application like on the image below</span></p>
-<p lang="en-US"><img id="172232" src="172232-angular4_1.png" alt="" width="600" height="400"></p>
+<p lang="en-US"><img id="172232" src="https://code.msdn.microsoft.com/site/view/file/172232/1/Angular4_1.PNG" alt="" width="600" height="400"></p>
 <p>Select the template MVC:</p>
-<p><img id="172233" src="172233-angular4_2.png" alt="" width="600" height="400"></p>
+<p><img id="172233" src="https://code.msdn.microsoft.com/site/view/file/172233/1/Angular4_2.PNG" alt="" width="600" height="400"></p>
 <p>&nbsp;</p>
 <p lang="en-US"><strong>STEP 3 - Configure Angular 4</strong></p>
 <p lang="en-US">We need now to prepare our frontend to run Angular 4</p>

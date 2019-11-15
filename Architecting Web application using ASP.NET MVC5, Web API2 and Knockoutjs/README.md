@@ -35,15 +35,15 @@
 </strong></span></p>
 <p><strong>Form validation are done using MVC <a title="FluentValidation " href="http://fluentvalidation.codeplex.com/wikipage?title=mvc">
 Fluentvalidation </a>and display validation messages as sliding bar with auto close.</strong></p>
-<p><img id="108879" src="108879-validation.jpg" alt="" width="660" height="378"></p>
+<p><img id="108879" src="http://i1.code.msdn.s-msft.com/architecting-web-5dfc3130/image/file/108879/1/validation.jpg" alt="" width="660" height="378"></p>
 <p>&nbsp;</p>
-<p><img id="108880" src="108880-success%20message.jpg" alt="" width="660" height="149"></p>
+<p><img id="108880" src="http://i1.code.msdn.s-msft.com/architecting-web-5dfc3130/image/file/108880/1/success%20message.jpg" alt="" width="660" height="149"></p>
 <p>&nbsp;</p>
 <p><strong>Jquery <a title="BlockUI" href="http://malsup.com/jquery/block/">BlockUI
 </a>for freezing screen while ajax submitting.</strong></p>
-<p><img id="108881" src="108881-wait%20message.jpg" alt="" width="660" height="311"></p>
+<p><img id="108881" src="http://i1.code.msdn.s-msft.com/architecting-web-5dfc3130/image/file/108881/1/wait%20message.jpg" alt="" width="660" height="311"></p>
 <p><span style="color:#ff6600"><strong style="font-size:medium">Project Layers</strong></span></p>
-<p><img id="108819" src="108819-layered.jpg" alt="" width="660" height="206"></p>
+<p><img id="108819" src="http://i1.code.msdn.s-msft.com/architecting-web-5dfc3130/image/file/108819/1/layered.jpg" alt="" width="660" height="206"></p>
 <p>&nbsp;</p>
 <p><span style="text-decoration:underline"><span style="font-size:medium"><strong><span style="color:#ff6600">Point of intersts</span></strong></span></span></p>
 <p style="padding-left:60px">&nbsp;</p>

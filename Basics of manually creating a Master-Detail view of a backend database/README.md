@@ -65,12 +65,12 @@ using support projects as done in this solution is a good idea</span> of there i
 SkyDrive here</a>.</span></span></span></span></p>
 <p><span style="font-size:small"><span style="color:#ff0000">&nbsp;</span></span></p>
 <p><span style="color:#000000; font-size:small">Screenshot for solution on SkyDrive.</span></p>
-<p><span style="color:#000000; font-size:small"><img id="97457" src="97457-111111am.jpg" alt="" width="621" height="416"></span></p>
+<p><span style="color:#000000; font-size:small"><img id="97457" src="http://i1.code.msdn.s-msft.com/basics-of-manuall-creating-aa1a5c3d/image/file/97457/1/111111am.jpg" alt="" width="621" height="416"></span></p>
 <p>&nbsp;</p>
 <p><span style="font-size:small"><span style="color:#ff0000"><strong>10/2012</strong></span> Modified the solution (see readme file)&nbsp;included with this article to assist with working with detail data and gave it a home on
 <a href="https://skydrive.live.com/redir?resid=A3D5A9A9A28080D1!378&authkey=!ADX5OULvJk3p4Mw">
 SkyDrive here</a></span></p>
 <p><span style="font-size:small">Screenshot for solution on SkyDrive. </span></p>
-<p><span style="font-size:small"><img id="97407" src="97407-skydrive1.jpg" alt="" width="652" height="338"></span></p>
+<p><span style="font-size:small"><img id="97407" src="http://i1.code.msdn.s-msft.com/basics-of-manuall-creating-aa1a5c3d/image/file/97407/1/skydrive1.jpg" alt="" width="652" height="338"></span></p>
 <div class="mcePaste" id="_mcePaste" style="width:1px; height:1px; overflow:hidden; top:0px; left:-10000px">
 </div>

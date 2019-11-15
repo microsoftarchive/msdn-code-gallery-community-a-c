@@ -65,7 +65,7 @@ Open Visual Studio and select File &gt;&gt; New &gt;&gt; Project.&nbsp;After sel
  available project types. Put the name of the project as&nbsp;<em>BlazorDemo&nbsp;</em>and press OK.</div>
 <div></div>
 <div></div>
-<div><img id="199331" src="199331-create_1.png" alt="" width="650" height="398"></div>
+<div><img id="199331" src="https://i1.code.msdn.s-msft.com/aspnet-core-getting-7039bf70/image/file/199331/1/create_1.png" alt="" width="650" height="398"></div>
 <div></div>
 <div></div>
 <div></div>
@@ -78,7 +78,7 @@ Open Visual Studio and select File &gt;&gt; New &gt;&gt; Project.&nbsp;After sel
 <div></div>
 <div></div>
 <div></div>
-<div><img id="199333" src="199333-create_2.png" alt="" width="650" height="426"></div>
+<div><img id="199333" src="https://i1.code.msdn.s-msft.com/aspnet-core-getting-7039bf70/image/file/199333/1/create_2.png" alt="" width="650" height="426"></div>
 <p><img id="197285" src="197285-create_2.png" alt=""></p>
 </div>
 </span></div>
@@ -86,7 +86,7 @@ Open Visual Studio and select File &gt;&gt; New &gt;&gt; Project.&nbsp;After sel
 <div><span style="font-size:small"><br>
 </span></div>
 <div></div>
-<div><span style="font-size:small"><img id="199332" src="199332-solutionexp_1.png" alt="" width="244" height="434"><br>
+<div><span style="font-size:small"><img id="199332" src="https://i1.code.msdn.s-msft.com/aspnet-core-getting-7039bf70/image/file/199332/1/solutionexp_1.png" alt="" width="244" height="434"><br>
 </span></div>
 <div><span style="font-size:small"><br>
 </span></div>
@@ -96,7 +96,7 @@ Open Visual Studio and select File &gt;&gt; New &gt;&gt; Project.&nbsp;After sel
 <div><span style="font-size:small"><span><br>
 </span></span></div>
 <div></div>
-<div><span style="font-size:small"><span><img id="199334" src="199334-execution_1.png" alt="" width="650" height="235"><br>
+<div><span style="font-size:small"><span><img id="199334" src="https://i1.code.msdn.s-msft.com/aspnet-core-getting-7039bf70/image/file/199334/1/execution_1.png" alt="" width="650" height="235"><br>
 </span></span></div>
 <div><span style="font-size:small"><span><br>
 </span></span></div>
@@ -105,7 +105,7 @@ Open Visual Studio and select File &gt;&gt; New &gt;&gt; Project.&nbsp;After sel
 <h1>Create a Sample Calculator Using Blazor</h1>
 <p><span style="font-size:small">We are going to create a basic calculator app, which is able to do addition, subtraction, multiplication, and division.&nbsp;Right click on Pages folder and select Add &gt;&gt; New Item. An &ldquo;Add New Item&rdquo; dialog
  box will open. Select&nbsp;<em>Web</em>&nbsp;from the left panel,&nbsp;then select &ldquo;Razor View&rdquo; from templates panel and put the name as&nbsp;<em>Calculator.cshtml</em>. Press Add.</span></p>
-<p><span style="font-size:small"><img id="199335" src="199335-addview.png" alt="" width="650" height="398"><br>
+<p><span style="font-size:small"><img id="199335" src="https://i1.code.msdn.s-msft.com/aspnet-core-getting-7039bf70/image/file/199335/1/addview.png" alt="" width="650" height="398"><br>
 </span></p>
 <p><span style="font-size:small">Open&nbsp;</span><em style="font-size:small">Calculator.cshtml&nbsp;</em><span style="font-size:small">and put the following code into it.</span></p>
 <div class="scriptcode">
@@ -266,7 +266,7 @@ void&nbsp;ToggleNavMenu()&nbsp;
 <div><span style="font-size:small"><br>
 </span></div>
 <div></div>
-<div><span style="font-size:small"><img id="199336" src="199336-calcdemo.png" alt="" width="650" height="291"><br>
+<div><span style="font-size:small"><img id="199336" src="https://i1.code.msdn.s-msft.com/aspnet-core-getting-7039bf70/image/file/199336/1/calcdemo.png" alt="" width="650" height="291"><br>
 </span></div>
 <div><span style="font-size:small"><br>
 </span></div>
@@ -274,13 +274,13 @@ void&nbsp;ToggleNavMenu()&nbsp;
 <div><span style="font-size:small"><br>
 </span></div>
 <div></div>
-<div><span style="font-size:small"><img id="199337" src="199337-addnumbers.png" alt="" width="650" height="295"><br>
+<div><span style="font-size:small"><img id="199337" src="https://i1.code.msdn.s-msft.com/aspnet-core-getting-7039bf70/image/file/199337/1/addnumbers.png" alt="" width="650" height="295"><br>
 </span></div>
 <p>&nbsp;</p>
 <p><span style="font-size:small">Now try to perform division on two numbers. You can get the result in Result textbox. If you try to perform division by Zero, you will get an error message &quot;Cannot Divide by Zero&quot;.</span></p>
 <p><span style="font-size:small"><br>
 </span></p>
-<p><img id="199338" src="199338-divide.png" alt="" width="650" height="295"></p>
+<p><img id="199338" src="https://i1.code.msdn.s-msft.com/aspnet-core-getting-7039bf70/image/file/199338/1/divide.png" alt="" width="650" height="295"></p>
 <p><span style="font-size:small"><img id="197291" src="197291-divide.png" alt=""><br>
 </span></p>
 <p><span style="font-size:small">Similarly, try other operations and see the result.</span></p>

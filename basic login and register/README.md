@@ -21,7 +21,7 @@
 </li><li><em>It allowes you to remember the last entered username and password</em> </li><li><em>The password textbox is password-characters only that means you can't see the password only '*'</em>
 </li></ol>
 <p>Picture:</p>
-<p><img src="46940-userdoesnotexist.png" alt="" width="437" height="176"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/basic-login-and-register-177a0647/image/file/46940/1/userdoesnotexist.png" alt="" width="437" height="176"></p>
 <h1><span>Building the Sample</span></h1>
 <p><em>Usefull to use <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.IO.aspx" target="_blank" title="Auto generated link to System.IO">System.IO</a> it will spare some text to be typen, you need to use a directory that is write &amp; readable from the application else it won't work.</em></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>

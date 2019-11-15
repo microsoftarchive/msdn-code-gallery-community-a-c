@@ -35,4 +35,4 @@ FireFox User Agent Switcher</a>. </li></ul>
 <a href="http://go.microsoft.com/fwlink/?LinkId=228307">starter project</a>. The following screenshot shows the tags page of the completed application as seen in the
 <a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27153">
 Windows 7 Phone Emulator (RC)</a>.</p>
-<p><em>&nbsp;<img src="44106-windows-live-writer_asp.net-mvc-4-mobile-features_d2ff_p1_tags_completedproj_thumb%5b1%5d.png" alt="" width="613" height="1096"></em></p>
+<p><em>&nbsp;<img src="http://i1.code.msdn.s-msft.com/aspnet-mvc-4-mobile-e99ed0ed/image/file/44106/1/windows-live-writer_asp.net-mvc-4-mobile-features_d2ff_p1_tags_completedproj_thumb%5b1%5d.png" alt="" width="613" height="1096"></em></p>

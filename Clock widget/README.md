@@ -20,7 +20,7 @@
 
 <p><span style="font-family:Calibri; font-size:small">This sample demonstrates how to build a desktop clock gadget/ widget using windows form application and it also demonstrates use of
 <strong>circular progress bar</strong>.</span></p>
-<p><span style="font-family:Calibri; font-size:small"><img id="175898" src="175898-clock.png" alt="" width="344" height="287"><br>
+<p><span style="font-family:Calibri; font-size:small"><img id="175898" src="https://i1.code.msdn.s-msft.com/clock-widget-56214a5b/image/file/175898/1/clock.png" alt="" width="344" height="287"><br>
 </span></p>
 <p><span style="font-family:Calibri; font-size:small">Create a new windows form application project
 </span></p>

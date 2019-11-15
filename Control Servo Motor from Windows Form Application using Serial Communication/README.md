@@ -55,7 +55,7 @@
 <strong>ServoControl.sln</strong> file in visual studio. </span></div>
 <div><span style="font-size:small">In Solution Explorer open <strong>Form1.cs[Design]</strong> file you will notice that I there is a
 <strong>T</strong><strong>rackBar</strong> control on Form.</span></div>
-<div><img id="180137" width="570" height="235" src="180137-trackbar.png" alt=""></div>
+<div><img id="180137" width="570" height="235" src="https://i1.code.msdn.s-msft.com/control-servo-motor-from-a61c06ac/image/file/180137/1/trackbar.png" alt=""></div>
 <div><span style="font-size:small">In properties Minimum value was set to 1 and Maxmimun value was set to 180.&nbsp;</span></div>
 <div><span style="font-size:small"><br>
 </span></div>

@@ -722,15 +722,15 @@
 </div>
 </div>
 <p><span style="font-size:small">That is all. We have successfully created a wonderful JQX Grid as in the following:</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_8991"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality1.jpg"><img class="size-full x_x_wp-image-8991" src="-advanced-jqx-grid-with-all-functionality1.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="528"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_8991"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality1.jpg"><img class="size-full x_x_wp-image-8991" src="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality1.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="528"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Advanced JQX Grid With All Functionality</span></p>
 </div>
-<div class="wp-caption x_x_alignnone" id="attachment_9001"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality2.jpg"><img class="size-full x_x_wp-image-9001" src="-advanced-jqx-grid-with-all-functionality2.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="536"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_9001"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality2.jpg"><img class="size-full x_x_wp-image-9001" src="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality2.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="536"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Advanced JQX Grid With All Functionality</span></p>
 </div>
-<div class="wp-caption x_x_alignnone" id="attachment_9011"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality3.jpg"><img class="size-full x_x_wp-image-9011" src="-advanced-jqx-grid-with-all-functionality3.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="530"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_9011"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality3.jpg"><img class="size-full x_x_wp-image-9011" src="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality3.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="530"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Advanced JQX Grid With All Functionality</span></p>
 </div>
@@ -847,7 +847,7 @@
 </div>
 </div>
 <p><span style="font-size:small">Now your output looks like the following:</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_9021"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality4.jpg"><img class="size-full x_x_wp-image-9021" src="-advanced-jqx-grid-with-all-functionality4.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="522"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_9021"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality4.jpg"><img class="size-full x_x_wp-image-9021" src="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality4.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="522"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Advanced JQX Grid With All Functionality</span></p>
 </div>
@@ -908,7 +908,7 @@
 <div class="endscriptcode">&nbsp;<span style="font-size:small">Well, that&rsquo;s all; you have now done everything. We can now see the page as,</span></div>
 </div>
 </div>
-<div class="wp-caption x_x_alignnone" id="attachment_9031"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality5.jpg"><img class="size-full x_x_wp-image-9031" src="-advanced-jqx-grid-with-all-functionality5.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="478"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_9031"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality5.jpg"><img class="size-full x_x_wp-image-9031" src="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality5.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="478"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Advanced JQX Grid With All Functionality</span></p>
 </div>
@@ -999,7 +999,7 @@
 <div class="endscriptcode"><span style="font-size:small">Then you will get a filtering option as follows:</span></div>
 </div>
 </div>
-<div class="wp-caption x_x_alignnone" id="attachment_9041"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality6.jpg"><img class="size-full x_x_wp-image-9041" src="-advanced-jqx-grid-with-all-functionality6.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="407"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_9041"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality6.jpg"><img class="size-full x_x_wp-image-9041" src="http://sibeeshpassion.com/wp-content/uploads/2014/10/advanced-jqx-grid-with-all-functionality6.jpg" alt="Advanced JQX Grid With All Functionality" width="650" height="407"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Advanced JQX Grid With All Functionality</span></p>
 </div>

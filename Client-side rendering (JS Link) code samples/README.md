@@ -20,7 +20,7 @@
 <p>Those samples help you learn how to customize a field type by using the <strong>
 Client-Side Rendering </strong>(also called <em>CSR</em>, <em>JS Link</em>) technology in SharePoint 2013.</p>
 <p>&nbsp;</p>
-<p><img id="96784" src="96784-spfield.jslink%20templates.png" alt="SPField.JSLink templates " width="662" height="187" style="border:1px solid black"></p>
+<p><img id="96784" src="http://i1.code.msdn.s-msft.com/client-side-rendering-js-2ed3538a/image/file/96784/1/spfield.jslink%20templates.png" alt="SPField.JSLink templates " width="662" height="187" style="border:1px solid black"></p>
 <p>&nbsp;</p>
 <h1>Overview</h1>
 <p>Client-side rendering is a new concept in SharePoint 2013. It&rsquo;s provides you with a mechanism that allow you to use your own output render for a set of controls that are hosted in a SharePoint page (<em>list views, display, add and Edit forms</em>).

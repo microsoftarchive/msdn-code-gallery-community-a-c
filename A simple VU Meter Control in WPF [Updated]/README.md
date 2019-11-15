@@ -20,7 +20,7 @@
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p><em>Use a WPF UserControl which bind itsself collection to generate the VU Meter cells. By DataTemplate and with trigger to generate the different color for these cells.</em></p>
 <p><em>&nbsp;</em></p>
-<p><img src="42242-untitled.png" alt="" width="184" height="427"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/a-simple-vu-meter-control-f2bd097c/image/file/42242/1/untitled.png" alt="" width="184" height="427"></p>
 <p><em>Declare one Value DP in this control, and in its callback method to change the cell visiblity property.</em></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

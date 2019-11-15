@@ -22,14 +22,14 @@ ContextMenuStrip</a>&nbsp;を用いてこの機能を下記のように実装す
 <a href="/ja-jp//C-Windows-dc42087f/">[C#]&nbsp;Windows フォームによるクライアント アプリケーション開発</a>を参照してください。</p>
 <ol>
 <li>Windows フォーム アプリケーション プロジェクトを作成し、フォームに TextBox コントロール、ContextMenuStrip コントロールを追加します。
-<p><img src="18757-image001.gif" alt="図 1" width="580" height="344"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/windowsform-howto-83770831/image/file/18757/2/image001.gif" alt="図 1" width="580" height="344"></p>
 </li><li>ContextMenuStrip コントロールに &ldquo;新しいウィンドウ&rdquo; という表記の項目を追加し、追加された <a href="http://msdn.microsoft.com/ja-jp/library/system.windows.forms.toolstripmenuitem%28v=VS.100%29.aspx" target="_blank">
 ToolStripMenuItem</a>&nbsp;の Name を &ldquo;newWindowMenuItem&rdquo; と設定します。
-<p><img src="18758-image002.gif" alt="図 2" width="580" height="289"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/windowsform-howto-83770831/image/file/18758/2/image002.gif" alt="図 2" width="580" height="289"></p>
 </li><li>メニュー項目がマウスでクリックされたイベントについては、<a href="http://msdn.microsoft.com/ja-jp/library/system.windows.forms.toolstrip.itemclicked.aspx" target="_blank">ContextMenuStrip.ItemClicked</a>&nbsp;イベント、あるいは 先ほど追加したアイテムの
 <a href="http://msdn.microsoft.com/ja-jp/library/system.windows.forms.toolstripitem.click.aspx" target="_blank">
 ToolStripMenuItem.Click</a>&nbsp;イベントのいずれかをハンドルします。ContextMenuStrip.ItemClicked イベントをハンドルし、Name プロパティを判定基準として新しいウィンドウを表示させるコードは下記の通りです。
-<p><img src="18759-image003.gif" alt="図 3" width="500" height="347"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/windowsform-howto-83770831/image/file/18759/1/image003.gif" alt="図 3" width="500" height="347"></p>
 <br>
 <br>
 <div class="scriptcode">
@@ -61,9 +61,9 @@ ToolStripMenuItem.Click</a>&nbsp;イベントのいずれかをハンドルし�
 <div class="endscriptcode"></div>
 <p>&nbsp;</p>
 </li><li>最後に TextBox.ContextMenuStrip プロパティに先ほどの ContextMenuStrip を設定します。
-<p><img src="18760-image004.gif" alt="図 4" width="360" height="414"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/windowsform-howto-83770831/image/file/18760/1/image004.gif" alt="図 4" width="360" height="414"></p>
 <p>実行結果は下記の通りです。</p>
-<p><img src="18761-image005.gif" alt="図 5" width="580" height="371"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/windowsform-howto-83770831/image/file/18761/1/image005.gif" alt="図 5" width="580" height="371"></p>
 <p>TextBox に入力したタイトルを持ったウィンドウが作成されます。</p>
 </li></ol>
 <p>今回は UI 部分についてはデザイナーを使用しました。コードでの UI 部分を含めた設定方法については <a href="/ja-jp/10-ContextMenuStrip-C-0eb623dc/">
@@ -83,8 +83,8 @@ ToolStripMenuItem.Click</a>&nbsp;イベントのいずれかをハンドルし�
 <table>
 <tbody>
 <tr>
-<td><a href="http://code.msdn.microsoft.com/ja-jp"><img src="-ff950935.coderecipe_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
-<td><a href="http://msdn.microsoft.com/ja-jp/windows/" target="_blank"><img src="-ff950935.windows_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Windows デベロッパー センター" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://code.msdn.microsoft.com/ja-jp"><img src="http://i.msdn.microsoft.com/ff950935.coderecipe_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/windows/" target="_blank"><img src="http://i.msdn.microsoft.com/ff950935.windows_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Windows デベロッパー センター" width="180" height="70" style="margin-top:3px"></a></td>
 <td>
 <ul>
 <li>もっと他のコンテンツを見る &gt;&gt; <a href="http://msdn.microsoft.com/ja-jp/ff363212" target="_blank">
@@ -95,4 +95,4 @@ Windows デベロッパー センターへ</a> </li></ul>
 </tr>
 </tbody>
 </table>
-<p style="margin-top:20px"><a href="#top"><img src="-top.gif" border="0" alt="">ページのトップへ</a></p>
+<p style="margin-top:20px"><a href="#top"><img src="http://www.microsoft.com/japan/msdn/nodehomes/graphics/top.gif" border="0" alt="">ページのトップへ</a></p>

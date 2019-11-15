@@ -152,7 +152,7 @@
 </div>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p><em>When running the project open a second instance of a Web browser (try different browsers) and test the chat conversation.&nbsp;</em></p>
-<p><img src="-chatsignalr.jpg" alt="ASP.Net SignalR"></p>
+<p><img src="http://eduardopires.net.br/wp-content/uploads/2013/04/ChatSignalR.jpg" alt="ASP.Net SignalR"></p>
 <ul>
 </ul>
 <h1>More Information</h1>

@@ -22,7 +22,7 @@
 <p>I made a short video to show the steps to follow to make this demo.</p>
 <p style="text-align:center"><object width="600" height="350" data="data:application/x-silverlight-2," type="application/x-silverlight-2"> <param name="source" value="/Content/Common/videoplayer.xap" /> <param name="initParams" value="deferredLoad=false,duration=0,m=http://code.msdn.microsoft.com/site/view/file/93141/1/MVC5%20by%20Houssem%20Dellai%20-%20part%201.wmv,autostart=false,autohide=true,showembed=true"
  /> <param name="background" value="#00FFFFFF" /> <param name="minRuntimeVersion" value="3.0.40624.0" /> <param name="enableHtmlAccess" value="true" /> <param name="src" value="/site/view/file/93141/1/MVC5%20by%20Houssem%20Dellai%20-%20part%201.wmv" /> <param
- name="id" value="93141" /> <param name="name" value="MVC5 by Houssem Dellai - part 1.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="-?linkid=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
+ name="id" value="93141" /> <param name="name" value="MVC5 by Houssem Dellai - part 1.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
  </object> </p>
 <p><em><br>
 </em></p>

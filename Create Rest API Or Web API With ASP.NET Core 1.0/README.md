@@ -40,7 +40,7 @@
 <span style="font-size:16px">We choose &quot;Empty&quot; template in &quot;ASP.NET Core Templates&quot; Category. I think someone may have a doubt like -- without selecting a &quot;Web API&quot;, why do we choose &quot;Empty&quot; template in &quot;ASP.NET Core Templates&quot; Category ? Because the &quot;Web API&quot;
  templates automatically generate a few libraries related to REST API creation. So, we don&rsquo;t know what is happening in the background. That&rsquo;s why we choose &quot;Empty&quot; template.<br>
 </span><br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/3833.empty_2D00_asp_2D00_net_2D00_core_2D00_1_2D00_0.jpg"><img src=":-3833.empty_2d00_asp_2d00_net_2d00_core_2d00_1_2d00_0.jpg" alt="" style="border-width:0px; border-style:solid"></a></div>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/3833.empty_2D00_asp_2D00_net_2D00_core_2D00_1_2D00_0.jpg"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/3833.empty_2D00_asp_2D00_net_2D00_core_2D00_1_2D00_0.jpg" alt="" style="border-width:0px; border-style:solid"></a></div>
 <h1>References Required</h1>
 <div><br>
 <span style="font-size:16px">We need the following references for accessing Static files, libraries for Routing, and Rest API, accessing MVC design pattern, etc.<br>
@@ -175,7 +175,7 @@
 <div><br>
 <span style="font-size:16px">This is the project structure of our Rest API application.</span><br>
 <br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/1373.project-structure-asp.net-core-1.0.JPG"><img src=":-1373.project-structure-asp.net-core-1.0.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/1373.project-structure-asp.net-core-1.0.JPG"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/1373.project-structure-asp.net-core-1.0.JPG" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 </div>
 <h1>LibraryDetails.cs</h1>
@@ -529,22 +529,22 @@ Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory logge
 </div>
 </div>
 <h1>Output 1</h1>
-<div><a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0640.image001.jpg"><img src=":-0640.image001.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
+<div><a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0640.image001.jpg"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/0640.image001.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 </div>
 <h2>JSON Output 1</h2>
 <div><br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0118.json_2D00_output_2D00_1.jpg"><img src=":-0118.json_2d00_output_2d00_1.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0118.json_2D00_output_2D00_1.jpg"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/0118.json_2D00_output_2D00_1.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 </div>
 <h1>Output 2</h1>
 <div><br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/1537.out2.jpg"><img src=":-1537.out2.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/1537.out2.jpg"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/1537.out2.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 </div>
 <h2>JSON Output 2</h2>
 <div><br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/5050.json_2D00_output_2D00_2.jpg"><img src=":-5050.json_2d00_output_2d00_2.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/5050.json_2D00_output_2D00_2.jpg"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/5050.json_2D00_output_2D00_2.jpg" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 </div>
 <h1>Reference</h1>

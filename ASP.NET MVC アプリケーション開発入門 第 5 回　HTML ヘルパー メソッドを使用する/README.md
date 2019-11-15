@@ -96,7 +96,7 @@ moonmile solutions 増田 智明</a></p>
 </div>
 <p>aspx の埋め込みコードの箇所に Html.ActionLink メソッドや Html.TextBoxFor メソッドを呼び出しがあります。この「HTML.メソッド名」の部分が、HTML ヘルパー メソッドを使っているところです。</p>
 <p>この画面がどうなっているかというと、次の図になります。</p>
-<p><img src="18255-image001.jpg" alt="図 1" width="567" height="479"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18255/1/image001.jpg" alt="図 1" width="567" height="479"></p>
 <p><strong>図 1 登録</strong></p>
 <p>ユーザーのログオン画面です。<br>
 ログオン画面は Internet Explorer などのブラウザで表示されているので、ハイパー リンクには a タグが、テキスト ボックスには input タグが使われています。この HTML タグを生成している箇所で HTML ヘルパー メソッドが使われています。</p>
@@ -272,7 +272,7 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 <h2 id="03">3. モデルを表示するビューを自動生成する</h2>
 <p>準備はできたので、ビュー (Contact.aspx) を作成しましょう。<br>
 ビューは、ソリューション エクスプローラーから自動生成します。次のようにビューの追加ダイアログでは、ビュー コンテンツに「Edit」を選択します。</p>
-<p><img src="18267-image002.png" alt="図 2" width="443" height="516"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18267/1/image002.png" alt="図 2" width="443" height="516"></p>
 <p><strong>図 2 ビューの追加</strong></p>
 <p>自動生成した結果が次の通りです。</p>
 <div class="scriptcode">
@@ -472,7 +472,7 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 </div>
 <div class="endscriptcode"></div>
 <p>この中で既に HTML ヘルパー メソッドがたくさん使われています。実行した結果と見比べて詳しく示してみましょう。</p>
-<p><img src="18268-image003.jpg" alt="図 3" width="566" height="494"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18268/1/image003.jpg" alt="図 3" width="566" height="494"></p>
 <p><strong>図 3 実行結果</strong></p>
 <p>入力用のテキスト&nbsp;ボックスなどを使うときには、Html.BeginForm メソッドで form タグを開始します。この時の action 属性が自動的割り振られます。form タグの終了は、自動生成のコードのように using で囲っても良いし、HtmlEndForm メソッドを使い明示的に閉じても構いません。</p>
 <div style="margin:5px 0px 10px 0; padding:10px; background-color:#dedfde">
@@ -587,7 +587,7 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 </div>
 <p>自動生成された Html.TextBoxFor メソッドなどの記述を削除して、Html.EditorForModel メソッドを呼び出します。</p>
 <p>これを実行すると次の図になります。</p>
-<p><img src="18269-image004.jpg" alt="図 4" width="566" height="494"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18269/1/image004.jpg" alt="図 4" width="566" height="494"></p>
 <p><strong>図 4 実行結果</strong></p>
 <p>多少違いがありますが、ほとんど同じ結果が得られます。プログラム言語の選択を指定している部分 (ProgCSharp プロパティなど) は、bool 型であることを判断して、チェックボックスに置き換えられています。</p>
 <p>このように編集の場合は Html.EditorForModel メソッド、表示の場合は Html.DisplayForModel メソッドを使い手早く画面を作成することができます。データベースを扱う定型的な管理画面であれば、これらのメソッドでも十分でしょう。</p>
@@ -597,10 +597,10 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 <p>Html.EditorForModel メソッドを使うと、手早く画面が作成できますが、都道府県コードの入力がテキスト&nbsp;ボックスのままになっています。この部分は、あらかじめ設定された都道府県からドロップ&nbsp;ダウン&nbsp;リストを使って選択したいところです。</p>
 <p><a href="http://msdn.microsoft.com/ja-jp/library/ee430912.aspx" target="_blank">Html.EditorForModel メソッド</a>にはテンプレートを利用して、HTML タグなどを埋め込む機能があります。この機能を利用して、都道府県のドロップ ダウンを使う編集画面を作ってみましょう。</p>
 <p>まず、ソリューション エクスプローラーで Views/Shared/EditorTemplates フォルダーを作成します。このフォルダーに「Contact.acsx」という名前でユーザー コントロールを追加します。</p>
-<p><img src="18271-image005.jpg" alt="図 4-1" width="283" height="259"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18271/1/image005.jpg" alt="図 4-1" width="283" height="259"></p>
 <p><strong>図 4-1 コントロールの追加</strong></p>
 <p>EditorTemplates フォルダーを右クリックして、普通のビューを作るようにビューの追加ダイアログ ボックスを開きます。この時、「部分ビュー (.ascx) を作成する」にチェックをいれて、ユーザー コントロールを作成します。ビュー データ クラスでは、ContactModel クラスを指定します。</p>
-<p><img src="18272-image006.png" alt="図 4-2" width="443" height="516"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18272/1/image006.png" alt="図 4-2" width="443" height="516"></p>
 <p><strong>図 4-2 ビューの追加</strong></p>
 <p>このユーザー コントロールに Html.EditorForModel メソッドで使うテンプレートを記述していきます。<br>
 都道府県のドロップ ダウン リストを追加したユーザー コントロールのソース コードは次の通りです。</p>
@@ -698,7 +698,7 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 </div>
 </div>
 <p>この実行結果が次の図です。</p>
-<p><img src="18273-image007.jpg" alt="図 5" width="566" height="494"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18273/1/image007.jpg" alt="図 5" width="566" height="494"></p>
 <p><strong>図 5 実行結果</strong></p>
 <p>ドロップ ダウン リストを表示するために、 Html.DropDownListFor メソッドを使っています。リストに表示する項目はあらかじめ SelectListItem オブジェクトのコレクションで作っておいたものです。ここではモデルで指定した都道府県コード (model.State) が選択された状態になります。</p>
 <p>チェック ボックスを表示するために、Html.CheckBoxFor メソッドを使っています。プロパティの bool 値により設定されます。<br>
@@ -815,7 +815,7 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 </div>
 <p>&nbsp;</p>
 <p>いくつかの項目を変更して、Save ボタンをクリックした結果が次の図になります。</p>
-<p><img src="18274-image008.jpg" alt="図 6" width="566" height="354"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18274/1/image008.jpg" alt="図 6" width="566" height="354"></p>
 <p><strong>図 6 実行結果</strong></p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
 <hr>
@@ -858,7 +858,7 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 <p>&nbsp;</p>
 <p>これを実行すると次の結果が得られます。</p>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img src="18275-image009.jpg" alt="図 7" width="566" height="477"></div>
+<div class="endscriptcode"><img src="http://i4.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18275/1/image009.jpg" alt="図 7" width="566" height="477"></div>
 <p><strong>図 7 実行結果</strong></p>
 <p>残念ながら、うまく改行されていません。</p>
 <p>メッセージの部分で改行を変換したときの br タグが、そのまま表示されています。</p>
@@ -901,7 +901,7 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 </div>
 </div>
 <p>これを実行すると次の結果が得られます。</p>
-<p><img src="18276-image010.jpg" alt="図 8" width="566" height="477"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18276/1/image010.jpg" alt="図 8" width="566" height="477"></p>
 <p><strong>図 8 実行結果</strong></p>
 <p>ただし、HTML エンコードをしない場合は、JavaScript を動作させる script タグや iframe タグなどが有効になるので、このようにテキスト エリアの入力をそのまま表示してしまうことは危険です。適切に HTML エンコードをするとよいでしょう。</p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
@@ -910,7 +910,7 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 <p>ここまでは、ASP.NET MVC 2 のビューである aspx での HTML ヘルパーメソッドを解説していきましたが、既に2010年2月の時点で、<a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=d2928bc1-f48c-4e95-a064-2a455a22c8f6&displayLang=ja" target="_blank">ASP.NET MVC 3</a> の正式リリースが行われています 。これをダウンロードして、ASP.NET
  MVC 3 の新しいビュー エンジンである Razor では HTML ヘルパー メソッドがどのように使われているか見ておきましょう。</p>
 <p>ビューを追加する時に ビュー エンジンで「Razor(CSHTML)」 (VB では、Razor(VBHTML)) を選択します。</p>
-<p><img src="18277-image011.png" alt="図 9" width="511" height="598"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18277/1/image011.png" alt="図 9" width="511" height="598"></p>
 <p><strong>図 9 ビューの追加</strong></p>
 <p>自動生成した Contact.cshtml (VB の場合は Contact.vbhtml) を、ドロップ ダウン リストなどを使うように書き直したのが次のコードになります。</p>
 <div class="scriptcode">
@@ -1053,7 +1053,7 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 </div>
 </div>
 <p>これを実行した結果が次の図です。</p>
-<p><img src="18278-image012.jpg" alt="図 10" width="567" height="508"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-5f2b021b/image/file/18278/1/image012.jpg" alt="図 10" width="567" height="508"></p>
 <p><strong>図 10 実行結果</strong></p>
 <p>詳しい説明は省きますが、Razor のビュー エンジンを使うと、「@Html.EditorFor(...)」のように、@ の後にコードを記述することができます。単純なプロパティの表示やメソッドの利用、C# や Visual Basic のコードとHTML タグを自然に混在させることができるので、aspx とは違ったビューの記述ができると思います。</p>
 <p>また、ASP.NET MVC 3 でも、ビューエンジンとして aspx を選択できますから、従来型の「&lt;% ... %&gt;」を使うこともできます。</p>
@@ -1068,8 +1068,8 @@ HtmlHelper クラス</a>の各メソッドになります。ビューの Html �
 <table>
 <tbody>
 <tr>
-<td><a href="http://msdn.microsoft.com/ja-jp/samplecode.recipe" target="_blank"><img title="Code Recipe" src="-ff950935.coderecipe_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
-<td><a href="http://msdn.microsoft.com/ja-jp/asp.net/" target="_blank"><img title="ASP.NET デベロッパーセンター" src="-ff950935.asp_net_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/samplecode.recipe" target="_blank"><img title="Code Recipe" src="http://i.msdn.microsoft.com/ff950935.coderecipe_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/asp.net/" target="_blank"><img title="ASP.NET デベロッパーセンター" src="http://i.msdn.microsoft.com/ff950935.ASP_NET_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
 <td>
 <ul>
 <li>もっと他のコンテンツを見る &gt;&gt; <a href="http://msdn.microsoft.com/ja-jp/asp.net/gg490787" target="_blank">
@@ -1080,4 +1080,4 @@ ASP.NET デベロッパーセンターへ</a> </li></ul>
 </tr>
 </tbody>
 </table>
-<p style="margin-top:20px"><a href="#top"><img src="-top.gif" border="0" alt="">ページのトップへ</a></p>
+<p style="margin-top:20px"><a href="#top"><img src="http://www.microsoft.com/japan/msdn/nodehomes/graphics/top.gif" border="0" alt="">ページのトップへ</a></p>

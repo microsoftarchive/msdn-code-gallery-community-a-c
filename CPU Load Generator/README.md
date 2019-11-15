@@ -47,12 +47,12 @@
 <p>&nbsp;</p>
 <p><span style="font-size:small"><em>Following are the screenshots. When you open the application, it shows groupbox (having option to select the load) for each CPU on the machine. Click on the radio button to select the load which you want for the given CPU.</em></span></p>
 <p>&nbsp;</p>
-<p><span style="font-size:small"><em><img id="115067" src="115067-cpu%20load%20generator.png" alt="" width="476" height="393"></em></span></p>
+<p><span style="font-size:small"><em><img id="115067" src="http://i1.code.msdn.s-msft.com/cpu-load-generator-f2677be1/image/file/115067/1/cpu%20load%20generator.png" alt="" width="476" height="393"></em></span></p>
 <p>&nbsp;</p>
 <p><span style="font-size:small"><em>As soon as you change the option in UI, CPU load would be adjusted accordingly. You can open the task manager to see the CPU load.</em></span></p>
 <p><span style="font-size:small"><em><br>
 </em></span></p>
-<p><img id="115069" src="115069-task%20manager.png" alt="" width="437" height="486"></p>
+<p><img id="115069" src="http://i1.code.msdn.s-msft.com/cpu-load-generator-f2677be1/image/file/115069/1/task%20manager.png" alt="" width="437" height="486"></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p><span style="font-size:medium">Internally it uses Background worker threads to monitor and generate the load on CPU. For thread synchronization it used ManualReset event.</span></p>

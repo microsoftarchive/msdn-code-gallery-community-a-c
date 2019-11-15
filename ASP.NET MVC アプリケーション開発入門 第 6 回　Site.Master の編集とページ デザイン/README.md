@@ -33,7 +33,7 @@ moonmile solutions 増田 智明</a></p>
 <h2 id="02">2. マスター ページとは</h2>
 <p>最初に、マスター ページ (Site.Master) がどのように使われているのか見ていきましょう。<br>
 マスター ページは、ソリューション エクスプローラーを開くと Views/Shared/Site.Master の場所にあります。</p>
-<p><img src="18803-image001.gif" alt="図 1" width="330" height="461"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18803/1/image001.gif" alt="図 1" width="330" height="461"></p>
 <p><strong>図 1 ソリューション エクスプローラー</strong></p>
 <p>ASP.NET MVC アプリケーションを作成したときは、Site.Master というファイルがひとつだけしかありませんが、このファイルは複数作ることができます。<br>
 マスター ページは、他のビューのページ (*.aspx) と同じように HTML タグと ASP.NET のインライン コードで作成されています。</p>
@@ -63,7 +63,7 @@ moonmile solutions 増田 智明</a></p>
 </div>
 </div>
 <p>すると、以下の図のように表題が変更になります。</p>
-<p><img src="18804-image002.gif" alt="図 2" width="559" height="418"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18804/1/image002.gif" alt="図 2" width="559" height="418"></p>
 <p><strong>図 2 実行結果</strong></p>
 <p><strong><br>
 </strong></p>
@@ -106,7 +106,7 @@ moonmile solutions 増田 智明</a></p>
 </div>
 </div>
 <p>するとブラウザーのタイトル部分が変更されます。</p>
-<p><img src="18805-image003.gif" alt="図 3" width="559" height="233"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18805/1/image003.gif" alt="図 3" width="559" height="233"></p>
 <p><strong>図 3 実行結果</strong></p>
 <p>&nbsp;</p>
 <p>このように、サイトとして統一した部分はマスター ページ (Site.Master など) に記述し、それぞれのページに特有な情報はビュー (Index.aspx など) に記述し、それぞれを使い分けます。</p>
@@ -116,12 +116,12 @@ moonmile solutions 増田 智明</a></p>
 <p>もう少し詳しくマスター ページとコンテンツのページとを比較していきましょう。</p>
 <p>先ほど、Index.aspx のファイルでブラウザーのタイトルを記述しましたが、これはどこに反映されているのでしょうか。Index.aspx ファイルでは、asp:Content という ASP.NET のタグを使って値を定義しています。これに、ContentPlaceHolderID 属性で値を「TitleContent」として設定していました。</p>
 <p>今度は、Site.Master ファイルを見ていくと、title タグの間に、asp:ContentPlaceHolder という ASP.NET のタグが指定されています。この ID の値は、「TitleContent」となっています。</p>
-<p><img src="18806-image004.gif" alt="図 4-1" width="559" height="356"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18806/1/image004.gif" alt="図 4-1" width="559" height="356"></p>
 <p><strong>図 4-1 マスター ページとコンテンツ ページの関係 - 1</strong></p>
 <p><strong><br>
 </strong></p>
 <p>同じように商品リストを表示しているコンテンツを見ていくと asp:Content タグの ContentPlaceHolderID 属性に「MainContent」という値が設定されています。Site.Master ファイルでは、asp:ContentPlaceHolder タグの ID 属性に「MainContent」が設定されています。</p>
-<p><img src="18807-image005.gif" alt="図 4-2" width="580" height="568"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18807/1/image005.gif" alt="図 4-2" width="580" height="568"></p>
 <p><strong>図 4-2 マスター ページとコンテンツページの関係 - 2</strong></p>
 <p><strong><br>
 </strong></p>
@@ -131,12 +131,12 @@ moonmile solutions 増田 智明</a></p>
 <h2 id="04">4. 特定のページだけマスター ページを切り替える</h2>
 <p>マスター ページはサイトにひとつだけではありません。コンテンツ ページから利用するマスター ページを切り替えることができます。例えば、お問い合わせのページや運営会社の説明のページだけのデザインを別にすることが可能です。</p>
 <p>通常は、新しいページを追加するときにマスター ページを選択しますが、今回は既にある「このサイトについて」の about.aspx のマスター ページを切り替えてみましょう。</p>
-<p><img src="18808-image006.gif" alt="図 5-1" width="443" height="516"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18808/1/image006.gif" alt="図 5-1" width="443" height="516"></p>
 <p><strong>図 5-1 ビューの追加 - 1</strong></p>
 <p><strong><br>
 </strong></p>
 <p>既にある Site.Master ファイルをコピーして、SiteAbout.Master という名前に変更します。</p>
-<p><img src="18809-image007.gif" alt="図 5-2" width="276" height="261"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18809/1/image007.gif" alt="図 5-2" width="276" height="261"></p>
 <p><strong>図 5-2 ビューの追加 - 2</strong></p>
 <p><strong><br>
 </strong></p>
@@ -195,11 +195,11 @@ moonmile solutions 増田 智明</a></p>
 </div>
 </div>
 <p>実行すると、「このサイトについて」のページの背景だけがピンク色になります。</p>
-<p><img src="18810-image008.gif" alt="図 6"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18810/1/image008.gif" alt="図 6"></p>
 <p><strong>図 6 実行結果</strong></p>
 <p>&nbsp;</p>
 <p>マスター ページを独自に作る時は、新しい項目の追加ダイアログ ボックスで「MVC 2 ビュー マスター ページ」を選択して作成していきます。</p>
-<p><img src="18812-image009.gif" alt="図 7" width="560" height="387"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18812/1/image009.gif" alt="図 7" width="560" height="387"></p>
 <p><strong>図 7 マスター ページの作成</strong></p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
 <hr>
@@ -281,7 +281,7 @@ moonmile solutions 増田 智明</a></p>
 </div>
 </div>
 <p>これを実行した結果が次の図です。</p>
-<p><img src="18814-image010.gif" alt="図 8" width="580" height="497"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18814/2/image010.gif" alt="図 8" width="580" height="497"></p>
 <p><strong>図 8 実行結果</strong></p>
 <p><strong><br>
 </strong></p>
@@ -291,7 +291,7 @@ moonmile solutions 増田 智明</a></p>
 <h2 id="06">6. Internet Explorer の開発ツールを使う</h2>
 <p>デザインを変更するためには、CSS (カスケード スタイル シート) を変更しますが、この記述はなかなか難しいものがあります。色々なデザイン ツールがあるので、それを使って修正してもよいのですが、ちょっとした変更であれば Internet Explorer 8/9 の「開発ツール」を使うとよいでしょう。</p>
 <p>Internet Explorer 8 のメニューを Alt キーで表示させた後に「ツール」&rarr;「開発ツール」を選択するか、F12 キーを押します。すると、次のように現在表示されているページを解析したウィンドウが表示されます。</p>
-<p><img src="18816-image011.gif" alt="図 9" width="559" height="431"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18816/1/image011.gif" alt="図 9" width="559" height="431"></p>
 <p><strong>図 9 開発ツールによるデザインの変更</strong></p>
 <p><strong><br>
 </strong></p>
@@ -304,17 +304,17 @@ moonmile solutions 増田 智明</a></p>
 <p>最後に ASP.NET MVC 3 の新しい Razor ビュー エンジンでは、マスター ページと同等の機能がどのように用意されているかを見ていきましょう。</p>
 <p>ソリューション エクスプローラーを見ると、マスター ページに当たるものは Views/Shared/_Layout.cshtml (VB の場合は _Layout.vbhtml) になります。</p>
 <p>&nbsp;</p>
-<p><img src="18817-image012.gif" alt="図 10" width="261" height="239"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18817/1/image012.gif" alt="図 10" width="261" height="239"></p>
 <p><strong>図 10 Razor ビュー エンジンのレイアウト ページ</strong></p>
 <p>コンテンツとレイアウト ページ (マスター ページに相当するもの) との対応は非常に簡単になっています。Index.cshtml (VB では Index.vbhtml) からブラウザーのタイトルを変更する箇所は ViewBag.Title に値を設定しています。これを、レイアウト ページでは同じ ViewBag.Title で入力しています。</p>
 <p>また、レイアウト ページでコンテンツ ページを表示する部分は、Views/Shared/_ViewStart.cshtml (VB では _ViewStart.vbhtml) にある Layout 変数に指定されている _Layout.cshtml (VB では _Layout.vbhtml) になります。このファイルが、aspx のマスター ページにあたる処理をしています。</p>
 <p>ログインのようなユーザー コントロールの表示は、Html.Partial メソッドで、コンテンツの表示は RenderBody メソッドが使われています。</p>
 <p>&nbsp;</p>
-<p><img src="18818-image013.gif" alt="図 11" width="559" height="302"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18818/1/image013.gif" alt="図 11" width="559" height="302"></p>
 <p><strong>図 11 Razor ビュー エンジンのコンテンツ ページ</strong></p>
 <p>&nbsp;</p>
 <p>ASP.NET MVC 2 と同じようにタイトル画像と背景画像を変更して実行すると、ページ レイアウトを変更することができます。</p>
-<p><img src="18819-image014.gif" alt="図 12" width="560" height="391"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-mvc-61e5bf22/image/file/18819/1/image014.gif" alt="図 12" width="560" height="391"></p>
 <p><strong>図 12 Razor ビュー エンジンによるページ レイアウトの変更</strong></p>
 <p>コンテンツの表示部分が ASP.NET MVC 2 とは若干違いますが、マスター ページとの連携が asp:Content タグや asp:ContentPlaceHolder タグの記述よりも随分と簡単になっています。</p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
@@ -326,8 +326,8 @@ moonmile solutions 増田 智明</a></p>
 <table>
 <tbody>
 <tr>
-<td><a href="http://code.msdn.microsoft.com/"><img title="Code Recipe" src="-ff950935.coderecipe_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
-<td><a href="http://msdn.microsoft.com/ja-jp/asp.net/" target="_blank"><img title="ASP.NET デベロッパーセンター" src="-ff950935.asp_net_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://code.msdn.microsoft.com/"><img title="Code Recipe" src="http://i.msdn.microsoft.com/ff950935.coderecipe_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/asp.net/" target="_blank"><img title="ASP.NET デベロッパーセンター" src="http://i.msdn.microsoft.com/ff950935.ASP_NET_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
 <td>
 <ul>
 <li>もっと他のコンテンツを見る &gt;&gt; <a href="http://msdn.microsoft.com/ja-jp/asp.net/gg490787" target="_blank">
@@ -338,4 +338,4 @@ ASP.NET デベロッパーセンターへ</a> </li></ul>
 </tr>
 </tbody>
 </table>
-<p style="margin-top:20px"><a href="#top"><img src="-top.gif" border="0" alt="">ページのトップへ</a></p>
+<p style="margin-top:20px"><a href="#top"><img src="http://www.microsoft.com/japan/msdn/nodehomes/graphics/top.gif" border="0" alt="">ページのトップへ</a></p>

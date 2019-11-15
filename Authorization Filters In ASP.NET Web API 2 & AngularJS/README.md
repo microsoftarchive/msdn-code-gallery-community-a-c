@@ -66,17 +66,17 @@ Contents</strong></p>
 <ul>
 <em>&nbsp;</em>
 <li>Authentication : Identity of the user. </li><li>Authorization : Allowed to perform an action.<br>
-<img src="-image002.png" alt="login">
+<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/authorization-filters-in-asp-net-web-api-2-and-angularjs/Images/image002.png" alt="login">
 </li></ul>
 <p>After successful login(Authentication), we can access the get customer link to show all the customers, only if we have the read permission in the database, given below:<br>
-<img src="-image003.jpg" alt="database">.<br>
+<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/authorization-filters-in-asp-net-web-api-2-and-angularjs/Images/image003.jpg" alt="database">.<br>
 In our database table, we have to restrict the access (CanRead to &quot;False&quot;) of Administrator to view the customer list.<br>
 <br>
-<img src="-image004.png" alt="table"><br>
+<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/authorization-filters-in-asp-net-web-api-2-and-angularjs/Images/image004.png" alt="table"><br>
 <br>
 The result will show a 401 response message while fetching the data from the database, where the logged in user role is an administrator.<br>
 <br>
-<img src="-image005.jpg" alt="administrator"><br>
+<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/authorization-filters-in-asp-net-web-api-2-and-angularjs/Images/image005.jpg" alt="administrator"><br>
 <br>
 </p>
 <div class="dp-highlighter"></div>

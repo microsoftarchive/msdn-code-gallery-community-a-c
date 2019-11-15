@@ -188,11 +188,11 @@
 <blockquote><strong><span style="font-size:medium; white-space:pre">Execution Process</span></strong></blockquote>
 <blockquote><strong><span style="white-space:pre">Build all projects one by one.</span></strong></blockquote>
 <blockquote><span style="font-size:small">1. Need to update current Mongo DB server path, like in Data Access project used MONGO_SERVER appSetting,&nbsp;please update the EmployeeManagement.Service and EmployeeManagement.Data(Optional).</span></blockquote>
-<blockquote><img id="136824" src="136824-mongoserverconfig.png" alt="" width="502" height="67"><br>
+<blockquote><img id="136824" src="https://i1.code.msdn.s-msft.com/aspnet-mvc5-curd-b4a57435/image/file/136824/1/mongoserverconfig.png" alt="" width="502" height="67"><br>
 </blockquote>
 <blockquote><span style="font-size:x-small"><span style="font-size:small">2. Once EmployeeManagement.Service build successfully, publish the content into local server(IIS or Windows server).</span></span></blockquote>
 <blockquote><span style="font-size:small"><span>&nbsp;</span><span style="white-space:pre">3. Configure EmployeeManagement API endpoint into EmployeeManagement.Web and EmployeeManagement.Core(optional).</span></span></blockquote>
-<blockquote><span style="white-space:pre; font-size:small"><img id="136825" src="136825-employeemgmgtapiurl.png" alt="" width="666" height="125"><br>
+<blockquote><span style="white-space:pre; font-size:small"><img id="136825" src="https://i1.code.msdn.s-msft.com/aspnet-mvc5-curd-b4a57435/image/file/136825/1/employeemgmgtapiurl.png" alt="" width="666" height="125"><br>
 </span></blockquote>
 <blockquote><span style="white-space:pre"><br>
 </span></blockquote>

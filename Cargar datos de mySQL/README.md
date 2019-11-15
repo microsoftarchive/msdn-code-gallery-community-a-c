@@ -50,7 +50,7 @@
 <span><br>
 </span><br>
 </p>
-<div class="separator"><a href="http://2.bp.blogspot.com/_F7cZ5fhxFC8/TTsEgHJYyRI/AAAAAAAAAo8/0k6KmWhzQn4/s1600/Agregar&#43;referencia&#43;mysql.JPG"><img src="-agregar&#43;referencia&#43;mysql.jpg" border="0" alt="" width="258" height="320"></a></div>
+<div class="separator"><a href="http://2.bp.blogspot.com/_F7cZ5fhxFC8/TTsEgHJYyRI/AAAAAAAAAo8/0k6KmWhzQn4/s1600/Agregar&#43;referencia&#43;mysql.JPG"><img src="http://2.bp.blogspot.com/_F7cZ5fhxFC8/TTsEgHJYyRI/AAAAAAAAAo8/0k6KmWhzQn4/s320/Agregar&#43;referencia&#43;mysql.JPG" border="0" alt="" width="258" height="320"></a></div>
 <br>
 </em>
 <p></p>

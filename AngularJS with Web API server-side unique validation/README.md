@@ -28,7 +28,7 @@
 <li><strong>simple: (validation on save)</strong>&nbsp;when saving an entity any errors caused by a unique property value already existing are returned to the SPA. Those errors can then be handled, informing the user that the offending property value is not
  unique. </li><li><strong>advanced:&nbsp;(interactive field level validation)&nbsp;</strong>when entering a new value for a unique property the SPA checks, via an API call, whether the value is 'available'. If it is not an error is reported to the user and the user cannot
  save the new record until the error has been rectified. </li></ul>
-<p><img id="144842" src="144842-advancedpage2.png" alt="" width="704" height="384"></p>
+<p><img id="144842" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-8210527d/image/file/144842/1/advancedpage2.png" alt="" width="704" height="384"></p>
 <p>The approaches are not exclusive, and in a real world application can be used together. In this simplified scenario the user only has the option to add a new record but the same appproach can be taken for updating existing entities.</p>
 <p><span>Please note that all code snippets in this description are partial and only contain the relevant lines of code. To view the full code please download the sample.</span></p>
 <h1><span>Building the Sample</span></h1>
@@ -137,7 +137,7 @@
 <div class="endscriptcode">&nbsp;</div>
 <h3><span style="font-size:1.5em">SPA side (AngularJS)</span></h3>
 <p>The SPA is in the app folder under the project root. It is a basic, single module SPA with two views to show the different approaches to the unique property validation.</p>
-<p><img id="126783" src="126783-appfolders.jpg" alt="" width="163" height="145"></p>
+<p><img id="126783" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-8210527d/image/file/126783/1/appfolders.jpg" alt="" width="163" height="145"></p>
 <p>A resource service called <strong>bookClientSvc</strong> is used by both examples to communicate with the Book controller. A custom action called&nbsp;<strong>titleAvailable</strong> has been added which maps to the action of the same name on the controller.</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -161,7 +161,7 @@
 <div class="endscriptcode">&nbsp;</div>
 <h3><span style="font-size:1.17em">Simple approach</span></h3>
 <p>This example is made up of a view (<strong>simple.html</strong>) and a controller (<strong>simpleCtrl.js</strong>).</p>
-<p><img id="126784" src="126784-simplefolders.jpg" alt="" width="140" height="56"></p>
+<p><img id="126784" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-8210527d/image/file/126784/1/simplefolders.jpg" alt="" width="140" height="56"></p>
 <p>A user can enter a new book and as long as values have been provided for the title and author they can then click the save button. This will call the save function on the controller (see below). If the title of the new book is not unique the promise returned
  by the <strong>bookClientSvc save</strong> function will be rejected and any error returned.</p>
 <div class="scriptcode">
@@ -244,7 +244,7 @@
 </div>
 <h3>Advanced approach</h3>
 <p>This example is made up of a view (<strong>advanced.html</strong>), a controller (<strong>simpleCtrl.js</strong>) and also a directive&nbsp;<strong>unique.js</strong>.</p>
-<p><img id="126785" src="126785-advanced.jpg" alt="" width="151" height="73"></p>
+<p><img id="126785" src="https://i1.code.msdn.s-msft.com/angularjs-with-web-api-8210527d/image/file/126785/1/advanced.jpg" alt="" width="151" height="73"></p>
 <p>The view is similar to the previous example however the <strong>unique</strong>&nbsp;directive has been declared on the title input with a function from the controller,
 <strong>checkTitle</strong>&nbsp;passed as a parameter to it.</p>
 <div class="scriptcode">

@@ -16,7 +16,7 @@
 <p>Como bom admirador de dados (t&eacute;cnicas e formatos de persist&ecirc;ncia em sua maioria) tamb&eacute;m gosto da parte de visualiza&ccedil;&atilde;o de dados. E quando pensamento em &ldquo;visualiza&ccedil;&atilde;o de dados&rdquo;, logo surge em nossa
  mente in&uacute;meros tipos de gr&aacute;ficos. Diante disso, gostaria de neste post demonstrar como podemos criar dois tipos de gr&aacute;ficos muito comuns: pizza e colunas. Para tanto utilizaremos o ASP.Net 4.0 Chart Controls, este n&atilde;o &eacute; um
  recurso novo, na verdade seu lan&ccedil;amento veio junto com o ASP.Net 4.0, em 2010.</p>
-<p><a href="http://ferhenriquef.files.wordpress.com/2012/10/chart.jpg"><img title="chart" src="-chart_thumb.jpg?w=268&h=207" border="0" alt="chart" width="268" height="207" style="padding-left:0px; padding-right:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-top:0px"></a></p>
+<p><a href="http://ferhenriquef.files.wordpress.com/2012/10/chart.jpg"><img title="chart" src="http://ferhenriquef.files.wordpress.com/2012/10/chart_thumb.jpg?w=268&h=207" border="0" alt="chart" width="268" height="207" style="padding-left:0px; padding-right:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-top:0px"></a></p>
 <p><span id="more-1012">&nbsp;</span></p>
 <p>Os dois s&atilde;o muitos simples de serem constru&iacute;dos, mas possuem algoritmos diferentes para sua implementa&ccedil;&atilde;o.</p>
 <p><strong>1 &ndash; Construindo o HTML</strong></p>
@@ -217,7 +217,7 @@
 }</pre>
 <p><strong>6 &ndash; Resultado final</strong></p>
 <p>Por fim, nossos gr&aacute;ficos devem ficar desta forma:</p>
-<p><a href="http://ferhenriquef.files.wordpress.com/2012/10/chartsample.png"><img title="chartSample" src="-chartsample_thumb.png?w=616&h=480" border="0" alt="chartSample" width="616" height="480" style="padding-left:0px; padding-right:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-top:0px"></a></p>
+<p><a href="http://ferhenriquef.files.wordpress.com/2012/10/chartsample.png"><img title="chartSample" src="http://ferhenriquef.files.wordpress.com/2012/10/chartsample_thumb.png?w=616&h=480" border="0" alt="chartSample" width="616" height="480" style="padding-left:0px; padding-right:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-top:0px"></a></p>
 <p>&nbsp;</p>
 <p>Espero que tenha sido &uacute;til.<br>
 <br>

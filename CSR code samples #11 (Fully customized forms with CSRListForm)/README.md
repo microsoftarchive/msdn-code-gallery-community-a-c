@@ -35,7 +35,7 @@ Before proceeding&nbsp;with the samples,&nbsp;<strong>You have to upload the Jav
 <li>Name:&nbsp;Date, Type: date and time </li><li>Name:&nbsp;Category, Type:&nbsp;<span>Choice&nbsp;</span> </li><li><span>Name:&nbsp;Active, Type:&nbsp;Yes/No</span> </li></ol>
 </li><li>Uplaod the&nbsp;FullyCustomizedForm.js file to the document library </li><li>Edit <strong>List Form&nbsp;</strong>page&nbsp; </li><li>Go to List view&nbsp;<strong>web-part properties&nbsp;</strong>and add the JSLink file (~sitecollection/Style Library/JSLink-Samples/FullyCustomizedForm.js) to&nbsp;<strong>JS link property</strong>&nbsp;under the&nbsp;<strong>Miscellaneous&nbsp;</strong>Tab.
  &nbsp;&nbsp; </li><li>CHange&nbsp;<strong>Form Template Name</strong> to CSRListForm </li></ol>
-<p style="padding-left:30px"><img id="135182" src="135182-csrlistform2.png" alt="" width="294" height="290"></p>
+<p style="padding-left:30px"><img id="135182" src="https://i1.code.msdn.s-msft.com/office/csr-code-samples-11-fully-54ebcaa6/image/file/135182/1/csrlistform2.png" alt="" width="294" height="290"></p>
 <p style="padding-left:30px">7. &nbsp;Click&nbsp;<strong>Apply&nbsp;</strong>button then&nbsp;<strong>Stop&nbsp;</strong>page editing.</p>
 <p>&nbsp;</p>
 <div class="scriptcode">

@@ -64,7 +64,7 @@
 </div>
 </div>
 <p>Output:</p>
-<p><img id="187726" src="187726-3.png" alt="" width="1029" height="455"></p>
+<p><img id="187726" src="https://i1.code.msdn.s-msft.com/c-how-to-convert-excel-to-66f9e9c8/image/file/187726/1/3.png" alt="" width="1029" height="455"></p>
 <p><strong>2. Excel to CSV</strong></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -97,7 +97,7 @@
 </div>
 </div>
 <div class="endscriptcode"><strong>output:</strong></div>
-<div class="endscriptcode"><strong><img id="187727" src="187727-1.png" alt="" width="581" height="336"><br>
+<div class="endscriptcode"><strong><img id="187727" src="https://i1.code.msdn.s-msft.com/c-how-to-convert-excel-to-66f9e9c8/image/file/187727/1/1.png" alt="" width="581" height="336"><br>
 </strong></div>
 <div class="endscriptcode"></div>
 <p><strong>3. Excel to XLSM</strong></p>
@@ -155,7 +155,7 @@
 </div>
 </div>
 <p><strong>Result:</strong></p>
-<p><strong><img id="187730" src="187730-2.png" alt="" width="1044" height="505"><br>
+<p><strong><img id="187730" src="https://i1.code.msdn.s-msft.com/c-how-to-convert-excel-to-66f9e9c8/image/file/187730/1/2.png" alt="" width="1044" height="505"><br>
 </strong></p>
 <p><strong>5.<strong>Excel to EMF</strong></strong></p>
 <div class="scriptcode">

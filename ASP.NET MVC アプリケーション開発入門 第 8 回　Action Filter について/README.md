@@ -146,7 +146,7 @@ Visual Studio 2010 で ASP.NET MVC アプリケーションを作ると、ログ
 </div>
 </div>
 <p>以下が実行した結果です。</p>
-<p><img src="22272-image001.jpg" alt="図 1" width="550" height="489"></p>
+<p><img src="http://i3.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22272/1/image001.jpg" alt="図 1" width="550" height="489"></p>
 <p>動作を確認してみると、ログインしていない状態で、「ログイン ユーザー用」のリンクをクリックすると、ログインするビューにリダイレクトされます。これは、LoginUser アクション メソッドに設定されている Authorize 属性がログイン状態をチェックして、ログインのためのページにジャンプさせているためです。</p>
 <p>ログイン制御のジャンプ先は、web.config ファイルに記述されています。</p>
 <div class="scriptcode">
@@ -177,7 +177,7 @@ Visual Studio 2010 で ASP.NET MVC アプリケーションを作ると、ログ
 </div>
 </div>
 </div>
-<p><img src="22273-image002.jpg" alt="図 2" width="550" height="398"></p>
+<p><img src="http://i3.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22273/1/image002.jpg" alt="図 2" width="550" height="398"></p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
 <hr>
 <h2 id="i_03">3. ログイン名によって制御する</h2>
@@ -241,22 +241,22 @@ Visual Studio 2010 で ASP.NET MVC アプリケーションを作ると、ログ
 </div>
 </div>
 <p>実行すると、admin ユーザーだけが AdminUser.aspx のページを表示できます。</p>
-<p><img src="22274-image003.jpg" alt="図 3" width="550" height="304"></p>
-<p><img src="22275-image004.jpg" alt="図 4" width="550" height="315"></p>
+<p><img src="http://i3.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22274/1/image003.jpg" alt="図 3" width="550" height="304"></p>
+<p><img src="http://i3.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22275/1/image004.jpg" alt="図 4" width="550" height="315"></p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
 <hr>
 <h2 id="i_04">4. ロールを使う準備をする</h2>
 <p>Authorize 属性では、ロール (役割) を使ったログインの制御も可能です。</p>
 <p>ASP.NET MVC アプリケーションで扱う、ユーザー名とロールの関係は次の図になります。</p>
-<p><img src="22276-image005.gif" alt="図 5" width="550" height="402"></p>
+<p><img src="http://i2.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22276/1/image005.gif" alt="図 5" width="550" height="402"></p>
 <p>ユーザー名で全てを制御しようとすると、管理ユーザーを追加するたびに属性を書き替えないといけません。これを避けるために、管理ロールを作成して、追加したい管理ユーザーを管理ロールに属するように設定します。</p>
 <p>このロールを使うためには、まず Visual Studio 2010 の「プロジェクト」メニューから「ASP.NET 構成」を選択して、ASP.NET Web サイト管理ツールを開きます。<br>
 サイト管理ツールはブラウザー上で、ASP.NET アプリケーションのユーザーの管理などができます。</p>
-<p><img src="22277-image006.jpg" alt="図 6" width="550" height="443"></p>
+<p><img src="http://i3.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22277/1/image006.jpg" alt="図 6" width="550" height="443"></p>
 <p>ロールを使うためには、まず「セキュリティ」のリンクをクリックした後で、「ロールの有効化」をクリックします。</p>
 <p>「ロールの作成または管理」のリンクをクリックすると、新しいロールが作成できます。</p>
 <p>ここでは「administrators」というロールを作成します。</p>
-<p><img src="22278-image007.gif" alt="図 7" width="550" height="436"></p>
+<p><img src="http://i4.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22278/1/image007.gif" alt="図 7" width="550" height="436"></p>
 <p>次にユーザー管理のページを開いて、admin ユーザーを administrators ロールに追加します。</p>
 <p>これで準備は完了です。ここでは、masuda と admin というユーザーがありますが、admin だけが管理ロールの administrators に属しています。</p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
@@ -319,7 +319,7 @@ Visual Studio 2010 で ASP.NET MVC アプリケーションを作ると、ログ
 </div>
 </div>
 <p>これを実行すると次の図になります。</p>
-<p><img src="22279-image008.jpg" alt="図 8" width="550" height="432"></p>
+<p><img src="http://i3.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22279/1/image008.jpg" alt="図 8" width="550" height="432"></p>
 <p>masuda ユーザーでログインした状態でも管理ロール用のページ AdminUser.aspx を表示することはできません。masuda ユーザーをログアウトして、admin ユーザーでログインし直すと、管理ロールのページを表示することができます。</p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
 <hr>
@@ -421,7 +421,7 @@ MyFilter 属性は、Authorize 属性などと同じようにアクション メ
 </div>
 </div>
 <p>Item.aspx ビューを作成して実行すると、Visual Studio 2010 の出力ウィンドウのログ出力が得られます。</p>
-<p><img src="22280-image009.gif" alt="図 9" width="486" height="287"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22280/1/image009.gif" alt="図 9" width="486" height="287"></p>
 <p>IActionFilter インターフェースの OnActionExecuted メソッドでは、アクション メソッドの結果を修正することもできます。たとえば、ViewData プロパティを使い、デバッグ情報をビューに表示することも可能です。</p>
 <p>アクション フィルターを次のように、ViewData を使うように書き変えます。</p>
 <div class="scriptcode">
@@ -486,7 +486,7 @@ MyFilter 属性は、Authorize 属性などと同じようにアクション メ
 </div>
 </div>
 <p>この実行が下の図です。</p>
-<p><img src="22281-image010.gif" alt="図 10" width="500" height="361"></p>
+<p><img src="http://i4.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22281/1/image010.gif" alt="図 10" width="500" height="361"></p>
 <p>このようにアクション フィルター内で、ViewData コレクションを使うと、ビューとのやり取りが簡単にできるので一時的な情報やデバッグ時の情報などが出しやすくなります。LINQ to Entities で生成される SQL 文などを表示させるとパフォーマンス調査などができるでしょう。</p>
 <p style="margin-top:20px"><a href="#top"><img src="17172-image.png" border="0" alt=""> ページのトップへ</a></p>
 <hr>
@@ -496,9 +496,9 @@ MyFilter 属性は、Authorize 属性などと同じようにアクション メ
 Visual Studio 2010 で ASP.NET MVC アプリケーションを作成するとログイン情報は、App_Data フォルダー内にローカル ファイルとして保存されます。このデータは ASP.NET MVC アプリケーションでは利用できるのですが、バックアップの問題や、他の Web アプリケーションとの連携の問題が発生します。</p>
 <p>このアカウント情報を SQL Server 上のデータベースに切り替えてみます。</p>
 <p>まず、SQL Server Management Studio にアカウント情報を作成するデータベースを作ります。ここでは、「acldb」としています。</p>
-<p><img src="22282-image011.gif" alt="図 11" width="316" height="347"></p>
+<p><img src="http://i2.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22282/1/image011.gif" alt="図 11" width="316" height="347"></p>
 <p>次に、データベースにアカウント情報用のテーブルとストアド プロシージャをインストールします。C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regsql.exe を実行して、ウィザードに従ってテーブルを作成します。</p>
-<p><img src="22283-image012.jpg" alt="図 12" width="500" height="359"></p>
+<p><img src="http://i3.code.msdn.s-msft.com/aspnet-mvc-6d275641/image/file/22283/1/image012.jpg" alt="図 12" width="500" height="359"></p>
 <p>ASP.NET MVC アプリケーションからアカウント用のデータベースにアクセスする設定は、web.config ファイルに記述されています。</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -526,8 +526,8 @@ Visual Studio 2010 で ASP.NET MVC アプリケーションを作成するとロ
 <table>
 <tbody>
 <tr>
-<td><a href="http://code.msdn.microsoft.com/"><img title="Code Recipe" src="-ff950935.coderecipe_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
-<td><a href="http://msdn.microsoft.com/ja-jp/asp.net/" target="_blank"><img title="ASP.NET デベロッパーセンター" src="-ff950935.asp_net_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://code.msdn.microsoft.com/"><img title="Code Recipe" src="http://i.msdn.microsoft.com/ff950935.coderecipe_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/asp.net/" target="_blank"><img title="ASP.NET デベロッパーセンター" src="http://i.msdn.microsoft.com/ff950935.ASP_NET_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
 <td>
 <ul>
 <li>もっと他のコンテンツを見る &gt;&gt; <a href="http://msdn.microsoft.com/ja-jp/asp.net/gg490787" target="_blank">
@@ -538,4 +538,4 @@ ASP.NET デベロッパーセンターへ</a> </li></ul>
 </tr>
 </tbody>
 </table>
-<p style="margin-top:20px"><a href="#top"><img src="-top.gif" border="0" alt="">ページのトップへ</a></p>
+<p style="margin-top:20px"><a href="#top"><img src="http://www.microsoft.com/japan/msdn/nodehomes/graphics/top.gif" border="0" alt="">ページのトップへ</a></p>

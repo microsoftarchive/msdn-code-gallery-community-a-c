@@ -36,14 +36,14 @@
 <p style="text-align:center"><span style="font-size:xx-small">&nbsp; <object width="350" height="300" data="data:application/x-silverlight-2," type="application/x-silverlight-2"> <param name="source" value="/Content/Common/videoplayer.xap" /> <param name="initParams"
  value="deferredLoad=false,duration=0,m=http://i1.code.msdn.s-msft.com/communication-through-91a2582b/image/file/64886/1/demo.wmv,autostart=false,autohide=true,showembed=true" /> <param name="background" value="#00FFFFFF" /> <param name="minRuntimeVersion"
  value="3.0.40624.0" /> <param name="enableHtmlAccess" value="true" /> <param name="src" value="http://i1.code.msdn.s-msft.com/communication-through-91a2582b/image/file/64886/1/demo.wmv" /> <param name="id" value="64886" /> <param name="name" value="demo.wmv"
- /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="-?linkid=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span> </object>
+ /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span> </object>
 <br>
 <a id="http://i1.code.msdn.s-msft.com/communication-through-91a2582b/image/file/64886/1/demo.wmv" href="http://i1.code.msdn.s-msft.com/communication-through-91a2582b/image/file/64886/1/demo.wmv"></a></span></p>
 <p style="text-align:center"><span style="font-size:xx-small"><a id="http://i1.code.msdn.s-msft.com/communication-through-91a2582b/image/file/64886/1/demo.wmv" href="http://i1.code.msdn.s-msft.com/communication-through-91a2582b/image/file/64886/1/demo.wmv">Download
  video</a></span></p>
 <p style="text-align:center"><span style="font-size:xx-small"><br>
 </span></p>
-<p><em>&nbsp; &nbsp;<img id="64881" src="64881-houssem%20dellai%20socket.jpg" alt="" width="649" height="500"><br>
+<p><em>&nbsp; &nbsp;<img id="64881" src="http://i1.code.msdn.s-msft.com/communication-through-91a2582b/image/file/64881/1/houssem%20dellai%20socket.jpg" alt="" width="649" height="500"><br>
 </em></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">

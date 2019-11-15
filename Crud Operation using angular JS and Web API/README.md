@@ -51,14 +51,14 @@ GO</pre>
 </div>
 </pre>
 <p><span style="font-size:small">We have done our database. Now let&rsquo;s go for create a simple MVC application Start virtual studio, Click New Project &gt;&gt;</span></p>
-<p><img class="alignleft wp-image-3843 x_x_x_x_size-full" src="-newproject1.png" alt="newproject1" width="977" height="233">
+<p><img class="alignleft wp-image-3843 x_x_x_x_size-full" src="http://shamimuddin.com/wp-content/uploads/2016/11/NewProject1.png" alt="newproject1" width="977" height="233">
 <span style="font-size:small">Bellow window will be appeared on screen</span></p>
-<p><img class="alignleft size-full x_x_x_x_wp-image-3844" src="-projectname2.png" alt="projectname2" width="977" height="400">
+<p><img class="alignleft size-full x_x_x_x_wp-image-3844" src="http://shamimuddin.com/wp-content/uploads/2016/11/ProjectName2.png" alt="projectname2" width="977" height="400">
 <span style="font-size:small">After click, New ASP.NET Project window will be appeared on screen</span></p>
-<p><img class="alignleft size-full x_x_x_x_wp-image-3847" src="-newasp.netweb3.png" alt="newasp-netweb3" width="977" height="400">
+<p><img class="alignleft size-full x_x_x_x_wp-image-3847" src="http://shamimuddin.com/wp-content/uploads/2016/11/NewAsp.netWeb3.png" alt="newasp-netweb3" width="977" height="400">
 <span style="font-size:small">Solution creation is done with load all need files. Below is the following Picture of solution</span></p>
 <p><span style="font-size:small">structure.</span></p>
-<p><img class="alignleft size-full x_x_x_x_wp-image-3850" src="-projectstructure4.png" alt="projectstructure4" width="277" height="355"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><img class="alignleft size-full x_x_x_x_wp-image-3850" src="http://shamimuddin.com/wp-content/uploads/2016/11/ProjectStructure4.png" alt="projectstructure4" width="277" height="355"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p><span style="font-size:x-small"><em><strong>Let's go Explore Solution Structure</strong></em>
 </span></p>
 <p><span style="font-size:small">We know that The&nbsp;ASP.NET MVC&nbsp;is a&nbsp;web application framework&nbsp;developed by Microsoft, This structure work with Model, View, and Controller.</span></p>
@@ -72,8 +72,8 @@ A Controller is the link Between User and System. It is handle incoming browser 
 </span></span></p>
 <p><span style="font-size:x-small"><em><strong>Now we will add AngularJS in our Solution</strong></em>
 <span style="font-size:small">Right button click on solution, and click Manage NuGet Packages for add angular JS reference.</span></span>
-<img class="alignleft size-full x_x_x_x_wp-image-3852" src="-angularre5.png" alt="angularre5" width="1044" height="571"> After Click Install button, Loading angularJS files.Below is the following picture
-<img class="alignleft size-full x_x_x_x_wp-image-3853" src="-loadingangualrjs6.png" alt="loadingangualrjs6" width="1098" height="225"> Now we will Create ScriptsNg folder in solution, we will create 4 folder
+<img class="alignleft size-full x_x_x_x_wp-image-3852" src="http://shamimuddin.com/wp-content/uploads/2016/11/AngularRe5.png" alt="angularre5" width="1044" height="571"> After Click Install button, Loading angularJS files.Below is the following picture
+<img class="alignleft size-full x_x_x_x_wp-image-3853" src="http://shamimuddin.com/wp-content/uploads/2016/11/LoadingAngualrjs6.png" alt="loadingangualrjs6" width="1098" height="225"> Now we will Create ScriptsNg folder in solution, we will create 4 folder
  within ScriptsNg</p>
 <ol>
 <li>Controller </li><li>Directive </li><li>Module </li><li>Service </li></ol>
@@ -120,7 +120,7 @@ A Controller is the link Between User and System. It is handle incoming browser 
 <div class="endscriptcode">&nbsp;</div>
 </pre>
 <p><span style="font-size:small">We have to create view. Below is following Picture How to create view</span></p>
-<p><img class="alignleft size-full x_x_x_x_wp-image-3857" src="-indexview7-1.png" alt="indexview7" width="921" height="445">
+<p><img class="alignleft size-full x_x_x_x_wp-image-3857" src="http://shamimuddin.com/wp-content/uploads/2016/11/IndexView7-1.png" alt="indexview7" width="921" height="445">
 <span style="font-size:small">View has created successfully. We will add some code within index view for checking what angularJS will work. Below is the following codes.</span></p>
 <pre class="lang:xhtml x_x_x_x_decode:true"><div class="scriptcode"><div class="pluginEditHolder" pluginCommand="mceScriptCode"><div class="title"><span>HTML</span></div><div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div><span class="hidden">html</span>
 <div class="preview">
@@ -141,18 +141,18 @@ A Controller is the link Between User and System. It is handle incoming browser 
 </pre>
 <p><span style="font-size:small">After Run &nbsp;Angular JS Work done. Below is the following result
 </span></p>
-<p><img class="alignleft size-full x_x_x_x_wp-image-3858" src="-angualr-jsresult8.png" alt="angualr-jsresult8" width="485" height="94"> &nbsp; &nbsp; &nbsp;</p>
+<p><img class="alignleft size-full x_x_x_x_wp-image-3858" src="http://shamimuddin.com/wp-content/uploads/2016/11/Angualr-jsResult8.png" alt="angualr-jsresult8" width="485" height="94"> &nbsp; &nbsp; &nbsp;</p>
 <p><em><strong>Entity Framework:</strong></em> <span style="font-size:small">After click References we can see that Entity Framework already existing in our solution.</span></p>
 <p><em><strong>Create Entity Data Model:</strong></em> <span style="font-size:small">
 Right click on your model folder and click new, select ADO.NET Entity Data Model. Follow the steps given. Once you have done the process, we can see the edmx file and other files in your model folder. It named StudentDBEntities. Below is the following Picture
  of edmx model.</span></p>
-<p><img class="alignleft size-full x_x_x_x_wp-image-3859" src="-edmxmodel9.png" alt="edmxmodel9" width="394" height="302"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><img class="alignleft size-full x_x_x_x_wp-image-3859" src="http://shamimuddin.com/wp-content/uploads/2016/11/EdmxModel9.png" alt="edmxmodel9" width="394" height="302"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p><strong>Now our solution is ready for crud operation.</strong> <span style="font-size:small">
 Now we have created a folder named api in our solution. Right button click, click add and click controller then show bellow window.
-</span><img class="alignleft size-full x_x_x_x_wp-image-3862" src="-addcontroller11.png" alt="addcontroller11" width="938" height="649"></p>
+</span><img class="alignleft size-full x_x_x_x_wp-image-3862" src="http://shamimuddin.com/wp-content/uploads/2016/11/addcontroller11.png" alt="addcontroller11" width="938" height="649"></p>
 <p><span style="font-size:small">Add controller name. Below is the following Picture.
 </span></p>
-<p><img class="alignleft size-full x_x_x_x_wp-image-3864" src="-apiname12.png" alt="apiname12" width="588" height="119"> &nbsp; &nbsp; &nbsp;
+<p><img class="alignleft size-full x_x_x_x_wp-image-3864" src="http://shamimuddin.com/wp-content/uploads/2016/11/ApiName12.png" alt="apiname12" width="588" height="119"> &nbsp; &nbsp; &nbsp;
 <span style="font-size:small">&nbsp; Our StudentController's api has created done.</span></p>
 <p><em><strong>For Save:</strong></em></p>
 <pre class="lang:c# x_x_x_x_decode:true"><div class="scriptcode"><div class="pluginEditHolder" pluginCommand="mceScriptCode"><div class="title"><span>C#</span></div><div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div><span class="hidden">csharp</span>
@@ -367,7 +367,7 @@ Above code we can see that there are some unfamiliar those are used for angular 
 </span></li><li><span style="font-size:small">ng-model Here directive binds the value of HTML controls</span>
 </li></ul>
 <p><strong>Note:</strong> <strong>Keep in mind that Angular JS two are way data bind.</strong></p>
-<p><span style="font-size:small">After run we have got Bellow UI </span><img class="alignleft size-full x_x_x_x_wp-image-3871" src="-save10.png" alt="save10" width="514" height="256"> &nbsp; &nbsp; &nbsp;
+<p><span style="font-size:small">After run we have got Bellow UI </span><img class="alignleft size-full x_x_x_x_wp-image-3871" src="http://shamimuddin.com/wp-content/uploads/2016/11/Save10.png" alt="save10" width="514" height="256"> &nbsp; &nbsp; &nbsp;
  &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p><em><strong>For Fetch Data form Database:</strong></em> <span style="font-size:small">
 Our Save is done. Now we will fetch data from database. We will add GetStudents method in StudentController's API Controller.Below is the following codes</span></p>
@@ -464,7 +464,7 @@ Our Save is done. Now we will fetch data from database. We will add GetStudents 
 <div class="endscriptcode">&nbsp;</div>
 <br></pre>
 <p><span style="font-size:small">We have just added data within html table</span></p>
-<p><img class="alignleft size-full x_x_x_x_wp-image-3876" src="-bystudentid14.png" alt="bystudentid14" width="1145" height="463">
+<p><img class="alignleft size-full x_x_x_x_wp-image-3876" src="http://shamimuddin.com/wp-content/uploads/2016/11/BystudentID14.png" alt="bystudentid14" width="1145" height="463">
 <em><strong>For Update:</strong></em></p>
 <p><span style="font-size:small">We have to create two method into StudentController&rsquo;s api for update firstly we will get student info by student id after change student&rsquo;s properties we have to update.</span></p>
 <p><strong>First method GetStudentByID</strong></p>
@@ -519,7 +519,7 @@ Our Save is done. Now we will fetch data from database. We will add GetStudents 
 <div class="endscriptcode">&nbsp;</div>
 <br></pre>
 <p><span style="font-size:small">Now we will check what it will work. After clicking edit button we get bellow result</span></p>
-<p><img class="alignleft size-full x_x_x_x_wp-image-3878" src="-17.png" alt="17" width="1239" height="465">
+<p><img class="alignleft size-full x_x_x_x_wp-image-3878" src="http://shamimuddin.com/wp-content/uploads/2016/11/17.png" alt="17" width="1239" height="465">
 <em><strong>Secondly</strong></em><span style="font-size:small"> we will update our student data so we have to Create UpdateStudent method. Below is the following codes</span></p>
 <pre class="lang:c# x_x_x_x_decode:true"><div class="scriptcode"><div class="pluginEditHolder" pluginCommand="mceScriptCode"><div class="title"><span>C#</span></div><div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div><span class="hidden">csharp</span>
 <div class="preview">
@@ -601,7 +601,7 @@ Our Save is done. Now we will fetch data from database. We will add GetStudents 
 <div class="endscriptcode">&nbsp;</div>
 <br></pre>
 <p><span style="font-size:small">Now we will check what it will work. Below is the following picture
-</span><img class="alignleft size-full x_x_x_x_wp-image-3879" src="-aftermofi15.png" alt="aftermofi15" width="1162" height="447">
+</span><img class="alignleft size-full x_x_x_x_wp-image-3879" src="http://shamimuddin.com/wp-content/uploads/2016/11/aftermofi15.png" alt="aftermofi15" width="1162" height="447">
 <em><strong>For Delete:</strong></em></p>
 <p><span style="font-size:small">Now we have to add delete method within StudentController's api .Bellow is the following&nbsp;codes</span></p>
 <pre class="lang:c# x_x_x_x_decode:true"><div class="scriptcode"><div class="pluginEditHolder" pluginCommand="mceScriptCode"><div class="title"><span>C#</span></div><div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div><span class="hidden">csharp</span>
@@ -660,4 +660,4 @@ Our Save is done. Now we will fetch data from database. We will add GetStudents 
 <div class="endscriptcode">&nbsp;</div>
 <br></pre>
 <p><span style="font-size:small">After delete a student info. Below is the following picture
-</span><img class="alignleft size-full x_x_x_x_wp-image-3884" src="-afterdel-1.png" alt="afterdel" width="1138" height="394"> &nbsp;<span style="font-size:small"> Hope this will be very helpful</span> :)</p>
+</span><img class="alignleft size-full x_x_x_x_wp-image-3884" src="http://shamimuddin.com/wp-content/uploads/2016/11/afterdel-1.png" alt="afterdel" width="1138" height="394"> &nbsp;<span style="font-size:small"> Hope this will be very helpful</span> :)</p>

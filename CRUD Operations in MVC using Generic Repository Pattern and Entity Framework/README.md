@@ -31,14 +31,14 @@ CRUD Operations in MVC using Generic Repository Pattern and Entity Framework</a>
 <li>Download and extract the .zip file. </li><li>Open the solution file in Visual Studio. </li><li>Change connection string in the Web.config file. </li><li>Build the solution, which automatically installs the missing NuGet packages. </li><li>Run the application. </li></ol>
 <h1>Running the Sample</h1>
 <p>To run the sample, hit F5 or choose the Debug | Start Debugging menu command. You will see the student list screen. From this screen you have student listing screen as shown in below figure.</p>
-<p><img id="160306" src="160306-2.png" alt="" width="772" height="258"></p>
+<p><img id="160306" src="https://i1.code.msdn.s-msft.com/crud-operations-in-mvc-eb0ef45d/image/file/160306/1/2.png" alt="" width="772" height="258"></p>
 <p><span>Figure 1: Student Listing</span></p>
 <p>You can add new student using the Add Student button. You can edit individual student using edit button in listing as shown in below figure.</p>
-<p><img id="160307" src="160307-3.png" alt="" width="781" height="317"></p>
+<p><img id="160307" src="https://i1.code.msdn.s-msft.com/crud-operations-in-mvc-eb0ef45d/image/file/160307/1/3.png" alt="" width="781" height="317"></p>
 <p>&nbsp;</p>
 <p><span>Figure 2: Edit Student</span></p>
 <p>Now you can delete individual student using delete button in listing as shown in below figure.</p>
-<p><img id="160308" src="160308-4.png" alt="" width="791" height="305"></p>
+<p><img id="160308" src="https://i1.code.msdn.s-msft.com/crud-operations-in-mvc-eb0ef45d/image/file/160308/1/4.png" alt="" width="791" height="305"></p>
 <p><span>Figure 3: Delete Student</span></p>
 <h1>Source Code Overview</h1>
 <p><img id="160304" src="160304-1.png" alt="" width="642" height="156"></p>

@@ -30,7 +30,7 @@ BackGroundWorker</a>.</em></p>
 <p><em>Para poder paliar este problema en el ejemplo muestro una manera, y es mediante Delegates.</em></p>
 <p><em>Los Delegates se utilizan para implementar m&eacute;todos de devoluci&oacute;n de llamada (callbacks), esenciales para programar procesamiento as&iacute;ncrono o insertar c&oacute;digo de cliente.</em></p>
 <p>&nbsp;</p>
-<p style="text-align:center"><img src="-backgroundworker01.jpg" alt=""></p>
+<p style="text-align:center"><img src="http://www.lopezatienza.es/Imagenes/BackgroundWorker01.JPG" alt=""></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
 <div class="title"><span>Visual Basic</span></div>

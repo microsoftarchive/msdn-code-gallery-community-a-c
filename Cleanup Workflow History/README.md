@@ -60,9 +60,9 @@ For reference, I had a Workflow History list with 500,000 items, and I used this
 <div class="wikidoc"></div>
 <div class="wikidoc"></div>
 <div class="wikidoc"><strong>CleanupWorkflowHistory.exe running in Report Mode (read-only):</strong></div>
-<div class="wikidoc"><img src="18740-report_mode.jpg" alt="" width="668" height="355"></div>
+<div class="wikidoc"><img src="http://i1.code.msdn.microsoft.com/cleanup-workflow-history-cee6e75e/image/file/18740/1/report_mode.jpg" alt="" width="668" height="355"></div>
 <div class="wikidoc"></div>
 <div class="wikidoc"></div>
 <div class="wikidoc"></div>
 <div class="wikidoc"><strong>CleanupWorkflowHistory logfile:</strong></div>
-<div class="wikidoc"><img src="18741-cleanup_log.jpg" alt="" width="552" height="483"></div>
+<div class="wikidoc"><img src="http://i3.code.msdn.microsoft.com/cleanup-workflow-history-cee6e75e/image/file/18741/1/cleanup_log.jpg" alt="" width="552" height="483"></div>

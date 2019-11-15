@@ -33,9 +33,9 @@
 </span></p>
 <p><em>Bring application build and run. &nbsp;Choose image file and drop it to the window.</em></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
-<p><em><img id="168063" src="168063-dropfile.png" alt="" width="250" height="250">&nbsp;<img id="168064" src="168064-girl.png" alt="" width="250" height="250"></em></p>
+<p><em><img id="168063" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/168063/1/DropFile.PNG" alt="" width="250" height="250">&nbsp;<img id="168064" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/168064/1/Girl.PNG" alt="" width="250" height="250"></em></p>
 <p>&nbsp;</p>
-<p><em><img id="168065" src="168065-long.png" alt="" width="200" height="500"></em></p>
+<p><em><img id="168065" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/168065/1/Long.PNG" alt="" width="200" height="500"></em></p>
 <p>&nbsp;</p>
 <p><em>The application was tested with image JPEG, PNG, GIF, ICO, ...</em></p>
 <p><a title="JPEG" href="https://en.wikipedia.org/wiki/JPEG">JPEG</a> (Joint Photographic Experts Group) is a

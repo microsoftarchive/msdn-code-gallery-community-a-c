@@ -95,7 +95,7 @@
 </div>
 </div>
 <p><span style="font-size:small">What would be the output of this? Any guess?</span></p>
-<p><span style="font-size:small"><img src="-12.png" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/basics-of-angularjs/Images/12.png" alt=""></span></p>
 <p><span style="font-size:small">So what we need to make this work? For that you must put the code after the ng-app declaration. Can we try that? So our modified code would be as follows.</span></p>
 <div>
 <div class="syntaxhighlighter xml" id="highlighter_405907">
@@ -121,7 +121,7 @@
 </div>
 </div>
 <p><span style="font-size:small">Now our output is:</span></p>
-<p><span style="font-size:small"><img src="-123.png" alt="" width="530" height="169"></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/basics-of-angularjs/Images/123.png" alt="" width="530" height="169"></span></p>
 <p><span style="font-size:small">Well, that was the introduction to the directive ng-app. I hope you tried it. Now we will move on to the next one. What is it?</span></p>
 <p><span style="font-size:small">ng-init</span></p>
 <p><span style="font-size:small">As the name implies, ng-init is used to initialize the data of our AngularJS. We will try a demo.&nbsp;So the following is my HTML.</span></p>
@@ -153,7 +153,7 @@
 </div>
 </div>
 <p><span style="font-size:small">Please note that I have used the ng-init tag after the ng-app tag.&nbsp;Now can you&nbsp;guess what the output would be?</span></p>
-<p><span style="font-size:small"><img src="-1234.png" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/basics-of-angularjs/Images/1234.png" alt=""></span></p>
 <p><span style="font-size:small">I hope you understand what exactly ng-init tag is. Now we will see ng-model.</span></p>
 <p><span style="font-size:small">ng-model</span></p>
 <p><span style="font-size:small">Basically the ng-model directive binds the values from our HTML controls to our application data. Sounds good, right?</span></p>
@@ -182,7 +182,7 @@ Currency&nbsp;<span class="js__operator">in</span>&nbsp;Dollar:&nbsp;<span class
 </div>
 <p><span style="font-size:small">In the preceding example, we are using ng-model &ldquo;curinr&rdquo; and we are accessing that in our application data. In this process, whenever you type any value into the number box area, in a fraction of time you can see
  the calculated value. That is the power of AngularJS.</span></p>
-<p><span style="font-size:small"><img src="-capture.jpg" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/basics-of-angularjs/Images/Capture.JPG" alt=""></span></p>
 <p><span style="font-size:small">So I hope you understood how to use the ng-model directive.&nbsp;Now it is time to move on to our next directive, ng-repeat.</span></p>
 <p><span style="font-size:small">ng-repeat</span></p>
 <p><span style="font-size:small">This directive is used for looping through a collection or array just like we use a foreach loop in C#. Sounds pretty cool, right? It clones the HTML elements once for each item in the collection.</span></p>
@@ -216,9 +216,9 @@ Currency&nbsp;<span class="js__operator">in</span>&nbsp;Dollar:&nbsp;<span class
 </div>
 </div>
 <p><span style="font-size:small">Now see the output below. With less lines of codes we have done this process.&nbsp;That is all about the ng-repeat directive. I hope you liked it.</span></p>
-<p><span style="font-size:small"><img src="-capture1.jpg" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/basics-of-angularjs/Images/Capture1.JPG" alt=""></span></p>
 <p><span style="font-size:small">When you write any code, it must be light weight and easy, efficient.</span></p>
-<p><span style="font-size:small"><img src="-codecomplex.jpg" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/basics-of-angularjs/Images/codecomplex.jpg" alt=""></span></p>
 <p><span style="font-size:small">If it is not easy, someone who looks at your code will be &hellip;..</span></p>
 <p><strong><span style="font-size:small">What is controllers?</span></strong></p>
 <p><span style="font-size:small">Angular JS controllers are Java script object. Simple . The main functionality of this object is controlling the data of our angular application. Sounds cool right?</span></p>
@@ -328,8 +328,8 @@ $scope.inrToDollar&nbsp;=&nbsp;<span class="js__operator">function</span>&nbsp;(
 <p><span style="font-size:small"><em>$scope</em>&nbsp;is a part of controller. Every controller must have its own $scope object. Here what exactly our controller do is setting the behaviors on $scope.</span></p>
 <p><span style="font-size:small">In the above code block we used a function which returns a dollar value for the given Indian rupee. I have given the function body inside of our controller.</span></p>
 <p><span style="font-size:small">No what would be our output?</span></p>
-<p><span style="font-size:small"><img src="-controllerout1.png" alt=""></span></p>
-<p><span style="font-size:small"><img src="-controller2.png" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/basics-of-angularjs/Images/controllerout1.png" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/basics-of-angularjs/Images/controller2.png" alt=""></span></p>
 <p><span style="font-size:small">Now think if you are using normal java script and jquery for doing this task, how many lines of codes you may need to write?</span></p>
 <p><strong><span style="font-size:small">Complete HTML</span></strong></p>
 <div>

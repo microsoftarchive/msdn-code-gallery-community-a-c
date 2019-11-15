@@ -59,4 +59,4 @@ MailServer</strong>.</p>
 </div>
 </div>
 <p>Segue imagem da tela:</p>
-<p><img id="92254" src="92254-print1.png" alt="" width="625" height="596"></p>
+<p><img id="92254" src="http://i1.code.msdn.s-msft.com/chat-console-application-ff02cd69/image/file/92254/1/print1.png" alt="" width="625" height="596"></p>

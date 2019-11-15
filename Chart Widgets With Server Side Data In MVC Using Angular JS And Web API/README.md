@@ -34,25 +34,25 @@
  are going to create the preceding charts for our dashboard.</span></p>
 </li><li><span style="font-size:small">Pie Chart</span> </li><li><span style="font-size:small">Spline Chart</span> </li><li><span style="font-size:small">Bar Chart</span> </li><li><span style="font-size:small">Line Chart</span> </li><li><span style="font-size:small">Scatter Chart</span> </li><li><span style="font-size:small">Column Chart</span>
 <p><span style="font-size:small">Once we are done, this is how our applications output will be.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11360"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Chart-Widgets-With-Server-Side-Data-In-MVC-Using-Angular-JS-And-Web-API-Output-e1458121833696.png"><img class="size-large x_x_wp-image-11360" src="-chart-widgets-with-server-side-data-in-mvc-using-angular-js-and-web-api-output-1024x875.png" alt="Chart Widgets With Server Side Data In MVC Using Angular JS And Web API Output" width="634" height="542"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11360"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Chart-Widgets-With-Server-Side-Data-In-MVC-Using-Angular-JS-And-Web-API-Output-e1458121833696.png"><img class="size-large x_x_wp-image-11360" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Chart-Widgets-With-Server-Side-Data-In-MVC-Using-Angular-JS-And-Web-API-Output-1024x875.png" alt="Chart Widgets With Server Side Data In MVC Using Angular JS And Web API Output" width="634" height="542"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Chart Widgets With Server Side Data In MVC Using Angular JS And Web API Output</span></p>
 </div>
 <p><strong><span style="font-size:small">Create a MVC application</span></strong></p>
 <p><span style="font-size:small">Click File-&gt; New-&gt; Project then select MVC application. From the following pop up we will select the template as empty and select the core references and folders for MVC.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11361"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MVC-Project-With-Empty-Template-e1458122053871.png"><img class="size-full x_x_wp-image-11361" src="-mvc-project-with-empty-template-e1458122053871.png" alt="MVC Project With Empty Template" width="650" height="508"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11361"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/MVC-Project-With-Empty-Template-e1458122053871.png"><img class="size-full x_x_wp-image-11361" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/MVC-Project-With-Empty-Template-e1458122053871.png" alt="MVC Project With Empty Template" width="650" height="508"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">MVC Project With Empty Template</span></p>
 </div>
 <p><span style="font-size:small">Once you click OK, a project with MVC like folder structure with core references will be created for you.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11362"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png"><img class="size-full x_x_wp-image-11362" src="-folder-structure-and-references-for-empty-mvc-project.png" alt="Folder Structure And References For Empty MVC Project" width="267" height="367"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11362"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png"><img class="size-full x_x_wp-image-11362" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png" alt="Folder Structure And References For Empty MVC Project" width="267" height="367"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Folder Structure And References For Empty MVC Project</span></p>
 </div>
 <p><span style="font-size:small">Before going to start the coding part, make sure that all the required extensions/references are installed. Below are the required things to start with.</span></p>
 </li><li><span style="font-size:small">Angular JS</span> </li><li><span style="font-size:small">jQuery</span>
 <p><span style="font-size:small">You can all the items mentioned above from NuGet. Right click on your project name and select Manage NuGet packages.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11235"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/02/Manage-NuGet-Package-Window-e1455700665396.png"><img class="size-full x_x_wp-image-11235" src="-manage-nuget-package-window-e1455700665396.png" alt="Manage NuGet Package Window" width="650" height="432"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11235"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/02/Manage-NuGet-Package-Window-e1455700665396.png"><img class="size-full x_x_wp-image-11235" src="http://sibeeshpassion.com/wp-content/uploads/2016/02/Manage-NuGet-Package-Window-e1455700665396.png" alt="Manage NuGet Package Window" width="650" height="432"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Manage NuGet Package Window</span></p>
 </div>
@@ -60,7 +60,7 @@
 <p><strong><span style="font-size:small">Using the code</span></strong></p>
 <p><span style="font-size:small">As I have said before, we are going to use Angular JS for our client side operations, so it is better to create the Angular JS script files first right? Just to make sure that we have got all the required things :). For that,
  create a folder named&nbsp;<em>Widget</em>&nbsp;in script folder and right click -&gt; Add -&gt; New Item -&gt; Select AngularJS Module and enter the module name -&gt; Click Add.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11363"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Creating-Angular-JS-Modue-In-MVC-Application-e1458122639235.png"><img class="size-full x_x_wp-image-11363" src="-creating-angular-js-modue-in-mvc-application-e1458122639235.png" alt="Creating Angular JS Modue In MVC Application" width="650" height="449"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11363"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Creating-Angular-JS-Modue-In-MVC-Application-e1458122639235.png"><img class="size-full x_x_wp-image-11363" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Creating-Angular-JS-Modue-In-MVC-Application-e1458122639235.png" alt="Creating Angular JS Modue In MVC Application" width="650" height="449"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Creating Angular JS Modue In MVC Application</span></p>
 </div>
@@ -447,7 +447,7 @@ GO</pre>
 <p><strong><span style="font-size:small">Create Entity Data Model</span></strong></p>
 <p><span style="font-size:small">Right click on your model folder and click new, select ADO.NET Entity Data Model. Follow the steps given. Once you have done the processes, you can see the edmx file and other files in your model folder. Here I gave&nbsp;<em>Dashboard</em>&nbsp;for
  our Entity data model name. Now you can see a file with edmx extension have been created. If you open that file, you can see as below.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11364"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Entity-Data-Model.png"><img class="size-full x_x_wp-image-11364" src="-entity-data-model.png" alt="Entity Data Model" width="503" height="669"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11364"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Entity-Data-Model.png"><img class="size-full x_x_wp-image-11364" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Entity-Data-Model.png" alt="Entity Data Model" width="503" height="669"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Entity Data Model</span></p>
 </div>
@@ -624,7 +624,7 @@ namespace&nbsp;MyDashboard&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">Now build your application and run the same URL again, you will get the output as follows.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11365"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-Output.png"><img class="size-large x_x_wp-image-11365" src="-web-api-output-1024x258.png" alt="Web API Output" width="634" height="160"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11365"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-Output.png"><img class="size-large x_x_wp-image-11365" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-Output-1024x258.png" alt="Web API Output" width="634" height="160"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web API Output</span></p>
 </div>
@@ -785,7 +785,7 @@ namespace&nbsp;MyDashboard.Controllers&nbsp;
 <p><span style="font-size:small">Now we need a view right?</span></p>
 <p><strong><span style="font-size:small">Creating a view</span></strong></p>
 <p><span style="font-size:small">To create a view, just right click on your controller name -&gt; Add View -&gt; Add.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11366"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Creating-a-view.png"><img class="size-full x_x_wp-image-11366" src="-creating-a-view.png" alt="Creating a view" width="625" height="398"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11366"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Creating-a-view.png"><img class="size-full x_x_wp-image-11366" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Creating-a-view.png" alt="Creating a view" width="625" height="398"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Creating a view</span></p>
 </div>
@@ -974,7 +974,7 @@ namespace&nbsp;MyDashboard.Controllers&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">Now run your application, you can see a pie chart with the data given.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11368"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Pie-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11368" src="-pie-chart-in-mvc-with-angular-js-and-web-api.png" alt="Pie Chart In MVC With Angular JS And Web API" width="348" height="427"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11368"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Pie-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11368" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Pie-Chart-In-MVC-With-Angular-JS-And-Web-API.png" alt="Pie Chart In MVC With Angular JS And Web API" width="348" height="427"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Pie Chart In MVC With Angular JS And Web API</span></p>
 </div>
@@ -1016,7 +1016,7 @@ namespace&nbsp;MyDashboard.Controllers&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">Now run your application, you can see a column chart with the data given.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11369"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Column-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11369" src="-column-chart-in-mvc-with-angular-js-and-web-api.png" alt="Column Chart In MVC With Angular JS And Web API" width="354" height="433"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11369"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Column-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11369" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Column-Chart-In-MVC-With-Angular-JS-And-Web-API.png" alt="Column Chart In MVC With Angular JS And Web API" width="354" height="433"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Column Chart In MVC With Angular JS And Web API</span></p>
 </div>
@@ -1058,7 +1058,7 @@ namespace&nbsp;MyDashboard.Controllers&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">Now run your application, you can see a Bar chart with the data given.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11370"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Bar-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11370" src="-bar-chart-in-mvc-with-angular-js-and-web-api.png" alt="Bar Chart In MVC With Angular JS And Web API" width="352" height="431"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11370"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Bar-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11370" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Bar-Chart-In-MVC-With-Angular-JS-And-Web-API.png" alt="Bar Chart In MVC With Angular JS And Web API" width="352" height="431"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Bar Chart In MVC With Angular JS And Web API</span></p>
 </div>
@@ -1100,7 +1100,7 @@ namespace&nbsp;MyDashboard.Controllers&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">Now run your application, you can see a Line chart with the data given.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11371"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Line-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11371" src="-line-chart-in-mvc-with-angular-js-and-web-api.png" alt="Line Chart In MVC With Angular JS And Web API" width="354" height="436"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11371"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Line-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11371" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Line-Chart-In-MVC-With-Angular-JS-And-Web-API.png" alt="Line Chart In MVC With Angular JS And Web API" width="354" height="436"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Line Chart In MVC With Angular JS And Web API</span></p>
 </div>
@@ -1142,7 +1142,7 @@ namespace&nbsp;MyDashboard.Controllers&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">Now run your application, you can see a Spline chart with the data given.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11372"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Spline-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11372" src="-spline-chart-in-mvc-with-angular-js-and-web-api.png" alt="Spline Chart In MVC With Angular JS And Web API" width="353" height="432"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11372"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Spline-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11372" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Spline-Chart-In-MVC-With-Angular-JS-And-Web-API.png" alt="Spline Chart In MVC With Angular JS And Web API" width="353" height="432"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Spline Chart In MVC With Angular JS And Web API</span></p>
 </div>
@@ -1184,7 +1184,7 @@ namespace&nbsp;MyDashboard.Controllers&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">Now run your application, you can see a Scatter chart with the data given.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11374"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Scatter-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11374" src="-scatter-chart-in-mvc-with-angular-js-and-web-api.png" alt="Scatter Chart In MVC With Angular JS And Web API" width="351" height="432"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11374"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Scatter-Chart-In-MVC-With-Angular-JS-And-Web-API.png"><img class="size-full x_x_wp-image-11374" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Scatter-Chart-In-MVC-With-Angular-JS-And-Web-API.png" alt="Scatter Chart In MVC With Angular JS And Web API" width="351" height="432"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Scatter Chart In MVC With Angular JS And Web API</span></p>
 </div>
@@ -1336,6 +1336,6 @@ namespace&nbsp;MyDashboard.Controllers&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">If you have configured all the chart types, we can see the output now.&nbsp;</span></p>
-<p><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Chart-Widgets-In-MVC-With-Angular-JS-And-Web-API-e1458191984345.png"><img class="alignnone size-large x_x_wp-image-11375" src="-chart-widgets-in-mvc-with-angular-js-and-web-api-1024x907.png" alt="Chart Widgets In MVC With Angular JS And Web API" width="634" height="562"></a></span></p>
+<p><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Chart-Widgets-In-MVC-With-Angular-JS-And-Web-API-e1458191984345.png"><img class="alignnone size-large x_x_wp-image-11375" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Chart-Widgets-In-MVC-With-Angular-JS-And-Web-API-1024x907.png" alt="Chart Widgets In MVC With Angular JS And Web API" width="634" height="562"></a></span></p>
 <p><span style="font-size:small">We have done everything!. That&rsquo;s fantastic right? Have a happy coding.</span></p>
 </li>

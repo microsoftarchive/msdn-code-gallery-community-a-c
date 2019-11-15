@@ -23,31 +23,31 @@
 <p><strong>Let&rsquo;s Get Into It:</strong></p>
 <p>As we know&nbsp;<strong>Angular UI Grid&nbsp;</strong>is a part of Angular UI, so we have some facilities. We need to download/install package before we are going to use in our application.</p>
 <p>To download the package, go to URL:&nbsp;<a href="http://ui-grid.info/">http://ui-grid.info</a></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig1.png"><img class="alignnone size-large x_wp-image-2904" src="-uig1-1024x377.png" alt="uig1" width="646" height="238"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig1.png"><img class="alignnone size-large x_wp-image-2904" src="http://shashangka.com/wp-content/uploads/2016/05/uig1-1024x377.png" alt="uig1" width="646" height="238"></a></p>
 <p><strong>MVC Application:</strong></p>
 <p>Let&rsquo;s create a new demo application with visual studio 2015. Select MVC and Web API below. Click&nbsp;<strong>OK.</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig2.png"><img class="alignnone size-full x_wp-image-2905" src="-uig2.png" alt="uig2" width="787" height="611"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig2.png"><img class="alignnone size-full x_wp-image-2905" src="http://shashangka.com/wp-content/uploads/2016/05/uig2.png" alt="uig2" width="787" height="611"></a></p>
 <p>Fig: 2</p>
 <p>After loading the initial application template, we need to install the script packages. We need to install two package using NuGet Package installer.</p>
 <p>First we will install AngularJS and after that we need to add Angular-Ui-Grid. In package manager console write&nbsp;<strong><em>Install-Package angularjs</em></strong><em>.</em>&nbsp;After successfully installation write<strong><em>Install-Package angular-ui-grid</em></strong><em>.</em></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig3.png"><img class="alignnone size-full x_wp-image-2906" src="-uig3.png" alt="uig3" width="861" height="125"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig3.png"><img class="alignnone size-full x_wp-image-2906" src="http://shashangka.com/wp-content/uploads/2016/05/uig3.png" alt="uig3" width="861" height="125"></a></p>
 <p>Fig: 3</p>
 <p>Or we can install packages using NuGet package manager</p>
 <p><strong>AngularJS</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig4.png"><img class="alignnone size-full x_wp-image-2907" src="-uig4.png" alt="uig4" width="1023" height="342"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig4.png"><img class="alignnone size-full x_wp-image-2907" src="http://shashangka.com/wp-content/uploads/2016/05/uig4.png" alt="uig4" width="1023" height="342"></a></p>
 <p>Fig: 4</p>
 <p><strong>AngularJS-uigrid</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig5.png"><img class="alignnone size-full x_wp-image-2908" src="-uig5.png" alt="uig5" width="1001" height="353"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig5.png"><img class="alignnone size-full x_wp-image-2908" src="http://shashangka.com/wp-content/uploads/2016/05/uig5.png" alt="uig5" width="1001" height="353"></a></p>
 <p>Fig: 5</p>
 <p>Our packages are installed, now we need to add a new controller and generate view to the application. In our master layout we need to add reference of script library.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig6.png"><img class="alignnone size-full x_wp-image-2924" src="-uig6.png" alt="uig6" width="835" height="291"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig6.png"><img class="alignnone size-full x_wp-image-2924" src="http://shashangka.com/wp-content/uploads/2016/05/uig6.png" alt="uig6" width="835" height="291"></a></p>
 <p>Fig: 6</p>
 <p>In the head section add the ui style reference</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig7.png"><img class="alignnone size-full x_wp-image-2910" src="-uig7.png" alt="uig7" width="891" height="169"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig7.png"><img class="alignnone size-full x_wp-image-2910" src="http://shashangka.com/wp-content/uploads/2016/05/uig7.png" alt="uig7" width="891" height="169"></a></p>
 <p>Fig:7</p>
 <p><strong>&nbsp;</strong><strong>AngularJS</strong></p>
 <p>Let&rsquo;s add folder&rsquo;s to create angular script.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig8.png"><img class="alignnone size-full x_wp-image-2911" src="-uig8.png" alt="uig8" width="269" height="223"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig8.png"><img class="alignnone size-full x_wp-image-2911" src="http://shashangka.com/wp-content/uploads/2016/05/uig8.png" alt="uig8" width="269" height="223"></a></p>
 <p>Fig: 8</p>
 <p><strong>&nbsp;</strong><strong>JS-Module</strong></p>
 <div class="crayon-syntax x_crayon-theme-classic x_crayon-font-monaco x_crayon-os-pc x_print-yes x_notranslate" id="crayon-577a93a2ed788501703724">
@@ -687,13 +687,13 @@
 </div>
 <p><strong>Ui-Grid</strong></p>
 <p>In index.cshtml page add ui-grid directive</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig9.png"><img class="alignnone size-full x_wp-image-2912" src="-uig9.png" alt="uig9" width="631" height="103"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig9.png"><img class="alignnone size-full x_wp-image-2912" src="http://shashangka.com/wp-content/uploads/2016/05/uig9.png" alt="uig9" width="631" height="103"></a></p>
 <p>Fig: 9</p>
 <p>The loader which will show a loading messaging while data is loading from server.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig10.png"><img class="alignnone size-full x_wp-image-2913" src="-uig10.png" alt="uig10" width="521" height="105"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig10.png"><img class="alignnone size-full x_wp-image-2913" src="http://shashangka.com/wp-content/uploads/2016/05/uig10.png" alt="uig10" width="521" height="105"></a></p>
 <p>Fig: 10</p>
 <p>At bottom end, add angular reference to the page</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig11.png"><img class="alignnone size-full x_wp-image-2914" src="-uig11.png" alt="uig11" width="675" height="75"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig11.png"><img class="alignnone size-full x_wp-image-2914" src="http://shashangka.com/wp-content/uploads/2016/05/uig11.png" alt="uig11" width="675" height="75"></a></p>
 <p>Fig: 11</p>
 <p><strong>&nbsp;</strong><strong>Complete Ui Code:</strong></p>
 <div class="crayon-syntax x_crayon-theme-classic x_crayon-font-monaco x_crayon-os-pc x_print-yes x_notranslate" id="crayon-577a93a2ed797803815197">
@@ -1070,7 +1070,7 @@
 </div>
 </div>
 <p><strong>Model</strong>: Our Ui is ready Let&rsquo;s create a new model in our demo application.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig12.png"><img class="alignnone size-full x_wp-image-2915" src="-uig12.png" alt="uig12" width="941" height="573"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig12.png"><img class="alignnone size-full x_wp-image-2915" src="http://shashangka.com/wp-content/uploads/2016/05/uig12.png" alt="uig12" width="941" height="573"></a></p>
 <p>Fig: 12</p>
 <p>I have used api controller to get data from server, which will get called while pagination operate.</p>
 <p><strong>Api-Controller</strong>:</p>
@@ -1191,9 +1191,9 @@
 </div>
 </div>
 <p><strong>Final Output:</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig13.png"><img class="alignnone size-large x_wp-image-2916" src="-uig13-1024x476.png" alt="uig13" width="646" height="300"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig13.png"><img class="alignnone size-large x_wp-image-2916" src="http://shashangka.com/wp-content/uploads/2016/05/uig13-1024x476.png" alt="uig13" width="646" height="300"></a></p>
 <p>Fig: 13</p>
 <p><strong>Filter Data:</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig14.png"><img class="alignnone size-large x_wp-image-2917" src="-uig14-1024x223.png" alt="uig14" width="646" height="141"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/05/uig14.png"><img class="alignnone size-large x_wp-image-2917" src="http://shashangka.com/wp-content/uploads/2016/05/uig14-1024x223.png" alt="uig14" width="646" height="141"></a></p>
 <p>Fig: 14</p>
-<p>Hope this will help&nbsp;<img class="wp-smiley" src="-simple-smile.png" alt=":)"></p>
+<p>Hope this will help&nbsp;<img class="wp-smiley" src="http://shashangka.com/wp-includes/images/smilies/simple-smile.png" alt=":)"></p>

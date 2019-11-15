@@ -47,12 +47,12 @@
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">Begin with go to the solution explorer and click on the .aspx page.
 </span></span></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">Go to the design of the .aspx page this will open the design of the aspx page as shown below.</span></span><span style="font-size:small"><span style="font-family:Calibri"><span>&nbsp;</span></span></span></p>
-<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span><img id="93998" src="93998-imageone.jpg" alt="" width="630" height="343"></span></span></span></p>
+<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span><img id="93998" src="http://i1.code.msdn.s-msft.com/aspnet-multilingual-website-6db1ec9b/image/file/93998/1/imageone.jpg" alt="" width="630" height="343"></span></span></span></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">Click on the Tool menu in visual studio and then click on the &ldquo;Generate Local Resource&rdquo; which will add the resource file for the current
  selected aspx page under the App_LocalResources. <span>&nbsp;</span></span></span></p>
-<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span>&nbsp;<img id="93999" src="93999-imagetwo.jpg" alt="" width="630" height="343"></span></span></span></p>
+<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span>&nbsp;<img id="93999" src="http://i1.code.msdn.s-msft.com/aspnet-multilingual-website-6db1ec9b/image/file/93999/1/imagetwo.jpg" alt="" width="630" height="343"></span></span></span></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">In solution explorer we are able to see the resource files which are created and also there are some files which are created for French language.</span></span></p>
-<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span>&nbsp;<img id="94000" src="94000-imagethree.jpg" alt="" width="630" height="343"></span></span></span></p>
+<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span>&nbsp;<img id="94000" src="http://i1.code.msdn.s-msft.com/aspnet-multilingual-website-6db1ec9b/image/file/94000/1/imagethree.jpg" alt="" width="630" height="343"></span></span></span></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">Default.aspx.resx file we have similar file for French language as Default.aspx.fr.resx</span></span></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><strong>NOTE:
 </strong></span></span></p>
@@ -63,12 +63,12 @@
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><strong><span style="font-family:Calibri; font-size:small">&nbsp;</span></strong></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><strong><span style="font-size:small"><span style="font-family:Calibri">Steps to Add new resource file for new language (<span class="input">en-gb</span>) supported by application.</span></span></strong></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">Below are the steps to be performed to add support for new language in the application.</span></span></p>
-<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span>&nbsp;<img id="94001" src="94001-imagefour.jpg" alt="" width="630" height="343"></span></span></span></p>
+<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span>&nbsp;<img id="94001" src="http://i1.code.msdn.s-msft.com/aspnet-multilingual-website-6db1ec9b/image/file/94001/1/imagefour.jpg" alt="" width="630" height="343"></span></span></span></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">Right Click on Default.aspx.resx file and click &ldquo;Copy&rdquo;</span></span></p>
-<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span>&nbsp;<img id="94002" src="94002-imagefive.jpg" alt="" width="630" height="343"></span></span></span></p>
+<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri"><span>&nbsp;<img id="94002" src="http://i1.code.msdn.s-msft.com/aspnet-multilingual-website-6db1ec9b/image/file/94002/1/imagefive.jpg" alt="" width="630" height="343"></span></span></span></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">Right Click on &ldquo;App_LocalResource&rdquo; folder and click &ldquo;Paste&rdquo; this will create the new resource file as &ldquo;Copy of Default.aspx.resx&rdquo;
  rename the file as &ldquo;Default.aspx.<span class="input">en-gb</span>.resx&rdquo; and save the file.</span></span></p>
-<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">&nbsp;<img id="94003" src="94003-imagesix.jpg" alt="" width="630" height="343"></span></span></p>
+<p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">&nbsp;<img id="94003" src="http://i1.code.msdn.s-msft.com/aspnet-multilingual-website-6db1ec9b/image/file/94003/1/imagesix.jpg" alt="" width="630" height="343"></span></span></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><span style="font-size:small"><span style="font-family:Calibri">Resource file will get created for the &ldquo;en-gb&rdquo; culture.
 </span></span></p>
 <p class="MsoNormal" style="margin:0cm 0cm 10pt"><strong><span style="font-family:Calibri; font-size:small">&nbsp;Test the Application</span></strong></p>
@@ -76,10 +76,10 @@
  on &quot;Tools&quot; -&gt; &quot;Internet Options&quot; -&gt; &quot;Languages&quot; and selecte language with which you want to test the application and make the language as your first language using &quot;Move up&quot; button click &quot;OK&quot; and then click F5 you should be able to see the changes as
  per the new language selected.</span></p>
 <p>&nbsp;Test with&nbsp;language as &quot;EN-US&quot;.</p>
-<p>&nbsp;<img id="94047" src="94047-imageeight.jpg" alt="" width="615" height="446"></p>
+<p>&nbsp;<img id="94047" src="http://i1.code.msdn.s-msft.com/aspnet-multilingual-website-6db1ec9b/image/file/94047/1/imageeight.jpg" alt="" width="615" height="446"></p>
 <p>&nbsp;</p>
 <p>&nbsp;Test with&nbsp;language as &quot;FR-Fr&quot;.</p>
-<p>&nbsp;<img id="94006" src="94006-imageseven.jpg" alt="" width="603" height="384"></p>
+<p>&nbsp;<img id="94006" src="http://i1.code.msdn.s-msft.com/aspnet-multilingual-website-6db1ec9b/image/file/94006/1/imageseven.jpg" alt="" width="603" height="384"></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">

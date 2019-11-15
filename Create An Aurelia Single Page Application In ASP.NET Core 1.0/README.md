@@ -50,7 +50,7 @@
 <h1>Project Structure</h1>
 <span style="font-size:16px">Click <em>&quot;show all files icon&quot;</em> in Solution Explorer. You can see the jspm_packages reference and config.js inside the wwwroot.<br>
 </span><br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/2352.Project_2D00_Structure.png"><img src=":-2352.project_2d00_structure.png" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/2352.Project_2D00_Structure.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/2352.Project_2D00_Structure.png" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 </div>
 <h1>Aurelia Reference in index.html page</h1>
@@ -63,7 +63,7 @@
 <span style="font-size:16px">The code given below contains the reference of &quot;jspm_packages/system.js&quot; &amp; &quot;config.js&quot;. The body tag contains the &quot;aurelia-app&quot; or an entry point of Aurelia app and it automatically detects the app.js file in our root folder
  (what we mention baseURL on jspm installation) or wwwroot. The &quot;System.import(&quot;Aurelia-Bootstrapper&quot;)&quot; will help to import Aurelia-Bootstrapper references in the body.</span>&nbsp;<br>
 <br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/7723.Index_2D00_Page.png"><img src=":-7723.index_2d00_page.png" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/7723.Index_2D00_Page.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/7723.Index_2D00_Page.png" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 </div>
 <h1>config.js</h1>
@@ -582,7 +582,7 @@ Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory logge
 <div><br>
 <span style="font-size:16px">I think possibly we will get the given error below.<br>
 </span><br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/8156.Aurelia-_2D00_-Error.png"><img src=":-8156.aurelia-_2d00_-error.png" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/8156.Aurelia-_2D00_-Error.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/8156.Aurelia-_2D00_-Error.png" alt="" style="border-width:0px; border-style:solid"></a><br>
 <span style="font-size:16px">Therefore, we need to install aurelia-pal Browser in our project.<br>
 </span><br>
 <strong><span style="font-size:16px">Command<br>
@@ -592,7 +592,7 @@ Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory logge
 <h1>Output</h1>
 <div><span style="font-size:16px">Finally, we got it.<br>
 </span><br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0116.aurelia_2D00_output.png"><img src=":-0116.aurelia_2d00_output.png" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/0116.aurelia_2D00_output.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/0116.aurelia_2D00_output.png" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 </div>
 <h1>References</h1>

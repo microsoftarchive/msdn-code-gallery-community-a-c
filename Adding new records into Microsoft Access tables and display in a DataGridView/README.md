@@ -175,6 +175,6 @@
 </div>
 </div>
 <div class="endscriptcode"><span style="font-size:small">&nbsp;The following is for the updated code in the VB.NET project to add a record from a modal form. Will update the C# code shortly to do the same.</span></div>
-<div class="endscriptcode"><span style="font-size:small"><img id="162815" src="162815-newfigure.jpg" alt="" width="496" height="740"><br>
+<div class="endscriptcode"><span style="font-size:small"><img id="162815" src="https://i1.code.msdn.s-msft.com/adding-new-records-into-53ce3eb1/image/file/162815/1/newfigure.jpg" alt="" width="496" height="740"><br>
 </span></div>
 <div class="endscriptcode"></div>

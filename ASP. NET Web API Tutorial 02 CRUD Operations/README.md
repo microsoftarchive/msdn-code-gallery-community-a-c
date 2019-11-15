@@ -92,10 +92,10 @@ New</strong> and then <strong>Project</strong>.</p>
 <strong>Visual C#</strong> node. Under <strong>Visual C#</strong>, select <strong>
 Web</strong>. In the list of project templates, select <strong>ASP.NET MVC 4 Web Application</strong>. Name the project &quot;ProductStore&quot; and click
 <strong>OK</strong>.</p>
-<p><img src="-webapi_crud01.png" alt=""></p>
+<p><img src="http://aspnet13.orcsweb.com/media/3141982/webapi_crud01.png" alt=""></p>
 <p>In the <strong>New ASP.NET MVC 4 Project</strong> dialog, select <strong>Web API</strong> and click
 <strong>OK</strong>.</p>
-<p><img src="-webapi_crud02.png" alt=""></p>
+<p><img src="http://aspnet13.orcsweb.com/media/3141988/webapi_crud02.png" alt=""></p>
 <h2>Adding a Model</h2>
 <p>A <em>model</em> is an object that represents the data in your application. In ASP.NET Web API, you can use strongly typed CLR objects as models, and they will automatically be serialized to XML or JSON for the client.</p>
 <p>For the ProductStore API, our data consists of products, so we'll create a new class named Product.</p>
@@ -103,4 +103,4 @@ Web</strong>. In the list of project templates, select <strong>ASP.NET MVC 4 Web
 <strong>Solution Explorer</strong>. In Solution Explorer, right-click the <strong>
 Models</strong> folder. From the context meny, select <strong>Add</strong>, then select
 <strong>Class</strong>. Name the class &quot;Product&quot;.</p>
-<p><img src="-webapi_crud03.png" alt=""></p>
+<p><img src="http://aspnet13.orcsweb.com/media/3141994/webapi_crud03.png" alt=""></p>

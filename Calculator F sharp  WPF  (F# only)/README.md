@@ -36,7 +36,7 @@ https://www.microsoft.com/net/download/thank-you/net472-developer-pack&nbsp;</a>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p>It is Standard Calculator which was written with using only F# language.</p>
 <p>It works with any Windows Operation System.&nbsp;</p>
-<p><em><img id="162493" src="162493-calc1.png" alt="" width="319" height="513">&nbsp;</em></p>
+<p><em><img id="162493" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/162493/1/Calc1.PNG" alt="" width="319" height="513">&nbsp;</em></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder">

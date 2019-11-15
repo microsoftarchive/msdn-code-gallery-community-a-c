@@ -20,18 +20,18 @@ This solution will be very useful when you need detail about the person who visi
 <p><span style="font-size:x-small"><span style="font-family:Verdana; font-size:x-small">Below is the screenshot that will display the how it looks like:
 <br>
 <br>
-<img src="-sandbox1.gif" border="0" alt="Sandbox1.gif" width="769" height="307"><br>
+<img src="http://www.c-sharpcorner.com/UploadFile/hec.ravi/7109/Images/Sandbox1.gif" border="0" alt="Sandbox1.gif" width="769" height="307"><br>
 <br>
 You can further add the name of the users who visit and pages viewed to this web part.
 <br>
 <br>
 After activating this feature, it will create a list with fields and web part. List will look like below:<br>
 <br>
-<img src="-sandbox2.gif" border="0" alt="Sandbox2.gif" width="789" height="257"><br>
+<img src="http://www.c-sharpcorner.com/UploadFile/hec.ravi/7109/Images/Sandbox2.gif" border="0" alt="Sandbox2.gif" width="789" height="257"><br>
 <br>
 The folder hierarchy for this solution will look like:<br>
 <br>
-<img src="-sandbox3.gif" border="0" alt="Sandbox3.gif" width="308" height="482"><br>
+<img src="http://www.c-sharpcorner.com/UploadFile/hec.ravi/7109/Images/Sandbox3.gif" border="0" alt="Sandbox3.gif" width="308" height="482"><br>
 <br>
 Source code you can download with article.</span></span></p>
 <p>&nbsp;</p>

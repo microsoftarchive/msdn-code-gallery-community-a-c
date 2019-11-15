@@ -30,7 +30,7 @@
 Worker role does not start when deploying web application on azure cloud service</a>.</p>
 <p>The scenario here is a website will provide a user the ability to launch a console application on the worker role virtual machine. &nbsp;In this project, an Azure Queue is used to provide a means of triggering the activity on the worker role. &nbsp;In order
  to show that the activity completed, a message is written to an Azure Table. &nbsp;The architecture is shown below:</p>
-<p><img id="152782" src="152782-2016-05-09_15-12-26.jpg" alt="" width="708" height="501"></p>
+<p><img id="152782" src="https://i1.code.msdn.s-msft.com/azure-web-role-and-worker-fef32bc6/image/file/152782/1/2016-05-09_15-12-26.jpg" alt="" width="708" height="501"></p>
 <p>The project was created using the Visual Studio Cloud Service template and consists of a worker and web role. &nbsp;The web role is MVC and supports two buttons:
 <em>Send Message</em> and <em>Clear Message</em>. &nbsp;The site will poll the web server for messages written to an Azure Table. &nbsp;The
 <em>Send Message</em>&nbsp;button will cause a message to be written to the queue where the
@@ -56,7 +56,7 @@ Worker role does not start when deploying web application on azure cloud service
 </div>
 </div>
 <div class="endscriptcode">&nbsp;The project can be then published to a suitable Azure environment:</div>
-<div class="endscriptcode"><img id="152783" src="152783-2016-05-10_15-06-11.jpg" alt="" width="319" height="222"></div>
+<div class="endscriptcode"><img id="152783" src="https://i1.code.msdn.s-msft.com/azure-web-role-and-worker-fef32bc6/image/file/152783/1/2016-05-10_15-06-11.jpg" alt="" width="319" height="222"></div>
 <p>&nbsp;</p>
 <p><span style="font-size:20px; font-weight:bold">Web Role</span></p>
 <p>The three main methods in the controller to highlight are <em>Clear Messages, Get Message,

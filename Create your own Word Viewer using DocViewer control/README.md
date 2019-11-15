@@ -104,7 +104,7 @@
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
 <p><strong></p>
-<div class="endscriptcode"><img id="130914" src="130914-9.png" alt="" width="652" height="284"></div>
+<div class="endscriptcode"><img id="130914" src="https://i1.code.msdn.s-msft.com/create-your-own-word-63c926b1/image/file/130914/1/9.png" alt="" width="652" height="284"></div>
 </strong>
 <p></p>
 <p>&nbsp;</p>

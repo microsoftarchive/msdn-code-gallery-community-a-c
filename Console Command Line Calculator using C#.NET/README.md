@@ -22,7 +22,7 @@
 </li><li lang="en-US"><span style="font-size:medium"><strong>Exit</strong> Command exits the application at any point of time.</span>
 </li><li lang="en-US"><span style="font-size:medium"><span><strong>Cls </strong>Command&nbsp;clears the console screen.</span><strong>&nbsp;</strong><em>&nbsp;</em></span><strong>&nbsp;</strong><em>&nbsp;</em>
 </li></ul>
-<p><img id="169252" src="169252-calc.png" alt="" width="476" height="453"></p>
+<p><img id="169252" src="https://i1.code.msdn.s-msft.com/console-command-line-23d2d263/image/file/169252/1/calc.png" alt="" width="476" height="453"></p>
 <h1><span>Building the Sample</span></h1>
 <p><em><span style="font-size:small">The Solution is built on Visual Studio 2015 but its resources are compatible to other versions as well.</span><br>
 </em></p>

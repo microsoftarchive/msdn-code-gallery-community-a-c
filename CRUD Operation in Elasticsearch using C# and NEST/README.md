@@ -56,7 +56,7 @@ NEST</a>. To reference NEST within our project,that is make its libraries access
  finished, we will see project References included the references those related to NEST.
 <br>
 <br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/8715.devSetup01.png"><img src="-8715.devsetup01.png" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/8715.devSetup01.png"><img src="http://social.technet.microsoft.com/wiki/resized-image.ashx/__size/350x0/__key/communityserver-wikis-components-files/00-00-00-00-05/8715.devSetup01.png" alt="" style="border-width:0px; border-style:solid"></a><br>
 </span></p>
 <p><span style="margin:0px; padding:0px; outline:0px; line-height:16.12px; font-size:12px; font-style:inherit; font-weight:inherit; list-style-type:none; font-family:'Segoe UI','Lucida Grande',Verdana,Arial,Helvetica,sans-serif; background-color:#ffffff">We
  are now ready to use the Elasticsearch NEST client regarding the development of our CRUD.

@@ -20,7 +20,7 @@
 <h2>Introduction</h2>
 <p>This is a sample project showing how to get started building Office <a href="http://dev.office.com/getting-started/addins" target="_blank">
 add-ins</a> with Angular 2 and Office UI Fabric.The sample add-in is a task pane add-in for Excel.</p>
-<p><img id="159916" src="159916-officeaddin1.png" alt=""></p>
+<p><img id="159916" src="https://i1.code.msdn.s-msft.com/building-an-office-add-in-a9d506cd/image/file/159916/1/officeaddin1.png" alt=""></p>
 <h3>Latest</h3>
 <p>This sample has been updated to Angular2 release. If you need earlier versions you can find them
 <a href="https://github.com/Useful-Software-Solutions-Ltd/office-addin-with-angular2/tree/18e48af2fc59de50aae94aeb4c029d7ccbae28a8" target="_blank">

@@ -29,11 +29,11 @@ Getting Started with the Entity Framework</a>.</p>
  solution.</p>
 <h1>Running the Sample</h1>
 <p>To run the sample, hit F5 or choose the Debug | Start Debugging menu command. You will see the home page which includes a menu bar.</p>
-<p><img src="19069-contosouniversityhomepage.png" alt="" width="564" height="143"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-web-forms-97f8ee9a/image/file/19069/1/contosouniversityhomepage.png" alt="" width="564" height="143"></p>
 <p>From this page you can select any of the tabs to perform various actions such as display a list of students, add new students, display a list of courses, and so forth.</p>
-<p><img src="19070-studentlist.png" alt="" width="310" height="111"></p>
-<p><img src="19071-addstudents.png" alt="" width="258" height="177"></p>
-<p><img src="19072-courseslist.png" alt="" width="372" height="276"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/aspnet-web-forms-97f8ee9a/image/file/19070/1/studentlist.png" alt="" width="310" height="111"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-web-forms-97f8ee9a/image/file/19071/1/addstudents.png" alt="" width="258" height="177"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/aspnet-web-forms-97f8ee9a/image/file/19072/1/courseslist.png" alt="" width="372" height="276"></p>
 <h1>Source Code Overview</h1>
 <p>The <em>ContosoUniversity</em> folder includes the following folders and files</p>
 <ul>

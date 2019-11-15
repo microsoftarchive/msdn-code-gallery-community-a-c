@@ -16,7 +16,7 @@
 <ul>
 <li>View almost any document type (70&#43; file formats, including PDF &amp; Microsoft Office).
 </li><li>HTML5 Zero-footprint viewer. </li><li>Convert between document types. </li></ul>
-<p><img id="153277" src="153277-documentultimate-screenshot.png" alt="" width="736" height="546"></p>
+<p><img id="153277" src="https://i1.code.msdn.s-msft.com/aspnet-document-viewer-6d83ecc3/image/file/153277/1/documentultimate-screenshot.png" alt="" width="736" height="546"></p>
 <p><strong>Note:</strong> This project&nbsp;contains a fully working version of the product, however without a license key it will run in trial mode. For more information, please see&nbsp;<a href="http://www.gleamtech.com/documentultimate">DocumentUltimate:
  ASP.NET Document Viewer</a>&nbsp;product page.</p>
 <div>

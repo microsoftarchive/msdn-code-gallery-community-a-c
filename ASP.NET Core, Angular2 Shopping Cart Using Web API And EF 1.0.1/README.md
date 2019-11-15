@@ -147,7 +147,7 @@ select&nbsp;*&nbsp;from&nbsp;ItemDetails</pre>
  ASP.NET Core Angular 2 Starter. Enter your project name and click OK.</div>
 <p><img id="169083" src="169083-1.png" alt="" width="536" height="274"></p>
 <p>After creating ASP.NET Core Angular 2 application, wait for a few seconds. You will see that all the dependencies are automatically restoring.</p>
-<p><img id="166581" src="166581-1_0.png" alt="" width="241" height="324"></p>
+<p><img id="166581" src="https://code.msdn.microsoft.com/site/view/file/166581/1/1_0.png" alt="" width="241" height="324"></p>
 <p>We will be using all this in our project to create, build and run our Angular 2 with ASP.NET Core Template Pack, WEB API and EF 1.0.1<strong>&nbsp;</strong></p>
 <h1><strong>Step 3 Creating Entity Framework</strong></h1>
 <p><strong>Add Entity Framework Packages</strong></p>
@@ -160,16 +160,16 @@ select&nbsp;*&nbsp;from&nbsp;ItemDetails</pre>
 </div>
 </div>
 </div>
-<div class="endscriptcode">&nbsp;<img id="166582" src="166582-2.png" alt="" width="417" height="330"></div>
+<div class="endscriptcode">&nbsp;<img id="166582" src="https://code.msdn.microsoft.com/site/view/file/166582/1/2.PNG" alt="" width="417" height="330"></div>
 </pre>
 <p>&nbsp;</p>
 <p>When we save the project,.json file we can see the Reference was been Restoring.</p>
-<p><img id="166583" src="166583-2_0.png" alt="" width="208" height="49"></p>
+<p><img id="166583" src="https://code.msdn.microsoft.com/site/view/file/166583/1/2_0.PNG" alt="" width="208" height="49"></p>
 <p>After few second we can see Entity framework package has been restored and all reference has been added.&nbsp;</p>
 <p><img id="169084" src="169084-3.png" alt="" width="310" height="383"></p>
 <h2><strong>Adding Connection String</strong></h2>
 <p><strong>&nbsp;</strong>To add the connection string with our SQL connection open the &ldquo;appsettings.json&rdquo; file .Yes this is the JSON file and this file looks like the below image by default.</p>
-<p><img id="166585" src="166585-4.png" alt="" width="305" height="181"></p>
+<p><img id="166585" src="https://code.msdn.microsoft.com/site/view/file/166585/1/4.PNG" alt="" width="305" height="181"></p>
 <p>In this appsettings.json file add our connection string &nbsp;</p>
 <p>&nbsp;</p>
 <div class="scriptcode">
@@ -286,7 +286,7 @@ namespace&nbsp;Angular2ASPCORE.Data&nbsp;&nbsp;
 <p>&nbsp;</p>
 <h1 class="endscriptcode"><strong>Step 4 Creating Web API</strong></h1>
 <p>To create our WEB API Controller, right click Controllers folder. Click Add and click New Item.</p>
-<p><span><img id="166592" src="166592-9.png" alt="" width="405" height="226"></span></p>
+<p><span><img id="166592" src="https://code.msdn.microsoft.com/site/view/file/166592/1/9.PNG" alt="" width="405" height="226"></span></p>
 <p>&nbsp;</p>
 <p><span>Click ASP.NET in right side &gt; Click Web API Controller Class. Enter the name as &ldquo;itemDetailsAPI.cs&rdquo; and click Add.</span></p>
 <p><img id="169088" src="169088-10.png" alt="" width="502" height="241"></p>

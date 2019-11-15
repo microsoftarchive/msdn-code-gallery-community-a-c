@@ -29,11 +29,11 @@
  solution.</p>
 <h1>Running the Sample</h1>
 <p>To run the sample, hit F5 or choose the Debug | Start Debugging menu command. You will see the home page which includes a menu bar.</p>
-<p><img src="19095-contosouniversityhomepage.png" alt="" width="564" height="143"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/aspnet-web-forms-6c7197aa/image/file/19095/1/contosouniversityhomepage.png" alt="" width="564" height="143"></p>
 <p>From this page you can select any of the tabs to perform various actions such as display a list of students, add new students, display a list of courses, and so forth.</p>
-<p><img src="19097-addstudents.png" alt="" width="258" height="177"></p>
-<p><img src="19096-studentlist.png" alt="" width="310" height="111"></p>
-<p><img src="19098-departmentsconcurrency.png" alt="" width="631" height="252"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/aspnet-web-forms-6c7197aa/image/file/19097/1/addstudents.png" alt="" width="258" height="177"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/aspnet-web-forms-6c7197aa/image/file/19096/1/studentlist.png" alt="" width="310" height="111"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/aspnet-web-forms-6c7197aa/image/file/19098/1/departmentsconcurrency.png" alt="" width="631" height="252"></p>
 <h1>Source Code Overview</h1>
 <p>The <em>ContosoUniversity</em> folder includes the following folders and files</p>
 <ul>

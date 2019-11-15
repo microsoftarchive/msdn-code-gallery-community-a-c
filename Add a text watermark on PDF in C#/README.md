@@ -80,7 +80,7 @@
 </div>
 </div>
 <p style="text-align:justify"><span style="font-size:small"><strong>Output:</strong></span></p>
-<p style="text-align:justify"><span style="font-size:small"><strong><img id="127011" src="127011-2.png" alt="" width="569" height="292"></strong></span></p>
+<p style="text-align:justify"><span style="font-size:small"><strong><img id="127011" src="https://i1.code.msdn.s-msft.com/add-a-text-watermark-on-e56799cf/image/file/127011/1/2.png" alt="" width="569" height="292"></strong></span></p>
 <h1>More Information</h1>
 <p style="text-align:justify"><span style="font-size:10pt"><span>Spire.PDF is a PDF component which contains an incredible wealth of features to create, read, edit and manipulate PDF documents on .NET, Silverlight and WPF Platform. As an independent PDF library,
  it does not need users to install Adobe Acrobat or any other third party libraries. Spire.PDF for .NET is completely written in C#, but also supports VB.NET, Windows Forms and ASP.NET Applications.</span></span></p>

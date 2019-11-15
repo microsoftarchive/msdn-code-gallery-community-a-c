@@ -63,12 +63,12 @@
 </div>
 <div class="endscriptcode">&nbsp;Put the class inside the Models folders, just to organize your code.</div>
 <p>&nbsp;</p>
-<p><img id="106307" src="106307-mvc52.jpg" alt="" width="908" height="463"></p>
+<p><img id="106307" src="https://code.msdn.microsoft.com/site/view/file/106307/1/MVC52.jpg" alt="" width="908" height="463"></p>
 <p>&nbsp;</p>
 <h1>STEP3 - &nbsp;Create controller with views using Entity Framework</h1>
 <p>Add new Scaffolded to the project (new item existent on MVC5)</p>
 <p>&nbsp;</p>
-<p><img id="106308" src="106308-mvc53.jpg" alt="" width="519" height="247"></p>
+<p><img id="106308" src="https://code.msdn.microsoft.com/site/view/file/106308/1/MVC53.jpg" alt="" width="519" height="247"></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;Choose option MVC5 Controller with views using Entity Framework</p>
@@ -227,7 +227,7 @@
 <p>&nbsp;</p>
 <p><strong><span style="font-size:2em">b. The Views were automatically created</span></strong></p>
 <p>&nbsp;</p>
-<p><img id="106310" src="106310-mvc55.jpg" alt="" width="276" height="210"></p>
+<p><img id="106310" src="https://code.msdn.microsoft.com/site/view/file/106310/1/MVC55.jpg" alt="" width="276" height="210"></p>
 <p>&nbsp;</p>
 <p>Run the application</p>
 <p>&nbsp;</p>

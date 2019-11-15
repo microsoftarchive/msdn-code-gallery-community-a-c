@@ -35,14 +35,14 @@
 <p><em>Open the Visual Studio 2010 IDE AND CREATE Asp.Net MVC 4 application. As shown in the below screens.</em></p>
 <p><strong>File-&gt;New-&gt;Project</strong></p>
 <p><strong>&nbsp;</strong></p>
-<p><em>&nbsp;</em>&nbsp;<img id="127303" src="127303-screen1.png" alt="" width="959" height="415"></p>
+<p><em>&nbsp;</em>&nbsp;<img id="127303" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127303/1/screen1.png" alt="" width="959" height="415"></p>
 <p><strong>Visual C# -&gt;Web-&gt;Asp.Net MVC 4 Web Application</strong></p>
-<p><strong>&nbsp;</strong>&nbsp;<strong>&nbsp;</strong>&nbsp;<img id="127304" src="127304-screen2.png" alt="" width="957" height="660"></p>
+<p><strong>&nbsp;</strong>&nbsp;<strong>&nbsp;</strong>&nbsp;<img id="127304" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127304/1/screen2.png" alt="" width="957" height="660"></p>
 <p><strong>&nbsp;</strong></p>
 <p><strong><img id="125499" src="125499-project_3.png" alt=""></strong></p>
 <p><strong>&nbsp;</strong><strong>Project Solution Structure</strong></p>
 <p><strong>&nbsp;</strong></p>
-<p><strong><img id="127305" src="127305-screen4.png" alt="">&nbsp;</strong></p>
+<p><strong><img id="127305" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127305/1/screen4.png" alt="">&nbsp;</strong></p>
 <h3><span style="text-decoration:underline"><strong>Step 2: Create DAL Project </strong>
 </span></h3>
 <p><em>Below points are to be considered for DAL project.</em></p>
@@ -57,36 +57,36 @@
 <p><strong>&nbsp;</strong></p>
 <p><strong>Project Solution Structure</strong></p>
 <p><strong>&nbsp;</strong></p>
-<p><strong>&nbsp;<img id="127306" src="127306-screen5.png" alt="" width="415" height="656"></strong></p>
+<p><strong>&nbsp;<img id="127306" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127306/1/screen5.png" alt="" width="415" height="656"></strong></p>
 <p><strong>&nbsp;B) Steps to add Entity Framework support in the DAL Layer</strong></p>
 <ol>
 <li>Right click on DAL project &quot;MVCWithEF4AndOracleDB.Dal&quot; </li><li>Click Add </li><li>Click &quot;Add New Item&quot; </li><li>In Add New Item Dialog box select &quot;ADO.Net Entity Data Model&quot; </li><li>Name it as &quot;OracleDataModel.edmx&quot; </li><li>Click Add </li></ol>
 <p><strong>&nbsp;This will start Entity Data Model Wizard.</strong></p>
 <p><strong>&nbsp;</strong>&nbsp;</p>
-<p><strong>&nbsp;<img id="127291" src="127291-oracledatamodel.png" alt="" width="956" height="660"></strong></p>
+<p><strong>&nbsp;<img id="127291" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127291/1/oracledatamodel.png" alt="" width="956" height="660"></strong></p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>Choose &quot;Generate from Database&quot;,Click Next </strong></p>
 <p><strong>&nbsp;</strong>&nbsp;</p>
-<p><strong><img id="127292" src="127292-entitydatamodelwizard1.png" alt="" width="537" height="485"></strong></p>
+<p><strong><img id="127292" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127292/1/entitydatamodelwizard1.png" alt="" width="537" height="485"></strong></p>
 <p><strong>&nbsp;</strong>&nbsp;</p>
 <p><strong>In Choose your data connecction window ,Click &quot;New Connection&quot;</strong></p>
-<p><strong><img id="127293" src="127293-entitydatamodelwizard2.png" alt=""></strong></p>
+<p><strong><img id="127293" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127293/1/entitydatamodelwizard2.png" alt=""></strong></p>
 <p><strong>In Choose Data Source Window select &quot;Oracle Database&quot;.</strong></p>
 <p><strong>Select Data Provider as &quot;ODP.Net , Managed Driver&quot;.</strong></p>
 <p><strong>Click Continue</strong></p>
 <p><strong>This will open &quot;Connection Properties&quot; window as below</strong></p>
 <p><strong>&nbsp;</strong>&nbsp;</p>
-<p><strong><img id="127295" src="127295-entitydatamodelwizard3.png" alt="" width="553" height="618"></strong></p>
+<p><strong><img id="127295" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127295/1/entitydatamodelwizard3.png" alt="" width="553" height="618"></strong></p>
 <p><strong>&nbsp;</strong>&nbsp;</p>
 <p><strong>In Connection Propperties window enter below details</strong></p>
 <ul>
 <li>User Name </li><li>Password </li><li>Select Data Source Name from Drop Down </li><li>Click test Connection </li><li>This will pop up &quot;Test Connection Succeded&quot; window. </li><li>Click &quot;OK&quot; </li></ul>
 <p><strong>Name your Entity object(In my case it is &quot;OracleEntities&quot;</strong></p>
 <p><strong>&nbsp;</strong>&nbsp;</p>
-<p><strong><img id="127296" src="127296-entitydatamodelwizard4.png" alt="" width="536" height="486"></strong></p>
+<p><strong><img id="127296" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127296/1/entitydatamodelwizard4.png" alt="" width="536" height="486"></strong></p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;Clicking &quot;Next&quot; will pop up &quot;Choose Your Database Objects&quot; window.</strong></p>
-<p><strong><img id="127297" src="127297-entitydatamodelwizard5.png" alt=""></strong></p>
+<p><strong><img id="127297" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127297/1/entitydatamodelwizard5.png" alt=""></strong></p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>In &quot;Choose your database Objects&quot; window , select the obhects you want to use in your application.</strong></p>
 <p><strong>As in this sample, I am going to demonstrate the use of Stored Procedure with Entity Framework.I am select the procedure&nbsp; &quot;GETDBUSERBYUSERID&quot; .</strong></p>
@@ -127,7 +127,7 @@
 </li></ul>
 <p><strong>After performing steps in this section ,we will see the model browser updated as per the screen below.</strong></p>
 <p><strong>&nbsp;</strong></p>
-<p><img id="127301" src="127301-entitydatamodelwizard6.png" alt="" width="584" height="664">&nbsp;</p>
+<p><img id="127301" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127301/1/entitydatamodelwizard6.png" alt="" width="584" height="664">&nbsp;</p>
 <p>&nbsp;</p>
 <h3><span style="text-decoration:underline">Step 3 :Using the Dal in the GUI Project
 </span></h3>
@@ -158,6 +158,6 @@
 <p>}</p>
 <p>&nbsp;</p>
 <p><strong>Place the break point on the line return View(); to see the results returned.I have checked the result in the Output window as below.</strong></p>
-<p><img id="127302" src="127302-entitydatamodelwizard7.png" alt="" width="1892" height="486"></p>
+<p><img id="127302" src="https://i1.code.msdn.s-msft.com/aspnet-mvc4-with-entity-bf84ecbe/image/file/127302/1/entitydatamodelwizard7.png" alt="" width="1892" height="486"></p>
 <p>&nbsp;</p>
 <h3><span style="text-decoration:underline"><strong>&nbsp;&nbsp;Happy Coding.....</strong></span></h3>

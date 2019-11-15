@@ -11,7 +11,7 @@
 - 11/01/2013
 ## Description
 
-<h1><img id="100559" src="100559-analogue%20clock2.jpg" alt="" width="576" height="423"></h1>
+<h1><img id="100559" src="http://i1.code.msdn.s-msft.com/vstudio/analogue-clock-8bde1c6d/image/file/100559/1/analogue%20clock2.jpg" alt="" width="576" height="423"></h1>
 <h1>
 <div class="endscriptcode">&nbsp;</div>
 Introduction</h1>

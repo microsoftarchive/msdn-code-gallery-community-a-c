@@ -76,14 +76,14 @@ Service Oriented Architecture</a> (SOA)</p>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
 <p><span style="text-decoration:underline"><em><strong><span style="font-size:medium">Solution structure:</span></strong></em></span></p>
-<p><img src="56968-btlsolution.png" alt="" width="301" height="618"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/net-best-practice-samples-4e9b92a4/image/file/56968/1/btlsolution.png" alt="" width="301" height="618"></p>
 <p><span style="text-decoration:underline"><strong><span style="font-size:medium">Guidance for install service:</span></strong></span></p>
 <p>You have to host AppServiceIISHost to IIS as below</p>
-<p><img src="56967-iishost.png" alt="" width="317" height="471"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/net-best-practice-samples-4e9b92a4/image/file/56967/1/iishost.png" alt="" width="317" height="471"></p>
 <p>&nbsp;</p>
 <p>As you see, I host AppSecurity as a service on IIS, and host web application into IIS as well.</p>
 <p><span style="text-decoration:underline"><em><strong><span style="font-size:medium">Testing service using wcftestclient tool:</span></strong></em></span></p>
-<p><img src="56969-wcftestclient.png" alt="" width="1151" height="341"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/net-best-practice-samples-4e9b92a4/image/file/56969/1/wcftestclient.png" alt="" width="1151" height="341"></p>
 <p><span style="text-decoration:underline"><em><strong><span style="font-size:medium">Data Connection String:</span></strong></em></span></p>
 <p>You have to change database connection string inside web.config in AppSecurityService point to your database server. I give you an example for this as below</p>
 <div class="scriptcode">
@@ -111,25 +111,25 @@ Service Oriented Architecture</a> (SOA)</p>
 <div class="endscriptcode"></div>
 <div class="endscriptcode">Login page:</div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img src="57283-loginpage_0.png" alt="" width="922" height="447"></div>
+<div class="endscriptcode"><img src="http://i1.code.msdn.s-msft.com/net-best-practice-samples-4e9b92a4/image/file/57283/1/loginpage_0.png" alt="" width="922" height="447"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode">Login page with popup:</div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img src="57284-loginpage_1.png" alt="" width="608" height="576"></div>
+<div class="endscriptcode"><img src="http://i1.code.msdn.s-msft.com/net-best-practice-samples-4e9b92a4/image/file/57284/1/loginpage_1.png" alt="" width="608" height="576"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode">Sign up new user:</div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img src="57285-loginpage_2.png" alt="" width="617" height="684"></div>
+<div class="endscriptcode"><img src="http://i1.code.msdn.s-msft.com/net-best-practice-samples-4e9b92a4/image/file/57285/1/loginpage_2.png" alt="" width="617" height="684"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode">In the case, you click on facebook icon at login page, it will redirect you to facebook for login like picture as below</div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img src="57286-loginpage_3.png" alt="" width="1007" height="576"></div>
+<div class="endscriptcode"><img src="http://i1.code.msdn.s-msft.com/net-best-practice-samples-4e9b92a4/image/file/57286/1/loginpage_3.png" alt="" width="1007" height="576"></div>
 <div class="endscriptcode">After you sign up in facebook page, it will redirect you to Home page.</div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>

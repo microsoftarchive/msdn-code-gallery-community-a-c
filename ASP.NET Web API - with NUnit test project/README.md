@@ -39,7 +39,7 @@
 </strong>displays contact with id 1.</p>
 <p>When the unit tests are run from the Visual Studio &gt; Tools menu or as a separate instance all tests should pass based on your service port number update in Web.config.</p>
 <p>&nbsp;</p>
-<p><img id="79562" src="79562-contact_json.jpg" alt="" width="343" height="281"></p>
+<p><img id="79562" src="http://i1.code.msdn.s-msft.com/aspnet-web-api-nunit-ac687169/image/file/79562/1/contact_json.jpg" alt="" width="343" height="281"></p>
 <p>&nbsp;</p>
 <p>When the NUnit is added through Visual Studio Add In manager, choosing the Tools menu in Visual studio and running the tests will show the out put as shown below.</p>
 <p><img id="75577" src="75577-nunitconsole.gif" alt="" width="1548" height="320"></p>

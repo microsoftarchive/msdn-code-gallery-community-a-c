@@ -26,7 +26,7 @@
 <h1>Running the Sample</h1>
 <p>To run the sample, hit F5 or choose the Debug | Start Debugging menu command.</p>
 <p>Run the Bot emulator and choose an image which has face as an input and send to bot connector. The result shows as follows based on face image.</p>
-<p><img id="165345" src="165345-6.png" alt="" width="792" height="547"></p>
+<p><img id="165345" src="https://i1.code.msdn.s-msft.com/build-first-bot-application-19cbe106/image/file/165345/1/6.png" alt="" width="792" height="547"></p>
 <p>Figure 1: Bot Application</p>
 <h1>Source Code Overview</h1>
 <p>There are following files to perform operation in the application.</p>

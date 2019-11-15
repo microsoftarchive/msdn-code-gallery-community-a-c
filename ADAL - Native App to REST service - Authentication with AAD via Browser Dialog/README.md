@@ -86,7 +86,7 @@ a New Directory Tenant and Add a User&rdquo;</a> section in Windows Store app wa
 </li><li><span style="font-size:small">Click</span><br>
 <span style="font-size:small">on Active Directory in the left hand pane.</span> </li><li><span style="font-size:small">Click your directory.</span> </li><li><span style="font-size:small">Click on Applications.</span> </li><li><span style="font-size:small"><em>Add Service application</em>. </span></li></blockquote>
 </li></ul>
-<p style="text-align:justify"><img id="95973" src="95973-aad1.png" alt="" width="698" height="745"></p>
+<p style="text-align:justify"><img id="95973" src="http://i1.code.msdn.s-msft.com/aal-native-application-to-fd648dcf/image/file/95973/1/aad1.png" alt="" width="698" height="745"></p>
 <p style="text-align:justify">Figure 1</p>
 <p style="text-align:justify">&nbsp;</p>
 <ul style="text-align:justify">
@@ -106,7 +106,7 @@ http://TodoListClient</a> as the Redirect Uri. Click the check</span><br>
 <span style="font-size:small">MainWindow.xaml.cs</span> </li></ul>
 </li></ul>
 <p style="text-align:justify"><br>
-<span style="font-size:small"><img id="95974" src="95974-aad2.png" alt="" width="730" height="777"></span><br>
+<span style="font-size:small"><img id="95974" src="http://i1.code.msdn.s-msft.com/aal-native-application-to-fd648dcf/image/file/95974/1/aad2.png" alt="" width="730" height="777"></span><br>
 <br>
 <span style="font-size:small">Figure 2</span></p>
 <p style="text-align:justify">&nbsp;</p>

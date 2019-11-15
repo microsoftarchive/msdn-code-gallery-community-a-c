@@ -24,7 +24,7 @@
 <ul>
 <li>Vastly reduce your outgoing bandwidth usage with the help of smart versioning.
 </li></ul>
-<p><img id="159613" src="159613-imageultimate-screenshot.png" alt="" width="736"></p>
+<p><img id="159613" src="https://i1.code.msdn.s-msft.com/aspnet-image-resizer-b1c8f3d0/image/file/159613/1/imageultimate-screenshot.png" alt="" width="736"></p>
 <p><strong>Note:</strong> This project&nbsp;contains a fully working version of the product, however without a license key it will run in trial mode. For more information, please see&nbsp;<a href="http://www.gleamtech.com/imageultimate">ImageUltimate: ASP.NET
  Image Resizer</a>&nbsp;product page.</p>
 <p>&nbsp;</p>

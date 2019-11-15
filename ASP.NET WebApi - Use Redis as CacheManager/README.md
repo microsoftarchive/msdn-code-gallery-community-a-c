@@ -32,11 +32,11 @@
 <ul type="disc">
 <li lang="en-US">Open Visual Studio 2013 and create a new project of type ASP.NET Web Application.
 </li><li lang="en-US">On this project I create a solution called WebAPI. </li></ul>
-<p lang="en-US">&nbsp;&nbsp;<img id="125453" src="125453-1.png" alt="" width="600" height="400"></p>
+<p lang="en-US">&nbsp;&nbsp;<img id="125453" src="http://code.msdn.microsoft.com/site/view/file/125453/1/1.png" alt="" width="600" height="400"></p>
 <ul type="disc">
 <li>Press OK, and a new screen will appear, with several options of template to use on our project.
 </li><li>Select the option WebAPI. </li></ul>
-<p lang="en-US">&nbsp;<img id="125454" src="125454-2.png" alt="" width="600" height="400"></p>
+<p lang="en-US">&nbsp;<img id="125454" src="http://code.msdn.microsoft.com/site/view/file/125454/1/2.png" alt="" width="600" height="400"></p>
 <ul type="disc">
 <li>The solution will be created. </li></ul>
 <p>&nbsp;</p>
@@ -45,14 +45,14 @@
 <p>So on the Visual Studio 2013, select the follow menu option:</p>
 <p>Tools-&gt; Library Package manager -&gt; Manage NuGet Packages for Solution</p>
 <p>Search for Redis and select the option Install.</p>
-<p>&nbsp;<img id="125455" src="125455-3.png" alt="" width="600" height="400"></p>
+<p>&nbsp;<img id="125455" src="http://code.msdn.microsoft.com/site/view/file/125455/1/3.png" alt="" width="600" height="400"></p>
 <p>This option, will install automatically the Nuget Package.</p>
 <p>&nbsp;</p>
 <p lang="en-US"><strong><span>STEP 3 - Start Redis</span></strong></p>
 <p>First&nbsp; download the latest .exe package from here&nbsp;<a href="https://github.com/rgl/redis/downloads">https://github.com/rgl/redis/downloads</a>&nbsp;(choose the appropriate latest 32 or 64 bit version).</p>
 <p>Run the redis-server.exe executable file. This will start redis in command line.</p>
 <p>As you see the redis is now running on port 6379 on local machine.</p>
-<p><img id="125456" src="125456-4.png" alt="" width="600" height="400"></p>
+<p><img id="125456" src="http://code.msdn.microsoft.com/site/view/file/125456/1/4.png" alt="" width="600" height="400"></p>
 <p>&nbsp;</p>
 <p lang="en-US"><strong><span>STEP 4 - Create CacheManager class</span></strong></p>
 <p lang="en-US">&nbsp;</p>

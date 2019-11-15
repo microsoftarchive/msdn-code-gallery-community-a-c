@@ -17,7 +17,7 @@
 - 05/21/2016
 ## Description
 
-<h1><img alt="" src="-calendar.png" width="344" height="267"><br>
+<h1><img alt="" src="http://www001asroma.ifdef.jp/Microsoft_Sample/06_Calendar/Calendar.png" width="344" height="267"><br>
 <span style="font-size:x-small">Figure1:Calendar Control</span><br>
 <br>
 Introduction</h1>

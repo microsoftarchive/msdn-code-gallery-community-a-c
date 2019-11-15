@@ -35,14 +35,14 @@
 <p>I built a snippet for prospective developers. In fact how to easily get a connection to a database using <a class="libraryLink" href="https://msdn.microsoft.com/en-US/library/System.Data.Common.aspx" target="_blank" title="Auto generated link to System.Data.Common">System.Data.Common</a> .&nbsp; This approach allow you to have the&nbsp;connection to Data Base using only one class in my example&nbsp; DataBase.cs</p>
 <p>One application/edit &ndash; ALL DataBase.&nbsp;</p>
 <p>Run application &hellip; choose the provider (ComboBox includes all providers which installed on your PC).</p>
-<p><img id="144666" src="144666-common1.jpg" alt="" width="440" height="170"></p>
+<p><img id="144666" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/144666/1/Common1.jpg" alt="" width="440" height="170"></p>
 <p>If you select &ldquo;OleDB&rdquo;, it brings (just for help) all OleDb providers which were installed on your PC.</p>
-<p><img id="144667" src="144667-common2.jpg" alt="" width="440" height="170"></p>
+<p><img id="144667" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/144667/1/Common2.jpg" alt="" width="440" height="170"></p>
 <p>&nbsp;</p>
 <p>As the example, I choose OleDb provider paste connection string, [Test] and [Run].</p>
-<p><img id="144668" src="144668-common3.jpg" alt="" width="440" height="130"></p>
+<p><img id="144668" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/144668/1/Common3.jpg" alt="" width="440" height="130"></p>
 <p>Same result if I want IBM dot.Net provider to paste new connection string, [Test] and [Run].</p>
-<p><img id="144669" src="144669-common4.jpg" alt="" width="440" height="123"></p>
+<p><img id="144669" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/144669/1/Common4.jpg" alt="" width="440" height="123"></p>
 <p>&nbsp;</p>
 <p>You must test connection string before RUN.</p>
 <p>&nbsp;</p>

@@ -68,7 +68,7 @@ namespace&nbsp;MapperExtensionsFunctions&nbsp;
 <a href="http://msdn.microsoft.com/en-us/library/aa547368%28v=bts.9%29.aspx">here</a>)</p>
 <p>In the properties of your BizTalk Mapper, use the <strong>Custom Extension XML
 </strong>property to open the <strong>Select Custom Extension XML File</strong> dialog box, in which you can select the file that contains the custom extension XML for the map (file above).</p>
-<p><img id="62625" src="62625-custom-extension-xml.png" alt="" width="641" height="373"></p>
+<p><img id="62625" src="https://code.msdn.microsoft.com/site/view/file/62625/1/Custom-Extension-XML.png" alt="" width="641" height="373"></p>
 <p>&nbsp;</p>
 <p>Finally in your Inline XSLT functoid you can use the methods from the assembly by:</p>
 <div class="scriptcode">
@@ -169,4 +169,4 @@ blog</a>.</p>
 <p><strong>Sandro Pereira</strong><br>
 <a href="http://www.devscope.net/">DevScope</a>&nbsp;| MVP &amp; MCTS BizTalk Server 2010<br>
 <a href="http://sandroaspbiztalkblog.wordpress.com/">http://sandroaspbiztalkblog.wordpress.com/</a>&nbsp;|&nbsp;<a href="http://twitter.com/sandro_asp">@sandro_asp</a></p>
-<p><a href="http://www.devscope.net/"><img id="129835" src="129835-devscope-monochrome-black.png" alt="" width="166" height="51"></a></p>
+<p><a href="http://www.devscope.net/"><img id="129835" src="https://gallery.technet.microsoft.com/site/view/file/129835/1/devscope-monochrome-black.png" alt="" width="166" height="51"></a></p>

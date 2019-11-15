@@ -124,7 +124,7 @@ Algoritmo Z(y, m, d)</span></div>
 <p></p>
 <p>&nbsp;</p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
-<p><img id="173572" src="173572-captura_3.png" alt="" width="357" height="307" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="173572" src="https://i1.code.msdn.s-msft.com/congruencia-de-zeller-48268c0a/image/file/173572/1/captura_3.png" alt="" width="357" height="307" style="display:block; margin-left:auto; margin-right:auto"></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
 <div class="title"><span>C#</span></div>
